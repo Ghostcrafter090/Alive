@@ -1,0 +1,5 @@
+execute as @a run attribute @s gstools:disease_effect_wither base set 0
+execute as @a if entity @s[scores={hasDiseaseBoolean=1..2,with_minact_tier=1..1,with_boolean=1..1,with_max_tier=1..,diseaseTime=4000..}] run attribute @s gstools:disease_effect_wither base set 9
+execute as @a if entity @s[scores={hasDiseaseBoolean=1..2,with_minact_tier=2..2,with_boolean=1..1,with_max_tier=1..,diseaseTime=5000..}] run attribute @s gstools:disease_effect_wither base set 9
+execute as @a if entity @s[scores={hasDiseaseBoolean=1..2,with_minact_tier=3..3,with_boolean=1..1,with_max_tier=1..,diseaseTime=6000..}] run attribute @s gstools:disease_effect_wither base set 9
+execute as @a if entity @s[scores={hasDiseaseBoolean=1..2,with_minact_tier=4..,with_boolean=1..1,with_max_tier=1..,diseaseTime=7000..}] run attribute @s gstools:disease_effect_wither base set 9

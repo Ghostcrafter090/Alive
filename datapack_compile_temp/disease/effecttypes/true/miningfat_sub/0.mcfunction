@@ -1,0 +1,1 @@
+execute at @s run function lifeanddeath:disease/effecttypes/true/miningfat_sub/0_sub/0

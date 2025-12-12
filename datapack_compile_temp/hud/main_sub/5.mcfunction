@@ -1,0 +1,2 @@
+execute if entity @s[scores={hasDiseaseBoolean=1..2}] run attribute @s gstools:has_disease_boolean base set 1
+execute unless entity @s[scores={hasDiseaseBoolean=1..2}] run attribute @s gstools:has_disease_boolean base set 0

@@ -1,0 +1,1 @@
+execute as @e[tag=!functional,distance=0..80,scores={diseaseTime=..-4,hasDiseaseBoolean=0..0}] run function lifeanddeath:disease/reset_sub/0_sub/0_sub/0

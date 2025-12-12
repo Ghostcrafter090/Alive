@@ -1,0 +1,2 @@
+scoreboard objectives remove hasDiseaseBoolean
+scoreboard objectives remove diseaseTime

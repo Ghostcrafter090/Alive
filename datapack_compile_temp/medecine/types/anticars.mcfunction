@@ -1,0 +1,1 @@
+execute as @e[tag=!tile,scores={hasDiseaseBoolean=1..2}] run function lifeanddeath:medecine/types/anticars_sub/0
