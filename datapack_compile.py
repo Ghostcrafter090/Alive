@@ -157,7 +157,7 @@ def run(path, namespace, compileEverything=False):
     fileChanges = []
     for file in subprocess.getoutput("git status -s").replace("\n M ", "\n")[3:].replace("/", "\\").split("\n"):
         if "\\data\\" in file:
-            fileChanges.append(file.split("\\data\\")[1])
+            fileChanges.append(file.split("\\data\\")[1].replace("\\function\\", "\\"))
             
     try:
         try:
@@ -179,7 +179,8 @@ def run(path, namespace, compileEverything=False):
             for file in fileList:
                 if os.path.exists(file) and (((namespace + "\\" + file.split("datapack_compile_temp\\")[1]) in fileChanges) or (compileEverything)):
                     
-                    globals.changedFiles.append(namespace + "\\" + file.split("datapack_compile_temp\\")[1])
+                    if (namespace + "\\" + file.split("datapack_compile_temp\\")[1]) not in globals.changedFiles:
+                        globals.changedFiles.append(namespace + "\\" + file.split("datapack_compile_temp\\")[1])
                     
                     fileData = pytools.IO.getFile(file).replace(" run execute ", " ").split("\n")
                     mcpath = namespace + ":" + ".".join(file.replace(os.getcwd() + "\\", "").replace("\\", "/").split(".")[:-1])

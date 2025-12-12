@@ -37,7 +37,6 @@ if doRun:
     for datapack in getDatapacks():
         compileDatapack(datapack)
 
-    time.sleep(3)
-
-    print("Output: ")
-    print(datapackCompiler.globals.changedFiles)
+    os.system("git add *")
+    os.system("git commit -m \"File Changes: \" -m \"" + "\" -m \"\\t".join(datapackCompiler.globals.changedFiles) + "\"")
+    os.system("git push")

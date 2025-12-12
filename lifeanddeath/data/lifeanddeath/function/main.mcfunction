@@ -132,4 +132,4 @@ execute as @e[sort=random,limit=20,scores={darkParasiteTime=0..}] run scoreboard
 execute as @a[scores={death=1..}] run scoreboard players set @s hasDiseaseBoolean 0
 execute as @a[scores={death=1..}] run scoreboard players set @s diseaseTime 0
 
-
+ 
