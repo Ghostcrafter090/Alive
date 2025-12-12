@@ -76,7 +76,7 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run fun
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function dynamicdirt:main
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function dynamicmonsters:main
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function lifeanddeath:main
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function enhancedsurvival:main
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=10..}] run function enhancedsurvival:main
 
 # On Death
 execute as @a[scores={death=1..}] run scoreboard players set @s death 0
