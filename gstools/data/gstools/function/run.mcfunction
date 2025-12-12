@@ -6,6 +6,8 @@ scoreboard objectives add ticEigth dummy
 scoreboard objectives add ticTenth dummy
 scoreboard objectives add ticSecond dummy
 scoreboard objectives add globalTic dummy
+scoreboard objectives add globalTicWorkerA dummy
+scoreboard objectives add globalTicWorkerB dummy
 scoreboard objectives add doRun dummy
 scoreboard objectives add gstoolsWorkerCount dummy
 scoreboard objectives add gameTime dummy
@@ -15,6 +17,12 @@ scoreboard objectives add death deathCount
 
 # Main
 function gstools:util/tps
+
+scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA = @e[tag=gstools_worker,type=marker] averageTps
+scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerB = @e[tag=gstools_worker,type=marker] 20
+scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerB -= @e[tag=gstools_worker,type=marker] globalTicWorkerA
+scoreboard players add @e[tag=gstools_worker,type=marker] globalTicWorkerB 1
+scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA /= @e[tag=gstools_worker,type=marker] globalTicWorkerB
 
 scoreboard players operation @e[tag=gstools_worker,type=marker] globalTic += @e[tag=gstools_worker,type=marker] averageTps
 execute as @e[tag=gstools_worker,type=marker,scores={globalTic=20..}] run scoreboard players set @s doRun 1
