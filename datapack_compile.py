@@ -177,7 +177,7 @@ def run(path, namespace, compileEverything=False):
             # print(os.getcwd())
             
             for file in fileList:
-                if os.path.exists(file) and (((namespace + "\\" + file.split("datapack_compile_temp\\")[1]) in fileChanges) or (compileEverything)):
+                if os.path.exists(file) and (((namespace + "\\" + file.split("datapack_compile_temp\\")[1]) in fileChanges) or (compileEverything) or ("_sub" in file)):
                     
                     if (namespace + "\\" + file.split("datapack_compile_temp\\")[1]) not in globals.changedFiles:
                         globals.changedFiles.append(namespace + "\\" + file.split("datapack_compile_temp\\")[1])

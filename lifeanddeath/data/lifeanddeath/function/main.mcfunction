@@ -133,3 +133,4 @@ execute as @a[scores={death=1..}] run scoreboard players set @s hasDiseaseBoolea
 execute as @a[scores={death=1..}] run scoreboard players set @s diseaseTime 0
 
  
+ 
