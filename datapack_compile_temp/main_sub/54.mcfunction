@@ -1,1 +1,0 @@
-execute as @e[sort=random,limit=20,scores={hasDiseaseBoolean=1..2}] run function lifeanddeath:main_sub/54_sub/0

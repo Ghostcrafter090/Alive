@@ -1,1 +1,0 @@
-execute as @a run function lifeanddeath:disease/effecttypes/true/nausea_sub/0

@@ -1,1 +1,0 @@
-execute as @e[tag=!tile,scores={hasDiseaseBoolean=1..2}] run function lifeanddeath:medecine/types/inflam_sub/0

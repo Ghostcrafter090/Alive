@@ -1,1 +1,0 @@
-execute as @a run function lifeanddeath:disease/effecttypes/true/wither_sub/0

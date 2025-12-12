@@ -3,6 +3,9 @@ import subprocess
 import os
 import traceback
 
+class globals:
+    changedFiles = []
+
 def processExecute(struct):
     commandStarted = False
     queryIndex = 0
@@ -149,7 +152,13 @@ def compile(fileData, fileName, path):
             
     return ["\n".join(outFile), externalFiles]
     
-def run(path, namespace):
+def run(path, namespace, compileEverything=False):
+    
+    fileChanges = []
+    for file in subprocess.getoutput("git status -s").replace("\n M ", "\n")[3:].replace("/", "\\").split("\n"):
+        if "\\data\\" in file:
+            fileChanges.append(file.split("\\data\\")[1])
+            
     try:
         try:
             os.mkdir(".\\datapack_compile_temp")
@@ -168,7 +177,10 @@ def run(path, namespace):
             # print(os.getcwd())
             
             for file in fileList:
-                if os.path.exists(file):
+                if os.path.exists(file) and (((namespace + "\\" + file.split("datapack_compile_temp\\")[1]) in fileChanges) or (compileEverything)):
+                    
+                    globals.changedFiles.append(namespace + "\\" + file.split("datapack_compile_temp\\")[1])
+                    
                     fileData = pytools.IO.getFile(file).replace(" run execute ", " ").split("\n")
                     mcpath = namespace + ":" + ".".join(file.replace(os.getcwd() + "\\", "").replace("\\", "/").split(".")[:-1])
                     # print(path)
@@ -184,6 +196,9 @@ def run(path, namespace):
                             os.mkdir("\\".join(file.split("\\")[:-1]) + "\\" + externalFile.split("\\")[0])
                         pytools.IO.saveFile("\\".join(file.split("\\")[:-1]) + "\\" + externalFile, outData[1][externalFile])
                         hasCreatedSubfile = True
+                
+                else:
+                    os.system("del \"" + file + "\" /f /q")
             i = i + 1
             if not hasCreatedSubfile:
                 i = 1000

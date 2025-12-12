@@ -1,1 +1,0 @@
-execute at @s run function lifeanddeath:disease/diseased_sub/8_sub/0

@@ -1,1 +1,0 @@
-execute as @e[tag=!tile,distance=0..1] run function lifeanddeath:main_sub/115_sub/1_sub/0

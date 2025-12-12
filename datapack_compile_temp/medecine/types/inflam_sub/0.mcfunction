@@ -1,6 +1,0 @@
-execute if entity @s[scores={weak_max_tier=1..}] if entity @s[nbt={active_effects:[{id:"minecraft:resistance",amplifier:0}]}] run scoreboard players remove @s weak_max_tier 1
-execute if entity @s[scores={weak_max_tier=2..}] if entity @s[nbt={active_effects:[{id:"minecraft:resistance",amplifier:1}]}] run scoreboard players remove @s weak_max_tier 1
-execute if entity @s[scores={slow_max_tier=3..}] if entity @s[nbt={active_effects:[{id:"minecraft:resistance",amplifier:0}]}] run scoreboard players remove @s slow_max_tier 1
-execute if entity @s[scores={slow_max_tier=2..}] if entity @s[nbt={active_effects:[{id:"minecraft:resistance",amplifier:1}]}] run scoreboard players remove @s slow_max_tier 1
-execute if entity @s[scores={minf_max_tier=1..}] if entity @s[nbt={active_effects:[{id:"minecraft:resistance",amplifier:0}]}] run scoreboard players remove @s minf_max_tier 1
-execute if entity @s[scores={minf_max_tier=2..}] if entity @s[nbt={active_effects:[{id:"minecraft:resistance",amplifier:1}]}] run scoreboard players remove @s minf_max_tier 1

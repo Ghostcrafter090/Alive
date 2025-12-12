@@ -1,1 +1,0 @@
-execute at @s run function lifeanddeath:medecine/naturalmodded_sub/0

@@ -71,3 +71,4 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run fun
 
 # On Death
 execute as @a[scores={death=1..}] run scoreboard players set @s death 0
+

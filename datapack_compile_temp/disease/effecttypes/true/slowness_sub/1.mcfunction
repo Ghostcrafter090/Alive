@@ -1,1 +1,0 @@
-execute at @s run function lifeanddeath:disease/effecttypes/true/slowness_sub/1_sub/0
