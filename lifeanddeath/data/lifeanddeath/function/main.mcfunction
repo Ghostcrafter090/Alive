@@ -107,7 +107,7 @@ execute as @e[sort=random,limit=20,type=silverfish] at @s as @e[tag=!tile,distan
 # execute as @e[sort=random,limit=20,scores={slimeParasiteTime=0..}] at @s as @e[distance=0.01..1,type=!creeper] run scoreboard players set @s slimeParasiteTime 8000
 # execute as @e[sort=random,limit=20,scores={slimeParasiteTime=0..}] run scoreboard players remove @s slimeParasiteTime 1
 
-execute as @e[sort=random,limit=1,nbt={active_effects:[{id:"minecraft:bad_omen"}]}] unless entity @s[scores={pillagerParasiteTime=-6000..}] run scoreboard players set @s pillagerParasiteTime 8000
+execute as @e[tag=!tile,sort=random,limit=1,nbt={active_effects:[{id:"minecraft:bad_omen"}]}] unless entity @s[scores={pillagerParasiteTime=-6000..}] run scoreboard players set @s pillagerParasiteTime 8000
 
 execute as @e[sort=random,limit=20,scores={pillagerParasiteTime=0..}] unless entity @s[nbt={active_effects:[{id:"minecraft:bad_omen"}]}] unless entity @s[nbt={active_effects:[{id:"minecraft:raid_omen"}]}] run effect give @s minecraft:bad_omen 150 0
 execute as @e[sort=random,limit=20,scores={pillagerParasiteTime=-3000..}] at @s as @e[distance=0.01..1] run scoreboard players set @s pillagerParasiteTime 8000
