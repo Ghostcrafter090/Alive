@@ -48,4 +48,4 @@ if doRun:
         versionHistory["history"][".".join(str(x) for x in versionHistory["current_version"][0:2])] = []
     if not flags.compileEverything:
         versionHistory["history"][".".join(str(x) for x in versionHistory["current_version"][0:2])].extend(datapackCompiler.globals.changedFiles)
-    pytools.IO.saveJson(versionHistory, ".\\version_history.json")
+    pytools.IO.saveJson(".\\version_history.json", versionHistory)
