@@ -202,6 +202,10 @@ for arg in sys.argv:
         compile.flags.compileEverything = False
 
 if doRun:
+    
+    for resource in subprocess.getoutput("dir \".\\resources\\*\" /b").split("\n"):
+        os.system("robocopy \".\\resources\\" + resource + "\" \"..\\..\\..\\resourcepacks\\" + resource + "\" * /mir")
+    
     for datapack in compile.getDatapacks():
         compile.compileDatapack(datapack)
 

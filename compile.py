@@ -2,6 +2,7 @@ import modules.pytools as pytools
 import os
 import sys
 import time
+import subprocess
 
 import datapack_compile as datapackCompiler
 
@@ -34,6 +35,10 @@ for arg in sys.argv:
         flags.compileEverything = True
 
 if doRun:
+    
+    for resource in subprocess.getoutput("dir \".\\resources\\*\" /b").split("\n"):
+        os.system("robocopy \".\\resources\\" + resource + "\" \"..\\..\\..\\resourcepacks\\" + resource + "\" * /mir")
+    
     for datapack in getDatapacks():
         compileDatapack(datapack)
 
