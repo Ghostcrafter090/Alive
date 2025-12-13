@@ -204,13 +204,13 @@ if doRun:
 
     versionHistory = pytools.IO.getJson("version_history.json")
     
-    versionHistory["current_version"][2] = versionHistory["current_version"][1] + 1
+    versionHistory["current_version"][1] = versionHistory["current_version"][1] + 1
     versionHistory["current_version"][2] = 0
     
     if (".".join(str(x) for x in versionHistory["current_version"][0:2])) not in versionHistory["history"]:
         versionHistory["history"][".".join(str(x) for x in versionHistory["current_version"][0:2])] = []
     if not compile.flags.compileEverything:
-        versionHistory["history"][".".join(str(x) for x in versionHistory["current_version"][0:2])].extend(datapackCompiler.globals.changedFiles)
+        versionHistory["history"][".".join(str(x) for x in versionHistory["current_version"][0:2])].extend(compile.datapackCompiler.globals.changedFiles)
     pytools.IO.saveJson(".\\version_history.json", versionHistory)
     
     os.system("mkdir releases")
