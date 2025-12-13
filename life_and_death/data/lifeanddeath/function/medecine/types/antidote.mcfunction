@@ -1,0 +1,2 @@
+execute as @e[tag=!tile,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={poi_max_tier=4..}] if entity @s[nbt={active_effects:[{id:"minecraft:regeneration",amplifier:0}]}] run scoreboard players remove @s poi_max_tier 1
+execute as @e[tag=!tile,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={poi_max_tier=3..}] if entity @s[nbt={active_effects:[{id:"minecraft:regeneration",amplifier:1}]}] run scoreboard players remove @s poi_max_tier 1

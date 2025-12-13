@@ -37,6 +37,15 @@ if doRun:
     for datapack in getDatapacks():
         compileDatapack(datapack)
 
+    versionHistory = pytools.IO.getJson("version_history.json")
+
     os.system("git add *")
     os.system("git commit -m \"File Changes: \" -m \"" + "\" -m \"\\t".join(datapackCompiler.globals.changedFiles) + "\"")
     os.system("git push")
+    
+    versionHistory["current_version"][2] = versionHistory["current_version"][2] + 1
+    if ".".join(str(x) for x in versionHistory["current_version"][0:2]) not in versionHistory["history"]:
+        versionHistory["history"][".".join(str(x) for x in versionHistory["current_version"][0:2])] = []
+    if not flags.compileEverything:
+        versionHistory["history"][".".join(str(x) for x in versionHistory["current_version"][0:2])].extend(datapackCompiler.globals.changedFiles)
+    pytools.IO.saveJson(versionHistory, ".\\version_history.json")

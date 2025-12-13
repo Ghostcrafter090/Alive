@@ -1,0 +1,3 @@
+execute as @e[tag=!tile,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={blin_max_tier=4..}] if entity @s[nbt={active_effects:[{id:"minecraft:night_vision",amplifier:0}]}] run scoreboard players remove @s blin_max_tier 1
+execute as @e[tag=!tile,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={blin_max_tier=3..}] if entity @s[nbt={active_effects:[{id:"minecraft:night_vision",amplifier:1}]}] run scoreboard players remove @s blin_max_tier 1
+execute as @e[tag=!tile,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={blin_max_tier=2..}] if entity @s[nbt={active_effects:[{id:"minecraft:night_vision",amplifier:2}]}] run scoreboard players remove @s blin_max_tier 1

@@ -1,0 +1,4 @@
+execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,with_minact_tier=1..1,with_boolean=1..1,with_max_tier=1..,diseaseTime=4000..,hasImmunityTime=290..291}] run effect give @s wither 1 1
+execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,with_minact_tier=2..2,with_boolean=1..1,with_max_tier=1..,diseaseTime=5000..,hasImmunityTime=290..291}] run effect give @s wither 1 1
+execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,with_minact_tier=3..3,with_boolean=1..1,with_max_tier=1..,diseaseTime=6000..,hasImmunityTime=290..291}] run effect give @s wither 1 1
+execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,with_minact_tier=4..,with_boolean=1..1,with_max_tier=1..,diseaseTime=7000..,hasImmunityTime=290..291}] run effect give @s wither 1 1
