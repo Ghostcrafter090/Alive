@@ -177,6 +177,9 @@ def compileDatapackIntoMod(folderName):
             else:
                 pytools.IO.saveFile(".\\temp_dir\\META-INF\\mods.toml", neoforgeTemplate)
         
+        if os.path.exists("..\\..\\..\\resourcepacks\\" + folderName):
+            for folder in subprocess.getoutput("")
+        
         if folderName != "gstools":
             os.system("del \".\\temp_dir\\gstools\\*\" /f /s /q")
             os.system("rmdir \".\\temp_dir\\gstools\" /s /q")
