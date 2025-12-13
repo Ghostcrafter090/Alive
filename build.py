@@ -195,7 +195,7 @@ compile.flags.compileEverything = True
 for arg in sys.argv:
     if arg == "--run":
         doRun = True
-    if arg == "--notEveerything":
+    if arg == "--notEverything":
         compile.flags.compileEverything = False
 
 if doRun:
