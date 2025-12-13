@@ -1,0 +1,44 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="Not specified"
+
+[[mods]]
+modId="desire_paths"
+version="1.1.0"
+displayName="Alive | Desire Paths"
+displayURL="https://satosus.ddns.net"
+logoFile="logo.png"
+credits="https://www.youtube.com/@SatosusProject"
+authors="The Satosus Project"
+description="Mod is as the name suggests, adds desire paths that form as entities walk around."
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+
+# Start of user code block custom mixins
+# End of user code block custom mixins
+
+[[dependencies.gstools]]
+    modId="neoforge"
+    type="required"
+    versionRange="[20.4.251,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.gstools]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.20.6,1.21]"
+    ordering="AFTER"
+    side="BOTH"
+    
+[[dependencies.gstools]]
+    modId="gstools"
+    type="required"
+    versionRange="[1.1.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

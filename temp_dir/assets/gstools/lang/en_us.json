@@ -1,0 +1,12 @@
+{
+  "attribute.gstools.has_disease_boolean": "hasDiseaseBoolean",
+  "attribute.gstools.disease_effect_weakness": "diseaseWeaknessEffect",
+  "attribute.gstools.disease_effect_slowness": "diseaseSlownessEffect",
+  "attribute.gstools.disease_effect_wither": "diseaseWitherEffect",
+  "attribute.gstools.disease_effect_poison": "diseasePoisonEffect",
+  "attribute.gstools.disease_effect_nausea": "diseaseNauseaEffect",
+  "attribute.gstools.disease_effect_mining_fatigue": "diseaseMiningFatigueEffect",
+  "attribute.gstools.disease_effect_hunger": "diseaseHungerEffect",
+  "attribute.gstools.disease_effect_blindness": "diseaseBlindnessEffect",
+  "attribute.gstools.disease_time": "Disease Time"
+}
