@@ -12,7 +12,7 @@ def getDatapacks():
     dirList = os.listdir()
     outList = []
     for dir in dirList:
-        if os.path.exists(".\\" + dir + "\\pack.mcmeta"):
+        if os.path.exists(".\\" + dir + "\\pack.mcmeta") and (dir != "temp_dir"):
             outList.append(dir)
             
     return outList
@@ -39,12 +39,13 @@ if doRun:
 
     versionHistory = pytools.IO.getJson("version_history.json")
 
+    versionHistory["current_version"][2] = versionHistory["current_version"][2] + 1
+    
     os.system("git add *")
-    os.system("git commit -m \"File Changes: \" -m \"" + "\" -m \"\\t".join(datapackCompiler.globals.changedFiles) + "\"")
+    os.system("git commit -m \"" + ".".join(str(x) for x in versionHistory["current_version"][0:2]) + " File Changes: \" -m \"" + "\" -m \"\\t".join(datapackCompiler.globals.changedFiles) + "\"")
     os.system("git push")
     
-    versionHistory["current_version"][2] = versionHistory["current_version"][2] + 1
-    if ".".join(str(x) for x in versionHistory["current_version"][0:2]) not in versionHistory["history"]:
+    if (".".join(str(x) for x in versionHistory["current_version"][0:2])) not in versionHistory["history"]:
         versionHistory["history"][".".join(str(x) for x in versionHistory["current_version"][0:2])] = []
     if not flags.compileEverything:
         versionHistory["history"][".".join(str(x) for x in versionHistory["current_version"][0:2])].extend(datapackCompiler.globals.changedFiles)
