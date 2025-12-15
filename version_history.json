@@ -1,1 +1,1 @@
-{"current_version": [1, 0, 0], "history": {"1.0": [], "1.-1": []}}
+{"current_version": [1, 0, 1], "history": {"1.0": ["gstools\\hud\\main.mcfunction", "gstools\\hud\\main_sub\\10.mcfunction", "gstools\\hud\\main_sub\\10_sub\\0.mcfunction", "gstools\\hud\\main_sub\\10_sub\\0_sub\\0.mcfunction", "minecraft\\hud\\main_sub\\10.mcfunction", "minecraft\\hud\\main_sub\\10_sub\\0.mcfunction", "minecraft\\hud\\main_sub\\10_sub\\0_sub\\0.mcfunction"], "1.-1": []}}

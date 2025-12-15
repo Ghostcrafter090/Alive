@@ -854,15 +854,22 @@ class net:
             error = err
         return error
 
-    def getJsonAPI(url, timeout=10):
+    def getJsonAPI(url, timeout=10, customHeaders=[]):
         ssl._create_default_https_context = ssl._create_unverified_context
+        
+        aSetOfHeaders = {
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'
+        }
+        
+        for aCustomHeader in customHeaders:
+            aSetOfHeaders[aCustomHeader[0]] = aCustomHeader[1]
+        
         req = urllib.request.Request(
             url, 
             data=None, 
-            headers={
-                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'
-            }
+            headers=aSetOfHeaders
         )
+        
         response = urlopen(req, timeout=timeout)
         h = response.read()
         data_json = json.loads(h)
