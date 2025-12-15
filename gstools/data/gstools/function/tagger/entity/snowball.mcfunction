@@ -1,4 +1,4 @@
 # Define
 
 # Main
-tag @s add tile
+execute if entity @s[type=snowball] run tag @s add tile

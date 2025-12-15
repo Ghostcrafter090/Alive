@@ -1,5 +1,5 @@
 # Define
 
 # Main
-tag @s add monster
-tag @s add overworld
+execute if entity @s[type=zombie_villager] run tag @s add monster
+execute if entity @s[type=zombie_villager] run tag @s add overworld

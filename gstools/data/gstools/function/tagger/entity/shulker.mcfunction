@@ -1,5 +1,5 @@
 # Define
 
 # Main
-tag @s add monster
-tag @s add end
+execute if entity @s[type=shulker] run tag @s add monster
+execute if entity @s[type=shulker] run tag @s add end

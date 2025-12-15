@@ -1,5 +1,5 @@
 # Define
 
 # Main
-tag @s add animal
-tag @s add overworld
+execute if entity @s[type=ocelot] run tag @s add animal
+execute if entity @s[type=ocelot] run tag @s add overworld

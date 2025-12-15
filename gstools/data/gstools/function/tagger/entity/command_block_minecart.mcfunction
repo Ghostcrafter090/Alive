@@ -1,4 +1,4 @@
 # Define
 
 # Main
-tag @s add tile
+execute if entity @s[type=command_block_minecart] run tag @s add tile

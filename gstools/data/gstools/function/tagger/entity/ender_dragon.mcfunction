@@ -1,6 +1,6 @@
 # Define
 
 # Main
-tag @s add boss
-tag @s add monster
-tag @s add end
+execute if entity @s[type=ender_dragon] run tag @s add boss
+execute if entity @s[type=ender_dragon] run tag @s add monster
+execute if entity @s[type=ender_dragon] run tag @s add end

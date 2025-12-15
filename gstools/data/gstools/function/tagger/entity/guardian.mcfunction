@@ -1,6 +1,6 @@
 # Define
 
 # Main
-tag @s add monster
-tag @s add fish
-tag @s add overworld
+execute if entity @s[type=guardian] run tag @s add monster
+execute if entity @s[type=guardian] run tag @s add fish
+execute if entity @s[type=guardian] run tag @s add overworld

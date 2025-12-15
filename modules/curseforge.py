@@ -12,7 +12,12 @@ class globals:
     versionIdBlacklist = pytools.IO.getJson("version_id_blacklist.json")["list"]
     
 projectIdDict = {
-    "gstools": "1404020"
+    "gstools": "1404020",
+    "desire_paths": "1405409",
+    "dynamic_dirt": "1405421",
+    "dynamic_monsters": "1405432",
+    "enhanced_survival": "1405437",
+    "life_and_death": "1405446"
 }
 
 def getGameVersions(loader, version):
@@ -93,7 +98,9 @@ def uploadFile(path, project, loader, version, displayName, changeLog):
                     if jsonData["errorCode"] == 1009:
                         metadata["gameVersions"].remove(int(jsonData["errorMessage"].split("version ID: ")[1].split(" ")[0]))
                         globals.versionIdBlacklist.append(int(jsonData["errorMessage"].split("version ID: ")[1].split(" ")[0]))
-                        pytools.IO.saveJson("version_id_blacklist.json", globals.versionIdBlacklist)
+                        pytools.IO.saveJson("version_id_blacklist.json", {
+                            "list": globals.versionIdBlacklist
+                        })
                     if jsonData["errorCode"] == 500:
                         uploadFailed = False
                     

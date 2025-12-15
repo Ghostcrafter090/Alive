@@ -1,4 +1,4 @@
 # Define
 
 # Main
-tag @s add tile
+execute if entity @s[type=evoker_fangs] run tag @s add tile

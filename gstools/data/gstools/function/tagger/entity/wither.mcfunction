@@ -1,7 +1,7 @@
 # Define
 
 # Main
-tag @s add boss
-tag @s add monster
-tag @s add nether
-tag @s add golem
+execute if entity @s[type=wither] run tag @s add boss
+execute if entity @s[type=wither] run tag @s add monster
+execute if entity @s[type=wither] run tag @s add nether
+execute if entity @s[type=wither] run tag @s add golem

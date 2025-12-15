@@ -1,6 +1,6 @@
 # Define
 
 # Main
-tag @s add boss
-tag @s add fish
-tag @s add overworld
+execute if entity @s[type=elder_guardian] run tag @s add boss
+execute if entity @s[type=elder_guardian] run tag @s add fish
+execute if entity @s[type=elder_guardian] run tag @s add overworld

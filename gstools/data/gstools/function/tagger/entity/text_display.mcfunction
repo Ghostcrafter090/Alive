@@ -1,5 +1,5 @@
 # Define
 
 # Main
-tag @s add tile
-tag @s add functional
+execute if entity @s[type=text_display] run tag @s add tile
+execute if entity @s[type=text_display] run tag @s add functional

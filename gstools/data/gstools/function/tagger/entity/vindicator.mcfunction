@@ -1,6 +1,6 @@
 # Define
 
 # Main
-tag @s add monster
-tag @s add overworld
-tag @s add pillager
+execute if entity @s[type=vindicator] run tag @s add monster
+execute if entity @s[type=vindicator] run tag @s add overworld
+execute if entity @s[type=vindicator] run tag @s add pillager
