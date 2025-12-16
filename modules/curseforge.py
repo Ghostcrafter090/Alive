@@ -33,8 +33,8 @@ def getGameVersions(loader, version):
                 print(aVersionData)
             elif aVersionData["name"].lower() == loader.lower():
                 if aVersionData["id"] not in versionIds:
-                    if loader.lower() not in globals.versionIdBlacklist:
-                        versionIds.append(aVersionData["id"].lower())
+                    if aVersionData["id"] not in globals.versionIdBlacklist:
+                        versionIds.append(aVersionData["id"])
                 print(aVersionData)
 
     return versionIds
