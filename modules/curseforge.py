@@ -28,13 +28,13 @@ def getGameVersions(loader, version):
         for aVersionData in curseforgeData:
             if aVersionData["name"] == aVersion:
                 if aVersionData["id"] not in versionIds:
-                    if aVersion not in globals.versionIdBlacklist:
+                    if aVersionData["id"] not in globals.versionIdBlacklist:
                         versionIds.append(aVersionData["id"])
                 print(aVersionData)
             elif aVersionData["name"].lower() == loader.lower():
                 if aVersionData["id"] not in versionIds:
-                    if aVersion not in globals.versionIdBlacklist:
-                        versionIds.append(aVersionData["id"])
+                    if loader.lower() not in globals.versionIdBlacklist:
+                        versionIds.append(aVersionData["id"].lower())
                 print(aVersionData)
 
     return versionIds

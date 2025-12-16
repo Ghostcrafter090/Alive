@@ -132,6 +132,34 @@ modIdToDisplayName = {
     "life_and_death": "Alive | Life & Death"
 }
 
+baseCompileVersions = [
+    "1.20.4"
+]
+
+def getModIdJava(modId):
+    return "".join((x[0].upper() + x[1:]) for x in modId.split("_"))
+
+def compileBaseMod(modId, gameVersion):
+        os.system("del \".\\basemod\\neoforge\\" + gameVersion + "\\src\\main\\java\\*\" /s /f /q")
+        os.system("rmdir \".\\basemod\\neoforge\\" + gameVersion + "\\src\\main\\java\" /s /q")
+        os.system("mkdir \".\\basemod\\neoforge\\" + gameVersion + "\\src\\main\\java\"")
+        
+        os.system("xcopy \".\\basemod\\neoforge\\" + gameVersion + "\\srcbase\\*\" \".\\basemod\\neoforge\\" + gameVersion + "\\src\" /e /c /y /i")
+        
+        os.system("rename \".\\basemod\\neoforge\\" + gameVersion + "\\src\\main\\java\\base\" \"" + modId + "\"")
+        os.system("rename \".\\basemod\\neoforge\\" + gameVersion + "\\src\\main\\java\\" + modId + "\\BaseBaseMod.java\" \"" + getModIdJava(modId) + "Mod.java\"")
+        
+        javaFile = pytools.IO.getFile(".\\basemod\\neoforge\\" + gameVersion + "\\src\\main\\java\\" + modId + "\\" + getModIdJava(modId) + "Mod.java")
+        javaFile = javaFile.replace("<base>", modId)
+        javaFile = javaFile.replace("<BaseBase>", getModIdJava(modId))
+        
+        pytools.IO.saveFile(".\\basemod\\neoforge\\" + gameVersion + "\\src\\main\\java\\" + modId + "\\" + getModIdJava(modId) + "Mod.java", javaFile)
+
+        os.system("start /d \".\\basemod\\neoforge\\" + gameVersion + "\" /b /wait \"\" gradlew clean build")
+        pytools.IO.unpack(".\\basemod\\neoforge\\" + gameVersion + "\\build\\libs\\modid-1.0.jar", ".\\basemod\\neoforge\\" + gameVersion + "\\build\\getbase")
+        
+        os.system("xcopy \".\\basemod\\neoforge\\" + gameVersion + "\\build\\getbase\\" + modId + "\\*\" \".\\temp_dir\\" + modId + "\" /e /c /y /i")
+        
 def compileDatapackIntoMod(folderName):
     jarFileList = subprocess.getoutput("dir \"gstools-*.jar\" /b").split('\n')
     for jarFile in jarFileList:
@@ -183,6 +211,12 @@ def compileDatapackIntoMod(folderName):
         if folderName != "gstools":
             os.system("del \".\\temp_dir\\gstools\\*\" /f /s /q")
             os.system("rmdir \".\\temp_dir\\gstools\" /s /q")
+        
+            if jarFile.split("-")[2].split(".jar")[0] in baseCompileVersions:
+                compileBaseMod(folderName, jarFile.split("-")[2].split(".jar")[0])
+        
+        os.system("mkdir \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\functions\"")
+        os.system("xcopy \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\function\\*\" \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\functions\" /e /c /y /i")
         
         os.system("mkdir release")
         pytools.IO.pack(".\\release\\" + folderName + "-" + jarFile.split("-")[1].split('-')[0] + "-" + jarFile.split("-")[2].split(".jar")[0] + "_" + ".".join(str(x) for x in versionHistory["current_version"]) + ".jar", ".\\temp_dir")

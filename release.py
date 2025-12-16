@@ -6,6 +6,7 @@ import sys
 
 def releaseMod(releaseNumber, modId):
     for file in subprocess.getoutput("dir \".\\releases\\" + releaseNumber + "\\*.jar\" /b").split('\n'):
+        print(file)
         projectName = file.split("-")[0]
         loaderVersion = file.split("-")[1]
         gameVersion = file.split("-")[2].split("_")[0]
@@ -23,4 +24,4 @@ for arg in sys.argv:
 
 if doRun:
     for mod in curseforge.projectIdDict:
-        releaseMod(".".join(pytools.IO.getJson("version_history.json")["current_version"]), mod)
+        releaseMod(".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]), mod)
