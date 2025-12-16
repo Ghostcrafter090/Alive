@@ -90,10 +90,9 @@ execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ cobbled_de
 execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ stone_stairs replace cobbled_deepslate_stairs
 execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ stone_slab replace cobbled_deepslate_slab
 
-execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ cobbled_deepslate_stairs replace tuff_stairs
-execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ cobbled_deepslate_slab replace tuff_slab
+function dynamicdirt:version_conflict/tuff_0
 
-execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ deepslate replace tuff
+function dynamicdirt:version_conflict/tuff_1
 
 execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ granite replace dripstone_block
 
@@ -130,12 +129,12 @@ execute as @e[type=falling_block,tag=!sound_played] at @s if entity @e[tag=dirt_
 execute as @e[type=falling_block,tag=!sound_played] at @s if entity @e[tag=dirt_collapse,distance=0..10,type=marker] if entity @e[tag=gstools_worker,type=marker,scores={random10=7..9}] run playsound minecraft:entity.creaking.twitch master @a ~ ~ ~ 3 0.1
 execute as @e[type=falling_block,tag=!sound_played] at @s if entity @e[tag=dirt_collapse,distance=0..10,type=marker] if entity @e[tag=gstools_worker,type=marker,scores={random10=1..9}] run particle ash ~ ~ ~ 0.3 0.3 0.3 10 50 normal
 # execute as @e[type=falling_block,tag=!sound_played] at @s if entity @e[tag=dirt_collapse,distance=0..10,type=marker] if entity @e[tag=gstools_worker,type=marker,scores={random10=1..9}] run particle minecraft:falling_dust{color:[1, 1, 1], scale:1,block_state:dirt} ~ ~ ~ 0.3 0.3 0.3 1 5 normal
-execute as @e[type=falling_block,tag=!sound_played] at @s if entity @e[tag=dirt_collapse,distance=0..10,type=marker] if entity @e[tag=gstools_worker,type=marker,scores={random10=1..9}] run particle minecraft:falling_dust{color:[1, 1, 1], scale:1,block_state:gravel} ~ ~ ~ 0.3 0.3 0.3 1 10 normal
+function dynamicdirt:version_conflict/falling_dust_0
 
 execute as @e[type=falling_block,tag=!sound_played] at @s run tag @s add sound_played
 
 execute as @e[type=marker,tag=dirt_collapse,tag=!sound_played] at @s if entity @e[tag=gstools_worker,type=marker,scores={random10=1..9}] run particle ash ~ ~ ~ 0.3 0.3 0.3 10 10 normal
-execute as @e[type=marker,tag=dirt_collapse,tag=!sound_played] at @s if entity @e[tag=gstools_worker,type=marker,scores={random10=1..9}] run particle minecraft:dust{color:[1, 1, 1], scale:1} ~ ~-1.5 ~ 0.3 0.3 0.3 10 5 normal
+function dynamicdirt:version_conflict/dust_0
 
 execute as @e[type=marker,tag=dirt_collapse,tag=!sound_played] run tag @s add sound_played
 

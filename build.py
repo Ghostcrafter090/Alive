@@ -217,6 +217,10 @@ def compileDatapackIntoMod(folderName):
         
             if jarFile.split("-")[2].split(".jar")[0] in baseCompileVersions:
                 compileBaseMod(folderName, jarFile.split("-")[2].split(".jar")[0])
+        else:
+            os.system("mkdir \".\\temp_dir\\data\\minecraft\\tags\\functions\"")
+            os.system("xcopy \".\\temp_dir\\data\\minecraft\\tags\\function\\*\" \".\\temp_dir\\data\\minecraft\\tags\\functions\" /e /c /y /i")
+        
         
         os.system("mkdir \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\functions\"")
         os.system("xcopy \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\function\\*\" \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\functions\" /e /c /y /i")

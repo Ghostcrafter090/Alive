@@ -1,0 +1,1 @@
+execute as @e[type=elder_guardian] at @s as @e[type=elder_guardian,distance=0..50] as @e[type=guardian,distance=0..25] run particle minecraft:ominous_spawning ^ ^1 ^ 0 0 0 1 1

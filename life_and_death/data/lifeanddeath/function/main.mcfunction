@@ -96,8 +96,7 @@ execute if entity @e[scores={timeOfDay=20..21},tag=gstools_worker,type=marker] a
 execute if entity @e[scores={timeOfDay=20..21},tag=gstools_worker,type=marker] as @a run scoreboard players operation @s diseaseTime = @s diseaseTime
 
 # Parasites
-execute as @e[sort=random,limit=1,type=silverfish] run effect give @s infested infinite 1
-execute as @e[sort=random,limit=20,type=silverfish] at @s as @e[tag=!tile,distance=0..1] run effect give @s infested 400 1
+function lifeanddeath:version_conflict/infested_0
 
 # execute as @e[sort=random,limit=20,type=slime] run effect give @s oozing infinite 1
 # execute as @e[sort=random,limit=20,type=slime] at @s as @e[distance=0..1,type=!slime,type=!creeper] run effect give @s oozing 400 1
@@ -113,13 +112,7 @@ execute as @e[sort=random,limit=20,scores={pillagerParasiteTime=0..}] unless ent
 execute as @e[sort=random,limit=20,scores={pillagerParasiteTime=-3000..}] at @s as @e[distance=0.01..1] run scoreboard players set @s pillagerParasiteTime 8000
 execute as @e[sort=random,limit=20,scores={pillagerParasiteTime=-6000..}] run scoreboard players remove @s pillagerParasiteTime 1
 
-execute as @e[sort=random,limit=20,type=cave_spider] run effect give @s weaving infinite 1
-execute as @e[sort=random,limit=20,type=cave_spider] at @s as @e[tag=!tile,distance=0..1] run effect give @s weaving 400 1
-execute as @e[sort=random,limit=20,type=cave_spider] at @s as @e[tag=!tile,distance=0..1] run scoreboard players set @s spiderParasiteTime 8000
-
-execute as @e[sort=random,limit=20,scores={spiderParasiteTime=0..}] unless entity @s[nbt={active_effects:[{id:"minecraft:weaving"}]}] run effect give @s minecraft:weaving 150 0
-execute as @e[sort=random,limit=20,scores={spiderParasiteTime=0..}] at @s as @e[distance=0.01..1] run scoreboard players set @s spiderParasiteTime 8000
-execute as @e[sort=random,limit=20,scores={spiderParasiteTime=0..}] run scoreboard players remove @s spiderParasiteTime 1
+function lifeanddeath:version_conflict/weaving_0
 
 execute as @e[sort=random,limit=20,type=warden] run effect give @s darkness infinite 1
 execute as @e[sort=random,limit=20,type=warden] at @s as @e[tag=!tile,distance=0..1] run effect give @s darkness 400 1

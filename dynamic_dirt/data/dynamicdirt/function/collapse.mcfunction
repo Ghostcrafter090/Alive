@@ -31,8 +31,7 @@ fill ~ ~-1 ~ ~ ~ ~ cobbled_deepslate replace deepslate
 fill ~ ~-1 ~ ~ ~ ~ stone_stairs replace cobbled_deepslate_stairs
 fill ~ ~-1 ~ ~ ~ ~ stone_slab replace cobbled_deepslate_slab
 
-fill ~ ~-1 ~ ~ ~ ~ cobbled_deepslate_stairs replace tuff_stairs
-fill ~ ~-1 ~ ~ ~ ~ cobbled_deepslate_slab replace tuff_slab
+function dynamicdirt:version_conflict/tuff_2
 
 fill ~ ~-1 ~ ~ ~ ~ deepslate replace tuff
 

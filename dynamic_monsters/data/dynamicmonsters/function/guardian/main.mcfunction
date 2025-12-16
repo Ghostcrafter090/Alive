@@ -19,7 +19,8 @@ execute as @e[type=guardian,sort=random,limit=1] at @s if entity @s[scores={elde
 execute as @e[type=guardian,sort=random,limit=1] at @s if entity @s[scores={elderGuardianCount=2..}] run particle minecraft:nautilus ~ ~ ~ 0 0 0 2 20
 execute as @e[type=guardian,sort=random,limit=1] at @s if entity @s[scores={elderGuardianCount=3..}] run particle minecraft:nautilus ~ ~ ~ 0 0 0 2 30
 
-execute as @e[type=elder_guardian] at @s as @e[type=elder_guardian,distance=0..50] as @e[type=guardian,distance=0..25] run particle minecraft:ominous_spawning ^ ^1 ^ 0 0 0 1 1
+function dynamicmonsters:guardian/version_conflict/ominous_spawning_0
+execute as @e[type=elder_guardian] at @s as @e[type=elder_guardian,distance=0..50] as @e[type=guardian,distance=0..25] run particle minecraft:nautilus ^ ^1 ^ 0 0 0 1 1
 
 execute as @e[type=guardian] store result score @s guardianHealth run data get entity @s Health
 execute as @e[type=guardian,tag=kill_guardian] if entity @s[scores={guardianHealth=..1}] run data merge entity @s {DeathLootTable:"minecraft:empty"}
