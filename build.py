@@ -200,8 +200,11 @@ def compileDatapackIntoMod(folderName):
             neoforgeTemplate = neoforgeTemplate.replace("<modDescription>", description)
             neoforgeTemplate = neoforgeTemplate.replace("<gameVersions>", gameVersions)
         
-            if (int(jarFile.split("-")[2].split(".jar")[0].split('.')[1]) >= 21) or ((int(jarFile.split("-")[2].split(".jar")[0].split('.')[1]) == 20) and (int(jarFile.split("-")[2].split(".jar")[0].split('.')[2]) >= 6)):
+            if (int(jarFile.split("-")[2].split(".jar")[0].split('.')[1]) >= 21):
                 pytools.IO.saveFile(".\\temp_dir\\META-INF\\neoforge.mods.toml", neoforgeTemplate)
+            elif ((int(jarFile.split("-")[2].split(".jar")[0].split('.')[1]) == 20) and (int(jarFile.split("-")[2].split(".jar")[0].split('.')[2]) >= 6)):
+                pytools.IO.saveFile(".\\temp_dir\\META-INF\\neoforge.mods.toml", neoforgeTemplate)
+                pytools.IO.saveFile(".\\temp_dir\\META-INF\\mods.toml", neoforgeTemplate)
             else:
                 pytools.IO.saveFile(".\\temp_dir\\META-INF\\mods.toml", neoforgeTemplate)
         
