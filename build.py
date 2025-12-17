@@ -133,32 +133,34 @@ modIdToDisplayName = {
 }
 
 baseCompileVersions = [
-    "1.20.4"
+    "1.20.4",
+    "1.20.1",
+    "1.19.4"
 ]
 
 def getModIdJava(modId):
     return "".join((x[0].upper() + x[1:]) for x in modId.split("_"))
 
-def compileBaseMod(modId, gameVersion):
-        os.system("del \".\\basemod\\neoforge\\" + gameVersion + "\\src\\main\\java\\*\" /s /f /q")
-        os.system("rmdir \".\\basemod\\neoforge\\" + gameVersion + "\\src\\main\\java\" /s /q")
-        os.system("mkdir \".\\basemod\\neoforge\\" + gameVersion + "\\src\\main\\java\"")
+def compileBaseMod(modId, loader, gameVersion):
+        os.system("del \".\\basemod\\" + loader + "\\" + gameVersion + "\\src\\main\\java\\*\" /s /f /q")
+        os.system("rmdir \".\\basemod\\" + loader + "\\" + gameVersion + "\\src\\main\\java\" /s /q")
+        os.system("mkdir \".\\basemod\\" + loader + "\\" + gameVersion + "\\src\\main\\java\"")
         
-        os.system("xcopy \".\\basemod\\neoforge\\" + gameVersion + "\\srcbase\\*\" \".\\basemod\\neoforge\\" + gameVersion + "\\src\" /e /c /y /i")
+        os.system("xcopy \".\\basemod\\" + loader + "\\" + gameVersion + "\\srcbase\\*\" \".\\basemod\\" + loader + "\\" + gameVersion + "\\src\" /e /c /y /i")
         
-        os.system("rename \".\\basemod\\neoforge\\" + gameVersion + "\\src\\main\\java\\base\" \"" + modId + "\"")
-        os.system("rename \".\\basemod\\neoforge\\" + gameVersion + "\\src\\main\\java\\" + modId + "\\BaseBaseMod.java\" \"" + getModIdJava(modId) + "Mod.java\"")
+        os.system("rename \".\\basemod\\" + loader + "\\" + gameVersion + "\\src\\main\\java\\base\" \"" + modId + "\"")
+        os.system("rename \".\\basemod\\" + loader + "\\" + gameVersion + "\\src\\main\\java\\" + modId + "\\BaseBaseMod.java\" \"" + getModIdJava(modId) + "Mod.java\"")
         
-        javaFile = pytools.IO.getFile(".\\basemod\\neoforge\\" + gameVersion + "\\src\\main\\java\\" + modId + "\\" + getModIdJava(modId) + "Mod.java")
+        javaFile = pytools.IO.getFile(".\\basemod\\" + loader + "\\" + gameVersion + "\\src\\main\\java\\" + modId + "\\" + getModIdJava(modId) + "Mod.java")
         javaFile = javaFile.replace("<base>", modId)
         javaFile = javaFile.replace("<BaseBase>", getModIdJava(modId))
         
-        pytools.IO.saveFile(".\\basemod\\neoforge\\" + gameVersion + "\\src\\main\\java\\" + modId + "\\" + getModIdJava(modId) + "Mod.java", javaFile)
+        pytools.IO.saveFile(".\\basemod\\" + loader + "\\" + gameVersion + "\\src\\main\\java\\" + modId + "\\" + getModIdJava(modId) + "Mod.java", javaFile)
 
-        os.system("start /d \".\\basemod\\neoforge\\" + gameVersion + "\" /b /wait \"\" gradlew clean build")
-        pytools.IO.unpack(".\\basemod\\neoforge\\" + gameVersion + "\\build\\libs\\modid-1.0.jar", ".\\basemod\\neoforge\\" + gameVersion + "\\build\\getbase")
+        os.system("start /d \".\\basemod\\" + loader + "\\" + gameVersion + "\" /b /wait \"\" gradlew clean build")
+        pytools.IO.unpack(".\\basemod\\" + loader + "\\" + gameVersion + "\\build\\libs\\modid-1.0.jar", ".\\basemod\\" + loader + "\\" + gameVersion + "\\build\\getbase")
         
-        os.system("xcopy \".\\basemod\\neoforge\\" + gameVersion + "\\build\\getbase\\" + modId + "\\*\" \".\\temp_dir\\" + modId + "\" /e /c /y /i")
+        os.system("xcopy \".\\basemod\\" + loader + "\\" + gameVersion + "\\build\\getbase\\" + modId + "\\*\" \".\\temp_dir\\" + modId + "\" /e /c /y /i")
         
 def compileDatapackIntoMod(folderName):
     jarFileList = subprocess.getoutput("dir \"gstools-*.jar\" /b").split('\n')
@@ -216,7 +218,7 @@ def compileDatapackIntoMod(folderName):
             os.system("rmdir \".\\temp_dir\\gstools\" /s /q")
         
             if jarFile.split("-")[2].split(".jar")[0] in baseCompileVersions:
-                compileBaseMod(folderName, jarFile.split("-")[2].split(".jar")[0])
+                compileBaseMod(folderName, jarFile.split("-")[1].split('-')[0], jarFile.split("-")[2].split(".jar")[0])
         else:
             os.system("mkdir \".\\temp_dir\\data\\minecraft\\tags\\functions\"")
             os.system("xcopy \".\\temp_dir\\data\\minecraft\\tags\\function\\*\" \".\\temp_dir\\data\\minecraft\\tags\\functions\" /e /c /y /i")
