@@ -1,9 +1,10 @@
-set doEverything=%~1
-
-if "$%doEverything%"=="$--notEverything" (
-    py build.py --run --notEverything
-) else (
-   py build.py --run
+set flag1=%*
+if not "$%~1"=="$--skipBuild" (
+    if not "$%flag1%"=="$" (
+        py build.py --build %flag1%
+    ) else (
+        py build.py --build
+    )
 )
 
-py release.py --run
+py release.py --release

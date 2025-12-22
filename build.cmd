@@ -1,7 +1,8 @@
-set doEverything=%~1
+set flag1=%*
 
-if "$%doEverything%"=="$--notEverything" (
-    py build.py --run --notEverything
+if not "$%flag1%"=="$" (
+    py build.py --build %flag1%
 ) else (
-   py build.py --run
+    
+    py build.py --build
 )

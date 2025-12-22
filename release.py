@@ -19,7 +19,7 @@ def releaseMod(releaseNumber, modId):
 
 doRun = False
 for arg in sys.argv:
-    if arg == "--run":
+    if arg == "--release":
         doRun = True
 
 if doRun:

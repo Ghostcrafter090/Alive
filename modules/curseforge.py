@@ -80,7 +80,7 @@ def uploadFile(path, project, loader, version, displayName, changeLog):
         while uploadFailed:
             with open(FILE_PATH, 'rb') as f:
                 files = {
-                    'file': (path, f, 'application/jar'), # Adjust MIME type if using a zip file
+                    'file': (path.split("\\")[-1], f, 'application/jar'), # Adjust MIME type if using a zip file
                     'metadata': (None, json.dumps(metadata), 'application/json')
                 }
 

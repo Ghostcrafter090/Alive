@@ -18304,3 +18304,5 @@ execute as @a[scores={stamina=..20}] if entity @s[scores={thirst=..0}] if entity
 execute as @a[scores={stamina=..20}] if entity @s[scores={thirst=..0}] if entity @s[scores={insomnia=..19687}] run title Ghostcrafter090 actionbar {"text":"vvvvvvvvvvcyyyyyyyyyy","font":"enhancedsurvival:images"}
 execute as @a[scores={stamina=..20}] if entity @s[scores={thirst=..0}] if entity @s[scores={insomnia=..13125}] run title Ghostcrafter090 actionbar {"text":"vvvvvvvvvvbyyyyyyyyyy","font":"enhancedsurvival:images"}
 execute as @a[scores={stamina=..20}] if entity @s[scores={thirst=..0}] if entity @s[scores={insomnia=..6562}] run title Ghostcrafter090 actionbar {"text":"vvvvvvvvvvayyyyyyyyyy","font":"enhancedsurvival:images"}
+
+scoreboard players set @e[tag=gstools_worker,type=marker] enhancedHudActive 1

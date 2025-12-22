@@ -29,7 +29,7 @@ def compileDatapack(name):
 
 doRun = False
 for arg in sys.argv:
-    if arg == "--run":
+    if arg == "--compile":
         doRun = True
     if arg == "--everything":
         flags.compileEverything = True

@@ -6,6 +6,11 @@ import os
 
 import sys
 
+import copy
+
+class flags:
+    forceVersion = False
+
 neoForgeTomlTemplate = """modLoader="javafml"
 loaderVersion="[1,)"
 license="Not specified"
@@ -123,6 +128,26 @@ fabicModJsonTemplate = {
     }
 }
 
+fabricModMixinsTemplate = {
+    "required": True,
+    "package": "<modId>.mixin",
+    "compatibilityLevel": "JAVA_21",
+    "refmap": "<modId>.refmap.json",
+    "mixins": [],
+    "client": [],
+    "injectors": {
+        "defaultRequire": 1
+    },
+    "minVersion": "0.8.4"
+}
+
+fabricModRefmapTemplate = {
+    "mappings": {
+    },
+    "data": {
+    }
+}
+
 modIdToDisplayName = {
     "gstools": "Ghost Spectora Tools",
     "desire_paths": "Alive | Desire Paths",
@@ -136,6 +161,10 @@ baseCompileVersions = [
     "1.20.4",
     "1.20.1",
     "1.19.4"
+]
+
+fabricBaseRemovalVersions = [
+    "1.21.9"
 ]
 
 def getModIdJava(modId):
@@ -176,14 +205,32 @@ def compileDatapackIntoMod(folderName):
         description = pytools.IO.getJson(folderName + "\\pack.mcmeta")["pack"]["description"]
         
         if "-fabric-" in jarFile:
-            fabricTemplate = fabicModJsonTemplate
+            
+            fabricGameVersion = gameVersions.split(",")[0]
+            if len(gameVersions.split(",")) > 1:
+                fabricGameVersion = "~" + fabricGameVersion
+            
+            fabricTemplate = copy.deepcopy(fabicModJsonTemplate)
             fabricTemplate["id"] = folderName
             fabricTemplate["version"] = ".".join(str(x) for x in versionHistory["current_version"])
             fabricTemplate["name"] = modIdToDisplayName[folderName]
             fabricTemplate["description"] = description
-            fabricTemplate["depends"]["minecraft"] = gameVersions
+            fabricTemplate["depends"]["minecraft"] = fabricGameVersion
             fabricTemplate["depends"]["gstools"] = ">=" + (".".join(str(x) for x in versionHistory["current_version"]))
+            if (folderName != "gstools") or (jarFile.split("-")[2].split(".jar")[0] in fabricBaseRemovalVersions):
+                fabricTemplate["mixins"][0] = folderName + ".mixins.json"
+                
+                fabricTemplate["entrypoints"]["main"] = []
+                fabricTemplate["entrypoints"]["client"] = []
+            
             pytools.IO.saveJson(".\\temp_dir\\fabric.mod.json", fabricTemplate)
+
+            if (folderName != "gstools") or (jarFile.split("-")[2].split(".jar")[0] in fabricBaseRemovalVersions):
+                fabricMixinTemplate = fabricModMixinsTemplate
+                fabricMixinTemplate["package"] = folderName + ".mixin"
+                fabricMixinTemplate["refmap"] = folderName + ".refmap.json"
+                pytools.IO.saveJson(".\\temp_dir\\" + folderName + ".mixins.json", fabricMixinTemplate)
+                pytools.IO.saveJson(".\\temp_dir\\" + folderName + ".refmap.json", fabricModRefmapTemplate)
             
         elif "-forge-" in jarFile:
             forgeTemplate = forgeTemplate = forgeTomlTemplate
@@ -240,22 +287,40 @@ def compileDatapackIntoMod(folderName):
         os.system("ren \".\\release\\" + file + "\" " + file.replace(".zip", ""))
 
 doRun = False
+confirm = "null"
 compile.flags.compileEverything = True
 for arg in sys.argv:
-    if arg == "--run":
+    print(arg)
+    if arg == "--build":
         doRun = True
+    if arg == "--forceReset":
+        os.system("del .\\release\\* /f /s /q")
     if arg == "--notEverything":
         compile.flags.compileEverything = False
+    if arg.split("=")[0] == "--forceVersion":
+        print("test")
+        confirm = input("Are you sure you want to manually change the version number? (New version number will be: `" + arg.split("=")[1] + "`) (Y/n) ? ")
+        while not confirm in "Yn":
+            confirm = input("INVALID! Try Again! (Y/n) ? ")
+            
+        if confirm == "Y":
+            flags.forceVersion = arg.split("=")[1]
 
-if doRun:
+if doRun and (confirm != "n"):
+    
+    versionHistory = pytools.IO.getJson("version_history.json")
+    
+    if flags.forceVersion:
+        newVersion = list(int(x) for x in flags.forceVersion.split("."))
+        newVersion[1] = newVersion[1] - 1
+        
+        versionHistory["current_version"] = newVersion
     
     for resource in subprocess.getoutput("dir \".\\resources\\*\" /b").split("\n"):
         os.system("robocopy \".\\resources\\" + resource + "\" \"..\\..\\..\\resourcepacks\\" + resource + "\" * /mir")
     
     for datapack in compile.getDatapacks():
         compile.compileDatapack(datapack)
-
-    versionHistory = pytools.IO.getJson("version_history.json")
     
     versionHistory["current_version"][1] = versionHistory["current_version"][1] + 1
     versionHistory["current_version"][2] = 0

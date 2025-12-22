@@ -1,7 +1,7 @@
 set doEverything=%~1
 
 if "$%doEverything%"=="$--everything" (
-    py compile.py --run --everything
+    py compile.py --compile --everything
 ) else (
-   py compile.py --run
+   py compile.py --compile
 )
