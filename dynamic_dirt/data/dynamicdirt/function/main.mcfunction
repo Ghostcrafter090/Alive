@@ -32,7 +32,6 @@ execute as @e[type=item] at @s if block ~ ~-3 ~ air unless block ~ ~-2 ~ air if 
 execute as @e[type=item] at @s if block ~ ~-3 ~ air unless block ~ ~-2 ~ air if entity @s[tag=!collapsed] run tag @s add collapsed
 
 execute as @e[type=item] at @s if block ~ ~-3 ~ cave_air unless block ~ ~-2 ~ cave_air if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}
-execute as @e[type=item] at @s if block ~ ~-3 ~ cave_air unless block ~ ~-2 ~ cave_air if entity @s[tag=!collapsed] run say hi
 execute as @e[type=item] at @s if block ~ ~-3 ~ cave_air unless block ~ ~-2 ~ cave_air if entity @s[tag=!collapsed] run tag @s add collapsed
 
 execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ air unless block ~ ~-1 ~ air if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}

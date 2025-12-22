@@ -8,6 +8,7 @@ scoreboard objectives add worldBorderVersionConflict dummy
 
 # Main
 execute store result score @e[type=marker,tag=gstools_worker] blocksPerSecond run worldborder get
+
 worldborder set 59999968
 scoreboard players operation @e[type=marker,tag=gstools_worker] tps = @e[type=marker,tag=gstools_worker] 59999968
 scoreboard players operation @e[type=marker,tag=gstools_worker] tps -= @e[type=marker,tag=gstools_worker] blocksPerSecond

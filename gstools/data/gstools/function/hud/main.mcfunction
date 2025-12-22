@@ -14,5 +14,5 @@ scoreboard players set @e[tag=gstools_worker,type=marker] diseaseHudVersionConfl
 function gstools:hud/version_conflict/diseasehud_0
 
 scoreboard players set @e[tag=gstools_worker,type=marker] enhancedHudActive 0
-execute as @a if entity @s[scores={diseaseHudModCompatibility=1..1}] if entity @e[tag=gstools_worker,type=marker,scores={enhancedSurvivalLoaded=1..1}] if entity @s[scores={enhancedHudModCompatibility=0..0}] run function gstools:hud/enhancedhud
+execute as @a if entity @e[tag=gstools_worker,type=marker,scores={enhancedSurvivalLoaded=1..1}] if entity @s[scores={enhancedHudModCompatibility=0..0}] run function gstools:hud/enhancedhud
 execute unless entity @e[tag=gstools_worker,type=marker,scores={enhancedHudActive=1..1}] if entity @e[tag=gstools_worker,type=marker,scores={diseaseHudVersionConflict=1..1}] run function gstools:hud/version_conflict/diseasehud_1
