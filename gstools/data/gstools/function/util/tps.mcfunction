@@ -20,6 +20,7 @@ scoreboard players operation @e[type=marker,tag=gstools_worker] tps /= @e[type=m
 scoreboard players set @e[tag=gstools_worker,type=marker] worldBorderVersionConflict 0
 function gstools:util/version_conflict/worldborder_0
 execute unless entity @e[tag=gstools_worker,tag=marker,scores={worldBorderVersionConflict=1..1}] run worldborder set 59997968 10
+execute as @e[tag=gstools_worker,type=marker,scores={worldBorderVersionConflict=1..1}] run scoreboard players set @s tps 20
 
 scoreboard players set @e[type=marker,tag=gstools_worker] averageTpsWorker 200
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsWorker *= @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen
