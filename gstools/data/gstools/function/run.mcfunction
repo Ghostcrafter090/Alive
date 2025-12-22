@@ -18,7 +18,7 @@ scoreboard objectives add death deathCount
 # Main
 function gstools:util/tps
 
-execute as @e[tag=gstools_worker,type=marker,scores={gameTime=0..10}] run scoreboard players set @s averageTps 20
+execute as @e[tag=gstools_worker,type=marker,scores={gameTime=0..10}] run scoreboard players set @s averageTpsWorkerMultTen 400
 
 scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA = @e[tag=gstools_worker,type=marker] averageTps
 scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerB = @e[tag=gstools_worker,type=marker] 20
