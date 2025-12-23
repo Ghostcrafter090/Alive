@@ -83,3 +83,5 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=10..}] ru
 # On Death
 execute as @a[scores={death=1..}] run scoreboard players set @s death 0
 
+# Credit (Message only displays once 1000 tics after starting a new world!)
+execute if entity @e[tag=gstools_worker,type=marker,scores={gameTime=1000..1000}] run tellraw @a ["","Credit where credit is due! Alive Ecosystem by ",{"click_event":{"action":"open_url","url":"https://www.youtube.com/channel/UCNVTK59xpYFQBZG9kSHMzRA"},"color":"dark_blue","hover_event":{"action":"show_text","value":[{"text":"Youtube Channel","color":"dark_blue"}]},"text":"The Satosus Project","underlined":true}]
