@@ -4,6 +4,8 @@ import modules.curseforge as curseforge
 import subprocess
 import sys
 
+import copy
+
 class globals:
     aReleaseSchedule = pytools.IO.getJson("release_schedule.json")
 
@@ -63,6 +65,7 @@ def releaseMod(releaseNumber, modId):
 doRun = False
 complete = False
 force = False
+doTest = False
 for arg in sys.argv:
     if arg == "--release":
         doRun = True
@@ -70,13 +73,16 @@ for arg in sys.argv:
         complete = True
     if arg == "--forceRelease":
         force = True
+    if arg == "--test":
+        doTest = True
 
 if doRun:
     if complete:
         if (len(getReleasesToday(withReleasedToday=True)) < 1) or force:
             print("Releasing new mod version!")
             for mod in curseforge.projectIdDict:
-                releaseMod(".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]), mod)
+                if not doTest:
+                    releaseMod(".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]), mod)
         
             globals.aReleaseSchedule["list"].append({
                 "version": (".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3])),
@@ -89,12 +95,13 @@ if doRun:
                 while i < len(globals.aReleaseSchedule["list"]):
                     globals.aReleaseSchedule["list"][i]["isReleased"] = True
                     i = i + 1
-                    
-            pytools.IO.saveJson("release_schedule.json", globals.aReleaseSchedule)
+            
+            if not doTest:
+                pytools.IO.saveJson("release_schedule.json", globals.aReleaseSchedule)
         
         else:
             print("Release already made today. Waiting for later...")
-            aReleaseDate = getFarthestReleaseDate()
+            aReleaseDate = copy.deepcopy(getFarthestReleaseDate())
             
             aReleaseDate[2] = aReleaseDate[2] + 1
             if aReleaseDate[2] > pytools.clock.getMonthEnd(aReleaseDate[1]):
@@ -110,13 +117,16 @@ if doRun:
                 "isReleased": False
             })
             
-            pytools.IO.saveJson("release_schedule.json", globals.aReleaseSchedule)
+            print(globals.aReleaseSchedule)
+            
+            if not doTest:
+                pytools.IO.saveJson("release_schedule.json", globals.aReleaseSchedule)
             
     else:
         if len(getToRelease()):
             if (len(getReleasesToday(withReleasedToday=True)) < 1) or force:
                 print("Releasing scheduled mod version!")
-                theRelease = getEarliestReleaseDate()
+                theRelease = copy.deepcopy(getEarliestReleaseDate())
                 for mod in curseforge.projectIdDict:
                     releaseMod(theRelease["version"], mod)
                 
@@ -128,7 +138,8 @@ if doRun:
                     
                 globals.aReleaseSchedule["list"][i]["isReleased"] = True
                 
-                pytools.IO.saveJson("release_schedule.json", globals.aReleaseSchedule)
+                if not doTest:
+                    pytools.IO.saveJson("release_schedule.json", globals.aReleaseSchedule)
             else:
                 print("Release already made today. Waiting for tomorrow...")
         else:
