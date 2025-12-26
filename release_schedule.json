@@ -1,14 +1,1 @@
-{
-    "list": [
-        {
-            "version": "1.0.0",
-            "releaseDate": [0, 1, 1, 0, 0, 0],
-            "isReleased": true
-        },
-        {
-            "version": "1.14.0",
-            "releaseDate": [2025, 12, 26, 15, 0, 0],
-            "isReleased": true
-        }
-    ]
-}
+{"list": [{"version": "1.0.0", "releaseDate": [0, 1, 1, 0, 0, 0], "isReleased": true}, {"version": "1.14.0", "releaseDate": [2025, 12, 27, 15, 0, 0], "isReleased": true}, {"version": "1.15.0", "releaseDate": [2025, 12, 27, 15, 0, 0], "isReleased": false}]}

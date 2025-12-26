@@ -65,6 +65,12 @@ execute store result score @s numberOfCursors if entity @e[tag=gstools_cursor,ty
 execute if score @s numberOfCursors > @e[tag=gstools_worker,type=marker,limit=1] 500 run kill @e[tag=gstools_cursor,type=marker,limit=499,sort=random]
 execute if score @s numberOfCursors > @e[tag=gstools_worker,type=marker,limit=1] 2000 run kill @e[tag=gstools_cursor,type=marker,limit=1999,sort=random]
 
+execute store result score @e[tag=gstools_worker,type=marker] numberOfCursors if entity @e[tag=gstools_cursor,type=marker]
+execute store result score @e[tag=gstools_worker,type=marker] numberOfPlayers if entity @a
+scoreboard players operation @e[tag=gstools_worker,type=marker] numberOfPlayers *= @e[tag=gstools_worker,type=marker] 2
+
+execute if score @e[tag=gstools_worker,type=marker,limit=1] numberOfCursors > @e[tag=gstools_worker,type=marker,limit=1] numberOfPlayers as @a run kill @e[tag=gstools_cursor,type=marker]
+
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function gstools:cursor/run
 
 execute store result score @e[tag=gstools_worker,type=marker] gameTime run time query gametime
