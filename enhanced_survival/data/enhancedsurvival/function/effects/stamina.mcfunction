@@ -51,6 +51,12 @@ execute as @a[scores={staminaRegulatorA=1..5,jump=0..0}] at @s if block ~ ~ ~ wa
 
 execute as @a[scores={walk=1..}] run scoreboard players add @a stamina 40
 execute as @a[scores={staminaRegulatorA=1..5}] run scoreboard players set @s walkuwater 0
+
+execute as @a run scoreboard players operation @s swim /= @s 4
+execute as @a run scoreboard players operation @s walkowater /= @s 2
+execute as @a run scoreboard players operation @s walkuwater /= @s 2
+execute as @a run scoreboard players operation @s climb /= @s 4
+
 execute as @a run scoreboard players operation @s stamina -= @s climb
 execute as @a run scoreboard players operation @s stamina -= @s crouch
 execute as @a run scoreboard players operation @s stamina -= @s jump

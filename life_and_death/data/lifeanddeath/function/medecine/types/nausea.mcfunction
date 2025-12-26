@@ -1,2 +1,2 @@
-execute as @e[tag=!tile,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={nau_max_tier=4..}] if entity @s[nbt={active_effects:[{id:"minecraft:haste",amplifier:0}]}] run scoreboard players remove @s nau_max_tier 2
-execute as @e[tag=!tile,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={nau_max_tier=2..}] if entity @s[nbt={active_effects:[{id:"minecraft:haste",amplifier:1}]}] run scoreboard players remove @s nau_max_tier 1
+execute as @e[tag=!tile,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={nau_max_tier=2..}] if entity @s[nbt={active_effects:[{id:"minecraft:haste",amplifier:0}]}] run scoreboard players remove @s nau_max_tier 2
+execute as @e[tag=!tile,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={nau_max_tier=1..}] if entity @s[nbt={active_effects:[{id:"minecraft:haste",amplifier:1}]}] run scoreboard players remove @s nau_max_tier 1
