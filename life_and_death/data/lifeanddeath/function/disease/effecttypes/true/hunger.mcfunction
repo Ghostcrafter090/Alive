@@ -1,40 +1,40 @@
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=1..1,diseaseTime=1000..,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=1000..2000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=2000..,hasImmunityTime=290..291}] run effect give @s hunger 3 1
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=1000..2000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=2000..3000,hasImmunityTime=290..291}] run effect give @s hunger 3 1
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=3000..}] run effect give @s hunger 5 2
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=1000..2000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=2000..3000,hasImmunityTime=290..291}] run effect give @s hunger 3 1
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=3000..4000}] run effect give @s hunger 5 2
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=4000..}] run effect give @s hunger 7 3
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=1..1,diseaseTime=2000..,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=2000..3000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=3000..,hasImmunityTime=290..291}] run effect give @s hunger 3 1
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=2000..3000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=3000..4000,hasImmunityTime=290..291}] run effect give @s hunger 3 1
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=4000..}] run effect give @s hunger 5 2
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=2000..3000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=3000..4000,hasImmunityTime=290..291}] run effect give @s hunger 3 1
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=4000..5000}] run effect give @s hunger 5 2
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=5000..}] run effect give @s hunger 7 3
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=1..1,diseaseTime=3000..,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=3000..4000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=4000..,hasImmunityTime=290..291}] run effect give @s hunger 3 1
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=3000..4000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=4000..5000,hasImmunityTime=290..291}] run effect give @s hunger 3 1
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=5000..}] run effect give @s hunger 5 2
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=3000..4000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=4000..5000,hasImmunityTime=290..291}] run effect give @s hunger 3 1
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=5000..6000}] run effect give @s hunger 5 2
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=6000..}] run effect give @s hunger 7 3
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=1..1,diseaseTime=4000..,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=4000..5000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=5000..,hasImmunityTime=290..291}] run effect give @s hunger 3 1
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=4000..5000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=5000..6000,hasImmunityTime=290..291}] run effect give @s hunger 3 1
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=6000..}] run effect give @s hunger 5 2
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=4000..5000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=5000..6000,hasImmunityTime=290..291}] run effect give @s hunger 3 1
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=6000..7000}] run effect give @s hunger 5 2
-execute as @a at @s as @e[distance=0..80,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=7000..}] run effect give @s hunger 7 3
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=1..1,diseaseTime=1000..,hasImmunityTime=290..291}] run effect give @s hunger 1 0
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=1000..2000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=2000..,hasImmunityTime=290..291}] run effect give @s hunger 3 1
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=1000..2000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=2000..3000,hasImmunityTime=290..291}] run effect give @s hunger 3 1
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=3000..}] run effect give @s hunger 5 2
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=1000..2000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=2000..3000,hasImmunityTime=290..291}] run effect give @s hunger 3 1
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=3000..4000}] run effect give @s hunger 5 2
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=4000..}] run effect give @s hunger 7 3
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=1..1,diseaseTime=2000..,hasImmunityTime=290..291}] run effect give @s hunger 1 0
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=2000..3000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=3000..,hasImmunityTime=290..291}] run effect give @s hunger 3 1
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=2000..3000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=3000..4000,hasImmunityTime=290..291}] run effect give @s hunger 3 1
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=4000..}] run effect give @s hunger 5 2
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=2000..3000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=3000..4000,hasImmunityTime=290..291}] run effect give @s hunger 3 1
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=4000..5000}] run effect give @s hunger 5 2
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=5000..}] run effect give @s hunger 7 3
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=1..1,diseaseTime=3000..,hasImmunityTime=290..291}] run effect give @s hunger 1 0
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=3000..4000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=4000..,hasImmunityTime=290..291}] run effect give @s hunger 3 1
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=3000..4000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=4000..5000,hasImmunityTime=290..291}] run effect give @s hunger 3 1
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=5000..}] run effect give @s hunger 5 2
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=3000..4000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=4000..5000,hasImmunityTime=290..291}] run effect give @s hunger 3 1
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=5000..6000}] run effect give @s hunger 5 2
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=6000..}] run effect give @s hunger 7 3
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=1..1,diseaseTime=4000..,hasImmunityTime=290..291}] run effect give @s hunger 1 0
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=4000..5000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=5000..,hasImmunityTime=290..291}] run effect give @s hunger 3 1
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=4000..5000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=5000..6000,hasImmunityTime=290..291}] run effect give @s hunger 3 1
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=6000..}] run effect give @s hunger 5 2
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=4000..5000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=5000..6000,hasImmunityTime=290..291}] run effect give @s hunger 3 1
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=6000..7000}] run effect give @s hunger 5 2
+execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=7000..}] run effect give @s hunger 7 3

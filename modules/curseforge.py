@@ -91,6 +91,8 @@ def uploadFile(path, project, loader, version, displayName, changeLog):
                 if response.status_code == 200:
                     print(f"Mod file uploaded successfully! Response: {response.json()}")
                     uploadFailed = False
+                    
+                    return response.json()
                 else:
                     print(f"Upload failed. Status code: {response.status_code}")
                     print(f"Response body: {response.text}")

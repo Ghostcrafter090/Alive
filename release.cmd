@@ -7,4 +7,8 @@ if not "$%~1"=="$--skipBuild" (
     )
 )
 
-py release.py --release
+if not "$%flag1%"=="$" (
+    py release.py --release --newRelease %flag1%
+) else (
+    py release.py --release --newRelease
+)
