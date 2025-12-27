@@ -8,7 +8,7 @@ function lifeanddeath:disease/effecttypes/sound/consumption
 execute as @a run scoreboard players add @s breathingSoundTic 1
 
 execute as @a run scoreboard players operation @s breathingSoundWorker = @s stamina
-execute as @a run scoreboard players operation @s breathingSoundWorker /= @e[tag=gstools_worker,type=marker,limit=1] 5
+execute as @a run scoreboard players operation @s breathingSoundWorker /= @e[tag=gstools_worker,type=marker,limit=1] 10
 execute as @a[scores={breathingSoundWorker=..20}] run scoreboard players set @s breathingSoundWorker 20
 
 execute as @a if entity @s[scores={hasDiseaseBoolean=1..1}] if entity @s[scores={random100=41..}] if score @s breathingSoundTic >= @s breathingSoundWorker run function enhancedsurvival:breathing/play
