@@ -52,7 +52,7 @@ execute as @e[tag=is_human,type=!player,scores={vomitStrength=2..2},limit=1,sort
 execute as @e[tag=is_human,type=!player,scores={vomitStrength=3..3},limit=1,sort=random] if entity @s[scores={vomitSoundTic=1000..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_weaze] add play_vomit
 execute as @e[tag=is_human,type=!player,scores={vomitStrength=4..4},limit=1,sort=random] if entity @s[scores={vomitSoundTic=800..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_weaze] add play_vomit
 
-execute as @e[tag=play_vomit,limit=1,sort=random] at @s run playsound lifeanddeath:player.vomit.vomit player @a ~ ~ ~ 1
+execute as @e[tag=play_vomit,limit=1,sort=random] at @s run playsound lifeanddeath.player.vomit player @a ~ ~ ~ 1
 execute as @e[tag=play_vomit,limit=1,sort=random] at @s run scoreboard players set @s coughSoundTic 0
 execute as @e[tag=play_vomit,limit=1,sort=random] at @s run scoreboard players set @s vomitSoundTic 0
 execute as @e[tag=play_vomit,limit=1,sort=random] at @s run scoreboard players remove @s breathingSoundTic 240

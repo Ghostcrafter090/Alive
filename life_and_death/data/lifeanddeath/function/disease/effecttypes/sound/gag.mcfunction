@@ -52,7 +52,7 @@ execute as @e[tag=is_human,type=!player,scores={gagStrength=2..2},limit=1,sort=r
 execute as @e[tag=is_human,type=!player,scores={gagStrength=3..3},limit=1,sort=random] if entity @s[scores={gagSoundTic=160..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_weaze] add play_gag
 execute as @e[tag=is_human,type=!player,scores={gagStrength=4..4},limit=1,sort=random] if entity @s[scores={gagSoundTic=120..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_weaze] add play_gag
 
-execute as @e[tag=play_gag,limit=1,sort=random] at @s run playsound lifeanddeath:player.gag.gag player @a ~ ~ ~ 1
+execute as @e[tag=play_gag,limit=1,sort=random] at @s run playsound lifeanddeath.player.gag player @a ~ ~ ~ 1
 execute as @e[tag=play_gag,limit=1,sort=random] at @s run scoreboard players set @s coughSoundTic 0
 execute as @e[tag=play_gag,limit=1,sort=random] at @s run scoreboard players set @s gagSoundTic 0
 execute as @e[tag=play_gag,limit=1,sort=random] at @s run scoreboard players remove @s breathingSoundTic 40

@@ -1,0 +1,61 @@
+{
+  "lifeanddeath.player.breath": {
+    "category": "master",
+    "sounds": [
+      "lifeanddeath.player/breath/breath_0",
+      "lifeanddeath.player/breath/breath_1",
+      "lifeanddeath.player/breath/breath_2",
+      "lifeanddeath.player/breath/breath_3",
+      "lifeanddeath.player/breath/breath_4",
+      "lifeanddeath.player/breath/breath_5"
+    ],
+    "subtitle": "Your laboured breathing...",
+    "attenuation_distance": 1
+  },
+  "lifeanddeath.player.cough.light": {
+    "category": "lifeanddeath.player",
+    "sounds": [
+      "lifeanddeath.player/cough/light_0",
+      "lifeanddeath.player/cough/light_1"
+    ],
+    "subtitle": "*throat clearing*",
+    "attenuation_distance": 1
+  },
+  "lifeanddeath.player.cough.medium": {
+    "category": "lifeanddeath.player",
+    "sounds": [
+      "lifeanddeath.player/cough/medium_0",
+      "lifeanddeath.player/cough/medium_1",
+      "lifeanddeath.player/cough/medium_2"
+    ],
+    "subtitle": "cough!",
+    "attenuation_distance": 1
+  },
+  "lifeanddeath.player.cough.hard": {
+    "category": "lifeanddeath.player",
+    "sounds": [
+      "lifeanddeath.player/cough/hard_0",
+      "lifeanddeath.player/cough/hard_1"
+    ],
+    "subtitle": "hACk *WeAze*!",
+    "attenuation_distance": 1
+  },
+  "lifeanddeath.player.gag": {
+    "category": "lifeanddeath.player",
+    "sounds": [
+      "lifeanddeath.player/gag/gag_0",
+      "lifeanddeath.player/gag/gag_1"
+    ],
+    "subtitle": "*gags*",
+    "attenuation_distance": 1
+  },
+  "lifeanddeath.player.vomit": {
+    "category": "lifeanddeath.player",
+    "sounds": [
+      "lifeanddeath.player/vomit/vomit_0",
+      "lifeanddeath.player/vomit/vomit_1"
+    ],
+    "subtitle": "*vomits*",
+    "attenuation_distance": 1
+  }
+}

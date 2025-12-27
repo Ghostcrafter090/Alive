@@ -52,7 +52,7 @@ execute as @e[tag=is_human,type=!player,scores={weazeStrength=2..2},limit=1,sort
 execute as @e[tag=is_human,type=!player,scores={weazeStrength=3..3},limit=1,sort=random] if entity @s[scores={weazeSoundTic=160..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_gag] add play_weaze
 execute as @e[tag=is_human,type=!player,scores={weazeStrength=4..4},limit=1,sort=random] if entity @s[scores={weazeSoundTic=120..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_gag] add play_weaze
 
-execute as @e[tag=play_weaze,limit=1,sort=random] at @s run playsound lifeanddeath:player.cough.hard player @a ~ ~ ~ 1
+execute as @e[tag=play_weaze,limit=1,sort=random] at @s run playsound lifeanddeath.player.cough.hard player @a ~ ~ ~ 1
 execute as @e[tag=play_weaze,limit=1,sort=random] at @s run scoreboard players set @s coughSoundTic 0
 execute as @e[tag=play_weaze,limit=1,sort=random] at @s run scoreboard players set @s weazeSoundTic 0
 execute as @e[tag=play_weaze,limit=1,sort=random] at @s run tag @s remove play_weaze
