@@ -10,7 +10,7 @@ execute unless entity @e[tag=gstools_worker,type=marker,scores={enhancedSurvival
 
 execute unless entity @e[tag=gstools_worker,type=marker,scores={enhancedSurvivalLoaded=1..1}] as @a run scoreboard players operation @s breathingSoundWorker = @s stamina
 execute unless entity @e[tag=gstools_worker,type=marker,scores={enhancedSurvivalLoaded=1..1}] as @a run scoreboard players operation @s breathingSoundWorker /= @e[tag=gstools_worker,type=marker,limit=1] 5
-execute unless entity @e[tag=gstools_worker,type=marker,scores={enhancedSurvivalLoaded=1..1}] as @a[scores={breathingSoundWorker=..20}] run scoreboard players set @s breathingSoundWorker 15
+execute unless entity @e[tag=gstools_worker,type=marker,scores={enhancedSurvivalLoaded=1..1}] as @a[scores={breathingSoundWorker=..20}] run scoreboard players set @s breathingSoundWorker 20
 
 execute unless entity @e[tag=gstools_worker,type=marker,scores={enhancedSurvivalLoaded=1..1}] as @a if entity @s[scores={random100=..40}] if score @s breathingSoundTic >= @s breathingSoundWorker run function lifeanddeath:disease/effecttypes/sound/consumption/playother
 
