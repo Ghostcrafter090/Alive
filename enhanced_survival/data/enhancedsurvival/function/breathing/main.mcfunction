@@ -21,3 +21,13 @@ execute as @a[tag=!play_disease_sound] if entity @s[scores={hasDiseaseBoolean=1.
 execute as @a[tag=!play_disease_sound] if entity @s[scores={hasDiseaseBoolean=1..1}] if entity @s[scores={random100=..40}] if score @s breathingSoundTic >= @s breathingSoundWorker run function lifeanddeath:disease/effecttypes/sound/consumption/play
 
 execute as @a if score @s breathingSoundTic >= @s breathingSoundWorker run scoreboard players set @s breathingSoundTic 0
+
+execute as @a[scores={air=..299}] run stopsound @s player enhancedsurvival.player.breath
+execute as @a[scores={air=..299}] run stopsound @s player lifeanddeath.player.breath
+execute as @a[scores={air=..299}] run stopsound @s player lifeanddeath.player.cough.light
+execute as @a[scores={air=..299}] run stopsound @s player lifeanddeath.player.cough.medium
+execute as @a[scores={air=..299}] run stopsound @s player lifeanddeath.player.cough.hard
+execute as @a[scores={air=..299}] run stopsound @s player lifeanddeath.player.vomit
+
+
+
