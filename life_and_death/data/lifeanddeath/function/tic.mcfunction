@@ -11,7 +11,7 @@ execute as @a run scoreboard players operation @s breathingSoundWorker = @s stam
 execute as @a run scoreboard players operation @s breathingSoundWorker /= @e[tag=gstools_worker,type=marker,limit=1] 5
 execute as @a[scores={breathingSoundWorker=..15}] run scoreboard players set @s breathingSoundWorker 15
 
-execute as @a if entity @s[scores={random10=5..}] if score @s breathingSoundTic >= @s breathingSoundWorker run function lifeanddeath:disease/effecttypes/sound/consumption/play
-execute as @a if entity @s[scores={random10=..4}] if score @s breathingSoundTic >= @s breathingSoundWorker run function lifeanddeath:disease/effecttypes/sound/consumption/playother
+execute as @a if entity @s[scores={random100=41..}] if score @s breathingSoundTic >= @s breathingSoundWorker run function lifeanddeath:disease/effecttypes/sound/consumption/play
+execute as @a if entity @s[scores={random100=..40}] if score @s breathingSoundTic >= @s breathingSoundWorker run function lifeanddeath:disease/effecttypes/sound/consumption/playother
 
 execute unless entity @e[tag=gstools_worker,type=marker,scores={enhancedSurvivalLoaded=0..0}] as @a if score @s breathingSoundTic >= @s breathingSoundWorker run scoreboard players set @s breathingSoundTic 0
