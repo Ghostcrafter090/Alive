@@ -2,12 +2,12 @@
   "lifeanddeath.player.breath": {
     "category": "master",
     "sounds": [
-      "player/breath/breath_0",
-      "player/breath/breath_1",
-      "player/breath/breath_2",
-      "player/breath/breath_3",
-      "player/breath/breath_4",
-      "player/breath/breath_5"
+      "player/weaze/breath_0",
+      "player/weaze/breath_1",
+      "player/weaze/breath_2",
+      "player/weaze/breath_3",
+      "player/weaze/breath_4",
+      "player/weaze/breath_5"
     ],
     "subtitle": "Laboured Breathing..."
   },
