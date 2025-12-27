@@ -2,6 +2,9 @@
 scoreboard objectives add breathingSoundWorker dummy
 
 # Main
+
+function lifeanddeath:disease/effecttypes/sound/consumption
+
 execute unless entity @e[tag=gstools_worker,type=marker,scores={enhancedSurvivalLoaded=0..0}] as @a run scoreboard players add @s breathingSoundTic 1
 
 execute as @a run scoreboard players operation @s breathingSoundWorker = @s stamina
