@@ -20,7 +20,7 @@ execute if entity @e[tag=!functional,scores={hasDiseaseBoolean=1..2,poi_boolean=
 execute if entity @e[tag=is_human,scores={hasDiseaseBoolean=1..2,poi_boolean=1..1}] run function lifeanddeath:disease/effecttypes/sound/weaze
 
 execute if entity @e[tag=!functional,scores={hasDiseaseBoolean=1..2,with_boolean=1..1}] run function lifeanddeath:disease/effecttypes/true/wither
-execute if entity @e[tag=is_human,scores={hasDiseaseBoolean=1..2,with_boolean=1..1}] run function lifeanddeath:disease/effecttypes/sound/consumption
+function lifeanddeath:disease/effecttypes/sound/consumption
 
 # Creative Reset
 execute as @a[gamemode=creative] run scoreboard players set @s hasDiseaseBoolean 0
