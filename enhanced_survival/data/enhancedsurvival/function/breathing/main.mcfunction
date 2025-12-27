@@ -17,4 +17,7 @@ execute as @a unless entity @s[scores={hasDiseaseBoolean=1..1}] if score @s brea
 execute as @a if entity @s[scores={hasDiseaseBoolean=1..1}] if entity @s[scores={random100=41..}] if score @s breathingSoundTic >= @s breathingSoundWorker run function lifeanddeath:disease/effecttypes/sound/consumption/play
 execute as @a if entity @s[scores={hasDiseaseBoolean=1..1}] if entity @s[scores={random100=..40}] if score @s breathingSoundTic >= @s breathingSoundWorker run function lifeanddeath:disease/effecttypes/sound/consumption/playother
 
+execute as @a[tag=!play_disease_sound] if entity @s[scores={hasDiseaseBoolean=1..1}] if entity @s[scores={random100=..40}] if score @s breathingSoundTic >= @s breathingSoundWorker run function enhancedsurvival:breathing/play
+execute as @a[tag=!play_disease_sound] if entity @s[scores={hasDiseaseBoolean=1..1}] if entity @s[scores={random100=..40}] if score @s breathingSoundTic >= @s breathingSoundWorker run function lifeanddeath:disease/effecttypes/sound/consumption/play
+
 execute as @a if score @s breathingSoundTic >= @s breathingSoundWorker run scoreboard players set @s breathingSoundTic 0
