@@ -8,7 +8,8 @@
       "player/breath/breath_3",
       "player/breath/breath_4",
       "player/breath/breath_5"
-    ]
+    ],
+    "subtitle": "Laboured Breathing..."
   },
   "lifeanddeath.player.cough.light": {
     "category": "master",
