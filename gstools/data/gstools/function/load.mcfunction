@@ -16,6 +16,7 @@ scoreboard objectives add 0 dummy
 scoreboard objectives add 1 dummy
 scoreboard objectives add 2 dummy
 scoreboard objectives add 4 dummy
+scoreboard objectives add 5 dummy
 scoreboard objectives add 8 dummy
 scoreboard objectives add 10 dummy
 scoreboard objectives add 20 dummy
@@ -44,6 +45,7 @@ scoreboard players set @e[tag=gstools_worker,type=marker] 0 0
 scoreboard players set @e[tag=gstools_worker,type=marker] 1 1
 scoreboard players set @e[tag=gstools_worker,type=marker] 2 2
 scoreboard players set @e[tag=gstools_worker,type=marker] 4 4
+scoreboard players set @e[tag=gstools_worker,type=marker] 5 5
 scoreboard players set @e[tag=gstools_worker,type=marker] 8 8
 scoreboard players set @e[tag=gstools_worker,type=marker] 10 10
 scoreboard players set @e[tag=gstools_worker,type=marker] 20 20
