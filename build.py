@@ -201,7 +201,7 @@ def compileDatapackIntoMod(folderName):
         os.system("copy \"alive_" + folderName + ".png\" \".\\temp_dir\\logo.png\" /y")
         
         versionHistory = pytools.IO.getJson("version_history.json")
-        gameVersions = ",".join(pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]])
+        gameVersions = ",".join([pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][0], pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][-1]])
         description = pytools.IO.getJson(folderName + "\\pack.mcmeta")["pack"]["description"]
         
         if "-fabric-" in jarFile:

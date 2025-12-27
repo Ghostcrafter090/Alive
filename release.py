@@ -12,7 +12,7 @@ class globals:
 def getReleasesToday(withReleasedToday=False):
     aList = []
     for aRelease in globals.aReleaseSchedule["list"]:
-        if ((pytools.clock.dateArrayToUTC(pytools.clock.getDateTime()) > pytools.clock.dateArrayToUTC(aRelease["releaseDate"])) and (not aRelease["isReleased"])) or (withReleasedToday and (pytools.clock.getDateTime()[0:3] == aRelease["releaseDate"][0:3])):
+        if ((pytools.clock.dateArrayToUTC(pytools.clock.getDateTime()) > pytools.clock.dateArrayToUTC(aRelease["releaseDate"])) and (not aRelease["isReleased"])) or (withReleasedToday and (pytools.clock.getDateTime()[0:3] == aRelease["releaseDate"][0:3]) and aRelease["isReleased"]):
             aList.append(aRelease)
             
     return aList
