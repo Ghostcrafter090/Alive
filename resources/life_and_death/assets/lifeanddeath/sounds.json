@@ -1,6 +1,6 @@
 {
   "player.breath.breath": {
-    "category": "player",
+    "category": "master",
     "sounds": [
       "player/breath/breath_0",
       "player/breath/breath_1",
