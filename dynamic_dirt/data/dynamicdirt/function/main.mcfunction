@@ -1,15 +1,15 @@
 # Define
 scoreboard objectives add collapseAccumulate dummy
 # Main
-execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air if block ~ ~-1 ~ coarse_dirt run summon marker ~1 ~ ~ {Tags:['dirt_collapse']}
-execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air if block ~ ~-1 ~ coarse_dirt run summon marker ~-1 ~ ~ {Tags:['dirt_collapse']}
-execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air if block ~ ~-1 ~ coarse_dirt run summon marker ~ ~ ~1 {Tags:['dirt_collapse']}
-execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air if block ~ ~-1 ~ coarse_dirt run summon marker ~ ~ ~-1 {Tags:['dirt_collapse']}
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~1 ~ ~ {Tags:['dirt_collapse']}
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~-1 ~ ~ {Tags:['dirt_collapse']}
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~ ~ ~1 {Tags:['dirt_collapse']}
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~ ~ ~-1 {Tags:['dirt_collapse']}
 
-execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air if block ~ ~-1 ~ coarse_dirt run summon marker ~1 ~ ~ {Tags:['dirt_collapse']}
-execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air if block ~ ~-1 ~ coarse_dirt run summon marker ~-1 ~ ~ {Tags:['dirt_collapse']}
-execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air if block ~ ~-1 ~ coarse_dirt run summon marker ~ ~ ~1 {Tags:['dirt_collapse']}
-execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air if block ~ ~-1 ~ coarse_dirt run summon marker ~ ~ ~-1 {Tags:['dirt_collapse']}
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~1 ~ ~ {Tags:['dirt_collapse']}
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~-1 ~ ~ {Tags:['dirt_collapse']}
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~ ~ ~1 {Tags:['dirt_collapse']}
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~ ~ ~-1 {Tags:['dirt_collapse']}
 
 execute as @e[type=falling_block,tag=!collapsed] at @s if block ~ ~-3 ~ air unless block ~ ~-2 ~ air run summon marker ~1 ~-1 ~ {Tags:['dirt_collapse']}
 execute as @e[type=falling_block,tag=!collapsed] at @s if block ~ ~-3 ~ air unless block ~ ~-2 ~ air run summon marker ~-1 ~-1 ~ {Tags:['dirt_collapse']}
@@ -54,8 +54,10 @@ execute as @e[type=warden] at @s unless entity @a[distance=0..5] if block ~ ~-2 
 execute as @e[type=warden] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ cave_air unless block ~ ~-1 ~ cave_air if entity @s[tag=!collapsed] run tag @s add collapsed
 
 execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ farmland replace dirt_path
+execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ farmland replace mud
 execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ dirt replace coarse_dirt
-execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ coarse_dirt replace clay
+execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ coarse_dirt replace mud
+execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ mud replace clay
 execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ clay replace sand
 execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ sand replace red_sand
 execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ sand replace gravel
@@ -95,16 +97,34 @@ function dynamicdirt:version_conflict/tuff_1
 
 execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ granite replace dripstone_block
 
-execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 red_sand replace coarse_dirt
-execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 red_sand replace coarse_dirt
-execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ void_air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 red_sand replace coarse_dirt
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 sand replace clay
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 sand replace clay
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ void_air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 sand replace clay
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 clay replace mud
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 clay replace mud
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ void_air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 clay replace mud
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 mud replace coarse_dirt
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 mud replace coarse_dirt
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ void_air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 mud replace coarse_dirt
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 coarse_dirt replace dirt
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 coarse_dirt replace dirt
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ void_air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 coarse_dirt replace dirt
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 dirt replace grass_block
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 dirt replace grass_block
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ void_air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 dirt replace grass_block
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 dirt replace dirt_path
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 dirt replace dirt_path
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ void_air run fill ~1 ~-1 ~1 ~-1 ~1 ~-1 dirt replace dirt_path
 
+execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ sand replace clay
+execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ sand replace clay
+execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ sand replace clay
+execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ clay replace mud
+execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ clay replace mud
+execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ clay replace mud
+execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ mud replace coarse_dirt
+execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ mud replace coarse_dirt
+execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ mud replace coarse_dirt
 execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ red_sand replace coarse_dirt
 execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ red_sand replace coarse_dirt
 execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ red_sand replace coarse_dirt
@@ -114,6 +134,9 @@ execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1
 execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace grass_block
 execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace grass_block
 execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace grass_block
+execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace dirt_path
+execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace dirt_path
+execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace dirt_path
 
 execute as @e[tag=dirt_collapse,type=marker,limit=1,sort=random] at @s run function dynamicdirt:collapse
 execute if score @e[tag=gstools_worker,type=marker,limit=1] ticTenth > @e[tag=gstools_worker,type=marker,limit=1] random10 run kill @e[tag=old_collapse,limit=1,sort=random]
