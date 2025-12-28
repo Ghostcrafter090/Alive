@@ -4,6 +4,7 @@ scoreboard objectives add dynamicDirtLoaded dummy
 scoreboard objectives add dynamicMonstersLoaded dummy
 scoreboard objectives add lifeAndDeathLoaded dummy
 scoreboard objectives add enhancedSurvivalLoaded dummy
+scoreboard objectives add blockDecayLoaded dummy
 
 scoreboard objectives add n1000000 dummy
 scoreboard objectives add n100000 dummy
@@ -64,6 +65,11 @@ scoreboard players set @e[tag=gstools_worker,type=marker] 59999968 59999968
 
 scoreboard players set @e[tag=gstools_worker,type=marker] desirePathsLoaded 0
 scoreboard players set @e[tag=gstools_worker,type=marker] dynamicDirtLoaded 0
+scoreboard players set @e[tag=gstools_worker,type=marker] dynamicMonstersLoaded 0
+scoreboard players set @e[tag=gstools_worker,type=marker] lifeAndDeathLoaded 0
+scoreboard players set @e[tag=gstools_worker,type=marker] enhancedSurvivalLoaded 0
+scoreboard players set @e[tag=gstools_worker,type=marker] blockDecayLoaded 0
+
 
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsWorkerMultTen 400
 
@@ -82,3 +88,4 @@ function dynamicdirt:load
 function dynamicmonsters:load
 function lifeanddeath:load
 function enhancedsurvival:load
+function blockdecay:load
