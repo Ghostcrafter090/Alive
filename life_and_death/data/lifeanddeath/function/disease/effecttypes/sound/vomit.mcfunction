@@ -1,0 +1,59 @@
+# Define
+scoreboard objectives add vomitStrength dummy
+scoreboard objectives add vomitSoundTic dummy
+
+# Main
+execute as @e[tag=is_human] run scoreboard players set @s vomitStrength 0
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=1..1,diseaseTime=1000..}] run scoreboard players set @s vomitStrength 1
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=1000..2000}] run scoreboard players set @s vomitStrength 1
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=2000..}] run scoreboard players set @s vomitStrength 1
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=1000..2000}] run scoreboard players set @s vomitStrength 1
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=2000..3000}] run scoreboard players set @s vomitStrength 1
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=3000..}] run scoreboard players set @s vomitStrength 1
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=1000..2000}] run scoreboard players set @s vomitStrength 1
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=2000..3000}] run scoreboard players set @s vomitStrength 1
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=3000..4000}] run scoreboard players set @s vomitStrength 1
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=1..1,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=4000..}] run scoreboard players set @s vomitStrength 1
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=1..1,diseaseTime=2000..}] run scoreboard players set @s vomitStrength 2
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=2000..3000}] run scoreboard players set @s vomitStrength 2
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=3000..}] run scoreboard players set @s vomitStrength 2
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=2000..3000}] run scoreboard players set @s vomitStrength 2
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=3000..4000}] run scoreboard players set @s vomitStrength 2
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=4000..}] run scoreboard players set @s vomitStrength 2
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=2000..3000}] run scoreboard players set @s vomitStrength 2
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=3000..4000}] run scoreboard players set @s vomitStrength 2
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=4000..5000}] run scoreboard players set @s vomitStrength 2
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=2..2,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=5000..}] run scoreboard players set @s vomitStrength 2
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=1..1,diseaseTime=3000..}] run scoreboard players set @s vomitStrength 3
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=3000..4000}] run scoreboard players set @s vomitStrength 3
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=4000..}] run scoreboard players set @s vomitStrength 3
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=3000..4000}] run scoreboard players set @s vomitStrength 3
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=4000..5000}] run scoreboard players set @s vomitStrength 3
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=5000..}] run scoreboard players set @s vomitStrength 3
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=3000..4000}] run scoreboard players set @s vomitStrength 3
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=4000..5000}] run scoreboard players set @s vomitStrength 3
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=5000..6000}] run scoreboard players set @s vomitStrength 3
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=3..3,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=6000..}] run scoreboard players set @s vomitStrength 3
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=1..1,diseaseTime=4000..}] run scoreboard players set @s vomitStrength 4
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=4000..5000}] run scoreboard players set @s vomitStrength 4
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=2..2,diseaseTime=5000..}] run scoreboard players set @s vomitStrength 4
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=4000..5000}] run scoreboard players set @s vomitStrength 4
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=5000..6000}] run scoreboard players set @s vomitStrength 4
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=3..3,diseaseTime=6000..}] run scoreboard players set @s vomitStrength 4
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=4000..5000}] run scoreboard players set @s vomitStrength 4
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=5000..6000}] run scoreboard players set @s vomitStrength 4
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=6000..7000}] run scoreboard players set @s vomitStrength 4
+execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2,hung_minact_tier=4..,hung_boolean=1..1,hung_max_tier=4..,diseaseTime=7000..}] run scoreboard players set @s vomitStrength 4
+
+execute as @e[tag=is_human,type=!player,scores={vomitStrength=1..}] run scoreboard players add @s vomitSoundTic 1
+
+execute as @e[tag=is_human,type=!player,scores={vomitStrength=1..1},limit=1,sort=random] if entity @s[scores={vomitSoundTic=3000..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_weaze] add play_vomit
+execute as @e[tag=is_human,type=!player,scores={vomitStrength=2..2},limit=1,sort=random] if entity @s[scores={vomitSoundTic=1500..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_weaze] add play_vomit
+execute as @e[tag=is_human,type=!player,scores={vomitStrength=3..3},limit=1,sort=random] if entity @s[scores={vomitSoundTic=1000..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_weaze] add play_vomit
+execute as @e[tag=is_human,type=!player,scores={vomitStrength=4..4},limit=1,sort=random] if entity @s[scores={vomitSoundTic=800..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_weaze] add play_vomit
+
+execute as @e[tag=play_vomit,limit=1,sort=random] at @s run playsound lifeanddeath.player.vomit player @a ~ ~ ~ 1
+execute as @e[tag=play_vomit,limit=1,sort=random] at @s run scoreboard players set @s coughSoundTic 0
+execute as @e[tag=play_vomit,limit=1,sort=random] at @s run scoreboard players set @s vomitSoundTic 0
+execute as @e[tag=play_vomit,limit=1,sort=random] at @s run scoreboard players remove @s breathingSoundTic 240
+execute as @e[tag=play_vomit,limit=1,sort=random] at @s run tag @s remove play_vomit

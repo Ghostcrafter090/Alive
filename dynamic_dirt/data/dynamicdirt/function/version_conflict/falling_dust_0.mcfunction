@@ -1,0 +1,1 @@
+execute as @e[type=falling_block,tag=!sound_played] at @s if entity @e[tag=dirt_collapse,distance=0..10,type=marker] if entity @e[tag=gstools_worker,type=marker,scores={random10=1..9}] run particle minecraft:falling_dust{color:[1, 1, 1], scale:1,block_state:gravel} ~ ~ ~ 0.3 0.3 0.3 1 10 normal

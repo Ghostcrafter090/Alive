@@ -1,0 +1,1 @@
+execute as @e[tag=!tile,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={hung_max_tier=1..}] if entity @s[nbt={active_effects:[{id:"minecraft:saturation",amplifier:0}]}] run scoreboard players remove @s hung_max_tier 2

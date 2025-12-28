@@ -1,0 +1,14 @@
+{
+  "enhancedsurvival.player.breath": {
+    "category": "master",
+    "sounds": [
+      "player/breath/breath_0",
+      "player/breath/breath_1",
+      "player/breath/breath_2",
+      "player/breath/breath_3",
+      "player/breath/breath_4",
+      "player/breath/breath_5"
+    ],
+    "subtitle": "Your Breathing..."
+  }
+}
