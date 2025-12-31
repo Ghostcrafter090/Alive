@@ -31,6 +31,6 @@ execute as @e[type=marker,tag=oak_tree_cursor_to_kill] run kill @s
 
 execute as @e[type=marker,tag=oak_tree_cursor,scores={treeCursorAliveTime=500..}] run kill @s
 execute as @e[type=marker,tag=oak_tree_worker,scores={treeWorkerAliveTime=500..}] run kill @s
-execute as @e[type=marker,tag=oak_tree_worker] unless entity @e[tag=oak_tree_cursor,sort=nearest,limit=1,distance=0..21] run kill @s
+execute as @e[type=marker,tag=oak_tree_worker] if entity @s[tag=oak_tree_locating] unless entity @e[tag=oak_tree_cursor,sort=nearest,limit=1,distance=0..21] run kill @s
 execute as @e[type=marker,tag=oak_tree_cursor] unless entity @e[tag=oak_tree_worker,sort=nearest,limit=1,distance=0..21] run kill @s
 
