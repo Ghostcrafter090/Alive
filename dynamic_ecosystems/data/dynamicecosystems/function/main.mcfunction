@@ -7,3 +7,4 @@ function dynamicecosystems:trees/spruce
 function dynamicecosystems:trees/birch
 function dynamicecosystems:trees/jungle
 
+function dynamicecosystems:vines/main
