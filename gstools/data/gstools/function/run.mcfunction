@@ -71,6 +71,9 @@ execute if score @s numberOfCursors > @e[tag=gstools_worker,type=marker,limit=1]
 execute store result score @e[tag=gstools_worker,type=marker] numberOfCursors if entity @e[tag=gstools_cursor,type=marker]
 execute store result score @e[tag=gstools_worker,type=marker] numberOfPlayers if entity @a
 scoreboard players operation @e[tag=gstools_worker,type=marker] numberOfPlayers *= @e[tag=gstools_worker,type=marker] 2
+execute store result score @e[tag=gstools_worker,type=marker] cursorTicSpeed run gamerule randomTickSpeed
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s cursorTicSpeed /= @s 3
+execute as @a run scoreboard players operation @s numberOfPlayers *= @e[tag=gstools_worker,type=marker] cursorTicSpeed
 
 execute if score @e[tag=gstools_worker,type=marker,limit=1] numberOfCursors > @e[tag=gstools_worker,type=marker,limit=1] numberOfPlayers as @a run kill @e[tag=gstools_cursor,type=marker]
 

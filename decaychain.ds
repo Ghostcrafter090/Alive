@@ -67,8 +67,8 @@ flowchart TB
     n86 --> n90["honey_block"]
     n90 --> n91["slime_block"]
     n91 --> n92["mud"]
-    n7 --> n93["moss"]
-    n93 --> n94["pale_moss"]
+    n7 --> n93["moss_block"]
+    n93 --> n94["pale_moss_block"]
     n94 --> n95["rooted_dirt"]
     n96["&lt;color&gt;_carpet"] --> n6
     n97["blue_ice"] --> n98["packed_ice"]
@@ -98,7 +98,8 @@ flowchart TB
     n122["oxidized_cut_&lt;ore&gt;_stairs"] --> n119
     n123 --> n118
     n124["oxidized_&lt;ore&gt;_bars"] --> n6
-    n125["&lt;ore&gt;_bars"] --> n124 & n6
+    n125["&lt;ore&gt;_bars"] --> n124
+    n125["&lt;ore&gt;_bars"] --> n6
     n126["waxed_&lt;ore&gt;_block"] --> n133["&lt;ore&gt;_block"]
     n127["waxed_cut_&lt;ore&gt;"] --> n134["cut_&lt;ore&gt;"]
     n128["waxed_chiseled_&lt;ore&gt;"] --> n135["chiseled_&lt;ore&gt;"]
