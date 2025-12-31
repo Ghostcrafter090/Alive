@@ -192,99 +192,100 @@ def compileBaseMod(modId, loader, gameVersion):
         os.system("xcopy \".\\basemod\\" + loader + "\\" + gameVersion + "\\build\\getbase\\" + modId + "\\*\" \".\\temp_dir\\" + modId + "\" /e /c /y /i")
         
 def compileDatapackIntoMod(folderName):
-    jarFileList = subprocess.getoutput("dir \"gstools-*.jar\" /b").split('\n')
-    for jarFile in jarFileList:
-        print(jarFile)
-        os.system("del .\\temp_dir\* /f /s /q")
-        pytools.IO.unpack(jarFile, ".\\temp_dir")
-        os.system("robocopy \"..\\datapacks\\" + folderName + "\\data\" \".\\temp_dir\\data\" * /mir")
-        os.system("copy \"alive_" + folderName + ".png\" \".\\temp_dir\\logo.png\" /y")
-        
-        versionHistory = pytools.IO.getJson("version_history.json")
-        gameVersions = ",".join([pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][0], pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][-1]])
-        description = pytools.IO.getJson(folderName + "\\pack.mcmeta")["pack"]["description"]
-        
-        if "-fabric-" in jarFile:
+    if folderName in modIdToDisplayName:
+        jarFileList = subprocess.getoutput("dir \"gstools-*.jar\" /b").split('\n')
+        for jarFile in jarFileList:
+            print(jarFile)
+            os.system("del .\\temp_dir\* /f /s /q")
+            pytools.IO.unpack(jarFile, ".\\temp_dir")
+            os.system("robocopy \"..\\datapacks\\" + folderName + "\\data\" \".\\temp_dir\\data\" * /mir")
+            os.system("copy \"alive_" + folderName + ".png\" \".\\temp_dir\\logo.png\" /y")
             
-            fabricGameVersion = gameVersions.split(",")[0]
-            if len(gameVersions.split(",")) > 1:
-                fabricGameVersion = "~" + fabricGameVersion
+            versionHistory = pytools.IO.getJson("version_history.json")
+            gameVersions = ",".join([pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][0], pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][-1]])
+            description = pytools.IO.getJson(folderName + "\\pack.mcmeta")["pack"]["description"]
             
-            fabricTemplate = copy.deepcopy(fabicModJsonTemplate)
-            fabricTemplate["id"] = folderName
-            fabricTemplate["version"] = ".".join(str(x) for x in versionHistory["current_version"])
-            fabricTemplate["name"] = modIdToDisplayName[folderName]
-            fabricTemplate["description"] = description
-            fabricTemplate["depends"]["minecraft"] = fabricGameVersion
-            fabricTemplate["depends"]["gstools"] = ">=" + (".".join(str(x) for x in versionHistory["current_version"]))
-            if (folderName != "gstools") or (jarFile.split("-")[2].split(".jar")[0] in fabricBaseRemovalVersions):
-                fabricTemplate["mixins"][0] = folderName + ".mixins.json"
+            if "-fabric-" in jarFile:
                 
-                fabricTemplate["entrypoints"]["main"] = []
-                fabricTemplate["entrypoints"]["client"] = []
-            
-            pytools.IO.saveJson(".\\temp_dir\\fabric.mod.json", fabricTemplate)
+                fabricGameVersion = gameVersions.split(",")[0]
+                if len(gameVersions.split(",")) > 1:
+                    fabricGameVersion = "~" + fabricGameVersion
+                
+                fabricTemplate = copy.deepcopy(fabicModJsonTemplate)
+                fabricTemplate["id"] = folderName
+                fabricTemplate["version"] = ".".join(str(x) for x in versionHistory["current_version"])
+                fabricTemplate["name"] = modIdToDisplayName[folderName]
+                fabricTemplate["description"] = description
+                fabricTemplate["depends"]["minecraft"] = fabricGameVersion
+                fabricTemplate["depends"]["gstools"] = ">=" + (".".join(str(x) for x in versionHistory["current_version"]))
+                if (folderName != "gstools") or (jarFile.split("-")[2].split(".jar")[0] in fabricBaseRemovalVersions):
+                    fabricTemplate["mixins"][0] = folderName + ".mixins.json"
+                    
+                    fabricTemplate["entrypoints"]["main"] = []
+                    fabricTemplate["entrypoints"]["client"] = []
+                
+                pytools.IO.saveJson(".\\temp_dir\\fabric.mod.json", fabricTemplate)
 
-            if (folderName != "gstools") or (jarFile.split("-")[2].split(".jar")[0] in fabricBaseRemovalVersions):
-                fabricMixinTemplate = fabricModMixinsTemplate
-                fabricMixinTemplate["package"] = folderName + ".mixin"
-                fabricMixinTemplate["refmap"] = folderName + ".refmap.json"
-                pytools.IO.saveJson(".\\temp_dir\\" + folderName + ".mixins.json", fabricMixinTemplate)
-                pytools.IO.saveJson(".\\temp_dir\\" + folderName + ".refmap.json", fabricModRefmapTemplate)
+                if (folderName != "gstools") or (jarFile.split("-")[2].split(".jar")[0] in fabricBaseRemovalVersions):
+                    fabricMixinTemplate = fabricModMixinsTemplate
+                    fabricMixinTemplate["package"] = folderName + ".mixin"
+                    fabricMixinTemplate["refmap"] = folderName + ".refmap.json"
+                    pytools.IO.saveJson(".\\temp_dir\\" + folderName + ".mixins.json", fabricMixinTemplate)
+                    pytools.IO.saveJson(".\\temp_dir\\" + folderName + ".refmap.json", fabricModRefmapTemplate)
+                
+            elif "-forge-" in jarFile:
+                forgeTemplate = forgeTemplate = forgeTomlTemplate
+                forgeTemplate = forgeTemplate.replace("<modId>", folderName)
+                forgeTemplate = forgeTemplate.replace("<modVersion>", ".".join(str(x) for x in versionHistory["current_version"]))
+                forgeTemplate = forgeTemplate.replace("<modDisplayName>", modIdToDisplayName[folderName])
+                forgeTemplate = forgeTemplate.replace("<modDescription>", description)
+                forgeTemplate = forgeTemplate.replace("<gameVersions>", gameVersions)
+                pytools.IO.saveFile(".\\temp_dir\\META-INF\\mods.toml", forgeTemplate)
+                
+            elif "-neoforge-" in jarFile:
+                neoforgeTemplate = neoForgeTomlTemplate
+                neoforgeTemplate = neoforgeTemplate.replace("<modId>", folderName)
+                neoforgeTemplate = neoforgeTemplate.replace("<modVersion>", ".".join(str(x) for x in versionHistory["current_version"]))
+                neoforgeTemplate = neoforgeTemplate.replace("<modDisplayName>", modIdToDisplayName[folderName])
+                neoforgeTemplate = neoforgeTemplate.replace("<modDescription>", description)
+                neoforgeTemplate = neoforgeTemplate.replace("<gameVersions>", gameVersions)
             
-        elif "-forge-" in jarFile:
-            forgeTemplate = forgeTemplate = forgeTomlTemplate
-            forgeTemplate = forgeTemplate.replace("<modId>", folderName)
-            forgeTemplate = forgeTemplate.replace("<modVersion>", ".".join(str(x) for x in versionHistory["current_version"]))
-            forgeTemplate = forgeTemplate.replace("<modDisplayName>", modIdToDisplayName[folderName])
-            forgeTemplate = forgeTemplate.replace("<modDescription>", description)
-            forgeTemplate = forgeTemplate.replace("<gameVersions>", gameVersions)
-            pytools.IO.saveFile(".\\temp_dir\\META-INF\\mods.toml", forgeTemplate)
+                if (int(jarFile.split("-")[2].split(".jar")[0].split('.')[1]) >= 21):
+                    pytools.IO.saveFile(".\\temp_dir\\META-INF\\neoforge.mods.toml", neoforgeTemplate)
+                elif ((int(jarFile.split("-")[2].split(".jar")[0].split('.')[1]) == 20) and (int(jarFile.split("-")[2].split(".jar")[0].split('.')[2]) >= 6)):
+                    pytools.IO.saveFile(".\\temp_dir\\META-INF\\neoforge.mods.toml", neoforgeTemplate)
+                    pytools.IO.saveFile(".\\temp_dir\\META-INF\\mods.toml", neoforgeTemplate)
+                else:
+                    pytools.IO.saveFile(".\\temp_dir\\META-INF\\mods.toml", neoforgeTemplate)
             
-        elif "-neoforge-" in jarFile:
-            neoforgeTemplate = neoForgeTomlTemplate
-            neoforgeTemplate = neoforgeTemplate.replace("<modId>", folderName)
-            neoforgeTemplate = neoforgeTemplate.replace("<modVersion>", ".".join(str(x) for x in versionHistory["current_version"]))
-            neoforgeTemplate = neoforgeTemplate.replace("<modDisplayName>", modIdToDisplayName[folderName])
-            neoforgeTemplate = neoforgeTemplate.replace("<modDescription>", description)
-            neoforgeTemplate = neoforgeTemplate.replace("<gameVersions>", gameVersions)
-        
-            if (int(jarFile.split("-")[2].split(".jar")[0].split('.')[1]) >= 21):
-                pytools.IO.saveFile(".\\temp_dir\\META-INF\\neoforge.mods.toml", neoforgeTemplate)
-            elif ((int(jarFile.split("-")[2].split(".jar")[0].split('.')[1]) == 20) and (int(jarFile.split("-")[2].split(".jar")[0].split('.')[2]) >= 6)):
-                pytools.IO.saveFile(".\\temp_dir\\META-INF\\neoforge.mods.toml", neoforgeTemplate)
-                pytools.IO.saveFile(".\\temp_dir\\META-INF\\mods.toml", neoforgeTemplate)
+            if os.path.exists("..\\..\\..\\resourcepacks\\" + folderName):
+                os.system("xcopy \"..\\..\\..\\resourcepacks\\" + folderName + "\\assets\\*\" \".\\temp_dir\\assets\" /e /c /y")
+            
+            if folderName != "gstools":
+                os.system("del \".\\temp_dir\\gstools\\*\" /f /s /q")
+                os.system("rmdir \".\\temp_dir\\gstools\" /s /q")
+            
+                if jarFile.split("-")[2].split(".jar")[0] in baseCompileVersions:
+                    compileBaseMod(folderName, jarFile.split("-")[1].split('-')[0], jarFile.split("-")[2].split(".jar")[0])
             else:
-                pytools.IO.saveFile(".\\temp_dir\\META-INF\\mods.toml", neoforgeTemplate)
-        
-        if os.path.exists("..\\..\\..\\resourcepacks\\" + folderName):
-            os.system("xcopy \"..\\..\\..\\resourcepacks\\" + folderName + "\\assets\\*\" \".\\temp_dir\\assets\" /e /c /y")
-        
-        if folderName != "gstools":
-            os.system("del \".\\temp_dir\\gstools\\*\" /f /s /q")
-            os.system("rmdir \".\\temp_dir\\gstools\" /s /q")
-        
-            if jarFile.split("-")[2].split(".jar")[0] in baseCompileVersions:
-                compileBaseMod(folderName, jarFile.split("-")[1].split('-')[0], jarFile.split("-")[2].split(".jar")[0])
-        else:
-            os.system("mkdir \".\\temp_dir\\data\\minecraft\\tags\\functions\"")
-            os.system("xcopy \".\\temp_dir\\data\\minecraft\\tags\\function\\*\" \".\\temp_dir\\data\\minecraft\\tags\\functions\" /e /c /y /i")
-        
-        
-        os.system("mkdir \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\tags\\blocks\"")
-        os.system("xcopy \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\tags\\block\\*\" \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\tags\\blocks\" /e /c /y /i")
-        
-        os.system("mkdir \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\functions\"")
-        os.system("xcopy \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\function\\*\" \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\functions\" /e /c /y /i")
-        
-        os.system("mkdir release")
-        pytools.IO.pack(".\\release\\" + folderName + "-" + jarFile.split("-")[1].split('-')[0] + "-" + jarFile.split("-")[2].split(".jar")[0] + "_" + ".".join(str(x) for x in versionHistory["current_version"]) + ".jar", ".\\temp_dir")
-        
-        os.system("del .\\temp_dir\* /f /s /q")
-        
-    zipFiles = subprocess.getoutput("dir .\\release\\*.zip /b").split("\n")
-    for file in zipFiles:
-        os.system("ren \".\\release\\" + file + "\" " + file.replace(".zip", ""))
+                os.system("mkdir \".\\temp_dir\\data\\minecraft\\tags\\functions\"")
+                os.system("xcopy \".\\temp_dir\\data\\minecraft\\tags\\function\\*\" \".\\temp_dir\\data\\minecraft\\tags\\functions\" /e /c /y /i")
+            
+            
+            os.system("mkdir \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\tags\\blocks\"")
+            os.system("xcopy \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\tags\\block\\*\" \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\tags\\blocks\" /e /c /y /i")
+            
+            os.system("mkdir \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\functions\"")
+            os.system("xcopy \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\function\\*\" \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\functions\" /e /c /y /i")
+            
+            os.system("mkdir release")
+            pytools.IO.pack(".\\release\\" + folderName + "-" + jarFile.split("-")[1].split('-')[0] + "-" + jarFile.split("-")[2].split(".jar")[0] + "_" + ".".join(str(x) for x in versionHistory["current_version"]) + ".jar", ".\\temp_dir")
+            
+            os.system("del .\\temp_dir\* /f /s /q")
+            
+        zipFiles = subprocess.getoutput("dir .\\release\\*.zip /b").split("\n")
+        for file in zipFiles:
+            os.system("ren \".\\release\\" + file + "\" " + file.replace(".zip", ""))
 
 doRun = False
 confirm = "null"

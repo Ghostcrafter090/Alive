@@ -9,10 +9,10 @@ import copy
 class globals:
     aReleaseSchedule = pytools.IO.getJson("release_schedule.json")
 
-def getReleasesToday(withReleasedToday=False):
+def getReleasesToday():
     aList = []
     for aRelease in globals.aReleaseSchedule["list"]:
-        if ((pytools.clock.dateArrayToUTC(pytools.clock.getDateTime()) > pytools.clock.dateArrayToUTC(aRelease["releaseDate"])) and (not aRelease["isReleased"])) or (withReleasedToday and (pytools.clock.getDateTime()[0:3] == aRelease["releaseDate"][0:3]) and aRelease["isReleased"]):
+        if ((pytools.clock.getDateTime()[0:3] == aRelease["releaseDate"][0:3]) and aRelease["isReleased"]):
             aList.append(aRelease)
             
     return aList
@@ -78,7 +78,7 @@ for arg in sys.argv:
 
 if doRun:
     if complete:
-        if (len(getReleasesToday(withReleasedToday=True)) < 1) or force:
+        if (len(getReleasesToday()) < 1) or force:
             print("Releasing new mod version!")
             for mod in curseforge.projectIdDict:
                 if not doTest:
@@ -124,7 +124,7 @@ if doRun:
             
     else:
         if len(getToRelease()):
-            if (len(getReleasesToday(withReleasedToday=True)) < 1) or force:
+            if (len(getReleasesToday()) < 1) or force:
                 print("Releasing scheduled mod version!")
                 theRelease = copy.deepcopy(getEarliestReleaseDate())
                 for mod in curseforge.projectIdDict:

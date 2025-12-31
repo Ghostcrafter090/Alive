@@ -1,32 +1,343 @@
 flowchart TB
-    n3["acacia_log"] --> n2["stripped_acacia_log"]
-    n2 --> n4["acacia_planks"]
-    n4 --> n7["acacia_slab"]
-    n8["acacia_fence"] --> n7
+    n3["&lt;wood&gt;_log"] --> n2["stripped_&lt;wood&gt;_log"]
+    n237["&lt;wood&gt;_stem"] --> n239["stripped_&lt;wood&gt;_stem"]
+    n238["&lt;wood&gt;_hyphae"] --> n240["stripped_&lt;wood&gt;_hyphae"]
+    n239 --> n4
+    n240 --> n4
+    n2 --> n4["&lt;wood&gt;_planks"]
+    n4 --> n7["&lt;wood&gt;_slab"]
+    n8["&lt;wood&gt;_fence"] --> n7
     n9["#minecraft:fence_gates"] --> n6["air"]
     n10["#minecraft:doors"] --> n6
     n11["#minecraft:all_signs"] --> n6
     n12["#minecraft:leaves"] --> n6
     n13["#minecraft:pressure_plates"] --> n6
-    n15["acacia_stairs"] --> n4
-    n17["acacia_wood"] --> n18["stripped_acacia_wood"]
+    n15["&lt;wood&gt;_stairs"] --> n4
+    n17["&lt;wood&gt;_wood"] --> n18["stripped_&lt;wood&gt;_wood"]
     n18 --> n4
     n19["#minecraft:rails"] --> n6
     n21["#minecraft:anvil"] --> n22["iron_block"]
-    n22 --> n23["raw_iron_block"]
-    n23 --> n24["iron_ore"]
-    n25["deepslate_iron_ore"] --> n24
-    n24 --> n26["stone"]
     n30["#minecraft:trapdoors"] --> n6
-    n31["bamboo_fence"] --> n32["bamboo_planks"]
-    n33["bamboo_stairs"] --> n32
-    n32 --> n35["bamboo_slab"]
-    n34["bamboo_mosaic"] --> n36["bamboo_mosaic_slab"]
-    n36 --> n35
-    n37["bamboo_mosaic_stairs"] --> n36
+    n34["&lt;wood&gt;_mosaic"] --> n36["&lt;wood&gt;_mosaic_slab"]
+    n37["&lt;wood&gt;_mosaic_stairs"] --> n36
     n29["bamboo"] --> n38["bamboo_shoot"]
     n38 --> n6
     n39["#blockdecay:shelves"] --> n6
+    n41["smooth_basalt"] --> n40["polished_basalt"]
+    n40 --> n42["basalt"]
+    n42 --> n26["stone"]
+    n43["bee_nest"] --> n44["honeycomb_block"]
+    n44 --> n45["packed_mud"]
+    n46["beehive"] --> n47["oak_planks"]
+    n49["#blockdecay:drip_leaves"] --> n6
+    n36 --> n7
+    n53["&lt;ore&gt;_block"] --> n54["raw_&lt;ore&gt;_block"]
+    n54 --> n55["&lt;ore&gt;_ore"]
+    n25["deepslate_&lt;ore&gt;_ore"] --> n55
+    n55 --> n26
+    n56["&lt;gem&gt;_block"] --> n57["&lt;gem&gt;_ore"]
+    n57 --> n26
+    n59["#minecraft:candles"] --> n6
+    n60["&lt;color&gt;_concrete"] --> n61["&lt;color&gt;_concrete_powder"]
+    n61 --> n62["gravel"]
+    n63["&lt;color&gt;_glazed_terracotta_"] --> n64["&lt;color&gt;_terracotta"]
+    n64 --> n65["terracotta"]
+    n65 --> n66["clay"]
+    n67["&lt;color&gt;_stained_glass"] --> n68["&lt;color&gt;_stained_glass_pane"]
+    n68 --> n69["glass_pane"]
+    n70["glass"] --> n69
+    n69 --> n6
+    n71["&lt;color&gt;_wool"] --> n72["white_wool"]
+    n72 --> n6
+    n73["blackstone"] --> n74["blackstone_slab"]
+    n74 --> n75["deepslate"]
+    n76["blackstone_stairs"] --> n73
+    n77["blackstone_wall"] --> n73
+    n78["budding_amethyst"] --> n79["amethyst_block"]
+    n79 --> n80["calcite"]
+    n80 --> n81["tuff"]
+    n82["&lt;wood&gt;_block"] --> n83["stripped_&lt;wood&gt;_block"]
+    n83 --> n4
+    n58["deepslate_&lt;gem&gt;_ore"] --> n57
+    n84["chiseled_resin_bricks"] --> n85["resin_bricks"]
+    n85 --> n88["resin_brick_slab"]
+    n88 --> n86["resin_block"]
+    n87["resin_brick_wall"] --> n85
+    n89["resin_brick_stairs"] --> n88
+    n86 --> n90["honey_block"]
+    n90 --> n91["slime_block"]
+    n91 --> n92["mud"]
+    n7 --> n93["moss"]
+    n93 --> n94["pale_moss"]
+    n94 --> n95["rooted_dirt"]
+    n96["&lt;color&gt;_carpet"] --> n6
+    n97["blue_ice"] --> n98["packed_ice"]
+    n98 --> n99["ice"]
+    n100["bone_block"] --> n42
+    n101["book_shelf"] --> n102["chiseled_shelf"]
+    n102 --> n47
+    n103["&lt;coral&gt;_coral_block"] --> n104["dead_&lt;coral&gt;_coral_block"]
+    n104 --> n94
+    n106["brick_stairs"] --> n105["bricks"]
+    n105 --> n107["brick_slab"]
+    n108["brick_wall"] --> n105
+    n107 --> n65
+    n109["cactus"] --> n93
+    n110["cactus_flower"] --> n6
+    n111["soul_campfire"] --> n112["campfire"]
+    n112 --> n47
+    n113["pumpkin"] --> n93
+    n114["carved_pumpkin"] --> n93
+    n115["melon"] --> n93
+    n116["cauldron"] --> n22
+    n117["chain"] --> n6
+    n118["oxidized_&lt;ore&gt;"] --> n54
+    n119["oxidized_cut_&lt;ore&gt;"] --> n123["oxidized_cut_&lt;ore&gt;_slab"]
+    n120["oxidized_chiseled_&lt;ore&gt;"] --> n119
+    n121["oxidized_&lt;ore&gt;_grate"] --> n120
+    n122["oxidized_cut_&lt;ore&gt;_stairs"] --> n119
+    n123 --> n118
+    n124["oxidized_&lt;ore&gt;_bars"] --> n6
+    n125["&lt;ore&gt;_bars"] --> n124 & n6
+    n126["waxed_&lt;ore&gt;_block"] --> n133["&lt;ore&gt;_block"]
+    n127["waxed_cut_&lt;ore&gt;"] --> n134["cut_&lt;ore&gt;"]
+    n128["waxed_chiseled_&lt;ore&gt;"] --> n135["chiseled_&lt;ore&gt;"]
+    n129["waxed_&lt;ore&gt;_grate"] --> n136["&lt;ore&gt;_grate"]
+    n130["waxed_cut_&lt;ore&gt;_stairs"] --> n137["cut_&lt;ore&gt;_stairs"]
+    n131["waxed_cut_&lt;ore&gt;_slab"] --> n138["cut_&lt;ore&gt;_slab"]
+    n132["waxed_&lt;ore&gt;_bars"] --> n139["&lt;ore&gt;_bars"]
+    n140["chiseled_deepslate"] --> n141["polished_deepslate"]
+    n142["cracked_deepslate_bricks"] --> n141
+    n143["deepslate_bricks"] --> n142
+    n144["deepslate_tiles"] --> n145["cracked_deepslate_tiles"]
+    n145 --> n142
+    n146["deepslate_brick_stairs"] --> n142
+    n147["deepslate_brick_slab"] --> n142
+    n148["deepslate_brick_wall"] --> n142
+    n149["polished_deepslate_stairs"] --> n141
+    n141 --> n150["polished_deepslate_slab"]
+    n151["polished_deepslate_wall"] --> n141
+    n152["deepslate_tile_stairs"] --> n145
+    n153["deepslate_tile_slab"] --> n145
+    n154["deepslate_tile_wall"] --> n145
+    n150 --> n75
+    n155["nether_bricks"]
+    n156["cracked_nether_bricks"]
+    n157["nether_brick_stairs"]
+    n158["nether_brick_slab"]
+    n159["nether_brick_wall"]
+    n160["nether_brick_fence"]
+    n161["chiseled_nether_bricks"]
+    n162["red_nether_bricks"]
+    n163["red_nether_brick_stairs"]
+    n164["red_nether_brick_slab"]
+    n165["red_nether_brick_wall"]
+    n166["netherrack"]
+    n167["red_terracotta"]
+    n156 --> n166
+    n155 --> n156
+    n157 --> n158
+    n158 --> n156
+    n159 --> n156
+    n160 --> n158
+    n161 --> n155
+    n162 --> n163
+    n163 --> n164
+    n164 --> n155
+    n165 --> n164
+    n166 --> n167
+    n168["gilded_blackstone"]
+    n169["chiseled_polished_blackstone"]
+    n170["polished_blackstone"]
+    n171["polished_blackstone_stairs"]
+    n172["polished_blackstone_slab"]
+    n173["polished_blackstone_wall"]
+    n174["polished_blackstone_bricks"]
+    n175["polished_blackstone_brick_wall"]
+    n176["cracked_polished_blackstone_bricks"]
+    n177["polished_blackstone_brick_stairs"]
+    n178["polished_blackstone_brick_slab"]
+    n168 --> n73
+    n169 --> n170
+    n170 --> n171
+    n171 --> n172
+    n172 --> n74
+    n173 --> n172
+    n174 --> n176
+    n175 --> n178
+    n177 --> n178
+    n178 --> n172
+    n176 --> n73
+    n179["quartz_block"]
+    n180["quartz_stairs"]
+    n181["quartz_slab"]
+    n182["chiseled_quartz_block"]
+    n183["quartz_bricks"]
+    n184["quartz_pillar"]
+    n185["smooth_quartz"]
+    n186["smooth_quartz_stairs"]
+    n187["smooth_quartz_slab"]
+    n188["nether_quartz_ore"]
+    n179 --> n184
+    n184 --> n40
+    n180 --> n181
+    n181 --> n184
+    n182 --> n183
+    n183 --> n185
+    n185 --> n179
+    n186 --> n180
+    n187 --> n181
+    n188 --> n166
+    n189["sandstone"]
+    n190["sandstone_stairs"]
+    n191["sandstone_slab"]
+    n192["sandstone_wall"]
+    n193["chiseled_sandstone"]
+    n194["smooth_sandstone"]
+    n195["smooth_sandstone_stairs"]
+    n196["smooth_sandstone_slab"]
+    n197["cut_sandstone"]
+    n198["cut_sandstone_slab"]
+    n199["red_sandstone"]
+    n200["red_sandstone_stairs"]
+    n201["red_sandstone_slab"]
+    n202["red_sandstone_wall"]
+    n203["chiseled_red_sandstone"]
+    n204["smooth_red_sandstone"]
+    n205["smooth_red_sandstone_stairs"]
+    n206["smooth_red_sandstone_slab"]
+    n207["cut_red_sandstone"]
+    n208["cut_red_sandstone_slab"]
+    n209["sand"]
+    n199 --> n189
+    n200 --> n190
+    n201 --> n191
+    n202 --> n192
+    n203 --> n193
+    n204 --> n194
+    n205 --> n195
+    n206 --> n196
+    n207 --> n197
+    n208 --> n198
+    n189 --> n190
+    n190 --> n191
+    n191 --> n209
+    n192 --> n191
+    n193 --> n194
+    n194 --> n195
+    n195 --> n196
+    n196 --> n191
+    n197 --> n198
+    n198 --> n196
+    n210["stone_bricks"]
+    n211["mossy_stone_bricks"]
+    n212["cracked_stone_bricks"]
+    n213["stone_brick_stairs"]
+    n214["mossy_stone_brick_stairs"]
+    n215["stone_brick_slab"]
+    n216["mossy_stone_brick_slab"]
+    n217["stone_brick_wall"]
+    n218["mossy_stone_brick_wall"]
+    n219["chiseled_stone_bricks"]
+    n220["cobblestone"]
+    n221["cobblestone_slab"]
+    n210 --> n211
+    n211 --> n212
+    n212 --> n220
+    n213 --> n214
+    n215 --> n216
+    n217 --> n218
+    n214 --> n216
+    n218 --> n216
+    n216 --> n221
+    n219 --> n210
+    n223["chiseled_tuff"]
+    n224["polished_tuff"]
+    n225["polished_tuff_stairs"]
+    n226["polished_tuff_slab"]
+    n227["polished_tuff_wall"]
+    n228["tuff_bricks"]
+    n229["tuff_brick_stairs"]
+    n230["tuff_brick_slab"]
+    n231["tuff_brick_wall"]
+    n232["chiseled_tuff_bricks"]
+    n233["tuff_slab"]
+    n224 --> n81
+    n223 --> n224
+    n228 --> n224
+    n229 --> n225
+    n230 --> n226
+    n231 --> n227
+    n225 --> n226
+    n227 --> n226
+    n226 --> n233
+    n226 --> n224
+    n232 --> n228
+    n234["cobweb"] --> n6
+    n235["creaking_heart"] --> n236["pale_oak_log"]
+    n241["crying_obsidian"] --> n242["obsidian"]
+    n242 --> n79
+    n243["prismarine"]
+    n244["prismarine_stairs"]
+    n245["prismarine_slab"]
+    n246["prismarine_wall"]
+    n247["prismarine_bricks"]
+    n248["prismarine_brick_stairs"]
+    n249["prismarine_brick_slab"]
+    n250["dark_prismarine"]
+    n251["dark_prismarine_stairs"]
+    n252["dark_prismarine_slab"]
+    n250 --> n243
+    n247 --> n243
+    n243 --> n244
+    n244 --> n245
+    n245 --> n62
+    n247 --> n248
+    n248 --> n249
+    n249 --> n245
+    n250 --> n251
+    n251 --> n252
+    n252 --> n249
+    n253["glowstone"] --> n254["magma_block"]
+    n254 --> n242
+    n255["hay_bale"] --> n93
+    n256["jack_o_lantern"] --> n114
+    n257["dried_kelp_block"] --> n93
+    n258["ladder"] --> n6
+    n259["lodestone"] --> n81
+    n260["mud_bricks"] --> n45
+    n261["mud_brick_stairs"] --> n45
+    n262["mud_brick_slab"] --> n45
+    n263["muddy_mangrove_roots"] --> n92
+    n264["blockdecay:froglights"] --> n92
+    n265["polished_andesite"]
+    n266["polished_andesite_stairs"]
+    n267["polished_andesite_slab"]
+    n268["polished_granite"]
+    n269["polished_granite_stairs"]
+    n270["polished_granite_slab"]
+    n271["polished_diorite"]
+    n272["polished_diorite_stairs"]
+    n273["polished_diorite_slab"]
+    n274["andeside_slab"]
+    n275["granite_slab"]
+    n276["diorite_slab"]
+    n265 --> n266
+    n266 --> n267
+    n268 --> n269
+    n269 --> n270
+    n271 --> n272
+    n272 --> n273
+    n267 --> n274
+    n270 --> n275
+    n273 --> n276
+    n277["sea_lantern"] --> n243
+    n278["smooth_stone"] --> n279["smooth_stone_slab"]
+    n279 --> n280["stone_slab"]
+    n281["sponge"] --> n93
+    n282["target"] --> n255
+    n283["wet_sponge"] --> n281
+
 
     n3@{ shape: rect}
     n2@{ shape: rect}
@@ -40,15 +351,68 @@ flowchart TB
     n17@{ shape: rect}
     n19@{ shape: rect}
     n21@{ shape: rect}
-    n23@{ shape: rect}
-    n25@{ shape: rect}
     n30@{ shape: rect}
-    n31@{ shape: rect}
-    n32@{ shape: rect}
-    n33@{ shape: rect}
-    n35@{ shape: rect}
     n34@{ shape: rect}
     n37@{ shape: rect}
     n29@{ shape: rect}
     n38@{ shape: rect}
     n39@{ shape: rect}
+    n40@{ shape: rect}
+    n43@{ shape: rect}
+    n44@{ shape: rect}
+    n45@{ shape: rect}
+    n46@{ shape: rect}
+    n47@{ shape: rect}
+    n49@{ shape: rect}
+    n53@{ shape: rect}
+    n54@{ shape: rect}
+    n55@{ shape: rect}
+    n25@{ shape: rect}
+    n56@{ shape: rect}
+    n59@{ shape: rect}
+    n60@{ shape: rect}
+    n63@{ shape: rect}
+    n67@{ shape: rect}
+    n70@{ shape: rect}
+    n71@{ shape: rect}
+    n73@{ shape: rect}
+    n76@{ shape: rect}
+    n77@{ shape: rect}
+    n78@{ shape: rect}
+    n82@{ shape: rect}
+    n58@{ shape: rect}
+    n84@{ shape: rect}
+    n88@{ shape: rect}
+    n87@{ shape: rect}
+    n89@{ shape: rect}
+    n96@{ shape: rect}
+    n97@{ shape: rect}
+    n100@{ shape: rect}
+    n101@{ shape: rect}
+    n103@{ shape: rect}
+    n106@{ shape: rect}
+    n105@{ shape: rect}
+    n108@{ shape: rect}
+    n109@{ shape: rect}
+    n110@{ shape: rect}
+    n111@{ shape: rect}
+    n113@{ shape: rect}
+    n114@{ shape: rect}
+    n115@{ shape: rect}
+    n116@{ shape: rect}
+    n117@{ shape: rect}
+    n118@{ shape: rect}
+    n140@{ shape: rect}
+    n142@{ shape: rect}
+    n143@{ shape: rect}
+    n144@{ shape: rect}
+    n145@{ shape: rect}
+    n146@{ shape: rect}
+    n147@{ shape: rect}
+    n148@{ shape: rect}
+    n149@{ shape: rect}
+    n150@{ shape: rect}
+    n151@{ shape: rect}
+    n152@{ shape: rect}
+    n153@{ shape: rect}
+    n154@{ shape: rect}
