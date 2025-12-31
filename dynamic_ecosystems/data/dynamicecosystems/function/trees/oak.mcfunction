@@ -1,0 +1,24 @@
+# Define
+scoreboard objectives add treeCursorAliveTime dummy
+scoreboard objectives add treeSpawnThresholdWorker dummy
+# Main
+execute as @e[tag=gstools_cursor,type=marker] at @s if block ~ ~-1 ~ oak_leaves run summon marker ~ ~ ~ {Tags:['oak_tree_worker']}
+
+execute as @e[type=marker,tag=oak_tree_worker] unless entity @s[tag=oak_tree_locating] at @s run summon marker ~ ~ ~ {Tags:['oak_tree_cursor']}
+execute as @e[type=marker,tag=oak_tree_worker] unless entity @s[tag=oak_tree_locating] at @s run tag @s add oak_tree_locating
+
+execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] as @e[tag=oak_tree_cursor,sort=nearest,limit=1] run spreadplayers ~ ~ 1 15 true @s
+execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] as @e[tag=oak_tree_cursor,sort=nearest,limit=1] at @s if block ~ ~-1 ~ #minecraft:leaves run scoreboard players set @s treeSpawnThresholdWorker 0
+execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] as @e[tag=oak_tree_cursor,sort=nearest,limit=1] at @s if block ~ ~-1 ~ #minecraft:saplings run scoreboard players set @s treeSpawnThresholdWorker 0
+execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] as @e[tag=oak_tree_cursor,sort=nearest,limit=1] at @s if block ~ ~-1 ~ #minecraft:logs run scoreboard players set @s treeSpawnThresholdWorker 0
+execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] as @e[tag=oak_tree_cursor,sort=nearest,limit=1] at @s if block ~ ~-1 ~ #minecraft:planks run scoreboard players set @s treeSpawnThresholdWorker 0
+execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] as @e[tag=oak_tree_cursor,sort=nearest,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run scoreboard players add @s treeSpawnThresholdWorker 1
+execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] run scoreboard players add @s treeCursorAliveTime 1
+
+execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] as @e[tag=oak_tree_cursor,sort=nearest,limit=1] run scoreboard players operation @s treeCursorAliveTime = @e[tag=gstools_worker,type=marker,limit=1] random100
+execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] as @e[tag=oak_tree_cursor,sort=nearest,limit=1] run scoreboard players operation @s treeCursorAliveTime += @e[tag=gstools_worker,type=marker,limit=1] 20
+
+execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] as @e[tag=oak_tree_cursor,sort=nearest,limit=1] if score @s treeCursorAliveTime < @s treeSpawnThresholdWorker at @s if block ~ ~-1 ~ #minecraft:dirt run fill ~ ~ ~ ~ ~ ~ oak_sapling replace #minecraft:air
+execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] as @e[tag=oak_tree_cursor,sort=nearest,limit=1] if score @s treeCursorAliveTime < @s treeSpawnThresholdWorker at @s if block ~ ~-1 ~ #minecraft:dirt run tag @s add oak_tree_cursor_to_kill
+execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] if entity @e[tag=oak_tree_cursor_to_kill,sort=nearest,limit=1,distance=0..21] run kill @s
+execute as @e[type=marker,tag=oak_tree_cursor_to_kill] run kill @s

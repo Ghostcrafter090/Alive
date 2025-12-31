@@ -5,6 +5,7 @@ scoreboard objectives add dynamicMonstersLoaded dummy
 scoreboard objectives add lifeAndDeathLoaded dummy
 scoreboard objectives add enhancedSurvivalLoaded dummy
 scoreboard objectives add blockDecayLoaded dummy
+scoreboard objectives add dynamicEcosystemsLoaded dummy
 
 scoreboard objectives add n1000000 dummy
 scoreboard objectives add n100000 dummy
@@ -90,4 +91,5 @@ function dynamicdirt:load
 function dynamicmonsters:load
 function lifeanddeath:load
 function enhancedsurvival:load
+function dynamicecosystems:load
 function blockdecay:load

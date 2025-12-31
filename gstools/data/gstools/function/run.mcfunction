@@ -88,6 +88,7 @@ function gstools:hud/main
 # Run
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function desirepaths:main
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function dynamicdirt:main
+execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function dynamicecosystems:main
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function blockdecay:main
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function dynamicmonsters:main
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function lifeanddeath:main
