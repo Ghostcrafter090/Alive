@@ -12,6 +12,7 @@ scoreboard objectives add doRun dummy
 scoreboard objectives add gstoolsWorkerCount dummy
 scoreboard objectives add gameTime dummy
 scoreboard objectives add timeOfDay dummy
+scoreboard objectives add currentDifficulty dummy
 
 scoreboard objectives add death deathCount
 
@@ -56,6 +57,8 @@ scoreboard players operation @e[tag=gstools_worker,type=marker] ticTenth %= @e[t
 
 scoreboard players operation @e[tag=gstools_worker,type=marker] ticSecond = @e[tag=gstools_worker,type=marker] tic
 scoreboard players operation @e[tag=gstools_worker,type=marker] ticSecond %= @e[tag=gstools_worker,type=marker] 20
+
+execute if entity @e[tag=gstools_worker,type=marker,scores={ticSecond=1..1}] store result score @s currentDifficulty run difficulty
 
 execute as @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function gstools:util/random
 
