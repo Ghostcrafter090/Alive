@@ -24,13 +24,18 @@ execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locatin
 execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating,scores={treeWorkerAliveTime=300..}] as @e[tag=oak_tree_cursor,sort=nearest,limit=1] run tag @s add oak_tree_cursor_to_kill
 
 execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] as @e[tag=oak_tree_cursor,sort=nearest,limit=1] if score @s treeWorkerAliveTime < @s treeSpawnThresholdWorker at @s if block ~ ~-1 ~ #minecraft:dirt run fill ~ ~ ~ ~ ~ ~ oak_sapling replace #minecraft:air
-execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] as @e[tag=oak_tree_cursor,sort=nearest,limit=1] if score @s treeWorkerAliveTime < @s treeSpawnThresholdWorker at @s if block ~ ~-1 ~ #minecraft:dirt run say sapling spawned!
+execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] as @e[tag=oak_tree_cursor,sort=nearest,limit=1] if score @s treeWorkerAliveTime < @s treeSpawnThresholdWorker at @s if block ~ ~-1 ~ #minecraft:dirt run say oak sapling spawned!
 execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] as @e[tag=oak_tree_cursor,sort=nearest,limit=1] if score @s treeWorkerAliveTime < @s treeSpawnThresholdWorker at @s if block ~ ~-1 ~ #minecraft:dirt run tag @s add oak_tree_cursor_to_kill
-execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] if entity @e[tag=oak_tree_cursor_to_kill,sort=nearest,limit=1,distance=0..21] run kill @s
+execute as @e[tag=oak_tree_worker,type=marker] if entity @s[tag=oak_tree_locating] if entity @e[tag=oak_tree_cursor_to_kill,sort=nearest,limit=1,distance=0..41] run kill @s
+execute as @e[type=marker,tag=oak_tree_cursor_to_kill] run say oak killing 1...
 execute as @e[type=marker,tag=oak_tree_cursor_to_kill] run kill @s
 
+execute as @e[type=marker,tag=oak_tree_cursor,scores={treeCursorAliveTime=500..}] run say oak killing 2...
 execute as @e[type=marker,tag=oak_tree_cursor,scores={treeCursorAliveTime=500..}] run kill @s
+execute as @e[type=marker,tag=oak_tree_worker,scores={treeWorkerAliveTime=500..}] run say oak killing 3...
 execute as @e[type=marker,tag=oak_tree_worker,scores={treeWorkerAliveTime=500..}] run kill @s
-execute as @e[type=marker,tag=oak_tree_worker] if entity @s[tag=oak_tree_locating] unless entity @e[tag=oak_tree_cursor,sort=nearest,limit=1,distance=0..21] run kill @s
-execute as @e[type=marker,tag=oak_tree_cursor] unless entity @e[tag=oak_tree_worker,sort=nearest,limit=1,distance=0..21] run kill @s
+# execute as @e[type=marker,tag=oak_tree_worker] if entity @s[tag=oak_tree_locating] unless entity @e[tag=oak_tree_cursor,sort=nearest,limit=1,distance=0..21] run say killing 4...
+# execute as @e[type=marker,tag=oak_tree_worker] if entity @s[tag=oak_tree_locating] unless entity @e[tag=oak_tree_cursor,sort=nearest,limit=1,distance=0..21] run kill @s
+# execute as @e[type=marker,tag=oak_tree_cursor] unless entity @e[tag=oak_tree_worker,sort=nearest,limit=1,distance=0..41] run say killing 5...
+# execute as @e[type=marker,tag=oak_tree_cursor] unless entity @e[tag=oak_tree_worker,sort=nearest,limit=1,distance=0..41] run kill @s
 
