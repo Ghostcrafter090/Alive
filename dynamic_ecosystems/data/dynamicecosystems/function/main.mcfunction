@@ -5,4 +5,5 @@ scoreboard objectives add collapseAccumulate dummy
 function dynamicecosystems:trees/oak
 function dynamicecosystems:trees/spruce
 function dynamicecosystems:trees/birch
+function dynamicecosystems:trees/jungle
 
