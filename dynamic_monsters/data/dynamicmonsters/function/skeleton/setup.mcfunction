@@ -7,6 +7,7 @@ tag @s add mainhand
 execute store success score @s skeletonHasOffhand run data get entity @s ArmorItems[-1].id
 execute if entity @s[scores={skeletonHasOffhand=1..1}] run tag @s add ignore_skeleton
 
+execute if score @e[type=marker,tag=gstools_worker,limit=1] currentDifficulty >= @e[type=marker,tag=gstools_worker,limit=1] random100 run data modify entity @s equipment.mainhand.components."minecraft:enchantments"."minecraft:flame" set value 1
 execute store success score @s skeletonHasFlamingBow run data get entity @e[type=skeleton,limit=1,sort=random] equipment.mainhand.components."minecraft:enchantments"."minecraft:flame"
 execute if entity @s[scores={skeletonHasOffhand=1..1}] run tag @s add ignore_skeleton_flame
 
