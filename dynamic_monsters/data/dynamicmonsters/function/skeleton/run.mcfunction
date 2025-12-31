@@ -26,4 +26,8 @@ execute if entity @s[scores={skeletonTimeOnFire=6000..}] at @s run summon wither
 execute if entity @s[scores={skeletonTimeOnFire=6000..}] at @s run tp @s ~ -100 ~
 execute if entity @s[scores={skeletonTimeOnFire=6000..}] run kill @s
 
+function gstools:util/random
+execute if entity @s[scores={random1000=..5}] as @s at @s run summon arrow ~ ~2 ~ {Tags:['make_skeleton_attack']}
+execute as @e[type=arrow,tag=make_skeleton_attack] at @s run data modify entity @s Owner set from entity @e[tag=walkable,distance=3..,sort=nearest,limit=1] UUID
+
 
