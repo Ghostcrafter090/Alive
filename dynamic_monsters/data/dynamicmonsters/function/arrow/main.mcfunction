@@ -1,4 +1,4 @@
-<wood># Define
+# Define
 
 # Main
 execute if entity @e[tag=gstools_worker,type=marker,scores={ticQuarter=1..1}] as @e[type=arrow] store result score @s secondsTillExtinguished run data get entity @s Fire
