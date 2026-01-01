@@ -52,9 +52,12 @@ execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run
 execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ coarse_dirt replace dirt
 execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ coarse_dirt replace dirt
 execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ coarse_dirt replace dirt
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace grass_block
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace grass_block
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace grass_block
+execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace rooted_dirt
+execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace rooted_dirt
+execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace rooted_dirt
+execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ rooted_dirt replace grass_block
+execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ rooted_dirt replace grass_block
+execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ rooted_dirt replace grass_block
 execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace dirt_path
 execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace dirt_path
 execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace dirt_path

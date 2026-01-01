@@ -55,9 +55,8 @@ execute as @e[type=warden] at @s unless entity @a[distance=0..5] if block ~ ~-2 
 
 execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ farmland replace dirt_path
 execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ farmland replace mud
-execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~1 ~ ~ ~-1 ~ dirt replace rooted_dirt
-execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~1 ~ ~ ~-1 ~ rooted_dirt replace dirt
-execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ dirt replace coarse_dirt
+execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ dirt replace rooted_dirt
+execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ rooted_dirt replace coarse_dirt
 execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ coarse_dirt replace packed_mud
 execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ packed_mud replace mud
 execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ mud replace clay
