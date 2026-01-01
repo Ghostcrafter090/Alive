@@ -40,7 +40,6 @@ scoreboard objectives add slimeParasiteTime dummy
 scoreboard objectives add pillagerParasiteTime dummy
 scoreboard objectives add spiderParasiteTime dummy
 scoreboard objectives add darkParasiteTime dummy
-
 # Main
 function lifeanddeath:disease/diseasea
 function lifeanddeath:disease/diseaseb
