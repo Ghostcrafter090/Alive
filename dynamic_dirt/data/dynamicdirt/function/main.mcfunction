@@ -6,6 +6,11 @@ execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air if block ~
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~ ~ ~1 {Tags:['dirt_collapse']}
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~ ~ ~-1 {Tags:['dirt_collapse']}
 
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ water if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~1 ~ ~ {Tags:['dirt_collapse']}
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ water if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~-1 ~ ~ {Tags:['dirt_collapse']}
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ water if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~ ~ ~1 {Tags:['dirt_collapse']}
+execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ water if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~ ~ ~-1 {Tags:['dirt_collapse']}
+
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~1 ~ ~ {Tags:['dirt_collapse']}
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~-1 ~ ~ {Tags:['dirt_collapse']}
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ cave_air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~ ~ ~1 {Tags:['dirt_collapse']}
@@ -16,11 +21,16 @@ execute as @e[type=falling_block,tag=!collapsed] at @s if block ~ ~-3 ~ air unle
 execute as @e[type=falling_block,tag=!collapsed] at @s if block ~ ~-3 ~ air unless block ~ ~-2 ~ air run summon marker ~ ~-1 ~1 {Tags:['dirt_collapse']}
 execute as @e[type=falling_block,tag=!collapsed] at @s if block ~ ~-3 ~ air unless block ~ ~-2 ~ air run summon marker ~ ~-1 ~-1 {Tags:['dirt_collapse']}
 execute as @e[type=falling_block,tag=!collapsed] at @s if block ~ ~-3 ~ air unless block ~ ~-2 ~ air run tag @s add collapsed
+execute as @e[type=falling_block,tag=!collapsed] at @s if block ~ ~-3 ~ water unless block ~ ~-2 ~ water unless block ~ ~-2 ~ air run summon marker ~1 ~-1 ~ {Tags:['dirt_collapse']}
+execute as @e[type=falling_block,tag=!collapsed] at @s if block ~ ~-3 ~ water unless block ~ ~-2 ~ water unless block ~ ~-2 ~ air run summon marker ~-1 ~-1 ~ {Tags:['dirt_collapse']}
+execute as @e[type=falling_block,tag=!collapsed] at @s if block ~ ~-3 ~ water unless block ~ ~-2 ~ water unless block ~ ~-2 ~ air run summon marker ~ ~-1 ~1 {Tags:['dirt_collapse']}
+execute as @e[type=falling_block,tag=!collapsed] at @s if block ~ ~-3 ~ water unless block ~ ~-2 ~ water unless block ~ ~-2 ~ air run summon marker ~ ~-1 ~-1 {Tags:['dirt_collapse']}
+execute as @e[type=falling_block,tag=!collapsed] at @s if block ~ ~-3 ~ water unless block ~ ~-2 ~ water unless block ~ ~-2 ~ air run tag @s add collapsed
 
 execute as @e[type=falling_block,tag=!play_land] at @s if block ~ ~-1 ~ #minecraft:mineable/pickaxe run playsound minecraft:entity.zombie.attack_wooden_door ambient @a ~ ~ ~ 3 0.1
 execute as @e[type=falling_block,tag=!play_land] at @s if block ~ ~-1 ~ #minecraft:mineable/shovel run playsound minecraft:entity.zombie.infect ambient @a ~ ~ ~ 1 0.1
 execute as @e[type=falling_block,tag=!play_land] at @s if block ~ ~-1 ~ #minecraft:mineable/axe run playsound minecraft:entity.zombie.break_wooden_door ambient @a ~ ~ ~ 1 0.1
-execute as @e[type=falling_block,tag=!play_land] at @s unless block ~ ~-1 ~ #minecraft:air run tag @s add play_land
+execute as @e[type=falling_block,tag=!play_land] at @s unless block ~ ~-1 ~ #dynamicdirt:air run tag @s add play_land
 
 execute as @e[type=falling_block,tag=!collapsed] at @s if block ~ ~-3 ~ cave_air unless block ~ ~-2 ~ cave_air run summon marker ~1 ~-1 ~ {Tags:['dirt_collapse']}
 execute as @e[type=falling_block,tag=!collapsed] at @s if block ~ ~-3 ~ cave_air unless block ~ ~-2 ~ cave_air run summon marker ~-1 ~-1 ~ {Tags:['dirt_collapse']}
@@ -28,23 +38,23 @@ execute as @e[type=falling_block,tag=!collapsed] at @s if block ~ ~-3 ~ cave_air
 execute as @e[type=falling_block,tag=!collapsed] at @s if block ~ ~-3 ~ cave_air unless block ~ ~-2 ~ cave_air run summon marker ~ ~-1 ~-1 {Tags:['dirt_collapse']}
 execute as @e[type=falling_block,tag=!collapsed] at @s if block ~ ~-3 ~ cave_air unless block ~ ~-2 ~ cave_air run tag @s add collapsed
 
-execute as @e[type=item] at @s if block ~ ~-3 ~ air unless block ~ ~-2 ~ air if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}
-execute as @e[type=item] at @s if block ~ ~-3 ~ air unless block ~ ~-2 ~ air if entity @s[tag=!collapsed] run tag @s add collapsed
+execute as @e[type=item] at @s if block ~ ~-3 ~ #dynamicdirt:air unless block ~ ~-2 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}
+execute as @e[type=item] at @s if block ~ ~-3 ~ #dynamicdirt:air unless block ~ ~-2 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run tag @s add collapsed
 
-execute as @e[type=item] at @s if block ~ ~-3 ~ cave_air unless block ~ ~-2 ~ cave_air if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}
-execute as @e[type=item] at @s if block ~ ~-3 ~ cave_air unless block ~ ~-2 ~ cave_air if entity @s[tag=!collapsed] run tag @s add collapsed
+execute as @e[type=item] at @s if block ~ ~-3 ~ water unless block ~ ~-2 ~ water if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}
+execute as @e[type=item] at @s if block ~ ~-3 ~ water unless block ~ ~-2 ~ water if entity @s[tag=!collapsed] run tag @s add collapsed
 
-execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ air unless block ~ ~-1 ~ air if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}
-execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ air unless block ~ ~-1 ~ air if entity @s[tag=!collapsed] run tag @s add collapsed
+execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ water unless block ~ ~-1 ~ water if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}
+execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ water unless block ~ ~-1 ~ water if entity @s[tag=!collapsed] run tag @s add collapsed
 
-execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ cave_air unless block ~ ~-1 ~ cave_air if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}
-execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ cave_air unless block ~ ~-1 ~ cave_air if entity @s[tag=!collapsed] run tag @s add collapsed
+execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ #dynamicdirt:air unless block ~ ~-1 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}
+execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ #dynamicdirt:air unless block ~ ~-1 ~ #dynamicdirt:airif entity @s[tag=!collapsed] run tag @s add collapsed
 
-execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~ ~ air unless block ~ ~1 ~ air if entity @s[tag=!collapsed] run summon marker ~ ~1 ~ {Tags:['dirt_collapse']}
-execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~ ~ air unless block ~ ~1 ~ air if entity @s[tag=!collapsed] run tag @s add collapsed
+execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~ ~ #dynamicdirt:air unless block ~ ~1 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run summon marker ~ ~1 ~ {Tags:['dirt_collapse']}
+execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~ ~ #dynamicdirt:air unless block ~ ~1 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run tag @s add collapsed
 
-execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~ ~ cave_air unless block ~ ~1 ~ cave_air if entity @s[tag=!collapsed] run summon marker ~ ~1 ~ {Tags:['dirt_collapse']}
-execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~ ~ cave_air unless block ~ ~1 ~ cave_air if entity @s[tag=!collapsed] run tag @s add collapsed
+execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~ ~ water unless block ~ ~1 ~ water if entity @s[tag=!collapsed] run summon marker ~ ~1 ~ {Tags:['dirt_collapse']}
+execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~ ~ water unless block ~ ~1 ~ water if entity @s[tag=!collapsed] run tag @s add collapsed
 
 
 execute as @e[type=warden] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ air unless block ~ ~-1 ~ air if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}

@@ -52,12 +52,9 @@ execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run
 execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ coarse_dirt replace dirt
 execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ coarse_dirt replace dirt
 execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ coarse_dirt replace dirt
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace rooted_dirt
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace rooted_dirt
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace rooted_dirt
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ rooted_dirt replace grass_block
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ rooted_dirt replace grass_block
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ rooted_dirt replace grass_block
+execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace grass_block
+execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace grass_block
+execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace grass_block
 execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace dirt_path
 execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace dirt_path
 execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace dirt_path
@@ -66,6 +63,11 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] 
 execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] if block ~ ~-2 ~ air unless block ~-1 ~-1 ~ air if block ~-1 ~-2 ~ air positioned ~-1 ~ ~ unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
 execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] if block ~ ~-2 ~ air unless block ~ ~-1 ~1 air if block ~ ~-2 ~1 air positioned ~ ~ ~1 unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
 execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] if block ~ ~-2 ~ air unless block ~ ~-1 ~-1 air if block ~ ~-2 ~-1 air positioned ~ ~ ~-1 unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
+
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] if block ~ ~-2 ~ water unless block ~1 ~-1 ~ water if block ~1 ~-2 ~ water positioned ~1 ~ ~ unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] if block ~ ~-2 ~ water unless block ~-1 ~-1 ~ water if block ~-1 ~-2 ~ water positioned ~-1 ~ ~ unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] if block ~ ~-2 ~ water unless block ~ ~-1 ~1 water if block ~ ~-2 ~1 water positioned ~ ~ ~1 unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] if block ~ ~-2 ~ water unless block ~ ~-1 ~-1 water if block ~ ~-2 ~-1 water positioned ~ ~ ~-1 unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
 
 execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] if block ~ ~-2 ~ cave_air unless block ~1 ~-1 ~ cave_air if block ~1 ~-2 ~ cave_air positioned ~1 ~ ~ unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
 execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] if block ~ ~-2 ~ cave_air unless block ~-1 ~-1 ~ cave_air if block ~-1 ~-2 ~ cave_air positioned ~-1 ~ ~ unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
@@ -81,6 +83,12 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] 
 execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] if block ~ ~-1 ~ air unless block ~-1 ~ ~ air if block ~-1 ~-1 ~ air positioned ~-1 ~1 ~ unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
 execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] if block ~ ~-1 ~ air unless block ~ ~ ~1 air if block ~ ~-1 ~1 air positioned ~ ~1 ~1 unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
 execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] if block ~ ~-1 ~ air unless block ~ ~ ~-1 air if block ~ ~-1 ~-1 air positioned ~ ~1 ~-1 unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
+
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] if block ~ ~-1 ~ water unless block ~1 ~ ~ water if block ~1 ~-1 ~ water positioned ~1 ~1 ~ unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] if block ~ ~-1 ~ water unless block ~-1 ~ ~ water if block ~-1 ~-1 ~ water positioned ~-1 ~1 ~ unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] if block ~ ~-1 ~ water unless block ~ ~ ~1 water if block ~ ~-1 ~1 water positioned ~ ~1 ~1 unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=19..22}] if block ~ ~-1 ~ water unless block ~ ~ ~-1 water if block ~ ~-1 ~-1 water positioned ~ ~1 ~-1 unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
+
 
 # kill @e[tag=old_collapse,distance=0..2,type=marker]
 summon marker ~ ~ ~ {Tags:['old_collapse']}
