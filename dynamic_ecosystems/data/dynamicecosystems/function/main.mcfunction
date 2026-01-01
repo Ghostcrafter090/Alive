@@ -8,3 +8,4 @@ function dynamicecosystems:trees/birch
 function dynamicecosystems:trees/jungle
 
 function dynamicecosystems:vines/main
+function dynamicecosystems:shrubs/main
