@@ -50,13 +50,13 @@ execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=20..20}] 
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=20..20}] run function lifeanddeath:disease/diseasec
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=20..20}] run function lifeanddeath:disease/diseased
 
-execute as @e[type=marker,tag=gstools_worker,scores={averageTps=19..19,diseaseSectionRegulator=2..2}] run scoreboard players set @s diseaseSectionRegulator 0
+execute as @e[type=marker,tag=gstools_worker,scores={averageTps=19..19,diseaseSectionRegulator=2..}] run scoreboard players set @s diseaseSectionRegulator 0
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=19..19,diseaseSectionRegulator=0..0}] run function lifeanddeath:disease/diseasea
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=19..19,diseaseSectionRegulator=0..0}] run function lifeanddeath:disease/diseaseb
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=19..19,diseaseSectionRegulator=1..1}] run function lifeanddeath:disease/diseasec
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=19..19,diseaseSectionRegulator=1..1}] run function lifeanddeath:disease/diseased
 
-execute as @e[type=marker,tag=gstools_worker,scores={averageTps=..18,diseaseSectionRegulator=4..4}] run scoreboard players set @s diseaseSectionRegulator 0
+execute as @e[type=marker,tag=gstools_worker,scores={averageTps=..18,diseaseSectionRegulator=4..}] run scoreboard players set @s diseaseSectionRegulator 0
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=..18,diseaseSectionRegulator=0..0}] run function lifeanddeath:disease/diseasea
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=..18,diseaseSectionRegulator=1..1}] run function lifeanddeath:disease/diseaseb
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=..18,diseaseSectionRegulator=2..2}] run function lifeanddeath:disease/diseasec
