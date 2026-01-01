@@ -102,6 +102,4 @@ execute as @a[scores={hasEatenRottingFlesh=1..}] run scoreboard players set @s w
 execute as @a[scores={hasEatenRottingFlesh=1..}] run scoreboard players set @s poi_minact_tier 4
 execute as @a[scores={hasEatenRottingFlesh=1..}] run scoreboard players set @s hasEatenRottingFlesh 0
 
-scoreboard players set @a regulateZombieDiseaseEffects 4
-scoreboard objectives add regulateZombieDiseaseEffects dummy
-execute if entity @a[scores={regulateZombieDiseaseEffects=4..4}] if entity @e[type=zombie] run function lifeanddeath:disease/spreaders/zombie
+execute if entity @a[scores={random100=5..10}] if entity @e[type=zombie] run function lifeanddeath:disease/spreaders/zombie
