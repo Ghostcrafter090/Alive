@@ -14,8 +14,8 @@ execute as @e[tag=birch_tree_worker,type=marker] if entity @s[tag=birch_tree_loc
 execute as @e[tag=birch_tree_worker,type=marker] if entity @s[tag=birch_tree_locating] as @e[tag=birch_tree_cursor,sort=nearest,limit=1] at @s if block ~ ~-1 ~ #minecraft:saplings run scoreboard players set @s treeSpawnThresholdWorker 0
 execute as @e[tag=birch_tree_worker,type=marker] if entity @s[tag=birch_tree_locating] as @e[tag=birch_tree_cursor,sort=nearest,limit=1] at @s if block ~ ~-1 ~ #minecraft:logs run scoreboard players set @s treeSpawnThresholdWorker 0
 execute as @e[tag=birch_tree_worker,type=marker] if entity @s[tag=birch_tree_locating] as @e[tag=birch_tree_cursor,sort=nearest,limit=1] at @s if block ~ ~-1 ~ #minecraft:planks run scoreboard players set @s treeSpawnThresholdWorker 0
-execute as @e[tag=birch_tree_worker,type=marker] if entity @s[tag=birch_tree_locating] as @e[tag=birch_tree_cursor,sort=nearest,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run scoreboard players add @s treeSpawnThresholdWorker 1
-execute as @e[tag=birch_tree_worker,type=marker] if entity @s[tag=birch_tree_locating] run scoreboard players add @s treeWorkerAliveTime 1
+execute as @e[tag=birch_tree_worker,type=marker] if entity @s[tag=birch_tree_locating] as @e[tag=birch_tree_cursor,sort=nearest,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run scoreboard players add @s treeSpawnThresholdWorker 10
+execute as @e[tag=birch_tree_worker,type=marker] if entity @s[tag=birch_tree_locating] run scoreboard players add @s treeWorkerAliveTime 10
 execute as @e[tag=birch_tree_cursor,type=marker] run scoreboard players add @s treeCursorAliveTime 1
 
 execute as @e[tag=birch_tree_worker,type=marker] if entity @s[tag=birch_tree_locating] as @e[tag=birch_tree_cursor,sort=nearest,limit=1] run scoreboard players operation @s treeWorkerAliveTime = @e[tag=gstools_worker,type=marker,limit=1] random100
