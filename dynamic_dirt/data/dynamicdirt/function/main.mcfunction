@@ -1,5 +1,7 @@
 # Define
 scoreboard objectives add collapseAccumulate dummy
+scoreboard objectives add oldCollapseMarkerCount dummy
+
 # Main
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~1 ~ ~ {Tags:['dirt_collapse']}
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~-1 ~ ~ {Tags:['dirt_collapse']}
@@ -54,7 +56,7 @@ execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~
 execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ water unless block ~ ~-1 ~ water if entity @s[tag=!collapsed] run tag @s add collapsed
 
 execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ #dynamicdirt:air unless block ~ ~-1 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}
-execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ #dynamicdirt:air unless block ~ ~-1 ~ #dynamicdirt:airif entity @s[tag=!collapsed] run tag @s add collapsed
+execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ #dynamicdirt:air unless block ~ ~-1 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run tag @s add collapsed
 
 execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~ ~ #dynamicdirt:air unless block ~ ~1 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run summon marker ~ ~1 ~ {Tags:['dirt_collapse']}
 execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~ ~ #dynamicdirt:air unless block ~ ~1 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run tag @s add collapsed
@@ -179,3 +181,5 @@ function dynamicdirt:version_conflict/dust_0
 execute as @e[type=marker,tag=dirt_collapse,tag=!sound_played] run tag @s add sound_played
 
 execute as @e[type=marker,tag=old_collapse] at @s unless entity @e[tag=dirt_collapse,type=marker,distance=0..5] run kill @s
+execute store result score @e[tag=gstools_worker,type=marker] oldCollapseMarkerCount if entity @e[type=marker,tag=old_collapse]
+execute if entity @e[type=marker,tag=gstools_worker,scores={oldCollapseMarkerCount=300..}] run kill @e[tag=dirt_collapse]
