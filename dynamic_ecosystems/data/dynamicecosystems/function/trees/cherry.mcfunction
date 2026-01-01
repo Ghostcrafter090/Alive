@@ -4,7 +4,7 @@ scoreboard objectives add treeCursorAliveTime dummy
 scoreboard objectives add treeSpawnThresholdWorker dummy
 
 # Main
-execute as @e[tag=gstools_cursor,type=marker] at @s if entity @e[tag=is_human,distance=0..30] if block ~ ~-2 ~ cherry_leaves run summon marker ~ ~ ~ {Tags:['cherry_tree_worker']}
+execute as @e[tag=gstools_cursor,type=marker] at @s unless entity @e[tag=is_human,distance=0..30] if block ~ ~-2 ~ cherry_leaves run summon marker ~ ~ ~ {Tags:['cherry_tree_worker']}
 
 execute as @e[type=marker,tag=cherry_tree_worker] unless entity @s[tag=cherry_tree_locating] at @s run summon marker ~ ~ ~ {Tags:['cherry_tree_cursor']}
 execute as @e[type=marker,tag=cherry_tree_worker] unless entity @s[tag=cherry_tree_locating] at @s run tag @s add cherry_tree_locating
