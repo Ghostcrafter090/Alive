@@ -15,6 +15,6 @@ scoreboard players operation @s random10 += @s effectAmplifier
 
 execute as @e[type=ghast,sort=random,limit=1] store result entity @s ExplosionPower int 1 run scoreboard players get @s random10
 
-execute if entity @s[scores={random1000=..5}] as @s at @s run summon arrow ~ ~2 ~ {Tags:['make_ghast_attack']}
+execute if entity @s[scores={random1000=..5}] as @s at @s run summon arrow ~ ~2 ~ {Tags:['make_ghast_attack'],damage:0.001d}
 execute as @e[type=arrow,tag=make_ghast_attack,tag=!modified] at @s run data modify entity @s Owner set from entity @e[tag=walkable,distance=8..,sort=nearest,limit=1] UUID
 execute as @e[type=arrow,tag=make_ghast_attack,tag=!modified] run tag @s add modified
