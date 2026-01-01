@@ -91,8 +91,8 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run fun
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function dynamicecosystems:main
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function blockdecay:main
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function dynamicmonsters:main
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function lifeanddeath:main
-# execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=10..}] run function enhancedsurvival:main
+# execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function lifeanddeath:main
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=10..}] run function enhancedsurvival:main
 
 function lifeanddeath:tic
 function enhancedsurvival:tic
