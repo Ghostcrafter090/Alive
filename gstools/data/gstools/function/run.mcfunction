@@ -22,6 +22,7 @@ scoreboard players set $worker_count 1 1
 execute if score $worker_count gstoolsWorkerCount > $worker_count 1 as @e[type=marker,tag=gstools_worker,limit=1,sort=random] run kill @s
 
 function gstools:util/tps
+function gstools:compat/sereneseasons/main
 
 execute as @e[tag=gstools_worker,type=marker,scores={gameTime=0..10}] run scoreboard players set @s averageTpsWorkerMultTen 400
 
