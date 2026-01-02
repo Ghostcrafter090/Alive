@@ -23,6 +23,7 @@ scoreboard objectives add 4 dummy
 scoreboard objectives add 5 dummy
 scoreboard objectives add 8 dummy
 scoreboard objectives add 10 dummy
+scoreboard objectives add 15 dummy
 scoreboard objectives add 20 dummy
 scoreboard objectives add 21 dummy
 scoreboard objectives add 50 dummy
@@ -36,6 +37,7 @@ scoreboard objectives add 2000 dummy
 scoreboard objectives add 10000 dummy
 scoreboard objectives add 100000 dummy
 scoreboard objectives add 1000000 dummy
+scoreboard objectives add 2304000 dummy
 scoreboard objectives add 59999968 dummy
 
 scoreboard players set @e[tag=gstools_worker,type=marker] n1000000 -1000000
@@ -53,6 +55,7 @@ scoreboard players set @e[tag=gstools_worker,type=marker] 4 4
 scoreboard players set @e[tag=gstools_worker,type=marker] 5 5
 scoreboard players set @e[tag=gstools_worker,type=marker] 8 8
 scoreboard players set @e[tag=gstools_worker,type=marker] 10 10
+scoreboard players set @e[tag=gstools_worker,type=marker] 15 15
 scoreboard players set @e[tag=gstools_worker,type=marker] 20 20
 scoreboard players set @e[tag=gstools_worker,type=marker] 21 21
 scoreboard players set @e[tag=gstools_worker,type=marker] 50 50
@@ -66,6 +69,7 @@ scoreboard players set @e[tag=gstools_worker,type=marker] 10000 10000
 scoreboard players set @e[tag=gstools_worker,type=marker] 100000 100000
 scoreboard players set @e[tag=gstools_worker,type=marker] 1000000 1000000
 scoreboard players set @e[tag=gstools_worker,type=marker] 59999968 59999968
+scoreboard players set @e[tag=gstools_worker,type=marker] 2304000 2304000
 
 scoreboard players set @e[tag=gstools_worker,type=marker] desirePathsLoaded 0
 scoreboard players set @e[tag=gstools_worker,type=marker] dynamicDirtLoaded 0
