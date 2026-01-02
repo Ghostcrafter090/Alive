@@ -26,7 +26,7 @@ execute if block 5999938 1 0 sereneseasons:season_sensor[power=13] run scoreboar
 execute if block 5999938 1 0 sereneseasons:season_sensor[power=14] run scoreboard players set @e[type=marker,tag=gstools_worker] currentSeasonDay 14
 execute if block 5999938 1 0 sereneseasons:season_sensor[power=15] run scoreboard players set @e[type=marker,tag=gstools_worker] currentSeasonDay 15
 
-fill 5999938 1 0 5999938 1 0 sereneseasons:season_sensor[season=1] replace
+fill 5999938 1 0 5999938 1 0 sereneseasons:season_sensor[season=1] destroy
 
 execute if block 5999938 1 0 sereneseasons:season_sensor[power=1] run scoreboard players set @e[type=marker,tag=gstools_worker] currentSeasonDay 16
 execute if block 5999938 1 0 sereneseasons:season_sensor[power=2] run scoreboard players set @e[type=marker,tag=gstools_worker] currentSeasonDay 17
@@ -44,7 +44,7 @@ execute if block 5999938 1 0 sereneseasons:season_sensor[power=13] run scoreboar
 execute if block 5999938 1 0 sereneseasons:season_sensor[power=14] run scoreboard players set @e[type=marker,tag=gstools_worker] currentSeasonDay 29
 execute if block 5999938 1 0 sereneseasons:season_sensor[power=15] run scoreboard players set @e[type=marker,tag=gstools_worker] currentSeasonDay 30
 
-fill 5999938 1 0 5999938 1 0 sereneseasons:season_sensor[season=2] replace
+fill 5999938 1 0 5999938 1 0 sereneseasons:season_sensor[season=2] destroy
 
 execute if block 5999938 1 0 sereneseasons:season_sensor[power=1] run scoreboard players set @e[type=marker,tag=gstools_worker] currentSeasonDay 31
 execute if block 5999938 1 0 sereneseasons:season_sensor[power=2] run scoreboard players set @e[type=marker,tag=gstools_worker] currentSeasonDay 32
@@ -62,7 +62,7 @@ execute if block 5999938 1 0 sereneseasons:season_sensor[power=13] run scoreboar
 execute if block 5999938 1 0 sereneseasons:season_sensor[power=14] run scoreboard players set @e[type=marker,tag=gstools_worker] currentSeasonDay 44
 execute if block 5999938 1 0 sereneseasons:season_sensor[power=15] run scoreboard players set @e[type=marker,tag=gstools_worker] currentSeasonDay 45
 
-fill 5999938 1 0 5999938 1 0 sereneseasons:season_sensor[season=3] replace
+fill 5999938 1 0 5999938 1 0 sereneseasons:season_sensor[season=3] destroy
 
 execute if block 5999938 1 0 sereneseasons:season_sensor[power=1] run scoreboard players set @e[type=marker,tag=gstools_worker] currentSeasonDay 46
 execute if block 5999938 1 0 sereneseasons:season_sensor[power=2] run scoreboard players set @e[type=marker,tag=gstools_worker] currentSeasonDay 47
