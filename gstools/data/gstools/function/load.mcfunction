@@ -6,6 +6,7 @@ scoreboard objectives add lifeAndDeathLoaded dummy
 scoreboard objectives add enhancedSurvivalLoaded dummy
 scoreboard objectives add blockDecayLoaded dummy
 scoreboard objectives add dynamicEcosystemsLoaded dummy
+scoreboard objectives add firstLoad dummy
 
 scoreboard objectives add n1000000 dummy
 scoreboard objectives add n100000 dummy
@@ -73,6 +74,8 @@ scoreboard players set @e[tag=gstools_worker,type=marker] lifeAndDeathLoaded 0
 scoreboard players set @e[tag=gstools_worker,type=marker] enhancedSurvivalLoaded 0
 scoreboard players set @e[tag=gstools_worker,type=marker] blockDecayLoaded 0
 
+execute unless score $first_load firstLoad = $first_load firstLoad run worldborder set 59999468
+execute unless score $first_load firstLoad = $first_load firstLoad run scoreboard players set $first_load firstLoad 1
 
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsWorkerMultTen 400
 
