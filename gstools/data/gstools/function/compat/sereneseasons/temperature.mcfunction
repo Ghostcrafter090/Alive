@@ -96,9 +96,6 @@ execute if entity @e[tag=gstools_worker,type=marker,limit=1,scores={timeOfDay=20
 execute if entity @e[tag=gstools_worker,type=marker,limit=1,scores={timeOfDay=22222..24000}] run scoreboard players operation @s dayCycleTemperature /= @e[tag=gstools_worker,type=marker,limit=1] 200
 execute if entity @e[tag=gstools_worker,type=marker,limit=1,scores={timeOfDay=22222..24000}] run scoreboard players remove @s dayCycleTemperature 120
 
-scoreboard players operation @s currentTemperature = @s biomeTemperature
-scoreboard players operation @s currentTemperature += @s dayCycleTemperature
-
 scoreboard players operation @s seasonalTemperature = @e[tag=gstools_worker,type=marker] currentSeasonDay
 scoreboard players operation @s seasonalTemperature *= @e[tag=gstools_worker,type=marker] 106
 scoreboard players remove @s seasonalTemperature 366
@@ -112,3 +109,7 @@ function gstools:util/sin
 
 scoreboard players operation @s seasonalTemperature *= @e[tag=gstools_worker,type=marker] 12
 scoreboard players remove @s seasonalTemperature 2
+
+scoreboard players operation @s currentTemperature = @s biomeTemperature
+scoreboard players operation @s currentTemperature += @s dayCycleTemperature
+scoreboard players operation @s currentTemperature += @s seasonalTemperature
