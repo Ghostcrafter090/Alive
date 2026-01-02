@@ -10,7 +10,7 @@ scoreboard objectives add firstLoad dummy
 
 scoreboard objectives add previousDayNumber dummy
 
-scoreboard objectives add n157739000 dummy
+scoreboard objectives add n1577390 dummy
 scoreboard objectives add n1000000 dummy
 scoreboard objectives add n100000 dummy
 scoreboard objectives add n10000 dummy
@@ -19,6 +19,7 @@ scoreboard objectives add n1000 dummy
 scoreboard objectives add n800 dummy
 scoreboard objectives add n500 dummy
 scoreboard objectives add n100 dummy
+scoreboard objectives add n34 dummy
 scoreboard objectives add n10 dummy
 scoreboard objectives add n1 dummy
 scoreboard objectives add 0 dummy
@@ -49,10 +50,10 @@ scoreboard objectives add 10000 dummy
 scoreboard objectives add 100000 dummy
 scoreboard objectives add 1000000 dummy
 scoreboard objectives add 2304000 dummy
+scoreboard objectives add 10000000 dummy
 scoreboard objectives add 59999968 dummy
-scoreboard objectives add 1000000000 dummy
 
-scoreboard players set @e[tag=gstools_worker,type=marker] n157739000 -157739000
+scoreboard players set @e[tag=gstools_worker,type=marker] n1577390 -1577390
 scoreboard players set @e[tag=gstools_worker,type=marker] n1000000 -1000000
 scoreboard players set @e[tag=gstools_worker,type=marker] n100000 -100000
 scoreboard players set @e[tag=gstools_worker,type=marker] n10000 -10000
@@ -61,6 +62,7 @@ scoreboard players set @e[tag=gstools_worker,type=marker] n1000 -1000
 scoreboard players set @e[tag=gstools_worker,type=marker] n800 -800
 scoreboard players set @e[tag=gstools_worker,type=marker] n500 -500
 scoreboard players set @e[tag=gstools_worker,type=marker] n100 -100
+scoreboard players set @e[tag=gstools_worker,type=marker] n34 -34
 scoreboard players set @e[tag=gstools_worker,type=marker] n10 -10
 scoreboard players set @e[tag=gstools_worker,type=marker] n1 -1
 scoreboard players set @e[tag=gstools_worker,type=marker] 0 0
@@ -91,8 +93,8 @@ scoreboard players set @e[tag=gstools_worker,type=marker] 10000 10000
 scoreboard players set @e[tag=gstools_worker,type=marker] 100000 100000
 scoreboard players set @e[tag=gstools_worker,type=marker] 1000000 1000000
 scoreboard players set @e[tag=gstools_worker,type=marker] 2304000 2304000
+scoreboard players set @e[tag=gstools_worker,type=marker] 10000000 10000000
 scoreboard players set @e[tag=gstools_worker,type=marker] 59999968 59999968
-scoreboard players set @e[tag=gstools_worker,type=marker] 1000000000 1000000000
 
 scoreboard players set @e[tag=gstools_worker,type=marker] desirePathsLoaded 0
 scoreboard players set @e[tag=gstools_worker,type=marker] dynamicDirtLoaded 0

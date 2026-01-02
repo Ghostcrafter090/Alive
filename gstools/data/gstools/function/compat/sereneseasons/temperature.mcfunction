@@ -127,14 +127,14 @@ scoreboard players operation @s altitudeTemperatureWorker = @s altitudeTemperatu
 scoreboard players operation @s altitudeTemperatureWorker *= @s altitudeTemperature
 scoreboard players operation @s altitudeTemperatureWorker *= @s altitudeTemperature
 scoreboard players operation @s altitudeTemperature = @s altitudeTemperatureWorker
-scoreboard players operation @s altitudeTemperature *= @e[tag=gstools_worker,type=marker] n3379
+scoreboard players operation @s altitudeTemperature *= @e[tag=gstools_worker,type=marker] n34
 
 scoreboard players operation @s altitudeTemperatureWorker = @s currentYLevel
 scoreboard players add @s altitudeTemperatureWorker 1
-scoreboard players operation @s altitudeTemperatureWorker *= @e[tag=gstools_worker,type=marker] n157739000
+scoreboard players operation @s altitudeTemperatureWorker *= @e[tag=gstools_worker,type=marker] n1577390
 
 scoreboard players operation @s altitudeTemperature += @s altitudeTemperatureWorker
-scoreboard players operation @s altitudeTemperature /= @e[tag=gstools_worker,type=marker] 1000000000
+scoreboard players operation @s altitudeTemperature /= @e[tag=gstools_worker,type=marker] 10000000
 scoreboard players add @s altitudeTemperature 7
 
 
