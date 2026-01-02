@@ -33,8 +33,9 @@ execute as @e[tag=gstools_worker,type=marker,scores={globalTic=20..}] run scoreb
 execute as @e[tag=gstools_worker,type=marker,scores={globalTic=..19}] run scoreboard players set @s doRun 0
 execute as @e[tag=gstools_worker,type=marker,scores={globalTic=20..}] run scoreboard players set @s globalTic 0
 
-execute store result score @e[tag=gstools_worker,type=marker] gstoolsWorkerCount if entity @e[tag=gstools_worker,type=marker]
-execute as @e[tag=gstools_worker,type=marker,scores={gstoolsWorkerCount=2..},limit=1,sort=random] run kill @s
+execute store result score $worker_count gstoolsWorkerCount if entity @e[tag=gstools_worker,type=marker]
+scoreboard players set $worker_count 1 1
+execute if score $worker_count gstoolsWorkerCount > $worker_count 1 as @e[type=marker,tag=gstools_worker,limit=1,sort=random] run kill @s
 
 forceload add 0 0 0 0
 execute unless entity @e[type=marker,tag=gstools_worker] run summon marker 0 100 0 {Tags:['gstools_worker']}
