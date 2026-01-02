@@ -15,4 +15,4 @@ execute as @e[type=marker,tag=gstools_worker] if entity @s[scores={currentSeason
 execute as @e[type=marker,tag=gstools_worker] if entity @s[scores={currentSeasonDay=1..60}] run scoreboard players set @s seasonGrabberIndex 100
 execute as @e[type=marker,tag=gstools_worker] if entity @s[scores={seasonGrabberIndex=100..}] unless entity @s[scores={currentSeasonDay=1..60}] run scoreboard players set @s seasonGrabberIndex 0
 
-execute as @s run function gstools:compat/sereneseasons/temperature
+execute as @a run function gstools:compat/sereneseasons/temperature
