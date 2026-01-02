@@ -24,10 +24,9 @@ scoreboard players set $worker_count 1 1
 execute if score $worker_count gstoolsWorkerCount > $worker_count 1 as @e[type=marker,tag=gstools_worker,limit=1,sort=random] run kill @s
 
 function gstools:util/tps
-function gstools:compat/sereneseasons/main
 execute as @e[tag=gstools_worker,type=marker] unless score @s previousDayNumber = @s dayNumber run function gstools:timed/day
 execute as @e[tag=gstools_worker,type=marker] unless score @s previousDayNumber = @s dayNumber run scoreboard players operation @s previousDayNumber = @s dayNumber
- 
+
 execute as @e[tag=gstools_worker,type=marker,scores={gameTime=0..10}] run scoreboard players set @s averageTpsWorkerMultTen 400
 
 scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA = @e[tag=gstools_worker,type=marker] averageTps
@@ -41,6 +40,8 @@ scoreboard players operation @e[tag=gstools_worker,type=marker] globalTic += @e[
 execute as @e[tag=gstools_worker,type=marker,scores={globalTic=20..}] run scoreboard players set @s doRun 1
 execute as @e[tag=gstools_worker,type=marker,scores={globalTic=..19}] run scoreboard players set @s doRun 0
 execute as @e[tag=gstools_worker,type=marker,scores={globalTic=20..}] run scoreboard players set @s globalTic 0
+
+execute as @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function gstools:compat/sereneseasons/main
 
 forceload add 0 0 0 0
 execute unless entity @e[type=marker,tag=gstools_worker] run summon marker 0 100 0 {Tags:['gstools_worker']}
