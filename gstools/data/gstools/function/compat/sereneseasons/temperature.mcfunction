@@ -2,6 +2,7 @@
 scoreboard objectives add currentTemperature dummy
 scoreboard objectives add biomeTemperature dummy
 scoreboard objectives add dayCycleTemperature dummy
+scoreboard objectives add seasonalTemperature dummy
 
 scoreboard players set @s biomeTemperature 0
 execute at @s if biome ~ ~ ~-30 #gstools:temperature_-0.7 run scoreboard players remove @s biomeTemperature 25
@@ -83,6 +84,7 @@ scoreboard players operation @s biomeTemperature /= @e[tag=gstools_worker,type=m
 
 scoreboard players operation @s dayCycleTemperature = @e[tag=gstools_worker,type=marker,limit=1] timeOfDay
 
+# https://www.desmos.com/calculator/t8rxuh8pdn
 execute if entity @e[tag=gstools_worker,type=marker,limit=1,scores={timeOfDay=0..2823}] run scoreboard players operation @s dayCycleTemperature /= @e[tag=gstools_worker,type=marker,limit=1] 300
 execute if entity @e[tag=gstools_worker,type=marker,limit=1,scores={timeOfDay=2824..6301}] run scoreboard players operation @s dayCycleTemperature /= @e[tag=gstools_worker,type=marker,limit=1] 2000
 execute if entity @e[tag=gstools_worker,type=marker,limit=1,scores={timeOfDay=2824..6301}] run scoreboard players add @s dayCycleTemperature 8
@@ -99,6 +101,8 @@ execute if entity @e[tag=gstools_worker,type=marker,limit=1,scores={timeOfDay=22
 
 scoreboard players operation @s currentTemperature = @s biomeTemperature
 scoreboard players operation @s currentTemperature += @s dayCycleTemperature
+
+scoreboard players operation @e[tag=]
 
 
 

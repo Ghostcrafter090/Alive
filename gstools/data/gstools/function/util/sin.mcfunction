@@ -1,10 +1,10 @@
-execute unless entity @e[tag=sin,type=marker] run summon marker 0 100 0 {Tags:['sin']}
-tp @e[tag=sin,limit=1,type=marker] 0 100 0 0 0
-execute as @e[name=dmain,type=marker] store result score @s sin run data get entity @e[tag=sin,limit=1] Rotation[0]
-execute as @e[name=dmain,type=marker] run scoreboard players operation @s sin += @s sin0
-execute store result entity @e[tag=sin,limit=1] Rotation[0] float 1 run scoreboard players get @e[name=dmain,type=marker,limit=1] sin
-execute as @e[name=dmain,type=marker] store result score @s sin run data get entity @e[tag=sin,limit=1] Rotation[0] 10000
-scoreboard players set @e[name=dmain,type=marker] sin1 180000
-execute as @e[name=dmain,type=marker] run scoreboard players operation @s sin -= @s sin1
-scoreboard players set @e[name=dmain,type=marker] sin1 180
-execute as @e[name=dmain,type=marker] run scoreboard players operation @s sin /= @s sin1
+# Define
+scoreboard objectives add sinInput dummy
+scoreboard objectives add sinOutput dummy
+
+# Main
+execute as @e[tag=gstools_worker,type=marker] at @s run tp @s ~ ~ ~ 0.0 0.0
+execute as @e[tag=gstools_worker,type=marker] store result entity @s Rotation[1] int 1 run scoreboard players get @s sinInput
+execute as @e[tag=gstools_worker,type=marker] at @s positioned ^ ^ ^1 run summon marker ~ ~ ~ {Tags:['sin_worker']}
+execute store result score @e[tag=gstools_worker,type=marker] sinOutput run data get entity @e[tag=sin_worker,type=marker,limit=1] Pos[0]
+kill @e[type=marker,tag=sin_worker]
