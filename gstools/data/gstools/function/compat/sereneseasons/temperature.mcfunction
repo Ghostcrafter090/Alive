@@ -3,79 +3,82 @@ scoreboard objectives add currentTemperature dummy
 scoreboard objectives add biomeTemperature dummy
 scoreboard objectives add dayCycleTemperature dummy
 scoreboard objectives add seasonalTemperature dummy
+scoreboard objectives add altitudeTemperature dummy
+scoreboard objectives add currentYLevel dummy
+scoreboard objectives add altitudeTemperatureWorker dummy
 
 scoreboard players set @s biomeTemperature 0
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_-0.7 run scoreboard players remove @s biomeTemperature 25
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_-0.5 run scoreboard players remove @s biomeTemperature 12
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_-0.3 run scoreboard players remove @s biomeTemperature 7
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_-0.2 run scoreboard players remove @s biomeTemperature 5
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_0.0 run scoreboard players add @s biomeTemperature 0
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_0.05 run scoreboard players add @s biomeTemperature 1
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_0.2 run scoreboard players add @s biomeTemperature 5
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_0.25 run scoreboard players add @s biomeTemperature 6
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_0.3 run scoreboard players add @s biomeTemperature 8
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_0.5 run scoreboard players add @s biomeTemperature 12
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_0.6 run scoreboard players add @s biomeTemperature 15
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_0.7 run scoreboard players add @s biomeTemperature 18
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_0.8 run scoreboard players add @s biomeTemperature 20
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_0.9 run scoreboard players add @s biomeTemperature 22
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_0.95 run scoreboard players add @s biomeTemperature 24
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_1.0 run scoreboard players add @s biomeTemperature 25
-execute at @s if biome ~ ~ ~-30 #gstools:temperature_2.0 run scoreboard players add @s biomeTemperature 50
+execute if biome ~ ~ ~-30 #gstools:temperature_-0.7 run scoreboard players remove @s biomeTemperature 25
+execute if biome ~ ~ ~-30 #gstools:temperature_-0.5 run scoreboard players remove @s biomeTemperature 12
+execute if biome ~ ~ ~-30 #gstools:temperature_-0.3 run scoreboard players remove @s biomeTemperature 7
+execute if biome ~ ~ ~-30 #gstools:temperature_-0.2 run scoreboard players remove @s biomeTemperature 5
+execute if biome ~ ~ ~-30 #gstools:temperature_0.0 run scoreboard players add @s biomeTemperature 0
+execute if biome ~ ~ ~-30 #gstools:temperature_0.05 run scoreboard players add @s biomeTemperature 1
+execute if biome ~ ~ ~-30 #gstools:temperature_0.2 run scoreboard players add @s biomeTemperature 5
+execute if biome ~ ~ ~-30 #gstools:temperature_0.25 run scoreboard players add @s biomeTemperature 6
+execute if biome ~ ~ ~-30 #gstools:temperature_0.3 run scoreboard players add @s biomeTemperature 8
+execute if biome ~ ~ ~-30 #gstools:temperature_0.5 run scoreboard players add @s biomeTemperature 12
+execute if biome ~ ~ ~-30 #gstools:temperature_0.6 run scoreboard players add @s biomeTemperature 15
+execute if biome ~ ~ ~-30 #gstools:temperature_0.7 run scoreboard players add @s biomeTemperature 18
+execute if biome ~ ~ ~-30 #gstools:temperature_0.8 run scoreboard players add @s biomeTemperature 20
+execute if biome ~ ~ ~-30 #gstools:temperature_0.9 run scoreboard players add @s biomeTemperature 22
+execute if biome ~ ~ ~-30 #gstools:temperature_0.95 run scoreboard players add @s biomeTemperature 24
+execute if biome ~ ~ ~-30 #gstools:temperature_1.0 run scoreboard players add @s biomeTemperature 25
+execute if biome ~ ~ ~-30 #gstools:temperature_2.0 run scoreboard players add @s biomeTemperature 50
 
-execute at @s if biome ~ ~ ~30 #gstools:temperature_-0.7 run scoreboard players remove @s biomeTemperature 25
-execute at @s if biome ~ ~ ~30 #gstools:temperature_-0.5 run scoreboard players remove @s biomeTemperature 12
-execute at @s if biome ~ ~ ~30 #gstools:temperature_-0.3 run scoreboard players remove @s biomeTemperature 7
-execute at @s if biome ~ ~ ~30 #gstools:temperature_-0.2 run scoreboard players remove @s biomeTemperature 5
-execute at @s if biome ~ ~ ~30 #gstools:temperature_0.0 run scoreboard players add @s biomeTemperature 0
-execute at @s if biome ~ ~ ~30 #gstools:temperature_0.05 run scoreboard players add @s biomeTemperature 1
-execute at @s if biome ~ ~ ~30 #gstools:temperature_0.2 run scoreboard players add @s biomeTemperature 5
-execute at @s if biome ~ ~ ~30 #gstools:temperature_0.25 run scoreboard players add @s biomeTemperature 6
-execute at @s if biome ~ ~ ~30 #gstools:temperature_0.3 run scoreboard players add @s biomeTemperature 8
-execute at @s if biome ~ ~ ~30 #gstools:temperature_0.5 run scoreboard players add @s biomeTemperature 12
-execute at @s if biome ~ ~ ~30 #gstools:temperature_0.6 run scoreboard players add @s biomeTemperature 15
-execute at @s if biome ~ ~ ~30 #gstools:temperature_0.7 run scoreboard players add @s biomeTemperature 18
-execute at @s if biome ~ ~ ~30 #gstools:temperature_0.8 run scoreboard players add @s biomeTemperature 20
-execute at @s if biome ~ ~ ~30 #gstools:temperature_0.9 run scoreboard players add @s biomeTemperature 22
-execute at @s if biome ~ ~ ~30 #gstools:temperature_0.95 run scoreboard players add @s biomeTemperature 24
-execute at @s if biome ~ ~ ~30 #gstools:temperature_1.0 run scoreboard players add @s biomeTemperature 25
-execute at @s if biome ~ ~ ~30 #gstools:temperature_2.0 run scoreboard players add @s biomeTemperature 50
+execute if biome ~ ~ ~30 #gstools:temperature_-0.7 run scoreboard players remove @s biomeTemperature 25
+execute if biome ~ ~ ~30 #gstools:temperature_-0.5 run scoreboard players remove @s biomeTemperature 12
+execute if biome ~ ~ ~30 #gstools:temperature_-0.3 run scoreboard players remove @s biomeTemperature 7
+execute if biome ~ ~ ~30 #gstools:temperature_-0.2 run scoreboard players remove @s biomeTemperature 5
+execute if biome ~ ~ ~30 #gstools:temperature_0.0 run scoreboard players add @s biomeTemperature 0
+execute if biome ~ ~ ~30 #gstools:temperature_0.05 run scoreboard players add @s biomeTemperature 1
+execute if biome ~ ~ ~30 #gstools:temperature_0.2 run scoreboard players add @s biomeTemperature 5
+execute if biome ~ ~ ~30 #gstools:temperature_0.25 run scoreboard players add @s biomeTemperature 6
+execute if biome ~ ~ ~30 #gstools:temperature_0.3 run scoreboard players add @s biomeTemperature 8
+execute if biome ~ ~ ~30 #gstools:temperature_0.5 run scoreboard players add @s biomeTemperature 12
+execute if biome ~ ~ ~30 #gstools:temperature_0.6 run scoreboard players add @s biomeTemperature 15
+execute if biome ~ ~ ~30 #gstools:temperature_0.7 run scoreboard players add @s biomeTemperature 18
+execute if biome ~ ~ ~30 #gstools:temperature_0.8 run scoreboard players add @s biomeTemperature 20
+execute if biome ~ ~ ~30 #gstools:temperature_0.9 run scoreboard players add @s biomeTemperature 22
+execute if biome ~ ~ ~30 #gstools:temperature_0.95 run scoreboard players add @s biomeTemperature 24
+execute if biome ~ ~ ~30 #gstools:temperature_1.0 run scoreboard players add @s biomeTemperature 25
+execute if biome ~ ~ ~30 #gstools:temperature_2.0 run scoreboard players add @s biomeTemperature 50
 
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_-0.7 run scoreboard players remove @s biomeTemperature 25
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_-0.5 run scoreboard players remove @s biomeTemperature 12
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_-0.3 run scoreboard players remove @s biomeTemperature 7
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_-0.2 run scoreboard players remove @s biomeTemperature 5
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_0.0 run scoreboard players add @s biomeTemperature 0
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_0.05 run scoreboard players add @s biomeTemperature 1
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_0.2 run scoreboard players add @s biomeTemperature 5
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_0.25 run scoreboard players add @s biomeTemperature 6
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_0.3 run scoreboard players add @s biomeTemperature 8
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_0.5 run scoreboard players add @s biomeTemperature 12
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_0.6 run scoreboard players add @s biomeTemperature 15
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_0.7 run scoreboard players add @s biomeTemperature 18
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_0.8 run scoreboard players add @s biomeTemperature 20
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_0.9 run scoreboard players add @s biomeTemperature 22
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_0.95 run scoreboard players add @s biomeTemperature 24
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_1.0 run scoreboard players add @s biomeTemperature 25
-execute at @s if biome ~-30 ~ ~ #gstools:temperature_2.0 run scoreboard players add @s biomeTemperature 50
+execute if biome ~-30 ~ ~ #gstools:temperature_-0.7 run scoreboard players remove @s biomeTemperature 25
+execute if biome ~-30 ~ ~ #gstools:temperature_-0.5 run scoreboard players remove @s biomeTemperature 12
+execute if biome ~-30 ~ ~ #gstools:temperature_-0.3 run scoreboard players remove @s biomeTemperature 7
+execute if biome ~-30 ~ ~ #gstools:temperature_-0.2 run scoreboard players remove @s biomeTemperature 5
+execute if biome ~-30 ~ ~ #gstools:temperature_0.0 run scoreboard players add @s biomeTemperature 0
+execute if biome ~-30 ~ ~ #gstools:temperature_0.05 run scoreboard players add @s biomeTemperature 1
+execute if biome ~-30 ~ ~ #gstools:temperature_0.2 run scoreboard players add @s biomeTemperature 5
+execute if biome ~-30 ~ ~ #gstools:temperature_0.25 run scoreboard players add @s biomeTemperature 6
+execute if biome ~-30 ~ ~ #gstools:temperature_0.3 run scoreboard players add @s biomeTemperature 8
+execute if biome ~-30 ~ ~ #gstools:temperature_0.5 run scoreboard players add @s biomeTemperature 12
+execute if biome ~-30 ~ ~ #gstools:temperature_0.6 run scoreboard players add @s biomeTemperature 15
+execute if biome ~-30 ~ ~ #gstools:temperature_0.7 run scoreboard players add @s biomeTemperature 18
+execute if biome ~-30 ~ ~ #gstools:temperature_0.8 run scoreboard players add @s biomeTemperature 20
+execute if biome ~-30 ~ ~ #gstools:temperature_0.9 run scoreboard players add @s biomeTemperature 22
+execute if biome ~-30 ~ ~ #gstools:temperature_0.95 run scoreboard players add @s biomeTemperature 24
+execute if biome ~-30 ~ ~ #gstools:temperature_1.0 run scoreboard players add @s biomeTemperature 25
+execute if biome ~-30 ~ ~ #gstools:temperature_2.0 run scoreboard players add @s biomeTemperature 50
 
-execute at @s if biome ~30 ~ ~ #gstools:temperature_-0.7 run scoreboard players remove @s biomeTemperature 25
-execute at @s if biome ~30 ~ ~ #gstools:temperature_-0.5 run scoreboard players remove @s biomeTemperature 12
-execute at @s if biome ~30 ~ ~ #gstools:temperature_-0.3 run scoreboard players remove @s biomeTemperature 7
-execute at @s if biome ~30 ~ ~ #gstools:temperature_-0.2 run scoreboard players remove @s biomeTemperature 5
-execute at @s if biome ~30 ~ ~ #gstools:temperature_0.0 run scoreboard players add @s biomeTemperature 0
-execute at @s if biome ~30 ~ ~ #gstools:temperature_0.05 run scoreboard players add @s biomeTemperature 1
-execute at @s if biome ~30 ~ ~ #gstools:temperature_0.2 run scoreboard players add @s biomeTemperature 5
-execute at @s if biome ~30 ~ ~ #gstools:temperature_0.25 run scoreboard players add @s biomeTemperature 6
-execute at @s if biome ~30 ~ ~ #gstools:temperature_0.3 run scoreboard players add @s biomeTemperature 8
-execute at @s if biome ~30 ~ ~ #gstools:temperature_0.5 run scoreboard players add @s biomeTemperature 12
-execute at @s if biome ~30 ~ ~ #gstools:temperature_0.6 run scoreboard players add @s biomeTemperature 15
-execute at @s if biome ~30 ~ ~ #gstools:temperature_0.7 run scoreboard players add @s biomeTemperature 18
-execute at @s if biome ~30 ~ ~ #gstools:temperature_0.8 run scoreboard players add @s biomeTemperature 20
-execute at @s if biome ~30 ~ ~ #gstools:temperature_0.9 run scoreboard players add @s biomeTemperature 22
-execute at @s if biome ~30 ~ ~ #gstools:temperature_0.95 run scoreboard players add @s biomeTemperature 24
-execute at @s if biome ~30 ~ ~ #gstools:temperature_1.0 run scoreboard players add @s biomeTemperature 25
-execute at @s if biome ~30 ~ ~ #gstools:temperature_2.0 run scoreboard players add @s biomeTemperature 50
+execute if biome ~30 ~ ~ #gstools:temperature_-0.7 run scoreboard players remove @s biomeTemperature 25
+execute if biome ~30 ~ ~ #gstools:temperature_-0.5 run scoreboard players remove @s biomeTemperature 12
+execute if biome ~30 ~ ~ #gstools:temperature_-0.3 run scoreboard players remove @s biomeTemperature 7
+execute if biome ~30 ~ ~ #gstools:temperature_-0.2 run scoreboard players remove @s biomeTemperature 5
+execute if biome ~30 ~ ~ #gstools:temperature_0.0 run scoreboard players add @s biomeTemperature 0
+execute if biome ~30 ~ ~ #gstools:temperature_0.05 run scoreboard players add @s biomeTemperature 1
+execute if biome ~30 ~ ~ #gstools:temperature_0.2 run scoreboard players add @s biomeTemperature 5
+execute if biome ~30 ~ ~ #gstools:temperature_0.25 run scoreboard players add @s biomeTemperature 6
+execute if biome ~30 ~ ~ #gstools:temperature_0.3 run scoreboard players add @s biomeTemperature 8
+execute if biome ~30 ~ ~ #gstools:temperature_0.5 run scoreboard players add @s biomeTemperature 12
+execute if biome ~30 ~ ~ #gstools:temperature_0.6 run scoreboard players add @s biomeTemperature 15
+execute if biome ~30 ~ ~ #gstools:temperature_0.7 run scoreboard players add @s biomeTemperature 18
+execute if biome ~30 ~ ~ #gstools:temperature_0.8 run scoreboard players add @s biomeTemperature 20
+execute if biome ~30 ~ ~ #gstools:temperature_0.9 run scoreboard players add @s biomeTemperature 22
+execute if biome ~30 ~ ~ #gstools:temperature_0.95 run scoreboard players add @s biomeTemperature 24
+execute if biome ~30 ~ ~ #gstools:temperature_1.0 run scoreboard players add @s biomeTemperature 25
+execute if biome ~30 ~ ~ #gstools:temperature_2.0 run scoreboard players add @s biomeTemperature 50
 
 scoreboard players operation @s biomeTemperature /= @e[tag=gstools_worker,type=marker,limit=1] 4
 
@@ -96,6 +99,7 @@ execute if entity @e[tag=gstools_worker,type=marker,limit=1,scores={timeOfDay=20
 execute if entity @e[tag=gstools_worker,type=marker,limit=1,scores={timeOfDay=22222..24000}] run scoreboard players operation @s dayCycleTemperature /= @e[tag=gstools_worker,type=marker,limit=1] 200
 execute if entity @e[tag=gstools_worker,type=marker,limit=1,scores={timeOfDay=22222..24000}] run scoreboard players remove @s dayCycleTemperature 120
 
+# https://www.desmos.com/calculator/ro5eqx4eid
 scoreboard players operation @s seasonalTemperature = @e[tag=gstools_worker,type=marker] currentSeasonDay
 scoreboard players operation @s seasonalTemperature *= @e[tag=gstools_worker,type=marker] 106
 scoreboard players remove @s seasonalTemperature 366
@@ -113,3 +117,28 @@ scoreboard players remove @s seasonalTemperature 2
 scoreboard players operation @s currentTemperature = @s biomeTemperature
 scoreboard players operation @s currentTemperature += @s dayCycleTemperature
 scoreboard players operation @s currentTemperature += @s seasonalTemperature
+
+# https://www.desmos.com/calculator/gjhzl96hhy
+execute store result score @s currentYLevel run data get entity @s Pos[1]
+
+scoreboard players operation @s altitudeTemperature = @s currentYLevel
+scoreboard players remove @s altitudeTemperature 148
+scoreboard players operation @s altitudeTemperatureWorker = @s altitudeTemperature
+scoreboard players operation @s altitudeTemperatureWorker *= @s altitudeTemperature
+scoreboard players operation @s altitudeTemperatureWorker *= @s altitudeTemperature
+scoreboard players operation @s altitudeTemperature = @s altitudeTemperatureWorker
+scoreboard players operation @s altitudeTemperature *= @e[tag=gstools_worker,type=marker] n3379
+
+scoreboard players operation @s altitudeTemperatureWorker = @s currentYLevel
+scoreboard players add @s altitudeTemperatureWorker 1
+scoreboard players operation @s altitudeTemperatureWorker *= @e[tag=gstools_worker,type=marker] n157739000
+
+scoreboard players operation @s altitudeTemperature += @s altitudeTemperatureWorker
+scoreboard players operation @s altitudeTemperature /= @e[tag=gstools_worker,type=marker] 1000000000
+scoreboard players add @s altitudeTemperature 7
+
+
+
+
+
+
