@@ -6,6 +6,8 @@ scoreboard objectives add currentSeasonDay dummy
 # Main
 forceload add 5999368 0 5999368 0
 scoreboard players set @e[type=marker,tag=gstools_worker] currentSeasonDay 0
+
+fill 5999938 0 0 5999938 0 0 bedrock replace
 fill 5999938 1 0 5999938 1 0 sereneseasons:season_sensor[season=0] destroy
 
 execute if block 5999938 1 0 sereneseasons:season_sensor[power=1] run scoreboard players set @e[type=marker,tag=gstools_worker] currentSeasonDay 1
@@ -83,8 +85,6 @@ execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @
 
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s currentSeason = @s currentSeasonDay
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s currentSeason %= @s 15
-
-fill 5999938 1 0 5999938 1 0 air destroy
 
 forceload remove 5999368 0
 
