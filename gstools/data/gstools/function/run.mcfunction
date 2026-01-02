@@ -12,6 +12,8 @@ scoreboard objectives add doRun dummy
 scoreboard objectives add gstoolsWorkerCount dummy
 scoreboard objectives add gameTime dummy
 scoreboard objectives add timeOfDay dummy
+scoreboard objectives add dayNumber dummy
+scoreboard objectives add previousDayNumber dummy
 scoreboard objectives add currentDifficulty dummy
 
 scoreboard objectives add death deathCount
@@ -23,7 +25,9 @@ execute if score $worker_count gstoolsWorkerCount > $worker_count 1 as @e[type=m
 
 function gstools:util/tps
 function gstools:compat/sereneseasons/main
-
+execute as @e[tag=gstools_worker,type=marker] unless score @s previousDayNumber = @s dayNumber run function gstools:timed/day
+execute as @e[tag=gstools_worker,type=marker] unless score @s previousDayNumber = @s dayNumber run scoreboard players operation @s previousDayNumber = @s dayNumber
+ 
 execute as @e[tag=gstools_worker,type=marker,scores={gameTime=0..10}] run scoreboard players set @s averageTpsWorkerMultTen 400
 
 scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA = @e[tag=gstools_worker,type=marker] averageTps
@@ -83,6 +87,7 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run fun
 
 execute store result score @e[tag=gstools_worker,type=marker] gameTime run time query gametime
 execute store result score @e[tag=gstools_worker,type=marker] timeOfDay run time query daytime
+execute store result score @e[tag=gstools_worker,type=marker] dayNumber run time query day
 
 # Hud
 function gstools:hud/main

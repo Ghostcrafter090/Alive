@@ -8,6 +8,8 @@ scoreboard objectives add blockDecayLoaded dummy
 scoreboard objectives add dynamicEcosystemsLoaded dummy
 scoreboard objectives add firstLoad dummy
 
+scoreboard objectives add previousDayNumber dummy
+
 scoreboard objectives add n1000000 dummy
 scoreboard objectives add n100000 dummy
 scoreboard objectives add n10000 dummy
@@ -77,6 +79,8 @@ scoreboard players set @e[tag=gstools_worker,type=marker] dynamicMonstersLoaded 
 scoreboard players set @e[tag=gstools_worker,type=marker] lifeAndDeathLoaded 0
 scoreboard players set @e[tag=gstools_worker,type=marker] enhancedSurvivalLoaded 0
 scoreboard players set @e[tag=gstools_worker,type=marker] blockDecayLoaded 0
+
+scoreboard players set @e[tag=gstools_worker,type=marker] previousDayNumber -1
 
 execute unless score $first_load firstLoad = $first_load firstLoad run worldborder set 59999468
 execute unless score $first_load firstLoad = $first_load firstLoad run scoreboard players set $first_load firstLoad 1
