@@ -114,11 +114,7 @@ function gstools:util/sin
 scoreboard players operation @s seasonalTemperature *= @e[tag=gstools_worker,type=marker] 12
 scoreboard players remove @s seasonalTemperature 2
 
-scoreboard players operation @s currentTemperature = @s biomeTemperature
-scoreboard players operation @s currentTemperature += @s dayCycleTemperature
-scoreboard players operation @s currentTemperature += @s seasonalTemperature
-
-# https://www.desmos.com/calculator/gjhzl96hhy
+# https://www.desmos.com/calculator/m7fe74jlos
 execute store result score @s currentYLevel run data get entity @s Pos[1]
 
 scoreboard players operation @s altitudeTemperature = @s currentYLevel
@@ -135,10 +131,12 @@ scoreboard players operation @s altitudeTemperatureWorker *= @e[tag=gstools_work
 
 scoreboard players operation @s altitudeTemperature += @s altitudeTemperatureWorker
 scoreboard players operation @s altitudeTemperature /= @e[tag=gstools_worker,type=marker] 10000000
-scoreboard players add @s altitudeTemperature 7
+scoreboard players add @s altitudeTemperature 8
 
-
-
+scoreboard players operation @s currentTemperature = @s biomeTemperature
+scoreboard players operation @s currentTemperature += @s dayCycleTemperature
+scoreboard players operation @s currentTemperature += @s seasonalTemperature
+scoreboard players operation @s currentTemperature += @s altitudeTemperature
 
 
 
