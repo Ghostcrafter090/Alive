@@ -41,24 +41,12 @@ fill ~ ~-1 ~ ~ ~ ~ granite replace dripstone_block
 
 fill ~4 ~-3 ~4 ~-4 ~3 ~-4 air replace pointed_dripstone[thickness=base] 
 
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ sand replace clay
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ sand replace clay
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ sand replace clay
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ clay replace mud
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ clay replace mud
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ clay replace mud
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ mud replace coarse_dirt
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ mud replace coarse_dirt
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ mud replace coarse_dirt
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ coarse_dirt replace dirt
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ coarse_dirt replace dirt
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ coarse_dirt replace dirt
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace grass_block
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace grass_block
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace grass_block
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace dirt_path
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ cave_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace dirt_path
-execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ void_air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace dirt_path
+execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ #dynamicdirt:air run fill ~ ~-1 ~ ~ ~-1 ~ sand replace clay
+execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ #dynamicdirt:air run fill ~ ~-1 ~ ~ ~-1 ~ clay replace mud
+execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ #dynamicdirt:air run fill ~ ~-1 ~ ~ ~-1 ~ mud replace coarse_dirt
+execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ #dynamicdirt:air run fill ~ ~-1 ~ ~ ~-1 ~ coarse_dirt replace dirt
+execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ #dynamicdirt:air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace grass_block
+execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ #dynamicdirt:air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace dirt_path
 
 execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=18..22}] if block ~ ~-2 ~ air unless block ~1 ~-1 ~ air if block ~1 ~-2 ~ air positioned ~1 ~ ~ unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
 execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=18..22}] if block ~ ~-2 ~ air unless block ~-1 ~-1 ~ air if block ~-1 ~-2 ~ air positioned ~-1 ~ ~ unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
