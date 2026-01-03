@@ -114,7 +114,7 @@ function gstools:util/sin
 scoreboard players operation @s seasonalTemperature *= @e[tag=gstools_worker,type=marker] 12
 scoreboard players remove @s seasonalTemperature 2
 
-# https://www.desmos.com/calculator/m7fe74jlos
+# https://www.desmos.com/calculator/5dxgxorxrb
 execute store result score @s currentYLevel run data get entity @s Pos[1]
 
 scoreboard players operation @s altitudeTemperature = @s currentYLevel

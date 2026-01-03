@@ -1,5 +1,5 @@
 Forge Auto Renaming Tool v2.0.4
-lib: C:\Users\joshp\curseforge\minecraft\Instances\test\saves\Desire Paths\datapacks_uncompiled\basemod\forge\1.20.1\build\moddev\artifacts\forge-1.20.1-47.4.13.jar
+lib: C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\basemod\forge\1.20.1\build\moddev\artifacts\forge-1.20.1-47.4.13.jar
 lib: C:\Users\joshp\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-common\0.5.0\286da96036621082491d971dfc62bee8fc37d161\mixinextras-common-0.5.0.jar
 lib: C:\Users\joshp\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.5.0\cebe4d98a42a4a32ebf0ddec7b93d5bdbdad009\mixinextras-forge-0.5.0.jar
 lib: C:\Users\joshp\.gradle\caches\modules-2\files-2.1\cpw.mods\securejarhandler\2.1.10\51e6a22c6c716beb11e244bf5b8be480f51dd6b5\securejarhandler-2.1.10.jar
@@ -94,10 +94,10 @@ lib: C:\Users\joshp\.gradle\caches\modules-2\files-2.1\org.checkerframework\chec
 lib: C:\Users\joshp\.gradle\caches\modules-2\files-2.1\com.google.errorprone\error_prone_annotations\2.11.0\c5a0ace696d3f8b1c1d8cc036d8c03cc0cbe6b69\error_prone_annotations-2.11.0.jar
 lib: C:\Users\joshp\.gradle\caches\modules-2\files-2.1\com.google.j2objc\j2objc-annotations\1.3\ba035118bc8bac37d7eff77700720999acd9986d\j2objc-annotations-1.3.jar
 log: null
-input: C:\Users\joshp\curseforge\minecraft\Instances\test\saves\Desire Paths\datapacks_uncompiled\basemod\forge\1.20.1\build\devlibs\modid-1.0.jar
-output: C:\Users\joshp\curseforge\minecraft\Instances\test\saves\Desire Paths\datapacks_uncompiled\basemod\forge\1.20.1\build\libs\modid-1.0.jar
+input: C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\basemod\forge\1.20.1\build\devlibs\modid-1.0.jar
+output: C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\basemod\forge\1.20.1\build\libs\modid-1.0.jar
 threads: 16
-Names: C:\Users\joshp\curseforge\minecraft\Instances\test\saves\Desire Paths\datapacks_uncompiled\basemod\forge\1.20.1\build\moddev\artifacts\namedToIntermediate.tsrg(reversed: false)
+Names: C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\basemod\forge\1.20.1\build\moddev\artifacts\namedToIntermediate.tsrg(reversed: false)
 Fix Annotations: false
 Unfinal Parameters: false
 Fix Records: false
@@ -106,12 +106,12 @@ Fix SourceFile: false
 Fix Line Numbers: false
 Strip codesigning signatures: ALL
 Adding Libraries to Inheritance
-Reading Input: C:\Users\joshp\curseforge\minecraft\Instances\test\saves\Desire Paths\datapacks_uncompiled\basemod\forge\1.20.1\build\devlibs\modid-1.0.jar
+Reading Input: C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\basemod\forge\1.20.1\build\devlibs\modid-1.0.jar
 Adding input to inheritance map
 Processing entries
 Adding extras
 Sorting
-Writing Output: C:\Users\joshp\curseforge\minecraft\Instances\test\saves\Desire Paths\datapacks_uncompiled\basemod\forge\1.20.1\build\libs\modid-1.0.jar
+Writing Output: C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\basemod\forge\1.20.1\build\libs\modid-1.0.jar
   META-INF/
   META-INF/MANIFEST.MF
   META-INF/jarjar/

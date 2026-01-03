@@ -13,7 +13,6 @@ execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ #dynamicdirt:air if blo
 execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ #dynamicdirt:air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~ ~ ~1 {Tags:['dirt_collapse']}
 execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ #dynamicdirt:air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~ ~ ~-1 {Tags:['dirt_collapse']}
 
-
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ water if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~1 ~ ~ {Tags:['dirt_collapse']}
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ water if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~-1 ~ ~ {Tags:['dirt_collapse']}
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~-2 ~ water if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~ ~ ~1 {Tags:['dirt_collapse']}

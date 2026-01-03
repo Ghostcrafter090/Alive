@@ -16,6 +16,8 @@ scoreboard objectives add dayNumber dummy
 scoreboard objectives add previousDayNumber dummy
 scoreboard objectives add currentDifficulty dummy
 
+scoreboard objectives add isSereneSeasonsPresent dummy
+
 scoreboard objectives add death deathCount
 
 # Main
@@ -42,6 +44,8 @@ execute as @e[tag=gstools_worker,type=marker,scores={globalTic=..19}] run scoreb
 execute as @e[tag=gstools_worker,type=marker,scores={globalTic=20..}] run scoreboard players set @s globalTic 0
 
 execute as @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function gstools:compat/sereneseasons/main
+execute unless entity @e[tag=gstools_worker,type=marker,scores={isSereneSeasonsPresent=1..1}] run scoreboard players set @e[tag=gstools_worker,type=marker] currentSeasonDay 6
+execute unless entity @e[tag=gstools_worker,type=marker,scores={isSereneSeasonsPresent=1..1}] as @a at @s run function gstools:compat/sereneseasons/temperature
 
 forceload add 0 0 0 0
 execute unless entity @e[type=marker,tag=gstools_worker] run summon marker 0 100 0 {Tags:['gstools_worker']}

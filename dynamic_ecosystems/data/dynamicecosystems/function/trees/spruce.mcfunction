@@ -4,7 +4,8 @@ scoreboard objectives add treeCursorAliveTime dummy
 scoreboard objectives add treeSpawnThresholdWorker dummy
 
 # Main
-execute as @e[tag=gstools_cursor,type=marker] at @s unless entity @e[tag=is_human,distance=0..30] if block ~ ~-2 ~ spruce_leaves run summon marker ~ ~ ~ {Tags:['spruce_tree_worker']}
+execute as @e[tag=gstools_cursor,type=marker] at @s unless entity @e[tag=is_human,distance=0..30] if block ~ ~-2 ~ spruce_leaves positioned ~ ~-8 ~ run function gstools:compat/sereneseasons/temperature
+execute as @e[tag=gstools_cursor,type=marker] at @s unless entity @e[tag=is_human,distance=0..30] if block ~ ~-2 ~ spruce_leaves if entity @s[scores={currentTemperature=10..30}] run summon marker ~ ~ ~ {Tags:['spruce_tree_worker']}
 
 execute as @e[type=marker,tag=spruce_tree_worker] unless entity @s[tag=spruce_tree_locating] at @s run summon marker ~ ~ ~ {Tags:['spruce_tree_cursor']}
 execute as @e[type=marker,tag=spruce_tree_worker] unless entity @s[tag=spruce_tree_locating] at @s run tag @s add spruce_tree_locating
