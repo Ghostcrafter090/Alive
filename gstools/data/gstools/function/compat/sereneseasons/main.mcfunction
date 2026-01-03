@@ -6,7 +6,7 @@ execute if block 0 100 0 sereneseasons:season_sensor
 execute as @e[tag=gstools_worker,type=marker] if entity @s[scores={seasonGrabberIndex=0..0}] run scoreboard players set @s currentSeasonDay 0
 execute as @e[tag=gstools_worker,type=marker] if entity @s[scores={seasonGrabberIndex=0..99}] run function gstools:compat/sereneseasons/place
 execute as @e[tag=gstools_worker,type=marker] if entity @s[scores={seasonGrabberIndex=24..24}] run function gstools:compat/sereneseasons/get
-execute as @e[tag=gstools_worker,type=marker] if entity @s[scores={seasonGrabberIndex=59..59}] run function gstools:compat/sereneseasons/get
+execute as @e[tag=gstools_worker,type=marker] if entity @s[scores={seasonGrabberIndex=49..49}] run function gstools:compat/sereneseasons/get
 execute as @e[tag=gstools_worker,type=marker] if entity @s[scores={seasonGrabberIndex=74..74}] run function gstools:compat/sereneseasons/get
 execute as @e[tag=gstools_worker,type=marker] if entity @s[scores={seasonGrabberIndex=99..99}] run function gstools:compat/sereneseasons/get
 execute as @e[tag=gstools_worker,type=marker] if entity @s[scores={seasonGrabberIndex=0..99}] run scoreboard players add @s seasonGrabberIndex 1
