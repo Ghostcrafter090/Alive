@@ -165,7 +165,7 @@ execute as @e[tag=old_collapse,type=marker] at @s store result score @s collapse
 execute as @e[tag=old_collapse,type=marker,scores={collapseAccumulate=200..},limit=1,sort=random] at @s run summon tnt ~ ~ ~
 execute as @e[tag=old_collapse,type=marker,scores={collapseAccumulate=200..},limit=1,sort=random] at @s run kill @e[tag=old_collapse,type=marker,distance=0..2]
 
-execute as @e[type=falling_block,tag=!sound_played] at @s if entity @e[tag=dirt_collapse,distance=0..10,type=marker] run playsound dynamicdirt.collapse.crumble master @a ~ ~ ~ 3 1
+execute as @e[type=falling_block,tag=!sound_played] at @s if entity @e[tag=dirt_collapse,distance=0..10,type=marker] run playsound dynamicdirt.collapse.crumble block @a ~ ~ ~ 1
 # execute as @e[type=falling_block,tag=!sound_played] at @s if entity @e[tag=dirt_collapse,distance=0..10,type=marker] if entity @e[tag=gstools_worker,type=marker,scores={random10=0..3}] run playsound minecraft:entity.creaking.ambient master @a ~ ~ ~ 3 0.1
 # execute as @e[type=falling_block,tag=!sound_played] at @s if entity @e[tag=dirt_collapse,distance=0..10,type=marker] if entity @e[tag=gstools_worker,type=marker,scores={random10=4..6}] run playsound minecraft:entity.creaking.spawn master @a ~ ~ ~ 3 0.1
 # execute as @e[type=falling_block,tag=!sound_played] at @s if entity @e[tag=dirt_collapse,distance=0..10,type=marker] if entity @e[tag=gstools_worker,type=marker,scores={random10=7..9}] run playsound minecraft:entity.creaking.twitch master @a ~ ~ ~ 3 0.1
