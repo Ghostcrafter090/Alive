@@ -70,6 +70,7 @@ flowchart TB
     n7 --> n93["moss_block"]
     n93 --> n94["pale_moss_block"]
     n94 --> n95["rooted_dirt"]
+    n93 --> n95["rooted_dirt"]
     n96["&lt;color&gt;_carpet"] --> n6
     n97["blue_ice"] --> n98["packed_ice"]
     n98 --> n99["ice"]

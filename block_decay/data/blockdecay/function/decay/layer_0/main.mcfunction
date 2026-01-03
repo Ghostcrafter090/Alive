@@ -87,6 +87,7 @@ function blockdecay:decay/layer_0/n91/slime_block
 function blockdecay:decay/layer_0/n263/muddy_mangrove_roots
 function blockdecay:decay/layer_0/n264/blockdecay_froglights
 function blockdecay:decay/layer_0/n94/pale_moss_block
+function blockdecay:decay/layer_0/n93/moss_block
 function blockdecay:decay/layer_0/n98/packed_ice
 function blockdecay:decay/layer_0/n126/waxed_iron_block
 function blockdecay:decay/layer_0/n126/waxed_gold_block
