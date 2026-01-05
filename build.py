@@ -154,7 +154,9 @@ modIdToDisplayName = {
     "dynamic_dirt": "Alive | Dynamic Dirt & Physics",
     "dynamic_monsters": "Alive | Dynamic Monsters",
     "enhanced_survival": "Alive | Enhanced Survival",
-    "life_and_death": "Alive | Life & Death"
+    "life_and_death": "Alive | Life & Death",
+    "block_decay": "Alive | Advanced Block Decay",
+    "dynamic_ecosystems": "Alive | Dynamic Ecosystems"
 }
 
 baseCompileVersions = [
@@ -204,6 +206,9 @@ def compileDatapackIntoMod(folderName):
             versionHistory = pytools.IO.getJson("version_history.json")
             gameVersions = ",".join([pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][0], pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][-1]])
             description = pytools.IO.getJson(folderName + "\\pack.mcmeta")["pack"]["description"]
+            
+            if gameVersions.split(",")[0] == gameVersions.split(",")[1]:
+                gameVersions = gameVersions.split(",")[0]
             
             if "-fabric-" in jarFile:
                 

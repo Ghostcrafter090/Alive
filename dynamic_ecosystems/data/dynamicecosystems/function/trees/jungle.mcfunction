@@ -25,7 +25,6 @@ execute as @e[tag=jungle_tree_worker,type=marker] if entity @s[tag=jungle_tree_l
 execute as @e[tag=jungle_tree_worker,type=marker] if entity @s[tag=jungle_tree_locating,scores={treeWorkerAliveTime=300..}] as @e[tag=jungle_tree_cursor,sort=nearest,limit=1] run tag @s add jungle_tree_cursor_to_kill
 
 execute as @e[tag=jungle_tree_worker,type=marker] if entity @s[tag=jungle_tree_locating] as @e[tag=jungle_tree_cursor,sort=nearest,limit=1] if score @s treeWorkerAliveTime < @s treeSpawnThresholdWorker at @s if block ~ ~-1 ~ #minecraft:dirt run fill ~ ~ ~ ~ ~ ~ jungle_sapling replace #minecraft:air
-execute as @e[tag=jungle_tree_worker,type=marker] if entity @s[tag=jungle_tree_locating] as @e[tag=jungle_tree_cursor,sort=nearest,limit=1] if score @s treeWorkerAliveTime < @s treeSpawnThresholdWorker at @s if block ~ ~-1 ~ #minecraft:dirt run say jungle sapling spawned!
 execute as @e[tag=jungle_tree_worker,type=marker] if entity @s[tag=jungle_tree_locating] as @e[tag=jungle_tree_cursor,sort=nearest,limit=1] if score @s treeWorkerAliveTime < @s treeSpawnThresholdWorker at @s if block ~ ~-1 ~ #minecraft:dirt run tag @s add jungle_tree_cursor_to_kill
 execute as @e[tag=jungle_tree_worker,type=marker] if entity @s[tag=jungle_tree_locating] if entity @e[tag=jungle_tree_cursor_to_kill,sort=nearest,limit=1,distance=0..41] run kill @s
 execute as @e[type=marker,tag=jungle_tree_cursor_to_kill] run kill @s

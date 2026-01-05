@@ -25,7 +25,6 @@ execute as @e[tag=dark_oak_tree_worker,type=marker] if entity @s[tag=dark_oak_tr
 execute as @e[tag=dark_oak_tree_worker,type=marker] if entity @s[tag=dark_oak_tree_locating,scores={treeWorkerAliveTime=100..}] as @e[tag=dark_oak_tree_cursor,sort=nearest,limit=1] run tag @s add dark_oak_tree_cursor_to_kill
 
 execute as @e[tag=dark_oak_tree_worker,type=marker] if entity @s[tag=dark_oak_tree_locating] as @e[tag=dark_oak_tree_cursor,sort=nearest,limit=1] if score @s treeWorkerAliveTime < @s treeSpawnThresholdWorker at @s if block ~ ~-1 ~ #minecraft:dirt run fill ~ ~ ~ ~ ~ ~ dark_oak_sapling replace #minecraft:air
-execute as @e[tag=dark_oak_tree_worker,type=marker] if entity @s[tag=dark_oak_tree_locating] as @e[tag=dark_oak_tree_cursor,sort=nearest,limit=1] if score @s treeWorkerAliveTime < @s treeSpawnThresholdWorker at @s if block ~ ~-1 ~ #minecraft:dirt run say dark_oak sapling spawned!
 execute as @e[tag=dark_oak_tree_worker,type=marker] if entity @s[tag=dark_oak_tree_locating] as @e[tag=dark_oak_tree_cursor,sort=nearest,limit=1] if score @s treeWorkerAliveTime < @s treeSpawnThresholdWorker at @s if block ~ ~-1 ~ #minecraft:dirt run tag @s add dark_oak_tree_cursor_to_kill
 execute as @e[tag=dark_oak_tree_worker,type=marker] if entity @s[tag=dark_oak_tree_locating] if entity @e[tag=dark_oak_tree_cursor_to_kill,sort=nearest,limit=1,distance=0..41] run kill @s
 execute as @e[type=marker,tag=dark_oak_tree_cursor_to_kill] run kill @s

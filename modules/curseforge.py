@@ -17,7 +17,9 @@ projectIdDict = {
     "dynamic_dirt": "1405421",
     "dynamic_monsters": "1405432",
     "enhanced_survival": "1405437",
-    "life_and_death": "1405446"
+    "life_and_death": "1405446",
+    "block_decay": "1421451",
+    "dynamic_ecosystems": "1421461"
 }
 
 def getGameVersions(loader, version):

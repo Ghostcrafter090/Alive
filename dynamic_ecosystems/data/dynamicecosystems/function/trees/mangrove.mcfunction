@@ -25,7 +25,6 @@ execute as @e[tag=mangrove_tree_worker,type=marker] if entity @s[tag=mangrove_tr
 execute as @e[tag=mangrove_tree_worker,type=marker] if entity @s[tag=mangrove_tree_locating,scores={treeWorkerAliveTime=100..}] as @e[tag=mangrove_tree_cursor,sort=nearest,limit=1] run tag @s add mangrove_tree_cursor_to_kill
 
 execute as @e[tag=mangrove_tree_worker,type=marker] if entity @s[tag=mangrove_tree_locating] as @e[tag=mangrove_tree_cursor,sort=nearest,limit=1] if score @s treeWorkerAliveTime < @s treeSpawnThresholdWorker at @s if block ~ ~-1 ~ #minecraft:dirt run fill ~ ~ ~ ~ ~ ~ mangrove_propagule replace #minecraft:air
-execute as @e[tag=mangrove_tree_worker,type=marker] if entity @s[tag=mangrove_tree_locating] as @e[tag=mangrove_tree_cursor,sort=nearest,limit=1] if score @s treeWorkerAliveTime < @s treeSpawnThresholdWorker at @s if block ~ ~-1 ~ #minecraft:dirt run say mangrove sapling spawned!
 execute as @e[tag=mangrove_tree_worker,type=marker] if entity @s[tag=mangrove_tree_locating] as @e[tag=mangrove_tree_cursor,sort=nearest,limit=1] if score @s treeWorkerAliveTime < @s treeSpawnThresholdWorker at @s if block ~ ~-1 ~ #minecraft:dirt run tag @s add mangrove_tree_cursor_to_kill
 execute as @e[tag=mangrove_tree_worker,type=marker] if entity @s[tag=mangrove_tree_locating] if entity @e[tag=mangrove_tree_cursor_to_kill,sort=nearest,limit=1,distance=0..41] run kill @s
 execute as @e[type=marker,tag=mangrove_tree_cursor_to_kill] run kill @s
