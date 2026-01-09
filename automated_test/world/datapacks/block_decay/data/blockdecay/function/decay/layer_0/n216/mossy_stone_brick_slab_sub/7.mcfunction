@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ mossy_stone_brick_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ cobblestone_slab[type=double,waterlogged=true] replace mossy_stone_brick_slab
+execute if block ~ ~-1 ~ mossy_stone_brick_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ cobblestone_slab[type=double,waterlogged=false] replace mossy_stone_brick_slab

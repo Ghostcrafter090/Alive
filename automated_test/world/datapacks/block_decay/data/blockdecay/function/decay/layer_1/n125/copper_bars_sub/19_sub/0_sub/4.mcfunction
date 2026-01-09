@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ copper_bars[west=true] run function blockdecay:decay/layer_1/n125/copper_bars_sub/19_sub/0_sub/4_sub/0
+execute if block ~ ~-1 ~ copper_bars[west=false] run function blockdecay:decay/layer_1/n125/copper_bars_sub/19_sub/0_sub/4_sub/2

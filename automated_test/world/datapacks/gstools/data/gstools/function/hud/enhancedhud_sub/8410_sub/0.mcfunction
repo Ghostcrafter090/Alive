@@ -1,0 +1,16 @@
+execute if entity @s[scores={insomnia=105000..}] run title Ghostcrafter090 actionbar {"text":"uuuuurvvvvpwwwwwwyyyy","font":"enhancedsurvival:images"}
+execute if entity @s[scores={insomnia=..105000}] run title Ghostcrafter090 actionbar {"text":"uuuuurvvvvowwwwwwyyyy","font":"enhancedsurvival:images"}
+execute if entity @s[scores={insomnia=..98427}] run title Ghostcrafter090 actionbar {"text":"uuuuurvvvvnwwwwwwyyyy","font":"enhancedsurvival:images"}
+execute if entity @s[scores={insomnia=..91875}] run title Ghostcrafter090 actionbar {"text":"uuuuurvvvvmwwwwwwyyyy","font":"enhancedsurvival:images"}
+execute if entity @s[scores={insomnia=..85312}] run title Ghostcrafter090 actionbar {"text":"uuuuurvvvvlwwwwwwyyyy","font":"enhancedsurvival:images"}
+execute if entity @s[scores={insomnia=..78750}] run title Ghostcrafter090 actionbar {"text":"uuuuurvvvvkwwwwwwyyyy","font":"enhancedsurvival:images"}
+execute if entity @s[scores={insomnia=..72187}] run title Ghostcrafter090 actionbar {"text":"uuuuurvvvvjwwwwwwyyyy","font":"enhancedsurvival:images"}
+execute if entity @s[scores={insomnia=..65625}] run title Ghostcrafter090 actionbar {"text":"uuuuurvvvviwwwwwwyyyy","font":"enhancedsurvival:images"}
+execute if entity @s[scores={insomnia=..56062}] run title Ghostcrafter090 actionbar {"text":"uuuuurvvvvhwwwwwwyyyy","font":"enhancedsurvival:images"}
+execute if entity @s[scores={insomnia=..52500}] run title Ghostcrafter090 actionbar {"text":"uuuuurvvvvgwwwwwwyyyy","font":"enhancedsurvival:images"}
+execute if entity @s[scores={insomnia=..45937}] run title Ghostcrafter090 actionbar {"text":"uuuuurvvvvfwwwwwwyyyy","font":"enhancedsurvival:images"}
+execute if entity @s[scores={insomnia=..39375}] run title Ghostcrafter090 actionbar {"text":"uuuuurvvvvewwwwwwyyyy","font":"enhancedsurvival:images"}
+execute if entity @s[scores={insomnia=..26250}] run title Ghostcrafter090 actionbar {"text":"uuuuurvvvvdwwwwwwyyyy","font":"enhancedsurvival:images"}
+execute if entity @s[scores={insomnia=..19687}] run title Ghostcrafter090 actionbar {"text":"uuuuurvvvvcwwwwwwyyyy","font":"enhancedsurvival:images"}
+execute if entity @s[scores={insomnia=..13125}] run title Ghostcrafter090 actionbar {"text":"uuuuurvvvvbwwwwwwyyyy","font":"enhancedsurvival:images"}
+execute if entity @s[scores={insomnia=..6562}] run title Ghostcrafter090 actionbar {"text":"uuuuurvvvvawwwwwwyyyy","font":"enhancedsurvival:images"}

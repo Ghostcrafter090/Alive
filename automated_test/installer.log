@@ -1,7 +1,7 @@
 JVM info: Oracle Corporation - 17.0.4 - 17.0.4+11-LTS-179
 java.net.preferIPv4Stack=true
-Current Time: 09/01/2026 15:48:07
-Host: maven.neoforged.net [89.187.180.92, 89.187.180.102]
+Current Time: 09/01/2026 16:08:26
+Host: maven.neoforged.net [89.187.180.102, 89.187.180.92]
 Host: libraries.minecraft.net [13.107.246.40, 13.107.213.40]
 Host: launchermeta.mojang.com [13.107.246.40, 13.107.213.40]
 Host: piston-meta.mojang.com [13.107.246.40, 13.107.213.40]
@@ -167,7 +167,7 @@ Downloading library from https://maven.neoforged.net/releases/net/neoforged/inst
 Considering library net.neoforged:neoforge:21.10.64:universal
 Downloading library from https://maven.neoforged.net/releases/net/neoforged/neoforge/21.10.64/neoforge-21.10.64-universal.jar
 	Download completed: Checksum validated.
-Created Temporary Directory: C:\Users\joshp\AppData\Local\Temp\neoforge_installer7139324783441111816
+Created Temporary Directory: C:\Users\joshp\AppData\Local\Temp\neoforge_installer18373224135492161937
   Extracting: /data/client.lzma
 Building Processors
 ===============================================================================
@@ -208,22 +208,22 @@ Processor: net.neoforged.installertools:installertools -> PROCESS_MINECRAFT_JAR
   Classpath:
     C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\automated_test\.\libraries\net\neoforged\installertools\installertools\4.0.6\installertools-4.0.6-fatjar.jar
     C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\automated_test\.\libraries\net\neoforged\installertools\installertools\4.0.6\installertools-4.0.6-fatjar.jar
-  Args: --task, PROCESS_MINECRAFT_JAR, --input, "C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\automated_test\.\libraries\net\minecraft\server\1.21.10\server-1.21.10.jar", --input-mappings, "C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\automated_test\.\libraries\net\minecraft\server\1.21.10\server-1.21.10-mappings.txt", --output, "C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\automated_test\.\libraries\net\neoforged\minecraft-server-patched\21.10.64\minecraft-server-patched-21.10.64.jar", --extract-libraries-to, "C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\automated_test\./libraries/", --neoform-data, "C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\automated_test\.\libraries\net\neoforged\neoform\1.21.10-20251010.172816\neoform-1.21.10-20251010.172816-mappings.tsrg.lzma", --apply-patches, C:\Users\joshp\AppData\Local\Temp\neoforge_installer7139324783441111816\data\client.lzma
+  Args: --task, PROCESS_MINECRAFT_JAR, --input, "C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\automated_test\.\libraries\net\minecraft\server\1.21.10\server-1.21.10.jar", --input-mappings, "C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\automated_test\.\libraries\net\minecraft\server\1.21.10\server-1.21.10-mappings.txt", --output, "C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\automated_test\.\libraries\net\neoforged\minecraft-server-patched\21.10.64\minecraft-server-patched-21.10.64.jar", --extract-libraries-to, "C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\automated_test\./libraries/", --neoform-data, "C:\Users\joshp\curseforge\minecraft\Instances\1.21.1 test\saves\Test\datapacks_uncompiled\automated_test\.\libraries\net\neoforged\neoform\1.21.10-20251010.172816\neoform-1.21.10-20251010.172816-mappings.tsrg.lzma", --apply-patches, C:\Users\joshp\AppData\Local\Temp\neoforge_installer18373224135492161937\data\client.lzma
 Task: PROCESS_MINECRAFT_JAR
-load parameter mappings [530ms]
-load patch bundle [601ms]
-load mappings [888ms]
-merge mappings [215ms]
-load input zip [1363ms]
+load parameter mappings [442ms]
+load patch bundle [612ms]
+load mappings [815ms]
+merge mappings [209ms]
+load input zip [1443ms]
 Adding Libraries to Inheritance
 Processor: net.neoforged.installertools:installertools -> PROCESS_MINECRAFT_JAR: Processing entries
 Adding input to inheritance map
 Processing 14485 entries
 Adding extras
 Sorting
-deobfuscate jar [1213ms]
-applying patches [138ms]
-write output file [1053ms]
-overall work [3778ms]
+deobfuscate jar [1262ms]
+applying patches [199ms]
+write output file [1263ms]
+overall work [4180ms]
 The server installed successfully
 You can delete this installer file now if you wish

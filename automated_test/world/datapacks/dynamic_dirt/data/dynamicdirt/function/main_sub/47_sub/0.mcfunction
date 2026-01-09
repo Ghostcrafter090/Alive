@@ -1,0 +1,1 @@
+execute if block ~ ~-3 ~ #dynamicdirt:air run function dynamicdirt:main_sub/47_sub/0_sub/0

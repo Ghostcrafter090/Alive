@@ -1,0 +1,1 @@
+execute at @s run function dynamicmonsters:phantoms/main_sub/1_sub/0

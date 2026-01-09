@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ cut_red_sandstone_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ cut_sandstone_slab[type=double,waterlogged=true] replace cut_red_sandstone_slab
+execute if block ~ ~-1 ~ cut_red_sandstone_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ cut_sandstone_slab[type=double,waterlogged=false] replace cut_red_sandstone_slab

@@ -1,0 +1,1 @@
+execute at @s run function enhancedsurvival:breathing/play_sub/7_sub/0

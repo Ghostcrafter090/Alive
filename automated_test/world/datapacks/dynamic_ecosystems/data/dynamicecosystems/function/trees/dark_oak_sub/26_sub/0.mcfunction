@@ -1,0 +1,2 @@
+execute as @e[tag=dark_oak_tree_cursor,sort=nearest,limit=1] run function dynamicecosystems:trees/dark_oak_sub/26_sub/0_sub/0
+execute if entity @e[tag=dark_oak_tree_cursor_to_kill,sort=nearest,limit=1,distance=0..41] run kill @s

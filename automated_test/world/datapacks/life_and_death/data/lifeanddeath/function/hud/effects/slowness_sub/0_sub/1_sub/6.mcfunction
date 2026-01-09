@@ -1,0 +1,1 @@
+execute if entity @s[scores={slow_boolean=1..1}] run function lifeanddeath:hud/effects/slowness_sub/0_sub/1_sub/6_sub/0

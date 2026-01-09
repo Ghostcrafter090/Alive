@@ -1,0 +1,1 @@
+execute unless entity @e[tag=is_human,distance=0..30] run function dynamicecosystems:vines/main_sub/3_sub/0_sub/0_sub/0_sub/0_sub/0

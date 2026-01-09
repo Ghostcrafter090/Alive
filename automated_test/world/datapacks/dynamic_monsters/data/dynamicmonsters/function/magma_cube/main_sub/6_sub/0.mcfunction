@@ -1,0 +1,1 @@
+execute if block ~ ~ ~ lava run function dynamicmonsters:magma_cube/main_sub/6_sub/0_sub/0

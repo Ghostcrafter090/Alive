@@ -1,0 +1,1 @@
+execute at @s run function dynamicdirt:collapse_sub/43_sub/0

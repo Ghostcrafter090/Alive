@@ -1,0 +1,1 @@
+execute as @e[distance=0..1,scores={hasDiseaseBoolean=0..1}] run function lifeanddeath:main_sub/69_sub/0_sub/0_sub/0

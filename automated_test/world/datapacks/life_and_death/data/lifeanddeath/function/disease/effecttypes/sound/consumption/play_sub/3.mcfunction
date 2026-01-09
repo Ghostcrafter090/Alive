@@ -1,0 +1,1 @@
+execute at @s run function lifeanddeath:disease/effecttypes/sound/consumption/play_sub/3_sub/0

@@ -1,0 +1,1 @@
+execute if entity @s[tag=notmoved] run function gstools:cursor/dovertical_sub/21_sub/0

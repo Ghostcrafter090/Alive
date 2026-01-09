@@ -1,0 +1,2 @@
+execute if entity @s[scores={currentSeasonDay=1..60}] run function gstools:compat/sereneseasons/main_sub/13_sub/0
+execute if entity @s[scores={seasonGrabberIndex=100..}] unless entity @s[scores={currentSeasonDay=1..60}] run scoreboard players set @s seasonGrabberIndex 0

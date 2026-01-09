@@ -1,0 +1,1 @@
+execute if entity @s[scores={diseaseHudModCompatibility=0..0}] run function gstools:hud/version_conflict/diseasehud_1_sub/0_sub/0

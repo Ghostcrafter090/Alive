@@ -1,0 +1,1 @@
+execute unless entity @e[tag=gstools_worker,type=marker,scores={enhancedSurvivalLoaded=1..1}] run function gstools:hud/version_conflict/diseasehud_1_sub/0_sub/0_sub/0

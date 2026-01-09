@@ -1,0 +1,1 @@
+execute unless entity @s[tag=pale_oak_tree_locating] run function dynamicecosystems:trees/pale_oak_sub/9_sub/0

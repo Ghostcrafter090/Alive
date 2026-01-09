@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ red_sandstone_wall[west=true] run function blockdecay:decay/layer_2/n202/red_sandstone_wall_sub/3_sub/16_sub/8_sub/0
+execute if block ~ ~-1 ~ red_sandstone_wall[west=false] run function blockdecay:decay/layer_2/n202/red_sandstone_wall_sub/3_sub/16_sub/8_sub/4

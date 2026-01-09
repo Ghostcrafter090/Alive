@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ gold_bars[north=true] run function blockdecay:decay/layer_1/n125/gold_bars_sub/19_sub/0
+execute if block ~ ~-1 ~ gold_bars[north=false] run function blockdecay:decay/layer_1/n125/gold_bars_sub/19_sub/8

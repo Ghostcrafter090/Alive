@@ -1,0 +1,2 @@
+execute if entity @s[scores={weak_max_tier=1..1}] if entity @s[scores={diseaseTime=3000..}] run scoreboard players set @s coughStrength 3
+execute if entity @s[scores={weak_max_tier=2..}] run function lifeanddeath:disease/effecttypes/sound/cough_sub/5_sub/1_sub/6_sub/0_sub/1

@@ -1,0 +1,1 @@
+execute if entity @s[tag=jungle_tree_locating] run function dynamicecosystems:trees/jungle_sub/21_sub/0

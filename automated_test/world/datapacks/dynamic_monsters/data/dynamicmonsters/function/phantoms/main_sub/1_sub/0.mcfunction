@@ -1,0 +1,1 @@
+execute unless entity @e[type=end_crystal,distance=0..1] run function dynamicmonsters:phantoms/main_sub/1_sub/0_sub/0

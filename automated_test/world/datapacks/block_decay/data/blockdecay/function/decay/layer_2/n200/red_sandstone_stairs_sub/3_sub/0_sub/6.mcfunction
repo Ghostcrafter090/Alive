@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ red_sandstone_stairs[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ sandstone_stairs[facing=east,half=top,shape=outer_right,waterlogged=true] replace red_sandstone_stairs
+execute if block ~ ~-1 ~ red_sandstone_stairs[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ sandstone_stairs[facing=east,half=top,shape=outer_right,waterlogged=false] replace red_sandstone_stairs

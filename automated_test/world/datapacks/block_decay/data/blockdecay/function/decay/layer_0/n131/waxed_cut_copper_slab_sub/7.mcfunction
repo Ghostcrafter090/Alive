@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ waxed_cut_copper_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ cut_copper_slab[type=double,waterlogged=true] replace waxed_cut_copper_slab
+execute if block ~ ~-1 ~ waxed_cut_copper_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ cut_copper_slab[type=double,waterlogged=false] replace waxed_cut_copper_slab

@@ -1,0 +1,9 @@
+# Define
+scoreboard objectives add secondsTillExtinguished dummy
+
+# Main
+execute if entity @e[tag=gstools_worker,type=marker,scores={ticQuarter=1..1}] as @e[type=creeper] store result score @s secondsTillExtinguished run data get entity @s Fire
+execute as @e[type=creeper,scores={secondsTillExtinguished=1..}] run data modify entity @s ignited set value 1b
+
+execute if entity @e[tag=gstools_worker,type=marker,scores={random1000=..4}] as @e[type=creeper,sort=random,limit=1] at @s run summon arrow ~ ~3 ~ {Tags:['make_creeper_attack'],damage:0.001d}
+execute as @e[type=arrow,tag=make_creeper_attack,tag=!modified] run function dynamicmonsters:creeper/main_sub/8

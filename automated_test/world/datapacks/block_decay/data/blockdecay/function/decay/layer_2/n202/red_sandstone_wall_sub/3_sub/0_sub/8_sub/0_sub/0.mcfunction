@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ red_sandstone_wall[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ sandstone_wall[east=true,north=true,south=false,west=true,up=true,waterlogged=true] replace red_sandstone_wall
+execute if block ~ ~-1 ~ red_sandstone_wall[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ sandstone_wall[east=true,north=true,south=false,west=true,up=true,waterlogged=false] replace red_sandstone_wall

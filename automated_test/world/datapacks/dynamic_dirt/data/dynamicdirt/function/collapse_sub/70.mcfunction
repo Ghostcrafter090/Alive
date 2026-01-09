@@ -1,0 +1,1 @@
+execute if block ~ ~-1 ~ air run function dynamicdirt:collapse_sub/70_sub/0

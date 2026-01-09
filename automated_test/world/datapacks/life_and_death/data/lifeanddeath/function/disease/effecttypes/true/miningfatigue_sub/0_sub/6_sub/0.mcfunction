@@ -1,0 +1,2 @@
+execute if entity @s[scores={minf_max_tier=1..1,}] if entity @s[scores={diseaseTime=3000..}] run effect give @s mining_fatigue 5 0
+execute if entity @s[scores={minf_max_tier=2..,}] run function lifeanddeath:disease/effecttypes/true/miningfatigue_sub/0_sub/6_sub/0_sub/1

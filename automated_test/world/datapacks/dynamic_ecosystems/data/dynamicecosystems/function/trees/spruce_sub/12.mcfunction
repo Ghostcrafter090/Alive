@@ -1,0 +1,1 @@
+execute if entity @s[tag=spruce_tree_locating] run function dynamicecosystems:trees/spruce_sub/12_sub/0

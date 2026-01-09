@@ -1,0 +1,1 @@
+execute if score @s treeWorkerAliveTime < @s treeSpawnThresholdWorker run function dynamicecosystems:trees/cherry_sub/26_sub/0_sub/0_sub/0

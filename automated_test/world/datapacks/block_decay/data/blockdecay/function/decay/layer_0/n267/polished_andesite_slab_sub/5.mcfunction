@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ polished_andesite_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ andeside_slab[type=bottom,waterlogged=true] replace polished_andesite_slab
+execute if block ~ ~-1 ~ polished_andesite_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ andeside_slab[type=bottom,waterlogged=false] replace polished_andesite_slab

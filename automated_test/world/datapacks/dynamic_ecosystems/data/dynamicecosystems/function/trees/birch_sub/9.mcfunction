@@ -1,0 +1,1 @@
+execute unless entity @s[tag=birch_tree_locating] run function dynamicecosystems:trees/birch_sub/9_sub/0

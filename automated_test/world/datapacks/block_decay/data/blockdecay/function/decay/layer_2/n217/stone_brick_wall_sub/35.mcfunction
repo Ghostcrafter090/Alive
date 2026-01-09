@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ stone_brick_wall[north=true] run function blockdecay:decay/layer_2/n217/stone_brick_wall_sub/35_sub/0
+execute if block ~ ~-1 ~ stone_brick_wall[north=false] run function blockdecay:decay/layer_2/n217/stone_brick_wall_sub/35_sub/16

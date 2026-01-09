@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ tuff_brick_wall[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ polished_tuff_wall[east=true,north=true,south=false,west=true,up=false,waterlogged=true] replace tuff_brick_wall
+execute if block ~ ~-1 ~ tuff_brick_wall[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ polished_tuff_wall[east=true,north=true,south=false,west=true,up=false,waterlogged=false] replace tuff_brick_wall

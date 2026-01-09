@@ -1,0 +1,1 @@
+execute as @e[tag=!tile,distance=0..1] run function lifeanddeath:version_conflict/weaving_0_sub/0_sub/1_sub/0

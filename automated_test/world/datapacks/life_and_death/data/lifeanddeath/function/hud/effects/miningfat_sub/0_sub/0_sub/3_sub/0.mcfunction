@@ -1,0 +1,2 @@
+execute if entity @s[scores={minf_max_tier=1..1}] if entity @s[scores={diseaseTime=2000..}] run attribute @s gstools:disease_effect_mining_fatigue base set 10
+execute if entity @s[scores={minf_max_tier=2..}] run function lifeanddeath:hud/effects/miningfat_sub/0_sub/0_sub/3_sub/0_sub/1

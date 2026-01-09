@@ -1,0 +1,4 @@
+summon phantom ~ ~ ~ {Glowing:1b,CustomNameVisible:0b,PersistenceRequired:1b,CanPickUpLoot:1b,size:1,CustomName:"Crystal Phantom",active_effects:[{id:"minecraft:12b",amplifier:1,duration:100}],attributes:[{id:"minecraft:max_health",base:30}]}
+summon phantom ~ ~ ~ {Glowing:1b,CustomNameVisible:0b,PersistenceRequired:1b,CanPickUpLoot:1b,size:1,CustomName:"Crystal Phantom",active_effects:[{id:"minecraft:12b",amplifier:1,duration:100}],attributes:[{id:"minecraft:max_health",base:30}]}
+summon phantom ~ ~ ~ {Glowing:1b,CustomNameVisible:0b,PersistenceRequired:1b,CanPickUpLoot:1b,size:1,CustomName:"Crystal Phantom",active_effects:[{id:"minecraft:12b",amplifier:1,duration:100}],attributes:[{id:"minecraft:max_health",base:30}]}
+kill @s

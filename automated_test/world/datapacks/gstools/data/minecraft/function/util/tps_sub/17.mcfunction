@@ -1,0 +1,1 @@
+execute unless entity @s[scores={worldBorderVersionConflict=1..1}] run function gstools:util/tps_sub/17_sub/0

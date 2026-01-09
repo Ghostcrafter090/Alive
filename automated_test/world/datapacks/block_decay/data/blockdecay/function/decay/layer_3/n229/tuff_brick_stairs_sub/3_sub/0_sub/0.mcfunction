@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ tuff_brick_stairs[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ polished_tuff_stairs[facing=east,half=top,shape=inner_left,waterlogged=true] replace tuff_brick_stairs
+execute if block ~ ~-1 ~ tuff_brick_stairs[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ polished_tuff_stairs[facing=east,half=top,shape=inner_left,waterlogged=false] replace tuff_brick_stairs

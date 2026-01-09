@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ smooth_quartz_stairs[half=top] run function blockdecay:decay/layer_5/n186/smooth_quartz_stairs_sub/63_sub/0
+execute if block ~ ~-1 ~ smooth_quartz_stairs[half=bottom] run function blockdecay:decay/layer_5/n186/smooth_quartz_stairs_sub/63_sub/10

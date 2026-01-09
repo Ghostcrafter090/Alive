@@ -1,0 +1,1 @@
+execute unless entity @s[nbt={Fire:-1s}] run function dynamicmonsters:slime/main_sub/16_sub/0_sub/3_sub/0

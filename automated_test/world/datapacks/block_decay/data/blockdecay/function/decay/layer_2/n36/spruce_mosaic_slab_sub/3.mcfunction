@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ spruce_mosaic_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ spruce_slab[type=top,waterlogged=true] replace spruce_mosaic_slab
+execute if block ~ ~-1 ~ spruce_mosaic_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ spruce_slab[type=top,waterlogged=false] replace spruce_mosaic_slab

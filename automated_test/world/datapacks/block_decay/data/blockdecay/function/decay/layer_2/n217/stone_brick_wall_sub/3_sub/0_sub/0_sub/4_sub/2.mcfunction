@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ stone_brick_wall[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ mossy_stone_brick_wall[east=true,north=true,south=true,west=false,up=false,waterlogged=true] replace stone_brick_wall
+execute if block ~ ~-1 ~ stone_brick_wall[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ mossy_stone_brick_wall[east=true,north=true,south=true,west=false,up=false,waterlogged=false] replace stone_brick_wall

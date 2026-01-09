@@ -1,0 +1,1 @@
+execute as @e[tag=gstools_vertical_cursor] run function dynamicdirt:version_conflict/tuff_0_sub/0

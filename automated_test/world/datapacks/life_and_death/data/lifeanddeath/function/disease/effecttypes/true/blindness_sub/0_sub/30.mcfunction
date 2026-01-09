@@ -1,0 +1,1 @@
+execute if entity @s[scores={blin_boolean=1..1}] run function lifeanddeath:disease/effecttypes/true/blindness_sub/0_sub/30_sub/0

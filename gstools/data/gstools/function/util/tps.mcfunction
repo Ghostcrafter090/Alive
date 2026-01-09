@@ -20,6 +20,7 @@ execute as @e[tag=gstools_worker,type=marker] unless entity @s[scores={worldBord
 execute as @e[tag=gstools_worker,type=marker] unless entity @s[scores={worldBorderVersionConflict=1..1}] run scoreboard players operation @s worldBorderSetLocation *= @s 50
 
 execute unless entity @e[tag=gstools_worker,type=marker,scores={worldBorderVersionConflict=1..1}] as @e[tag=gstools_worker,type=marker] if score @s blocksPerSecond < @s 59999968 run worldborder add 50
+execute unless entity @e[tag=gstools_worker,type=marker,scores={worldBorderVersionConflict=1..1}] as @e[tag=gstools_worker,type=marker] if score @s blocksPerSecond < @s 59999968 run scoreboard players set $worldBorderCommand worldBorderSetLocation 0
 execute unless entity @e[tag=gstools_worker,type=marker,scores={worldBorderVersionConflict=1..1}] as @e[tag=gstools_worker,type=marker] if score @s blocksPerSecond < @s 59999968 run function gstools:util/setworldborder
 
 execute unless entity @e[tag=gstools_worker,type=marker,scores={worldBorderVersionConflict=1..1}] run scoreboard players operation @e[type=marker,tag=gstools_worker] tps = @e[type=marker,tag=gstools_worker] worldBorderPosPrevious

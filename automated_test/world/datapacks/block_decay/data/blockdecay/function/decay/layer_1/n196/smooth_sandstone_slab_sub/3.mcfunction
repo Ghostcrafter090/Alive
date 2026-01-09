@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ smooth_sandstone_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ sandstone_slab[type=top,waterlogged=true] replace smooth_sandstone_slab
+execute if block ~ ~-1 ~ smooth_sandstone_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ sandstone_slab[type=top,waterlogged=false] replace smooth_sandstone_slab

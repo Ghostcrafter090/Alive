@@ -1,0 +1,1 @@
+execute if block ~ ~-1 ~ #minecraft:dirt run function dynamicecosystems:trees/dark_oak_sub/26_sub/0_sub/0_sub/0_sub/0_sub/0

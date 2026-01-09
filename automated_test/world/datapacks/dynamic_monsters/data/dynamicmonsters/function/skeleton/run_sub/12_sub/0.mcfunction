@@ -1,0 +1,1 @@
+execute unless entity @e[tag=golem,distance=0..5] run function dynamicmonsters:skeleton/run_sub/12_sub/0_sub/0

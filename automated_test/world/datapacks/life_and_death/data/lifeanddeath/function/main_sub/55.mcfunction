@@ -1,0 +1,2 @@
+function lifeanddeath:disease/diseasec
+function lifeanddeath:disease/diseased

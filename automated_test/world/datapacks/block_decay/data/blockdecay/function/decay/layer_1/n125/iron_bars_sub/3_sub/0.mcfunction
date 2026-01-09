@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ iron_bars[south=true] run function blockdecay:decay/layer_1/n125/iron_bars_sub/3_sub/0_sub/0
+execute if block ~ ~-1 ~ iron_bars[south=false] run function blockdecay:decay/layer_1/n125/iron_bars_sub/3_sub/0_sub/4

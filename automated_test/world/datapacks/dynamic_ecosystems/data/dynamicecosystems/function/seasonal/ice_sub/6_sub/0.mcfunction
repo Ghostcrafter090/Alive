@@ -1,0 +1,2 @@
+execute if entity @s[scores={currentTemperature=..-48}] run fill ~1 ~-1 ~1 ~-1 ~-1 ~-1 blue_ice replace packed_ice
+execute if entity @s[scores={currentTemperature=..-24}] run fill ~1 ~-1 ~ ~-1 ~-1 ~ blue_ice replace packed_ice

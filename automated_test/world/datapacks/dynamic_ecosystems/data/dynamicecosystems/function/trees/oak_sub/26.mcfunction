@@ -1,0 +1,1 @@
+execute if entity @s[tag=oak_tree_locating] run function dynamicecosystems:trees/oak_sub/26_sub/0

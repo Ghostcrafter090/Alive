@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ oak_mosaic_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ oak_slab[type=double,waterlogged=true] replace oak_mosaic_slab
+execute if block ~ ~-1 ~ oak_mosaic_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ oak_slab[type=double,waterlogged=false] replace oak_mosaic_slab

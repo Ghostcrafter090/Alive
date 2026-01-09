@@ -1,0 +1,4 @@
+execute unless block ~1 ~ ~ water if block ~1 ~-1 ~ water positioned ~1 ~1 ~ unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
+execute unless block ~-1 ~ ~ water if block ~-1 ~-1 ~ water positioned ~-1 ~1 ~ unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
+execute unless block ~ ~ ~1 water if block ~ ~-1 ~1 water positioned ~ ~1 ~1 unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}
+execute unless block ~ ~ ~-1 water if block ~ ~-1 ~-1 water positioned ~ ~1 ~-1 unless entity @e[type=marker,tag=old_collapse,distance=0..1] run summon marker ~ ~ ~ {Tags:['dirt_collapse']}

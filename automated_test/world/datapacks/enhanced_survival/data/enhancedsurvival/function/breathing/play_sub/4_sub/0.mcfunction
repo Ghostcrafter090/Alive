@@ -1,0 +1,2 @@
+execute if entity @s[scores={stamina=100..200}] run playsound enhancedsurvival.player.breath player @a ~ ~ ~ 0.01 0.9
+execute if entity @s[scores={stamina=..100}] run playsound enhancedsurvival.player.breath player @a ~ ~ ~ 0.02 1

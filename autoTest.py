@@ -115,6 +115,7 @@ def runAutomatedTest(loader, version, modReleaseNumber, isBeta=False):
     setupServer(loader, version)
     copyModFiles(getModFiles(loader, version, modReleaseNumber))
     if isBeta:
-        os.system("xcopy \"..\\datapacks\\*\" .\\automated_test\\world\\datapacks")
+        os.system("xcopy \"..\\datapacks\\*\" .\\automated_test\\world\\datapacks /e /c /y")
+        os.system("del .\\automated_test\\world\\datapacks\\data\\minecraft\\tags\\function\\tick.json /f /q")
     launch(loader)
     

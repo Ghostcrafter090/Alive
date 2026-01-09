@@ -1,0 +1,2 @@
+execute if entity @s[scores={poi_max_tier=2..}] if entity @s[nbt={active_effects:[{id:"minecraft:regeneration",amplifier:0}]}] run scoreboard players remove @s poi_max_tier 1
+execute if entity @s[scores={poi_max_tier=1..}] if entity @s[nbt={active_effects:[{id:"minecraft:regeneration",amplifier:1}]}] run scoreboard players remove @s poi_max_tier 1

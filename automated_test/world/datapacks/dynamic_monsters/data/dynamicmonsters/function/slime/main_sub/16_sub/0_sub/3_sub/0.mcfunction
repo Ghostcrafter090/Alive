@@ -1,0 +1,1 @@
+execute if entity @s[scores={slimeNegate=10..}] run function dynamicmonsters:slime/main_sub/16_sub/0_sub/3_sub/0_sub/0

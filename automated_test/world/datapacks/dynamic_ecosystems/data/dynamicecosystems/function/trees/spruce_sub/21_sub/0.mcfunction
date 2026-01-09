@@ -1,0 +1,1 @@
+execute as @e[tag=spruce_tree_cursor,sort=nearest,limit=1] run function dynamicecosystems:trees/spruce_sub/21_sub/0_sub/0

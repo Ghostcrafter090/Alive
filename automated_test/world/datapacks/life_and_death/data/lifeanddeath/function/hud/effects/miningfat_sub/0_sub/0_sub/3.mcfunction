@@ -1,0 +1,1 @@
+execute if entity @s[scores={minf_boolean=1..1}] run function lifeanddeath:hud/effects/miningfat_sub/0_sub/0_sub/3_sub/0

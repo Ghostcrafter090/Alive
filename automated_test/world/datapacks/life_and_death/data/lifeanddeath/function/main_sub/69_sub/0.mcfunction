@@ -1,0 +1,1 @@
+execute at @s run function lifeanddeath:main_sub/69_sub/0_sub/0

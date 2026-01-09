@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ stone_brick_stairs[half=top] run function blockdecay:decay/layer_2/n213/stone_brick_stairs_sub/63_sub/0
+execute if block ~ ~-1 ~ stone_brick_stairs[half=bottom] run function blockdecay:decay/layer_2/n213/stone_brick_stairs_sub/63_sub/10

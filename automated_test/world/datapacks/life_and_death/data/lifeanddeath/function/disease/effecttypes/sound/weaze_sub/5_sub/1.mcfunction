@@ -1,0 +1,4 @@
+execute if entity @s[scores={poi_minact_tier=1..1}] run function lifeanddeath:disease/effecttypes/sound/weaze_sub/5_sub/1_sub/0
+execute if entity @s[scores={poi_minact_tier=2..2}] run function lifeanddeath:disease/effecttypes/sound/weaze_sub/5_sub/1_sub/10
+execute if entity @s[scores={poi_minact_tier=3..3}] run function lifeanddeath:disease/effecttypes/sound/weaze_sub/5_sub/1_sub/20
+execute if entity @s[scores={poi_minact_tier=4..}] run function lifeanddeath:disease/effecttypes/sound/weaze_sub/5_sub/1_sub/30

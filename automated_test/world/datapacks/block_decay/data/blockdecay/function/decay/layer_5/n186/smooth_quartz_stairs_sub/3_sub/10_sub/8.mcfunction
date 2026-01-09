@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ smooth_quartz_stairs[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ quartz_stairs[facing=east,half=bottom,shape=straight,waterlogged=true] replace smooth_quartz_stairs
+execute if block ~ ~-1 ~ smooth_quartz_stairs[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ quartz_stairs[facing=east,half=bottom,shape=straight,waterlogged=false] replace smooth_quartz_stairs

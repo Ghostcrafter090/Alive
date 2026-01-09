@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ polished_tuff_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ tuff_slab[type=double,waterlogged=true] replace polished_tuff_slab
+execute if block ~ ~-1 ~ polished_tuff_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ tuff_slab[type=double,waterlogged=false] replace polished_tuff_slab

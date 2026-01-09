@@ -1,0 +1,1 @@
+execute if entity @s[scores={hasDiseaseBoolean=1..1}] run function enhancedsurvival:breathing/main_sub/16_sub/0

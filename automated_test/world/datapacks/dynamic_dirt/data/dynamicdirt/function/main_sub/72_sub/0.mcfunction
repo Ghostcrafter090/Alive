@@ -1,0 +1,11 @@
+fill ~ ~ ~ ~ ~ ~ farmland replace dirt_path
+fill ~ ~ ~ ~ ~ ~ farmland replace mud
+fill ~ ~ ~ ~ ~ ~ dirt replace rooted_dirt
+fill ~ ~ ~ ~ ~ ~ rooted_dirt replace coarse_dirt
+fill ~ ~ ~ ~ ~ ~ coarse_dirt replace packed_mud
+fill ~ ~ ~ ~ ~ ~ packed_mud replace mud
+fill ~ ~ ~ ~ ~ ~ mud replace clay
+fill ~ ~ ~ ~ ~ ~ clay replace sand
+fill ~ ~ ~ ~ ~ ~ sand replace red_sand
+fill ~ ~ ~ ~ ~ ~ sand replace gravel
+fill ~ ~ ~ ~ ~ ~ gravel replace #dynamicdirt:mossy_cobblestone

@@ -1,0 +1,1 @@
+execute if entity @e[tag=gstools_worker,type=marker,scores={random1000=45..55}] as @e[tag=gstools_cursor,type=marker] at @s if block ~ ~-1 ~ #minecraft:dirt run place feature minecraft:patch_grass_meadow

@@ -1,0 +1,1 @@
+execute if entity @s[scores={weak_boolean=1..1}] run function lifeanddeath:disease/effecttypes/sound/cough_sub/5_sub/1_sub/3_sub/0

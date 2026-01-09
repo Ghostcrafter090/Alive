@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ red_sandstone_stairs[half=top] run function blockdecay:decay/layer_2/n200/red_sandstone_stairs_sub/63_sub/0
+execute if block ~ ~-1 ~ red_sandstone_stairs[half=bottom] run function blockdecay:decay/layer_2/n200/red_sandstone_stairs_sub/63_sub/10

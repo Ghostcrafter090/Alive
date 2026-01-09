@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ waxed_cut_copper_stairs[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ cut_copper_stairs[facing=south,half=top,shape=inner_left,waterlogged=true] replace waxed_cut_copper_stairs
+execute if block ~ ~-1 ~ waxed_cut_copper_stairs[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ cut_copper_stairs[facing=south,half=top,shape=inner_left,waterlogged=false] replace waxed_cut_copper_stairs

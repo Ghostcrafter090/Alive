@@ -1,0 +1,1 @@
+execute if entity @s[scores={poi_boolean=1..1}] run function lifeanddeath:disease/effecttypes/true/poison_sub/0_sub/30_sub/0

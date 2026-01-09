@@ -1,0 +1,1 @@
+execute if entity @s[scores={thirst=35..40}] run function gstools:hud/enhancedhud_sub/5230_sub/0

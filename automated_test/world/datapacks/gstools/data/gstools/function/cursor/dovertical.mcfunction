@@ -1,0 +1,21 @@
+# Define
+scoreboard objectives add verticalCursorWorker dummy
+
+# Main
+summon marker ~ ~ ~ {Tags:['gstools_vertical_cursor','notmoved']}
+execute store result score @s maximumCursorY run data get entity @s Pos[1] 1
+scoreboard players operation @s verticalCursorWorker = @s maximumCursorY
+
+function gstools:util/random
+scoreboard players operation @s verticalCursorWorker -= @e[tag=gstools_worker,type=marker,limit=1] random10
+
+execute as @e[tag=gstools_vertical_cursor] run function gstools:cursor/dovertical_sub/11
+
+summon marker ~ ~ ~ {Tags:['gstools_vertical_cursor','notmoved']}
+execute store result score @s maximumCursorY run data get entity @s Pos[1] 1
+scoreboard players operation @s verticalCursorWorker = @s maximumCursorY
+
+function gstools:util/random
+scoreboard players operation @s verticalCursorWorker -= @e[tag=gstools_worker,type=marker,limit=1] random100
+
+execute as @e[tag=gstools_vertical_cursor] run function gstools:cursor/dovertical_sub/21

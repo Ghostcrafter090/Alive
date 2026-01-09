@@ -1,0 +1,1 @@
+execute as @e[tag=!functional,distance=0..1,scores={hasDiseaseBoolean=0..1}] run function lifeanddeath:disease/diseaseb_sub/39_sub/0_sub/0

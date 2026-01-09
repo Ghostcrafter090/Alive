@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ warped_mosaic_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ warped_slab[type=double,waterlogged=true] replace warped_mosaic_slab
+execute if block ~ ~-1 ~ warped_mosaic_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ warped_slab[type=double,waterlogged=false] replace warped_mosaic_slab

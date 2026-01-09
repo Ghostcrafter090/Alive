@@ -14,7 +14,8 @@ def getDatapacks():
     outList = []
     for dir in dirList:
         if os.path.exists(".\\" + dir + "\\pack.mcmeta") and (dir != "temp_dir"):
-            outList.append(dir)
+            if dir != "test_datapack":
+                outList.append(dir)
             
     return outList
 

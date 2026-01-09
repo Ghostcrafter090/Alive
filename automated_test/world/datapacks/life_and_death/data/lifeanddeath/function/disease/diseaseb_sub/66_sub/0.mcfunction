@@ -1,0 +1,1 @@
+execute as @e[tag=!functional,distance=0..1] run function lifeanddeath:disease/diseaseb_sub/66_sub/0_sub/0

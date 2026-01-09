@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ blue_stained_glass_pane[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ glass_pane[east=false,north=false,south=true,west=true,waterlogged=true] replace blue_stained_glass_pane
+execute if block ~ ~-1 ~ blue_stained_glass_pane[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ glass_pane[east=false,north=false,south=true,west=true,waterlogged=false] replace blue_stained_glass_pane

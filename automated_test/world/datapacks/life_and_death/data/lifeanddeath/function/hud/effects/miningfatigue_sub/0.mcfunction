@@ -1,0 +1,1 @@
+execute if entity @s[scores={hasDiseaseBoolean=1..2}] run function lifeanddeath:hud/effects/miningfatigue_sub/0_sub/0

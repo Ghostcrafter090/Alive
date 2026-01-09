@@ -1,0 +1,1 @@
+execute if entity @s[scores={with_minact_tier=2..2}] run function lifeanddeath:disease/effecttypes/sound/consumption_sub/12_sub/0_sub/0
