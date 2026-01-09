@@ -1,2 +1,0 @@
-execute if entity @s[scores={diseaseTime=3000..4000,hasImmunityTime=290..291}] run effect give @s hunger 1 0
-execute if entity @s[scores={diseaseTime=4000..,hasImmunityTime=290..291}] run effect give @s hunger 3 1

@@ -1,4 +1,0 @@
-execute if entity @s[scores={with_minact_tier=1..1}] if entity @s[scores={with_boolean=1..1}] if entity @s[scores={with_max_tier=1..,}] if entity @s[scores={diseaseTime=4000..,hasImmunityTime=290..291}] run effect give @s wither 1 1
-execute if entity @s[scores={with_minact_tier=2..2}] if entity @s[scores={with_boolean=1..1}] if entity @s[scores={with_max_tier=1..,}] if entity @s[scores={diseaseTime=5000..,hasImmunityTime=290..291}] run effect give @s wither 1 1
-execute if entity @s[scores={with_minact_tier=3..3}] if entity @s[scores={with_boolean=1..1}] if entity @s[scores={with_max_tier=1..,}] if entity @s[scores={diseaseTime=6000..,hasImmunityTime=290..291}] run effect give @s wither 1 1
-execute if entity @s[scores={with_minact_tier=4..}] if entity @s[scores={with_boolean=1..1}] if entity @s[scores={with_max_tier=1..,}] if entity @s[scores={diseaseTime=7000..,hasImmunityTime=290..291}] run effect give @s wither 1 1

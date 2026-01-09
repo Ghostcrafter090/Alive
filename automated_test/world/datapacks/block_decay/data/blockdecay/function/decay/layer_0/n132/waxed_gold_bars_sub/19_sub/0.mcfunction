@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ waxed_gold_bars[south=true] run function blockdecay:decay/layer_0/n132/waxed_gold_bars_sub/19_sub/0_sub/0
-execute if block ~ ~-1 ~ waxed_gold_bars[south=false] run function blockdecay:decay/layer_0/n132/waxed_gold_bars_sub/19_sub/0_sub/4

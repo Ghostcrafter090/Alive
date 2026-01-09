@@ -1,1 +1,0 @@
-execute if entity @s[scores={random100=..40}] run function enhancedsurvival:breathing/main_sub/19_sub/0_sub/0

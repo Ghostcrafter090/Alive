@@ -1,2 +1,0 @@
-scoreboard players operation @s treeWorkerAliveTime = @e[tag=gstools_worker,type=marker,limit=1] random100
-scoreboard players operation @s treeWorkerAliveTime += @e[tag=gstools_worker,type=marker,limit=1] 20

@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ smooth_quartz_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ quartz_slab[type=double,waterlogged=true] replace smooth_quartz_slab
-execute if block ~ ~-1 ~ smooth_quartz_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ quartz_slab[type=double,waterlogged=false] replace smooth_quartz_slab

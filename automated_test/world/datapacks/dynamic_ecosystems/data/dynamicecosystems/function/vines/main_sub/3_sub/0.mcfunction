@@ -1,1 +1,0 @@
-execute if entity @s[scores={currentTemperature=15..25}] run function dynamicecosystems:vines/main_sub/3_sub/0_sub/0

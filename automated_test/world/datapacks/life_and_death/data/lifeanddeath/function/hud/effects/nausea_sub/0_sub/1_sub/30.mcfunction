@@ -1,1 +1,0 @@
-execute if entity @s[scores={nau_boolean=1..1}] run function lifeanddeath:hud/effects/nausea_sub/0_sub/1_sub/30_sub/0

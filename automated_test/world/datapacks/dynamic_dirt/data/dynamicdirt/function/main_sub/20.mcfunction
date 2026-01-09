@@ -1,1 +1,0 @@
-execute at @s run function dynamicdirt:main_sub/20_sub/0

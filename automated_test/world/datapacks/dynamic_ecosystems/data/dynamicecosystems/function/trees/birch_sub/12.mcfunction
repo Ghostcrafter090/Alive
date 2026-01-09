@@ -1,1 +1,0 @@
-execute if entity @s[tag=birch_tree_locating] run function dynamicecosystems:trees/birch_sub/12_sub/0

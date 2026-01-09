@@ -1,1 +1,0 @@
-execute at @s run function dynamicmonsters:slime/main_sub/6_sub/0

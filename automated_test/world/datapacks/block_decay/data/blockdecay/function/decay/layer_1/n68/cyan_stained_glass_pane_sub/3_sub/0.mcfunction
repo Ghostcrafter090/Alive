@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ cyan_stained_glass_pane[south=true] run function blockdecay:decay/layer_1/n68/cyan_stained_glass_pane_sub/3_sub/0_sub/0
-execute if block ~ ~-1 ~ cyan_stained_glass_pane[south=false] run function blockdecay:decay/layer_1/n68/cyan_stained_glass_pane_sub/3_sub/0_sub/4

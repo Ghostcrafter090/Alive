@@ -1,2 +1,0 @@
-execute if entity @s[scores={weak_max_tier=1..1}] if entity @s[scores={diseaseTime=2000..}] run attribute @s gstools:disease_effect_weakness base set 10
-execute if entity @s[scores={weak_max_tier=2..}] run function lifeanddeath:hud/effects/weakness_sub/0_sub/1_sub/3_sub/0_sub/1

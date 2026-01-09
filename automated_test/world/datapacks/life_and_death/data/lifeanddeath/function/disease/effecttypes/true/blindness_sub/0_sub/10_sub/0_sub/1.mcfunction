@@ -1,2 +1,0 @@
-execute if entity @s[scores={diseaseTime=2000..3000,hasImmunityTime=290..291}] run effect give @s blindness 1 0
-execute if entity @s[scores={diseaseTime=3000..,hasImmunityTime=290..291}] run effect give @s blindness 3 1

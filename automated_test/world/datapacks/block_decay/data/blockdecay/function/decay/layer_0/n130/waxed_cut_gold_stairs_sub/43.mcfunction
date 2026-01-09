@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ waxed_cut_gold_stairs[half=top] run function blockdecay:decay/layer_0/n130/waxed_cut_gold_stairs_sub/43_sub/0
-execute if block ~ ~-1 ~ waxed_cut_gold_stairs[half=bottom] run function blockdecay:decay/layer_0/n130/waxed_cut_gold_stairs_sub/43_sub/10

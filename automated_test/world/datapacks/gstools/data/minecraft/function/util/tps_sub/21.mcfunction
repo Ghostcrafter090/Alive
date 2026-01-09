@@ -1,1 +1,0 @@
-execute as @e[tag=gstools_worker,type=marker] run function gstools:util/tps_sub/21_sub/0

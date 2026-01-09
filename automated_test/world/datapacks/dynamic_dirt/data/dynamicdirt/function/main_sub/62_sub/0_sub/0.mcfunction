@@ -1,1 +1,0 @@
-execute if block ~ ~ ~ water run function dynamicdirt:main_sub/62_sub/0_sub/0_sub/0

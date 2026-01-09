@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ polished_granite_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ granite_slab[type=top,waterlogged=true] replace polished_granite_slab
-execute if block ~ ~-1 ~ polished_granite_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ granite_slab[type=top,waterlogged=false] replace polished_granite_slab

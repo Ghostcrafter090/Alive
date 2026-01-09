@@ -18,6 +18,7 @@ execute if score $test testNumber = $test testNumberWorker if score $test testCo
 
 execute if score $test testNumber = $test testNumberWorker if score $test testComplete = $test test1 run say [framework_testing_ended]
 
+scoreboard players add $test testTimeSinceStart 1
 
 execute if score $test testComplete = $test test1 run scoreboard players set $test testTimeSinceStart 0
 execute if score $test testComplete = $test test1 run scoreboard players add $test testNumber 1

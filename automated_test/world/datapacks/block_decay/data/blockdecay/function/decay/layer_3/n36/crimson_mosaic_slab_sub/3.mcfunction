@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ crimson_mosaic_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ crimson_slab[type=top,waterlogged=true] replace crimson_mosaic_slab
-execute if block ~ ~-1 ~ crimson_mosaic_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ crimson_slab[type=top,waterlogged=false] replace crimson_mosaic_slab

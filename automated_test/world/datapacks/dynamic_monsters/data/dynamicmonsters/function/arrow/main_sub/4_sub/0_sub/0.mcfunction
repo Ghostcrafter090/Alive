@@ -1,1 +1,0 @@
-execute if block ~ ~ ~ #gstools:air run function dynamicmonsters:arrow/main_sub/4_sub/0_sub/0_sub/0

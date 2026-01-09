@@ -1,1 +1,0 @@
-execute as @e[type=bogged] run function dynamicmonsters:skeleton/run

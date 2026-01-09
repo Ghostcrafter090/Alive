@@ -1,1 +1,0 @@
-execute at @s run function dynamicmonsters:skeleton/version_conflict/equipment_0_sub/4_sub/0

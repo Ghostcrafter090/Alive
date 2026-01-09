@@ -1,2 +1,0 @@
-execute if entity @s[scores={diseaseTime=3000..4000}] run attribute @s gstools:disease_effect_weakness base set 19
-execute if entity @s[scores={diseaseTime=4000..}] run attribute @s gstools:disease_effect_weakness base set 19

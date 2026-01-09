@@ -1,1 +1,0 @@
-execute unless score @s previousDayNumber = @s dayNumber run function gstools:run_sub/28_sub/0

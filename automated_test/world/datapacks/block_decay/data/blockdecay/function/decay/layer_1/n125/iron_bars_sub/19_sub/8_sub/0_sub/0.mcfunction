@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ iron_bars[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ oxidized_iron_bars[east=false,north=false,south=true,west=true,waterlogged=true] replace iron_bars
-execute if block ~ ~-1 ~ iron_bars[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ oxidized_iron_bars[east=false,north=false,south=true,west=true,waterlogged=false] replace iron_bars

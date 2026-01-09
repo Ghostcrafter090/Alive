@@ -1,2 +1,0 @@
-function lifeanddeath:disease/diseasea
-function lifeanddeath:disease/diseaseb

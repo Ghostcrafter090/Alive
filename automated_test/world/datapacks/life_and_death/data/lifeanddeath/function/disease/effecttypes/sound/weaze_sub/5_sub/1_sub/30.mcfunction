@@ -1,1 +1,0 @@
-execute if entity @s[scores={poi_boolean=1..1}] run function lifeanddeath:disease/effecttypes/sound/weaze_sub/5_sub/1_sub/30_sub/0

@@ -1,1 +1,0 @@
-execute as @a[scores={hasDiseaseBoolean=1..1}] run function gstools:hud/version_conflict/diseasehud_1_sub/0

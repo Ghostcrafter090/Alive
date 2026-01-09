@@ -1,1 +1,0 @@
-execute as @e[tag=!tile,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={with_max_tier=1..}] if entity @s[nbt={active_effects:[{id:"minecraft:fire_resistance",amplifier:0}]}] run scoreboard players remove @s with_max_tier 1

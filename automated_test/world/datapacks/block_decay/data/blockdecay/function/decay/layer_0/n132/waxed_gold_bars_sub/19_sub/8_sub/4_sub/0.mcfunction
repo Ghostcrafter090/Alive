@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ waxed_gold_bars[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ gold_bars[east=false,north=false,south=false,west=true,waterlogged=true] replace waxed_gold_bars
-execute if block ~ ~-1 ~ waxed_gold_bars[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ gold_bars[east=false,north=false,south=false,west=true,waterlogged=false] replace waxed_gold_bars

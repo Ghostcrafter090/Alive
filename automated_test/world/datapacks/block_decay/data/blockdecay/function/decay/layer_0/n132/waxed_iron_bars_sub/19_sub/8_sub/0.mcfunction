@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ waxed_iron_bars[west=true] run function blockdecay:decay/layer_0/n132/waxed_iron_bars_sub/19_sub/8_sub/0_sub/0
-execute if block ~ ~-1 ~ waxed_iron_bars[west=false] run function blockdecay:decay/layer_0/n132/waxed_iron_bars_sub/19_sub/8_sub/0_sub/2

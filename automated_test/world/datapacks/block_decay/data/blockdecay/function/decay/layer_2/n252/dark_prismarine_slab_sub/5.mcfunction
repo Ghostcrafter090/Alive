@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ dark_prismarine_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ prismarine_brick_slab[type=bottom,waterlogged=true] replace dark_prismarine_slab
-execute if block ~ ~-1 ~ dark_prismarine_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ prismarine_brick_slab[type=bottom,waterlogged=false] replace dark_prismarine_slab

@@ -1,1 +1,0 @@
-execute if entity @s[tag=mangrove_tree_locating] run function dynamicecosystems:trees/mangrove_sub/21_sub/0

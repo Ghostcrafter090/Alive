@@ -1,1 +1,0 @@
-execute if entity @s[scores={hung_boolean=1..1}] run function lifeanddeath:disease/effecttypes/true/hunger_sub/0_sub/20_sub/0

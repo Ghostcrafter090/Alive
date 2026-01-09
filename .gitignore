@@ -1,5 +1,8 @@
 datapack_compile_temp
 curseforge_api.json
 temp_dir
-automated_test\*
-java\*
+automated_test
+java
+prior_tests
+prior_tests\*
+libs

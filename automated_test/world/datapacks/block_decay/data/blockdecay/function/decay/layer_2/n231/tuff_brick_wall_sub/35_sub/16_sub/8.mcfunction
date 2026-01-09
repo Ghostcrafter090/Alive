@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ tuff_brick_wall[west=true] run function blockdecay:decay/layer_2/n231/tuff_brick_wall_sub/35_sub/16_sub/8_sub/0
-execute if block ~ ~-1 ~ tuff_brick_wall[west=false] run function blockdecay:decay/layer_2/n231/tuff_brick_wall_sub/35_sub/16_sub/8_sub/4

@@ -1,1 +1,0 @@
-execute at @s run function dynamicecosystems:trees/acacia_sub/6_sub/0

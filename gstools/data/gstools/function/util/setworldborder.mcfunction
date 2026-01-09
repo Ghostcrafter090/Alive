@@ -29,5 +29,5 @@ execute as @e[tag=gstools_worker,type=marker] if score @s worldBorderLocation >=
 execute as @e[tag=gstools_worker,type=marker] if score @s worldBorderLocation <= @s n1 run worldborder add 1
 execute as @e[tag=gstools_worker,type=marker] if score @s worldBorderLocation >= @s 1 run worldborder add -1
 
-scoreboard players set $worldBorderCommand worldBorderWorker 5000
-execute unless entity @e[tag=gstools_worker,type=marker,scores={worldBorderLocation=0..0}] if score $worldBorderCommand worldBorderSetLocation < $worldBorderCommand worldBorderWorker run function gstools:util/setworldborder
+scoreboard players set $worldBorderCommand worldBorderWorker 1000
+execute unless entity @e[tag=gstools_worker,type=marker,scores={worldBorderLocation=-1..1}] if score $worldBorderCommand worldBorderSetLocation < $worldBorderCommand worldBorderWorker run function gstools:util/setworldborder

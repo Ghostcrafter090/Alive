@@ -1,1 +1,0 @@
-execute if block ~ ~-2 ~ cave_air run function dynamicdirt:collapse_sub/60_sub/0

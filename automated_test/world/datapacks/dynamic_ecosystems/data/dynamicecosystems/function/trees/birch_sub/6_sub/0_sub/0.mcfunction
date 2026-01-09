@@ -1,1 +1,0 @@
-execute if block ~ ~-2 ~ birch_leaves run function dynamicecosystems:trees/birch_sub/6_sub/0_sub/0_sub/0

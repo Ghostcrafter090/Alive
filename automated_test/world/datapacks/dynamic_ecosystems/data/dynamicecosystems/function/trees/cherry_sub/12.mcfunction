@@ -1,1 +1,0 @@
-execute if entity @s[tag=cherry_tree_locating] run function dynamicecosystems:trees/cherry_sub/12_sub/0

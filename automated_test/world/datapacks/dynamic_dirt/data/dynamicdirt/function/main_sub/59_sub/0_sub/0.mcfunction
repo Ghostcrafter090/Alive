@@ -1,1 +1,0 @@
-execute if block ~ ~ ~ #dynamicdirt:air run function dynamicdirt:main_sub/59_sub/0_sub/0_sub/0

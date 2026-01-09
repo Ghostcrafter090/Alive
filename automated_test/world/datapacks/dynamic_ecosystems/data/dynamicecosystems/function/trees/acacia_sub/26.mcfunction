@@ -1,1 +1,0 @@
-execute if entity @s[tag=acacia_tree_locating] run function dynamicecosystems:trees/acacia_sub/26_sub/0

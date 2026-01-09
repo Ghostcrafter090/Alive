@@ -1,4 +1,0 @@
-execute as @e[tag=!tile,scores={hasDiseaseBoolean=1..1}] if entity @s[nbt={active_effects:[{id:"minecraft:absorption",amplifier:0}]}] run scoreboard players add @s diseaseTime 1
-execute as @e[tag=!tile,scores={hasDiseaseBoolean=2..2}] if entity @s[nbt={active_effects:[{id:"minecraft:absorption",amplifier:1}]}] run scoreboard players remove @s diseaseTime 2
-execute as @e[tag=!tile,scores={hasDiseaseBoolean=1..1}] if entity @s[nbt={active_effects:[{id:"minecraft:absorption",amplifier:2}]}] run scoreboard players add @s diseaseTime 4
-execute as @e[tag=!tile,scores={hasDiseaseBoolean=2..2}] if entity @s[nbt={active_effects:[{id:"minecraft:absorption",amplifier:3}]}] run scoreboard players remove @s diseaseTime 4

@@ -1,1 +1,0 @@
-execute if block ~ ~-1 ~1 water run function dynamicecosystems:seasonal/ice_sub/51_sub/0

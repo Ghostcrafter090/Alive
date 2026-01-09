@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ waxed_copper_bars[south=true] run function blockdecay:decay/layer_0/n132/waxed_copper_bars_sub/3_sub/8_sub/0
-execute if block ~ ~-1 ~ waxed_copper_bars[south=false] run function blockdecay:decay/layer_0/n132/waxed_copper_bars_sub/3_sub/8_sub/4

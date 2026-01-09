@@ -1,1 +1,0 @@
-execute if block ~ ~-2 ~ pale_oak_leaves run function dynamicecosystems:trees/pale_oak_sub/6_sub/0_sub/0_sub/0

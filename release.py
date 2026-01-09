@@ -4,6 +4,8 @@ import modules.curseforge as curseforge
 import subprocess
 import sys
 
+import autoTest
+
 import copy
 
 class globals:
@@ -48,8 +50,7 @@ def getEarliestReleaseDate():
     
     return earliest
 
-def releaseMod(releaseNumber, modId):
-    
+def releaseMod(releaseNumber, modId, versionTestData=False):
     for file in subprocess.getoutput("dir \".\\releases\\" + releaseNumber + "\\*.jar\" /b").split('\n'):
         print(file)
         projectName = file.split("-")[0]
@@ -58,8 +59,8 @@ def releaseMod(releaseNumber, modId):
         modVersion = file.split("-")[2].split("_")[1].split(".jar")[0]
         
         if projectName == modId:
-            
-            curseforge.uploadFile(".\\releases\\" + releaseNumber + "\\" + file, projectName, loaderVersion, gameVersion, modId + " " + loaderVersion + " " + gameVersion + " " + modVersion, "\n - ".join(pytools.IO.getJson(".\\releases\\" + releaseNumber + "\\release.json")["releaseHistory"]))
+            if (not versionTestData) or versionTestData[loaderVersion][gameVersion]:
+                curseforge.uploadFile(".\\releases\\" + releaseNumber + "\\" + file, projectName, loaderVersion, gameVersion, modId + " " + loaderVersion + " " + gameVersion + " " + modVersion, "\n - ".join(pytools.IO.getJson(".\\releases\\" + releaseNumber + "\\release.json")["releaseHistory"]))
             
 
 doRun = False
@@ -80,9 +81,12 @@ if doRun:
     if complete:
         if (len(getReleasesToday()) < 1) or force:
             print("Releasing new mod version!")
+            
+            testCompletion = autoTest.testCompleteVersion(".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]))
+            
             for mod in curseforge.projectIdDict:
                 if not doTest:
-                    releaseMod(".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]), mod)
+                    releaseMod(".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]), mod, versionTestData=testCompletion)
         
             globals.aReleaseSchedule["list"].append({
                 "version": (".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3])),
@@ -127,8 +131,11 @@ if doRun:
             if (len(getReleasesToday()) < 1) or force:
                 print("Releasing scheduled mod version!")
                 theRelease = copy.deepcopy(getEarliestReleaseDate())
+                
+                testCompletion = autoTest.testCompleteVersion(theRelease["version"])
+                
                 for mod in curseforge.projectIdDict:
-                    releaseMod(theRelease["version"], mod)
+                    releaseMod(theRelease["version"], mod, versionTestData=testCompletion)
                 
                 i = 0
                 for aRelease in globals.aReleaseSchedule["list"]:

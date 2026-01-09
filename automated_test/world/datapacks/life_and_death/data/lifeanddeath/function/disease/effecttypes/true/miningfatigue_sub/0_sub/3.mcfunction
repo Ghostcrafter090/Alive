@@ -1,1 +1,0 @@
-execute if entity @s[scores={minf_boolean=1..1}] run function lifeanddeath:disease/effecttypes/true/miningfatigue_sub/0_sub/3_sub/0

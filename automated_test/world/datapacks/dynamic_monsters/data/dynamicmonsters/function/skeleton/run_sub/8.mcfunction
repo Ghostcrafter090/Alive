@@ -1,1 +1,0 @@
-execute at @s run function dynamicmonsters:skeleton/run_sub/8_sub/0

@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ polished_blackstone_brick_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ polished_blackstone_slab[type=double,waterlogged=true] replace polished_blackstone_brick_slab
-execute if block ~ ~-1 ~ polished_blackstone_brick_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ polished_blackstone_slab[type=double,waterlogged=false] replace polished_blackstone_brick_slab

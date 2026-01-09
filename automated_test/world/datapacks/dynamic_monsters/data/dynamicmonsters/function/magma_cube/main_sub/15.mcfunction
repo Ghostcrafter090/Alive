@@ -1,1 +1,0 @@
-execute at @s run function dynamicmonsters:magma_cube/main_sub/15_sub/0

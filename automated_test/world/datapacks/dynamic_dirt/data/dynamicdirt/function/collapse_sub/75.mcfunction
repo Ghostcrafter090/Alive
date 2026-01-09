@@ -1,1 +1,0 @@
-execute if block ~ ~-1 ~ water run function dynamicdirt:collapse_sub/75_sub/0

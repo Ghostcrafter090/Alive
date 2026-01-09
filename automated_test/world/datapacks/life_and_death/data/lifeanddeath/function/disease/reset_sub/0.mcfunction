@@ -1,1 +1,0 @@
-execute at @s run function lifeanddeath:disease/reset_sub/0_sub/0

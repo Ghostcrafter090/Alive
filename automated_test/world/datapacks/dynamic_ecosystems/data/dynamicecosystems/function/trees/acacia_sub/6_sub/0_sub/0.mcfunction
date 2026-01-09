@@ -1,1 +1,0 @@
-execute if block ~ ~-2 ~ acacia_leaves run function dynamicecosystems:trees/acacia_sub/6_sub/0_sub/0_sub/0

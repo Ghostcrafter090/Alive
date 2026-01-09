@@ -1,1 +1,0 @@
-execute as @a run function lifeanddeath:hud/effects/nausea_sub/0

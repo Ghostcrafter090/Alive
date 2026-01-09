@@ -1,1 +1,0 @@
-execute if entity @s[scores={hung_boolean=1..1}] run function lifeanddeath:disease/effecttypes/sound/vomit_sub/5_sub/1_sub/10_sub/0

@@ -1,1 +1,0 @@
-execute as @e[type=marker,tag=dirt_collapse,tag=!sound_played] at @s if entity @e[tag=gstools_worker,type=marker,scores={random10=1..9}] run particle minecraft:dust{color:[1, 1, 1], scale:1} ~ ~-1.5 ~ 0.3 0.3 0.3 10 5 normal

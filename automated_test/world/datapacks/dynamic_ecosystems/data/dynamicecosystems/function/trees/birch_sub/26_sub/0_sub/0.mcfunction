@@ -1,1 +1,0 @@
-execute if score @s treeWorkerAliveTime < @s treeSpawnThresholdWorker run function dynamicecosystems:trees/birch_sub/26_sub/0_sub/0_sub/0

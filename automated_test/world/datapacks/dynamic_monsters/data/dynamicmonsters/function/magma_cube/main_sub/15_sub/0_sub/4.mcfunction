@@ -1,1 +1,0 @@
-execute if entity @s[scores={magmaCubeSizeNegationWorker=10..}] run function dynamicmonsters:magma_cube/main_sub/15_sub/0_sub/4_sub/0

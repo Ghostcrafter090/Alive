@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ copper_bars[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ oxidized_copper_bars[east=true,north=false,south=true,west=true,waterlogged=true] replace copper_bars
-execute if block ~ ~-1 ~ copper_bars[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ oxidized_copper_bars[east=true,north=false,south=true,west=true,waterlogged=false] replace copper_bars

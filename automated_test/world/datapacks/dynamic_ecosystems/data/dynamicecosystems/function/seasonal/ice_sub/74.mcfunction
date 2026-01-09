@@ -1,1 +1,0 @@
-execute if block ~ ~-1 ~ packed_ice run function dynamicecosystems:seasonal/ice_sub/74_sub/0

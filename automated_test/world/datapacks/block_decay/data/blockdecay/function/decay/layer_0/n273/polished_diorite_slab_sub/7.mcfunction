@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ polished_diorite_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ diorite_slab[type=double,waterlogged=true] replace polished_diorite_slab
-execute if block ~ ~-1 ~ polished_diorite_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ diorite_slab[type=double,waterlogged=false] replace polished_diorite_slab

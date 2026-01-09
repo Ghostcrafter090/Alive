@@ -1,1 +1,0 @@
-execute as @a run function lifeanddeath:hud/effects/slowness_sub/0

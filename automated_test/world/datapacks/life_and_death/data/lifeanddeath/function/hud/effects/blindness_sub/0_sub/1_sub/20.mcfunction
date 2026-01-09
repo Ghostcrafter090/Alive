@@ -1,1 +1,0 @@
-execute if entity @s[scores={blin_boolean=1..1}] run function lifeanddeath:hud/effects/blindness_sub/0_sub/1_sub/20_sub/0

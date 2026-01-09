@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ mangrove_mosaic_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ mangrove_slab[type=double,waterlogged=true] replace mangrove_mosaic_slab
-execute if block ~ ~-1 ~ mangrove_mosaic_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ mangrove_slab[type=double,waterlogged=false] replace mangrove_mosaic_slab

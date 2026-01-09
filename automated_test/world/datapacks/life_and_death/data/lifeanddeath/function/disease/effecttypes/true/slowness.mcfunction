@@ -1,1 +1,0 @@
-execute as @e[tag=is_alive] run function lifeanddeath:disease/effecttypes/true/slowness_sub/0

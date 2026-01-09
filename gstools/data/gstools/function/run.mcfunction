@@ -24,7 +24,7 @@ scoreboard objectives add death deathCount
 forceload add 0 0 0 0
 execute store result score $worker_count gstoolsWorkerCount if entity @e[tag=gstools_worker,type=marker]
 scoreboard players set $worker_count 1 1
-execute if score $worker_count gstoolsWorkerCount > $worker_count 1 as @e[type=marker,tag=gstools_worker,limit=1,sort=random] run kill @s
+execute if score $worker_count gstoolsWorkerCount > $worker_count 1 as @e[type=marker,tag=gstools_worker] run kill @s
 
 function gstools:util/tps
 execute as @e[tag=gstools_worker,type=marker] unless score @s previousDayNumber = @s dayNumber run function gstools:timed/day
@@ -82,7 +82,9 @@ execute if score @s numberOfCursors > @e[tag=gstools_worker,type=marker,limit=1]
 execute store result score @e[tag=gstools_worker,type=marker] numberOfCursors if entity @e[tag=gstools_cursor,type=marker]
 execute store result score @e[tag=gstools_worker,type=marker] numberOfPlayers if entity @a
 scoreboard players operation @e[tag=gstools_worker,type=marker] numberOfPlayers *= @e[tag=gstools_worker,type=marker] 2
-execute store result score @e[tag=gstools_worker,type=marker] cursorTicSpeed run gamerule randomTickSpeed
+
+scoreboard players set @e[tag=gstools_worker,type=marker] cursorTicSpeed 3
+function gstools:version_conflict/gamerule_0
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s cursorTicSpeed /= @s 3
 execute as @a run scoreboard players operation @s numberOfPlayers *= @e[tag=gstools_worker,type=marker] cursorTicSpeed
 

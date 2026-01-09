@@ -1,1 +1,0 @@
-execute as @e[type=arrow,scores={secondsTillExtinguished=1..},sort=random,limit=1] run function dynamicmonsters:arrow/main_sub/4_sub/0

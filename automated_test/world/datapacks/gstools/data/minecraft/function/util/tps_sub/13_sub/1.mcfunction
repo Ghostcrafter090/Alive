@@ -1,1 +1,0 @@
-execute if score @s blocksPerSecond >= @s 59999968 run function gstools:util/tps_sub/13_sub/1_sub/0

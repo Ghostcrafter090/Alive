@@ -1,1 +1,0 @@
-execute if score @s breathingSoundTic >= @s breathingSoundWorker run function enhancedsurvival:breathing/main_sub/19_sub/0_sub/0_sub/0

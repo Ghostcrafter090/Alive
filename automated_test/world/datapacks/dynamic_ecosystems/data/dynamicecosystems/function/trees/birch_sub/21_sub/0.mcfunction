@@ -1,1 +1,0 @@
-execute as @e[tag=birch_tree_cursor,sort=nearest,limit=1] run function dynamicecosystems:trees/birch_sub/21_sub/0_sub/0

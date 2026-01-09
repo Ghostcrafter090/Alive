@@ -1,2 +1,0 @@
-execute as @e[tag=mangrove_tree_cursor,sort=nearest,limit=1] run function dynamicecosystems:trees/mangrove_sub/26_sub/0_sub/0
-execute if entity @e[tag=mangrove_tree_cursor_to_kill,sort=nearest,limit=1,distance=0..41] run kill @s

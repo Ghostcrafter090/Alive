@@ -1,4 +1,0 @@
-tag @s add boss
-tag @s add fish
-tag @s add overworld
-tag @s add is_alive

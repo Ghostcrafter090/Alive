@@ -1,1 +1,0 @@
-execute as @e[tag=oak_tree_cursor,sort=nearest,limit=1] run function dynamicecosystems:trees/oak_sub/21_sub/0_sub/0

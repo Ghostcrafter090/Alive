@@ -1,1 +1,0 @@
-execute if score @s random100 < @s currentTemperature run function dynamicecosystems:vines/main_sub/3_sub/0

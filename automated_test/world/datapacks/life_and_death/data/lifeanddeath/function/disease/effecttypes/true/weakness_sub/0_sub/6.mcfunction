@@ -1,1 +1,0 @@
-execute if entity @s[scores={weak_boolean=1..1}] run function lifeanddeath:disease/effecttypes/true/weakness_sub/0_sub/6_sub/0

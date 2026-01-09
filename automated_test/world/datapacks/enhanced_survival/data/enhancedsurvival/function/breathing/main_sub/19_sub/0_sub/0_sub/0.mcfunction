@@ -1,2 +1,0 @@
-function enhancedsurvival:breathing/play
-function lifeanddeath:disease/effecttypes/sound/consumption/play

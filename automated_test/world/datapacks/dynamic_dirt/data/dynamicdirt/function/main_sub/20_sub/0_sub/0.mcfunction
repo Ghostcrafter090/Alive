@@ -1,1 +1,0 @@
-execute if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run function dynamicdirt:main_sub/20_sub/0_sub/0_sub/0

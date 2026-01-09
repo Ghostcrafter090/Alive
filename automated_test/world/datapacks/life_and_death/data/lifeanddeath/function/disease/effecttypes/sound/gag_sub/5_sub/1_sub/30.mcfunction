@@ -1,1 +1,0 @@
-execute if entity @s[scores={nau_boolean=1..1}] run function lifeanddeath:disease/effecttypes/sound/gag_sub/5_sub/1_sub/30_sub/0

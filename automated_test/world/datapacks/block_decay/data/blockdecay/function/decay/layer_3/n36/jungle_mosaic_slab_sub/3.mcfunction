@@ -1,2 +1,0 @@
-execute if block ~ ~-1 ~ jungle_mosaic_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ jungle_slab[type=top,waterlogged=true] replace jungle_mosaic_slab
-execute if block ~ ~-1 ~ jungle_mosaic_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ jungle_slab[type=top,waterlogged=false] replace jungle_mosaic_slab

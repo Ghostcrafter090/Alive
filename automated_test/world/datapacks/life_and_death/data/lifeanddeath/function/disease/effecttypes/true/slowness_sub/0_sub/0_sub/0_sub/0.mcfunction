@@ -1,3 +1,0 @@
-execute if entity @s[scores={slow_max_tier=1..1}] if entity @s[scores={diseaseTime=1000..}] run effect give @s slowness 5 0
-execute if entity @s[scores={slow_max_tier=2..2}] run function lifeanddeath:disease/effecttypes/true/slowness_sub/0_sub/0_sub/0_sub/0_sub/1
-execute if entity @s[scores={slow_max_tier=3..}] run function lifeanddeath:disease/effecttypes/true/slowness_sub/0_sub/0_sub/0_sub/0_sub/3

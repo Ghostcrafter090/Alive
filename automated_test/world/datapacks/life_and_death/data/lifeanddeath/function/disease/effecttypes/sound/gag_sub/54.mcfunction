@@ -1,1 +1,0 @@
-execute at @s run function lifeanddeath:disease/effecttypes/sound/gag_sub/54_sub/0

@@ -1,1 +1,0 @@
-execute if block ~ ~ ~ water run function dynamicmonsters:slime/main_sub/6_sub/0_sub/0

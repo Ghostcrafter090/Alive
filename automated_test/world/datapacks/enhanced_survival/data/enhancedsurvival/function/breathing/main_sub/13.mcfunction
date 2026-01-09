@@ -1,2 +1,0 @@
-execute if entity @s[scores={hasDiseaseBoolean=1..1}] if entity @s[scores={random100=41..}] if score @s breathingSoundTic >= @s breathingSoundWorker run function enhancedsurvival:breathing/play
-execute unless entity @s[scores={hasDiseaseBoolean=1..1}] if score @s breathingSoundTic >= @s breathingSoundWorker run function enhancedsurvival:breathing/play

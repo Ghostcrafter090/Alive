@@ -1,1 +1,0 @@
-execute unless entity @e[tag=is_human,distance=0..30] run function dynamicecosystems:trees/dark_oak_sub/6_sub/0_sub/0
