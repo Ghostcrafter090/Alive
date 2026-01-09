@@ -21,6 +21,7 @@ scoreboard objectives add isSereneSeasonsPresent dummy
 scoreboard objectives add death deathCount
 
 # Main
+forceload add 0 0 0 0
 execute store result score $worker_count gstoolsWorkerCount if entity @e[tag=gstools_worker,type=marker]
 scoreboard players set $worker_count 1 1
 execute if score $worker_count gstoolsWorkerCount > $worker_count 1 as @e[type=marker,tag=gstools_worker,limit=1,sort=random] run kill @s
@@ -47,7 +48,6 @@ execute as @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function g
 execute unless entity @e[tag=gstools_worker,type=marker,scores={isSereneSeasonsPresent=1..1}] run scoreboard players set @e[tag=gstools_worker,type=marker] currentSeasonDay 6
 execute unless entity @e[tag=gstools_worker,type=marker,scores={isSereneSeasonsPresent=1..1}] as @a at @s run function gstools:compat/sereneseasons/temperature
 
-forceload add 0 0 0 0
 execute unless entity @e[type=marker,tag=gstools_worker] run summon marker 0 100 0 {Tags:['gstools_worker']}
 execute as @e[type=marker,tag=gstools_worker,tag=!loaded] run function gstools:load
 execute as @e[type=marker,tag=gstools_worker,tag=!loaded] run tag @s add loaded
