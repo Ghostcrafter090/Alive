@@ -1,0 +1,8 @@
+{
+  "values": [
+    "timelib_load_:_private/init",
+    {"id": "#timelib_load_:pre_load", "required": false},
+    {"id": "#timelib_load_:load", "required": false},
+    {"id": "#timelib_load_:post_load", "required": false}
+  ]
+}

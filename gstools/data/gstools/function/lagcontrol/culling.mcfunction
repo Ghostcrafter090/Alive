@@ -1,0 +1,17 @@
+# Define
+scoreboard objectives add cullableEntityCount dummy
+scoreboard objectives add fallingBlockCount dummy
+scoreboard objectives add maxCullableEntityCount dummy
+
+# Main
+execute store result score @e[tag=gstools_worker,type=marker] cullableEntityCount if entity @e[tag=lag_control]
+execute store result score @e[tag=gstools_worker,type=marker] fallingBlockCount if entity @e[type=falling_block]
+execute as @a at @s as @e[tag=lag_control,tag=!player_interacted,distance=0..8] run tag @s add player_interacted
+
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s maxCullableEntityCount = @s averageTps
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s maxCullableEntityCount *= @s 50
+execute if score @e[tag=gstools_worker,type=marker,limit=1] cullableEntityCount > @e[tag=gstools_worker,type=marker,limit=1] maxCullableEntityCount run kill @e[tag=lag_control,limit=20,sort=random,tag=!player_interacted]
+
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s maxCullableEntityCount = @s averageTps
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s maxCullableEntityCount *= @s 5
+execute if score @e[tag=gstools_worker,type=marker,limit=1] fallingBlockCount > @e[tag=gstools_worker,type=marker,limit=1] maxCullableEntityCount run kill @e[type=falling_block,limit=20,sort=random,tag=!player_interacted]

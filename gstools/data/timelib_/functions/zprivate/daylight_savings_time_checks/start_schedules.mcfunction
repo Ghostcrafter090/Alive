@@ -1,0 +1,1 @@
+$schedule function timelib_:zprivate/timer_1d $(NextDayStart)t

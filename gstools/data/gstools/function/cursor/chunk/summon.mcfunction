@@ -1,0 +1,34 @@
+# Define
+scoreboard objectives add chunkListCurrentIndex dummy
+scoreboard objectives add hasSummonedPreCursor dummy
+scoreboard objectives add numberOfUnloadedCursorsSpawned dummy
+scoreboard objectives add maxNumberOfUnloadedCursorsPerChunk dummy
+
+# Main
+scoreboard players set @e[tag=gstools_worker,type=marker,limit=1] hasSummonedPreCursor 0
+
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players set @s maxNumberOfUnloadedCursorsPerChunk 800
+
+execute as @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1] unless score @s numberOfUnloadedCursorsSpawned >= @e[tag=gstools_worker,type=marker,limit=1] maxNumberOfUnloadedCursorsPerChunk if score @s cursorTic < @e[tag=gstools_worker,type=marker,limit=1] cursorTic at @s unless entity @a[distance=0..100] run summon marker ~ 100 ~ {Tags:['gstools_cursor_pre','spread_from_self']}
+execute as @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1] unless score @s numberOfUnloadedCursorsSpawned >= @e[tag=gstools_worker,type=marker,limit=1] maxNumberOfUnloadedCursorsPerChunk if score @s cursorTic < @e[tag=gstools_worker,type=marker,limit=1] cursorTic at @s unless entity @a[distance=0..100] run summon marker ~ 100 ~ {Tags:['gstools_cursor_pre','spread_from_self']}
+execute as @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1] unless score @s numberOfUnloadedCursorsSpawned >= @e[tag=gstools_worker,type=marker,limit=1] maxNumberOfUnloadedCursorsPerChunk if score @s cursorTic < @e[tag=gstools_worker,type=marker,limit=1] cursorTic at @s unless entity @a[distance=0..100] run summon marker ~ 100 ~ {Tags:['gstools_cursor_pre','spread_from_self']}
+execute as @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1] unless score @s numberOfUnloadedCursorsSpawned >= @e[tag=gstools_worker,type=marker,limit=1] maxNumberOfUnloadedCursorsPerChunk if score @s cursorTic < @e[tag=gstools_worker,type=marker,limit=1] cursorTic at @s unless entity @a[distance=0..100] run summon marker ~ 100 ~ {Tags:['gstools_cursor_pre','spread_from_self']}
+execute as @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1] unless score @s numberOfUnloadedCursorsSpawned >= @e[tag=gstools_worker,type=marker,limit=1] maxNumberOfUnloadedCursorsPerChunk if score @s cursorTic < @e[tag=gstools_worker,type=marker,limit=1] cursorTic at @s unless entity @a[distance=0..100] run summon marker ~ 100 ~ {Tags:['gstools_cursor_pre','spread_from_self']}
+
+execute as @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1] if score @s numberOfUnloadedCursorsSpawned < @e[tag=gstools_worker,type=marker,limit=1] maxNumberOfUnloadedCursorsPerChunk if score @s cursorTic < @e[tag=gstools_worker,type=marker,limit=1] cursorTic run scoreboard players set @e[tag=gstools_worker,type=marker,limit=1] hasSummonedPreCursor 1
+execute as @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1] if score @s numberOfUnloadedCursorsSpawned < @e[tag=gstools_worker,type=marker,limit=1] maxNumberOfUnloadedCursorsPerChunk if score @s cursorTic < @e[tag=gstools_worker,type=marker,limit=1] cursorTic run scoreboard players add @s cursorTic 5
+
+execute as @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1] unless score @s numberOfUnloadedCursorsSpawned >= @e[tag=gstools_worker,type=marker,limit=1] maxNumberOfUnloadedCursorsPerChunk run scoreboard players add @s numberOfUnloadedCursorsSpawned 5
+execute as @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1] at @s if entity @e[tag=gstools_worker,scores={simulationDistance=100..100}] if entity @a[distance=..100] run scoreboard players set @s numberOfUnloadedCursorsSpawned 0
+execute as @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1] at @s if entity @e[tag=gstools_worker,scores={simulationDistance=200..200}] if entity @a[distance=..200] run scoreboard players set @s numberOfUnloadedCursorsSpawned 0
+execute as @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1] at @s if entity @e[tag=gstools_worker,scores={simulationDistance=300..300}] if entity @a[distance=..300] run scoreboard players set @s numberOfUnloadedCursorsSpawned 0
+execute as @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1] at @s if entity @e[tag=gstools_worker,scores={simulationDistance=400..400}] if entity @a[distance=..400] run scoreboard players set @s numberOfUnloadedCursorsSpawned 0
+execute as @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1] at @s if entity @e[tag=gstools_worker,scores={simulationDistance=500..500}] if entity @a[distance=..500] run scoreboard players set @s numberOfUnloadedCursorsSpawned 0
+execute as @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1] at @s if entity @e[tag=gstools_worker,scores={simulationDistance=600..600}] if entity @a[distance=..600] run scoreboard players set @s numberOfUnloadedCursorsSpawned 0
+execute as @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1] at @s if entity @e[tag=gstools_worker,scores={simulationDistance=700..700}] if entity @a[distance=..700] run scoreboard players set @s numberOfUnloadedCursorsSpawned 0
+execute as @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1] at @s if entity @e[tag=gstools_worker,scores={simulationDistance=800..800}] if entity @a[distance=..800] run scoreboard players set @s numberOfUnloadedCursorsSpawned 0
+
+scoreboard players add @e[tag=gstools_worker,type=marker] chunkListCurrentIndex 1
+execute if entity @e[tag=gstools_worker,type=marker,scores={chunkListCurrentIndex=..0}] if entity @s[scores={hasSummonedPreCursor=1..1}] run function gstools:cursor/chunk/summon
+execute as @e[tag=gstools_chunk_worker,type=marker] unless entity @s[scores={hasSummonedPreCursor=1..1}] run scoreboard players set @e[tag=gstools_worker,type=marker] chunkListCurrentIndex 10
+execute as @e[tag=gstools_worker,type=marker,scores={chunkListCurrentIndex=1..}] run scoreboard players set @s chunkListCurrentIndex 0

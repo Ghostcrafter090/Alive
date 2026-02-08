@@ -1,0 +1,2 @@
+execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ cobbled_deepslate_stairs replace tuff_stairs
+execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ cobbled_deepslate_slab replace tuff_slab

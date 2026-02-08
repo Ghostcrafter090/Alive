@@ -1,0 +1,2 @@
+execute as @e[sort=random,limit=1,type=silverfish] run effect give @s infested infinite 1
+execute as @e[sort=random,limit=20,type=silverfish] at @s as @e[tag=!tile,distance=0..1] run effect give @s infested 400 1

@@ -1,0 +1,50 @@
+{
+  "lifeanddeath.player.breath": {
+    "category": "master",
+    "sounds": [
+      "player/weaze/breath_0",
+      "player/weaze/breath_1",
+      "player/weaze/breath_2",
+      "player/weaze/breath_3",
+      "player/weaze/breath_4",
+      "player/weaze/breath_5"
+    ],
+    "subtitle": "Laboured Breathing..."
+  },
+  "lifeanddeath.player.cough.light": {
+    "category": "master",
+    "sounds": [
+      "player/cough/light_0",
+      "player/cough/light_1"
+    ]
+  },
+  "lifeanddeath.player.cough.medium": {
+    "category": "master",
+    "sounds": [
+      "player/cough/medium_0",
+      "player/cough/medium_1",
+      "player/cough/medium_2"
+    ]
+  },
+  "lifeanddeath.player.cough.hard": {
+    "category": "master",
+    "sounds": [
+      "player/cough/hard_0",
+      "player/cough/hard_1"
+    ]
+  },
+  "lifeanddeath.player.gag": {
+    "category": "master",
+    "sounds": [
+      "player/gag/gag_0",
+      "player/gag/gag_1"
+    ]
+  },
+  "lifeanddeath.player.vomit": {
+    "category": "master",
+    "sounds": [
+      "player/vomit/vomit_0",
+      "player/vomit/vomit_1"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "dynamicdirt.collapse.crumble": {
+    "category": "master",
+    "sounds": [
+      "crumble_0",
+      "crumble_1",
+      "crumble_2",
+      "crumble_3",
+      "crumble_4",
+      "crumble_5",
+      "crumble_6",
+      "crumble_7",
+      "crumble_8"
+    ],
+    "subtitle": "Earth Crumbling..."
+  }
+}

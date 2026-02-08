@@ -1,0 +1,1 @@
+execute as @a[scores={death=1..}] run scoreboard players set @s death 0

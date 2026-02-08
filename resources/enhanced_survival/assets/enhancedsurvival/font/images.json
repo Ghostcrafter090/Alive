@@ -1,0 +1,186 @@
+{
+    "providers": [
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:empty.png",
+            "ascent": 3,
+            "height": 10,
+            "chars": ["z"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:insomnia/moon_0.png",
+            "ascent": 28,
+            "height": 28,
+            "chars": ["a"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:insomnia/moon_1.png",
+            "ascent": 28,
+            "height": 28,
+            "chars": ["b"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:insomnia/moon_2.png",
+            "ascent": 28,
+            "height": 28,
+            "chars": ["c"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:insomnia/moon_3.png",
+            "ascent": 28,
+            "height": 28,
+            "chars": ["d"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:insomnia/moon_4.png",
+            "ascent": 28,
+            "height": 28,
+            "chars": ["e"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:insomnia/moon_5.png",
+            "ascent": 28,
+            "height": 28,
+            "chars": ["f"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:insomnia/moon_6.png",
+            "ascent": 28,
+            "height": 28,
+            "chars": ["g"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:insomnia/moon_7.png",
+            "ascent": 28,
+            "height": 28,
+            "chars": ["h"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:insomnia/moon_8.png",
+            "ascent": 28,
+            "height": 28,
+            "chars": ["i"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:insomnia/moon_9.png",
+            "ascent": 28,
+            "height": 28,
+            "chars": ["j"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:insomnia/moon_10.png",
+            "ascent": 28,
+            "height": 28,
+            "chars": ["k"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:insomnia/moon_11.png",
+            "ascent": 28,
+            "height": 28,
+            "chars": ["l"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:insomnia/moon_12.png",
+            "ascent": 28,
+            "height": 28,
+            "chars": ["m"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:insomnia/moon_13.png",
+            "ascent": 28,
+            "height": 28,
+            "chars": ["n"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:insomnia/moon_14.png",
+            "ascent": 28,
+            "height": 28,
+            "chars": ["o"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:insomnia/moon_15.png",
+            "ascent": 28,
+            "height": 28,
+            "chars": ["p"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:stamina/option_b/stamina_0.png",
+            "ascent": 3,
+            "height": 10,
+            "chars": ["q"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:stamina/option_b/stamina_1.png",
+            "ascent": 3,
+            "height": 10,
+            "chars": ["r"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:stamina/option_b/stamina_2.png",
+            "ascent": 3,
+            "height": 10,
+            "chars": ["s"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:stamina/option_b/stamina_3.png",
+            "ascent": 3,
+            "height": 10,
+            "chars": ["t"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:stamina/option_b/stamina_4.png",
+            "ascent": 3,
+            "height": 10,
+            "chars": ["u"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:stamina/option_b/stamina_e.png",
+            "ascent": 3,
+            "height": 10,
+            "chars": ["v"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:thirst/thirst_f.png",
+            "ascent": 3,
+            "height": 10,
+            "chars": ["w"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:thirst/thirst_h.png",
+            "ascent": 3,
+            "height": 10,
+            "chars": ["x"]
+        },
+        {
+            "type": "bitmap",
+            "file": "enhancedsurvival:thirst/thirst_e.png",
+            "ascent": 3,
+            "height": 10,
+            "chars": ["y"]
+        }
+    ]
+}

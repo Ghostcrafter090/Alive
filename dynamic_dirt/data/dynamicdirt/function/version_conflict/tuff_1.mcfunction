@@ -1,0 +1,1 @@
+execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ deepslate replace tuff

@@ -1,0 +1,12 @@
+datapack_compile_temp
+curseforge_api.json
+temp_dir
+automated_test
+java
+prior_tests
+prior_tests\*
+libs
+gen_forceload_random
+releases/*.jar
+releases
+prior_tests
