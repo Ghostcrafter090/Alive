@@ -120,6 +120,6 @@ Writing Output: C:\Users\joshp\curseforge\minecraft\Instances\test\saves\Desire 
   assets/enhanced_survival/
   assets/enhanced_survival/lang/
   assets/enhanced_survival/lang/en_us.json
-  dynamic_monsters/
-  dynamic_monsters/DynamicMonstersMod.class
+  life_and_death/
+  life_and_death/LifeAndDeathMod.class
   pack.mcmeta
