@@ -75,3 +75,10 @@ execute as @e[type=wither,scores={currentWitherSizeAttribute=479..489}] run attr
 execute as @e[type=wither,scores={currentWitherSizeAttribute=489..499}] run attribute @s scale base set 4.9
 execute as @e[type=wither,scores={currentWitherSizeAttribute=500..}] run attribute @s scale base set 5
 
+execute as @e[type=wither_skull,tag=!splitoff] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=100..},distance=0..10] run summon wither_skull ^ ^ ^1 {Tags:['wither_not_setup','splitoff'],Motion:[0.0,-1.0,0.0]}
+execute as @e[type=wither_skull,tag=splitoff,tag=wither_not_setup] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=100..},distance=0..10] run data modify entity @s Motion set from entity @e[type=wither_skull,tag=!splitoff,sort=nearest,limit=1] Motion
+execute as @e[type=wither_skull,tag=splitoff,tag=wither_not_setup] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=100..},distance=0..10] run data modify entity @s dangerous set from entity @e[type=wither_skull,tag=!splitoff,sort=nearest,limit=1] dangerous
+execute as @e[type=wither_skull,tag=splitoff,tag=wither_not_setup] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=100..},distance=0..10] run tag @s remove wither_not_setup
+execute as @e[type=wither_skull,tag=!splitoff] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=100..},distance=0..10] run tag @s add splitoff
+
+ 
