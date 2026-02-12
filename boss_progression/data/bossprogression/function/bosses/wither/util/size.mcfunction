@@ -22,7 +22,7 @@ execute as @e[type=wither,scores={currentWitherHealth=100..}] run scoreboard pla
 execute as @e[type=wither] run scoreboard players remove @s currentWitherSize 13
 
 execute as @e[type=wither,scores={currentWitherSize=..21840}] run scoreboard players set @s currentWitherSize 21840
-execute as @e[type=wither,scores={currentWitherSize=156000..}] run scoreboard players set @s currentWitherSize 156000
+execute as @e[type=wither,scores={currentWitherSize=140400..}] run scoreboard players set @s currentWitherSize 140400
 
 execute as @e[type=wither,tag=!wither_size_setup] run scoreboard players set @s currentWitherSize 31200
 execute as @e[type=wither,tag=!wither_size_setup] run tag @s add wither_size_setup
@@ -88,6 +88,20 @@ execute as @e[type=wither_skull,tag=splitoff_1,tag=wither_not_setup] at @s if en
 execute as @e[type=wither_skull,tag=splitoff_1,tag=wither_not_setup] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=200..},distance=0..10] run data modify entity @s dangerous set from entity @e[type=wither_skull,tag=splitoff,tag=!splitoff_1,sort=nearest,limit=1] dangerous
 execute as @e[type=wither_skull,tag=splitoff_1,tag=wither_not_setup] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=200..},distance=0..10] run tag @s remove wither_not_setup
 execute as @e[type=wither_skull,tag=splitoff,tag=!splitoff_1] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=200..},distance=0..10] run tag @s add splitoff_1
+
+execute as @e[type=wither_skull,tag=splitoff_1,tag=!splitoff_2] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=300..},distance=0..10] run summon wither_skull ^ ^ ^1 {Tags:['wither_not_setup','splitoff_2','splitoff_1'],Motion:[0.0,-1.0,0.0]}
+execute as @e[type=wither_skull,tag=splitoff_2,tag=wither_not_setup] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=300..},distance=0..10] run data modify entity @s Motion set from entity @e[type=wither_skull,tag=splitoff_1,tag=!splitoff_2,sort=nearest,limit=1] Motion
+execute as @e[type=wither_skull,tag=splitoff_2,tag=wither_not_setup] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=300..},distance=0..10] run data modify entity @s Motion[1] set value -1
+execute as @e[type=wither_skull,tag=splitoff_2,tag=wither_not_setup] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=300..},distance=0..10] run data modify entity @s dangerous set from entity @e[type=wither_skull,tag=splitoff_1,tag=!splitoff_2,sort=nearest,limit=1] dangerous
+execute as @e[type=wither_skull,tag=splitoff_2,tag=wither_not_setup] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=300..},distance=0..10] run tag @s remove wither_not_setup
+execute as @e[type=wither_skull,tag=splitoff_1,tag=!splitoff_2] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=300..},distance=0..10] run tag @s add splitoff_2
+
+execute as @e[type=wither_skull,tag=splitoff_2,tag=!splitoff_3] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=400..},distance=0..10] run summon wither_skull ^ ^ ^1 {Tags:['wither_not_setup','splitoff_3','splitoff_2'],Motion:[0.0,-1.0,0.0]}
+execute as @e[type=wither_skull,tag=splitoff_3,tag=wither_not_setup] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=400..},distance=0..10] run data modify entity @s Motion set from entity @e[type=wither_skull,tag=splitoff_2,tag=!splitoff_3,sort=nearest,limit=1] Motion
+execute as @e[type=wither_skull,tag=splitoff_3,tag=wither_not_setup] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=400..},distance=0..10] run data modify entity @s Motion[1] set value -1
+execute as @e[type=wither_skull,tag=splitoff_3,tag=wither_not_setup] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=400..},distance=0..10] run data modify entity @s dangerous set from entity @e[type=wither_skull,tag=splitoff_2,tag=!splitoff_3,sort=nearest,limit=1] dangerous
+execute as @e[type=wither_skull,tag=splitoff_3,tag=wither_not_setup] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=400..},distance=0..10] run tag @s remove wither_not_setup
+execute as @e[type=wither_skull,tag=splitoff_2,tag=!splitoff_3] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=400..},distance=0..10] run tag @s add splitoff_3
 
 execute as @e[type=wither,scores={currentWitherSizeAttribute=200..}] at @s as @e[tag=fish,distance=0..40] run effect give @s wither 10 0
 execute as @e[type=wither,scores={currentWitherSizeAttribute=200..}] at @s as @e[tag=fish,distance=0..20] run effect give @s wither 10 1
