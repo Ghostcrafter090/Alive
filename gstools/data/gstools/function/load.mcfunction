@@ -73,6 +73,7 @@ scoreboard objectives add 201 dummy
 scoreboard objectives add 250 dummy
 scoreboard objectives add 256 dummy
 scoreboard objectives add 300 dummy
+scoreboard objectives add 312 dummy
 scoreboard objectives add 500 dummy
 scoreboard objectives add 1000 dummy
 scoreboard objectives add 1001 dummy
@@ -129,6 +130,8 @@ scoreboard players set @e[tag=gstools_worker,type=marker] 201 201
 scoreboard players set @e[tag=gstools_worker,type=marker] 250 250
 scoreboard players set @e[tag=gstools_worker,type=marker] 256 256
 scoreboard players set @e[tag=gstools_worker,type=marker] 300 300
+
+scoreboard players set @e[tag=gstools_worker,type=marker] 312 312
 scoreboard players set @e[tag=gstools_worker,type=marker] 500 500
 scoreboard players set @e[tag=gstools_worker,type=marker] 1000 1000
 scoreboard players set @e[tag=gstools_worker,type=marker] 1001 1001
@@ -140,6 +143,7 @@ scoreboard players set @e[tag=gstools_worker,type=marker] 10001 10001
 scoreboard players set @e[tag=gstools_worker,type=marker] 16000 16000
 scoreboard players set @e[tag=gstools_worker,type=marker] 24000 24000
 scoreboard players set @e[tag=gstools_worker,type=marker] 31459 31459
+
 scoreboard players set @e[tag=gstools_worker,type=marker] 100000 100000
 scoreboard players set @e[tag=gstools_worker,type=marker] 100001 100001
 scoreboard players set @e[tag=gstools_worker,type=marker] 256000 256000
