@@ -88,3 +88,7 @@ execute as @e[type=wither_skull,tag=splitoff_1,tag=wither_not_setup] at @s if en
 execute as @e[type=wither_skull,tag=splitoff_1,tag=wither_not_setup] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=200..},distance=0..10] run data modify entity @s dangerous set from entity @e[type=wither_skull,tag=splitoff,tag=!splitoff_1,sort=nearest,limit=1] dangerous
 execute as @e[type=wither_skull,tag=splitoff_1,tag=wither_not_setup] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=200..},distance=0..10] run tag @s remove wither_not_setup
 execute as @e[type=wither_skull,tag=splitoff,tag=!splitoff_1] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=200..},distance=0..10] run tag @s add splitoff_1
+
+execute as @e[type=wither,scores={currentWitherSizeAttribute=200..}] at @s as @e[tag=fish,distance=0..40] run effect give @s wither 10 0
+execute as @e[type=wither,scores={currentWitherSizeAttribute=200..}] at @s as @e[tag=fish,distance=0..20] run effect give @s wither 10 1
+execute as @e[type=wither,scores={currentWitherSizeAttribute=200..}] at @s as @e[tag=fish,distance=0..10] run effect give @s wither 10 2
