@@ -46,3 +46,10 @@ scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicDynamic
 execute as @e[tag=gstools_worker,type=marker,scores={globalTicDynamicMonsters=20..}] run scoreboard players set @s doRunDynamicMonsters 1
 execute as @e[tag=gstools_worker,type=marker,scores={globalTicDynamicMonsters=..19}] run scoreboard players set @s doRunDynamicMonsters 0
 execute as @e[tag=gstools_worker,type=marker,scores={globalTicDynamicMonsters=20..}] run scoreboard players set @s globalTicDynamicMonsters 0
+
+scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA = @e[tag=gstools_worker,type=marker] averageTpsBossProgression
+function gstools:extension/dorunmath
+scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicBossProgression += @e[tag=gstools_worker,type=marker] globalTicWorkerA
+execute as @e[tag=gstools_worker,type=marker,scores={globalTicBossProgression=20..}] run scoreboard players set @s doRunBossProgression 1
+execute as @e[tag=gstools_worker,type=marker,scores={globalTicBossProgression=..19}] run scoreboard players set @s doRunBossProgression 0
+execute as @e[tag=gstools_worker,type=marker,scores={globalTicBossProgression=20..}] run scoreboard players set @s globalTicBossProgression 0
