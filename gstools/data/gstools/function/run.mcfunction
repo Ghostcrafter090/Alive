@@ -64,6 +64,7 @@ execute as @e[tag=gstools_worker,type=marker,scores={gameTime=0..10}] run scoreb
 execute as @e[tag=gstools_worker,type=marker,scores={gameTime=0..10}] run scoreboard players set @s averageTpsDynamicEcosystemsWorkerMultTen 400
 execute as @e[tag=gstools_worker,type=marker,scores={gameTime=0..10}] run scoreboard players set @s averageTpsEnhancedSurvivalWorkerMultTen 400
 execute as @e[tag=gstools_worker,type=marker,scores={gameTime=0..10}] run scoreboard players set @s averageTpsLifeAndDeathWorkerMultTen 400
+execute as @e[tag=gstools_worker,type=marker,scores={gameTime=0..10}] run scoreboard players set @s averageTpsLifeAndDeathWorkerMultTen 400
 
 execute if entity @e[type=marker,tag=gstools_worker,scores={ticSecond=5..5}] run schedule function gstools:extension/randomize 1t append
 
@@ -147,6 +148,7 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicEcosyste
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBlockDecay=1..1}] run schedule function gstools:extension/blockdecay/run 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicMonsters=1..1}] run schedule function gstools:extension/dynamicmonsters/run 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunLifeAndDeath=1..1}] run schedule function gstools:extension/lifeanddeath/run 1t append
+execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBossProgression=1..1}] run schedule function gstools:extension/bossprogresion/run 1t append
 
 execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=10..}] run function enhancedsurvival:main
 
