@@ -1,0 +1,7 @@
+# Define
+
+# Main
+execute as @e[type=wind_charge] at @s if block ~ ~ ~ wither_rose if block ~ ~-1 ~ netherrack if block ~1 ~ ~ black_candle[lit=true] if block ~-1 ~ ~ black_candle[lit=true] if block ~ ~ ~1 black_candle[lit=true] if block ~ ~ ~-1 black_candle[lit=true] if entity @e[type=item,nbt={Item:{id:"minecraft:blaze_powder"}},distance=0..1] if entity @e[type=item,nbt={Item:{id:"minecraft:totem_of_undying",components:{"minecraft:enchantment_glint_override":true}}},distance=0..1] if entity @e[type=item,nbt={Item:{id:"minecraft:heart_of_the_sea",components:{"minecraft:enchantment_glint_override":true}}},distance=0..1] run tag @s add wither_spell
+execute as @e[type=wind_charge] at @s if block ~ ~ ~ wither_rose if block ~ ~-1 ~ netherrack if block ~1 ~ ~ black_candle[lit=true] if block ~-1 ~ ~ black_candle[lit=true] if block ~ ~ ~1 black_candle[lit=true] if block ~ ~ ~-1 black_candle[lit=true] if entity @e[type=item,nbt={Item:{id:"minecraft:blaze_powder"}},distance=0..1] if entity @e[type=item,nbt={id:"minecraft:totem_of_undying",tag:{Enchantments:[{id:"minecraft:flame",lvl:1s}]}},distance=0..1] if entity @e[type=item,nbt={id:"minecraft:heart_of_the_sea",tag:{Enchantments:[{id:"minecraft:flame",lvl:1s}]}},distance=0..1] run tag @s add wither_spell
+
+execute as @e[tag=wither_spell] run say hi
