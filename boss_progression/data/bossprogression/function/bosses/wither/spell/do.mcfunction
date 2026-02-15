@@ -1,7 +1,7 @@
 # Define
 
 # Main
-scoreboard players add @s witherSpellTic 1
+scoreboard players add @s witherSpellTic 3
 
 particle flame ~ ~ ~ 1 100 1 0 100 force
 playsound minecraft:ambient.crimson_forest.mood master @a ~ ~ ~ 10 1
