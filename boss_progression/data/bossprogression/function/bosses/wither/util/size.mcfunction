@@ -104,3 +104,14 @@ execute as @e[type=wither,scores={currentWitherSizeAttribute=200..}] at @s as @e
 execute as @e[type=wither,scores={currentWitherSizeAttribute=200..}] at @s as @e[tag=fish,distance=0..40] run effect give @s wither 10 1
 execute as @e[type=wither,scores={currentWitherSizeAttribute=200..}] at @s as @e[tag=fish,distance=0..30] run effect give @s wither 10 2
 execute as @e[type=wither,scores={currentWitherSizeAttribute=200..}] at @s as @e[tag=fish,distance=0..20] run tp @s ~ ~-500 ~
+
+execute as @e[type=item,tag=!wither_item_searched] if entity @s[nbt={Item:{id:"minecraft:nether_star"}}] run data merge entity @s {Invulnerable:1b}
+execute as @e[type=item,tag=!wither_item_searched] if entity @s[nbt={Item:{id:"minecraft:tropical_fish"}}] run tag @s add wither_killable
+execute as @e[type=item,tag=!wither_item_searched] if entity @s[nbt={Item:{id:"minecraft:cod"}}] run tag @s add wither_killable
+execute as @e[type=item,tag=!wither_item_searched] if entity @s[nbt={Item:{id:"minecraft:salmon"}}] run tag @s add wither_killable
+execute as @e[type=item,tag=!wither_item_searched] if entity @s[nbt={Item:{id:"minecraft:pufferfish"}}] run tag @s add wither_killable
+execute as @e[type=item,tag=!wither_item_searched] if entity @s[nbt={Item:{id:"minecraft:ink_sac"}}] run tag @s add wither_killable
+execute as @e[type=item,tag=!wither_item_searched] if entity @s[nbt={Item:{id:"minecraft:kelp"}}] run tag @s add wither_killable
+execute as @e[type=item,tag=!wither_item_searched] run tag @s add wither_item_searched
+
+execute as @e[type=wither] at @s as @e[tag=wither_killable,type=item,distance=0..100] run kill @s 
