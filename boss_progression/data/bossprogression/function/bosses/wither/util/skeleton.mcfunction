@@ -18,15 +18,15 @@ execute as @e[type=skeleton,scores={skeletonWitherConversionTime=900..}] run tag
 
 execute as @e[type=skeleton,tag=skeleton_wither_convert] at @s run summon wither_skeleton ~ ~ ~ {Tags:['skeleton_conversion']}
 execute as @e[type=skeleton,tag=skeleton_wither_convert] at @s run tp @s ~ -70 ~
-execute as @e[tag=skeleton_conversion,type=wither_skeleton] at @s positioned ~ -70 ~ run data modify entity @s {} set from entity @e[type=skeleton,tag=skeleton_wither_convert,sort=nearest,limit=1] {}
+execute as @e[tag=skeleton_conversion,type=wither_skeleton] at @s positioned ~ -70 ~ run data modify entity @s equipment set from entity @e[type=skeleton,tag=skeleton_wither_convert,sort=nearest,limit=1] equipment
 execute as @e[tag=skeleton_conversion,type=wither_skeleton] run tag @s remove skeleton_conversion
 execute as @e[type=skeleton,tag=skeleton_wither_convert] run kill @s
 
 execute as @e[type=skeleton,scores={skeletonWitherConversionTime=800..}] at @s run particle smoke ~ ~ ~ 1 1 1 0 3
-execute as @e[type=skeleton,scores={skeletonWitherConversionTime=700..}] run particle smoke ~ ~ ~ 1 1 1 0 3
-execute as @e[type=skeleton,scores={skeletonWitherConversionTime=600..}] run particle smoke ~ ~ ~ 1 1 1 0 3
-execute as @e[type=skeleton,scores={skeletonWitherConversionTime=500..}] run particle smoke ~ ~ ~ 1 1 1 0 3
-execute as @e[type=skeleton,scores={skeletonWitherConversionTime=400..}] run particle smoke ~ ~ ~ 1 1 1 0 3
-execute as @e[type=skeleton,scores={skeletonWitherConversionTime=300..}] run particle smoke ~ ~ ~ 1 1 1 0 3
-execute as @e[type=skeleton,scores={skeletonWitherConversionTime=200..}] run particle smoke ~ ~ ~ 1 1 1 0 3
-execute as @e[type=skeleton,scores={skeletonWitherConversionTime=100..}] run particle smoke ~ ~ ~ 1 1 1 0 3
+execute as @e[type=skeleton,scores={skeletonWitherConversionTime=700..}] at @s run particle smoke ~ ~ ~ 1 1 1 0 3
+execute as @e[type=skeleton,scores={skeletonWitherConversionTime=600..}] at @s run particle smoke ~ ~ ~ 1 1 1 0 3
+execute as @e[type=skeleton,scores={skeletonWitherConversionTime=500..}] at @s run particle smoke ~ ~ ~ 1 1 1 0 3
+execute as @e[type=skeleton,scores={skeletonWitherConversionTime=400..}] at @s run particle smoke ~ ~ ~ 1 1 1 0 3
+execute as @e[type=skeleton,scores={skeletonWitherConversionTime=300..}] at @s run particle smoke ~ ~ ~ 1 1 1 0 3
+execute as @e[type=skeleton,scores={skeletonWitherConversionTime=200..}] at @s run particle smoke ~ ~ ~ 1 1 1 0 3
+execute as @e[type=skeleton,scores={skeletonWitherConversionTime=100..}] at @s run particle smoke ~ ~ ~ 1 1 1 0 3
