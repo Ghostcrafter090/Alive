@@ -23,7 +23,7 @@ execute as @e[type=wither,scores={currentWitherHealth=100..}] run scoreboard pla
 execute as @e[type=wither] run scoreboard players remove @s currentWitherSize 13
 
 execute as @e[type=wither,scores={currentWitherSize=..21840}] run scoreboard players set @s currentWitherSize 21840
-execute as @e[type=wither,scores={currentWitherSize=140400..}] run scoreboard players set @s currentWitherSize 140400
+execute as @e[type=wither,scores={currentWitherSize=127920..}] run scoreboard players set @s currentWitherSize 127920
 
 execute as @e[type=wither,tag=!wither_size_setup] run scoreboard players set @s currentWitherSize 31200
 execute as @e[type=wither,tag=!wither_size_setup] run tag @s add wither_size_setup
