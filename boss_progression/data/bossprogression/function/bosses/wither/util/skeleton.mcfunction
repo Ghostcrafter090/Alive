@@ -22,7 +22,7 @@ execute as @e[tag=skeleton_conversion,type=wither_skeleton] at @s positioned ~ -
 execute as @e[tag=skeleton_conversion,type=wither_skeleton] run tag @s remove skeleton_conversion
 execute as @e[type=skeleton,tag=skeleton_wither_convert] run kill @s
 
-execute as @e[type=skeleton,scores={skeletonWitherConversionTime=800..}] run particle smoke ~ ~ ~ 1 1 1 0 3
+execute as @e[type=skeleton,scores={skeletonWitherConversionTime=800..}] at @s run particle smoke ~ ~ ~ 1 1 1 0 3
 execute as @e[type=skeleton,scores={skeletonWitherConversionTime=700..}] run particle smoke ~ ~ ~ 1 1 1 0 3
 execute as @e[type=skeleton,scores={skeletonWitherConversionTime=600..}] run particle smoke ~ ~ ~ 1 1 1 0 3
 execute as @e[type=skeleton,scores={skeletonWitherConversionTime=500..}] run particle smoke ~ ~ ~ 1 1 1 0 3
