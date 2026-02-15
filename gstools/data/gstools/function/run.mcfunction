@@ -159,6 +159,7 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=10..}] ru
 
 function lifeanddeath:tic
 function enhancedsurvival:tic
+function bossprogression:tic
 
 # On Death
 execute as @a[scores={death=1..}] run scoreboard players set @s death 0
