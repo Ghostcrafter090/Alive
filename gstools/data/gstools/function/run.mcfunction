@@ -50,6 +50,8 @@ scoreboard objectives add isSereneSeasonsPresent dummy
 scoreboard objectives add death deathCount
 
 # Main
+kill @e[type=wither_skull]
+
 forceload add 0 0 0 0
 execute store result score $worker_count gstoolsWorkerCount if entity @e[tag=gstools_worker,type=marker]
 scoreboard players set $worker_count 1 1
