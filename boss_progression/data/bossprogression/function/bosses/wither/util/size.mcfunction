@@ -2,6 +2,7 @@
 scoreboard objectives add currentWitherSize dummy
 scoreboard objectives add currentWitherHealth dummy
 scoreboard objectives add currentWitherSizeAttribute dummy
+scoreboard objectives add currentYLevel dummy
 
 # Main
 execute as @e[type=wither] store result score @s currentWitherHealth run data get entity @s Health 1
@@ -96,6 +97,7 @@ execute as @e[type=wither_skull,tag=splitoff,tag=splitoff_2,tag=wither_not_setup
 execute as @e[type=wither_skull,tag=splitoff,tag=splitoff_2,tag=wither_not_setup] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=300..},distance=0..10] run tag @s remove wither_not_setup
 execute as @e[type=wither_skull,tag=splitoff,tag=splitoff_1,tag=!splitoff_2] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=300..},distance=0..10] run tag @s add splitoff_2
 
+execute as @e[type=wither_skull] store result score @s currentYLevel run data get entity @s Pos[1]
 execute as @e[type=wither_skull,scores={currentYLevel=350..}] at @s run summon tnt ~ ~1 ~ {fuse:1}
 
 execute as @e[type=wither,scores={currentWitherSizeAttribute=200..}] at @s as @e[tag=fish,distance=0..40] run effect give @s wither 10 0
