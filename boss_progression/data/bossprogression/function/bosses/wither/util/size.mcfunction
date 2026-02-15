@@ -98,7 +98,7 @@ execute as @e[type=wither_skull,tag=splitoff,tag=splitoff_2,tag=wither_not_setup
 execute as @e[type=wither_skull,tag=splitoff,tag=splitoff_1,tag=!splitoff_2] at @s if entity @e[type=wither,scores={currentWitherSizeAttribute=300..},distance=0..10] run tag @s add splitoff_2
 
 # execute as @e[type=wither_skull] store result score @s currentYLevel run data get entity @s Pos[1]
-execute as @e[type=wither_skull] at @s unless entity @e[type=wither,distance=..75] positioned ~ ~1 ~ run summon tnt ^ ^ ^1 {fuse:1}
+execute as @e[type=wither_skull] at @s unless entity @e[type=wither,distance=..75] unless entity @e[type=tnt,distance=0..10] run summon tnt ~ ~1 ~ {fuse:1}
 
 execute as @e[type=wither,scores={currentWitherSizeAttribute=200..}] at @s as @e[tag=fish,distance=0..40] run effect give @s wither 10 0
 execute as @e[type=wither,scores={currentWitherSizeAttribute=200..}] at @s as @e[tag=fish,distance=0..20] run effect give @s wither 10 1
