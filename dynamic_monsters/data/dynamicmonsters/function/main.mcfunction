@@ -10,3 +10,4 @@ function dynamicmonsters:slime/main
 function dynamicmonsters:phantoms/main
 function dynamicmonsters:cold_blood/main
 function dynamicmonsters:arrow/main
+function dynamicmonsters:blaze/main
