@@ -24,3 +24,5 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseH
 execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] as @e[type=fireball] at @s if block ~ ~ ~-1 obsidian run fill ~ ~ ~-1 ~ ~ ~-1 lava replace obsidian
 execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] as @e[type=fireball] at @s if block ~ ~1 ~ obsidian run fill ~ ~1 ~ ~ ~1 ~ lava replace obsidian
 execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] as @e[type=fireball] at @s if block ~ ~-1 ~ obsidian run fill ~ ~-1 ~ ~ ~-1 ~ lava replace obsidian
+
+execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] as @a at @s run particle flame ~ ~ ~ 50 50 50 0 30
