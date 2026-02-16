@@ -16,3 +16,11 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseH
 execute as @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1},tag=!current_wither_temperature_add] if entity @e[scores={timeOfDay=..1000}] run scoreboard players add @s currentTemperatureWitherModif 1
 execute as @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1},tag=!current_wither_temperature_add] if entity @e[scores={timeOfDay=..1000}] run tag @s add current_wither_temperature_add
 execute as @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1},tag=!current_wither_temperature_add] unless entity @e[scores={timeOfDay=..1000}] run tag @s remove current_wither_temperature_add
+
+execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] as @e[type=fireball] at @s if block ~ ~ ~ water run fill ~ ~ ~ ~ ~ ~ lava replace water
+execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] as @e[type=fireball] at @s if block ~1 ~ ~ obsidian run fill ~1 ~ ~ ~1 ~ ~ lava replace obsidian
+execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] as @e[type=fireball] at @s if block ~-1 ~ ~ obsidian run fill ~-1 ~ ~ ~-1 ~ ~ lava replace obsidian
+execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] as @e[type=fireball] at @s if block ~ ~ ~1 obsidian run fill ~ ~ ~1 ~ ~ ~1 lava replace obsidian
+execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] as @e[type=fireball] at @s if block ~ ~ ~-1 obsidian run fill ~ ~ ~-1 ~ ~ ~-1 lava replace obsidian
+execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] as @e[type=fireball] at @s if block ~ ~1 ~ obsidian run fill ~ ~1 ~ ~ ~1 ~ lava replace obsidian
+execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] as @e[type=fireball] at @s if block ~ ~-1 ~ obsidian run fill ~ ~-1 ~ ~ ~-1 ~ lava replace obsidian
