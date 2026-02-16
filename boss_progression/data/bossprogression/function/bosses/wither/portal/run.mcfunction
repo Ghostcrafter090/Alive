@@ -12,7 +12,7 @@ execute as @e[tag=attack_portal_node,tag=portal_generated,limit=1,sort=random,sc
 execute as @e[tag=attack_portal_node,tag=portal_generated,limit=1,sort=random,scores={attackPortalSpawnTic=900..}] if entity @s[scores={random100=90..95}] if entity @e[tag=gstools_worker,type=marker,limit=1,scores={numberOfOverworldNetherMobs=..65}] at @s run summon piglin_brute ~1 ~ ~2
 execute as @e[tag=attack_portal_node,tag=portal_generated,limit=1,sort=random,scores={attackPortalSpawnTic=900..}] if entity @s[scores={random100=95..}] if entity @e[tag=gstools_worker,type=marker,limit=1,scores={numberOfOverworldNetherMobs=..65}] at @s run summon ghast ~ ~10 ~
 execute as @e[tag=attack_portal_node,tag=portal_generated,limit=1,sort=random,scores={attackPortalSpawnTic=900..}] if entity @e[tag=gstools_worker,type=marker,limit=1,scores={numberOfOverworldNetherMobs=..65}] run function gstools:util/random
-execute as @e[tag=attack_portal_node,tag=portal_generated,limit=1,sort=random,scores={attackPortalSpawnTic=900..}] if entity @e[tag=gstools_worker,type=marker,limit=1,scores={numberOfOverworldNetherMobs=..65}] if entity @s[scores={random100=..75}] run scoreboard players set @s attackPortalSpawnTic 898
+execute as @e[tag=attack_portal_node,tag=portal_generated,limit=1,sort=random,scores={attackPortalSpawnTic=900..}] if entity @e[tag=gstools_worker,type=marker,limit=1,scores={numberOfOverworldNetherMobs=..65}] if entity @s[scores={random100=..85}] run scoreboard players set @s attackPortalSpawnTic 898
 execute as @e[tag=attack_portal_node,tag=portal_generated,limit=1,sort=random,scores={attackPortalSpawnTic=900..}] run scoreboard players set @s attackPortalSpawnTic 0
 
 scoreboard players set @e[tag=gstools_worker,type=marker,limit=1] numberOfOverworldNetherMobs 0

@@ -1,6 +1,7 @@
 # Define
 scoreboard objectives add desirePathsLoaded dummy
 scoreboard objectives add dynamicDirtLoaded dummy
+scoreboard objectives add bossProgressionLoaded dummy
 scoreboard objectives add dynamicMonstersLoaded dummy
 scoreboard objectives add lifeAndDeathLoaded dummy
 scoreboard objectives add enhancedSurvivalLoaded dummy
@@ -153,6 +154,7 @@ scoreboard players set @e[tag=gstools_worker,type=marker] 10000000 10000000
 scoreboard players set @e[tag=gstools_worker,type=marker] 59999968 59999968
 
 scoreboard players set @e[tag=gstools_worker,type=marker] desirePathsLoaded 0
+scoreboard players set @e[tag=gstools_worker,type=marker] bossProgressionLoaded 0
 scoreboard players set @e[tag=gstools_worker,type=marker] dynamicDirtLoaded 0
 scoreboard players set @e[tag=gstools_worker,type=marker] dynamicMonstersLoaded 0
 scoreboard players set @e[tag=gstools_worker,type=marker] lifeAndDeathLoaded 0
@@ -196,6 +198,7 @@ say "[GSTOOLS] | GSTools is active. Mod loaded successfully. Loading present dau
 # Run
 function desirepaths:load
 function dynamicdirt:load
+function bossprogression:load
 function dynamicmonsters:load
 function lifeanddeath:load
 function enhancedsurvival:load
