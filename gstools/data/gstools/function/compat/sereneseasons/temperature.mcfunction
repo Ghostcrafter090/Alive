@@ -142,5 +142,5 @@ scoreboard players operation @s currentTemperature += @s dayCycleTemperature
 scoreboard players operation @s currentTemperature += @s seasonalTemperature
 scoreboard players operation @s currentTemperature += @s altitudeTemperature
 
-execute as @e[type=marker,tag=gstools_worker,limit=1,scores={bossPr}] if entity @s[scores={enchantedWitherRoseHasBeenSpawned=1..1}] unless entity @s[scores={witherHasBeenKilled=1..1}] run scoreboard players operation @s currentTemperature += @s currentTemperatureWitherModif
+execute as @e[type=marker,tag=gstools_worker,limit=1,scores={bossProgressionLoaded=1..1}] if entity @s[scores={enchantedWitherRoseHasBeenSpawned=1..1}] unless entity @s[scores={witherHasBeenKilled=1..1}] run scoreboard players operation @s currentTemperature += @s currentTemperatureWitherModif
 
