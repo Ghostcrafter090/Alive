@@ -22,5 +22,5 @@ execute as @e[type=marker,tag=attack_portal_node,tag=portal_generated] at @s unl
 
 execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal] run scoreboard players add @s attackPortalDeleteTic 1
 execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=..300}] at @s run particle reverse_portal ~1.5 ~2 ~ 0 0 0 1 100 normal @a
-execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=300..}] run summon fireball ~1.5 ~2 ~ {ExplosionPower:8,Motion:[0,-5,0]}
+execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=300..}] run summon fireball ~1.5 ~10 ~ {ExplosionPower:8,Motion:[0,-5,0]}
 execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=300..}] run kill @s
