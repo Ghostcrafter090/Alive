@@ -1,4 +1,5 @@
 # Define
+scoreboard objectives add witherHasBeenKilled dummy
 
 # Main
 function bossprogression:bosses/wither/util/toggle
