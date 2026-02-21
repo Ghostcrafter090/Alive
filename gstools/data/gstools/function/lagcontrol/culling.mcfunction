@@ -16,5 +16,5 @@ execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s maxCullableEntityCount *= @s 5
 execute if score @e[tag=gstools_worker,type=marker,limit=1] fallingBlockCount > @e[tag=gstools_worker,type=marker,limit=1] maxCullableEntityCount run kill @e[type=falling_block,limit=20,sort=random,tag=!player_interacted]
 
-execute as @e[type=magma_cube,sort=random,limit=10] store result score @s magmaCubeCountNearby at @s if entity @e[type=magma_cube,distance=0..10]
-execute as @e[type=magma_cube,sort=random,limit=10,scores={magmaCubeCountNearby=15..}] run effect give @s wither 3 2 true
+execute as @e[type=magma_cube,sort=random,limit=20] store result score @s magmaCubeCountNearby at @s if entity @e[type=magma_cube,distance=0..10]
+execute as @e[type=magma_cube,sort=random,limit=10,scores={magmaCubeCountNearby=20..}] run effect give @s wither 3 2 true
