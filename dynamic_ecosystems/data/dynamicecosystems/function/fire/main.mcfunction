@@ -14,10 +14,9 @@ scoreboard players operation @s autoIgnitionChance *= @e[tag=gstools_worker,type
 
 function gstools:util/random
 
-execute if score @s random100 < @s smokeChance at @s run particle smoke ~ ~ ~ 10 10 10 0 30
-execute if score @s random100 < @s autoIgnitionChance at @s run particle large_smoke ~ ~ ~ 3 3 3 0 10
+execute if score @s random100 < @s smokeChance at @s run particle smoke ~ ~ ~ 10 10 10 0 100
+execute if score @s random100 < @s autoIgnitionChance at @s run particle large_smoke ~ ~ ~ 3 3 3 0 50
 execute if score @s random100 < @s autoIgnitionChance at @s run fill ~ ~ ~ ~ ~ ~ fire replace #gstools:air
-
 
 
 

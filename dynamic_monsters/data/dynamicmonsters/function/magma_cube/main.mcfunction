@@ -2,6 +2,7 @@
 scoreboard objectives add magmaCubeUpdateTic dummy
 scoreboard objectives add magmaCubeSize dummy
 scoreboard objectives add magmaCubeSizeNegationWorker dummy
+scoreboard objectives add magmaCubeCountNearby dummy
 
 # Main
 execute as @e[type=magma_cube] at @s if block ~ ~ ~ lava store result score @s magmaCubeSize run data get entity @s Size
@@ -20,3 +21,6 @@ execute as @e[type=magma_cube] at @s if block ~ ~-1 ~ #minecraft:ice run effect 
 execute as @e[type=magma_cube] at @s if block ~ ~ ~ minecraft:water if entity @s[scores={magmaCubeSizeNegationWorker=10..}] run scoreboard players add @s magmaCubeSizeNegationWorker 50
 execute as @e[type=magma_cube] at @s if block ~ ~ ~ minecraft:water if entity @s[scores={magmaCubeSizeNegationWorker=10..}] run effect give @s resistance 5 2
 execute as @e[type=magma_cube] at @s if block ~ ~ ~ minecraft:water if entity @s[scores={magmaCubeSizeNegationWorker=10..}] run summon creeper ~ ~ ~ {CustomNameVisible:0b,ExplosionRadius:1b,PersistenceRequired:1b,CanPickUpLoot:1b,Fuse:2,ignited:1b,active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:10,show_particles:0b,show_icon:0b}]}
+
+execute as @e[type=magma_cube,sort=random,limit=10] store result score @s magmaCubeCountNearby at @s if entity @e[type=magma_cube,distance=0..10]
+execute as @e[type=magma_cube,sort=random,limit=10,scores={magmaCubeCountNearby=15..}] run effect give @s wither 3 2 true
