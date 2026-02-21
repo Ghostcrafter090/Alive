@@ -15,7 +15,7 @@ execute as @e[tag=gstools_worker,type=marker,limit=1] run scoreboard players ope
 execute as @e[tag=gstools_worker,type=marker,limit=1] run scoreboard players operation @s currentDaytimeNetherTicker %= @s 2000
 execute as @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1},tag=!current_wither_temperature_add] if entity @s[scores={currentDaytimeNetherTicker=..1000}] run scoreboard players add @s currentTemperatureWitherModif 1
 execute as @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1},tag=!current_wither_temperature_add] if entity @s[scores={currentDaytimeNetherTicker=..1000}] run tag @s add current_wither_temperature_add
-execute as @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1},tag=!current_wither_temperature_add] unless entity @s[scores={currentDaytimeNetherTicker=..1000}] run tag @s remove current_wither_temperature_add
+execute as @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1},tag=current_wither_temperature_add] unless entity @s[scores={currentDaytimeNetherTicker=..1000}] run tag @s remove current_wither_temperature_add
 
 execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] as @e[type=fireball] at @s if block ~ ~ ~ water run fill ~ ~ ~ ~ ~ ~ lava replace water
 execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] as @e[type=fireball] at @s if block ~1 ~ ~ obsidian run fill ~1 ~ ~ ~1 ~ ~ lava replace obsidian

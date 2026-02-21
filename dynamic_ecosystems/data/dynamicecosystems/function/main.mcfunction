@@ -5,6 +5,7 @@ scoreboard objectives add treeCursorCount dummy
 
 # Main
 execute as @e[tag=gstools_cursor,type=marker,tag=!spread_from_self] at @s run function gstools:compat/sereneseasons/temperature
+execute as @e[tag=gstools_vertical_cursor,type=marker,tag=!spread_from_self] at @s run function gstools:compat/sereneseasons/temperature
 execute if entity @e[tag=gstools_cursor,type=marker,tag=spread_from_self] run scoreboard players operation @e[tag=gstools_worker,type=marker] seasonAdjustWorker = @e[tag=gstools_worker,type=marker] currentSeasonDay
 execute if entity @e[tag=gstools_cursor,type=marker,tag=spread_from_self] run scoreboard players operation @e[tag=gstools_worker,type=marker] seasonAdjustWorker *= @e[tag=gstools_worker,type=marker] 24000
 execute if entity @e[tag=gstools_cursor,type=marker,tag=spread_from_self] run scoreboard players operation @e[tag=gstools_worker,type=marker] seasonAdjustWorker *= @e[tag=gstools_worker,type=marker] 16
