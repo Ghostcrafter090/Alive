@@ -147,13 +147,13 @@ execute store result score @e[tag=gstools_worker,type=marker] dayNumber run time
 function gstools:hud/main
 
 # Run
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDesirePaths=1..1}] run schedule function gstools:extension/desirepaths/run 1t append
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicDirt=1..1}] run schedule function gstools:extension/dynamicdirt/run 1t append
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicEcosystems=1..1}] run schedule function gstools:extension/dynamicecosystems/run 1t append
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBlockDecay=1..1}] run schedule function gstools:extension/blockdecay/run 1t append
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicMonsters=1..1}] run schedule function gstools:extension/dynamicmonsters/run 1t append
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunLifeAndDeath=1..1}] run schedule function gstools:extension/lifeanddeath/run 1t append
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBossProgression=1..1}] run schedule function gstools:extension/bossprogression/run 1t append
+execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDesirePaths=1..1,doRun=1..1}] run schedule function gstools:extension/desirepaths/run 1t append
+execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicDirt=1..1,doRun=1..1}] run schedule function gstools:extension/dynamicdirt/run 1t append
+execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicEcosystems=1..1,doRun=1..1}] run schedule function gstools:extension/dynamicecosystems/run 1t append
+execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBlockDecay=1..1,doRun=1..1}] run schedule function gstools:extension/blockdecay/run 1t append
+execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicMonsters=1..1,doRun=1..1}] run schedule function gstools:extension/dynamicmonsters/run 1t append
+execute if entity @e[tag=gstools_worker,type=marker,scores={doRunLifeAndDeath=1..1,doRun=1..1}] run schedule function gstools:extension/lifeanddeath/run 1t append
+execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBossProgression=1..1,doRun=1..1}] run schedule function gstools:extension/bossprogression/run 1t append
 
 execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=10..}] run function enhancedsurvival:main
 
