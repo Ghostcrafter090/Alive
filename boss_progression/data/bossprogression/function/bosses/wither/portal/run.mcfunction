@@ -29,5 +29,5 @@ execute as @e[tag=attack_portal_node,type=marker] at @s run spreadplayers ~ ~ 1 
 execute as @e[tag=attack_portal_node,tag=portal_generated,limit=1,sort=random,scores={attackPortalSpawnTic=300..}] run scoreboard players set @s attackPortalSpawnTic 0
 
 scoreboard players set @e[tag=gstools_worker,type=marker,limit=1] numberOfOverworldNetherMobs 0
-execute as @e[tag=nether] at @s if dimension overworld run scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] numberOfOverworldNetherMobs 1
+execute store result score @e[tag=gstools_worker,type=marker,limit=1] numberOfOverworldNetherMobs in overworld if entity @e[tag=nether,distance=0..]
 
