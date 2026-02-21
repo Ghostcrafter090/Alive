@@ -27,4 +27,9 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseH
 
 execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] as @a at @s run particle flame ~ ~ ~ 40 40 40 0 50
 
+execute as @e[tag=!tile,sort=random,limit=1] run function gstools:util/random
+execute as @e[tag=!tile,sort=random,limit=1] if score @s random1000 < @s currentTemperature at @s run fill ~ ~ ~ ~ ~ ~ fire replace #gstools:air
+execute as @e[tag=!tile,sort=random,limit=1] if score @s random1000 < @s currentTemperature at @s run tag @s add wither_fire
+schedule function bossprogression:bosses/wither/portal/util/fireout 1t append
+
 execute if entity @e[tag=gstools_worker,scores={timeOfDay=12500..24000}] run time add 10t
