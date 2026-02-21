@@ -1,13 +1,13 @@
 # Define
 
 # Main
-function dynamicmonsters:creeper/main
-function dynamicmonsters:skeleton/main
-function dynamicmonsters:ghast/main
-function dynamicmonsters:guardian/main
-function dynamicmonsters:magma_cube/main
-function dynamicmonsters:slime/main
-function dynamicmonsters:phantoms/main
-function dynamicmonsters:cold_blood/main
-function dynamicmonsters:arrow/main
-function dynamicmonsters:blaze/main
+schedule function dynamicmonsters:creeper/main 1t append
+schedule function dynamicmonsters:skeleton/main 2t append
+schedule function dynamicmonsters:ghast/main 3t append
+schedule function dynamicmonsters:guardian/main 4t append
+schedule function dynamicmonsters:magma_cube/main 5t append
+schedule function dynamicmonsters:slime/main 6t append
+schedule function dynamicmonsters:phantoms/main 7t append
+schedule function dynamicmonsters:cold_blood/main 8t append
+schedule function dynamicmonsters:arrow/main 9t append
+schedule function dynamicmonsters:blaze/main 10t append
