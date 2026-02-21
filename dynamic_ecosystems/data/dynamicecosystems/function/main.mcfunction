@@ -28,6 +28,10 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={treeCursorCount=200.
 function dynamicecosystems:vines/main
 execute if entity @e[tag=gstools_worker,type=marker,scores={sereneSeasonsIsLoaded=1..1}] as @e[tag=gstools_cursor] run function dynamicecosystems:seasonal/ice
 execute if entity @e[tag=gstools_worker,type=marker,scores={sereneSeasonsIsLoaded=1..1}] as @e[tag=gstools_vertical_cursor] run function dynamicecosystems:seasonal/ice
+
+execute as @e[tag=gstools_cursor] run function dynamicecosystems:fire/main
+execute as @e[tag=gstools_vertical_cursor] run function dynamicecosystems:fire/main
+
 execute if entity @e[tag=gstools_worker,type=marker,scores={ticTenth=1..1}] run function dynamicecosystems:shrubs/main
 
 execute as @e[tag=gstools_vertical_cursor] at @s if block ~ ~1 ~ #dynamicdirt:air run fill ~ ~ ~ ~ ~ ~ grass_block replace dirt
