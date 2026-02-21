@@ -183,6 +183,10 @@ def run(path, namespace, compileEverything=False):
                         globals.changedFiles.append(namespace + "\\" + file.split("datapack_compile_temp\\")[1])
                     
                     fileData = pytools.IO.getFile(file).replace(" run execute ", " ").split("\n")
+                    
+                    while '' in fileData:
+                        fileData.remove('')
+                    
                     mcpath = namespace + ":" + ".".join(file.replace(os.getcwd() + "\\", "").replace("\\", "/").split(".")[:-1])
                     # print(path)
                     
