@@ -32,3 +32,4 @@ execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attac
 
 # GeoLocate
 execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] unless entity @e[tag=gstools_worker,type=marker,scores={witherHasBeenKilled=1..1}] as @e[tag=gstools_cursor] at @s unless entity @e[tag=attack_portal_node,distance=..120] run summon marker ~ ~ ~ {Tags:['attack_portal_node']}
+execute if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] if entity @e[tag=gstools_worker,type=marker,scores={witherHasBeenKilled=1..1}] as @e[tag=attack_portal_node] run tag @s add delete_portal
