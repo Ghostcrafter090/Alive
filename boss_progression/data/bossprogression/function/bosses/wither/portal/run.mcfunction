@@ -30,4 +30,3 @@ execute as @e[tag=attack_portal_node,tag=portal_generated,limit=1,sort=random,sc
 
 scoreboard players set @e[tag=gstools_worker,type=marker,limit=1] numberOfOverworldNetherMobs 0
 execute store result score @e[tag=gstools_worker,type=marker,limit=1] numberOfOverworldNetherMobs in overworld if entity @e[tag=nether,distance=0..]
-

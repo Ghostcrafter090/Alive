@@ -75,8 +75,8 @@ execute if entity @e[type=marker,tag=gstools_worker,scores={ticSecond=5..5}] run
 scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA = @e[tag=gstools_worker,type=marker] averageTps
 function gstools:extension/dorunmath
 
-scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA *= @e[tag=gstools_worker,type=marker] 10
-scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA /= @e[tag=gstools_worker,type=marker] 15
+# scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA *= @e[tag=gstools_worker,type=marker] 10
+# scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA /= @e[tag=gstools_worker,type=marker] 15
 
 scoreboard players operation @e[tag=gstools_worker,type=marker] globalTic += @e[tag=gstools_worker,type=marker] globalTicWorkerA
 execute as @e[tag=gstools_worker,type=marker,scores={globalTic=20..}] run scoreboard players set @s doRun 1
