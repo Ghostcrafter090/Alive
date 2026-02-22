@@ -24,9 +24,9 @@ execute as @e[type=marker,tag=attack_portal_node,tag=portal_gen,tag=!portal_gene
 execute as @e[type=marker,tag=attack_portal_node,tag=portal_generated] at @s unless block ~1 ~1 ~ nether_portal run tag @s add delete_portal
 
 execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal] run scoreboard players add @s attackPortalDeleteTic 1
-execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=..300}] at @s run particle reverse_portal ~1.5 ~2 ~ 0 0 0 1 100 normal @a
+execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=..300}] at @s run particle reverse_portal ~1.5 ~2 ~ 0 0 0 1 100 force @a
 execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=..300}] run function gstools:util/random
-execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=..300}] if entity @s[scores={random100=..10}] at @s run playsound minecraft:ambient.warped_forest.mood master @a ~ ~ ~ 1
+execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=..300}] if entity @s[scores={random100=..10}] at @s run playsound minecraft:ambient.warped_forest.mood master @a ~ ~ ~ 3
 execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=300..}] at @s run fill ~7 ~7 ~7 ~-7 ~-7 ~-7 magma_block replace obsidian
 execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=300..}] at @s run summon fireball ~1.5 ~10 ~ {ExplosionPower:5,Motion:[0,-5,0]}
 execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=300..}] run kill @s
