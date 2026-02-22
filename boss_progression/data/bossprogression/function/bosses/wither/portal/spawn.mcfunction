@@ -29,7 +29,10 @@ execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attac
 execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=..100}] if entity @s[scores={random100=..10}] at @s run playsound minecraft:ambient.warped_forest.mood master @a ~ ~ ~ 3
 execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=100..}] at @s run fill ~7 ~7 ~7 ~-7 ~-7 ~-7 magma_block replace obsidian
 execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=100..}] run function gstools:util/random
-execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=100..}] if entity @s[scores={random100=0..25}] at @s run summon fireball ~1.5 ~10 ~ {ExplosionPower:4,Motion:[0,-5,0]}
+execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=100..}] if entity @s[scores={random100=0..25}] at @s run summon fireball ~ ~10 ~ {ExplosionPower:4,Motion:[0,-5,0]}
+execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=100..}] if entity @s[scores={random100=25..50}] at @s run summon fireball ~1 ~10 ~ {ExplosionPower:4,Motion:[0,-5,0]}
+execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=100..}] if entity @s[scores={random100=50..75}] at @s run summon fireball ~2 ~10 ~ {ExplosionPower:4,Motion:[0,-5,0]}
+execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=100..}] if entity @s[scores={random100=75..100}] at @s run summon fireball ~3 ~10 ~ {ExplosionPower:4,Motion:[0,-5,0]}
 execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=100..}] run kill @s
 
 # GeoLocate
