@@ -39,5 +39,7 @@ execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] at @s if
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] at @s if entity @e[tag=walkable,distance=1..8,type=!player] run damage @e[tag=!tile,type=!pillager,sort=nearest,distance=1..,limit=1] 0.0001 mob_attack by @s from @s
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] at @s if entity @e[tag=walkable,distance=1..2,type=!player] run scoreboard players set @s pillagerMiningDirection 0
 
-execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=0..0}] run item replace entity @s weapon.mainhand with crossbow
-execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] run item replace entity @s weapon.mainhand with iron_pickaxe
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=0..0},tag=!not_mining] run item replace entity @s weapon.mainhand with crossbow
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=0..0},tag=!not_mining] run tag @s add not_mining
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..},tag=not_mining] run item replace entity @s weapon.mainhand with iron_pickaxe
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..},tag=not_mining] run tag @s remove not_mining
