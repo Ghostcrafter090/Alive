@@ -35,6 +35,7 @@ execute if entity @s[scores={witherSpellTic=599..599}] run summon fireball ~ ~ ~
 execute if entity @s[scores={witherSpellTic=599..599}] run fill ~ ~-1 ~ ~ ~-1 ~ netherrack
 execute if entity @s[scores={witherSpellTic=599..599}] run fill ~ ~ ~ ~ ~ ~ fire
 execute if entity @s[scores={witherSpellTic=599..599}] run summon item ~ ~2 ~ {Glowing:1b,Invulnerable:1b,Item:{id:"minecraft:wither_rose",Count:1b,count:1,components:{"minecraft:enchantment_glint_override":true,"minecraft:custom_name":{"color":"dark_red","italic":false,"text":"Enchanted Wither Rose"}},tag:{display:{Name:'{"text":"Enchanted Wither Rose","color":"red","italic":false}'},Enchantments:[{id:"minecraft:flame",lvl:1s}]}}}
+execute if entity @s[scores={witherSpellTic=599..599}] as @e[type=marker,tag=gstools_worker,limit=1] as @e[type=creeper] at @s run summon lightning_bolt ~ ~ ~
 execute if entity @s[scores={witherSpellTic=599..599}] as @e[type=marker,tag=gstools_worker,limit=1] run scoreboard players set @s enchantedWitherRoseHasBeenSpawned 1
 execute if entity @s[scores={witherSpellTic=599..599}] as @e[type=marker,tag=gstools_worker,limit=1] run scoreboard players set @s witherHasBeenKilled 0
 execute if entity @s[scores={witherSpellTic=599..599}] as @e[type=marker,tag=gstools_worker,limit=1] run scoreboard players set @s currentTemperatureWitherModif 0
