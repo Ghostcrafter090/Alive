@@ -31,8 +31,8 @@ execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=2..2,random100
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=3..3,random100=..20}] at @s facing ~ ~ ~1 run tp @s ~ ~ ~ ~ ~
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=4..4,random100=..20}] at @s facing ~ ~ ~-1 run tp @s ~ ~ ~ ~ ~
 
-execute if entity @e[tag=gstools_worker,scores={random100=..10}] as @e[tag=mining_pillager,sort=random,limit=1] at @s unless entity @a[distance=0..20] unless entity @e[tag=is_human,distance=1..8] run scoreboard players operation @s pillagerMiningDirection = @s random10
-execute if entity @e[tag=gstools_worker,scores={random100=..10}] as @e[tag=mining_pillager,sort=random,limit=1] at @s unless entity @a[distance=0..20] unless entity @e[tag=is_human,distance=1..8] run scoreboard players operation @s pillagerMiningDirection /= @e[tag=gstools_worker,type=marker] 2
+execute if entity @e[tag=gstools_worker,scores={random100=..10}] as @e[tag=mining_pillager,sort=random,limit=1] at @s unless entity @a[distance=0..20,gamemode=survival] unless entity @e[tag=is_human,distance=1..8] run scoreboard players operation @s pillagerMiningDirection = @s random10
+execute if entity @e[tag=gstools_worker,scores={random100=..10}] as @e[tag=mining_pillager,sort=random,limit=1] at @s unless entity @a[distance=0..20,gamemode=survival] unless entity @e[tag=is_human,distance=1..8] run scoreboard players operation @s pillagerMiningDirection /= @e[tag=gstools_worker,type=marker] 2
 
-execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] at @s if entity @a[distance=0..20] run scoreboard players set @s pillagerMiningDirection 0
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] at @s if entity @a[distance=0..20,gamemode=survival] run scoreboard players set @s pillagerMiningDirection 0
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] at @s if entity @e[tag=is_human,distance=1..8] run scoreboard players set @s pillagerMiningDirection 0

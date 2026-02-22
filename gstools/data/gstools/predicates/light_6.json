@@ -1,1 +1,11 @@
-{"condition": "minecraft:entity_properties", "entity": "this", "predicate": {"type": "minecraft:player", "location": {"light": {"light": 6}}}}
+{
+  "condition": "minecraft:location_check",
+  "predicate": {
+    "light": {
+      "light": {
+        "min": 6,
+        "max": 6
+      }
+    }
+  }
+}
