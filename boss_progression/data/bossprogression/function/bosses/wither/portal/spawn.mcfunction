@@ -28,7 +28,7 @@ execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attac
 execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=..300}] run function gstools:util/random
 execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=..300}] if entity @s[scores={random100=..10}] at @s run playsound minecraft:ambient.warped_forest.mood master @a ~ ~ ~ 1
 execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=300..}] at @s run fill ~7 ~7 ~7 ~-7 ~-7 ~-7 magma_block replace obsidian
-execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=300..}] at @s run summon fireball ~1.5 ~10 ~ {ExplosionPower:8,Motion:[0,-5,0]}
+execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=300..}] at @s run summon fireball ~1.5 ~10 ~ {ExplosionPower:5,Motion:[0,-5,0]}
 execute as @e[type=marker,tag=attack_portal_node,tag=delete_portal,scores={attackPortalDeleteTic=300..}] run kill @s
 
 # GeoLocate
