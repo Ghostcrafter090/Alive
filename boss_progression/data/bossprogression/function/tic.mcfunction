@@ -56,3 +56,4 @@ execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..1}] if bloc
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=2..2}] if block ~-1 ~-1 ~ #gstools:air run fill ~-1 ~-1 ~ ~-1 ~-1 ~ oak_slab[type=top] destroy
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=3..3}] if block ~ ~-1 ~1 #gstools:air run fill ~ ~-1 ~1 ~ ~-1 ~1 oak_slab[type=top] destroy
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=4..4}] if block ~ ~-1 ~-1 #gstools:air run fill ~ ~-1 ~-1 ~ ~-1 ~-1 oak_slab[type=top] destroy
+
