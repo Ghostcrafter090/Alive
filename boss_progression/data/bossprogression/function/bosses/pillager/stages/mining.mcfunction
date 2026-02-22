@@ -37,7 +37,7 @@ execute if entity @e[tag=gstools_worker,scores={random100=..10}] as @e[tag=minin
 
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] at @s if entity @a[distance=0..20,gamemode=survival] run scoreboard players set @s pillagerMiningDirection 0
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] at @s if entity @e[tag=walkable,distance=1..8,type=!player] run damage @e[tag=!tile,type=!pillager,sort=nearest,distance=1..,limit=1] 0.0001 mob_attack by @s from @s
-execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] at @s if entity @e[tag=walkable,distance=1..2,type=!player] run scoreboard players set @s pillagerMiningDirection 0
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] at @s if entity @e[tag=walkable,distance=1..4,type=!player] run scoreboard players set @s pillagerMiningDirection 0
 
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=0..0},tag=!not_mining] run item replace entity @s weapon.mainhand with crossbow
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=0..0},tag=!not_mining] run tag @s add not_mining
