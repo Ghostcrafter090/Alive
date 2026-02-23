@@ -42,6 +42,7 @@ execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] at @s if
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] at @s if entity @e[tag=walkable,distance=1..8,type=!player] run scoreboard players set @s pillagerMiningDirection 0
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..4}] at @s if predicate gstools:sky run scoreboard players set @s pillagerMiningDirection 0
 
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon villager ~ ~ ~ {active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:10000,show_particles:0b}],attributes:[{id:"minecraft:max_health",base:1}]}
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run scoreboard players set @s pillagerMiningDirection 0
 
 
