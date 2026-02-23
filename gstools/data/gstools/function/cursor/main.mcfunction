@@ -47,4 +47,6 @@ execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] as
 # execute as @e[tag=gstools_worker,type=marker] run scoreboard players add @s cursorTic 1
 
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] as @e[tag=gstools_chunk_worker] at @s run forceload add ~ ~ ~ ~
-execute unless entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] as @e[tag=gstools_chunk_worker] at @s run forceload remove ~ ~ ~ ~
+execute unless entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] as @e[tag=gstools_chunk_worker] at @s unless entity @e[tag=gstools_worker,distance=..16] run forceload remove ~ ~ ~ ~
+execute unless entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] run forceload remove all
+execute unless entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] run forceload add 0 0
