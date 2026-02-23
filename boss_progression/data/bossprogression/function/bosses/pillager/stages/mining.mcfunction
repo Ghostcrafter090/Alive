@@ -4,6 +4,8 @@ scoreboard objectives add numberOfMiningPillagers dummy
 scoreboard objectives add pillagerMiningDirection dummy
 
 # Main
+execute unless entity @e[type=marker,tag=gstools_worker,scores={desirePathsLoaded=1..1}] as @e[tag=mining_pillager,limit=20,sort=random] store result score @s entityVerticalMotion run data get entity @s Motion[1] 100
+
 execute if entity @e[tag=gstools_worker,type=marker,scores={numberOfMiningPillagers=..75}] as @e[type=marker,tag=gstools_vertical_cursor] at @s if block ~ ~ ~ #minecraft:air unless entity @e[tag=mining_pillager,distance=0..60] as @e[tag=gstools_cursor,sort=nearest,limit=1] if score @s verticalCursorWorker < @e[tag=gstools_worker,type=marker,limit=1] 60 run summon pillager ~ ~ ~ {PersistenceRequired:1b,CanPickUpLoot:1b,Tags:["mining_pillager"],equipment:{head:{id:"minecraft:iron_helmet",count:1},mainhand:{id:"minecraft:stone_pickaxe",count:1},offhand:{id:"minecraft:shield",count:1}}}
 execute as @e[tag=mining_pillager] at @s run function gstools:util/light_level
 execute as @e[tag=mining_pillager] at @s run function gstools:util/random
@@ -21,15 +23,15 @@ execute as @e[tag=mining_pillager,tag=make_patrol] at @s run tag @s remove make_
 
 execute store result score @e[tag=gstools_worker,type=marker,limit=1] numberOfMiningPillagers if entity @e[tag=mining_pillager]
 
-execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..1}] at @s if block ~1 ~ ~ #gstools:air if block ~1 ~1 ~ #gstools:air facing ~1 ~ ~ run tp @s ~0.1 ~ ~ ~ ~
-execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=2..2}] at @s if block ~-1 ~ ~ #gstools:air if block ~-1 ~1 ~ #gstools:air facing ~-1 ~ ~ run tp @s ~-0.1 ~ ~ ~ ~
-execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=3..3}] at @s if block ~ ~ ~1 #gstools:air if block ~ ~1 ~1 #gstools:air facing ~ ~ ~1 run tp @s ~ ~ ~0.1 ~ ~
-execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=4..4}] at @s if block ~ ~ ~-1 #gstools:air if block ~ ~1 ~-1 #gstools:air facing ~ ~ ~-1 run tp @s ~ ~ ~-0.1 ~ ~
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..1,entityVerticalMotion=0..}] at @s if block ~1 ~ ~ #gstools:air if block ~1 ~1 ~ #gstools:air facing ~1 ~ ~ run tp @s ~0.1 ~ ~ ~ ~
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=2..2,entityVerticalMotion=0..}] at @s if block ~-1 ~ ~ #gstools:air if block ~-1 ~1 ~ #gstools:air facing ~-1 ~ ~ run tp @s ~-0.1 ~ ~ ~ ~
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=3..3,entityVerticalMotion=0..}] at @s if block ~ ~ ~1 #gstools:air if block ~ ~1 ~1 #gstools:air facing ~ ~ ~1 run tp @s ~ ~ ~0.1 ~ ~
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=4..4,entityVerticalMotion=0..}] at @s if block ~ ~ ~-1 #gstools:air if block ~ ~1 ~-1 #gstools:air facing ~ ~ ~-1 run tp @s ~ ~ ~-0.1 ~ ~
 
-execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..1,random100=..20}] at @s facing ~1 ~ ~ run tp @s ~ ~ ~ ~ ~
-execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=2..2,random100=..20}] at @s facing ~-1 ~ ~ run tp @s ~ ~ ~ ~ ~
-execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=3..3,random100=..20}] at @s facing ~ ~ ~1 run tp @s ~ ~ ~ ~ ~
-execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=4..4,random100=..20}] at @s facing ~ ~ ~-1 run tp @s ~ ~ ~ ~ ~
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..1,random100=..20,entityVerticalMotion=0..}] at @s facing ~1 ~ ~ run tp @s ~ ~ ~ ~ ~
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=2..2,random100=..20,entityVerticalMotion=0..}] at @s facing ~-1 ~ ~ run tp @s ~ ~ ~ ~ ~
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=3..3,random100=..20,entityVerticalMotion=0..}] at @s facing ~ ~ ~1 run tp @s ~ ~ ~ ~ ~
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=4..4,random100=..20,entityVerticalMotion=0..}] at @s facing ~ ~ ~-1 run tp @s ~ ~ ~ ~ ~
 
 execute if entity @e[tag=gstools_worker,scores={random100=..10}] as @e[tag=mining_pillager,sort=random,limit=1] at @s unless entity @a[distance=0..20,gamemode=survival] unless entity @e[tag=walkable,distance=1..8,type=!player] run scoreboard players operation @s pillagerMiningDirection = @s random10
 execute if entity @e[tag=gstools_worker,scores={random100=..10}] as @e[tag=mining_pillager,sort=random,limit=1] at @s unless entity @a[distance=0..20,gamemode=survival] unless entity @e[tag=walkable,distance=1..8,type=!player] run scoreboard players operation @s pillagerMiningDirection /= @e[tag=gstools_worker,type=marker] 2
