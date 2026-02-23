@@ -36,14 +36,15 @@ execute as @e[tag=chunk_loader] at @s unless entity @e[tag=gstools_chunk_worker,
 execute as @e[tag=chunk_loader] at @s unless entity @e[tag=gstools_chunk_worker,distance=..400,type=marker] run summon marker ~ ~ ~ {Tags:['gstools_chunk_worker']}
 execute store result score @e[tag=gstools_worker,type=marker] chunkLoaderCount if entity @e[tag=gstools_chunk_worker,type=marker]
 
-scoreboard players set @e[tag=gstools_worker,type=marker,limit=1] cursorInArrears 0
-execute as @e[tag=gstools_chunk_worker,type=marker] if score @s cursorTic < @e[tag=gstools_worker,type=marker,limit=1] cursorTic run scoreboard players operation @e[tag=gstools_worker,type=marker] cursorInArrears += @e[tag=gstools_worker,type=marker] cursorTic
-execute as @e[tag=gstools_chunk_worker,type=marker] if score @s cursorTic < @e[tag=gstools_worker,type=marker,limit=1] cursorTic run scoreboard players operation @e[tag=gstools_worker,type=marker] cursorInArrears -= @s cursorTic
-function gstools:cursor/chunk/summon
+execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] run scoreboard players set @e[tag=gstools_worker,type=marker,limit=1] cursorInArrears 0
+execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] as @e[tag=gstools_chunk_worker,type=marker] if score @s cursorTic < @e[tag=gstools_worker,type=marker,limit=1] cursorTic run scoreboard players operation @e[tag=gstools_worker,type=marker] cursorInArrears += @e[tag=gstools_worker,type=marker] cursorTic
+execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] as @e[tag=gstools_chunk_worker,type=marker] if score @s cursorTic < @e[tag=gstools_worker,type=marker,limit=1] cursorTic run scoreboard players operation @e[tag=gstools_worker,type=marker] cursorInArrears -= @s cursorTic
+execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] run function gstools:cursor/chunk/summon
 
-execute if entity @e[tag=gstools_chunk_worker,scores={numberOfUnloadedCursorsSpawned=800..800}] run schedule function gstools:cursor/chunk/loadrandom 1t
+execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] if entity @e[tag=gstools_chunk_worker,scores={numberOfUnloadedCursorsSpawned=800..800}] run schedule function gstools:cursor/chunk/loadrandom 1t
 
-execute as @e[tag=gstools_worker,type=marker] run scoreboard players add @s cursorTic 1
+execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] as @e[tag=gstools_worker,type=marker] run scoreboard players add @s cursorTic 1
 # execute as @e[tag=gstools_worker,type=marker] run scoreboard players add @s cursorTic 1
 
-execute as @e[tag=gstools_chunk_worker] at @s run forceload add ~ ~ ~ ~
+execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] as @e[tag=gstools_chunk_worker] at @s run forceload add ~ ~ ~ ~
+execute unless entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] as @e[tag=gstools_chunk_worker] at @s run forceload remove ~ ~ ~ ~

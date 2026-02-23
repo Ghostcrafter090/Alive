@@ -7,7 +7,7 @@ function bossprogression:bosses/wither/spell/main
 # Patrol Mining AI
 execute as @e[tag=mining_pillager] at @s rotated as @s if block ^ ^ ^1 #minecraft:mineable/pickaxe run scoreboard players add @s pillagerMiningBlockPercentage 1
 execute as @e[tag=mining_pillager] at @s rotated as @s positioned ~ ~1 ~ if block ^ ^ ^1 #minecraft:mineable/pickaxe run scoreboard players add @s pillagerMiningBlockPercentage 1
-execute as @e[tag=mining_pillager] at @s rotated as @s unless block ^ ^ ^1 #minecraft:mineable/pickaxe unless block ^ ^ ^1 #minecraft:mineable/shovel unless block ^ ^ ^1 #minecraft:mineable/hoe unless block ^ ^ ^1 #minecraft:mineable/axe positioned ~ ~1 ~ unless block ^ ^ ^1 #minecraft:mineable/pickaxe unless block ^ ^ ^1 #minecraft:mineable/shovel unless block ^ ^ ^1 #minecraft:mineable/hoe unless block ^ ^ ^1 #minecraft:mineable/axe run scoreboard players set @s pillagerMiningBlockPercentage 0
+execute as @e[tag=mining_pillager] unless entity @s[scores={pillagerMiningDirection=5..5}] at @s rotated as @s unless block ^ ^ ^1 #minecraft:mineable/pickaxe unless block ^ ^ ^1 #minecraft:mineable/shovel unless block ^ ^ ^1 #minecraft:mineable/hoe unless block ^ ^ ^1 #minecraft:mineable/axe positioned ~ ~1 ~ unless block ^ ^ ^1 #minecraft:mineable/pickaxe unless block ^ ^ ^1 #minecraft:mineable/shovel unless block ^ ^ ^1 #minecraft:mineable/hoe unless block ^ ^ ^1 #minecraft:mineable/axe run scoreboard players set @s pillagerMiningBlockPercentage 0
 
 execute as @e[tag=mining_pillager,scores={pillagerMiningBlockPercentage=20..20}] at @s positioned ~ ~1 ~ if block ^ ^ ^1 #minecraft:mineable/pickaxe run fill ^ ^ ^1 ^ ^ ^1 air destroy
 execute as @e[tag=mining_pillager,scores={pillagerMiningBlockPercentage=2..2}] at @s rotated as @s positioned ~ ~1 ~ if block ^ ^ ^1 #minecraft:mineable/pickaxe run playsound block.stone.hit block @a ~ ~ ~ 1
@@ -66,6 +66,12 @@ execute as @e[tag=mining_pillager,scores={pillagerMiningBlockPercentage=52..52}]
 execute as @e[tag=mining_pillager,scores={pillagerMiningBlockPercentage=60..60}] at @s rotated as @s if block ^ ^ ^1 #minecraft:mineable/hoe run playsound block.sculk.hit block @a ~ ~ ~ 1
 execute as @e[tag=mining_pillager,scores={pillagerMiningBlockPercentage=68..68}] at @s rotated as @s if block ^ ^ ^1 #minecraft:mineable/hoe run playsound block.sculk.hit block @a ~ ~ ~ 1
 execute as @e[tag=mining_pillager,scores={pillagerMiningBlockPercentage=76..76}] at @s rotated as @s if block ^ ^ ^1 #minecraft:mineable/hoe run playsound block.sculk.hit block @a ~ ~ ~ 1
+
+
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=5..5}] at @s rotated as @s run scoreboard players add @s pillagerMiningBlockPercentage 1
+execute as @e[tag=mining_pillager,scores={pillagerMiningBlockPercentage=40..,pillagerMiningDirection=5..5}] at @s rotated as @s unless block ~ ~-1 ~ bedrock run fill ~ ~-1 ~ ~ ~-1 ~ air destroy
+execute as @e[tag=mining_pillager,scores={pillagerMiningBlockPercentage=40..,pillagerMiningDirection=5..5}] run scoreboard players set @s pillagerMiningBlockPercentage 0
+
 
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..1}] at @s if block ~1 ~-1 ~ #gstools:air unless predicate gstools:sky run fill ~1 ~-1 ~ ~1 ~-1 ~ oak_slab[type=top] destroy
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=2..2}] at @s if block ~-1 ~-1 ~ #gstools:air unless predicate gstools:sky run fill ~-1 ~-1 ~ ~-1 ~-1 ~ oak_slab[type=top] destroy
