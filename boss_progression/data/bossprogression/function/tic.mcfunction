@@ -90,5 +90,3 @@ execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..1}] at @s i
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=2..2}] at @s if block ~-1 ~-1 ~ #gstools:air unless predicate gstools:sky run fill ~-1 ~-1 ~ ~-1 ~-1 ~ dark_oak_slab[type=top] destroy
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=3..3}] at @s if block ~ ~-1 ~1 #gstools:air unless predicate gstools:sky run fill ~ ~-1 ~1 ~ ~-1 ~1 dark_oak_slab[type=top] destroy
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=4..4}] at @s if block ~ ~-1 ~-1 #gstools:air unless predicate gstools:sky run fill ~ ~-1 ~-1 ~ ~-1 ~-1 dark_oak_slab[type=top] destroy
-
-effect give @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] regeneration 20 1

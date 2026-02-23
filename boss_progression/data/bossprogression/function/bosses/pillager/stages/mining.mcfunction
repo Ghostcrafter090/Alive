@@ -76,3 +76,7 @@ execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup] a
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup] at @s if entity @s[tag=do_setup] run tag @s remove not_setup
 
 execute as @e[tag=mining_pillager,scores={random100=0..3},limit=1,sort=random] at @s if entity @e[tag=pillager_mining_outpost_component,type=marker,distance=0..30] if predicate gstools:sky run scoreboard players set @s pillagerMiningDirection 5
+
+effect give @e[tag=mining_pillager,scores={pillagerMiningDirection=1..}] regeneration 20 1
+
+effect give @e[tag=mining_pillager,sort=random,limit=1] regeneration 10 0
