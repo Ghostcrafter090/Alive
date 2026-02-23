@@ -5,6 +5,12 @@
     "minecraft:air",
     "minecraft:void_air",
     "minecraft:water",
-    "minecraft:light"
+    "minecraft:light",
+    "minecraft:torch",
+    "minecraft:redstone_torch",
+    "minecraft:wall_torch",
+    "minecraft:redstone_wall_torch",
+    "minecraft:soul_torch",
+    "minecraft:soul_wall_torch"
   ]
 }
