@@ -67,8 +67,8 @@ execute as @e[tag=mining_pillager,scores={pillagerMiningBlockPercentage=60..60}]
 execute as @e[tag=mining_pillager,scores={pillagerMiningBlockPercentage=68..68}] at @s rotated as @s if block ^ ^ ^1 #minecraft:mineable/hoe run playsound block.sculk.hit block @a ~ ~ ~ 1
 execute as @e[tag=mining_pillager,scores={pillagerMiningBlockPercentage=76..76}] at @s rotated as @s if block ^ ^ ^1 #minecraft:mineable/hoe run playsound block.sculk.hit block @a ~ ~ ~ 1
 
-execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..1}] at @s if block ~1 ~-1 ~ #gstools:air run fill ~1 ~-1 ~ ~1 ~-1 ~ oak_slab[type=top] destroy
-execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=2..2}] at @s if block ~-1 ~-1 ~ #gstools:air run fill ~-1 ~-1 ~ ~-1 ~-1 ~ oak_slab[type=top] destroy
-execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=3..3}] at @s if block ~ ~-1 ~1 #gstools:air run fill ~ ~-1 ~1 ~ ~-1 ~1 oak_slab[type=top] destroy
-execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=4..4}] at @s if block ~ ~-1 ~-1 #gstools:air run fill ~ ~-1 ~-1 ~ ~-1 ~-1 oak_slab[type=top] destroy
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..1}] at @s if block ~1 ~-1 ~ #gstools:air if predicate gstools:sky run fill ~1 ~-1 ~ ~1 ~-1 ~ oak_slab[type=top] destroy
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=2..2}] at @s if block ~-1 ~-1 ~ #gstools:air if predicate gstools:sky run fill ~-1 ~-1 ~ ~-1 ~-1 ~ oak_slab[type=top] destroy
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=3..3}] at @s if block ~ ~-1 ~1 #gstools:air if predicate gstools:sky run fill ~ ~-1 ~1 ~ ~-1 ~1 oak_slab[type=top] destroy
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=4..4}] at @s if block ~ ~-1 ~-1 #gstools:air if predicate gstools:sky run fill ~ ~-1 ~-1 ~ ~-1 ~-1 oak_slab[type=top] destroy
 
