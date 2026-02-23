@@ -48,7 +48,7 @@ execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..},tag=not_m
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..},tag=not_mining] run tag @s remove not_mining
 
 # Base Construction
-execute as @e[tag=mining_pillager] at @s unless entity @e[tag=pillager_mining_outpost,type=marker,distance=0..100] if predicate gstools:sky run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost','not_setup']}
+execute as @e[tag=mining_pillager] at @s unless entity @e[tag=pillager_mining_outpost,type=marker,distance=0..300] if predicate gstools:sky run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost','not_setup']}
 
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup] at @s run spreadplayers ~ ~ 1 10 false @s
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup] at @s if block ~ ~-1 ~ #minecraft:dirt run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost_component','not_setup']}
