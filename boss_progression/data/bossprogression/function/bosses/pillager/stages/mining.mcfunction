@@ -27,11 +27,15 @@ execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..1,entityVer
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=2..2,entityVerticalMotion=0..}] at @s if block ~-1 ~ ~ #gstools:air if block ~-1 ~1 ~ #gstools:air facing ~-1 ~ ~ run tp @s ~-0.1 ~ ~ ~ ~
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=3..3,entityVerticalMotion=0..}] at @s if block ~ ~ ~1 #gstools:air if block ~ ~1 ~1 #gstools:air facing ~ ~ ~1 run tp @s ~ ~ ~0.1 ~ ~
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=4..4,entityVerticalMotion=0..}] at @s if block ~ ~ ~-1 #gstools:air if block ~ ~1 ~-1 #gstools:air facing ~ ~ ~-1 run tp @s ~ ~ ~-0.1 ~ ~
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=5..5,entityVerticalMotion=0..}] at @s unless block ~ ~1 ~1 #gstools:air if block ~ ~1 ~ #gstools:air run fill ~ ~1 ~1 ~ ~1 ~1 ladder[facing=north] destroy
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=5..,entityVerticalMotion=0..}] at @s if block ~ ~1 ~1 #gstools:air if predicate gstools:sky run scoreboard players operation @s pillagerMiningDirection = @s random10
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=5..,entityVerticalMotion=0..}] at @s if block ~ ~1 ~1 #gstools:air if predicate gstools:sky run scoreboard players operation @s pillagerMiningDirection /= @e[tag=gstools_worker,type=marker] 2
 
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=1..1,random100=..20,entityVerticalMotion=0..}] at @s facing ~1 ~ ~ run tp @s ~ ~ ~ ~ ~
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=2..2,random100=..20,entityVerticalMotion=0..}] at @s facing ~-1 ~ ~ run tp @s ~ ~ ~ ~ ~
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=3..3,random100=..20,entityVerticalMotion=0..}] at @s facing ~ ~ ~1 run tp @s ~ ~ ~ ~ ~
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=4..4,random100=..20,entityVerticalMotion=0..}] at @s facing ~ ~ ~-1 run tp @s ~ ~ ~ ~ ~
+execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=5..5,random100=..50,entityVerticalMotion=0..}] at @s facing ~ ~-1 ~ run tp @s ~ ~ ~ ~ ~
 
 execute if entity @e[tag=gstools_worker,scores={random100=..10}] as @e[tag=mining_pillager,sort=random,limit=1] at @s unless predicate gstools:sky unless entity @a[distance=0..20,gamemode=survival] unless entity @e[tag=walkable,distance=1..8,type=!player] run scoreboard players operation @s pillagerMiningDirection = @s random10
 execute if entity @e[tag=gstools_worker,scores={random100=..10}] as @e[tag=mining_pillager,sort=random,limit=1] at @s unless predicate gstools:sky unless entity @a[distance=0..20,gamemode=survival] unless entity @e[tag=walkable,distance=1..8,type=!player] run scoreboard players operation @s pillagerMiningDirection /= @e[tag=gstools_worker,type=marker] 2
@@ -71,3 +75,5 @@ execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup] a
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup] at @s if entity @s[tag=do_setup] run fill ~10 ~10 ~10 ~-10 ~-10 ~-10 air replace jigsaw
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup] at @s if entity @s[tag=do_setup] run summon pillager ~ ~ ~ {PersistenceRequired:1b,CanPickUpLoot:1b,Tags:["mining_pillager"],equipment:{head:{id:"minecraft:iron_helmet",count:1},mainhand:{id:"minecraft:stone_pickaxe",count:1},offhand:{id:"minecraft:shield",count:1}}}
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup] at @s if entity @s[tag=do_setup] run tag @s remove not_setup
+
+execute as @e[tag=mining_pillager,scores={random100=0..3},limit=1,sort=random] at @s if predicate gstools:sky run scoreboard players set @s pillagerMiningDirection 5
