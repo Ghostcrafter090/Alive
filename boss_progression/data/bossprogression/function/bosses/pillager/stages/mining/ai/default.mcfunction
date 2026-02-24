@@ -23,6 +23,8 @@ execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=
 execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon tnt ~ ~ ~ {Tags:['pillager_tnt']}
 execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon marker ~ ~ ~ {Tags:['spawn_tnt_store']}
 
+execute as @e[type=marker,tag=spawn_tnt_store] at @s unless entity @e[type=tnt,distance=0..20] unless entity @e[type=pillager,distance=0..20] run fill ~5 ~5 ~5 ~-5 ~-5 ~-5 air replace redstone_torch
+execute as @e[type=marker,tag=spawn_tnt_store] at @s unless entity @e[type=tnt,distance=0..20] unless entity @e[type=pillager,distance=0..20] run fill ~5 ~5 ~5 ~-5 ~-5 ~-5 air replace redstone_wall_torch
 execute as @e[type=marker,tag=spawn_tnt_store] at @s unless entity @e[type=tnt,distance=0..20] unless entity @e[type=pillager,distance=0..20] if block ~5 ~ ~ #c:stones run fill ~1 ~ ~1 ~3 ~1 ~-1 tnt replace #gstools:air
 execute as @e[type=marker,tag=spawn_tnt_store] at @s unless entity @e[type=tnt,distance=0..20] unless entity @e[type=pillager,distance=0..20] if block ~-5 ~ ~ #c:stones run fill ~-1 ~ ~1 ~-3 ~1 ~-1 tnt replace #gstools:air
 execute as @e[type=marker,tag=spawn_tnt_store] at @s unless entity @e[type=tnt,distance=0..20] unless entity @e[type=pillager,distance=0..20] if block ~ ~ ~5 #c:stones run fill ~1 ~ ~1 ~-1 ~1 ~-3 tnt replace #gstools:air
