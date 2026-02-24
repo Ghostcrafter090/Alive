@@ -9,7 +9,7 @@ execute as @e[tag=mining_pillager] if entity @s[scores={lightLevel=..0}] at @s u
 execute as @e[tag=mining_pillager] if entity @s[scores={lightLevel=..0}] at @s unless block ~-1 ~1 ~ #gstools:air run fill ~ ~1 ~ ~ ~1 ~ redstone_wall_torch[facing=east] replace #gstools:air
 execute as @e[tag=mining_pillager] if entity @s[scores={lightLevel=..0}] at @s unless block ~ ~1 ~1 #gstools:air run fill ~ ~1 ~ ~ ~1 ~ redstone_wall_torch[facing=north] replace #gstools:air
 execute as @e[tag=mining_pillager] if entity @s[scores={lightLevel=..0}] at @s unless block ~ ~1 ~-1 #gstools:air run fill ~ ~1 ~ ~ ~1 ~ redstone_wall_torch[facing=south] replace #gstools:air
-
+execute as @e[tag=mining_pillager] if entity @s[scores={lightLevel=..0}] at @s run function gstools:util/light_level
 execute as @e[tag=mining_pillager] if entity @s[tag=make_patrol] at @s run data modify entity @s patrol_target set from entity @e[tag=mining_pillager,distance=20..,sort=nearest,limit=1] Pos
 execute as @e[tag=mining_pillager] if entity @s[tag=make_patrol] at @s run data merge entity @s {Patrolling:1b,CanJoinRaid:1b,PatrolLeader:1b}
 execute as @e[tag=mining_pillager] if entity @s[tag=make_patrol] at @s run tag @s remove make_patrol
