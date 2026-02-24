@@ -21,6 +21,14 @@ execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=
 
 execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon villager ~ ~ ~ {active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:10000,show_particles:0b}],attributes:[{id:"minecraft:max_health",base:1}]}
 execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon tnt ~ ~ ~ {Tags:['pillager_tnt']}
+execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon marker ~ ~ ~ {Tags:['spawn_tnt_store']}
+
+execute as @e[type=marker,tag=spawn_tnt_store] at @s unless entity @e[type=tnt,distance=0..20] unless entity @e[type=pillager,distance=0..20] if block ~5 ~ ~ #c:stones run fill ~1 ~ ~1 ~3 ~1 ~-1 tnt replace #gstools:air
+execute as @e[type=marker,tag=spawn_tnt_store] at @s unless entity @e[type=tnt,distance=0..20] unless entity @e[type=pillager,distance=0..20] if block ~-5 ~ ~ #c:stones run fill ~-1 ~ ~1 ~-3 ~1 ~-1 tnt replace #gstools:air
+execute as @e[type=marker,tag=spawn_tnt_store] at @s unless entity @e[type=tnt,distance=0..20] unless entity @e[type=pillager,distance=0..20] if block ~ ~ ~5 #c:stones run fill ~1 ~ ~1 ~-1 ~1 ~-3 tnt replace #gstools:air
+execute as @e[type=marker,tag=spawn_tnt_store] at @s unless entity @e[type=tnt,distance=0..20] unless entity @e[type=pillager,distance=0..20] if block ~ ~ ~-5 #c:stones run fill ~1 ~ ~-1 ~-1 ~1 ~-3 tnt replace #gstools:air
+execute as @e[type=marker,tag=spawn_tnt_store] at @s unless entity @e[type=tnt,distance=0..20] unless entity @e[type=pillager,distance=0..20] run kill @s
+
 execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run effect give @s resistance 5 5 true
 execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run scoreboard players set @s pillagerMiningDirection 0
 
