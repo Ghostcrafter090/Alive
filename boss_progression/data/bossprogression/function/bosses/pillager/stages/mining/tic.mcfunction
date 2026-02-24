@@ -85,9 +85,9 @@ execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=
 execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=3..3}] at @s if block ~ ~-1 ~1 #gstools:air unless predicate gstools:sky run fill ~ ~-1 ~1 ~ ~-1 ~1 dark_oak_slab[type=top] destroy
 execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=4..4}] at @s if block ~ ~-1 ~-1 #gstools:air unless predicate gstools:sky run fill ~ ~-1 ~-1 ~ ~-1 ~-1 dark_oak_slab[type=top] destroy
 
-execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=1..1}] at @s if block ~-1 ~ ~ #gstools:air if entity @e[type=tnt,tag=pillager_tnt,distance=0..12] run tp @s ~-0.3 ~ ~
-execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=2..2}] at @s if block ~1 ~ ~ #gstools:air if entity @e[type=tnt,tag=pillager_tnt,distance=0..12] run tp @s ~0.3 ~ ~
-execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=3..3}] at @s if block ~ ~ ~-1 #gstools:air if entity @e[type=tnt,tag=pillager_tnt,distance=0..12] run tp @s ~ ~ ~-0.3
-execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=4..4}] at @s if block ~ ~ ~1 #gstools:air if entity @e[type=tnt,tag=pillager_tnt,distance=0..12] run tp @s ~ ~ ~0.3
+execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=1..1}] at @s if block ~-1 ~ ~ #gstools:air if entity @e[type=tnt,distance=0..12] run tp @s ~-0.3 ~ ~
+execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=2..2}] at @s if block ~1 ~ ~ #gstools:air if entity @e[type=tnt,distance=0..12] run tp @s ~0.3 ~ ~
+execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=3..3}] at @s if block ~ ~ ~-1 #gstools:air if entity @e[type=tnt,distance=0..12] run tp @s ~ ~ ~-0.3
+execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=4..4}] at @s if block ~ ~ ~1 #gstools:air if entity @e[type=tnt,distance=0..12] run tp @s ~ ~ ~0.3
 
 execute as @e[type=tnt,tag=pillager_tnt] run scoreboard players add @s pillagerTntAliveTime 1
