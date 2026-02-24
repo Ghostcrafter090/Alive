@@ -20,6 +20,8 @@ execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=
 execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=1..4}] at @s if predicate gstools:sky run scoreboard players set @s pillagerMiningDirection 0
 
 execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon villager ~ ~ ~ {active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:10000,show_particles:0b}],attributes:[{id:"minecraft:max_health",base:1}]}
+execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon tnt ~ ~ ~ {Tags:['pillager_tnt']}
+execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run effect give @s resistance 5 5 true
 execute as @e[tag=mining_pillager] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run scoreboard players set @s pillagerMiningDirection 0
 
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=5..,entityVerticalMotion=-10..,random100=..5},sort=random,limit=2] at @s if block ~ ~1 ~1 #gstools:air unless predicate gstools:sky run scoreboard players operation @s pillagerMiningDirection = @s random10

@@ -74,7 +74,6 @@ execute as @e[tag=mining_pillager,scores={pillagerMiningBlockPercentage=60..60}]
 execute as @e[tag=mining_pillager,scores={pillagerMiningBlockPercentage=68..68}] at @s rotated as @s if block ^ ^ ^1 #minecraft:mineable/hoe run playsound block.sculk.hit block @a ~ ~ ~ 1
 execute as @e[tag=mining_pillager,scores={pillagerMiningBlockPercentage=76..76}] at @s rotated as @s if block ^ ^ ^1 #minecraft:mineable/hoe run playsound block.sculk.hit block @a ~ ~ ~ 1
 
-
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=5..}] at @s rotated as @s run scoreboard players add @s pillagerMiningBlockPercentage 1
 execute as @e[tag=mining_pillager,scores={pillagerMiningBlockPercentage=40..,pillagerMiningDirection=5..}] at @s rotated as @s unless block ~ ~-1 ~ bedrock run fill ~ ~-1 ~ ~ ~-1 ~ air destroy
 execute as @e[tag=mining_pillager,scores={pillagerMiningBlockPercentage=40..,pillagerMiningDirection=5..}] run scoreboard players set @s pillagerMiningBlockPercentage 0
