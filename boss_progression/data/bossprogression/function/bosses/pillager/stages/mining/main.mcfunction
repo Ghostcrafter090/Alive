@@ -1,6 +1,6 @@
 # Define
 scoreboard objectives add pillagerMiningBlockPercentage dummy
-scoreboard objectives add numberOfMiningPillagers dummy
+scoreboard objectives add numberOfPillagers dummy
 scoreboard objectives add pillagerMiningDirection dummy
 scoreboard objectives add pillagerTakingDamage dummy
 
@@ -8,11 +8,11 @@ scoreboard objectives add pillagerTakingDamage dummy
 execute unless entity @e[type=marker,tag=gstools_worker,scores={desirePathsLoaded=1..1}] as @e[tag=mining_pillager,limit=20,sort=random] store result score @s entityVerticalMotion run data get entity @s Motion[1] 100
 execute as @e[type=pillager,sort=random,limit=10] store result score @s pillagerTakingDamage run data get entity @s HurtTime
 
-execute if entity @e[tag=gstools_worker,type=marker,scores={numberOfMiningPillagers=..75}] as @e[type=marker,tag=gstools_vertical_cursor] at @s if block ~ ~ ~ #minecraft:air unless entity @e[tag=mining_pillager,distance=0..60] as @e[tag=gstools_cursor,sort=nearest,limit=1] if score @s verticalCursorWorker < @e[tag=gstools_worker,type=marker,limit=1] 60 run summon pillager ~ ~ ~ {PersistenceRequired:1b,CanPickUpLoot:1b,Tags:["mining_pillager"],equipment:{head:{id:"minecraft:iron_helmet",count:1},mainhand:{id:"minecraft:stone_pickaxe",count:1},offhand:{id:"minecraft:shield",count:1}}}
+execute if entity @e[tag=gstools_worker,type=marker,scores={numberOfPillagers=..85}] as @e[type=marker,tag=gstools_vertical_cursor] at @s if block ~ ~ ~ #minecraft:air unless entity @e[tag=mining_pillager,distance=0..60] as @e[tag=gstools_cursor,sort=nearest,limit=1] if score @s verticalCursorWorker < @e[tag=gstools_worker,type=marker,limit=1] 60 run summon pillager ~ ~ ~ {PersistenceRequired:1b,CanPickUpLoot:1b,Tags:["mining_pillager"],equipment:{head:{id:"minecraft:iron_helmet",count:1},mainhand:{id:"minecraft:stone_pickaxe",count:1},offhand:{id:"minecraft:shield",count:1}}}
 execute as @e[tag=mining_pillager,sort=random,limit=1] at @s run function gstools:util/light_level
 execute as @e[tag=mining_pillager] at @s run function gstools:util/random
 
-execute store result score @e[tag=gstools_worker,type=marker,limit=1] numberOfMiningPillagers if entity @e[tag=mining_pillager]
+execute store result score @e[tag=gstools_worker,type=marker,limit=1] numberOfPillagers if entity @e[type=pillager]
 
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=0..0},tag=!not_mining,sort=random,limit=1] run item replace entity @s weapon.mainhand with crossbow
 execute as @e[tag=mining_pillager,scores={pillagerMiningDirection=0..0},tag=!not_mining,sort=random,limit=1] run tag @s add not_mining
@@ -23,7 +23,7 @@ function bossprogression:bosses/pillager/stages/mining/ai/default
 function bossprogression:bosses/pillager/stages/mining/ai/ore
 
 # Base Construction
-execute as @e[tag=mining_pillager,sort=random,limit=1] at @s if entity @e[tag=gstools_worker,type=marker,scores={numberOfMiningPillagers=..60}] unless entity @e[tag=pillager_mining_outpost,type=marker,distance=0..300] if predicate gstools:sky run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost','not_setup']}
+execute as @e[tag=mining_pillager,sort=random,limit=1] at @s if entity @e[tag=gstools_worker,type=marker,scores={numberOfPillagers=..60}] unless entity @e[tag=pillager_mining_outpost,type=marker,distance=0..300] if predicate gstools:sky run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost','not_setup']}
 
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s run spreadplayers ~ ~ 1 10 false @s
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost_component','not_setup']}
