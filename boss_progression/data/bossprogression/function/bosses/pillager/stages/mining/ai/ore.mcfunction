@@ -1,4 +1,5 @@
 # Define
+scoreboard objectives add pillagerTntAliveTime dummy
 
 # Main
 execute as @e[tag=mining_pillager] at @s if block ~ ~-1 ~ #gstools:ore run tag @s add pillager_found_ore
@@ -28,6 +29,8 @@ execute as @e[tag=mining_pillager,tag=pillager_found_ore] if entity @s[scores={p
 execute as @e[tag=mining_pillager,tag=pillager_found_ore] if entity @s[scores={pillagerMiningDirection=4..4}] at @s if block ~ ~ ~10 #gstools:air run tag @s add pillager_tnt_run
 execute as @e[tag=mining_pillager,tag=pillager_found_ore] if entity @s[scores={pillagerMiningDirection=4..4}] at @s unless block ~ ~ ~10 #gstools:air run tag @s remove pillager_found_ore
 
-execute as @e[tag=mining_pillager,tag=pillager_found_ore] unless entity @e[type=tnt,tag=pillager_tnt] run tag @s remove pillager_found_ore
+execute as @e[tag=mining_pillager,tag=pillager_found_ore] unless entity @e[type=tnt,tag=pillager_tnt,distance=0..40] run tag @s remove pillager_found_ore
 
 execute as @e[tag=mining_pillager,tag=pillager_tnt_run] unless entity @e[tag=pillager_found_ore] run tag @s remove pillager_tnt_run
+
+execute as @e[type=tnt,tag=pillager_tnt,scores={pillagerTntAliveTime=100..}] run kill @s

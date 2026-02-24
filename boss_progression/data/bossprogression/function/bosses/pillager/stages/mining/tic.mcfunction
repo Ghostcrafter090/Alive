@@ -91,3 +91,4 @@ execute as @e[tag=mining_pillager,tag=pillager_found_ore] if entity @s[scores={p
 execute as @e[tag=mining_pillager,tag=pillager_found_ore] if entity @s[scores={pillagerMiningDirection=3..3},tag=pillager_tnt_run] at @s if block ~ ~ ~-1 #gstools:air run tp @s ~ ~ ~-0.3
 execute as @e[tag=mining_pillager,tag=pillager_found_ore] if entity @s[scores={pillagerMiningDirection=4..4},tag=pillager_tnt_run] at @s if block ~ ~ ~1 #gstools:air run tp @s ~ ~ ~0.3
 
+execute as @e[type=tnt,tag=pillager_tnt] run scoreboard players add @s pillagerTntAliveTime 1
