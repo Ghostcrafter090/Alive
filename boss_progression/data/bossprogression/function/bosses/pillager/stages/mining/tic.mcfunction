@@ -65,4 +65,6 @@ execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=55] if entity 
 execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=55] if entity @s[scores={pillagerMiningDirection=3..3}] at @s if block ~ ~-1 ~1 #gstools:air unless predicate gstools:sky run fill ~ ~-1 ~1 ~ ~-1 ~1 dark_oak_slab[type=top] destroy
 execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=55] if entity @s[scores={pillagerMiningDirection=4..4}] at @s if block ~ ~-1 ~-1 #gstools:air unless predicate gstools:sky run fill ~ ~-1 ~-1 ~ ~-1 ~-1 dark_oak_slab[type=top] destroy
 
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=55] if entity @s[scores={pillagerMiningDirection=5..}] at @s unless block ~ ~1 ~1 #gstools:air if block ~ ~1 ~ #gstools:air run fill ~ ~1 ~ ~ ~1 ~ ladder[facing=north] destroy
+
 execute as @e[type=tnt,tag=pillager_tnt] run scoreboard players add @s pillagerTntAliveTime 1

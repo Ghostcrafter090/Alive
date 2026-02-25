@@ -4,7 +4,6 @@ scoreboard objectives add numberOfTntStoreMarkers dummy
 # Main
 execute if entity @e[tag=gstools_worker,scores={random100=..50}] as @e[tag=mining_pillager,type=pillager,sort=random,limit=1] at @s run tag @s add make_patrol
 
-execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] if entity @s[scores={pillagerMiningDirection=5..}] at @s unless block ~ ~1 ~1 #gstools:air if block ~ ~1 ~ #gstools:air run fill ~ ~1 ~ ~ ~1 ~ ladder[facing=north] destroy
 execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] if entity @s[scores={lightLevel=..0}] at @s unless block ~ ~-1 ~ #gstools:air if block ~1 ~1 ~ #gstools:air if block ~-1 ~1 ~ #gstools:air if block ~ ~1 ~1 #gstools:air if block ~ ~1 ~-1 #gstools:air run fill ~ ~ ~ ~ ~ ~ redstone_torch replace #gstools:air
 execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] if entity @s[scores={lightLevel=..0}] at @s unless block ~1 ~1 ~ #gstools:air run fill ~ ~1 ~ ~ ~1 ~ redstone_wall_torch[facing=west] replace #gstools:air
 execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] if entity @s[scores={lightLevel=..0}] at @s unless block ~-1 ~1 ~ #gstools:air run fill ~ ~1 ~ ~ ~1 ~ redstone_wall_torch[facing=east] replace #gstools:air
