@@ -1,1 +1,1 @@
-execute as @e[type=parched] run function dynamicmonsters:skeleton/run
+execute as @e[type=parched,sort=random,limit=10] run function dynamicmonsters:skeleton/run
