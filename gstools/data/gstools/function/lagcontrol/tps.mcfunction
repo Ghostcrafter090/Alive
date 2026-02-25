@@ -36,7 +36,7 @@ function gstools:lagcontrol/version_conflict/worldborder_0
 execute unless entity @e[tag=gstools_worker,type=marker,scores={worldBorderVersionConflict=1..1}] store result score @e[type=marker,tag=gstools_worker] worldBorderPosPrevious run worldborder get
 execute unless entity @e[tag=gstools_worker,type=marker,scores={worldBorderVersionConflict=1..1}] if entity @e[type=marker,tag=gstools_worker] run worldborder add -20 1
 
-scoreboard players operation @e[type=marker,tag=gstools_worker] tps *= @e[type=marker,tag=gstools_worker] manualTpsModifier
+# scoreboard players operation @e[type=marker,tag=gstools_worker] tps *= @e[type=marker,tag=gstools_worker] manualTpsModifier
 
 scoreboard players set @e[type=marker,tag=gstools_worker] averageTpsWorker 200
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsWorker *= @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen
