@@ -22,7 +22,7 @@ execute as @e[tag=mining_pillager,type=pillager] if entity @s[scores={pillagerMi
 
 execute as @e[tag=mining_pillager,type=pillager,scores={random100=..2}] if entity @s[scores={pillagerMiningDirection=0..0}] at @s if entity @e[tag=walkable,distance=1..12,type=!player] run damage @s 0.0001 mob_attack by @e[tag=!tile,type=!pillager,sort=nearest,distance=1..20,limit=1,type=!player] from @e[tag=!tile,type=!pillager,sort=nearest,distance=1..20,limit=1,type=!player]
 
-execute as @e[tag=mining_pillager,type=pillager] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon villager ~ ~ ~ {active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:10000,show_particles:0b}],attributes:[{id:"minecraft:max_health",base:1}]}
+# execute as @e[tag=mining_pillager,type=pillager] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon villager ~ ~ ~ {active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:10000,show_particles:0b}],attributes:[{id:"minecraft:max_health",base:1}]}
 execute as @e[tag=mining_pillager,type=pillager] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon tnt ~ ~ ~ {Tags:['pillager_tnt']}
 execute as @e[tag=mining_pillager,type=pillager] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon marker ~ ~ ~ {Tags:['spawn_tnt_store']}
 
