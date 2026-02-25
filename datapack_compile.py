@@ -64,8 +64,19 @@ def compile(fileData, fileName, path):
     
     lineIndex = 0
     commandIndex = -1
+    unorderedMode = False
+    unorderedIndex = 0
     
     for line in fileData:
+        if "# <node:" in line:
+            if "/>" not in line:
+                if line.split(":")[1].split("/")[0].split(">")[0] == "non_direction":
+                    unorderedMode = True
+                    unorderedIndex = unorderedIndex + 1
+            else:
+                if line.split(":")[1].split("/")[0].split(">")[0] == "non_direction":
+                    unorderedMode = False
+                
         if ("execute" in line) and (line.replace(" ", "")[0] != "#"):
             statement = line.split(" run ")[0]
             try:
@@ -108,12 +119,16 @@ def compile(fileData, fileName, path):
                 if command:
                     executeData[commandIndex] = {
                         "command": segments[0],
-                        "data": [("execute " + " ".join(segments[1:]) + " run " + command).replace("execute  run ", "")]
+                        "data": [("execute " + " ".join(segments[1:]) + " run " + command).replace("execute  run ", "")],
+                        "undordered": unorderedMode,
+                        "unorderedIndex": unorderedIndex 
                     }
                 else:
                     executeData[commandIndex] = {
                         "command": segments[0],
-                        "data": [("execute " + " ".join(segments[1:]))]
+                        "data": [("execute " + " ".join(segments[1:]))],
+                        "undordered": unorderedMode,
+                        "unorderedIndex": unorderedIndex 
                     }
             
             else:
@@ -124,6 +139,7 @@ def compile(fileData, fileName, path):
             
             lastExecuteLine = segments
         else:
+            
             lastExecuteLine = ["-1"]
             commandIndex = -1
             executeData[lineIndex] = {
