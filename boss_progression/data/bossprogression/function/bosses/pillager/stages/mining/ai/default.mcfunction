@@ -21,11 +21,6 @@ execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] if entity 
 execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] if entity @s[scores={pillagerMiningDirection=1..4}] at @s if predicate gstools:sky run scoreboard players set @s pillagerMiningDirection 0
 
 execute as @e[tag=mining_pillager,type=pillager,scores={random100=..2}] if entity @s[scores={pillagerMiningDirection=0..0}] at @s if entity @e[tag=walkable,distance=1..12,type=!player] run damage @s 0.0001 mob_attack by @e[tag=!tile,type=!pillager,sort=nearest,distance=1..20,limit=1,type=!player] from @e[tag=!tile,type=!pillager,sort=nearest,distance=1..20,limit=1,type=!player]
-
-# execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon villager ~ ~ ~ {active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:10000,show_particles:0b}],attributes:[{id:"minecraft:max_health",base:1}]}
-execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon tnt ~ ~ ~ {Tags:['pillager_tnt']}
-execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon marker ~ ~ ~ {Tags:['spawn_tnt_store']}
-
 execute as @e[type=marker,tag=spawn_tnt_store] at @s unless entity @e[type=tnt,distance=0..20] unless entity @e[type=pillager,distance=0..20] run fill ~5 ~5 ~5 ~-5 ~-5 ~-5 air replace redstone_torch
 execute as @e[type=marker,tag=spawn_tnt_store] at @s unless entity @e[type=tnt,distance=0..20] unless entity @e[type=pillager,distance=0..20] run fill ~5 ~5 ~5 ~-5 ~-5 ~-5 air replace redstone_wall_torch
 execute as @e[type=marker,tag=spawn_tnt_store] at @s unless entity @e[type=tnt,distance=0..20] unless entity @e[type=pillager,distance=0..20] if block ~5 ~ ~ #c:stones run tag @s add tnt_fill_0 
@@ -43,6 +38,8 @@ execute as @e[type=marker,tag=spawn_tnt_store,sort=random,limit=1] at @s if enti
 execute as @e[tag=gstools_worker,type=marker] store result score @s numberOfTntStoreMarkers if entity @e[tag=spawn_tnt_store,type=marker]
 execute if entity @e[tag=gstools_worker,type=marker,scores={numberOfTntStoreMarkers=10..}] run kill @e[type=marker,tag=spawn_tnt_store,limit=5,sort=random]
 
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon tnt ~ ~ ~ {Tags:['pillager_tnt']}
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run summon marker ~ ~ ~ {Tags:['spawn_tnt_store']}
 execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run effect give @s resistance 5 5 true
 execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] if entity @s[scores={pillagerMiningDirection=1..}] at @s if entity @s[scores={pillagerTakingDamage=1..}] run scoreboard players set @s pillagerMiningDirection 0
 
