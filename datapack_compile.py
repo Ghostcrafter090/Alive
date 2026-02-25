@@ -68,6 +68,11 @@ def compile(fileData, fileName, path):
     unorderedIndex = 0
     
     for line in fileData:
+        
+        if (",x=" not in line) and ("[x=" not in line) and (",y=" not in line) and ("[y=" not in line) and (",z=" not in line) and ("[z=" not in line):
+            line = line.replace("tag=gstools_worker", "x=0,y=100,z=0,tag=gstools_worker")
+            line = line.replace("tag=gstools_worker,type=marker", "type=marker,tag=gstools_worker")
+        
         if "# <node:" in line:
             if "/>" not in line:
                 if line.split(":")[1].split("/")[0].split(">")[0] == "non_direction":
