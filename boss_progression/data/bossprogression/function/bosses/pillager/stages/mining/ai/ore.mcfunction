@@ -2,16 +2,16 @@
 scoreboard objectives add pillagerTntAliveTime dummy
 
 # Main
-execute as @e[tag=mining_pillager,type=pillager] at @s if block ~ ~-1 ~ #gstools:ore run tag @s add pillager_found_ore
-execute as @e[tag=mining_pillager,type=pillager] at @s if block ~1 ~ ~ #gstools:ore run tag @s add pillager_found_ore
-execute as @e[tag=mining_pillager,type=pillager] at @s if block ~1 ~1 ~ #gstools:ore run tag @s add pillager_found_ore
-execute as @e[tag=mining_pillager,type=pillager] at @s if block ~-1 ~ ~ #gstools:ore run tag @s add pillager_found_ore
-execute as @e[tag=mining_pillager,type=pillager] at @s if block ~-1 ~1 ~ #gstools:ore run tag @s add pillager_found_ore
-execute as @e[tag=mining_pillager,type=pillager] at @s if block ~ ~ ~1 #gstools:ore run tag @s add pillager_found_ore
-execute as @e[tag=mining_pillager,type=pillager] at @s if block ~ ~1 ~1 #gstools:ore run tag @s add pillager_found_ore
-execute as @e[tag=mining_pillager,type=pillager] at @s if block ~ ~ ~-1 #gstools:ore run tag @s add pillager_found_ore
-execute as @e[tag=mining_pillager,type=pillager] at @s if block ~ ~1 ~-1 #gstools:ore run tag @s add pillager_found_ore
-execute as @e[tag=mining_pillager,type=pillager] at @s if block ~ ~2 ~ #gstools:ore run tag @s add pillager_found_ore
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] at @s if block ~ ~-1 ~ #gstools:ore run tag @s add pillager_found_ore
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] at @s if block ~1 ~ ~ #gstools:ore run tag @s add pillager_found_ore
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] at @s if block ~1 ~1 ~ #gstools:ore run tag @s add pillager_found_ore
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] at @s if block ~-1 ~ ~ #gstools:ore run tag @s add pillager_found_ore
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] at @s if block ~-1 ~1 ~ #gstools:ore run tag @s add pillager_found_ore
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] at @s if block ~ ~ ~1 #gstools:ore run tag @s add pillager_found_ore
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] at @s if block ~ ~1 ~1 #gstools:ore run tag @s add pillager_found_ore
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] at @s if block ~ ~ ~-1 #gstools:ore run tag @s add pillager_found_ore
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] at @s if block ~ ~1 ~-1 #gstools:ore run tag @s add pillager_found_ore
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=10] at @s if block ~ ~2 ~ #gstools:ore run tag @s add pillager_found_ore
 
 execute as @e[tag=mining_pillager,type=pillager,tag=pillager_found_ore] if entity @s[scores={pillagerMiningDirection=1..1},tag=!pillager_tnt_run] at @s if block ~-10 ~ ~ #gstools:air run summon tnt ~ ~ ~ {Tags:['pillager_tnt']}
 execute as @e[tag=mining_pillager,type=pillager,tag=pillager_found_ore] if entity @s[scores={pillagerMiningDirection=1..1}] at @s unless block ~-10 ~ ~ #gstools:air run tag @s remove pillager_found_ore
