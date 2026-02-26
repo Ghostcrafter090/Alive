@@ -34,6 +34,7 @@ execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost_component','not_setup']}
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost_component','not_setup']}
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost_component','not_setup']}
+execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost_component','not_setup']}
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run tag @s remove not_setup
 
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s run spreadplayers ~ ~ 1 10 false @s
@@ -43,7 +44,7 @@ execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,so
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s if entity @s[tag=do_setup,scores={random100=31..60}] run place template minecraft:pillager_outpost/feature_tent2
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s if entity @s[tag=do_setup,scores={random100=61..78}] run place template minecraft:pillager_outpost/feature_cage1
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s if entity @s[tag=do_setup,scores={random100=79..90}] run place template minecraft:pillager_outpost/feature_cage2
-execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s if entity @s[tag=do_setup,scores={random100=91..100}] run place template minecraft:pillager_outpost/feature_cage_with_allays
+execute unless entity @e[tag=gstools_worker,type=marker,scores={pillagerStage=3..}] as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s if entity @s[tag=do_setup,scores={random100=91..100}] run summon marker ~ ~ ~ {Tags:['attack_portal_node','pillager_made']}
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s if entity @s[tag=do_setup] run fill ~10 ~10 ~10 ~-10 ~-10 ~-10 air replace jigsaw
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s if entity @s[tag=do_setup] run summon pillager ~ ~ ~ {PersistenceRequired:1b,CanPickUpLoot:1b,Tags:["mining_pillager"],equipment:{head:{id:"minecraft:iron_helmet",count:1},mainhand:{id:"minecraft:stone_pickaxe",count:1},offhand:{id:"minecraft:shield",count:1}}}
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s if entity @s[tag=do_setup] run tag @s remove not_setup
