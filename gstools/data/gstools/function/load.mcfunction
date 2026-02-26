@@ -69,6 +69,7 @@ scoreboard objectives add 50 dummy
 scoreboard objectives add 60 dummy
 scoreboard objectives add 100 dummy
 scoreboard objectives add 106 dummy
+scoreboard objectives add 127 dummy
 scoreboard objectives add 200 dummy
 scoreboard objectives add 201 dummy
 scoreboard objectives add 250 dummy
@@ -125,6 +126,7 @@ scoreboard players set @e[tag=gstools_worker,type=marker] 50 50
 scoreboard players set @e[tag=gstools_worker,type=marker] 60 60
 scoreboard players set @e[tag=gstools_worker,type=marker] 100 100
 scoreboard players set @e[tag=gstools_worker,type=marker] 106 106
+scoreboard players set @e[tag=gstools_worker,type=marker] 127 127
 scoreboard players set @e[tag=gstools_worker,type=marker] 200 200
 scoreboard players set @e[tag=gstools_worker,type=marker] 201 201
 

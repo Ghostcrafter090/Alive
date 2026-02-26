@@ -43,6 +43,9 @@ scoreboard players set @s randMultVal 2000
 execute as @s run scoreboard players operation @s random1000 %= @s randMultVal
 execute as @s run scoreboard players operation @s random1000 /= @s 2
 
+scoreboard players set @s randomNegate 1
+execute if entity @s[scores={random100=..500}] run scoreboard players set @s randomNegate -1
+
 scoreboard players set @s randMultVal 40
 execute as @s run scoreboard players operation @s randomSigned10 %= @s randMultVal
 execute as @s run scoreboard players operation @s randomSigned10 /= @s 2
@@ -50,5 +53,8 @@ execute as @s run scoreboard players remove @s randomSigned10 10
 scoreboard players set @s randMultVal 400
 execute as @s run scoreboard players operation @s randomSigned100 %= @s randMultVal
 execute as @s run scoreboard players operation @s randomSigned100 /= @s 2
+scoreboard players set @s randMultVal 4000
+execute as @s run scoreboard players operation @s randomSigned1000 %= @s randMultVal
+execute as @s run scoreboard players operation @s randomSigned1000 /= @s 2
 
 execute as @s run scoreboard players remove @s randomSigned100 100

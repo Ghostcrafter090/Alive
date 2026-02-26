@@ -1,0 +1,235 @@
+{
+    "condition": "minecraft:all_of",
+    "terms": [
+        {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": [
+                        "minecraft:cave_air",
+                        "minecraft:air",
+                        "minecraft:void_air",
+                        "minecraft:water",
+                        "minecraft:light",
+                        "minecraft:torch",
+                        "minecraft:redstone_torch",
+                        "minecraft:wall_torch",
+                        "minecraft:redstone_wall_torch",
+                        "minecraft:soul_torch",
+                        "minecraft:soul_wall_torch"
+                    ]
+                }
+            },
+            "offsetX": 0,
+            "offsetY": 2,
+            "offsetZ": 0
+        },
+        {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": [
+                        "minecraft:cave_air",
+                        "minecraft:air",
+                        "minecraft:void_air",
+                        "minecraft:water",
+                        "minecraft:light",
+                        "minecraft:torch",
+                        "minecraft:redstone_torch",
+                        "minecraft:wall_torch",
+                        "minecraft:redstone_wall_torch",
+                        "minecraft:soul_torch",
+                        "minecraft:soul_wall_torch"
+                    ]
+                }
+            },
+            "offsetX": 0,
+            "offsetY": 3,
+            "offsetZ": 0
+        },
+        {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": [
+                        "minecraft:cave_air",
+                        "minecraft:air",
+                        "minecraft:void_air",
+                        "minecraft:water",
+                        "minecraft:light",
+                        "minecraft:torch",
+                        "minecraft:redstone_torch",
+                        "minecraft:wall_torch",
+                        "minecraft:redstone_wall_torch",
+                        "minecraft:soul_torch",
+                        "minecraft:soul_wall_torch"
+                    ]
+                }
+            },
+            "offsetX": 0,
+            "offsetY": 4,
+            "offsetZ": 0
+        },
+        {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": [
+                        "minecraft:cave_air",
+                        "minecraft:air",
+                        "minecraft:void_air",
+                        "minecraft:water",
+                        "minecraft:light",
+                        "minecraft:torch",
+                        "minecraft:redstone_torch",
+                        "minecraft:wall_torch",
+                        "minecraft:redstone_wall_torch",
+                        "minecraft:soul_torch",
+                        "minecraft:soul_wall_torch"
+                    ]
+                }
+            },
+            "offsetX": 0,
+            "offsetY": 5,
+            "offsetZ": 0
+        },
+        {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": [
+                        "minecraft:cave_air",
+                        "minecraft:air",
+                        "minecraft:void_air",
+                        "minecraft:water",
+                        "minecraft:light",
+                        "minecraft:torch",
+                        "minecraft:redstone_torch",
+                        "minecraft:wall_torch",
+                        "minecraft:redstone_wall_torch",
+                        "minecraft:soul_torch",
+                        "minecraft:soul_wall_torch"
+                    ]
+                }
+            },
+            "offsetX": 0,
+            "offsetY": 6,
+            "offsetZ": 0
+        },
+        {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": [
+                        "minecraft:cave_air",
+                        "minecraft:air",
+                        "minecraft:void_air",
+                        "minecraft:water",
+                        "minecraft:light",
+                        "minecraft:torch",
+                        "minecraft:redstone_torch",
+                        "minecraft:wall_torch",
+                        "minecraft:redstone_wall_torch",
+                        "minecraft:soul_torch",
+                        "minecraft:soul_wall_torch"
+                    ]
+                }
+            },
+            "offsetX": 0,
+            "offsetY": 7,
+            "offsetZ": 0
+        },
+        {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": [
+                        "minecraft:cave_air",
+                        "minecraft:air",
+                        "minecraft:void_air",
+                        "minecraft:water",
+                        "minecraft:light",
+                        "minecraft:torch",
+                        "minecraft:redstone_torch",
+                        "minecraft:wall_torch",
+                        "minecraft:redstone_wall_torch",
+                        "minecraft:soul_torch",
+                        "minecraft:soul_wall_torch"
+                    ]
+                }
+            },
+            "offsetX": 0,
+            "offsetY": 8,
+            "offsetZ": 0
+        },
+        {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": [
+                        "minecraft:cave_air",
+                        "minecraft:air",
+                        "minecraft:void_air",
+                        "minecraft:water",
+                        "minecraft:light",
+                        "minecraft:torch",
+                        "minecraft:redstone_torch",
+                        "minecraft:wall_torch",
+                        "minecraft:redstone_wall_torch",
+                        "minecraft:soul_torch",
+                        "minecraft:soul_wall_torch"
+                    ]
+                }
+            },
+            "offsetX": 0,
+            "offsetY": 9,
+            "offsetZ": 0
+        },
+        {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": [
+                        "minecraft:cave_air",
+                        "minecraft:air",
+                        "minecraft:void_air",
+                        "minecraft:water",
+                        "minecraft:light",
+                        "minecraft:torch",
+                        "minecraft:redstone_torch",
+                        "minecraft:wall_torch",
+                        "minecraft:redstone_wall_torch",
+                        "minecraft:soul_torch",
+                        "minecraft:soul_wall_torch"
+                    ]
+                }
+            },
+            "offsetX": 0,
+            "offsetY": 10,
+            "offsetZ": 0
+        },
+        {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": [
+                        "minecraft:cave_air",
+                        "minecraft:air",
+                        "minecraft:void_air",
+                        "minecraft:water",
+                        "minecraft:light",
+                        "minecraft:torch",
+                        "minecraft:redstone_torch",
+                        "minecraft:wall_torch",
+                        "minecraft:redstone_wall_torch",
+                        "minecraft:soul_torch",
+                        "minecraft:soul_wall_torch"
+                    ]
+                }
+            },
+            "offsetX": 0,
+            "offsetY": 111,
+            "offsetZ": 0
+        }
+    ]
+}
