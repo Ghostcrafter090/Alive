@@ -68,3 +68,6 @@ execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=55] if entity 
 execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=55] if entity @s[scores={pillagerMiningDirection=5..}] at @s unless block ~ ~1 ~1 #gstools:air if block ~ ~1 ~ #gstools:air run fill ~ ~1 ~ ~ ~1 ~ ladder[facing=north] destroy
 
 execute as @e[type=tnt,tag=pillager_tnt] run scoreboard players add @s pillagerTntAliveTime 1
+
+execute as @e[tag=attack_portal_node,tag=pillager_made] at @s if entity @e[type=small_fireball,distance=0..4] at @s run summon tnt ~ ~1 ~ {fuse:1}
+execute as @e[tag=attack_portal_node,tag=pillager_made] at @s as @e[type=small_fireball,distance=0..4] at @s run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 minecraft:magma_block replace minecraft:obsidian
