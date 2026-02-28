@@ -28,7 +28,7 @@ execute in the_nether as @e[tag=nether_overworld,distance=0..] run effect give @
 execute as @e[tag=attack_portal_node,type=marker,tag=portal_generated,limit=1,sort=random,scores={attackPortalSpawnTic=300..}] if entity @e[tag=gstools_worker,type=marker,limit=1,scores={numberOfOverworldNetherMobs=..165}] run function gstools:util/random
 execute as @e[tag=attack_portal_node,type=marker,tag=portal_generated,limit=1,sort=random,scores={attackPortalSpawnTic=300..}] if entity @e[tag=gstools_worker,type=marker,limit=1,scores={numberOfOverworldNetherMobs=..165}] if entity @s[scores={random100=..85}] run scoreboard players set @s attackPortalSpawnTic 298
 
-execute as @e[tag=attack_portal_node,type=marker] at @s run spreadplayers ~ ~ 1 10 false @e[tag=nether_overworld,distance=0..4]
+execute as @e[tag=attack_portal_node,type=marker] at @s in overworld run spreadplayers ~ ~ 1 10 false @e[tag=nether_overworld,distance=0..4]
 
 execute as @e[tag=attack_portal_node,tag=portal_generated,limit=1,sort=random,scores={attackPortalSpawnTic=300..}] run scoreboard players set @s attackPortalSpawnTic 0
 

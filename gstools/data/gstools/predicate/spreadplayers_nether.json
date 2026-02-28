@@ -228,8 +228,74 @@
                 }
             },
             "offsetX": 0,
-            "offsetY": 111,
+            "offsetY": 1,
             "offsetZ": 0
+        },
+        {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": [
+                        "minecraft:cave_air",
+                        "minecraft:air",
+                        "minecraft:void_air",
+                        "minecraft:water",
+                        "minecraft:light",
+                        "minecraft:torch",
+                        "minecraft:redstone_torch",
+                        "minecraft:wall_torch",
+                        "minecraft:redstone_wall_torch",
+                        "minecraft:soul_torch",
+                        "minecraft:soul_wall_torch"
+                    ]
+                }
+            },
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0
+        },
+        {
+            "condition": "minecraft:inverted",
+            "term": {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                    "block": {
+                        "blocks": [
+                            "minecraft:cave_air",
+                            "minecraft:air",
+                            "minecraft:void_air",
+                            "minecraft:water",
+                            "minecraft:light",
+                            "minecraft:torch",
+                            "minecraft:redstone_torch",
+                            "minecraft:wall_torch",
+                            "minecraft:redstone_wall_torch",
+                            "minecraft:soul_torch",
+                            "minecraft:soul_wall_torch",
+                            "minecraft:lava"
+                        ]
+                    }
+                },
+                "offsetX": 0,
+                "offsetY": -1,
+                "offsetZ": 0
+            }
+        },
+        {
+            "condition": "minecraft:inverted",
+            "term": {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                    "block": {
+                        "blocks": [
+                            "minecraft:bedrock"
+                        ]
+                    }
+                },
+                "offsetX": 0,
+                "offsetY": -1,
+                "offsetZ": 0
+            }
         }
     ]
 }

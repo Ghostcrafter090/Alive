@@ -9,7 +9,7 @@ execute as @e[type=marker,tag=attack_portal_node,tag=!portal_gen] at @s run fill
 execute as @e[type=marker,tag=attack_portal_node,tag=!portal_gen] at @s run fill ~2 ~ ~ ~1 ~3 ~ air replace cave_air
 
 execute as @e[type=marker,tag=attack_portal_node,tag=!portal_gen] at @s unless block ~ ~-1 ~ #gstools:air unless block ~1 ~-1 ~ #gstools:air unless block ~2 ~-1 ~ #gstools:air unless block ~3 ~-1 ~ #gstools:air if blocks ~2 ~ ~ ~1 ~3 ~ 1 0 0 all run tag @s add portal_gen
-execute as @e[type=marker,tag=attack_portal_node,tag=!portal_gen] at @s run spreadplayers ~ ~ 1 10 false @s
+execute as @e[type=marker,tag=attack_portal_node,tag=!portal_gen] at @s in overworld run spreadplayers ~ ~ 1 10 false @s
 execute as @e[type=marker,tag=attack_portal_node,tag=!portal_gen] at @s run scoreboard players add @s attackPortalNodeKillTic 1
 execute as @e[type=marker,tag=attack_portal_node,tag=!portal_gen] at @s if entity @s[scores={attackPortalNodeKillTic=10..}] run kill @s
 
