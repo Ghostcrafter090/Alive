@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:smithing_transform",
+    "base": "minecraft:totem_of_undying",
+    "addition": "minecraft:echo_shard",
+    "template": "minecraft:blaze_powder",
+    "result": {
+        "id": "minecraft:totem_of_undying",
+        "components": {
+            "minecraft:custom_name": {
+                "bold": false,
+                "color": "aqua",
+                "italic": false,
+                "shadow_color": 1010480090,
+                "text": "Enchanted Totem Of Undying"
+            },
+            "minecraft:enchantment_glint_override": true
+        }
+    }
+}
