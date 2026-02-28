@@ -66,4 +66,4 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..5}] as @
 execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..5}] as @e[type=illusioner,sort=random,limit=1] at @s run damage @s 0.000001 minecraft:mob_attack by @e[tag=monster,distance=..20,limit=1,sort=nearest] from @e[tag=monster,distance=..20,limit=1,sort=nearest]
 execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..5}] as @e[type=illusioner,sort=random,limit=1] at @s run damage @s 0.000001 minecraft:mob_attack by @e[tag=nether,distance=..20,limit=1,sort=nearest] from @e[tag=nether,distance=..20,limit=1,sort=nearest]
 
-effect give @e[type=illusioner] 
+effect give @e[type=illusioner,sort=random,limit=1] regeneration infinite 0 true
