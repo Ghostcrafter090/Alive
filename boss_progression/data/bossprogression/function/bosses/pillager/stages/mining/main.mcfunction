@@ -63,3 +63,5 @@ effect give @e[tag=mining_pillager,type=pillager,scores={pillagerMiningDirection
 effect give @e[tag=mining_pillager,type=pillager,sort=random,limit=1] regeneration 10 0
 
 execute as @e[type=piglin,sort=random,limit=1] at @s run damage @s 0.000001 minecraft:mob_attack by @e[type=pillager,distance=..20,limit=1,sort=nearest] from @e[type=pillager,distance=..20,limit=1,sort=nearest]
+execute as @e[type=vindicator,sort=random,limit=1] at @s run damage @s 0.000001 minecraft:mob_attack by @e[tag=monster,distance=..20,limit=1,sort=nearest] from @e[tag=monster,distance=..20,limit=1,sort=nearest]
+execute as @e[type=vindicator,sort=random,limit=1] at @s run damage @s 0.000001 minecraft:mob_attack by @e[tag=nether,distance=..20,limit=1,sort=nearest] from @e[tag=nether,distance=..20,limit=1,sort=nearest]
