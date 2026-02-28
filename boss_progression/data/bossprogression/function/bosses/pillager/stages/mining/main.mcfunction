@@ -1,7 +1,7 @@
 # Define
 scoreboard objectives add pillagerMiningBlockPercentage dummy
 scoreboard objectives add numberOfPillagers dummy
-scoreboard objectives add numberOfVindicators dummy
+scoreboard objectives add numberOfIllusioners dummy
 scoreboard objectives add pillagerMiningDirection dummy
 scoreboard objectives add pillagerTakingDamage dummy
 
@@ -14,8 +14,8 @@ execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=1] at @s run f
 execute as @e[tag=mining_pillager,type=pillager] at @s run function gstools:util/random
 
 execute store result score @e[tag=gstools_worker,type=marker,limit=1] numberOfPillagers if entity @e[type=pillager]
-execute store result score @e[tag=gstools_worker,type=marker,limit=1] numberOfVindicators if entity @e[type=vindicator]
-execute as @e[tag=gstools_worker,type=marker,limit=1] run scoreboard players operation @s numberOfPillagers += @s numberOfVindicators
+execute store result score @e[tag=gstools_worker,type=marker,limit=1] numberOfIllusioners if entity @e[type=vindicator]
+execute as @e[tag=gstools_worker,type=marker,limit=1] run scoreboard players operation @s numberOfPillagers += @s numberOfIllusioners
 
 execute as @e[tag=mining_pillager,type=pillager,scores={pillagerMiningDirection=0..0},tag=!not_mining,sort=random,limit=1] run item replace entity @s weapon.mainhand with crossbow
 execute as @e[tag=mining_pillager,type=pillager,scores={pillagerMiningDirection=0..0},tag=!not_mining,sort=random,limit=1] run tag @s add not_mining
