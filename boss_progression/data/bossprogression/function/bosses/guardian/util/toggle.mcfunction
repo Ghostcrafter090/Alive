@@ -2,8 +2,10 @@
 scoreboard objectives add enableGuardianBoss dummy
 
 # Main
-execute unless entity @e[tag=gstools_worker,type=marker,scores={enableGuardianBoss=1..1}] as @e[type=elder_guardian,tag=!guardian_disable] run data modify entity @s Invulnerable set value 1b
-execute unless entity @e[tag=gstools_worker,type=marker,scores={enableGuardianBoss=1..1}] as @e[type=elder_guardian,tag=!guardian_disable] run tag @s add guardian_disable
+execute as @e[type=elder_guardian,sort=random,limit=1] unless entity @s[scores={enableGuardianBoss=1..1}] unless entity @s[tag=guardian_disable] run data modify entity @s Invulnerable set value 1b
+execute as @e[type=elder_guardian,sort=random,limit=1] unless entity @s[scores={enableGuardianBoss=1..1}] unless entity @s[tag=guardian_disable] run tag @s add guardian_disable
 
-execute if entity @e[tag=gstools_worker,type=marker,scores={enableGuardianBoss=1..1}] as @e[type=elder_guardian,tag=guardian_disable] run data modify entity @s Invulnerable set value 0b
-execute if entity @e[tag=gstools_worker,type=marker,scores={enableGuardianBoss=1..1}] as @e[type=elder_guardian,tag=guardian_disable] run tag @s remove guardian_disable
+execute as @e[type=elder_guardian,sort=random,limit=1] if entity @s[scores={enableGuardianBoss=1..1}] if entity @s[tag=guardian_disable] run data modify entity @s Invulnerable set value 0b
+execute as @e[type=elder_guardian,sort=random,limit=1] if entity @s[scores={enableGuardianBoss=1..1}] if entity @s[tag=guardian_disable] run tag @s remove guardian_disable
+
+execute as @e[type=elder_guardian,sort=random,limit=1] at @s as @a[distance=0..30] if entity @s[nbt={SelectedItem:{id:"minecraft:totem_of_undying",components:{"minecraft:enchantment_glint_override":1b}}}] run scoreboard players set @s enableGuardianBoss 1
