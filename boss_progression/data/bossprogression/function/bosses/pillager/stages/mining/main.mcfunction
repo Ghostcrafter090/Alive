@@ -63,7 +63,7 @@ effect give @e[tag=mining_pillager,type=pillager,scores={pillagerMiningDirection
 effect give @e[tag=mining_pillager,type=pillager,sort=random,limit=1] regeneration 10 0
 
 execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..5}] as @e[type=piglin,sort=random,limit=1] at @s run damage @s 0.000001 minecraft:mob_attack by @e[type=pillager,distance=..20,limit=1,sort=nearest] from @e[type=pillager,distance=..20,limit=1,sort=nearest]
-execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..5}] as @e[type=illusioner,sort=random,limit=1] at @s run damage @s 0.000001 minecraft:mob_attack by @e[tag=monster,distance=..20,limit=1,sort=nearest] from @e[tag=monster,distance=..20,limit=1,sort=nearest]
-execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..5}] as @e[type=illusioner,sort=random,limit=1] at @s run damage @s 0.000001 minecraft:mob_attack by @e[tag=nether,distance=..20,limit=1,sort=nearest] from @e[tag=nether,distance=..20,limit=1,sort=nearest]
+execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..5}] as @e[type=illusioner,sort=random,limit=1] at @s run damage @s 0.000001 minecraft:mob_attack by @e[tag=!is_human,tag=monster,distance=..20,limit=1,sort=nearest] from @e[tag=!is_human,tag=monster,distance=..20,limit=1,sort=nearest]
+execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..5}] as @e[type=illusioner,sort=random,limit=1] at @s run damage @s 0.000001 minecraft:mob_attack by @e[tag=!is_human,tag=nether,distance=..20,limit=1,sort=nearest] from @e[tag=!is_human,tag=nether,distance=..20,limit=1,sort=nearest]
 
 effect give @e[type=illusioner,sort=random,limit=1] regeneration infinite 0 true
