@@ -2,6 +2,8 @@
 scoreboard objectives add undeadHydrationConversionOverride dummy
 
 # Main
+scoreboard players set @e[tag=gstools_worker,type=marker,limit=1] guardianEffectsAreActive 1
+
 weather thunder 1000
 execute if entity @e[tag=gstools_worker,scores={timeOfDay=0..12500}] run time add 3t
 execute as @a at @s run particle bubble ~ ~ ~ 40 40 40 0 50
@@ -48,4 +50,5 @@ execute as @e[type=stray,sort=random,limit=10] at @s unless block ~ ~ ~ water[le
 execute if entity @e[tag=gstools_worker,type=marker,limit=1,scores={random100=..5}] as @e[type=creeper,sort=random,limit=1] at @s unless block ~ ~ ~ water[level=0] run data modify entity @s powered set value 1b
 execute if entity @e[tag=gstools_worker,type=marker,limit=1,scores={random100=95..}] as @e[type=creeper,sort=random,limit=1] at @s unless block ~ ~ ~ water[level=0] run data modify entity @s powered set value 0b
 
-execute as @e[type=marker,tag=gstools_vertical_cursor] at @s if block ~ ~ ~ #gstools:air unless entity @e[type=guardian,distance=0..100] run summon guardian ~ ~ ~
+execute as @e[type=marker,tag=gstools_vertical_cursor] at @s if block ~ ~ ~ #gstools:air unless entity @e[type=guardian,distance=0..100] run summon guardian ~ ~ ~ {PersistenceRequired:1b}
+execute as @e[type=marker,tag=gstools_vertical_cursor] at @s if block ~ ~ ~ #gstools:air unless entity @e[type=squid,distance=0..75] run summon squid ~ ~ ~ {PersistenceRequired:1b}
