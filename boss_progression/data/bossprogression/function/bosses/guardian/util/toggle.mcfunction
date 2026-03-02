@@ -11,4 +11,6 @@ execute as @e[type=elder_guardian,sort=random,limit=1] if entity @s[scores={enab
 execute as @e[type=elder_guardian,sort=random,limit=1,tag=guardian_disable] at @s if entity @a[distance=0..30,nbt={equipment:{head:{id:"minecraft:turtle_helmet",count:1,components:{"minecraft:enchantments":{"minecraft:flame":1}}}}}] run summon lightning_bolt ~ ~30 ~
 execute as @e[type=elder_guardian,sort=random,limit=1,tag=guardian_disable] at @s if entity @a[distance=0..30,nbt={equipment:{head:{id:"minecraft:turtle_helmet",count:1,components:{"minecraft:enchantments":{"minecraft:flame":1}}}}}] run scoreboard players set @s enableGuardianBoss 1
 
-execute as @e[type=elder_guardian,tag=!guardian_disable] run 
+execute as @e[type=elder_guardian,tag=!guardian_disable] at @s run particle minecraft:dolphin ~ ~ ~ 0 10 0 1 10
+execute as @e[type=elder_guardian,tag=!guardian_disable] at @s run particle minecraft:bubble_column_up ~ ~ ~ 0 10 0 1 10
+execute as @e[type=elder_guardian,tag=!guardian_disable] at @s run particle minecraft:underwater ~ ~ ~ 1 10 1 1 10

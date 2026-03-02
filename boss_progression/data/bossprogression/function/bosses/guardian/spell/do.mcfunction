@@ -4,6 +4,10 @@
 scoreboard players add @s guardianSpellTic 1
 
 particle dripping_water ~ ~ ~ 1 100 1 0 100 force
+particle minecraft:dolphin ~ ~ ~ 0 10 0 1 100 force
+particle minecraft:bubble_column_up ~ ~ ~ 0 10 0 1 100 force
+particle minecraft:underwater ~ ~ ~ 1 10 1 1 100 force
+
 playsound minecraft:ambient.crimson_forest.mood master @a ~ ~ ~ 10 1
 execute if entity @s[scores={guardianSpellTic=400..410}] run playsound minecraft:ambient.crimson_forest.mood ambient @a ~ ~ ~ 0.1 0.1
 execute if entity @s[scores={guardianSpellTic=410..420}] run playsound minecraft:ambient.crimson_forest.mood ambient @a ~ ~ ~ 0.2 0.1
