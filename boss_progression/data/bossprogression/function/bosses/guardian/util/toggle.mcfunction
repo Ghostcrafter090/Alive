@@ -9,4 +9,6 @@ execute as @e[type=elder_guardian,sort=random,limit=1] if entity @s[scores={enab
 execute as @e[type=elder_guardian,sort=random,limit=1] if entity @s[scores={enableGuardianBoss=1..1}] if entity @s[tag=guardian_disable] run tag @s remove guardian_disable
 
 execute as @e[type=elder_guardian,sort=random,limit=1,tag=guardian_disable] at @s if entity @a[distance=0..30,nbt={equipment:{head:{id:"minecraft:turtle_helmet",count:1,components:{"minecraft:enchantments":{"minecraft:flame":1}}}}}] run summon lightning_bolt ~ ~30 ~
-execute as @e[type=elder_guardian,sort=random,limit=1,tag=guardian_disable] at @s if entity @a[distance=0..30,nbt={SelectedItem:{id:"minecraft:totem_of_undying",components:{"minecraft:enchantment_glint_override":1b}}}] run scoreboard players set @s enableGuardianBoss 1
+execute as @e[type=elder_guardian,sort=random,limit=1,tag=guardian_disable] at @s if entity @a[distance=0..30,nbt={equipment:{head:{id:"minecraft:turtle_helmet",count:1,components:{"minecraft:enchantments":{"minecraft:flame":1}}}}}] run scoreboard players set @s enableGuardianBoss 1
+
+execute as @e[type=elder_guardian,tag=!guardian_disable] run 
