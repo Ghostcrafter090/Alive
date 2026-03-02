@@ -66,10 +66,11 @@ class analyze:
             if "Failed to load function" in line:
                 if not "version_conflict" in line:
                     if not "blockdecay:decay/" in line:
-                        if not "gstools:compat" in line:
-                            if not "minecraft:compat" in line:
-                                doPrint = True
-                                print(line)
+                        if not "timelib" in line:
+                            if not "gstools:compat" in line:
+                                if not "minecraft:compat" in line:
+                                    doPrint = True
+                                    print(line)
             
             if "Errors in registry minecraft:root:" in line:
                 isError = True

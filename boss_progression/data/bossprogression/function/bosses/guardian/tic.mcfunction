@@ -1,0 +1,1 @@
+execute if entity @e[tag=gstools_worker,type=marker,limit=1,scores={crownOfTheSeaHasBeenSpawned=1..1}] run function bossprogression:bosses/guardian/effects/tic

@@ -4,7 +4,11 @@
 function bossprogression:bosses/wither/spell/check
 function bossprogression:bosses/wither/spell/main
 
+function bossprogression:bosses/guardian/spell/check
+function bossprogression:bosses/guardian/spell/main
+
 function bossprogression:bosses/pillager/stages/mining/tic
+function bossprogression:bosses/guardian/tic
 
 execute as @e[type=item,tag=!boss_item_checked] if entity @s[nbt={Item:{id:"minecraft:nether_star"}}] run data merge entity @s {Invulnerable:1b}
 execute as @e[type=item,tag=!boss_item_checked] if entity @s[nbt={Item:{id:"minecraft:totem_of_undying",components:{"minecraft:enchantment_glint_override":1b}}}] run data merge entity @s {Invulnerable:1b}
