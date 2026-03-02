@@ -17,12 +17,13 @@ execute unless entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsA
 execute unless entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~-1 ~ ~ ~-1 ~ mud replace clay
 execute unless entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~-1 ~ ~ ~-1 ~ clay replace sand
 
-execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace grass_block
-execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~-1 ~ ~ ~-1 ~ packed_mud replace dirt
-execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~-1 ~ ~ ~-1 ~ packed_mud replace coarse_dirt
-execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~-1 ~ ~ ~-1 ~ mud replace packed_mud
-execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~-1 ~ ~ ~-1 ~ clay replace mud
+
 execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~-1 ~ ~ ~-1 ~ sand replace clay
+execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~-1 ~ ~ ~-1 ~ clay replace mud
+execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~-1 ~ ~ ~-1 ~ mud replace packed_mud
+execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~-1 ~ ~ ~-1 ~ packed_mud replace coarse_dirt
+execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~-1 ~ ~ ~-1 ~ packed_mud replace dirt
+execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace grass_block
 
 execute as @e[tag=gstools_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~-1 ~ ~ ~-1 ~ sand replace red_sand
 execute as @e[tag=gstools_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~-1 ~ ~ ~-1 ~ sand replace gravel
@@ -90,12 +91,12 @@ execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ sand repla
 execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ sand replace gravel
 execute as @e[tag=gstools_vertical_cursor] at @s run fill ~ ~ ~ ~ ~ ~ gravel replace #dynamicdirt:mossy_cobblestone
 
-execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_vertical_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~ ~ ~ ~ ~ dirt replace grass_block
-execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_vertical_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~ ~ ~ ~ ~ packed_mud replace dirt
-execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_vertical_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~ ~ ~ ~ ~ packed_mud replace coarse_dirt
-execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_vertical_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~ ~ ~ ~ ~ mud replace packed_mud
-execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_vertical_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~ ~ ~ ~ ~ clay replace mud
 execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_vertical_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~ ~ ~ ~ ~ sand replace clay
+execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_vertical_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~ ~ ~ ~ ~ clay replace mud
+execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_vertical_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~ ~ ~ ~ ~ mud replace packed_mud
+execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_vertical_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~ ~ ~ ~ ~ packed_mud replace coarse_dirt
+execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_vertical_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~ ~ ~ ~ ~ packed_mud replace dirt
+execute if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..1}] as @e[tag=gstools_vertical_cursor] at @s unless block ~ ~-2 ~ #gstools:air run fill ~ ~ ~ ~ ~ ~ dirt replace grass_block
 
 execute as @e[tag=gstools_vertical_cursor] if entity @s[scores={currentTemperature=40..}] at @s run fill ~ ~ ~ ~ ~ ~ coarse_dirt replace rooted_dirt
 execute as @e[tag=gstools_vertical_cursor] if entity @s[scores={currentTemperature=40..}] at @s run fill ~ ~ ~ ~ ~ ~ coarse_dirt replace dirt
