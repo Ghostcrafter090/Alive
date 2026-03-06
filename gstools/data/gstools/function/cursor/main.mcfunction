@@ -50,4 +50,4 @@ execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] as
 execute unless entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] as @e[tag=gstools_chunk_worker] at @s unless entity @e[tag=gstools_worker,distance=..16] run forceload remove ~ ~ ~ ~
 execute unless entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] run forceload remove all
 execute unless entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] run forceload add 0 0
-
+execute unless entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] if entity @e[tag=gstools_worker,type=marker,scores={seasonGrabberIndex=0..99}] run forceload add 5999938 0 5999938 0
