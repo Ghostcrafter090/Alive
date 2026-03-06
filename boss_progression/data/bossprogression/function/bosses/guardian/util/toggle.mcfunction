@@ -8,7 +8,9 @@ execute as @e[type=elder_guardian,sort=random,limit=1] unless entity @s[scores={
 execute as @e[type=elder_guardian,sort=random,limit=1] unless entity @s[scores={enableGuardianBoss=1..1}] unless entity @s[tag=guardian_disable] run tag @s add guardian_disable
 
 execute as @e[type=elder_guardian,sort=random,limit=1] if entity @s[scores={enableGuardianBoss=1..1}] if entity @s[tag=guardian_disable] run data modify entity @s Invulnerable set value 0b
-execute as @e[type=elder_guardian,sort=random,limit=1] if entity @s[scores={enableGuardianBoss=1..1}] if entity @s[tag=guardian_disable] run data merge entity @s {Passengers:[{id:"minecraft:marker",Tags:["elder_guardian_node"]}]}
+execute as @e[type=elder_guardian,sort=random,limit=1] if entity @s[scores={enableGuardianBoss=1..1}] if entity @s[tag=guardian_disable] at @s run summon marker ~ ~ ~ {Tags:["elder_guardian_node","elder_guardian_node_not_setup"]}
+execute as @e[type=elder_guardian,sort=random,limit=1] if entity @s[scores={enableGuardianBoss=1..1}] if entity @s[tag=guardian_disable] at @s as @e[type=marker,tag=elder_guardian_node_not_setup,distance=0..1,sort=nearest,limit=1] run ride @s mount @e[type=elder_guardian,distance=0..1,sort=nearest,limit=1]
+execute as @e[type=elder_guardian,sort=random,limit=1] if entity @s[scores={enableGuardianBoss=1..1}] if entity @s[tag=guardian_disable] at @s as @e[type=marker,tag=elder_guardian_node_not_setup,distance=0..1,sort=nearest,limit=1] run tag @s remove elder_guardian_node_not_setup
 execute as @e[type=elder_guardian,sort=random,limit=1] if entity @s[scores={enableGuardianBoss=1..1}] if entity @s[tag=guardian_disable] run tag @s remove guardian_disable
 
 execute as @e[type=elder_guardian,sort=random,limit=1,tag=guardian_disable] at @s if entity @a[distance=0..30,nbt={equipment:{head:{id:"minecraft:turtle_helmet",count:1,components:{"minecraft:enchantments":{"minecraft:flame":1}}}}}] run summon lightning_bolt ~ ~30 ~
