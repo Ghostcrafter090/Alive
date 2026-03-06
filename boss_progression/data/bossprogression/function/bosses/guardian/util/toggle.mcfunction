@@ -22,5 +22,7 @@ execute as @e[type=elder_guardian,tag=!guardian_disable] at @s run particle mine
 
 # execute as @e[type=item_frame] at @s positioned ~ ~-12 ~3 if block ~ ~ ~ minecraft:jukebox{RecordItem:{id:"minecraft:music_disc_5"}}
 
+scoreboard players set @e[tag=gstools_worker,type=marker] elderGuardianKilledCount 0
 execute as @e[type=marker,tag=elder_guardian_node] at @s unless entity @e[type=elder_guardian,distance=0..3] run scoreboard players add @e[tag=gstools_worker,type=marker] elderGuardianKilledCount 1
 execute as @e[tag=gstools_worker,type=marker,scores={elderGuardianKilledCount=3..}] run scoreboard players set @s guardiansHaveBeenKilled 1
+execute as @e[tag=gstools_worker,type=marker,scores={elderGuardianKilledCount=3..}] run scoreboard players set @a elderGuardianKilledCount 0
