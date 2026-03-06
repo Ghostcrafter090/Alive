@@ -42,3 +42,5 @@ execute if entity @s[scores={witherSpellTic=1..1}] as @e[type=marker,tag=gstools
 execute if entity @s[scores={witherSpellTic=1..1}] as @e[type=marker,tag=gstools_worker,limit=1] run scoreboard players set @s witherHasBeenKilled 0
 execute if entity @s[scores={witherSpellTic=1..1}] as @e[type=marker,tag=gstools_worker,limit=1] run scoreboard players set @s currentTemperatureWitherModif 1000
 execute if entity @s[scores={witherSpellTic=599..599}] as @e[type=marker,tag=gstools_worker,limit=1] run scoreboard players set @s currentTemperatureWitherModif 0
+
+execute unless entity @e[tag=gstools_worker,type=marker,scores={witherHasBeenKilled=1..1}] if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] if entity @e[tag=gstools_worker,scores={isSereneSeasonsPresent=1..1}] unless entity @e[tag=gstools_worker,scores={currentSeasonDayOld=16..30}] run time add 1000t

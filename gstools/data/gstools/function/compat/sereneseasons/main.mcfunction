@@ -1,8 +1,10 @@
 # Define
 scoreboard objectives add seasonGrabberIndex dummy
+scoreboard objectives add currentSeasonDayOld dummy
 
 # Main
 execute if block 0 100 0 sereneseasons:season_sensor
+execute as @e[tag=gstools_worker,type=marker] if entity @s[scores={seasonGrabberIndex=0..0,currentSeasonDay=1..}] run scoreboard players operation @s currentSeasonDayOld = @s currentSeasonDay
 execute as @e[tag=gstools_worker,type=marker] if entity @s[scores={seasonGrabberIndex=0..0}] run scoreboard players set @s currentSeasonDay 0
 execute as @e[tag=gstools_worker,type=marker] if entity @s[scores={seasonGrabberIndex=0..99}] run function gstools:compat/sereneseasons/place
 execute as @e[tag=gstools_worker,type=marker] if entity @s[scores={seasonGrabberIndex=24..24}] run function gstools:compat/sereneseasons/get
