@@ -36,8 +36,6 @@ execute as @e[type=zombie] store result entity @s DrownedConversionTime int 1 ru
 
 data merge entity @e[tag=fish,limit=1,sort=random] {Air:1000,NoGravity:1b}
 
-
-
 execute as @e[tag=fish,sort=random,limit=1,type=!elder_guardian] at @s if block ~ ~ ~ water[level=0] run data modify entity @s Motion[1] set value 1
 
 execute as @e[tag=fish,sort=random,limit=10] at @s unless block ~ ~ ~ water[level=0] run particle minecraft:nautilus ~ ~ ~ 0 0 0 2 10

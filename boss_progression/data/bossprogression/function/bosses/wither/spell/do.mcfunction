@@ -3,6 +3,8 @@
 # Main
 scoreboard players add @s witherSpellTic 1
 
+execute if entity @s[scores={witherSpellTic=0..5}] run particle soul_fire_flame ~ ~ ~ 5 5 5 0 100 force
+
 particle flame ~ ~ ~ 1 100 1 0 100 force
 playsound minecraft:ambient.crimson_forest.mood master @a ~ ~ ~ 10 1
 execute if entity @s[scores={witherSpellTic=400..410}] run playsound minecraft:ambient.cave ambient @a ~ ~ ~ 0.1 0.1

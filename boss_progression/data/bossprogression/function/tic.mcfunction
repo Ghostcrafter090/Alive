@@ -7,6 +7,9 @@ function bossprogression:bosses/wither/spell/main
 function bossprogression:bosses/guardian/spell/check
 function bossprogression:bosses/guardian/spell/main
 
+function bossprogression:bosses/guardian/spell/enchantedheart/check
+function bossprogression:bosses/guardian/spell/enchantedheart/main
+
 function bossprogression:bosses/pillager/stages/mining/tic
 function bossprogression:bosses/guardian/tic
 

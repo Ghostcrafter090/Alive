@@ -1,6 +1,9 @@
 # Define
 
 # Main
+function bossprogression:bosses/guardian/effects/run
+execute if entity @e[tag=gstools_worker,scores={timeOfDay=0..12500}] run time add 18t
+
 scoreboard players add @s guardianSpellTic 1
 
 particle dripping_water ~ ~ ~ 1 100 1 0 100 force
