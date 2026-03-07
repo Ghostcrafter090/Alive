@@ -1,1 +1,1 @@
-scoreboard players set @s seasonGrabberIndex 0
+execute unless entity @s[scores={seasonGrabberIndex=1..99}] run scoreboard players set @s seasonGrabberIndex 0
