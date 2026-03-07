@@ -9,6 +9,9 @@ function bossprogression:bosses/wither/portal/run
 execute unless entity @e[tag=gstools_worker,type=marker,scores={witherHasBeenKilled=1..1}] if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] unless entity @e[tag=gstools_worker,type=marker,scores={witherHasBeenKilled=1..1}] as @e[tag=nether_overworld,tag=!immune_to_zombification] at @s if dimension minecraft:overworld run data merge entity @s {IsImmuneToZombification:1b,PersistenceRequired:1b} 
 execute unless entity @e[tag=gstools_worker,type=marker,scores={witherHasBeenKilled=1..1}] if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] unless entity @e[tag=gstools_worker,type=marker,scores={witherHasBeenKilled=1..1}] as @e[tag=nether_overworld,tag=!immune_to_zombification] at @s if dimension minecraft:overworld run tag @s add immune_to_zombification
 
+execute if entity @e[tag=gstools_worker,type=marker,scores={witherHasBeenKilled=1..1}] if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] as @e[tag=nether_overworld,tag=immune_to_zombification] at @s if dimension minecraft:overworld run data merge entity @s {IsImmuneToZombification:0b,PersistenceRequired:1b} 
+execute if entity @e[tag=gstools_worker,type=marker,scores={witherHasBeenKilled=1..1}] if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] as @e[tag=nether_overworld,tag=immune_to_zombification] at @s if dimension minecraft:overworld run tag @s remove immune_to_zombification
+
 execute unless entity @e[tag=gstools_worker,type=marker,scores={witherHasBeenKilled=1..1}] if entity @e[tag=gstools_worker,type=marker,scores={enchantedWitherRoseHasBeenSpawned=1..1}] run weather clear
 
 execute as @e[tag=gstools_worker,type=marker,limit=1] run scoreboard players operation @s currentDaytimeNetherTicker = @s timeOfDay
