@@ -195,7 +195,7 @@ execute as @e[type=marker,tag=gstools_worker] unless entity @s[scores={maximumCu
 
 
 # Main
-say "[GSTOOLS] | GSTools is active. Mod loaded successfully. Loading present daughter mods...
+execute unless entity @a[name=!Ghostcrafter090] run say "[GSTOOLS] | GSTools is active. Mod loaded successfully. Loading present daughter mods...
 
 # Run
 function desirepaths:load

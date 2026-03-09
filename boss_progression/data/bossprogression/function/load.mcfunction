@@ -3,4 +3,4 @@
 # Main
 scoreboard players set @e[tag=gstools_worker,type=marker] bossProgressionLoaded 1
 
-say "   > Boss Progression loaded.
+execute unless entity @a[name=!Ghostcrafter090] run say "   > Boss Progression loaded.
