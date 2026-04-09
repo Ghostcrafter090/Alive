@@ -144,8 +144,8 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBlockDecay=1..1
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBossProgression=1..1}] run schedule function gstools:cursor/run 1t replace
 
 execute store result score @e[tag=gstools_worker,type=marker] gameTime run time query gametime
-execute store result score @e[tag=gstools_worker,type=marker] timeOfDay run time query daytime
-execute store result score @e[tag=gstools_worker,type=marker] dayNumber run time query day
+function gstools:version_conflict/time_new
+function gstools:version_conflict/time_old
 
 # Hud
 function gstools:hud/main

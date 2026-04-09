@@ -166,7 +166,8 @@ baseCompileVersions = [
 ]
 
 fabricBaseRemovalVersions = [
-    "1.21.9"
+    "1.21.9",
+    "26.1"
 ]
 
 def getModIdJava(modId):

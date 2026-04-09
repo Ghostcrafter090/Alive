@@ -1,0 +1,2 @@
+execute store result score @e[tag=gstools_worker,type=marker] timeOfDay run time of minecraft:overworld query day
+execute store result score @e[tag=gstools_worker,type=marker] dayNumber run time query day repetition
