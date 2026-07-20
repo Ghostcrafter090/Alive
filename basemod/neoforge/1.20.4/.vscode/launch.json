@@ -12,15 +12,15 @@
       "projectName": "1.20.4",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\test\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\neoforge\\1.20.4\\build\\moddev\\clientRunProgramArgs.txt"
+        "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\neoforge\\1.20.4\\build\\moddev\\clientRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\test\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\neoforge\\1.20.4\\build\\moddev\\clientRunVmArgs.txt",
-        "-Dfml.modFolders\u003dmcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\test\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\neoforge\\1.20.4\\bin\\main"
+        "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\neoforge\\1.20.4\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dmcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\neoforge\\1.20.4\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {
-        "MOD_CLASSES": "mcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\test\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\neoforge\\1.20.4\\bin\\main"
+        "MOD_CLASSES": "mcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\neoforge\\1.20.4\\bin\\main"
       },
       "console": "internalConsole",
       "shortenCommandLine": "none"
@@ -36,15 +36,15 @@
       "projectName": "1.20.4",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\test\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\neoforge\\1.20.4\\build\\moddev\\serverRunProgramArgs.txt"
+        "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\neoforge\\1.20.4\\build\\moddev\\serverRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\test\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\neoforge\\1.20.4\\build\\moddev\\serverRunVmArgs.txt",
-        "-Dfml.modFolders\u003dmcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\test\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\neoforge\\1.20.4\\bin\\main"
+        "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\neoforge\\1.20.4\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dmcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\neoforge\\1.20.4\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {
-        "MOD_CLASSES": "mcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\test\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\neoforge\\1.20.4\\bin\\main"
+        "MOD_CLASSES": "mcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\neoforge\\1.20.4\\bin\\main"
       },
       "console": "internalConsole",
       "shortenCommandLine": "none"

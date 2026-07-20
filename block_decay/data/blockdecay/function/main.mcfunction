@@ -11,3 +11,5 @@ execute as @e[tag=wither_skull,type=marker] at @s positioned ~1 ~1 ~ unless bloc
 execute as @e[tag=wither_skull,type=marker] at @s positioned ~ ~1 ~1 unless block ~ ~-1 ~ #gstools:air run function blockdecay:decay/at
 execute as @e[tag=wither_skull,type=marker] at @s positioned ~-1 ~1 ~ unless block ~ ~-1 ~ #gstools:air run function blockdecay:decay/at
 execute as @e[tag=wither_skull,type=marker] at @s positioned ~ ~1 ~-1 unless block ~ ~-1 ~ #gstools:air run function blockdecay:decay/at
+
+# Note: fixed automated testing for 1.20.1

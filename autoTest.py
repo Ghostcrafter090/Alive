@@ -99,6 +99,17 @@ class analyze:
                   
 print = analyze.printReport
 
+class util:
+    def getJavaVersionFromMinecraft(version):
+        try:
+            if int(version.split(".")[0]) < 26:
+                return "Jre_21"
+            else:
+                return "Jre_25"
+        except:
+            print(traceback.format_exc())
+            return "Jre_25"
+
 def getModFiles(loader, version, modReleaseNumber):
     modFiles = []
     gameVersionDict = pytools.IO.getJson("game_versions.json")
@@ -139,7 +150,7 @@ def setupServer(loader, version):
                     os.system("java -jar " + x + " --installServer")
                     
             runFile = pytools.IO.getFile("run.bat")
-            runFile = runFile.replace("java ", "..\\java\\Jre_21\\bin\\alive_automated_test ")
+            runFile = runFile.replace("java ", "..\\java\\" + util.getJavaVersionFromMinecraft(version) + "\\bin\\alive_automated_test ")
             runFile = runFile.replace("pause", "")
             pytools.IO.saveFile("run.bat", runFile)
                     
@@ -148,13 +159,24 @@ def setupServer(loader, version):
             print(subprocess.getoutput("curl -OJ https://meta.fabricmc.net/v2/versions/loader/<version>/0.18.4/1.1.1/server/jar".replace("<version>", version)))
             for x in os.listdir():
                 if (".jar" in x) and ("fabric" in x):
-                    os.system("..\\java\\Jre_21\\bin\\java -Xmx2G -jar " + x + " nogui")
+                    os.system("..\\java\\" + util.getJavaVersionFromMinecraft(version) + "\\bin\\java -Xmx2G -jar " + x + " nogui")
             
             os.system("mkdir mods")
             os.system("xcopy ..\\libs\\fabric_api\\" + version + "\\*.jar .\\mods /e /c /y")        
             
         if loader == "forge":
-            forgeVersion = pytools.net.getJsonAPI("https://mc-versions-api.net/api/forge?detailed=true&version=<version>&version=<version>".replace("<version>", version))["result"][0]["version"]
+            # forgeVersion = pytools.net.getJsonAPI("https://mc-versions-api.net/api/forge?detailed=true&version=<version>&version=<version>".replace("<version>", version))["result"][0]["version"]
+            
+            try:
+                listOfVersions = pytools.net.getJsonAPI("https://mrnavastar.github.io/ForgeVersionAPI/forge-versions.json")
+                pytools.IO.saveJson("..\forge_versions.json", listOfVersions)
+            except:
+                listOfVersions = pytools.IO.getJson("..\forge_versions.json")
+            
+            for aMinecraftVersion in listOfVersions:
+                if aMinecraftVersion == version:
+                    forgeVersion = listOfVersions[aMinecraftVersion][0]["id"]
+            
             print("Grabbing forge version " + str(forgeVersion) + " for minecraft version " + str(version) + "...")
             os.system("curl -O https://maven.minecraftforge.net/net/minecraftforge/forge/<version>-<forgeVersion>/forge-<version>-<forgeVersion>-installer.jar".replace("<version>", version).replace("<forgeVersion>", forgeVersion))
             for x in os.listdir():
@@ -162,7 +184,7 @@ def setupServer(loader, version):
                     os.system("java -jar " + x + " --installServer")
             
             runFile = pytools.IO.getFile("run.bat")
-            runFile = runFile.replace("java ", "..\\java\\Jre_21\\bin\\alive_automated_test ")
+            runFile = runFile.replace("java ", "..\\java\\" + util.getJavaVersionFromMinecraft(version) + "\\bin\\alive_automated_test ")
             runFile = runFile.replace("pause", "")
             pytools.IO.saveFile("run.bat", runFile)
         
@@ -189,14 +211,16 @@ def copyModFiles(modFiles):
     os.system("mkdir .\\automated_test\\world\\datapacks\\test_datapack\\data\\test\\functions")
     os.system("xcopy .\\automated_test\\world\\datapacks\\test_datapack\\data\\test\\function\\* .\\automated_test\\world\\datapacks\\test_datapack\\data\\test\\functions /e /c /y")
     
-def launch(loader):
+def launch(loader, version):
     os.chdir(".\\automated_test")
     try:
-        os.system("copy \"..\\java\\Jre_21\\bin\\java.exe\" \"..\\java\\Jre_21\\bin\\alive_automated_test.exe\" /y")
+        for javaFolder in os.listdir("..\\java"):
+            os.system("copy \"..\\java\\" + javaFolder + "\\bin\\java.exe\" \"..\\java\\" + javaFolder + "\\bin\\alive_automated_test.exe\" /y")
+        
         if loader == "fabric":
             for x in os.listdir():
                 if (".jar" in x) and ("fabric" in x):
-                    os.system("start /b \"\" ..\\java\\Jre_21\\bin\\alive_automated_test.exe -Xmx2G -jar " + x + " nogui")
+                    os.system("start /b \"\" ..\\java\\" + util.getJavaVersionFromMinecraft(version) + "\\bin\\alive_automated_test.exe -Xmx2G -jar " + x + " nogui")
         else:
             os.system("start /b \"\" cmd.exe /c run.bat")
         
@@ -252,7 +276,7 @@ def runAutomatedTest(loader, version, modReleaseNumber, isBeta=False, isDebug=Fa
             
         copyModFiles(getModFiles(loader, version, modReleaseNumber))
         
-        isGood = launch(loader)
+        isGood = launch(loader, version)
         successState = analyze.logFile()
         if not (successState and isGood):
             analyze.save()
