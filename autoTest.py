@@ -140,8 +140,12 @@ def setupServer(loader, version):
             except:
                 version = version + ".0"
             for x in neoforgeVersions["versions"]:
-                if (x.split(".")[0] == version.split(".")[1]) and (x.split(".")[1] == version.split(".")[2]):
-                    neoforgeVersion = x
+                if float(x.split(".")[0]) >= 26:
+                    if (x.split(".")[0] == version.split(".")[0]) and (x.split(".")[1] == version.split(".")[1]) and (x.split(".")[2] == version.split(".")[2]):
+                        neoforgeVersion = x
+                else:
+                    if (x.split(".")[0] == version.split(".")[1]) and (x.split(".")[1] == version.split(".")[2]):
+                        neoforgeVersion = x
             
             print("Grabbing neoforge version " + str(neoforgeVersion) + " for minecraft version " + str(version) + "...")
             print(subprocess.getoutput("curl -O https://maven.neoforged.net/releases/net/neoforged/neoforge/<neoforgeVersion>/neoforge-<neoforgeVersion>-installer.jar".replace("<neoforgeVersion>", neoforgeVersion)))

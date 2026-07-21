@@ -1,1 +1,9 @@
-{"pack":{"pack_format":9,"description":"A mod that adds disease and dynamic reproduction triggering for most breedable minecraft entities."}}
+{
+  "pack": {
+    "pack_format": 107,
+    "description": "Global tools mod for all Satosus Project mods.",
+    "min_format": 88,
+    "max_format": 300
+
+  }
+}
