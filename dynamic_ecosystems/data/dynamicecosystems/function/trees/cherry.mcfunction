@@ -36,8 +36,8 @@ execute as @e[type=marker,tag=cherry_tree_cursor,scores={treeCursorAliveTime=300
 execute as @e[type=marker,tag=cherry_tree_worker,scores={treeWorkerAliveTime=300..}] run kill @s
 #execute as @e[type=marker,tag=cherry_tree_worker] if entity @s[tag=cherry_tree_locating] unless entity @e[tag=cherry_tree_cursor,sort=nearest,limit=1,distance=0..21] run say killing 4...
 #execute as @e[type=marker,tag=cherry_tree_worker] if entity @s[tag=cherry_tree_locating] unless entity @e[tag=cherry_tree_cursor,sort=nearest,limit=1,distance=0..21] run kill @s
-#execute as @e[type=marker,tag=cherry_tree_cursor] unless entity @e[tag=cherry_tree_worker,sort=nearest,limit=1,distance=0..41] run say killing 5...
-#execute as @e[type=marker,tag=cherry_tree_cursor] unless entity @e[tag=cherry_tree_worker,sort=nearest,limit=1,distance=0..41] run kill @s
+execute if entity @e[type=marker,tag=gstools_worker,scores={enableDebugMessages=1..1}] as @e[type=marker,tag=cherry_tree_cursor] unless entity @e[tag=cherry_tree_worker,sort=nearest,limit=1,distance=0..41] run say killing 5...
+execute if entity @e[type=marker,tag=gstools_worker,scores={enableDebugMessages=1..1}] as @e[type=marker,tag=cherry_tree_cursor] unless entity @e[tag=cherry_tree_worker,sort=nearest,limit=1,distance=0..41] run kill @s
 
 execute as @e[tag=gstools_cursor] at @s if block ~1 ~ ~ cherry_sapling run fill ~ ~ ~ ~ ~ ~ air replace
 execute as @e[tag=gstools_cursor] at @s if block ~1 ~ ~ cherry_sapling run place feature cherry ~ ~ ~

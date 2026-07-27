@@ -1,6 +1,7 @@
 # Define
 scoreboard objectives add collapseAccumulate dummy
 scoreboard objectives add oldCollapseMarkerCount dummy
+scoreboard objectives add numberOfCollapses dummy
 
 # Main
 execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ #dynamicdirt:air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~1 ~ ~ {Tags:['dirt_collapse']}
@@ -202,7 +203,8 @@ execute as @e[type=warden] at @s unless entity @a[distance=0..5] if block ~ ~-2 
 execute as @e[type=warden] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ cave_air unless block ~ ~-1 ~ cave_air if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}
 execute as @e[type=warden] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ cave_air unless block ~ ~-1 ~ cave_air if entity @s[tag=!collapsed] run tag @s add collapsed
 
-execute as @e[tag=dirt_collapse,type=marker,limit=1,sort=random] at @s run function dynamicdirt:collapse
+scoreboard players set @e[tag=gstools_worker,type=marker] numberOfCollapses 0
+execute as @e[tag=dirt_collapse,type=marker,limit=1,sort=random] at @s run function dynamicdirt:collapsewrapper
 execute if score @e[tag=gstools_worker,type=marker,limit=1] ticTenth > @e[tag=gstools_worker,type=marker,limit=1] random10 run kill @e[tag=old_collapse,limit=1,sort=random]
 
 execute as @e[tag=old_collapse,type=marker] at @s store result score @s collapseAccumulate if entity @e[tag=old_collapse,type=marker,distance=0..2]

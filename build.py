@@ -167,7 +167,8 @@ baseCompileVersions = [
 
 fabricBaseRemovalVersions = [
     "1.21.9",
-    "26.1"
+    "26.1",
+    "26.2"
 ]
 
 def getModIdJava(modId):
@@ -203,6 +204,7 @@ def compileDatapackIntoMod(folderName):
             pytools.IO.unpack(jarFile, ".\\temp_dir")
             os.system("robocopy \"..\\datapacks\\" + folderName + "\\data\" \".\\temp_dir\\data\" * /mir")
             os.system("copy \"alive_" + folderName + ".png\" \".\\temp_dir\\logo.png\" /y")
+            os.system("copy \"config.pyl\" \".\\temp_dir\\config.pyl\" /y")
             
             versionHistory = pytools.IO.getJson("version_history.json")
             gameVersions = ",".join([pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][0], pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][-1]])

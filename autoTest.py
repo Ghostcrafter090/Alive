@@ -207,6 +207,7 @@ def copyModFiles(modFiles):
     for file in modFiles:
         os.system("xcopy \"" + file + "\" .\\automated_test\\mods /c /y")
     
+    os.system("rmdir \".\\automated_test\\world\" /s /q")
     os.system("mkdir \".\\automated_test\\world\"")
     os.system("mkdir \".\\automated_test\\world\\datapacks\"")
     os.system("mkdir \".\\automated_test\\world\\datapacks\\test_datapack\"")

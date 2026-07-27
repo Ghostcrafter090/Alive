@@ -8,6 +8,8 @@ scoreboard players operation @e[tag=gstools_worker,type=marker,limit=1] numberOf
 scoreboard players operation @e[tag=gstools_worker,type=marker,limit=1] numberOfWalkingEntities += @e[tag=gstools_worker,type=marker,limit=1] numberOfMonsters
 scoreboard players operation @e[tag=gstools_worker,type=marker,limit=1] numberOfWalkingEntities += @e[tag=gstools_worker,type=marker,limit=1] numberOfGolems
 scoreboard players operation @e[tag=gstools_worker,type=marker,limit=1] numberOfTimesToRun = @e[tag=gstools_worker,type=marker,limit=1] numberOfWalkingEntities
+execute if entity @e[type=marker,tag=gstools_worker,scores={desirePaths_pathRate=1..}] run scoreboard players operation @e[tag=gstools_worker,type=marker,limit=1] numberOfTimesToRun /= @e[tag=gstools_worker,type=marker,limit=1] desirePaths_pathRate
+execute if entity @e[type=marker,tag=gstools_worker,scores={desirePaths_pathRate=1..}] run scoreboard players operation @e[tag=gstools_worker,type=marker,limit=1] numberOfTimesToRun *= @e[tag=gstools_worker,type=marker,limit=1] 20
 
 execute as @e[tag=animal,tag=!walkable] run tag @s add walkable
 execute as @e[tag=monster,tag=!walkable] run tag @s add walkable
@@ -23,6 +25,7 @@ execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
 execute unless score @e[tag=gstools_worker,type=marker,limit=1] numberOfTimesToRun > @e[tag=gstools_worker,type=marker,limit=1] desirePathsTicRate if score @e[tag=gstools_worker,type=marker,limit=1] numberOfTimesToRun > @e[tag=gstools_worker,type=marker,limit=1] random100
 execute if score @e[tag=gstools_worker,type=marker,limit=1] numberOfTimesToRun > @e[tag=gstools_worker,type=marker,limit=1] desirePathsTicRate run function desirepaths:path
 
-execute as @a at @s as @e[tag=walkable,type=!bat,type=!parrot,type=!phantom,type=!bee,type=!chicken,limit=100,sort=nearest] store result score @s entityVerticalMotion run data get entity @s Motion[1] 100
+execute as @a at @s as @e[tag=walkable,type=!bat,type=!parrot,type=!phantom,type=!bee,type=!chicken,type=!player,limit=100,sort=nearest] store result score @s entityVerticalMotion run data get entity @s Motion[1] 100
+execute as @a at @s as @a store result score @s entityVerticalMotion run data get entity @s Motion[1] 100
 
-execute as @e[tag=walkable,type=!bat,type=!parrot,type=!phantom,type=!bee,type=!chicken,scores={entityVerticalMotion=..-100}] run function desirepaths:dofill
+execute unless entity @e[type=marker,tag=gstools_worker,scores={desirePaths_disableFallRateTrampleBoost=1..1}] as @e[tag=walkable,type=!bat,type=!parrot,type=!phantom,type=!bee,type=!chicken,scores={entityVerticalMotion=..-100}] run function desirepaths:dofill

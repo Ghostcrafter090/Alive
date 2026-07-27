@@ -52,7 +52,9 @@ def getEarliestReleaseDate():
 
 def releaseMod(releaseNumber, modId, versionTestData=False):
     for file in subprocess.getoutput("dir \".\\releases\\" + releaseNumber + "\\*.jar\" /b").split('\n'):
+        
         print(file)
+        
         projectName = file.split("-")[0]
         loaderVersion = file.split("-")[1]
         gameVersion = file.split("-")[2].split("_")[0]
@@ -60,6 +62,9 @@ def releaseMod(releaseNumber, modId, versionTestData=False):
         
         if projectName == modId:
             if (not versionTestData) or versionTestData[loaderVersion][gameVersion]:
+                
+                print((".\\releases\\" + releaseNumber + "\\" + file) + str(projectName) + str(loaderVersion) + str(gameVersion) + str(modId + " " + loaderVersion + " " + gameVersion + " " + modVersion) + str("\n - ".join(pytools.IO.getJson(".\\releases\\" + releaseNumber + "\\release.json")["releaseHistory"])))
+                
                 curseforge.uploadFile(".\\releases\\" + releaseNumber + "\\" + file, projectName, loaderVersion, gameVersion, modId + " " + loaderVersion + " " + gameVersion + " " + modVersion, "\n - ".join(pytools.IO.getJson(".\\releases\\" + releaseNumber + "\\release.json")["releaseHistory"]))
             
 

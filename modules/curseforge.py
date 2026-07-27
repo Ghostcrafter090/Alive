@@ -3,6 +3,7 @@ import modules.pytools as pytools
 import requests
 import json
 import os
+import traceback
 
 import time
 
@@ -25,18 +26,29 @@ projectIdDict = {
 def getGameVersions(loader, version):
     versionInfo = pytools.IO.getJson("game_versions.json")
     curseforgeData = pytools.net.getJsonAPI("https://minecraft.curseforge.com/api/game/versions", customHeaders=[["X-Api-Token", globals.apiKey]])
-    versionIds = []
+    versionIds = {}
+    versionNames = []
     for aVersion in versionInfo[loader][version]:
         for aVersionData in curseforgeData:
             if aVersionData["name"] == aVersion:
                 if aVersionData["id"] not in versionIds:
                     if aVersionData["id"] not in globals.versionIdBlacklist:
-                        versionIds.append(aVersionData["id"])
+                        versionIds[aVersionData["id"]] = aVersionData["name"]
                 print(aVersionData)
             elif aVersionData["name"].lower() == loader.lower():
                 if aVersionData["id"] not in versionIds:
                     if aVersionData["id"] not in globals.versionIdBlacklist:
-                        versionIds.append(aVersionData["id"])
+                        versionIds[aVersionData["id"]] = aVersionData["name"]
+                print(aVersionData)
+            elif aVersionData["name"].lower() == "Client".lower():
+                if aVersionData["id"] not in versionIds:
+                    if aVersionData["id"] not in globals.versionIdBlacklist:
+                        versionIds[aVersionData["id"]] = aVersionData["name"]
+                print(aVersionData)
+            elif aVersionData["name"].lower() == "Server".lower():
+                if aVersionData["id"] not in versionIds:
+                    if aVersionData["id"] not in globals.versionIdBlacklist:
+                        versionIds[aVersionData["id"]] = aVersionData["name"]
                 print(aVersionData)
 
     return versionIds
@@ -52,13 +64,14 @@ def uploadFile(path, project, loader, version, displayName, changeLog):
     CHANGELOG = changeLog # A description of changes
 
     # API Endpoint URL
-    url = f"https://www.curseforge.com/api/projects/{PROJECT_ID}/upload-file"
+    url = f"https://wow.curseforge.com/api/projects/{PROJECT_ID}/upload-file"
 
     # Metadata for the upload (as a Python dictionary, later converted to JSON)
     metadata = {
         "changelog": CHANGELOG,
         "displayName": DISPLAY_NAME,
-        "gameVersions": GAME_VERSION,
+        "gameVersions": list(GAME_VERSION.keys()),
+        "gameVersionNames": list(GAME_VERSION.values()),
         "releaseType": RELEASE_TYPE,
         "relations": {
             "projects": [
@@ -78,36 +91,43 @@ def uploadFile(path, project, loader, version, displayName, changeLog):
 
     # Open the file in binary read mode
     try:
-        uploadFailed = True
-        while uploadFailed:
-            with open(FILE_PATH, 'rb') as f:
-                files = {
-                    'file': (path.split("\\")[-1], f, 'application/jar'), # Adjust MIME type if using a zip file
-                    'metadata': (None, json.dumps(metadata), 'application/json')
-                }
-
-                # Send the POST request
-                response = requests.post(url, headers=headers, files=files)
-
-                # Check the response status
-                if response.status_code == 200:
-                    print(f"Mod file uploaded successfully! Response: {response.json()}")
-                    uploadFailed = False
+        uploadFailed = 0
+        while uploadFailed < 20:
+            try:
+                with open(FILE_PATH, 'rb') as f:
+                    files = {
+                        'file': (path.split("\\")[-1], f, 'application/jar'), # Adjust MIME type if using a zip file
+                        'metadata': (None, json.dumps(metadata), 'application/json')
+                    }
                     
-                    return response.json()
-                else:
-                    print(f"Upload failed. Status code: {response.status_code}")
-                    print(f"Response body: {response.text}")
-                    jsonData = json.loads(response.text)
-                    if jsonData["errorCode"] == 1009:
-                        metadata["gameVersions"].remove(int(jsonData["errorMessage"].split("version ID: ")[1].split(" ")[0]))
-                        globals.versionIdBlacklist.append(int(jsonData["errorMessage"].split("version ID: ")[1].split(" ")[0]))
-                        pytools.IO.saveJson("version_id_blacklist.json", {
-                            "list": globals.versionIdBlacklist
-                        })
-                    if jsonData["errorCode"] == 500:
-                        uploadFailed = False
-                    
+                    print(files)
+
+                    # Send the POST request
+                    response = requests.post(url, headers=headers, files=files)
+
+                    # Check the response status
+                    if response.status_code == 200:
+                        print(f"Mod file uploaded successfully! Response: {response.json()}")
+                        uploadFailed = 20
+                        
+                        return response.json()
+                    else:
+                        print(f"Upload failed. Status code: {response.status_code}")
+                        print(f"Response body: {response.text}")
+                        jsonData = json.loads(response.text)
+                        if jsonData["errorCode"] == 1009:
+                            metadata["gameVersions"].remove(int(jsonData["errorMessage"].split("version ID: ")[1].split(" ")[0]))
+                            globals.versionIdBlacklist.append(int(jsonData["errorMessage"].split("version ID: ")[1].split(" ")[0]))
+                            pytools.IO.saveJson("version_id_blacklist.json", {
+                                "list": globals.versionIdBlacklist
+                            })
+                        if jsonData["errorCode"] == 500:
+                            uploadFailed = 20
+            except:
+                print(traceback.format_exc())
+                
+            uploadFailed = uploadFailed + 1
+                
             time.sleep(1)
 
     except FileNotFoundError:
