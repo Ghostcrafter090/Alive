@@ -271,7 +271,9 @@ def compileDatapackIntoMod(folderName):
             
             if folderName != "gstools":
                 os.system("del \".\\temp_dir\\gstools\\*\" /f /s /q")
+                os.system("del \".\\temp_dir\\org\\*\" /f /s /q")
                 os.system("rmdir \".\\temp_dir\\gstools\" /s /q")
+                os.system("rmdir \".\\temp_dir\\org\" /s /q")
             
                 if jarFile.split("-")[2].split(".jar")[0] in baseCompileVersions:
                     compileBaseMod(folderName, jarFile.split("-")[1].split('-')[0], jarFile.split("-")[2].split(".jar")[0])
