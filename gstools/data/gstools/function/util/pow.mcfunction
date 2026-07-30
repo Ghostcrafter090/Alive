@@ -49,6 +49,8 @@ execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @
 
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players set @s powResult 1
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players set @s powWorkerB 1
+execute as @e[type=marker,tag=gstools_worker] run scoreboard players set @s powWorkerD 65536
+
 
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerC = @s powExpoInput
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerC *= @s n1
