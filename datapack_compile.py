@@ -66,6 +66,7 @@ def compile(fileData, fileName, path):
     commandIndex = -1
     unorderedMode = False
     unorderedIndex = 0
+    noCompileMode = False
     
     for line in fileData:
         
@@ -78,11 +79,17 @@ def compile(fileData, fileName, path):
                 if line.split(":")[1].split("/")[0].split(">")[0] == "non_direction":
                     unorderedMode = True
                     unorderedIndex = unorderedIndex + 1
+                    
+                if line.split(":")[1].split("/")[0].split(">")[0] == "no_compile_mode":
+                    noCompileMode = True
             else:
                 if line.split(":")[1].split("/")[0].split(">")[0] == "non_direction":
                     unorderedMode = False
+                    
+                if line.split(":")[1].split("/")[0].split(">")[0] == "no_compile_mode":
+                    noCompileMode = False
                 
-        if ("execute" in line) and (line.replace(" ", "")[0] != "#"):
+        if ("execute" in line) and (line.replace(" ", "")[0] != "#") and (not noCompileMode):
             statement = line.split(" run ")[0]
             try:
                 command = line.split(" run ")[1]

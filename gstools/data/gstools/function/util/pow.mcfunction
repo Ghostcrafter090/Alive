@@ -5,6 +5,8 @@ scoreboard objectives add powResult dummy
 scoreboard objectives add powWorkerA dummy
 scoreboard objectives add powWorkerB dummy
 scoreboard objectives add powWorkerC dummy
+scoreboard objectives add powWorkerD dummy
+scoreboard objectives add powWorkerE dummy
 
 # bitwise pow function
 # def pow(a: float, b: int) -> float:
@@ -51,40 +53,7 @@ execute as @e[type=marker,tag=gstools_worker] run scoreboard players set @s powW
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerC = @s powExpoInput
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerC *= @s n1
 
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 if score @s powWorkerB <= @s powExpoInput run function gstools:util/pow/processbit
-
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
-execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 if score @s powWorkerB <= @s powWorkerC run function gstools:util/pow/processbit
+execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput > @s 0 run function gstools:util/pow/checkbit
+execute as @e[type=marker,tag=gstools_worker] if score @s powExpoInput < @s 0 run function gstools:util/pow/checkbit
 
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powResult /= @s 10000
