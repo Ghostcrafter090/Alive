@@ -37,7 +37,9 @@ execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
 execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
 execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
+execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput /= @s 10000
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
+execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s 10000
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
 
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA = @s powExpoInput
@@ -45,7 +47,9 @@ execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
 execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
 execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
+execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput /= @s 10000
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
+execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s 10000
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
 
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA = @s powExpoInput
@@ -53,7 +57,9 @@ execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
 execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
 execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
+execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput /= @s 10000
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
+execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s 10000
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
 
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA = @s powExpoInput
@@ -61,7 +67,9 @@ execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
 execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
 execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
+execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput /= @s 10000
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
+execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s 10000
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
 
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA = @s powExpoInput
@@ -69,101 +77,9 @@ execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
 execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
 execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
+execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput /= @s 10000
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
+execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s 10000
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
 
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA = @s powExpoInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA /= @s powWorkerB
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
-
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA = @s powExpoInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA /= @s powWorkerB
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
-
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA = @s powExpoInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA /= @s powWorkerB
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
-
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA = @s powExpoInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA /= @s powWorkerB
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
-
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA = @s powExpoInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA /= @s powWorkerB
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
-
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA = @s powExpoInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA /= @s powWorkerB
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
-
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA = @s powExpoInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA /= @s powWorkerB
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
-
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA = @s powExpoInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA /= @s powWorkerB
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
-
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA = @s powExpoInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA /= @s powWorkerB
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
-
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA = @s powExpoInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA /= @s powWorkerB
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
-
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA = @s powExpoInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA /= @s powWorkerB
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
-
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA = @s powExpoInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA /= @s powWorkerB
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerA %= @s 2
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput > @s 0 run scoreboard players operation @s powResult *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] if score @s powWorkerA = @s 1 if score @s powExpoInput < @s 0 run scoreboard players operation @s powResult /= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powBaseInput *= @s powBaseInput
-execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powWorkerB *= @s 2
+execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s powResult /= @s 10000
