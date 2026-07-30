@@ -129,6 +129,8 @@ execute unless entity @s[scores={horrorIndexWasDefined=1..1}] run scoreboard pla
 
 # Main
 scoreboard players operation @s currentSeasonDay = @e[type=marker,tag=gstools_worker] currentSeasonDay
+scoreboard players operation @s currentSeasonDay += @e[type=marker,tag=gstools_worker] 15
+scoreboard players operation @s currentSeasonDay %= @e[type=marker,tag=gstools_worker] 60
 
 execute if entity @s[scores={currentSeasonDay=0..0}] run scoreboard players operation @s horrorIndex = @s currentSeasonDay
 execute if entity @s[scores={currentSeasonDay=0..0}] run scoreboard players operation @s horrorIndex *= @s horrorIndexSlope0
