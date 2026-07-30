@@ -128,6 +128,7 @@ execute unless entity @s[scores={horrorIndexWasDefined=1..1}] run scoreboard pla
 execute unless entity @s[scores={horrorIndexWasDefined=1..1}] run scoreboard players set @s horrorIndexWasDefined 1
 
 # Main
+scoreboard players operation @s currentSeasonDay = @e[type=marker,tag=gstools_worker] currentSeasonDay
 
 execute if entity @s[scores={currentSeasonDay=0..0}] run scoreboard players operation @s horrorIndex = @s currentSeasonDay
 execute if entity @s[scores={currentSeasonDay=0..0}] run scoreboard players operation @s horrorIndex *= @s horrorIndexSlope0
@@ -369,3 +370,5 @@ execute if entity @s[scores={currentSeasonDay=59..59}] run scoreboard players op
 execute if entity @s[scores={currentSeasonDay=59..59}] run scoreboard players operation @s horrorIndex *= @s horrorIndexSlope59 
 execute if entity @s[scores={currentSeasonDay=59..59}] run scoreboard players add @s horrorIndex 8106548
 execute if entity @s[scores={currentSeasonDay=59..59}] run scoreboard players operation @s horrorIndex /= @e[type=marker,tag=gstools_worker] 10000
+
+scoreboard players operation @s horrorIndex /= @e[type=marker,tag=gstools_worker] 16
