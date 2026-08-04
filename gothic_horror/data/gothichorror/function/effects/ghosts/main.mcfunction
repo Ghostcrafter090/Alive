@@ -89,7 +89,7 @@ execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players opera
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s ghostStaminaUnsigned = @s ghostStamina
 execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={ghostStaminaUnsigned=..-1}] run scoreboard players operation @s ghostStaminaUnsigned *= @e[tag=gstools_worker,type=marker] n1
 
-execute as @e[type=#minecraft:undead,sort=random,limit=1] if entity @s[tag=gothic_ghost,scores={ghostStaminaUnsigned=83..166}] at @s run playsound minecraft:gothichorror.ghost.tap hostile @a ~ ~ ~
+execute as @e[type=#minecraft:undead,sort=random,limit=1] if entity @s[tag=gothic_ghost,scores={ghostStaminaUnsigned=1..166}] at @s run playsound minecraft:gothichorror.ghost.tap hostile @a ~ ~ ~
 execute as @e[type=#minecraft:undead,sort=random,limit=1] if entity @s[tag=gothic_ghost,scores={ghostStaminaUnsigned=167..332}] at @s run playsound minecraft:gothichorror.ghost.snap hostile @a ~ ~ ~
 execute as @e[type=#minecraft:undead,sort=random,limit=1] if entity @s[tag=gothic_ghost,scores={ghostStaminaUnsigned=333..498}] at @s run playsound minecraft:gothichorror.ghost.clap hostile @a ~ ~ ~
 execute as @e[type=#minecraft:undead,sort=random,limit=1] if entity @s[tag=gothic_ghost,scores={ghostStaminaUnsigned=499..664}] at @s if predicate gstools:near_wood run playsound minecraft:gothichorror.ghost.knock hostile @a ~ ~ ~
