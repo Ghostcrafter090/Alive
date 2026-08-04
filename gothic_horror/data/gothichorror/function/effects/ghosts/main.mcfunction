@@ -3,6 +3,9 @@ scoreboard objectives add ghostMood dummy
 scoreboard objectives add ghostActivity dummy
 scoreboard objectives add ghostStamina dummy
 scoreboard objectives add ghostStaminaUnsigned dummy
+scoreboard objectives add ghostRandomWorkerA dummy
+scoreboard objectives add ghostRandomWorkerB dummy
+
 
 # Main
 execute as @e[tag=gothic_ghost] at @s run function gstools:util/light_level
@@ -25,13 +28,19 @@ execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={ghostAc
 execute as @e[tag=gothic_ghost,sort=random,limit=1] unless entity @s[scores={ghostActivity=0..100}] run scoreboard players set @s ghostActivity 0
 
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run function gstools:util/random
+execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={random100=..50}] run function gstools:util/random
+execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={random100=..50}] run scoreboard players operation @s ghostRandomWorkerB = @s randomSigned10
+
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run function gstools:horror/getindex
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players add @s horrorIndex 35
-execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s randomSigned10 *= @s horrorIndex
-execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s randomSigned10 /= @e[tag=gstools_worker,type=marker] 100
-execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s ghostMood += @s randomSigned10
+execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s ghostRandomWorkerA *= @s horrorIndex
+execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s ghostRandomWorkerA /= @e[tag=gstools_worker,type=marker] 100
+execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s ghostMood += @s ghostRandomWorkerA
 
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run function gstools:util/random
+execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={random100=..50}] run function gstools:util/random
+execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={random100=..50}] run scoreboard players operation @s ghostRandomWorkerB = @s randomSigned10
+
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s randomSigned10 *= @s horrorIndex
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s randomSigned10 /= @e[tag=gstools_worker,type=marker] 100
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s ghostActivity += @s randomSigned10
