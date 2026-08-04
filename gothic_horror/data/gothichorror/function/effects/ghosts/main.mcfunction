@@ -26,6 +26,7 @@ execute as @e[tag=gothic_ghost,sort=random,limit=1] unless entity @s[scores={gho
 
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run function gstools:util/random
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run function gstools:horror/getindex
+execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players add @s horrorIndex 35
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s randomSigned10 *= @s horrorIndex
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s randomSigned10 /= @e[tag=gstools_worker,type=marker] 100
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s ghostMood += @s randomSigned10
@@ -97,9 +98,9 @@ execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={ghostSt
 execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={ghostStaminaUnsigned=830..}] if entity @s[scores={ghostStamina=..0}] at @s if predicate gstools:near_glass run playsound minecraft:gothichorror.ghost.window hostile @a ~ ~ ~
 
 # Spawn
-execute if entity @e[tag=gstools_worker,scores={ticSecond=5..5}] as @e[type=marker,tag=gstools_worker] as @e[type=#minecraft:undead,limit=1,sort=random,tag=!gothic_ghost] at @s run function gstools:horror/getindex
-execute if entity @e[tag=gstools_worker,scores={ticSecond=5..5}] as @e[type=marker,tag=gstools_worker] as @e[type=#minecraft:undead,limit=1,sort=random,tag=!gothic_ghost] at @s run scoreboard players add @s horrorIndex 35
-execute if entity @e[tag=gstools_worker,scores={ticSecond=5..5}] as @e[type=marker,tag=gstools_worker] as @e[type=#minecraft:undead,limit=1,sort=random,tag=!gothic_ghost] at @s if score @s horrorIndex > @e[type=marker,tag=gstools_worker,limit=1] numberOfUndeadMonsters run summon zombie ~ ~ ~ {HasVisualFire:0b,Silent:1b,Invulnerable:1b,FallFlying:1b,Tags:["gothic_ghost"],equipment:{mainhand:{id:"minecraft:air",count:1},offhand:{id:"minecraft:air",count:1}},active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:10000000,show_particles:0b,show_icon:0b},{id:"minecraft:slow_falling",amplifier:1,duration:10000000,show_particles:0b,show_icon:0b}],attributes:[{id:"minecraft:attack_damage",base:0.5},{id:"minecraft:movement_speed",base:0.01}]}
+execute if entity @e[tag=gstools_worker,scores={ticSecond=5..5}] as @e[type=marker,tag=gstools_worker] as @e[type=#minecraft:undead,limit=1,sort=random] if entity @s[tag=!gothic_ghost] at @s run function gstools:horror/getindex
+execute if entity @e[tag=gstools_worker,scores={ticSecond=5..5}] as @e[type=marker,tag=gstools_worker] as @e[type=#minecraft:undead,limit=1,sort=random] if entity @s[tag=!gothic_ghost] at @s run scoreboard players add @s horrorIndex 35
+execute if entity @e[tag=gstools_worker,scores={ticSecond=5..5}] as @e[type=marker,tag=gstools_worker] as @e[type=#minecraft:undead,limit=1,sort=random] if entity @s[tag=!gothic_ghost] at @s if score @s horrorIndex > @e[type=marker,tag=gstools_worker,limit=1] numberOfUndeadMonsters run summon zombie ~ ~ ~ {HasVisualFire:0b,Silent:1b,Invulnerable:1b,FallFlying:1b,Tags:["gothic_ghost"],equipment:{mainhand:{id:"minecraft:air",count:1},offhand:{id:"minecraft:air",count:1}},active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:10000000,show_particles:0b,show_icon:0b},{id:"minecraft:slow_falling",amplifier:1,duration:10000000,show_particles:0b,show_icon:0b}],attributes:[{id:"minecraft:attack_damage",base:0.5},{id:"minecraft:movement_speed",base:0.01}]}
 
 execute as @e[tag=is_human,type=!player] at @s unless entity @e[type=marker,tag=human_is_alive,distance=0..1,sort=nearest,limit=1] run summon marker ~ ~ ~ {Tags:['human_is_alive']}
 execute as @e[tag=is_human,type=!player] at @s run tp @e[type=marker,tag=human_is_alive,distance=0..1,sort=nearest,limit=1] ~ ~ ~
