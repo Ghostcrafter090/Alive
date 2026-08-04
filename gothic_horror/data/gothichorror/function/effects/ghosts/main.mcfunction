@@ -8,7 +8,7 @@ scoreboard objectives add ghostStaminaUnsigned dummy
 execute as @e[tag=gothic_ghost] at @s run function gstools:util/light_level
 execute as @e[tag=gothic_ghost,limit=3,sort=random] at @s run function gstools:util/is_outside
 
-execute if entity @e[tag=gstools_worker,scores={timeOfDay=0..12000}] as @e[tag=gstools_vertical_cursor,type=marker] at @s if block ~ ~ ~ #gstools:air as @e[tag=gothic_ghost,scores={isOutside=1..1}] if entity @s[scores={lightLevel=7..}] run tp @s ~ ~ ~
+execute if entity @e[tag=gstools_worker,scores={timeOfDay=0..12000}] as @e[tag=gstools_vertical_cursor,type=marker,distance=0..40] at @s if block ~ ~ ~ #gstools:air as @e[tag=gothic_ghost,predicate=gstools:sky] if entity @s[scores={lightLevel=7..}] run tp @s ~ ~ ~
 execute as @e[tag=gothic_ghost] at @s if entity @s[scores={lightLevel=7..}] run tp @s ^ ^ ^-0.4 ~ ~
 
 # Setup
