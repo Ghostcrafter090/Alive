@@ -6,11 +6,11 @@ scoreboard objectives add gothicMonsterRemovalTic dummy
 # Main
 execute store result score @e[type=marker,tag=gstools_worker] numberOfUndeadMonsters if entity @e[type=#minecraft:undead]
 execute store result score @e[type=marker,tag=gstools_worker] numberOfNetherMonsters if entity @e[tag=nether,tag=monster]
-execute as @e[type=marker,tag=gstools_worker,scores={gothicMonsterRemovalTic=100..}] if score @s numberOfUndeadMonsters > @s 20 as @e[type=#minecraft:undead,limit=1,sort=random] run function gstools:horror/getindex
-execute as @e[type=marker,tag=gstools_worker,scores={gothicMonsterRemovalTic=100..}] if score @s numberOfUndeadMonsters > @s 20 as @e[type=#minecraft:undead,limit=1,sort=random] run scoreboard players add @s horrorIndex 35
-execute as @e[type=marker,tag=gstools_worker,scores={gothicMonsterRemovalTic=100..}] if score @s numberOfUndeadMonsters > @s 20 as @e[type=#minecraft:undead,limit=1,sort=random] if score @s horrorIndex < @e[type=marker,tag=gstools_worker,limit=1] numberOfUndeadMonsters run kill @s
-execute as @e[type=marker,tag=gstools_worker,scores={gothicMonsterRemovalTic=100..}] if score @s numberOfNetherMonsters > @s 20 as @e[type=#minecraft:undead,limit=1,sort=random] if score @s horrorIndex < @e[type=marker,tag=gstools_worker,limit=1] numberOfNetherMonsters run kill @s
-execute as @e[type=marker,tag=gstools_worker,scores={gothicMonsterRemovalTic=100..}] run scoreboard players set @s gothicMonsterRemovalTic 0
+execute as @e[type=marker,tag=gstools_worker,scores={gothicMonsterRemovalTic=80..}] if score @s numberOfUndeadMonsters > @s 20 as @e[type=#minecraft:undead,limit=1,sort=random] run function gstools:horror/getindex
+execute as @e[type=marker,tag=gstools_worker,scores={gothicMonsterRemovalTic=80..}] if score @s numberOfUndeadMonsters > @s 20 as @e[type=#minecraft:undead,limit=1,sort=random] run scoreboard players add @s horrorIndex 35
+execute as @e[type=marker,tag=gstools_worker,scores={gothicMonsterRemovalTic=80..}] if score @s numberOfUndeadMonsters > @s 20 as @e[type=#minecraft:undead,limit=1,sort=random] if score @s horrorIndex < @e[type=marker,tag=gstools_worker,limit=1] numberOfUndeadMonsters run kill @s
+execute as @e[type=marker,tag=gstools_worker,scores={gothicMonsterRemovalTic=80..}] if score @s numberOfNetherMonsters > @s 20 as @e[type=#minecraft:undead,limit=1,sort=random] if score @s horrorIndex < @e[type=marker,tag=gstools_worker,limit=1] numberOfNetherMonsters run kill @s
+execute as @e[type=marker,tag=gstools_worker,scores={gothicMonsterRemovalTic=80..}] run scoreboard players set @s gothicMonsterRemovalTic 0
 scoreboard players add @e[tag=gstools_worker,type=marker] gothicMonsterRemovalTic 1
 
 execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=..-30},tag=!gothic_ghost] run attribute @s minecraft:generic.follow_range base set 10

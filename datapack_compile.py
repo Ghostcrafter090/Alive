@@ -191,7 +191,7 @@ def run(path, namespace, compileEverything=False):
                 fileChanges.append(file.split("\\data\\")[1].replace("\\function\\", "\\"))
                 print(file.split("\\data\\")[0].split("\\")[-1])
                 print(path.split("\\")[1])
-                if file.split("\\data\\")[0].split("\\")[-1] == path.split("\\")[1]:
+                if file.split("\\data\\")[0].split("\\")[-1] in path.split("\\")[1]:
                     print(file.split("\\data\\")[0].split("\\")[-1])
                     print(path.split("\\")[1])
                     needsCompile = True
