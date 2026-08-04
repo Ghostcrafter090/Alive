@@ -27,3 +27,6 @@ execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=91.
 execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=101..},tag=!gothic_ghost] run attribute @s minecraft:generic.follow_range base set 150
 
 function gothichorror:effects/ghosts/main
+
+
+
