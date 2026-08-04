@@ -12,7 +12,7 @@ scoreboard objectives add illagersKilledCount dummy
 scoreboard objectives add illagersKilledCountWorker dummy
 
 # Main
-execute as @a run scoreboard players operation @s illagersKilledCount += @s pillagersKilledCount
+execute as @a run scoreboard players operation @s illagersKilledCount = @s pillagersKilledCount
 
 execute as @a run scoreboard players operation @s illagersKilledCountWorker = @s evokersKilledCount
 execute as @a run scoreboard players operation @s illagersKilledCountWorker *= @e[tag=gstools_worker,type=marker] 2
