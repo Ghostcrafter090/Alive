@@ -1,5 +1,6 @@
 import modules.pytools as pytools
 import modules.curseforge as curseforge
+import modules.modrinth as modrinth
 
 import subprocess
 import sys
@@ -50,7 +51,7 @@ def getEarliestReleaseDate():
     
     return earliest
 
-def releaseMod(releaseNumber, modId, versionTestData=False):
+def releaseMod(releaseNumber, modId, versionTestData=False, doModrinth=True, doCurseforge=True):
     for file in subprocess.getoutput("dir \".\\releases\\" + releaseNumber + "\\*.jar\" /b").split('\n'):
         
         print(file)
@@ -65,13 +66,18 @@ def releaseMod(releaseNumber, modId, versionTestData=False):
                 
                 print((".\\releases\\" + releaseNumber + "\\" + file) + str(projectName) + str(loaderVersion) + str(gameVersion) + str(modId + " " + loaderVersion + " " + gameVersion + " " + modVersion) + str("\n - ".join(pytools.IO.getJson(".\\releases\\" + releaseNumber + "\\release.json")["releaseHistory"])))
                 
-                curseforge.uploadFile(".\\releases\\" + releaseNumber + "\\" + file, projectName, loaderVersion, gameVersion, modId + " " + loaderVersion + " " + gameVersion + " " + modVersion, "\n - ".join(pytools.IO.getJson(".\\releases\\" + releaseNumber + "\\release.json")["releaseHistory"]))
-            
+                if doCurseforge:
+                    curseforge.uploadFile(".\\releases\\" + releaseNumber + "\\" + file, projectName, loaderVersion, gameVersion, modId + " " + loaderVersion + " " + gameVersion + " " + modVersion, "\n - ".join(pytools.IO.getJson(".\\releases\\" + releaseNumber + "\\release.json")["releaseHistory"]))
+                if doModrinth:
+                    modrinth.uploadFile(".\\releases\\" + releaseNumber + "\\" + file, projectName, loaderVersion, gameVersion, releaseNumber, modId + " " + loaderVersion + " " + gameVersion + " " + modVersion, "\n - ".join(pytools.IO.getJson(".\\releases\\" + releaseNumber + "\\release.json")["releaseHistory"]))
 
 doRun = False
 complete = False
 force = False
 doTest = False
+skipTest = False
+doModrinth = True
+doCurseforge = True
 for arg in sys.argv:
     if arg == "--release":
         doRun = True
@@ -81,32 +87,43 @@ for arg in sys.argv:
         force = True
     if arg == "--test":
         doTest = True
+    if arg == "--skipTest":
+        skipTest = True
+    if arg == "--onlyModrinth":
+        doCurseforge = False
+    if arg == "--onlyCurseforge":
+        doModrinth = False
+        
 
 if doRun:
     if complete:
         if (len(getReleasesToday()) < 1) or force:
             print("Releasing new mod version!")
             
-            testCompletion = autoTest.testCompleteVersion(".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]))
-            
+            if not skipTest:
+                testCompletion = autoTest.testCompleteVersion(".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]))
+            else:
+                testCompletion = False
+                
             for mod in curseforge.projectIdDict:
                 if not doTest:
-                    releaseMod(".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]), mod, versionTestData=testCompletion)
-        
-            globals.aReleaseSchedule["list"].append({
-                "version": (".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3])),
-                "releaseDate": pytools.clock.getDateTime(),
-                "isReleased": True
-            })
+                    releaseMod(".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]), mod, versionTestData=testCompletion, doModrinth=doModrinth, doCurseforge=doCurseforge)
+
+            if not skipTest:
+                globals.aReleaseSchedule["list"].append({
+                    "version": (".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3])),
+                    "releaseDate": pytools.clock.getDateTime(),
+                    "isReleased": True
+                })
             
-            if force:
-                i = 0
-                while i < len(globals.aReleaseSchedule["list"]):
-                    globals.aReleaseSchedule["list"][i]["isReleased"] = True
-                    i = i + 1
-            
-            if not doTest:
-                pytools.IO.saveJson("release_schedule.json", globals.aReleaseSchedule)
+                if force:
+                    i = 0
+                    while i < len(globals.aReleaseSchedule["list"]):
+                        globals.aReleaseSchedule["list"][i]["isReleased"] = True
+                        i = i + 1
+                
+                if not doTest:
+                    pytools.IO.saveJson("release_schedule.json", globals.aReleaseSchedule)
         
         else:
             print("Release already made today. Waiting for later...")
@@ -137,21 +154,25 @@ if doRun:
                 print("Releasing scheduled mod version!")
                 theRelease = copy.deepcopy(getEarliestReleaseDate())
                 
-                testCompletion = autoTest.testCompleteVersion(theRelease["version"])
+                if not skipTest:
+                    testCompletion = autoTest.testCompleteVersion(theRelease["version"])
+                else:
+                    testCompletion = False
                 
                 for mod in curseforge.projectIdDict:
-                    releaseMod(theRelease["version"], mod, versionTestData=testCompletion)
+                    releaseMod(theRelease["version"], mod, versionTestData=testCompletion, doModrinth=doModrinth, doCurseforge=doCurseforge)
                 
-                i = 0
-                for aRelease in globals.aReleaseSchedule["list"]:
-                    if aRelease["version"] == theRelease["version"]:
-                        break
-                    i = i + 1
+                if not skipTest:
+                    i = 0
+                    for aRelease in globals.aReleaseSchedule["list"]:
+                        if aRelease["version"] == theRelease["version"]:
+                            break
+                        i = i + 1
+                        
+                    globals.aReleaseSchedule["list"][i]["isReleased"] = True
                     
-                globals.aReleaseSchedule["list"][i]["isReleased"] = True
-                
-                if not doTest:
-                    pytools.IO.saveJson("release_schedule.json", globals.aReleaseSchedule)
+                    if not doTest:
+                        pytools.IO.saveJson("release_schedule.json", globals.aReleaseSchedule)
             else:
                 print("Release already made today. Waiting for tomorrow...")
         else:

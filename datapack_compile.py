@@ -183,7 +183,7 @@ def compile(fileData, fileName, path):
 def run(path, namespace, compileEverything=False):
     
     fileChanges = []
-    for file in subprocess.getoutput("git status -s").replace("\n M ", "\n")[3:].replace("/", "\\").split("\n"):
+    for file in subprocess.getoutput("git status -s").replace("\n M ", "\n")[3:].replace("\n A ", "\n")[3:].replace("/", "\\").split("\n"):
         if "\\data\\" in file:
             fileChanges.append(file.split("\\data\\")[1].replace("\\function\\", "\\"))
             

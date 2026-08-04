@@ -1,0 +1,240 @@
+{
+  "gothichorror.rumble": {
+    "category": "master",
+    "sounds": [
+      "darkrumble"
+    ],
+    "subtitle": "Reality Trembles..."
+  },
+  "gothichorror.hghost.death": {
+    "category": "master",
+    "sounds": [
+      "death_ghost_0",
+      "death_ghost_1"
+    ],
+    "subtitle": "Deathly Ghost Wailing..."
+  },
+  "gothichorror.hghost.dying": {
+    "category": "master",
+    "sounds": [
+      "dying_ghost_0",
+      "dying_ghost_1",
+      "dying_ghost_2"
+    ],
+    "subtitle": "Dying Ghost Howeling..."
+  },
+  "gothichorror.hghost.main": {
+    "category": "master",
+    "sounds": [
+      "ghost_0",
+      "ghost_1"
+    ],
+    "subtitle": "Ghost Moaning..."
+  },
+  "gothichorror.ghost.clap": {
+    "category": "master",
+    "sounds": [
+      "g_clap_0",
+      "g_clap_1"
+    ],
+    "subtitle": "Something Clapping..."
+  },
+  "gothichorror.ghost.door": {
+    "category": "master",
+    "sounds": [
+      "g_door_0",
+      "g_door_1",
+      "g_door_2",
+      "g_door_3",
+      "g_door_4",
+      "g_door_5",
+      "g_door_6",
+      "g_door_7"
+    ],
+    "subtitle": "Door Moving..."
+  },
+  "gothichorror.ghost.footstep": {
+    "category": "master",
+    "sounds": [
+      "g_footsteps_0",
+      "g_footsteps_1",
+      "g_footsteps_2"
+    ],
+    "subtitle": "Somethings Here..."
+  },
+  "gothichorror.ghost.knock": {
+    "category": "master",
+    "sounds": [
+      "g_knock_0",
+      "g_knock_1",
+      "g_knock_2",
+      "g_knock_3",
+      "g_knock_4"
+    ],
+    "subtitle": "Knocking On Door..."
+  },
+  "gothichorror.ghost.snap": {
+    "category": "master",
+    "sounds": [
+      "g_snap_0",
+      "g_snap_1",
+      "g_snap_2",
+      "g_snap_3",
+      "g_snap_4",
+      "g_snap_5",
+      "g_snap_6",
+      "g_snap_7",
+      "g_snap_8"
+    ],
+    "subtitle": "Something Snapping Fingers..."
+  },
+  "gothichorror.ghost.tap": {
+    "category": "master",
+    "sounds": [
+      "g_tap_0",
+      "g_tap_1",
+      "g_tap_2",
+      "g_tap_3",
+      "g_tap_4",
+      "g_tap_5",
+      "g_tap_6",
+      "g_tap_7"
+    ],
+    "subtitle": "Something Tapping..."
+  },
+  "gothichorror.ghost.window": {
+    "category": "master",
+    "sounds": [
+      "g_window_0",
+      "g_window_1",
+      "g_window_2",
+      "g_window_3",
+      "g_window_4",
+      "g_window_5",
+      "g_window_6",
+      "g_window_7",
+      "g_window_8"
+    ],
+    "subtitle": "Something Hitting The Window..."
+  },
+  "gothichorror.hallow.banshee": {
+    "category": "master",
+    "sounds": [
+      "h_banshee_0",
+      "h_banshee_1"
+    ],
+    "subtitle": "Distant Screaching..."
+  },
+  "gothichorror.hallow.woman.beside": {
+    "category": "master",
+    "sounds": [
+      "h_beside_you_0",
+      "h_beside_you_1",
+      "h_beside_you_2",
+      "h_beside_you_3"
+    ],
+    "subtitle": "look behind you"
+  },
+  "gothichorror.hallow.breath": {
+    "category": "master",
+    "sounds": [
+      "h_breath_0",
+      "h_breath_1",
+      "h_breath_2",
+      "h_breath_3"
+    ],
+    "subtitle": "The Walls Breath..."
+  },
+  "gothichorror.hallow.chains": {
+    "category": "master",
+    "sounds": [
+      "h_chains_0",
+      "h_chains_1",
+      "h_chains_2"
+    ],
+    "subtitle": "Chains Rattling"
+  },
+  "gothichorror.hallow.general": {
+    "category": "master",
+    "sounds": [
+      "h_general"
+    ],
+    "subtitle": "The Air Is Heavy..."
+  },
+  "gothichorror.hallow.mood.main": {
+    "category": "master",
+    "sounds": [
+      "h_general_mood"
+    ],
+    "subtitle": "Bumps In The Night..."
+  },
+  "gothichorror.hallow.mood.dark": {
+    "category": "master",
+    "sounds": [
+      "h_general_dark"
+    ],
+    "subtitle": "Your Being Followed..."
+  },
+  "gothichorror.hallow.mood.death": {
+    "category": "master",
+    "sounds": [
+      "h_general_death"
+    ],
+    "subtitle": "..."
+  },
+  "gothichorror.hallow.mood.dying": {
+    "category": "master",
+    "sounds": [
+      "h_general_dying"
+    ],
+    "subtitle": "A Darkness Grows..."
+  },
+  "gothichorror.hallow.mood.evil": {
+    "category": "master",
+    "sounds": [
+      "h_general_evil"
+    ],
+    "subtitle": "Evil Things Stalk You..."
+  },
+  "gothichorror.hallow.mood.sinister": {
+    "category": "master",
+    "sounds": [
+      "h_general_evil"
+    ],
+    "subtitle": "The Cave Is Sinister..."
+  },
+  "gothichorror.hallow.mood.waking": {
+    "category": "master",
+    "sounds": [
+      "h_general_waking"
+    ],
+    "subtitle": "Somethings Waking Up..."
+  },
+  "gothichorror.hallow.knock": {
+    "category": "master",
+    "sounds": [
+      "h_knock_0",
+      "h_knock_1",
+      "h_knock_2",
+      "h_knock_3",
+      "h_knock_4",
+      "h_knock_5"
+    ],
+    "subtitle": "Distant Knocking..."
+  },
+  "gothichorror.hallow.rumble": {
+    "category": "master",
+    "sounds": [
+      "h_rumble_0",
+      "h_rumble_1"
+    ],
+    "subtitle": "You Sense Danger..."
+  },
+  "gothichorror.hallow.woman.sunset": {
+    "category": "master",
+    "sounds": [
+      "h_sunset"
+    ],
+    "subtitle": "It always happens after dark... DONT... FALL... ASLEEEP!"
+  }
+}

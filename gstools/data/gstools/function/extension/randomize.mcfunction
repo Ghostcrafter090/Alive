@@ -14,6 +14,8 @@ execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsLifeAndDeathWorkerMultTen += @s randomSigned10
 execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsBossProgressionWorkerMultTen += @s randomSigned10
+execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsGothicHorrorWorkerMultTen += @s randomSigned10
 
 execute as @e[tag=gstools_worker,type=marker,scores={averageTpsDesirePaths=..1}] run scoreboard players set @s averageTpsDesirePathsWorkerMultTen 400
 execute as @e[tag=gstools_worker,type=marker,scores={averageTpsDesirePaths=..1}] run scoreboard players set @s averageTpsDesirePaths 20
@@ -31,3 +33,5 @@ execute as @e[tag=gstools_worker,type=marker,scores={averageTpsLifeAndDeath=..1}
 execute as @e[tag=gstools_worker,type=marker,scores={averageTpsLifeAndDeath=..1}] run scoreboard players set @s averageTpsLifeAndDeath 20
 execute as @e[tag=gstools_worker,type=marker,scores={averageTpsBossProgression=..1}] run scoreboard players set @s averageTpsBossProgressionWorkerMultTen 400
 execute as @e[tag=gstools_worker,type=marker,scores={averageTpsBossProgression=..1}] run scoreboard players set @s averageTpsBossProgression 20
+execute as @e[tag=gstools_worker,type=marker,scores={averageTpsGothicHorror=..1}] run scoreboard players set @s averageTpsGothicHorrorWorkerMultTen 400
+execute as @e[tag=gstools_worker,type=marker,scores={averageTpsGothicHorror=..1}] run scoreboard players set @s averageTpsGothicHorror 20

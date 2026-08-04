@@ -8,7 +8,7 @@ import traceback
 import time
 
 class globals:
-    apiKey = pytools.IO.getJson("curseforge_api.json")["key"]
+    apiKey = pytools.IO.getJson("upload_api.json")["curseforge"]["key"]
 
     versionIdBlacklist = pytools.IO.getJson("version_id_blacklist.json")["list"]
     

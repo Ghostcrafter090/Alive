@@ -17,3 +17,5 @@ execute unless score #TimeLib.Settings.ShowLoadMessage TimeLib matches 0 run tel
 
 # Tick
 function timelib:zprivate/tick
+
+say loading fuck

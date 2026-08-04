@@ -1,0 +1,198 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": 1,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:mineable/axe"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": -1,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:mineable/axe"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 1,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:mineable/axe"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": -1,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:mineable/axe"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": 1,
+            "offsetY": 1,
+            "offsetZ": 0,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:mineable/axe"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": -1,
+            "offsetY": 1,
+            "offsetZ": 0,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:mineable/axe"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": 0,
+            "offsetY": 1,
+            "offsetZ": 1,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:mineable/axe"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": 0,
+            "offsetY": 1,
+            "offsetZ": -1,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:mineable/axe"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": 1,
+            "offsetY": 0,
+            "offsetZ": 1,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:mineable/axe"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": -1,
+            "offsetY": 0,
+            "offsetZ": -1,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:mineable/axe"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": -1,
+            "offsetY": 0,
+            "offsetZ": 1,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:mineable/axe"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": 1,
+            "offsetY": 0,
+            "offsetZ": -1,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:mineable/axe"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": 1,
+            "offsetY": 1,
+            "offsetZ": 1,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:mineable/axe"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": -1,
+            "offsetY": 1,
+            "offsetZ": -1,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:mineable/axe"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": -1,
+            "offsetY": 1,
+            "offsetZ": 1,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:mineable/axe"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": 1,
+            "offsetY": 1,
+            "offsetZ": -1,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:mineable/axe"
+                }
+            }
+        }
+        
+    ]
+}

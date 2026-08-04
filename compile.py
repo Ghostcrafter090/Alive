@@ -54,5 +54,5 @@ if doRun:
     pytools.IO.saveJson(".\\version_history.json", versionHistory)
     
     os.system("git add *")
-    os.system("git commit -m \"" + ".".join(str(x) for x in versionHistory["current_version"]) + " File Changes: \" -m \"" + "\" -m \"\\t".join(datapackCompiler.globals.changedFiles) + "\"")
+    os.system("git commit -m \"" + ".".join(str(x) for x in versionHistory["current_version"]) + " File Changes: \" -m \"" + "\" -m \"\\t".join(datapackCompiler.globals.changedFiles[:-25]) + "\"")
     os.system("git push")

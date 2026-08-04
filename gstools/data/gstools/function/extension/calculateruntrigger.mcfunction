@@ -45,3 +45,9 @@ function gstools:extension/dorunmath
 scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicBossProgression += @e[tag=gstools_worker,type=marker] globalTicWorkerA
 execute as @e[tag=gstools_worker,type=marker,scores={globalTicBossProgression=20..}] run scoreboard players set @s doRunBossProgression 1
 execute as @e[tag=gstools_worker,type=marker,scores={globalTicBossProgression=20..}] run scoreboard players set @s globalTicBossProgression 0
+
+scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA = @e[tag=gstools_worker,type=marker] averageTpsGothicHorror
+function gstools:extension/dorunmath
+scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicGothicHorror += @e[tag=gstools_worker,type=marker] globalTicWorkerA
+execute as @e[tag=gstools_worker,type=marker,scores={globalTicGothicHorror=20..}] run scoreboard players set @s doRunGothicHorror 1
+execute as @e[tag=gstools_worker,type=marker,scores={globalTicGothicHorror=20..}] run scoreboard players set @s globalTicGothicHorror 0
