@@ -32,6 +32,7 @@ execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players opera
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s ghostMood += @s randomSigned10
 
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run function gstools:util/random
+execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s horrorIndex *= @e[tag=gstools_worker,type=marker] 2
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s randomSigned10 *= @s horrorIndex
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s randomSigned10 /= @e[tag=gstools_worker,type=marker] 100
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s randomSigned10 /= @e[tag=gstools_worker,type=marker] 10
