@@ -16,6 +16,8 @@ execute if entity @e[tag=gstools_worker,scores={timeOfDay=0..12000}] as @e[tag=g
 execute as @e[tag=gothic_ghost] at @s if entity @s[scores={lightLevel=7..}] run tp @s ^ ^ ^-0.4 ~ ~
 execute as @e[tag=gothic_ghost] at @s unless block ~ ~1 ~ #gstools:air run tp @s ^ ^ ^-0.4 ~ ~
 execute as @e[tag=gothic_ghost] at @s unless block ~ ~1 ~ #gstools:air if block ~ ~2 ~ #gstools:air run tp @s ~ ~0.1 ~ ~ ~
+execute as @e[tag=gothic_ghost] at @s unless block ~ ~ ~ #gstools:air if block ~ ~1 ~ #gstools:air run tp @s ^ ^ ^-0.4 ~ ~
+execute as @e[tag=gothic_ghost] at @s unless block ~ ~ ~ #gstools:air if block ~ ~1 ~ #gstools:air if block ~ ~2 ~ #gstools:air run tp @s ~ ~0.1 ~ ~ ~
 # Setup
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run attribute @s minecraft:generic.movement_speed base set 0.08
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run attribute @s minecraft:generic.attack_damage base set 0.5
