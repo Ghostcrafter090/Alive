@@ -5,7 +5,8 @@ scoreboard objectives add numberOfNetherMonsters dummy
 # Main
 execute store result score @e[type=marker,tag=gstools_worker] numberOfUndeadMonsters if entity @e[type=#minecraft:undead]
 execute store result score @e[type=marker,tag=gstools_worker] numberOfNetherMonsters if entity @e[tag=nether,tag=monster]
-execute as @e[type=marker,tag=gstools_worker,scores={ticTenSecond=11..11}] if score @s numberOfUndeadMonsters > @s 20 as @e[type=#minecraft:undead,limit=1,sort=random] ru
+execute as @e[type=marker,tag=gstools_worker,scores={ticTenSecond=11..11}] if score @s numberOfUndeadMonsters > @s 20 as @e[type=#minecraft:undead,limit=1,sort=random] run function gstools:horror/getindex
+execute as @e[type=marker,tag=gstools_worker,scores={ticTenSecond=11..11}] if score @s numberOfUndeadMonsters > @s 20 as @e[type=#minecraft:undead,limit=1,sort=random] run scoreboard players add @s horrorIndex 35
 execute as @e[type=marker,tag=gstools_worker,scores={ticTenSecond=11..11}] if score @s numberOfUndeadMonsters > @s 20 as @e[type=#minecraft:undead,limit=1,sort=random] if score @s horrorIndex < @e[type=marker,tag=gstools_worker,limit=1] numberOfUndeadMonsters run kill @s
 execute as @e[type=marker,tag=gstools_worker,scores={ticTenSecond=11..11}] if score @s numberOfNetherMonsters > @s 20 as @e[type=#minecraft:undead,limit=1,sort=random] if score @s horrorIndex < @e[type=marker,tag=gstools_worker,limit=1] numberOfNetherMonsters run kill @s
 
