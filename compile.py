@@ -22,11 +22,11 @@ def getDatapacks():
 def compileDatapack(name):
     compileFolders = os.listdir(".\\" + name + "\\data")
     for folder in compileFolders:
-        datapackCompiler.run(".\\" + name + "\\data\\" + folder + "\\function", folder, compileEverything=flags.compileEverything)
-        if flags.compileEverything:
-            os.system("robocopy \".\\datapack_compile_temp\" \"..\\datapacks\\" + name + "\\data\\" + folder + "\\function\" * /mir")
-        else:
-            os.system("xcopy \".\\datapack_compile_temp\\*\" \"..\\datapacks\\" + name + "\\data\\" + folder + "\\function\" /e /c /y")
+        if datapackCompiler.run(".\\" + name + "\\data\\" + folder + "\\function", folder, compileEverything=flags.compileEverything):
+            if flags.compileEverything:
+                os.system("robocopy \".\\datapack_compile_temp\" \"..\\datapacks\\" + name + "\\data\\" + folder + "\\function\" * /mir")
+            else:
+                os.system("xcopy \".\\datapack_compile_temp\\*\" \"..\\datapacks\\" + name + "\\data\\" + folder + "\\function\" /e /c /y")
 
 doRun = False
 for arg in sys.argv:

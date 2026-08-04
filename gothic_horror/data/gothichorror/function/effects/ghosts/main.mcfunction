@@ -105,3 +105,4 @@ execute as @e[tag=is_human,type=!player] at @s run tp @e[type=marker,tag=human_i
 
 execute if entity @e[tag=gstools_worker,scores={averageTps=15..}] as @e[type=marker,tag=human_is_alive] at @s unless entity @e[tag=is_human,distance=0..5,sort=nearest,limit=1,type=!player] run summon zombie ~ ~ ~ {HasVisualFire:0b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,FallFlying:1b,Tags:["gothic_ghost"],equipment:{mainhand:{id:"minecraft:air",count:1},offhand:{id:"minecraft:air",count:1}},active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:10000000,show_particles:0b,show_icon:0b},{id:"minecraft:slow_falling",amplifier:1,duration:10000000,show_particles:0b,show_icon:0b}],attributes:[{id:"minecraft:attack_damage",base:0.5},{id:"minecraft:movement_speed",base:0.01}]}
 execute as @e[type=marker,tag=human_is_alive] at @s unless entity @e[tag=is_human,distance=0..1,sort=nearest,limit=1,type=!player] run kill @s
+

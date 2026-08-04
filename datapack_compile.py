@@ -183,58 +183,68 @@ def compile(fileData, fileName, path):
 def run(path, namespace, compileEverything=False):
     
     fileChanges = []
-    for file in subprocess.getoutput("git status -s").replace("\n M ", "\n")[3:].replace("\n A ", "\n")[3:].replace("/", "\\").split("\n"):
-        if "\\data\\" in file:
-            fileChanges.append(file.split("\\data\\")[1].replace("\\function\\", "\\"))
-            
+    needsCompile = False
     try:
-        try:
-            os.mkdir(".\\datapack_compile_temp")
-        except:
-            pass
-        os.system("robocopy \"" + path + "\" \".\\datapack_compile_temp\" * /mir")
-        os.chdir(".\\datapack_compile_temp")
+        for file in subprocess.getoutput("git status -s").replace("\n M ", "\n")[3:].replace("\n A ", "\n")[3:].replace("/", "\\").split("\n"):
+            if "\\data\\" in file:
+                fileChanges.append(file.split("\\data\\")[1].replace("\\function\\", "\\"))
+                if file.split("\\data\\")[0].split("\\")[-1] == path.split("\\")[1]:
+                    needsCompile = True
         
-        i = 0
-        while i < 100:
-            print("STARTING PASS. PASS NUMBER: " + str(i))
-            hasCreatedSubfile = False
-            fileList = subprocess.getoutput("dir /s /b *.mcfunction").split('\n')
-            
-            # print(fileList)
-            # print(os.getcwd())
-            
-            for file in fileList:
-                if os.path.exists(file) and (((namespace + "\\" + file.split("datapack_compile_temp\\")[1]) in fileChanges) or (compileEverything) or ("_sub" in file)):
-                    
-                    if (namespace + "\\" + file.split("datapack_compile_temp\\")[1]) not in globals.changedFiles:
-                        globals.changedFiles.append(namespace + "\\" + file.split("datapack_compile_temp\\")[1])
-                    
-                    fileData = pytools.IO.getFile(file).replace(" run execute ", " ").split("\n")
-                    
-                    while '' in fileData:
-                        fileData.remove('')
-                    
-                    mcpath = namespace + ":" + ".".join(file.replace(os.getcwd() + "\\", "").replace("\\", "/").split(".")[:-1])
-                    # print(path)
-                    
-                    print("    > Compiling path \"" + mcpath + "\"...")
-                    
-                    outData = compile(fileData, file.split("\\")[-1], mcpath)
-                    
-                    pytools.IO.saveFile(file, outData[0])
-                    for externalFile in outData[1]:
-                        if not os.path.exists("\\".join(file.split("\\")[:-1]) + "\\" + externalFile.split("\\")[0]):
-                            print("      --> Creating subfile \"" + str("\\".join(file.split("\\")[:-1]) + "\\" + externalFile) + "\"...")
-                            os.mkdir("\\".join(file.split("\\")[:-1]) + "\\" + externalFile.split("\\")[0])
-                        pytools.IO.saveFile("\\".join(file.split("\\")[:-1]) + "\\" + externalFile, outData[1][externalFile])
-                        hasCreatedSubfile = True
+        if needsCompile or compileEverything:
+            try:
+                try:
+                    os.mkdir(".\\datapack_compile_temp")
+                except:
+                    pass
+                os.system("robocopy \"" + path + "\" \".\\datapack_compile_temp\" * /mir")
+                os.chdir(".\\datapack_compile_temp")
                 
-                else:
-                    os.system("del \"" + file + "\" /f /q")
-            i = i + 1
-            if not hasCreatedSubfile:
-                i = 1000
+                i = 0
+                while i < 100:
+                    print("STARTING PASS. PASS NUMBER: " + str(i))
+                    hasCreatedSubfile = False
+                    fileList = subprocess.getoutput("dir /s /b *.mcfunction").split('\n')
+                    
+                    # print(fileList)
+                    # print(os.getcwd())
+                    
+                    for file in fileList:
+                        if os.path.exists(file) and (((namespace + "\\" + file.split("datapack_compile_temp\\")[1]) in fileChanges) or (compileEverything) or ("_sub" in file)):
+                            
+                            if (namespace + "\\" + file.split("datapack_compile_temp\\")[1]) not in globals.changedFiles:
+                                globals.changedFiles.append(namespace + "\\" + file.split("datapack_compile_temp\\")[1])
+                            
+                            fileData = pytools.IO.getFile(file).replace(" run execute ", " ").split("\n")
+                            
+                            while '' in fileData:
+                                fileData.remove('')
+                            
+                            mcpath = namespace + ":" + ".".join(file.replace(os.getcwd() + "\\", "").replace("\\", "/").split(".")[:-1])
+                            # print(path)
+                            
+                            print("    > Compiling path \"" + mcpath + "\"...")
+                            
+                            outData = compile(fileData, file.split("\\")[-1], mcpath)
+                            
+                            pytools.IO.saveFile(file, outData[0])
+                            for externalFile in outData[1]:
+                                if not os.path.exists("\\".join(file.split("\\")[:-1]) + "\\" + externalFile.split("\\")[0]):
+                                    print("      --> Creating subfile \"" + str("\\".join(file.split("\\")[:-1]) + "\\" + externalFile) + "\"...")
+                                    os.mkdir("\\".join(file.split("\\")[:-1]) + "\\" + externalFile.split("\\")[0])
+                                pytools.IO.saveFile("\\".join(file.split("\\")[:-1]) + "\\" + externalFile, outData[1][externalFile])
+                                hasCreatedSubfile = True
+                        
+                        else:
+                            os.system("del \"" + file + "\" /f /q")
+                    i = i + 1
+                    if not hasCreatedSubfile:
+                        i = 1000
+            except:
+                print(traceback.format_exc())
+            os.chdir("..")
+
     except:
         print(traceback.format_exc())
-    os.chdir("..")
+
+    return needsCompile
