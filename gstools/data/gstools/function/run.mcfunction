@@ -5,6 +5,7 @@ scoreboard objectives add ticQuarter dummy
 scoreboard objectives add ticEigth dummy
 scoreboard objectives add ticTenth dummy
 scoreboard objectives add ticSecond dummy
+scoreboard objectives add ticTenSecond dummy
 scoreboard objectives add globalTicWorkerA dummy
 scoreboard objectives add globalTicWorkerB dummy
 scoreboard objectives add globalTicWorkerC dummy
@@ -118,6 +119,9 @@ scoreboard players operation @e[tag=gstools_worker,type=marker] ticTenth %= @e[t
 
 scoreboard players operation @e[tag=gstools_worker,type=marker] ticSecond = @e[tag=gstools_worker,type=marker] tic
 scoreboard players operation @e[tag=gstools_worker,type=marker] ticSecond %= @e[tag=gstools_worker,type=marker] 20
+
+scoreboard players operation @e[tag=gstools_worker,type=marker] ticTenSecond = @e[tag=gstools_worker,type=marker] tic
+scoreboard players operation @e[tag=gstools_worker,type=marker] ticTenSecond %= @e[tag=gstools_worker,type=marker] 200
 
 execute unless entity @e[type=marker,tag=gstools_worker,scores={disableEntityCulling=1..1}] if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=1..1}] run schedule function gstools:lagcontrol/culling 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={ticSecond=1..1}] run schedule function gstools:lagcontrol/getsimulationdistance 10t append
