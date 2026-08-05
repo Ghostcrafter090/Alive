@@ -1,0 +1,9 @@
+# Define
+
+# Main
+execute if block ~ ~-1 ~ burnt:oxidized_chiseled_double_fallen_burnt_slab[type=top] if block ~ ~-1 ~ burnt:oxidized_chiseled_double_fallen_burnt_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_cut_double_fallen_burnt_slab[type=top,waterlogged=true] replace burnt:oxidized_chiseled_double_fallen_burnt_slab
+execute if block ~ ~-1 ~ burnt:oxidized_chiseled_double_fallen_burnt_slab[type=top] if block ~ ~-1 ~ burnt:oxidized_chiseled_double_fallen_burnt_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_cut_double_fallen_burnt_slab[type=top,waterlogged=false] replace burnt:oxidized_chiseled_double_fallen_burnt_slab
+execute if block ~ ~-1 ~ burnt:oxidized_chiseled_double_fallen_burnt_slab[type=bottom] if block ~ ~-1 ~ burnt:oxidized_chiseled_double_fallen_burnt_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_cut_double_fallen_burnt_slab[type=bottom,waterlogged=true] replace burnt:oxidized_chiseled_double_fallen_burnt_slab
+execute if block ~ ~-1 ~ burnt:oxidized_chiseled_double_fallen_burnt_slab[type=bottom] if block ~ ~-1 ~ burnt:oxidized_chiseled_double_fallen_burnt_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_cut_double_fallen_burnt_slab[type=bottom,waterlogged=false] replace burnt:oxidized_chiseled_double_fallen_burnt_slab
+execute if block ~ ~-1 ~ burnt:oxidized_chiseled_double_fallen_burnt_slab[type=double] if block ~ ~-1 ~ burnt:oxidized_chiseled_double_fallen_burnt_slab[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_cut_double_fallen_burnt_slab[type=double,waterlogged=true] replace burnt:oxidized_chiseled_double_fallen_burnt_slab
+execute if block ~ ~-1 ~ burnt:oxidized_chiseled_double_fallen_burnt_slab[type=double] if block ~ ~-1 ~ burnt:oxidized_chiseled_double_fallen_burnt_slab[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_cut_double_fallen_burnt_slab[type=double,waterlogged=false] replace burnt:oxidized_chiseled_double_fallen_burnt_slab

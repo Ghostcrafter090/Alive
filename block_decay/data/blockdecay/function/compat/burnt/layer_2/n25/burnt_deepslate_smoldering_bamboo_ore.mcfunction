@@ -1,0 +1,4 @@
+# Define
+
+# Main
+fill ~ ~-1 ~ ~ ~-1 ~ burnt:smoldering_bamboo_ore replace burnt:deepslate_smoldering_bamboo_ore

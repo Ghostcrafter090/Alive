@@ -14,6 +14,7 @@ flowchart TB
     n13["#minecraft:pressure_plates"] --> n6
     n15["&lt;wood&gt;_stairs"] --> n4
     n17["&lt;wood&gt;_wood"] --> n18["stripped_&lt;wood&gt;_wood"]
+    n300["&lt;wood&gt;_leaves"] --> n6
     n18 --> n4
     n19["#minecraft:rails"] --> n6
     n21["#minecraft:anvil"] --> n22["iron_block"]

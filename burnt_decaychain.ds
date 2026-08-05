@@ -1,76 +1,240 @@
 flowchart TB
-    n93["moss_block"]
+    n242["obsidian"]
+    n104["burnt:dead_&lt;coral&gt;_coral_block"]
+    n92["mud"]
+    n57["burnt:&lt;gem&gt;_ore"]
     n6["air"]
+    n38 --> n6
+    n74 --> n75["deepslate"]
+    n78["burnt:sooty_stone"] --> n79["amethyst_block"]
+    n86 --> n90["honey_block"]
+    n98 --> n99["ice"]
+    n110["burnt:smoldering_cactus"] --> n6
+    n155["nether_bricks"]
+    n162["burnt:smoldering_cherry_trapdoor"]
+    n163["burnt:smoldering_cherry_door"]
+    n164["burnt:sooty_cherry_slab"]
+    n165["burnt:burnt_cherry_door"]
+    n167["burnt:burnt_cherry_trapdoor"]
+    n164 --> n155
+    n165 --> n164
+    n168["burnt:sooty_stone_bricks"]
+    n169["burnt:sooty_granite"]
+    n170["burnt:sooty_cobblestone"]
+    n171["burnt:sooty_cobblestone_stairs"]
+    n172["polished_blackstone_slab"]
+    n173["burnt:sooty_cobblestone_wall"]
+    n174["burnt:sooty_bricks"]
+    n175["burnt:sooty_oak_fence_gate"]
+    n176["burnt:sooty_birch_log"]
+    n177["burnt:sooty_acacia_stairs"]
+    n178["burnt:sooty_granite_slab"]
+    n172 --> n74
+    n173 --> n172
+    n178 --> n172
+    n190["sandstone_stairs"]
+    n192["sandstone_wall"]
+    n200["burnt:sooty_cherry_stairs"]
+    n202["burnt:sooty_cherry_fence"]
+    n200 --> n190
+    n202 --> n192
+    n210["stone_bricks"]
+    n211["burnt:sooty_mossy_stone_bricks"]
+    n212["cracked_stone_bricks"]
+    n213["burnt:sooty_stone_stairs"]
+    n214["burnt:sooty_mossy_cobblestone_stairs"]
+    n215["burnt:sooty_stone_slab"]
+    n216["burnt:sooty_mossy_cobblestone_slab"]
+    n217["burnt:sooty_mossy_cobblestone_wall"]
+    n218["burnt:sooty_stone_brick_wall"]
+    n219["burnt:sooty_chiseled_stone_bricks"]
+    n221["cobblestone_slab"]
+    n211 --> n212
+    n216 --> n221
+    n251["burnt:sooty_dark_oak_stairs"]
+    n252["dark_prismarine_slab"]
+    n251 --> n252
+    n254 --> n242
+    n258["burnt:burnt_ladder"] --> n6
+    n263["burnt:smoldering_mangrove_roots"] --> n92
+    n266["burnt:sooty_andesite_stairs"]
+    n267["polished_andesite_slab"]
+    n269["burnt:sooty_granite_stairs"]
+    n270["polished_granite_slab"]
+    n272["burnt:sooty_diorite_stairs"]
+    n273["polished_diorite_slab"]
+    n266 --> n267
+    n269 --> n270
+    n272 --> n273
+    n300["burnt:&lt;wood&gt;_leaves"] --> n6
+    n124["burnt:oxidized_&lt;ore&gt;_bars"] --> n6
+    n125["burnt:&lt;ore&gt;_bars"] --> n124
+    n126["burnt:waxed_&lt;ore&gt;_block"] --> n133["burnt:&lt;ore&gt;_block"]
+    n127["burnt:waxed_cut_&lt;ore&gt;"] --> n134["burnt:cut_&lt;ore&gt;"]
+    n128["burnt:waxed_chiseled_&lt;ore&gt;"] --> n135["burnt:chiseled_&lt;ore&gt;"]
+    n129["burnt:waxed_&lt;ore&gt;_grate"] --> n136["burnt:&lt;ore&gt;_grate"]
+    n130["burnt:waxed_cut_&lt;ore&gt;_stairs"] --> n137["burnt:cut_&lt;ore&gt;_stairs"]
+    n131["burnt:waxed_cut_&lt;ore&gt;_slab"] --> n138["burnt:cut_&lt;ore&gt;_slab"]
+    n132["burnt:waxed_&lt;ore&gt;_bars"] --> n139["burnt:&lt;ore&gt;_bars"]
+    n64 --> n65["terracotta"]
+    n68 --> n69["glass_pane"]
+    n71["burnt:&lt;color&gt;_wool"] --> n72["white_wool"]
+    n96["burnt:&lt;color&gt;_carpet"] --> n6
+    n26 --> n400["stone"]
+    n45 --> n401["packed_mud"]
+    n47 --> n402["oak_planks"]
+    n62 --> n403["gravel"]
+    n95 --> n404["rooted_dirt"]
+    n167 --> n405["red_terracotta"]
+    n236 --> n406["pale_oak_log"]
+    n38["burnt:geyser_shoot"]
+    n29["burnt:burnt_sugar_cane"] --> n6
+    n42 --> n26["burnt:sooty_mossy_cobblestone"]
+    n45["burnt:burnt_grassy_earthen_clay"]
+    n47["burnt:sooty_birch_planks"]
 
-    n3["burnt:&lt;wood&gt;_log"] --> n2["burnt:stripped_&lt;wood&gt;_log"]
-    n237["burnt:&lt;wood&gt;_stem"] --> n239["burnt:stripped_&lt;wood&gt;_stem"]
-    n238["burnt:&lt;wood&gt;_hyphae"] --> n240["burnt:stripped_&lt;wood&gt;_hyphae"]
-    n2 --> n4["burnt:&lt;wood&gt;_planks"]
-    n4 --> n7["burnt:&lt;wood&gt;_slab"]
+    n57 --> n26
+
+    n112["burnt:ember_campfire]
+
+    n73["burnt:sooty_diorite"] --> n74["burnt:sooty_andesite"]
+    n88 --> n86["burnt:flaming_tar"]
+    n94 --> n95["burnt:semi_burnt_dirt"]
+    n97["burnt:black_ice_active"] --> n98["burnt:black_ice"]
+    n102 --> n47
+    n112 --> n47
+    n162 --> n163
+    n163 --> n164
+    n169 --> n170
+    n170 --> n171
+    n171 --> n172
+    n174 --> n176
+    n175 --> n178
+    n177 --> n178
+    n210 --> n211
+    n213 --> n214
+    n215 --> n216
+    n217 --> n218
+    n214 --> n216
+    n218 --> n216
+    n236["burnt:sooty_oak_log"]
+    n254["burnt:liquid_magma"]
     n239 --> n4
     n240 --> n4
-    n8["burnt:&lt;wood&gt;_fence"] --> n7
-    n15["burnt:&lt;wood&gt;_stairs"] --> n4
-    n17["burnt:&lt;wood&gt;_wood"] --> n18["burnt:stripped_&lt;wood&gt;_wood"]
-    n19["burnt:&lt;wood&gt;_wood"] --> n20["burnt:&lt;wood&gt;_stripped_wood"]
-    n21["burnt:&lt;wood&gt;_log"] --> n22["burnt:&lt;wood&gt;_stripped_log"]
-    n34["burnt:&lt;wood&gt;_mosaic"] --> n36["burnt:&lt;wood&gt;_mosaic_slab"]
     n37["burnt:&lt;wood&gt;_mosaic_stairs"] --> n36
-    n82["burnt:&lt;wood&gt;_block"] --> n83["burnt:stripped_&lt;wood&gt;_block"]
+    n55 --> n26
+    n61 --> n62["burnt:burnt_dirt"]
+    n63["burnt:&lt;color&gt;_glazed_terracotta_"] --> n64["burnt:&lt;color&gt;_terracotta"]
+    n67["burnt:&lt;color&gt;_stained_glass"] --> n68["burnt:&lt;color&gt;_stained_glass_pane"]
+    n76["burnt:sooty_spruce_stairs"] --> n73
+    n77["burnt:sooty_birch_fence"] --> n73
+    n87["burnt:pitch"] --> n85
+    n104 --> n94
+    n109["burnt:burnt_cactus"] --> n93
+    n113["burnt:burnt_pumpkin"] --> n93
+    n114["burnt:burnt_carved_pumpkin"] --> n93
+    n115["burnt:burnt_melon"] --> n93
+    n168 --> n73
+    n176 --> n73
+    n219 --> n210
+    n255["burnt:burnt_hay"] --> n93
+    n281["sponge"] --> n93
+    n8["burnt:&lt;wood&gt;_fence"] --> n7
     n36 --> n7
-    n7 --> n93
+    n54 --> n55["burnt:&lt;ore&gt;_ore"]
+    n25["burnt:deepslate_&lt;ore&gt;_ore"] --> n55
+    n120["burnt:oxidized_chiseled_&lt;ore&gt;"] --> n119
+    n122["burnt:oxidized_cut_&lt;ore&gt;_stairs"] --> n119
+    n60["burnt:&lt;color&gt;_concrete"] --> n61["burnt:&lt;color&gt;_concrete_powder"]
+    n40 --> n42["burnt:smoldering_mangrove_trapdoor"]
+    n85 --> n88["burnt:tar_barrel"]
+    n93 --> n94["burnt:smoldering_moss"]
+    n101["burnt:burnt_bookshelf"] --> n102["burnt:sooty_bookshelf"]
+    n237["burnt:&lt;wood&gt;_stem"] --> n239["burnt:stripped_&lt;wood&gt;_stem"]
+    n238["burnt:&lt;wood&gt;_hyphae"] --> n240["burnt:stripped_&lt;wood&gt;_hyphae"]
+    n256["burnt:burnt_jack_o_lantern"] --> n114
+    n283["burnt:burnt_farmland_moist"] --> n281
+    n15["burnt:&lt;wood&gt;_stairs"] --> n4
     n18 --> n4
     n83 --> n4
+    n118["burnt:oxidized_&lt;ore&gt;"] --> n54
+    n121["burnt:oxidized_&lt;ore&gt;_grate"] --> n120
+    n34["burnt:&lt;wood&gt;_mosaic"] --> n36["burnt:&lt;wood&gt;_mosaic_slab"]
+    n53["burnt:&lt;ore&gt;_block"] --> n54["burnt:raw_&lt;ore&gt;_block"]
+    n41["burnt:smoldering_spruce_trapdoor"] --> n40["burnt:smoldering_trapdoor"]
+    n84["burnt:tar"] --> n85["burnt:tar_cauldron"]
+    n7 --> n93["moss_block"]
+    n123 --> n118
+    n17["burnt:&lt;wood&gt;_wood"] --> n18["burnt:stripped_&lt;wood&gt;_wood"]
+    n82["burnt:&lt;wood&gt;_block"] --> n83["burnt:stripped_&lt;wood&gt;_block"]
+    n4 --> n7["burnt:&lt;wood&gt;_slab"]
+    n119["burnt:oxidized_cut_&lt;ore&gt;"] --> n123["burnt:oxidized_cut_&lt;ore&gt;_slab"]
+    n2 --> n4["burnt:&lt;wood&gt;_planks"]
+    n3["burnt:&lt;wood&gt;_log"] --> n2["burnt:stripped_&lt;wood&gt;_log"]
 
-    n300["burnt:nether_weave"]
-    n301["red_wool"]
-    n302["burnt:burnt_moss_carpet"]
-    n305["#minecraft:wool_carpets"]
-
-    n300 --> n301
-    n302 --> n6
-    n305 --> n6
-    
-    n303["burnt:sooty_cobblestone_stairs"]
-    n304["cobblestone_stairs"]
-    n306["burnt:sooty_granite_slab"]
-    n307["granite_slab"]
-    n308["burnt:sooty_cobblestone_wall"]
-    n309["cobblestone_wall"]
-    n310["burnt:black_ice_active"]
-    n311["ice"]
-    n312["burnt:tempered_glass_pane"]
-    n313["glass_pane"]
-    n314["burnt:sooty_stone_bricks"]
-    n315["stone_bricks"]
-    n316["burnt:tar_block"]
-    n317["black_concrete"]
-    n318["burnt:grave_back"]
-    n319["burnt:semi_burnt_dirt"]
-    n320["coarse_dirt"]
-    n321["burnt:sooty_diorite"]
-    n322["diorite"]
-    n323["burnt:sooty_brick_slab"]
-    n324["brick_slab"]
-    n325["burnt:burnt_grassy_sandy_d_irt"]
-    n326["red_sand"]
-    n327["burnt:grave_twist"]
-    n328["burnt:tempered_glass"]
-    n329["glass"]
-
-    n303 --> n304
-    n306 --> n307
-    n308 --> n309
-    n310 --> n311
-    n312 --> n313
-    n314 --> n315
-    n316 --> n317
-    n318 --> n6
-    n319 --> n320
-    n321 --> n322
-    n323 --> n324
-    n325 --> n326
-    n327 --> n6
-    n328 --> n329
-
-
+    n489["magma_block"]
+    n434["burnt:burnt_moss"] --> n93
+    n407["burnt:recovering_grass"] --> n6
+    n408["burnt:smoldering_grass_start"] --> n6
+    n409["burnt:burnt_spruce_door"] --> n6
+    n410["burnt:smoldering_high_grass"] --> n6
+    n411["burnt:smoldering_potatoes"] --> n6
+    n413["burnt:grave_back"] --> n221
+    n414["burnt:blaze_barrel"] --> n6
+    n415["burnt:burnt_grass"] --> n6
+    n416["burnt:burnt_grassy_sandy_d_irt"] --> n95
+    n417["burnt:smoldering_wheat"] --> n6
+    n418["burnt:grave_twist"] --> n221
+    n421["burnt:smoldering_beetroot"] --> n6
+    n422["burnt:smoldering_cave_vines_plant"] --> n6
+    n423["burnt:burnt_farmland"] --> n6
+    n424["burnt:burnt_acacia_door"] --> n6
+    n425["burnt:grave"] --> n221
+    n426["burnt:burnt_cave_vines_plant"] --> n6
+    n427["burnt:burnt_scaffolding"] --> n6
+    n428["burnt:burnt_path"] --> n95
+    n429["burnt:smoldering_grass"] --> n6
+    n430["burnt:burnt_mangrove_roots"] --> n93
+    n431["burnt:burnt_door"] --> n6
+    n432["burnt:geyser_water"] --> n6
+    n433["burnt:burnt_campfire"] --> n6
+    n436["burnt:burnt_vine"] --> n6
+    n438["burnt:smoldering_mangrove_door"] --> n6
+    n439["burnt:shale"] --> n221
+    n440["burnt:smoldering_azalea"] --> n6
+    n441["burnt:soul_wart"] --> n6
+    n442["burnt:smoldering_soul_wart"] --> n6
+    n443["burnt:tall_grass_burnt"] --> n6
+    n444["burnt:smoldering_door"] --> n6
+    n445["burnt:smoldering_coal"] --> n6
+    n446["burnt:smoldering_campfire"] --> n6
+    n447["burnt:fragile_magma"] --> n489
+    n448["burnt:smoldering_acacia_door"] --> n6
+    n458["burnt:burnt_acacia_trapdoor"] --> n6
+    n459["burnt:burnt_ivy"] --> n6
+    n460["burnt:soul_fire_10"] --> n6
+    n461["burnt:smoldering_fencegate"] --> n6
+    n462["burnt:fire_barrel_active"] --> n6
+    n463["burnt:burnt_azalea"] --> n6
+    n465["burnt:burnt_mangrove_door"] --> n6
+    n466["burnt:smoldering_crops"] --> n6
+    n467["burnt:sulphur_trail"] --> n95
+    n468["burnt:burnt_cave_vines"] --> n6
+    n470["burnt:firestarter"] --> n6
+    n471["burnt:smoldering_acacia_trapdoor"] --> n6
+    n472["burnt:burning_cave_vines_plant"] --> n6
+    n473["burnt:smoldering_cave_vines"] --> n6
+    n474["burnt:blaze_barrel_active"] --> n6
+    n475["burnt:smoldering_spruce_door"] --> n6
+    n477["burnt:fire_barrel"] --> n6
+    n478["burnt:smoldering_hay"] --> n93
+    n479["burnt:burnt_barrel"] --> n6
+    n480["burnt:burnt_high_grass"] --> n6
+    n481["burnt:smoldering_carrots"] --> n6
+    n482["burnt:burnt_spruce_trapdoor"] --> n6
+    n483["burnt:grave_lean"] --> n6
+    n484["burnt:burnt_crops"] --> n6
+    n485["burnt:burnt_button"] --> n6
+    n486["burnt:burnt_trapdoor"] --> n6
+    n487["burnt:burnt_fencegate"] --> n6
+    n488["burnt:burnt_mangrove_trapdoor"] --> n6

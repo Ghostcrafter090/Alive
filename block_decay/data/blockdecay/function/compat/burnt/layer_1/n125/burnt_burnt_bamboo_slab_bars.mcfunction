@@ -1,0 +1,9 @@
+# Define
+
+# Main
+execute if block ~ ~-1 ~ burnt:burnt_bamboo_slab_bars[type=top] if block ~ ~-1 ~ burnt:burnt_bamboo_slab_bars[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_burnt_bamboo_slab_bars[type=top,waterlogged=true] replace burnt:burnt_bamboo_slab_bars
+execute if block ~ ~-1 ~ burnt:burnt_bamboo_slab_bars[type=top] if block ~ ~-1 ~ burnt:burnt_bamboo_slab_bars[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_burnt_bamboo_slab_bars[type=top,waterlogged=false] replace burnt:burnt_bamboo_slab_bars
+execute if block ~ ~-1 ~ burnt:burnt_bamboo_slab_bars[type=bottom] if block ~ ~-1 ~ burnt:burnt_bamboo_slab_bars[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_burnt_bamboo_slab_bars[type=bottom,waterlogged=true] replace burnt:burnt_bamboo_slab_bars
+execute if block ~ ~-1 ~ burnt:burnt_bamboo_slab_bars[type=bottom] if block ~ ~-1 ~ burnt:burnt_bamboo_slab_bars[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_burnt_bamboo_slab_bars[type=bottom,waterlogged=false] replace burnt:burnt_bamboo_slab_bars
+execute if block ~ ~-1 ~ burnt:burnt_bamboo_slab_bars[type=double] if block ~ ~-1 ~ burnt:burnt_bamboo_slab_bars[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_burnt_bamboo_slab_bars[type=double,waterlogged=true] replace burnt:burnt_bamboo_slab_bars
+execute if block ~ ~-1 ~ burnt:burnt_bamboo_slab_bars[type=double] if block ~ ~-1 ~ burnt:burnt_bamboo_slab_bars[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_burnt_bamboo_slab_bars[type=double,waterlogged=false] replace burnt:burnt_bamboo_slab_bars

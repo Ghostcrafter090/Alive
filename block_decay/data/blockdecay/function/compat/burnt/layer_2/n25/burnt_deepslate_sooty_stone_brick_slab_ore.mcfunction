@@ -1,0 +1,9 @@
+# Define
+
+# Main
+execute if block ~ ~-1 ~ burnt:deepslate_sooty_stone_brick_slab_ore[type=top] if block ~ ~-1 ~ burnt:deepslate_sooty_stone_brick_slab_ore[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_stone_brick_slab_ore[type=top,waterlogged=true] replace burnt:deepslate_sooty_stone_brick_slab_ore
+execute if block ~ ~-1 ~ burnt:deepslate_sooty_stone_brick_slab_ore[type=top] if block ~ ~-1 ~ burnt:deepslate_sooty_stone_brick_slab_ore[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_stone_brick_slab_ore[type=top,waterlogged=false] replace burnt:deepslate_sooty_stone_brick_slab_ore
+execute if block ~ ~-1 ~ burnt:deepslate_sooty_stone_brick_slab_ore[type=bottom] if block ~ ~-1 ~ burnt:deepslate_sooty_stone_brick_slab_ore[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_stone_brick_slab_ore[type=bottom,waterlogged=true] replace burnt:deepslate_sooty_stone_brick_slab_ore
+execute if block ~ ~-1 ~ burnt:deepslate_sooty_stone_brick_slab_ore[type=bottom] if block ~ ~-1 ~ burnt:deepslate_sooty_stone_brick_slab_ore[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_stone_brick_slab_ore[type=bottom,waterlogged=false] replace burnt:deepslate_sooty_stone_brick_slab_ore
+execute if block ~ ~-1 ~ burnt:deepslate_sooty_stone_brick_slab_ore[type=double] if block ~ ~-1 ~ burnt:deepslate_sooty_stone_brick_slab_ore[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_stone_brick_slab_ore[type=double,waterlogged=true] replace burnt:deepslate_sooty_stone_brick_slab_ore
+execute if block ~ ~-1 ~ burnt:deepslate_sooty_stone_brick_slab_ore[type=double] if block ~ ~-1 ~ burnt:deepslate_sooty_stone_brick_slab_ore[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_stone_brick_slab_ore[type=double,waterlogged=false] replace burnt:deepslate_sooty_stone_brick_slab_ore

@@ -1,0 +1,4 @@
+# Define
+
+# Main
+fill ~ ~-1 ~ ~ ~-1 ~ air replace burnt:burnt_soul_gate_leaves

@@ -1,0 +1,9 @@
+# Define
+
+# Main
+execute if block ~ ~-1 ~ burnt:waxed_sooty_mangrove_slab_grate[type=top] if block ~ ~-1 ~ burnt:waxed_sooty_mangrove_slab_grate[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_mangrove_slab_grate[type=top,waterlogged=true] replace burnt:waxed_sooty_mangrove_slab_grate
+execute if block ~ ~-1 ~ burnt:waxed_sooty_mangrove_slab_grate[type=top] if block ~ ~-1 ~ burnt:waxed_sooty_mangrove_slab_grate[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_mangrove_slab_grate[type=top,waterlogged=false] replace burnt:waxed_sooty_mangrove_slab_grate
+execute if block ~ ~-1 ~ burnt:waxed_sooty_mangrove_slab_grate[type=bottom] if block ~ ~-1 ~ burnt:waxed_sooty_mangrove_slab_grate[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_mangrove_slab_grate[type=bottom,waterlogged=true] replace burnt:waxed_sooty_mangrove_slab_grate
+execute if block ~ ~-1 ~ burnt:waxed_sooty_mangrove_slab_grate[type=bottom] if block ~ ~-1 ~ burnt:waxed_sooty_mangrove_slab_grate[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_mangrove_slab_grate[type=bottom,waterlogged=false] replace burnt:waxed_sooty_mangrove_slab_grate
+execute if block ~ ~-1 ~ burnt:waxed_sooty_mangrove_slab_grate[type=double] if block ~ ~-1 ~ burnt:waxed_sooty_mangrove_slab_grate[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_mangrove_slab_grate[type=double,waterlogged=true] replace burnt:waxed_sooty_mangrove_slab_grate
+execute if block ~ ~-1 ~ burnt:waxed_sooty_mangrove_slab_grate[type=double] if block ~ ~-1 ~ burnt:waxed_sooty_mangrove_slab_grate[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_mangrove_slab_grate[type=double,waterlogged=false] replace burnt:waxed_sooty_mangrove_slab_grate

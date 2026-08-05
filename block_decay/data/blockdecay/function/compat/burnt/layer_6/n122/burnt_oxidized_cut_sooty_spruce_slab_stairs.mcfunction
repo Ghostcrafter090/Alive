@@ -1,0 +1,9 @@
+# Define
+
+# Main
+execute if block ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab_stairs[type=top] if block ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab_stairs[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab[type=top,waterlogged=true] replace burnt:oxidized_cut_sooty_spruce_slab_stairs
+execute if block ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab_stairs[type=top] if block ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab_stairs[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab[type=top,waterlogged=false] replace burnt:oxidized_cut_sooty_spruce_slab_stairs
+execute if block ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab_stairs[type=bottom] if block ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab_stairs[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab[type=bottom,waterlogged=true] replace burnt:oxidized_cut_sooty_spruce_slab_stairs
+execute if block ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab_stairs[type=bottom] if block ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab_stairs[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab[type=bottom,waterlogged=false] replace burnt:oxidized_cut_sooty_spruce_slab_stairs
+execute if block ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab_stairs[type=double] if block ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab_stairs[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab[type=double,waterlogged=true] replace burnt:oxidized_cut_sooty_spruce_slab_stairs
+execute if block ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab_stairs[type=double] if block ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab_stairs[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_cut_sooty_spruce_slab[type=double,waterlogged=false] replace burnt:oxidized_cut_sooty_spruce_slab_stairs

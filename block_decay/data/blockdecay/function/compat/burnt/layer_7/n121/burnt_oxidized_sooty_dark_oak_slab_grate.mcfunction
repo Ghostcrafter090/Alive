@@ -1,0 +1,9 @@
+# Define
+
+# Main
+execute if block ~ ~-1 ~ burnt:oxidized_sooty_dark_oak_slab_grate[type=top] if block ~ ~-1 ~ burnt:oxidized_sooty_dark_oak_slab_grate[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_chiseled_sooty_dark_oak_slab[type=top,waterlogged=true] replace burnt:oxidized_sooty_dark_oak_slab_grate
+execute if block ~ ~-1 ~ burnt:oxidized_sooty_dark_oak_slab_grate[type=top] if block ~ ~-1 ~ burnt:oxidized_sooty_dark_oak_slab_grate[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_chiseled_sooty_dark_oak_slab[type=top,waterlogged=false] replace burnt:oxidized_sooty_dark_oak_slab_grate
+execute if block ~ ~-1 ~ burnt:oxidized_sooty_dark_oak_slab_grate[type=bottom] if block ~ ~-1 ~ burnt:oxidized_sooty_dark_oak_slab_grate[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_chiseled_sooty_dark_oak_slab[type=bottom,waterlogged=true] replace burnt:oxidized_sooty_dark_oak_slab_grate
+execute if block ~ ~-1 ~ burnt:oxidized_sooty_dark_oak_slab_grate[type=bottom] if block ~ ~-1 ~ burnt:oxidized_sooty_dark_oak_slab_grate[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_chiseled_sooty_dark_oak_slab[type=bottom,waterlogged=false] replace burnt:oxidized_sooty_dark_oak_slab_grate
+execute if block ~ ~-1 ~ burnt:oxidized_sooty_dark_oak_slab_grate[type=double] if block ~ ~-1 ~ burnt:oxidized_sooty_dark_oak_slab_grate[waterlogged=true] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_chiseled_sooty_dark_oak_slab[type=double,waterlogged=true] replace burnt:oxidized_sooty_dark_oak_slab_grate
+execute if block ~ ~-1 ~ burnt:oxidized_sooty_dark_oak_slab_grate[type=double] if block ~ ~-1 ~ burnt:oxidized_sooty_dark_oak_slab_grate[waterlogged=false] run fill ~ ~-1 ~ ~ ~-1 ~ burnt:oxidized_chiseled_sooty_dark_oak_slab[type=double,waterlogged=false] replace burnt:oxidized_sooty_dark_oak_slab_grate
