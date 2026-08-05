@@ -35,7 +35,7 @@ class analyze:
         for line in logFile:
             if "Failed to load function" in line:
                 if not "version_conflict" in line:
-                    if "blockdecay:decay/" in line:
+                    if ("blockdecay:decay/" in line) or ("blockdecay:compat/" in line):
                         if line.split("blockdecay:")[1].split("_sub")[0].split("/")[-1] not in blocksFucked: 
                             print("WARNING: " + line)
                             blocksFucked.append(line.split("blockdecay:")[1].split("_sub")[0].split("/")[-1])
