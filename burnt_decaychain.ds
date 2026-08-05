@@ -1,0 +1,76 @@
+flowchart TB
+    n93["moss_block"]
+    n6["air"]
+
+    n3["burnt:&lt;wood&gt;_log"] --> n2["burnt:stripped_&lt;wood&gt;_log"]
+    n237["burnt:&lt;wood&gt;_stem"] --> n239["burnt:stripped_&lt;wood&gt;_stem"]
+    n238["burnt:&lt;wood&gt;_hyphae"] --> n240["burnt:stripped_&lt;wood&gt;_hyphae"]
+    n2 --> n4["burnt:&lt;wood&gt;_planks"]
+    n4 --> n7["burnt:&lt;wood&gt;_slab"]
+    n239 --> n4
+    n240 --> n4
+    n8["burnt:&lt;wood&gt;_fence"] --> n7
+    n15["burnt:&lt;wood&gt;_stairs"] --> n4
+    n17["burnt:&lt;wood&gt;_wood"] --> n18["burnt:stripped_&lt;wood&gt;_wood"]
+    n19["burnt:&lt;wood&gt;_wood"] --> n20["burnt:&lt;wood&gt;_stripped_wood"]
+    n21["burnt:&lt;wood&gt;_log"] --> n22["burnt:&lt;wood&gt;_stripped_log"]
+    n34["burnt:&lt;wood&gt;_mosaic"] --> n36["burnt:&lt;wood&gt;_mosaic_slab"]
+    n37["burnt:&lt;wood&gt;_mosaic_stairs"] --> n36
+    n82["burnt:&lt;wood&gt;_block"] --> n83["burnt:stripped_&lt;wood&gt;_block"]
+    n36 --> n7
+    n7 --> n93
+    n18 --> n4
+    n83 --> n4
+
+    n300["burnt:nether_weave"]
+    n301["red_wool"]
+    n302["burnt:burnt_moss_carpet"]
+    n305["#minecraft:wool_carpets"]
+
+    n300 --> n301
+    n302 --> n6
+    n305 --> n6
+    
+    n303["burnt:sooty_cobblestone_stairs"]
+    n304["cobblestone_stairs"]
+    n306["burnt:sooty_granite_slab"]
+    n307["granite_slab"]
+    n308["burnt:sooty_cobblestone_wall"]
+    n309["cobblestone_wall"]
+    n310["burnt:black_ice_active"]
+    n311["ice"]
+    n312["burnt:tempered_glass_pane"]
+    n313["glass_pane"]
+    n314["burnt:sooty_stone_bricks"]
+    n315["stone_bricks"]
+    n316["burnt:tar_block"]
+    n317["black_concrete"]
+    n318["burnt:grave_back"]
+    n319["burnt:semi_burnt_dirt"]
+    n320["coarse_dirt"]
+    n321["burnt:sooty_diorite"]
+    n322["diorite"]
+    n323["burnt:sooty_brick_slab"]
+    n324["brick_slab"]
+    n325["burnt:burnt_grassy_sandy_d_irt"]
+    n326["red_sand"]
+    n327["burnt:grave_twist"]
+    n328["burnt:tempered_glass"]
+    n329["glass"]
+
+    n303 --> n304
+    n306 --> n307
+    n308 --> n309
+    n310 --> n311
+    n312 --> n313
+    n314 --> n315
+    n316 --> n317
+    n318 --> n6
+    n319 --> n320
+    n321 --> n322
+    n323 --> n324
+    n325 --> n326
+    n327 --> n6
+    n328 --> n329
+
+
