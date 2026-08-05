@@ -1,141 +1,141 @@
 # Define
 
 # Main
-function blockdecay:decay/layer_2/n67/white_stained_glass
-function blockdecay:decay/layer_2/n67/light_gray_stained_glass
-function blockdecay:decay/layer_2/n67/gray_stained_glass
-function blockdecay:decay/layer_2/n67/black_stained_glass
-function blockdecay:decay/layer_2/n67/brown_stained_glass
-function blockdecay:decay/layer_2/n67/red_stained_glass
-function blockdecay:decay/layer_2/n67/orange_stained_glass
-function blockdecay:decay/layer_2/n67/yellow_stained_glass
-function blockdecay:decay/layer_2/n67/lime_stained_glass
-function blockdecay:decay/layer_2/n67/green_stained_glass
-function blockdecay:decay/layer_2/n67/cyan_stained_glass
-function blockdecay:decay/layer_2/n67/light_blue_stained_glass
-function blockdecay:decay/layer_2/n67/blue_stained_glass
-function blockdecay:decay/layer_2/n67/purple_stained_glass
-function blockdecay:decay/layer_2/n67/magenta_stained_glass
-function blockdecay:decay/layer_2/n67/pink_stained_glass
-function blockdecay:decay/layer_2/n184/quartz_pillar
-function blockdecay:decay/layer_2/n41/smooth_basalt
-function blockdecay:decay/layer_2/n118/oxidized_iron
-function blockdecay:decay/layer_2/n118/oxidized_gold
-function blockdecay:decay/layer_2/n118/oxidized_copper
-function blockdecay:decay/layer_2/n53/iron_block
-function blockdecay:decay/layer_2/n53/gold_block
-function blockdecay:decay/layer_2/n53/copper_block
-function blockdecay:decay/layer_2/n252/dark_prismarine_slab
-function blockdecay:decay/layer_2/n248/prismarine_brick_stairs
-function blockdecay:decay/layer_2/n243/prismarine
-function blockdecay:decay/layer_2/n105/bricks
-function blockdecay:decay/layer_2/n63/white_glazed_terracotta_
-function blockdecay:decay/layer_2/n63/light_gray_glazed_terracotta_
-function blockdecay:decay/layer_2/n63/gray_glazed_terracotta_
-function blockdecay:decay/layer_2/n63/black_glazed_terracotta_
-function blockdecay:decay/layer_2/n63/brown_glazed_terracotta_
-function blockdecay:decay/layer_2/n63/red_glazed_terracotta_
-function blockdecay:decay/layer_2/n63/orange_glazed_terracotta_
-function blockdecay:decay/layer_2/n63/yellow_glazed_terracotta_
-function blockdecay:decay/layer_2/n63/lime_glazed_terracotta_
-function blockdecay:decay/layer_2/n63/green_glazed_terracotta_
-function blockdecay:decay/layer_2/n63/cyan_glazed_terracotta_
-function blockdecay:decay/layer_2/n63/light_blue_glazed_terracotta_
-function blockdecay:decay/layer_2/n63/blue_glazed_terracotta_
-function blockdecay:decay/layer_2/n63/purple_glazed_terracotta_
-function blockdecay:decay/layer_2/n63/magenta_glazed_terracotta_
-function blockdecay:decay/layer_2/n63/pink_glazed_terracotta_
-function blockdecay:decay/layer_2/n173/polished_blackstone_wall
-function blockdecay:decay/layer_2/n178/polished_blackstone_brick_slab
-function blockdecay:decay/layer_2/n171/polished_blackstone_stairs
-function blockdecay:decay/layer_2/n76/blackstone_stairs
-function blockdecay:decay/layer_2/n77/blackstone_wall
-function blockdecay:decay/layer_2/n168/gilded_blackstone
-function blockdecay:decay/layer_2/n176/cracked_polished_blackstone_bricks
-function blockdecay:decay/layer_2/n151/polished_deepslate_wall
-function blockdecay:decay/layer_2/n140/chiseled_deepslate
-function blockdecay:decay/layer_2/n142/cracked_deepslate_bricks
-function blockdecay:decay/layer_2/n149/polished_deepslate_stairs
-function blockdecay:decay/layer_2/n242/obsidian
-function blockdecay:decay/layer_2/n78/budding_amethyst
-function blockdecay:decay/layer_2/n232/chiseled_tuff_bricks
-function blockdecay:decay/layer_2/n230/tuff_brick_slab
-function blockdecay:decay/layer_2/n225/polished_tuff_stairs
-function blockdecay:decay/layer_2/n227/polished_tuff_wall
-function blockdecay:decay/layer_2/n86/resin_block
-function blockdecay:decay/layer_2/n103/tube_coral_block
-function blockdecay:decay/layer_2/n103/brain_coral_block
-function blockdecay:decay/layer_2/n103/bubble_coral_block
-function blockdecay:decay/layer_2/n103/fire_coral_block
-function blockdecay:decay/layer_2/n103/horn_coral_block
-function blockdecay:decay/layer_2/n109/cactus
-function blockdecay:decay/layer_2/n113/pumpkin
-function blockdecay:decay/layer_2/n114/carved_pumpkin
-function blockdecay:decay/layer_2/n115/melon
-function blockdecay:decay/layer_2/n255/hay_bale
-function blockdecay:decay/layer_2/n257/dried_kelp_block
-function blockdecay:decay/layer_2/n281/sponge
-function blockdecay:decay/layer_2/n7/oak_slab
-function blockdecay:decay/layer_2/n7/dark_oak_slab
-function blockdecay:decay/layer_2/n7/birch_slab
-function blockdecay:decay/layer_2/n7/spruce_slab
-function blockdecay:decay/layer_2/n7/jungle_slab
-function blockdecay:decay/layer_2/n7/acacia_slab
-function blockdecay:decay/layer_2/n7/mangrove_slab
-function blockdecay:decay/layer_2/n7/cherry_slab
-function blockdecay:decay/layer_2/n7/pale_oak_slab
-function blockdecay:decay/layer_2/n7/crimson_slab
-function blockdecay:decay/layer_2/n7/warped_slab
-function blockdecay:decay/layer_2/n256/jack_o_lantern
-function blockdecay:decay/layer_2/n282/target
-function blockdecay:decay/layer_2/n283/wet_sponge
-function blockdecay:decay/layer_2/n4/oak_planks
-function blockdecay:decay/layer_2/n4/dark_oak_planks
-function blockdecay:decay/layer_2/n4/birch_planks
-function blockdecay:decay/layer_2/n4/spruce_planks
-function blockdecay:decay/layer_2/n4/jungle_planks
-function blockdecay:decay/layer_2/n4/acacia_planks
-function blockdecay:decay/layer_2/n4/mangrove_planks
-function blockdecay:decay/layer_2/n4/cherry_planks
-function blockdecay:decay/layer_2/n4/pale_oak_planks
-function blockdecay:decay/layer_2/n4/crimson_planks
-function blockdecay:decay/layer_2/n4/warped_planks
-function blockdecay:decay/layer_2/n8/oak_fence
-function blockdecay:decay/layer_2/n8/dark_oak_fence
-function blockdecay:decay/layer_2/n8/birch_fence
-function blockdecay:decay/layer_2/n8/spruce_fence
-function blockdecay:decay/layer_2/n8/jungle_fence
-function blockdecay:decay/layer_2/n8/acacia_fence
-function blockdecay:decay/layer_2/n8/mangrove_fence
-function blockdecay:decay/layer_2/n8/cherry_fence
-function blockdecay:decay/layer_2/n8/pale_oak_fence
-function blockdecay:decay/layer_2/n8/crimson_fence
-function blockdecay:decay/layer_2/n8/warped_fence
-function blockdecay:decay/layer_2/n36/oak_mosaic_slab
-function blockdecay:decay/layer_2/n36/dark_oak_mosaic_slab
-function blockdecay:decay/layer_2/n36/birch_mosaic_slab
-function blockdecay:decay/layer_2/n36/spruce_mosaic_slab
-function blockdecay:decay/layer_2/n36/jungle_mosaic_slab
-function blockdecay:decay/layer_2/n36/acacia_mosaic_slab
-function blockdecay:decay/layer_2/n36/mangrove_mosaic_slab
-function blockdecay:decay/layer_2/n36/cherry_mosaic_slab
-function blockdecay:decay/layer_2/n36/pale_oak_mosaic_slab
-function blockdecay:decay/layer_2/n36/crimson_mosaic_slab
-function blockdecay:decay/layer_2/n36/warped_mosaic_slab
-function blockdecay:decay/layer_2/n155/nether_bricks
-function blockdecay:decay/layer_2/n158/nether_brick_slab
-function blockdecay:decay/layer_2/n159/nether_brick_wall
-function blockdecay:decay/layer_2/n202/red_sandstone_wall
-function blockdecay:decay/layer_2/n198/cut_sandstone_slab
-function blockdecay:decay/layer_2/n206/smooth_red_sandstone_slab
-function blockdecay:decay/layer_2/n195/smooth_sandstone_stairs
-function blockdecay:decay/layer_2/n200/red_sandstone_stairs
-function blockdecay:decay/layer_2/n189/sandstone
-function blockdecay:decay/layer_2/n210/stone_bricks
-function blockdecay:decay/layer_2/n213/stone_brick_stairs
-function blockdecay:decay/layer_2/n217/stone_brick_wall
-function blockdecay:decay/layer_2/n229/tuff_brick_stairs
-function blockdecay:decay/layer_2/n231/tuff_brick_wall
-function blockdecay:decay/layer_2/n265/polished_andesite
-function blockdecay:decay/layer_2/n268/polished_granite
-function blockdecay:decay/layer_2/n271/polished_diorite
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n67/white_stained_glass
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n67/light_gray_stained_glass
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n67/gray_stained_glass
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n67/black_stained_glass
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n67/brown_stained_glass
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n67/red_stained_glass
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n67/orange_stained_glass
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n67/yellow_stained_glass
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n67/lime_stained_glass
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n67/green_stained_glass
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n67/cyan_stained_glass
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n67/light_blue_stained_glass
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n67/blue_stained_glass
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n67/purple_stained_glass
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n67/magenta_stained_glass
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n67/pink_stained_glass
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n184/quartz_pillar
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n41/smooth_basalt
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n118/oxidized_iron
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n118/oxidized_gold
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n118/oxidized_copper
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n53/iron_block
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n53/gold_block
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n53/copper_block
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n252/dark_prismarine_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n248/prismarine_brick_stairs
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n243/prismarine
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n105/bricks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n63/white_glazed_terracotta_
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n63/light_gray_glazed_terracotta_
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n63/gray_glazed_terracotta_
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n63/black_glazed_terracotta_
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n63/brown_glazed_terracotta_
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n63/red_glazed_terracotta_
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n63/orange_glazed_terracotta_
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n63/yellow_glazed_terracotta_
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n63/lime_glazed_terracotta_
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n63/green_glazed_terracotta_
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n63/cyan_glazed_terracotta_
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n63/light_blue_glazed_terracotta_
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n63/blue_glazed_terracotta_
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n63/purple_glazed_terracotta_
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n63/magenta_glazed_terracotta_
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n63/pink_glazed_terracotta_
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n173/polished_blackstone_wall
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n178/polished_blackstone_brick_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n171/polished_blackstone_stairs
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n76/blackstone_stairs
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n77/blackstone_wall
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n168/gilded_blackstone
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n176/cracked_polished_blackstone_bricks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n151/polished_deepslate_wall
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n140/chiseled_deepslate
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n142/cracked_deepslate_bricks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n149/polished_deepslate_stairs
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n242/obsidian
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n78/budding_amethyst
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n232/chiseled_tuff_bricks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n230/tuff_brick_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n225/polished_tuff_stairs
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n227/polished_tuff_wall
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n86/resin_block
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n103/tube_coral_block
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n103/brain_coral_block
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n103/bubble_coral_block
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n103/fire_coral_block
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n103/horn_coral_block
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n109/cactus
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n113/pumpkin
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n114/carved_pumpkin
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n115/melon
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n255/hay_bale
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n257/dried_kelp_block
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n281/sponge
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n7/oak_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n7/dark_oak_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n7/birch_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n7/spruce_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n7/jungle_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n7/acacia_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n7/mangrove_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n7/cherry_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n7/pale_oak_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n7/crimson_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n7/warped_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n256/jack_o_lantern
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n282/target
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n283/wet_sponge
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n4/oak_planks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n4/dark_oak_planks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n4/birch_planks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n4/spruce_planks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n4/jungle_planks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n4/acacia_planks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n4/mangrove_planks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n4/cherry_planks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n4/pale_oak_planks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n4/crimson_planks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n4/warped_planks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n8/oak_fence
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n8/dark_oak_fence
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n8/birch_fence
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n8/spruce_fence
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n8/jungle_fence
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n8/acacia_fence
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n8/mangrove_fence
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n8/cherry_fence
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n8/pale_oak_fence
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n8/crimson_fence
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n8/warped_fence
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n36/oak_mosaic_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n36/dark_oak_mosaic_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n36/birch_mosaic_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n36/spruce_mosaic_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n36/jungle_mosaic_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n36/acacia_mosaic_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n36/mangrove_mosaic_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n36/cherry_mosaic_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n36/pale_oak_mosaic_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n36/crimson_mosaic_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n36/warped_mosaic_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n155/nether_bricks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n158/nether_brick_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n159/nether_brick_wall
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n202/red_sandstone_wall
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n198/cut_sandstone_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n206/smooth_red_sandstone_slab
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n195/smooth_sandstone_stairs
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n200/red_sandstone_stairs
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n189/sandstone
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n210/stone_bricks
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n213/stone_brick_stairs
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n217/stone_brick_wall
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n229/tuff_brick_stairs
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n231/tuff_brick_wall
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n265/polished_andesite
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n268/polished_granite
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/n271/polished_diorite

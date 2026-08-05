@@ -1,8 +1,8 @@
 # Define
 
 # Main
+# <node:no_compile_mode>
 execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] run clone ~ ~-1 ~ ~ ~-1 ~ 0 0 0
-execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] run function blockdecay:compat/burnt/at
 execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_0/main
 execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_1/main
 execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_2/main
@@ -12,5 +12,7 @@ execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block 
 execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_6/main
 execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_7/main
 execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_8/main
+execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] run function blockdecay:compat/burnt/at
+# <node:no_compile_mode/>
 # execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run say Block Decayed!
 # execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run say BLOCK NOT DECAYED!
