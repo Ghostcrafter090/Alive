@@ -1,5 +1,5 @@
+say "[alive_command_limit_trace_debug] timelib_:zprivate/tick"
 schedule function timelib_:zprivate/tick 1t
-
 # Update the time
     # Check if the unix timestamp has changed
     # (Important): The player head does not resolve instantly. While unresolved, it will behave as if the unix timestamp hadn't changed, so it won't go backwards in time.
@@ -9,7 +9,6 @@ schedule function timelib_:zprivate/tick 1t
     execute as @a[limit=1] in minecraft:overworld run loot replace block 29999999 0 29999999 container.0 loot timelib_:player_head
     execute in minecraft:overworld store success score #TimeLib.UnixTimestampChanged TimeLib run data modify storage timelib_:zprivate Base64.Value set from block 29999999 0 29999999 Items[0].components."minecraft:profile".properties[0].value
     execute if score #TimeLib.UnixTimestampChanged TimeLib matches 1 run return run function timelib_:zprivate/update_time/get_unix_timestamp/main
-
     # Check if the daytime has changed
         # Get TPS
         # (Important): Keep track of the ticks between each daytime change to get the TPS.
@@ -17,6 +16,5 @@ schedule function timelib_:zprivate/tick 1t
         scoreboard players add #TimeLib.TicksSinceDaytimeChange TimeLib 1
         execute as @a[scores={TimeLib.Internal.TotalWorldTime=1..},limit=1] run function timelib_:zprivate/game_unpaused
         scoreboard players set @a TimeLib.Internal.TotalWorldTime -1
-
     execute in minecraft:overworld store success score #TimeLib.DaytimeChanged TimeLib run data modify storage timelib_:zprivate CommandBlock.Output set from block 29999999 1 29999999 LastOutput
     execute if score #TimeLib.DaytimeChanged TimeLib matches 1 run function timelib_:zprivate/update_time/main

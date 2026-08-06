@@ -1,8 +1,8 @@
 # Define
 scoreboard objectives add weazeStrength dummy
 scoreboard objectives add weazeSoundTic dummy
-
 # Main
+say "[alive_command_limit_trace_debug] lifeanddeath:disease/effecttypes/sound/weaze"
 execute as @e[tag=is_human] run scoreboard players set @s weazeStrength 0
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={poi_minact_tier=1..1}] if entity @s[scores={poi_boolean=1..1}] if entity @s[scores={poi_max_tier=1..1}] if entity @s[scores={diseaseTime=1000..}] run scoreboard players set @s weazeStrength 1
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={poi_minact_tier=1..1}] if entity @s[scores={poi_boolean=1..1}] if entity @s[scores={poi_max_tier=2..2}] if entity @s[scores={diseaseTime=1000..2000}] run scoreboard players set @s weazeStrength 1
@@ -44,14 +44,11 @@ execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if ent
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={poi_minact_tier=4..}] if entity @s[scores={poi_boolean=1..1}] if entity @s[scores={poi_max_tier=4..}] if entity @s[scores={diseaseTime=5000..6000}] run scoreboard players set @s weazeStrength 4
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={poi_minact_tier=4..}] if entity @s[scores={poi_boolean=1..1}] if entity @s[scores={poi_max_tier=4..}] if entity @s[scores={diseaseTime=6000..7000}] run scoreboard players set @s weazeStrength 4
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={poi_minact_tier=4..}] if entity @s[scores={poi_boolean=1..1}] if entity @s[scores={poi_max_tier=4..}] if entity @s[scores={diseaseTime=7000..}] run scoreboard players set @s weazeStrength 4
-
 execute as @e[tag=is_human,type=!player,scores={weazeStrength=1..}] run scoreboard players add @s weazeSoundTic 1
-
 execute as @e[tag=is_human,type=!player,scores={weazeStrength=1..1},limit=1,sort=random] if entity @s[scores={weazeSoundTic=240..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_gag] add play_weaze
 execute as @e[tag=is_human,type=!player,scores={weazeStrength=2..2},limit=1,sort=random] if entity @s[scores={weazeSoundTic=200..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_gag] add play_weaze
 execute as @e[tag=is_human,type=!player,scores={weazeStrength=3..3},limit=1,sort=random] if entity @s[scores={weazeSoundTic=160..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_gag] add play_weaze
 execute as @e[tag=is_human,type=!player,scores={weazeStrength=4..4},limit=1,sort=random] if entity @s[scores={weazeSoundTic=120..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_gag] add play_weaze
-
 execute as @e[tag=play_weaze,limit=1,sort=random] at @s run playsound lifeanddeath.player.cough.hard player @a ~ ~ ~ 1
 execute as @e[tag=play_weaze,limit=1,sort=random] at @s run scoreboard players set @s coughSoundTic 0
 execute as @e[tag=play_weaze,limit=1,sort=random] at @s run scoreboard players set @s weazeSoundTic 0

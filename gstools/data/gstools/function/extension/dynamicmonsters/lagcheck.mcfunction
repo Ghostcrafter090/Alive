@@ -4,6 +4,7 @@ scoreboard objectives add averageTpsDynamicMonstersWorker dummy
 scoreboard objectives add averageTpsDynamicMonstersWorkerMultTen dummy
 
 # Main
+say "[alive_command_limit_trace_debug] gstools:extension/dynamicmonsters/lagcheck"
 scoreboard players set @e[type=marker,tag=gstools_worker] averageTpsDynamicMonstersWorker 200
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsDynamicMonstersWorker *= @e[type=marker,tag=gstools_worker] averageTpsDynamicMonstersWorkerMultTen
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsDynamicMonstersWorkerMultTen = @e[type=marker,tag=gstools_worker] tps
@@ -13,7 +14,6 @@ scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsDynami
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsDynamicMonstersWorker += @e[type=marker,tag=gstools_worker] averageTpsDynamicMonstersWorkerMultTen
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsDynamicMonstersWorker /= @e[type=marker,tag=gstools_worker] 201
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsDynamicMonstersWorkerMultTen = @e[type=marker,tag=gstools_worker] averageTpsDynamicMonstersWorker
-
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsDynamicMonsters = @e[type=marker,tag=gstools_worker] averageTpsDynamicMonstersWorkerMultTen
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsDynamicMonsters /= @e[type=marker,tag=gstools_worker] 10
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsDynamicMonsters -= @e[type=marker,tag=gstools_worker] 20

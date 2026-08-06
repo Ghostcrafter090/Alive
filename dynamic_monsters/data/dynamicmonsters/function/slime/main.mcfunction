@@ -4,6 +4,7 @@ scoreboard objectives add slimeSize dummy
 scoreboard objectives add slimeNegate dummy
 
 # Main
+say "[alive_command_limit_trace_debug] dynamicmonsters:slime/main"
 execute as @e[type=slime] at @s if block ~ ~ ~ water store result score @s slimeSize run data get entity @s Size
 execute as @e[type=slime] at @s if block ~ ~ ~ water run scoreboard players add @s slimeTick 1
 execute as @e[type=slime,scores={slimeTick=1000..}] run scoreboard players add @s slimeSize 1
@@ -20,11 +21,7 @@ execute as @e[type=slime] at @s if block ~ ~-1 ~ #minecraft:sand run effect give
 execute as @e[type=slime] at @s unless entity @s[nbt={Fire:0s}] unless entity @s[nbt={Fire:-1s}] if entity @s[scores={slimeNegate=10..}] run scoreboard players add @s slimeNegate 1000
 execute as @e[type=slime] at @s unless entity @s[nbt={Fire:0s}] unless entity @s[nbt={Fire:-1s}] if entity @s[scores={slimeNegate=10..}] unless entity @e[tag=gstools_worker,type=marker,scores={dynamicMonsters_disableSlimesExploding=1..1}] run effect give @s resistance 5 5
 execute as @e[type=slime] at @s unless entity @s[nbt={Fire:0s}] unless entity @s[nbt={Fire:-1s}] if entity @s[scores={slimeNegate=10..}] unless entity @e[tag=gstools_worker,type=marker,scores={dynamicMonsters_disableSlimesExploding=1..1}] run summon creeper ~ ~ ~ {CustomNameVisible:0b,ExplosionRadius:1b,PersistenceRequired:1b,CanPickUpLoot:1b,Fuse:2,ignited:1b,active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:10,show_particles:0b,show_icon:0b}],Attributes:[{Name:generic.max_health,Base:1}]}
-
 execute as @e[type=slime] at @s if entity @e[tag=gstools_worker,type=marker,scores={dynamicMonsters_dontEnableThisAndSpawnASlime=1..1}] unless entity @e[tag=gstools_worker,type=marker,scores={dynamicMonsters_disableSlimesExploding=1..1}] run effect give @s resistance 5 5
 execute as @e[type=slime] at @s if entity @e[tag=gstools_worker,type=marker,scores={dynamicMonsters_dontEnableThisAndSpawnASlime=1..1}] unless entity @e[tag=gstools_worker,type=marker,scores={dynamicMonsters_disableSlimesExploding=1..1}] run summon creeper ~ ~ ~ {CustomNameVisible:0b,ExplosionRadius:1b,PersistenceRequired:1b,CanPickUpLoot:1b,Fuse:2,ignited:1b,active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:10,show_particles:0b,show_icon:0b}],Attributes:[{Name:generic.max_health,Base:1}]}
 execute as @e[type=slime] at @s if entity @e[tag=gstools_worker,type=marker,scores={dynamicMonsters_dontEnableThisAndSpawnASlime=1..1}] unless entity @e[tag=gstools_worker,type=marker,scores={dynamicMonsters_disableSlimesExploding=1..1}] run playsound dynamicmonsters.slime.johncena block @a ~ ~ ~ 1
-
 function dynamicmonsters:slime/version_conflict/oozing_0
-
-

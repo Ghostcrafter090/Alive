@@ -1,8 +1,8 @@
 # Define
 scoreboard objectives add vomitStrength dummy
 scoreboard objectives add vomitSoundTic dummy
-
 # Main
+say "[alive_command_limit_trace_debug] lifeanddeath:disease/effecttypes/sound/vomit"
 execute as @e[tag=is_human] run scoreboard players set @s vomitStrength 0
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={hung_minact_tier=1..1}] if entity @s[scores={hung_boolean=1..1}] if entity @s[scores={hung_max_tier=1..1}] if entity @s[scores={diseaseTime=1000..}] run scoreboard players set @s vomitStrength 1
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={hung_minact_tier=1..1}] if entity @s[scores={hung_boolean=1..1}] if entity @s[scores={hung_max_tier=2..2}] if entity @s[scores={diseaseTime=1000..2000}] run scoreboard players set @s vomitStrength 1
@@ -44,14 +44,11 @@ execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if ent
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={hung_minact_tier=4..}] if entity @s[scores={hung_boolean=1..1}] if entity @s[scores={hung_max_tier=4..}] if entity @s[scores={diseaseTime=5000..6000}] run scoreboard players set @s vomitStrength 4
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={hung_minact_tier=4..}] if entity @s[scores={hung_boolean=1..1}] if entity @s[scores={hung_max_tier=4..}] if entity @s[scores={diseaseTime=6000..7000}] run scoreboard players set @s vomitStrength 4
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={hung_minact_tier=4..}] if entity @s[scores={hung_boolean=1..1}] if entity @s[scores={hung_max_tier=4..}] if entity @s[scores={diseaseTime=7000..}] run scoreboard players set @s vomitStrength 4
-
 execute as @e[tag=is_human,type=!player,scores={vomitStrength=1..}] run scoreboard players add @s vomitSoundTic 1
-
 execute as @e[tag=is_human,type=!player,scores={vomitStrength=1..1},limit=1,sort=random] if entity @s[scores={vomitSoundTic=3000..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_weaze] add play_vomit
 execute as @e[tag=is_human,type=!player,scores={vomitStrength=2..2},limit=1,sort=random] if entity @s[scores={vomitSoundTic=1500..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_weaze] add play_vomit
 execute as @e[tag=is_human,type=!player,scores={vomitStrength=3..3},limit=1,sort=random] if entity @s[scores={vomitSoundTic=1000..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_weaze] add play_vomit
 execute as @e[tag=is_human,type=!player,scores={vomitStrength=4..4},limit=1,sort=random] if entity @s[scores={vomitSoundTic=800..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_weaze] add play_vomit
-
 execute as @e[tag=play_vomit,limit=1,sort=random] at @s run playsound lifeanddeath.player.vomit player @a ~ ~ ~ 1
 execute as @e[tag=play_vomit,limit=1,sort=random] at @s run scoreboard players set @s coughSoundTic 0
 execute as @e[tag=play_vomit,limit=1,sort=random] at @s run scoreboard players set @s vomitSoundTic 0

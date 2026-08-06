@@ -4,6 +4,7 @@ scoreboard objectives add averageTpsBossProgressionWorker dummy
 scoreboard objectives add averageTpsBossProgressionWorkerMultTen dummy
 
 # Main
+say "[alive_command_limit_trace_debug] gstools:extension/bossprogression/lagcheck"
 scoreboard players set @e[type=marker,tag=gstools_worker] averageTpsBossProgressionWorker 200
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsBossProgressionWorker *= @e[type=marker,tag=gstools_worker] averageTpsBossProgressionWorkerMultTen
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsBossProgressionWorkerMultTen = @e[type=marker,tag=gstools_worker] tps
@@ -13,7 +14,6 @@ scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsBossPr
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsBossProgressionWorker += @e[type=marker,tag=gstools_worker] averageTpsBossProgressionWorkerMultTen
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsBossProgressionWorker /= @e[type=marker,tag=gstools_worker] 201
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsBossProgressionWorkerMultTen = @e[type=marker,tag=gstools_worker] averageTpsBossProgressionWorker
-
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsBossProgression = @e[type=marker,tag=gstools_worker] averageTpsBossProgressionWorkerMultTen
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsBossProgression /= @e[type=marker,tag=gstools_worker] 10
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsBossProgression -= @e[type=marker,tag=gstools_worker] 20

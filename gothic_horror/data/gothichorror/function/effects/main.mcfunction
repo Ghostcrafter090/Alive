@@ -3,8 +3,8 @@ scoreboard objectives add numberOfUndeadMonsters dummy
 scoreboard objectives add numberOfNetherMonsters dummy
 scoreboard objectives add gothicMonsterRemovalTic dummy
 scoreboard objectives add gothicMonsterTicRate dummy
-
 # Main
+say "[alive_command_limit_trace_debug] gothichorror:effects/main"
 execute store result score @e[type=marker,tag=gstools_worker] numberOfUndeadMonsters if entity @e[type=#minecraft:undead]
 execute store result score @e[type=marker,tag=gstools_worker] numberOfNetherMonsters if entity @e[tag=nether,tag=monster]
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s gothicMonsterTicRate = @s averageTpsGothicHorror
@@ -15,7 +15,6 @@ execute as @e[type=marker,tag=gstools_worker] if score @s gothicMonsterRemovalTi
 execute as @e[type=marker,tag=gstools_worker] if score @s gothicMonsterRemovalTic > @s gothicMonsterTicRate if score @s numberOfNetherMonsters > @s 20 as @e[type=#minecraft:undead,limit=1,sort=random] at @s if score @s horrorIndex < @e[type=marker,tag=gstools_worker,limit=1] numberOfNetherMonsters run tp @s ~ ~-400 ~
 execute as @e[type=marker,tag=gstools_worker] if score @s gothicMonsterRemovalTic > @s gothicMonsterTicRate run scoreboard players set @s gothicMonsterRemovalTic 0
 scoreboard players add @e[tag=gstools_worker,type=marker] gothicMonsterRemovalTic 1
-
 execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=..-30},tag=!gothic_ghost] run attribute @s minecraft:generic.follow_range base set 10
 execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=-31..-20},tag=!gothic_ghost] run attribute @s minecraft:generic.follow_range base set 20
 execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=-21..-10},tag=!gothic_ghost] run attribute @s minecraft:generic.follow_range base set 30
@@ -31,10 +30,5 @@ execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=71.
 execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=81..90},tag=!gothic_ghost] run attribute @s minecraft:generic.follow_range base set 130
 execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=91..100},tag=!gothic_ghost] run attribute @s minecraft:generic.follow_range base set 140
 execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=101..},tag=!gothic_ghost] run attribute @s minecraft:generic.follow_range base set 150
-
 function gothichorror:effects/ghosts/main
-
-
-
-
 

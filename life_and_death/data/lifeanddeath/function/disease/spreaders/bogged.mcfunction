@@ -1,3 +1,4 @@
+say "[alive_command_limit_trace_debug] lifeanddeath:disease/spreaders/bogged"
 execute if entity @e[tag=gstools_worker,type=marker,scores={random10=4..4}] as @e[type=bogged,limit=3,sort=random] unless entity @s[scores={hasDiseaseBoolean=1..1}] run scoreboard players set @s hasDiseaseBoolean 1
 execute if entity @e[tag=gstools_worker,type=marker,scores={random10=1..1}] as @e[type=bogged,limit=3,sort=random] run scoreboard players add @s slow_minact_tier 1
 execute if entity @e[tag=gstools_worker,type=marker,scores={random10=2..2}] as @e[type=bogged,limit=3,sort=random,scores={slow_minact_tier=4..}] run scoreboard players set @s slow_minact_tier 1

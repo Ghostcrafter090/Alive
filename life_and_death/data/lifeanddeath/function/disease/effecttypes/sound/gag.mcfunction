@@ -1,8 +1,8 @@
 # Define
 scoreboard objectives add gagStrength dummy
 scoreboard objectives add gagSoundTic dummy
-
 # Main
+say "[alive_command_limit_trace_debug] lifeanddeath:disease/effecttypes/sound/gag"
 execute as @e[tag=is_human] run scoreboard players set @s gagStrength 0
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={nau_minact_tier=1..1}] if entity @s[scores={nau_boolean=1..1}] if entity @s[scores={nau_max_tier=1..1}] if entity @s[scores={diseaseTime=1000..}] run scoreboard players set @s gagStrength 1
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={nau_minact_tier=1..1}] if entity @s[scores={nau_boolean=1..1}] if entity @s[scores={nau_max_tier=2..2}] if entity @s[scores={diseaseTime=1000..2000}] run scoreboard players set @s gagStrength 1
@@ -44,14 +44,11 @@ execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if ent
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={nau_minact_tier=4..}] if entity @s[scores={nau_boolean=1..1}] if entity @s[scores={nau_max_tier=4..}] if entity @s[scores={diseaseTime=5000..6000}] run scoreboard players set @s gagStrength 4
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={nau_minact_tier=4..}] if entity @s[scores={nau_boolean=1..1}] if entity @s[scores={nau_max_tier=4..}] if entity @s[scores={diseaseTime=6000..7000}] run scoreboard players set @s gagStrength 4
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={nau_minact_tier=4..}] if entity @s[scores={nau_boolean=1..1}] if entity @s[scores={nau_max_tier=4..}] if entity @s[scores={diseaseTime=7000..}] run scoreboard players set @s gagStrength 4
-
 execute as @e[tag=is_human,type=!player,scores={gagStrength=1..}] run scoreboard players add @s gagSoundTic 1
-
 execute as @e[tag=is_human,type=!player,scores={gagStrength=1..1},limit=1,sort=random] if entity @s[scores={gagSoundTic=240..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_weaze] add play_gag
 execute as @e[tag=is_human,type=!player,scores={gagStrength=2..2},limit=1,sort=random] if entity @s[scores={gagSoundTic=200..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_weaze] add play_gag
 execute as @e[tag=is_human,type=!player,scores={gagStrength=3..3},limit=1,sort=random] if entity @s[scores={gagSoundTic=160..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_weaze] add play_gag
 execute as @e[tag=is_human,type=!player,scores={gagStrength=4..4},limit=1,sort=random] if entity @s[scores={gagSoundTic=120..}] at @s run tag @s[tag=!play_cough_light,tag=!play_cough_medium,tag=!play_weaze] add play_gag
-
 execute as @e[tag=play_gag,limit=1,sort=random] at @s run playsound lifeanddeath.player.gag player @a ~ ~ ~ 1
 execute as @e[tag=play_gag,limit=1,sort=random] at @s run scoreboard players set @s coughSoundTic 0
 execute as @e[tag=play_gag,limit=1,sort=random] at @s run scoreboard players set @s gagSoundTic 0
