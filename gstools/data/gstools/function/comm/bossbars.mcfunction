@@ -10,16 +10,16 @@ bossbar add gothic_horror_tps "Average Tps Gothic Horror"
 bossbar add life_and_death_tps "Average Tps Life And Death"
 bossbar add all_tps "Average Tps All"
 
-bossbar set block_decay_tps max 800
-bossbar set boss_progression_tps max 800
-bossbar set desire_paths_tps max 800
-bossbar set dynamic_dirt_tps max 800
-bossbar set dynamic_ecosystems_tps max 800
-bossbar set dynamic_monsters_tps max 800
-bossbar set enhanced_survival_tps max 800
-bossbar set gothic_horror_tps max 800
-bossbar set life_and_death_tps max 800
-bossbar set all_tps max 800
+bossbar set block_decay_tps max 200
+bossbar set boss_progression_tps max 200
+bossbar set desire_paths_tps max 200
+bossbar set dynamic_dirt_tps max 200
+bossbar set dynamic_ecosystems_tps max 200
+bossbar set dynamic_monsters_tps max 200
+bossbar set enhanced_survival_tps max 200
+bossbar set gothic_horror_tps max 200
+bossbar set life_and_death_tps max 200
+bossbar set all_tps max 200
 
 bossbar set block_decay_tps players @a
 bossbar set boss_progression_tps players @a
@@ -32,6 +32,18 @@ bossbar set gothic_horror_tps players @a
 bossbar set life_and_death_tps players @a
 bossbar set all_tps players @a
 
+scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsBlockDecayWorkerMultTen 200
+scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsBossProgressionWorkerMultTen 200
+scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsDesirePathsWorkerMultTen 200
+scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsDynamicDirtWorkerMultTen 200
+scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsDynamicEcosystemsWorkerMultTen 200
+scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsDynamicMonstersWorkerMultTen 200
+scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsEnhancedSurvivalWorkerMultTen 200
+scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsGothicHorrorWorkerMultTen 200
+scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsLifeAndDeathWorkerMultTen 200
+scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsWorkerMultTen 200
+
+
 execute store result bossbar minecraft:block_decay_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsBlockDecayWorkerMultTen
 execute store result bossbar minecraft:boss_progression_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsBossProgressionWorkerMultTen
 execute store result bossbar minecraft:desire_paths_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsDesirePathsWorkerMultTen
@@ -42,3 +54,14 @@ execute store result bossbar minecraft:enhanced_survival_tps value run scoreboar
 execute store result bossbar minecraft:gothic_horror_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsGothicHorrorWorkerMultTen
 execute store result bossbar minecraft:life_and_death_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsLifeAndDeathWorkerMultTen
 execute store result bossbar minecraft:all_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsWorkerMultTen
+
+scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsBlockDecayWorkerMultTen 200
+scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsBossProgressionWorkerMultTen 200
+scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsDesirePathsWorkerMultTen 200
+scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsDynamicDirtWorkerMultTen 200
+scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsDynamicEcosystemsWorkerMultTen 200
+scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsDynamicMonstersWorkerMultTen 200
+scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsEnhancedSurvivalWorkerMultTen 200
+scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsGothicHorrorWorkerMultTen 200
+scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsLifeAndDeathWorkerMultTen 200
+scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsWorkerMultTen 200

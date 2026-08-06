@@ -7,18 +7,18 @@ scoreboard objectives add blockDecayCursorCounter dummy
 execute as @e[type=marker,tag=gstools_worker] store result score @s blockDecayCursorCounter if entity @e[type=marker,tag=gstools_cursor]
 
 # <node:no_compile_mode>
-execute if entity @e[tag=gstools_worker,type=marker,scores={blockDecayCursorCounter=..4}] run function blockdecay:_cursor/construct
-execute if entity @e[tag=gstools_worker,type=marker,scores={blockDecayCursorCounter=..4}] run function blockdecay:_cursor/construct
-execute if entity @e[tag=gstools_worker,type=marker,scores={blockDecayCursorCounter=..4}] run function blockdecay:_cursor/construct
-execute if entity @e[tag=gstools_worker,type=marker,scores={blockDecayCursorCounter=..4}] run function blockdecay:_cursor/construct
-execute if entity @e[tag=gstools_worker,type=marker,scores={blockDecayCursorCounter=..4}] run function blockdecay:_cursor/construct
+execute if entity @e[tag=gstools_worker,type=marker,scores={blockDecayCursorCounter=..6}] run function blockdecay:_cursor/construct
+execute if entity @e[tag=gstools_worker,type=marker,scores={blockDecayCursorCounter=..6}] run function blockdecay:_cursor/construct
+execute if entity @e[tag=gstools_worker,type=marker,scores={blockDecayCursorCounter=..6}] run function blockdecay:_cursor/construct
+execute if entity @e[tag=gstools_worker,type=marker,scores={blockDecayCursorCounter=..6}] run function blockdecay:_cursor/construct
+execute if entity @e[tag=gstools_worker,type=marker,scores={blockDecayCursorCounter=..6}] run function blockdecay:_cursor/construct
 # <node:no_compile_mode/>
 
-execute as @e[tag=gstools_cursor,type=marker,limit=5,sort=random] at @s run function blockdecay:decay/at
-execute as @e[tag=gstools_cursor,type=marker,limit=5,sort=random] run tag @s add block_decayed
+execute as @e[tag=gstools_cursor,type=marker,limit=7,sort=random] at @s run function blockdecay:decay/at
+execute as @e[tag=gstools_cursor,type=marker,limit=7,sort=random] run tag @s add block_decayed
 
-execute as @e[tag=gstools_vertical_cursor,type=marker,limit=5,sort=random] at @s positioned ~ ~1 ~ run function blockdecay:decay/at
-execute as @e[tag=gstools_vertical_cursor,type=marker,limit=5,sort=random] run tag @s add block_decayed
+execute as @e[tag=gstools_vertical_cursor,type=marker,limit=7,sort=random] at @s positioned ~ ~1 ~ run function blockdecay:decay/at
+execute as @e[tag=gstools_vertical_cursor,type=marker,limit=7,sort=random] run tag @s add block_decayed
 
 execute as @e[tag=gstools_cursor,tag=!block_decayed] run data modify storage blockdecay coordsToDecay append from entity @s Pos
 execute as @e[tag=gstools_vertical_cursor,tag=!block_decayed] run data modify storage blockdecay coordsToDecay append from entity @s Pos
