@@ -221,3 +221,6 @@ execute unless entity @a[name=!Ghostcrafter090] if entity @p as @e[tag=gstools_w
 execute unless entity @a[name=!Ghostcrafter090] if entity @p as @e[tag=gstools_worker,type=marker] unless entity @s[scores={main_disableCredits=1..1}] unless entity @s[scores={timeOfDay=..3000}] if entity @s[scores={hasGivenDailyPatreonReminder=1..1}] unless score $beggerNode disableBeggerMode = @s 1 run scoreboard players set @s hasGivenDailyPatreonReminder 0
 
 scoreboard players set $beggerNode disableBeggerMode 0
+
+# Debug
+execute if entity @a[scores={displayPerformanceBossBar=1..1}] run function gstools:comm/bossbars
