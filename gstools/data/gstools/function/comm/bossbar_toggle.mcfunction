@@ -2,8 +2,11 @@
 scoreboard objectives add displayPerformanceBossBar dummy
 
 # Main
-execute if entity @a[scores={displayPerformanceBossBar=1..1}] run scoreboard players set @s displayPerformanceBossBar 0
-execute unless entity @a[scores={displayPerformanceBossBar=1..1}] run scoreboard players set @s displayPerformanceBossBar 1
+execute if entity @a[scores={displayPerformanceBossBar=1..1}] run scoreboard players set @s displayPerformanceBossBar 2
+execute unless entity @a[scores={displayPerformanceBossBar=0..2}] run scoreboard players set @s displayPerformanceBossBar 1
+execute if entity @a[scores={displayPerformanceBossBar=0..0}] run scoreboard players set @s displayPerformanceBossBar 1
+
+execute if entity @a[scores={displayPerformanceBossBar=2..2}] run scoreboard players set @s displayPerformanceBossBar 0
 
 execute if entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar set block_decay_tps visible true
 execute if entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar set boss_progression_tps visible true
