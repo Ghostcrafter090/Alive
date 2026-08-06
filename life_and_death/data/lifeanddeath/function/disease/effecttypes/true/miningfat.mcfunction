@@ -1,4 +1,3 @@
-say "[alive_command_limit_trace_debug] lifeanddeath:disease/effecttypes/true/miningfat"
 execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={minf_minact_tier=1..1}] if entity @s[scores={minf_boolean=1..1}] if entity @s[scores={minf_max_tier=1..1,}] if entity @s[scores={diseaseTime=1000..}] run effect give @s mining_fatigue 5 0
 execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={minf_minact_tier=1..1}] if entity @s[scores={minf_boolean=1..1}] if entity @s[scores={minf_max_tier=2..,}] if entity @s[scores={diseaseTime=1000..2000}] run effect give @s mining_fatigue 5 0
 execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={minf_minact_tier=1..1}] if entity @s[scores={minf_boolean=1..1}] if entity @s[scores={minf_max_tier=2..,}] if entity @s[scores={diseaseTime=2000..}] run effect give @s mining_fatigue 5 1

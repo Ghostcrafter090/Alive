@@ -1,4 +1,5 @@
 import modules.pytools as pytools
+import traceback
 
 def getFunctionTraceCount():
     traceData = {}
@@ -12,6 +13,8 @@ def getFunctionTraceCount():
                 traceData[x.split("[F] ")[1].split("_sub")[0]] = 0
             traceData[x.split("[F] ")[1].split("_sub")[0]] = traceData[x.split("[F] ")[1].split("_sub")[0]] + 1
             currentFunction = x.split("[F] ")[1].split("_sub")[0]
+            
+    return traceData
 
 def purge(listf, token):
     while token in listf:
@@ -43,22 +46,25 @@ def getCommandTraceCount():
     
     for x in traceFile:
         
-        if (purge(x.split(" "), "")[0][0] == "[") and ("[E] " not in x):
-            
-            stackDepth = len(x.split("[")[0]) / 4
-            
-            if "[F] " in x:
-                if not x.split("[F] ")[1].split("_sub")[0] in traceData:
-                    traceData[x.split("[F] ")[1].split("_sub")[0].split(" size")[0]] = 0
-                traceData[x.split("[F] ")[1].split("_sub")[0].split(" size")[0]] = traceData[x.split("[F] ")[1].split("_sub")[0].split(" size")[0]] + 1
-                stackTrace = purgeStack(stackTrace, stackDepth)
-                stackTrace[stackDepth] = x.split("[F] ")[1].split("_sub")[0]
-            if "[C] " in x:
-                for currentFunction in stackTrace.values():
-                    traceData[currentFunction.split(" size")[0]] = traceData[currentFunction.split(" size")[0]] + 1
-            if "[M] " in x:
-                for currentFunction in stackTrace.values():
-                    traceData[currentFunction.split(" size")[0]] = traceData[currentFunction.split(" size")[0]] + 1
+        try:
+            if (purge(x.split(" "), "")[0][0] == "[") and ("[E] " not in x):
+                
+                stackDepth = len(x.split("[")[0]) / 4
+                
+                if "[F] " in x:
+                    if not x.split("[F] ")[1].split("_sub")[0] in traceData:
+                        traceData[x.split("[F] ")[1].split("_sub")[0].split(" size")[0]] = 0
+                    traceData[x.split("[F] ")[1].split("_sub")[0].split(" size")[0]] = traceData[x.split("[F] ")[1].split("_sub")[0].split(" size")[0]] + 1
+                    stackTrace = purgeStack(stackTrace, stackDepth)
+                    stackTrace[stackDepth] = x.split("[F] ")[1].split("_sub")[0]
+                if "[C] " in x:
+                    for currentFunction in stackTrace.values():
+                        traceData[currentFunction.split(" size")[0]] = traceData[currentFunction.split(" size")[0]] + 1
+                if "[M] " in x:
+                    for currentFunction in stackTrace.values():
+                        traceData[currentFunction.split(" size")[0]] = traceData[currentFunction.split(" size")[0]] + 1
+        except:
+            print(traceback.format_exc())
     return traceData
 
 def getCommandListInFunction(stackPtr):

@@ -9,7 +9,6 @@ scoreboard objectives add chunkForceloadSelectIndex4 dummy
 scoreboard objectives add chunkForceloadSelectIndex5 dummy
 scoreboard objectives add forceloadedChunkCount dummy
 # Main
-say "[alive_command_limit_trace_debug] gstools:cursor/chunk/loadrandom"
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] unless entity @e[type=marker,tag=gstools_worker,scores={chunk_disableDynamicChunkLoading=1..}] unless entity @e[tag=gstools_worker,type=marker,scores={randomChunkLoadIndex=1..}] run tag @e[tag=gstools_chunk_worker,type=marker,sort=random,limit=1,scores={numberOfUnloadedCursorsSpawned=800..}] add forceload_active
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] unless entity @e[type=marker,tag=gstools_worker,scores={chunk_disableDynamicChunkLoading=1..}] as @e[tag=gstools_worker,type=marker,scores={randomChunkLoadIndex=1..1}] run function gstools:util/random
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTps=16..}] unless entity @e[type=marker,tag=gstools_worker,scores={chunk_disableDynamicChunkLoading=1..}] as @e[tag=gstools_worker,type=marker,scores={randomChunkLoadIndex=1..1}] run scoreboard players operation @s chunkForceloadSelectIndex0 = @s random1000

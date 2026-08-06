@@ -4,7 +4,6 @@ scoreboard objectives add averageTpsDynamicEcosystemsWorker dummy
 scoreboard objectives add averageTpsDynamicEcosystemsWorkerMultTen dummy
 
 # Main
-say "[alive_command_limit_trace_debug] gstools:extension/dynamicecosystems/lagcheck"
 scoreboard players set @e[type=marker,tag=gstools_worker] averageTpsDynamicEcosystemsWorker 200
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsDynamicEcosystemsWorker *= @e[type=marker,tag=gstools_worker] averageTpsDynamicEcosystemsWorkerMultTen
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsDynamicEcosystemsWorkerMultTen = @e[type=marker,tag=gstools_worker] tps

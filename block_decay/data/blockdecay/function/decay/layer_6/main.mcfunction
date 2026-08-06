@@ -1,7 +1,9 @@
 # Define
 
 # Main
-execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_6/n182/chiseled_quartz_block
-execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_6/n121/oxidized_iron_grate
-execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_6/n121/oxidized_gold_grate
-execute unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ dirt unless block ~ ~-1 ~ #minecraft:flowers unless entity @e[tag=is_human,distance=0..20] unless entity @e[type=marker,tag=attack_portal_node,distance=0..20] if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_6/n121/oxidized_copper_grate
+# <node:no_compile_mode>
+execute if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_6/n182/chiseled_quartz_block
+execute if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_6/n121/oxidized_iron_grate
+execute if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_6/n121/oxidized_gold_grate
+execute if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:decay/layer_6/n121/oxidized_copper_grate
+# <node:no_compile_mode/>

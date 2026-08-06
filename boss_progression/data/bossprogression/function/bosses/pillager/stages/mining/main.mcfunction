@@ -5,7 +5,6 @@ scoreboard objectives add numberOfIllusioners dummy
 scoreboard objectives add pillagerMiningDirection dummy
 scoreboard objectives add pillagerTakingDamage dummy
 # Main
-say "[alive_command_limit_trace_debug] bossprogression:bosses/pillager/stages/mining/main"
 execute unless entity @e[type=marker,tag=gstools_worker,scores={desirePathsLoaded=1..1}] as @e[tag=mining_pillager,type=pillager,limit=20,sort=random] store result score @s entityVerticalMotion run data get entity @s Motion[1] 100
 execute as @e[type=pillager,sort=random,limit=10] store result score @s pillagerTakingDamage run data get entity @s HurtTime
 execute in overworld if entity @e[tag=gstools_worker,type=marker,scores={numberOfPillagers=..65}] as @e[type=marker,tag=gstools_vertical_cursor,distance=0..] at @s if block ~ ~ ~ #minecraft:air unless entity @e[tag=mining_pillager,type=pillager,distance=0..60] as @e[tag=gstools_cursor,sort=nearest,limit=1] if score @s verticalCursorWorker < @e[tag=gstools_worker,type=marker,limit=1] 60 run summon pillager ~ ~ ~ {PersistenceRequired:1b,CanPickUpLoot:1b,Tags:["mining_pillager"],equipment:{head:{id:"minecraft:iron_helmet",count:1},mainhand:{id:"minecraft:stone_pickaxe",count:1},offhand:{id:"minecraft:shield",count:1}}}

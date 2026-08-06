@@ -1,4 +1,3 @@
-say "[alive_command_limit_trace_debug] lifeanddeath:disease/effecttypes/true/nausea"
 execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={nau_minact_tier=1..1}] if entity @s[scores={nau_boolean=1..1}] if entity @s[scores={nau_max_tier=1..1,}] if entity @s[scores={diseaseTime=1000..,hasImmunityTime=290..291}] run effect give @s nausea 1 0
 execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={nau_minact_tier=1..1}] if entity @s[scores={nau_boolean=1..1}] if entity @s[scores={nau_max_tier=2..2,}] if entity @s[scores={diseaseTime=1000..2000,hasImmunityTime=290..291}] run effect give @s nausea 1 0
 execute as @e[tag=is_alive,scores={hasDiseaseBoolean=1..2}] if entity @s[scores={nau_minact_tier=1..1}] if entity @s[scores={nau_boolean=1..1}] if entity @s[scores={nau_max_tier=2..2,}] if entity @s[scores={diseaseTime=2000..,hasImmunityTime=290..291}] run effect give @s nausea 3 1

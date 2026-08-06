@@ -1,4 +1,3 @@
-say "[alive_command_limit_trace_debug] timelib_:zprivate/tick"
 schedule function timelib_:zprivate/tick 1t
 # Update the time
     # Check if the unix timestamp has changed

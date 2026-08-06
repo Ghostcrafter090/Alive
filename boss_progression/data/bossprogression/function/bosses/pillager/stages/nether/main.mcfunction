@@ -1,6 +1,5 @@
 # Define
 # Main
-say "[alive_command_limit_trace_debug] bossprogression:bosses/pillager/stages/nether/main"
 execute in minecraft:the_nether if entity @e[tag=gstools_worker,type=marker,scores={numberOfPillagers=..65}] as @e[type=marker,tag=gstools_vertical_cursor,distance=0..] at @s if block ~ ~ ~ #minecraft:air unless entity @e[tag=mining_pillager,type=pillager,distance=0..60] run summon pillager ~ ~ ~ {PersistenceRequired:1b,CanPickUpLoot:1b,Tags:["mining_pillager"],equipment:{head:{id:"minecraft:iron_helmet",count:1},mainhand:{id:"minecraft:stone_pickaxe",count:1},offhand:{id:"minecraft:shield",count:1}}}
 execute in minecraft:the_nether as @e[tag=mining_pillager,type=pillager,distance=0..,limit=1,sort=random] at @s if block ~ ~-1 ~ bedrock run function gstools:util/spreadplayers3d
 execute in the_nether as @e[tag=mining_pillager,type=pillager,sort=random,limit=1,distance=0..] at @s if entity @e[tag=gstools_worker,type=marker,scores={numberOfPillagers=..60}] unless entity @e[tag=pillager_mining_outpost,type=marker,distance=0..300] if predicate gstools:spreadplayers_nether run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost','not_setup']}
