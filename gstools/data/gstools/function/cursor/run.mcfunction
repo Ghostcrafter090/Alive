@@ -4,6 +4,7 @@ scoreboard objectives add chunkListCurrentIndex dummy
 scoreboard objectives add hasSummonedPreCursor dummy
 scoreboard objectives add numberOfUnloadedCursorsSpawned dummy
 scoreboard objectives add maxNumberOfUnloadedCursorsPerChunk dummy
+
 # Main
 scoreboard players set @e[tag=gstools_worker,type=marker] doRunCursor 0
 execute if entity @e[tag=gstools_worker,type=marker,scores={dynamicDirtLoaded=1..1}] run scoreboard players set @e[tag=gstools_worker,type=marker] doRunCursor 1

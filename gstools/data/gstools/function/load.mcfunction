@@ -179,6 +179,10 @@ scoreboard players set @e[tag=gstools_worker,type=marker] enhancedSurvivalLoaded
 scoreboard players set @e[tag=gstools_worker,type=marker] blockDecayLoaded 0
 scoreboard players set @e[tag=gstools_worker,type=marker] gothicHorrorLoaded 0
 
+
+scoreboard objectives add doLagCheck dummy
+scoreboard objectives add anotherExtensionElseHasRan dummy
+
 scoreboard players set @e[tag=gstools_worker,type=marker] previousDayNumber -1
 
 scoreboard players set @e[tag=gstools_worker,type=marker] isSereneSeasonsPresent 0
