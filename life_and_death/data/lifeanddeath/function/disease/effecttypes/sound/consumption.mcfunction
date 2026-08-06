@@ -2,7 +2,6 @@
 scoreboard objectives add consumptionStrength dummy
 scoreboard objectives add breathingSoundTic dummy
 # Main
-say "[alive_command_limit_trace_debug] lifeanddeath:disease/effecttypes/sound/consumption"
 execute as @a run function gstools:util/random
 execute as @e[tag=is_human] run scoreboard players set @s consumptionStrength 0
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={with_minact_tier=1..1}] if entity @s[scores={with_boolean=1..1}] if entity @s[scores={with_max_tier=1..}] if entity @s[scores={diseaseTime=4000..}] run scoreboard players set @s consumptionStrength 1

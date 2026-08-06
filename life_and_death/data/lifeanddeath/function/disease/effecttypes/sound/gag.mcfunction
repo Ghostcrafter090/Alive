@@ -2,7 +2,6 @@
 scoreboard objectives add gagStrength dummy
 scoreboard objectives add gagSoundTic dummy
 # Main
-say "[alive_command_limit_trace_debug] lifeanddeath:disease/effecttypes/sound/gag"
 execute as @e[tag=is_human] run scoreboard players set @s gagStrength 0
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={nau_minact_tier=1..1}] if entity @s[scores={nau_boolean=1..1}] if entity @s[scores={nau_max_tier=1..1}] if entity @s[scores={diseaseTime=1000..}] run scoreboard players set @s gagStrength 1
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={nau_minact_tier=1..1}] if entity @s[scores={nau_boolean=1..1}] if entity @s[scores={nau_max_tier=2..2}] if entity @s[scores={diseaseTime=1000..2000}] run scoreboard players set @s gagStrength 1

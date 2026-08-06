@@ -3,7 +3,6 @@ scoreboard objectives add simulationDistance dummy
 scoreboard objectives add simulationDistanceHalfCircumphrence dummy
 scoreboard objectives add simulationDistanceArea dummy
 # Main
-say "[alive_command_limit_trace_debug] gstools:lagcontrol/getsimulationdistance"
 execute as @r at @s if loaded ~100 ~ ~ unless entity @a[distance=1..100] run scoreboard players set @e[tag=gstools_worker,type=marker] simulationDistance 100
 execute as @r at @s if loaded ~200 ~ ~ unless entity @a[distance=101..200] run scoreboard players set @e[tag=gstools_worker,type=marker] simulationDistance 200
 execute as @r at @s if loaded ~300 ~ ~ unless entity @a[distance=201..300] run scoreboard players set @e[tag=gstools_worker,type=marker] simulationDistance 300

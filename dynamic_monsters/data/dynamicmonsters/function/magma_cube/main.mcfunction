@@ -5,7 +5,6 @@ scoreboard objectives add magmaCubeSizeNegationWorker dummy
 scoreboard objectives add magmaCubeCountNearby dummy
 
 # Main
-say "[alive_command_limit_trace_debug] dynamicmonsters:magma_cube/main"
 execute as @e[type=magma_cube,limit=10,sort=random] at @s if block ~ ~ ~ lava store result score @s magmaCubeSize run data get entity @s Size
 execute as @e[type=magma_cube,limit=10,sort=random] at @s if block ~ ~ ~ lava run scoreboard players add @s magmaCubeUpdateTic 1
 execute as @e[type=magma_cube,limit=10,sort=random] if entity @s[scores={magmaCubeUpdateTic=100..}] run scoreboard players add @s magmaCubeSize 1

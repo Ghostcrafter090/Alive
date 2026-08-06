@@ -11,7 +11,6 @@ scoreboard objectives add hGeneralTicWorkerA dummy
 scoreboard objectives add hGeneralTic dummy
 scoreboard objectives add hGeneralChangeWorkerC dummy
 # Main
-say "[alive_command_limit_trace_debug] gothichorror:hallow/h_general/main"
 # verticalCursorWorker
 execute as @e[sort=random,limit=5,scores={hGeneralTic=..10}] at @s run function gstools:util/is_outside
 execute as @e[sort=random,limit=5,scores={hGeneralTic=..10}] at @s unless entity @s[scores={isOutside=1..1}] positioned ~ ~15 ~ unless entity @s[scores={isOutside=1..1}] positioned ~ ~-15 ~ if entity @a[distance=0..100] run function gstools:horror/getindex

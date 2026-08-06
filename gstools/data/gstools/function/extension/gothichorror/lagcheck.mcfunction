@@ -4,7 +4,6 @@ scoreboard objectives add averageTpsGothicHorrorWorker dummy
 scoreboard objectives add averageTpsGothicHorrorWorkerMultTen dummy
 
 # Main
-say "[alive_command_limit_trace_debug] gstools:extension/gothichorror/lagcheck"
 scoreboard players set @e[type=marker,tag=gstools_worker] averageTpsGothicHorrorWorker 200
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsGothicHorrorWorker *= @e[type=marker,tag=gstools_worker] averageTpsGothicHorrorWorkerMultTen
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsGothicHorrorWorkerMultTen = @e[type=marker,tag=gstools_worker] tps
