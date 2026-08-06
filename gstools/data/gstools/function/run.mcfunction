@@ -53,6 +53,8 @@ scoreboard objectives add isSereneSeasonsPresent dummy
 
 scoreboard objectives add death deathCount
 
+scoreboard players set @e[tag=gstools_worker,type=marker] anotherExtensionElseHasRan 0 
+
 # Main
 # kill @e[type=wither_skull]
 
