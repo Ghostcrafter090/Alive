@@ -16,6 +16,9 @@ execute if entity @s[scores={randomNegate=0..0}] run scoreboard players set @s r
 scoreboard players operation @s randomDoubleNegate = @s randomNegate
 scoreboard players operation @s randomDoubleNegate *= @e[type=marker,tag=gstools_worker] 2
 
+scoreboard players operation @s randomQuadroupleNegate = @s randomNegate
+scoreboard players operation @s randomQuadroupleNegate *= @e[type=marker,tag=gstools_worker] 4
+
 
 scoreboard players set @s newRandomCompatible 1
 

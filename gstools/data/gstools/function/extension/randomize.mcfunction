@@ -2,23 +2,23 @@
 
 # Main
 execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
-execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsDesirePathsWorkerMultTen += @s randomDoubleNegate
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsDesirePathsWorkerMultTen += @s randomQuadroupleNegate
 execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
-execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsDynamicMonstersWorkerMultTen += @s randomDoubleNegate
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsDynamicMonstersWorkerMultTen += @s randomQuadroupleNegate
 execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
-execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsDynamicDirtWorkerMultTen += @s randomDoubleNegate
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsDynamicDirtWorkerMultTen += @s randomQuadroupleNegate
 execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
-execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsBlockDecayWorkerMultTen += @s randomDoubleNegate
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsBlockDecayWorkerMultTen += @s randomQuadroupleNegate
 execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
-execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsDynamicEcosystemsWorkerMultTen += @s randomDoubleNegate
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsDynamicEcosystemsWorkerMultTen += @s randomQuadroupleNegate
 execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
-execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsEnhancedSurvivalWorkerMultTen += @s randomDoubleNegate
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsEnhancedSurvivalWorkerMultTen += @s randomQuadroupleNegate
 execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
-execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsLifeAndDeathWorkerMultTen += @s randomDoubleNegate
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsLifeAndDeathWorkerMultTen += @s randomQuadroupleNegate
 execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
-execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsBossProgressionWorkerMultTen += @s randomDoubleNegate
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsBossProgressionWorkerMultTen += @s randomQuadroupleNegate
 execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
-execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsGothicHorrorWorkerMultTen += @s randomDoubleNegate
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsGothicHorrorWorkerMultTen += @s randomQuadroupleNegate
 
 execute as @e[tag=gstools_worker,type=marker,scores={averageTpsDesirePaths=..1}] run scoreboard players set @s averageTpsDesirePathsWorkerMultTen 400
 execute as @e[tag=gstools_worker,type=marker,scores={averageTpsDesirePaths=..1}] run scoreboard players set @s averageTpsDesirePaths 20
