@@ -1,5 +1,5 @@
 # Define
 
 # Main
-function bossprogression:bosses/pillager/util/toggle
-function bossprogression:bosses/pillager/stages/main
+schedule function bossprogression:bosses/pillager/util/toggle 8t append
+schedule function bossprogression:bosses/pillager/stages/main 9t append

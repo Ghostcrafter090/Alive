@@ -2,11 +2,11 @@
 scoreboard objectives add witherHasBeenKilled dummy
 
 # Main
-function bossprogression:bosses/wither/util/toggle
-execute if entity @e[tag=gstools_worker,type=marker,scores={guardiansHaveBeenKilled=1..1}] run function bossprogression:bosses/wither/util/size
+schedule function bossprogression:bosses/wither/util/toggle 11t append
+execute if entity @e[tag=gstools_worker,type=marker,scores={guardiansHaveBeenKilled=1..1}] run schedule function bossprogression:bosses/wither/util/size 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={guardiansHaveBeenKilled=1..1}] if entity @e[type=wither] run function bossprogression:bosses/wither/util/skeleton
 
-execute if entity @e[tag=gstools_worker,type=marker,scores={guardiansHaveBeenKilled=1..1}] run function bossprogression:bosses/wither/portal/main
+execute if entity @e[tag=gstools_worker,type=marker,scores={guardiansHaveBeenKilled=1..1}] run schedule function bossprogression:bosses/wither/portal/main 2t append
 
 execute if entity @e[tag=gstools_worker,type=marker,scores={guardiansHaveBeenKilled=1..1}] as @e[type=item,tag=!wither_item_searched] if entity @s[nbt={Item:{id:"minecraft:nether_star"}}] run scoreboard players set @e[tag=gstools_worker,type=marker] witherHasBeenKilled 1
 execute if entity @e[tag=gstools_worker,type=marker,scores={guardiansHaveBeenKilled=1..1}] if entity @e[type=wither,limit=1] as @e[type=item,tag=!wither_item_searched] if entity @s[nbt={Item:{id:"minecraft:tropical_fish"}}] run tag @s add wither_killable

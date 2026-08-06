@@ -1,8 +1,8 @@
 # Define
 
 # Main
-function bossprogression:bosses/ender_dragon/main
-function bossprogression:bosses/guardian/main
-function bossprogression:bosses/warden/main
-function bossprogression:bosses/pillager/main
-function bossprogression:bosses/wither/main
+schedule function bossprogression:bosses/ender_dragon/main 1t append
+schedule function bossprogression:bosses/guardian/main 2t append
+schedule function bossprogression:bosses/warden/main 3t append
+schedule function bossprogression:bosses/pillager/main 4t append
+schedule function bossprogression:bosses/wither/main 5t append

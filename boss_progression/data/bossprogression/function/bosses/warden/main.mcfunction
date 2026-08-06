@@ -1,4 +1,4 @@
 # Define
 
 # Main
-function bossprogression:bosses/warden/util/toggle
+schedule function bossprogression:bosses/warden/util/toggle 10t append
