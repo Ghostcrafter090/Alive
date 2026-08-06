@@ -3,7 +3,7 @@ scoreboard objectives add currentlyExecutingDynamicDirt dummy
 
 # Main
 execute as @e[type=marker,tag=gstools_worker,scores={currentlyExecutingDynamicDirt=1..1}] if entity @e[type=marker,tag=gstools_worker,scores={enableDebugMessages=1..1}] run say [GSTOOLS] WARNING: Command Execution limit bypass detected for extension DynamicDirt.
-execute as @e[type=marker,tag=gstools_worker,scores={currentlyExecutingDynamicDirt=1..1,averageTpsDynamicDirtWorkerMultTen=240..}] run scoreboard players remove @s averageTpsDynamicDirtWorkerMultTen 20
+execute as @e[type=marker,tag=gstools_worker,scores={currentlyExecutingDynamicDirt=1..1,averageTpsDynamicDirtWorkerMultTen=261..}] run scoreboard players remove @s averageTpsDynamicDirtWorkerMultTen 20
 scoreboard players set @e[type=marker,tag=gstools_worker] currentlyExecutingDynamicDirt 1
 function dynamicdirt:main
 schedule function gstools:extension/dynamicdirt/lagcheck 1t append
