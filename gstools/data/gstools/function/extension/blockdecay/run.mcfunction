@@ -4,6 +4,7 @@ scoreboard objectives add currentlyExecutingBlockDecay dummy
 # Main
 execute as @e[type=marker,tag=gstools_worker,scores={currentlyExecutingBlockDecay=1..1}] if entity @e[type=marker,tag=gstools_worker,scores={enableDebugMessages=1..1}] run say [GSTOOLS] WARNING: Command Execution limit bypass detected for extension BlockDecay.
 execute as @e[type=marker,tag=gstools_worker,scores={currentlyExecutingBlockDecay=1..1}] run scoreboard players operation @s averageTpsBlockDecayWorkerMultTen /= @s 2
+execute as @e[type=marker,tag=gstools_worker,scores={currentlyExecutingBlockDecay=1..1}] run scoreboard players operation @s averageTpsBlockDecayWorkerMultTen += @s 40
 scoreboard players set @e[type=marker,tag=gstools_worker] currentlyExecutingBlockDecay 1
 function blockdecay:main
 schedule function gstools:extension/blockdecay/lagcheck 1t append
