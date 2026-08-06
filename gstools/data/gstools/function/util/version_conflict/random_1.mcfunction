@@ -13,6 +13,10 @@ execute store result score @s randomNegate run random value 0..1
 
 execute if entity @s[scores={randomNegate=0..0}] run scoreboard players set @s randomNegate -1
 
+scoreboard players operation @s randomDoubleNegate = @s randomNegate
+scoreboard players operation @s randomDoubleNegate *= @e[type=marker,tag=gstools_worker] 2
+
+
 scoreboard players set @s newRandomCompatible 1
 
 

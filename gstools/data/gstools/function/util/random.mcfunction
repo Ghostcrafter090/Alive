@@ -9,6 +9,7 @@ scoreboard objectives add random1000 dummy
 scoreboard objectives add randomSigned1000 dummy
 scoreboard objectives add newRandomCompatible dummy
 scoreboard objectives add randomNegate dummy
+scoreboard objectives add randomDoubleNegate dummy
 
 # Main
 function gstools:util/version_conflict/random_1

@@ -58,3 +58,6 @@ execute as @s run scoreboard players operation @s randomSigned1000 %= @s randMul
 execute as @s run scoreboard players operation @s randomSigned1000 /= @s 2
 
 execute as @s run scoreboard players remove @s randomSigned100 100
+
+scoreboard players operation @s randomDoubleNegate = @s randomNegate
+scoreboard players operation @s randomDoubleNegate *= @e[type=marker,tag=gstools_worker] 2
