@@ -77,16 +77,27 @@ execute if entity @e[scores={averageTpsGothicHorrorWorkerMultTen=..259}] run bos
 execute if entity @e[scores={averageTpsLifeAndDeathWorkerMultTen=..259}] run bossbar set life_and_death_tps color purple
 execute if entity @e[scores={averageTpsWorkerMultTen=..259}] run bossbar set all_tps color purple
 
-execute if entity @e[scores={doRunBlockDecay=1..1}] run bossbar set block_decay_tps color green
-execute if entity @e[scores={doRunBossProgression=1..1}] run bossbar set boss_progression_tps color green
-execute if entity @e[scores={doRunDesirePaths=1..1}] run bossbar set desire_paths_tps color green
-execute if entity @e[scores={doRunDynamicDirt=1..1}] run bossbar set dynamic_dirt_tps color green
-execute if entity @e[scores={doRunDynamicEcosystems=1..1}] run bossbar set dynamic_ecosystems_tps color green
-execute if entity @e[scores={doRunDynamicMonsters=1..1}] run bossbar set dynamic_monsters_tps color green
-execute if entity @e[scores={doRunEnhancedSurvival=1..1}] run bossbar set enhanced_survival_tps color green
-execute if entity @e[scores={doRunGothicHorror=1..1}] run bossbar set gothic_horror_tps color green
-execute if entity @e[scores={doRunLifeAndDeath=1..1}] run bossbar set life_and_death_tps color green
-execute if entity @e[scores={doRun=1..1}] run bossbar set all_tps color green
+execute if entity @e[scores={doRunBlockDecay=1..1}] run bossbar set block_decay_tps style notched_20
+execute if entity @e[scores={doRunBossProgression=1..1}] run bossbar set boss_progression_tps style notched_20
+execute if entity @e[scores={doRunDesirePaths=1..1}] run bossbar set desire_paths_tps style notched_20
+execute if entity @e[scores={doRunDynamicDirt=1..1}] run bossbar set dynamic_dirt_tps style notched_20
+execute if entity @e[scores={doRunDynamicEcosystems=1..1}] run bossbar set dynamic_ecosystems_tps style notched_20
+execute if entity @e[scores={doRunDynamicMonsters=1..1}] run bossbar set dynamic_monsters_tps style notched_20
+execute if entity @e[scores={doRunEnhancedSurvival=1..1}] run bossbar set enhanced_survival_tps style notched_20
+execute if entity @e[scores={doRunGothicHorror=1..1}] run bossbar set gothic_horror_tps style notched_20
+execute if entity @e[scores={doRunLifeAndDeath=1..1}] run bossbar set life_and_death_tps style notched_20
+execute if entity @e[scores={doRun=1..1}] run bossbar set all_tps style notched_20
+
+execute unless entity @e[scores={doRunBlockDecay=1..1}] run bossbar set block_decay_tps style progress
+execute unless entity @e[scores={doRunBossProgression=1..1}] run bossbar set boss_progression_tps style progress
+execute unless entity @e[scores={doRunDesirePaths=1..1}] run bossbar set desire_paths_tps style progress
+execute unless entity @e[scores={doRunDynamicDirt=1..1}] run bossbar set dynamic_dirt_tps style progress
+execute unless entity @e[scores={doRunDynamicEcosystems=1..1}] run bossbar set dynamic_ecosystems_tps style progress
+execute unless entity @e[scores={doRunDynamicMonsters=1..1}] run bossbar set dynamic_monsters_tps style progress
+execute unless entity @e[scores={doRunEnhancedSurvival=1..1}] run bossbar set enhanced_survival_tps style progress
+execute unless entity @e[scores={doRunGothicHorror=1..1}] run bossbar set gothic_horror_tps style progress
+execute unless entity @e[scores={doRunLifeAndDeath=1..1}] run bossbar set life_and_death_tps style progress
+execute unless entity @e[scores={doRun=1..1}] run bossbar set all_tps style progress
 
 scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsBlockDecayWorkerMultTen 200
 scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsBossProgressionWorkerMultTen 200
