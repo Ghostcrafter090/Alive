@@ -12,7 +12,7 @@ function dynamicecosystems:main
 execute as @e[tag=gstools_worker,type=marker] unless entity @s[scores={anotherExtensionElseHasRan=1..1}] run scoreboard players set @s doLagCheck 1
 execute as @e[tag=gstools_worker,type=marker] if score @s ticTenth > @s random10 run scoreboard players set @s doLagCheck 1
 
-execute if entity @e[tag=gstools_worker,type=marker,scores={doLagCheck=1..1}] run schedule function gstools:extension/blockdecay/lagcheck 1t append
+execute if entity @e[tag=gstools_worker,type=marker,scores={doLagCheck=1..1}] run schedule function gstools:extension/dynamicecosystems/lagcheck 1t append
 
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players set @s doRunDynamicEcosystems 0
 scoreboard players set @e[type=marker,tag=gstools_worker] currentlyExecutingDynamicEcosystems 0

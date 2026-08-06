@@ -199,6 +199,7 @@ scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsEnhancedSurv
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsDynamicMonstersWorkerMultTen 340
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsLifeAndDeathWorkerMultTen 380
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsGothicHorrorWorkerMultTen 330
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsBossProgressionWorkerMultTen 330
 
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTps 20
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsDesirePaths 20
@@ -209,6 +210,7 @@ scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsDynamicMonst
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsEnhancedSurvival 20
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsLifeAndDeath 20
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsGothicHorror 20
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsBossProgression 20
 
 scoreboard objectives add minimumCursorY dummy
 execute as @e[type=marker,tag=gstools_worker] unless entity @s[scores={minimumCursorY=-500..500}] run scoreboard players set @s minimumCursorY -64
