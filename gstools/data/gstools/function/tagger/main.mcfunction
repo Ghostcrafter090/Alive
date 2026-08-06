@@ -9,7 +9,7 @@ scoreboard objectives add numberOfBosses dummy
 scoreboard objectives add numberOfTiles dummy
 
 # Main
-execute as @e[tag=!gs_tagged] run function gstools:tagger/dotag
+execute as @e[tag=!gs_tagged,limit=1,sort=random] run function gstools:tagger/dotag
 execute store result score @e[type=marker,tag=gstools_worker] numberOfEntities if entity @e
 
 execute store result score @e[type=marker,tag=gstools_worker] numberOfAnimals if entity @e[tag=animal]
