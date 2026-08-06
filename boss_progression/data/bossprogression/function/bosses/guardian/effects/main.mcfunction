@@ -6,4 +6,4 @@ scoreboard players set @e[tag=gstools_worker,type=marker,limit=1] guardianEffect
 
 execute as @e[tag=gstools_worker,type=marker,limit=1,scores={crownOfTheSeaHasBeenSpawned=1..1}] unless entity @s[scores={guardiansHaveBeenKilled=1..1}] run function bossprogression:bosses/guardian/effects/run
 execute unless entity @e[tag=gstools_worker,type=marker,limit=1,scores={crownOfTheSeaHasBeenSpawned=1..1,random100=..10}] run data merge entity @e[tag=fish,limit=1,sort=random,tag=!fish_gravity_fixed] {NoGravity:0b}
-execute unless entity @e[tag=gstools_worker,type=marker,limit=1,scores={crownOfTheSeaHasBeenSpawned=1..1,random100=..10}] run tag @s add fish_gravity_fixed
+execute unless entity @e[tag=gstools_worker,type=marker,limit=1,scores={crownOfTheSeaHasBeenSpawned=1..1,random100=..10}] run tag @e[tag=fish,limit=1,sort=random,tag=!fish_gravity_fixed] add fish_gravity_fixed
