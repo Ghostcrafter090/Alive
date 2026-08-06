@@ -1,3 +1,4 @@
+say "[alive_command_limit_trace_debug] lifeanddeath:disease/effecttypes/true/slowness"
 execute as @e[tag=is_alive] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={slow_minact_tier=1..1}] if entity @s[scores={slow_boolean=1..1}] if entity @s[scores={slow_max_tier=1..1}] if entity @s[scores={diseaseTime=1000..}] run effect give @s slowness 5 0
 execute as @e[tag=is_alive] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={slow_minact_tier=1..1}] if entity @s[scores={slow_boolean=1..1}] if entity @s[scores={slow_max_tier=2..2}] if entity @s[scores={diseaseTime=1000..2000}] run effect give @s slowness 5 0
 execute as @e[tag=is_alive] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={slow_minact_tier=1..1}] if entity @s[scores={slow_boolean=1..1}] if entity @s[scores={slow_max_tier=2..2}] if entity @s[scores={diseaseTime=2000..}] run effect give @s slowness 5 1

@@ -1,6 +1,7 @@
 # Define
 
 # Main
+say "[alive_command_limit_trace_debug] dynamicmonsters:arrow/main"
 execute if entity @e[tag=gstools_worker,type=marker,scores={ticQuarter=1..1}] as @e[type=arrow] store result score @s secondsTillExtinguished run data get entity @s Fire
 execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..2}] as @e[type=arrow,scores={secondsTillExtinguished=1..},sort=random,limit=1] at @s if block ~ ~ ~ #gstools:air unless block ~ ~-1 ~ #gstools:air run fill ~ ~ ~ ~ ~ ~ fire replace
 execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..2}] as @e[type=arrow,scores={secondsTillExtinguished=1..},sort=random,limit=1] at @s if block ~ ~ ~ #gstools:air unless block ~ ~1 ~ #gstools:air run fill ~ ~ ~ ~ ~ ~ fire[up=true] replace

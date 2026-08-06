@@ -1,6 +1,7 @@
 # Define
 
 # Main
+say "[alive_command_limit_trace_debug] gstools:extension/randomize"
 execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsDesirePathsWorkerMultTen += @s randomSigned10
 execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random

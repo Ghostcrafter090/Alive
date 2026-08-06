@@ -5,6 +5,7 @@ scoreboard objectives add hasSummonedPreCursor dummy
 scoreboard objectives add numberOfUnloadedCursorsSpawned dummy
 scoreboard objectives add maxNumberOfUnloadedCursorsPerChunk dummy
 # Main
+say "[alive_command_limit_trace_debug] gstools:cursor/run"
 scoreboard players set @e[tag=gstools_worker,type=marker] doRunCursor 0
 execute if entity @e[tag=gstools_worker,type=marker,scores={dynamicDirtLoaded=1..1}] run scoreboard players set @e[tag=gstools_worker,type=marker] doRunCursor 1
 execute if entity @e[tag=gstools_worker,type=marker,scores={dynamicEcosystemsLoaded=1..1}] run scoreboard players set @e[tag=gstools_worker,type=marker] doRunCursor 1

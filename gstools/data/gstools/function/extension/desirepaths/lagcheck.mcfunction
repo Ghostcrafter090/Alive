@@ -4,6 +4,7 @@ scoreboard objectives add averageTpsDesirePathsWorker dummy
 scoreboard objectives add averageTpsDesirePathsWorkerMultTen dummy
 
 # Main
+say "[alive_command_limit_trace_debug] gstools:extension/desirepaths/lagcheck"
 scoreboard players set @e[type=marker,tag=gstools_worker] averageTpsDesirePathsWorker 200
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsDesirePathsWorker *= @e[type=marker,tag=gstools_worker] averageTpsDesirePathsWorkerMultTen
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsDesirePathsWorkerMultTen = @e[type=marker,tag=gstools_worker] tps

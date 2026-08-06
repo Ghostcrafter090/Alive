@@ -4,6 +4,7 @@ scoreboard objectives add averageTpsLifeAndDeathWorker dummy
 scoreboard objectives add averageTpsLifeAndDeathWorkerMultTen dummy
 
 # Main
+say "[alive_command_limit_trace_debug] gstools:extension/lifeanddeath/lagcheck"
 scoreboard players set @e[type=marker,tag=gstools_worker] averageTpsLifeAndDeathWorker 200
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsLifeAndDeathWorker *= @e[type=marker,tag=gstools_worker] averageTpsLifeAndDeathWorkerMultTen
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsLifeAndDeathWorkerMultTen = @e[type=marker,tag=gstools_worker] tps

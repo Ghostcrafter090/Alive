@@ -4,6 +4,7 @@ scoreboard objectives add numberOfNetherMonsters dummy
 scoreboard objectives add gothicMonsterRemovalTic dummy
 scoreboard objectives add gothicMonsterTicRate dummy
 # Main
+say "[alive_command_limit_trace_debug] gothichorror:effects/main"
 execute store result score @e[type=marker,tag=gstools_worker] numberOfUndeadMonsters if entity @e[type=#minecraft:undead]
 execute store result score @e[type=marker,tag=gstools_worker] numberOfNetherMonsters if entity @e[tag=nether,tag=monster]
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @s gothicMonsterTicRate = @s averageTpsGothicHorror

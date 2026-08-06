@@ -4,6 +4,7 @@ scoreboard objectives add elderGuardianCount dummy
 scoreboard objectives add guardianHealth dummy
 
 # Main
+say "[alive_command_limit_trace_debug] dynamicmonsters:guardian/main"
 execute as @e[type=guardian,sort=random,limit=1] at @s unless entity @e[type=elder_guardian,distance=0..400] run tag @s add kill_guardian
 execute unless entity @e[tag=gstools_worker,type=marker,scores={crownOfTheSeaHasBeenSpawned=1..}] as @e[type=guardian,scores={guardianAge=..0}] run effect give @s wither 100 0 true
 execute if entity @e[tag=gstools_worker,type=marker,scores={crownOfTheSeaHasBeenSpawned=1..}] if entity @e[tag=gstools_worker,type=marker,scores={guardiansHaveBeenKilled=1..}] as @e[type=guardian,scores={guardianAge=..0}] run effect give @s wither 100 0 true

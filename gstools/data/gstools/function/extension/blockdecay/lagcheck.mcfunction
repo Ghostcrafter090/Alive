@@ -4,6 +4,7 @@ scoreboard objectives add averageTpsBlockDecayWorker dummy
 scoreboard objectives add averageTpsBlockDecayWorkerMultTen dummy
 
 # Main
+say "[alive_command_limit_trace_debug] gstools:extension/blockdecay/lagcheck"
 scoreboard players set @e[type=marker,tag=gstools_worker] averageTpsBlockDecayWorker 200
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsBlockDecayWorker *= @e[type=marker,tag=gstools_worker] averageTpsBlockDecayWorkerMultTen
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsBlockDecayWorkerMultTen = @e[type=marker,tag=gstools_worker] tps

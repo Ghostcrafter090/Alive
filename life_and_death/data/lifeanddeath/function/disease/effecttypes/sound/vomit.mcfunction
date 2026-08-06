@@ -2,6 +2,7 @@
 scoreboard objectives add vomitStrength dummy
 scoreboard objectives add vomitSoundTic dummy
 # Main
+say "[alive_command_limit_trace_debug] lifeanddeath:disease/effecttypes/sound/vomit"
 execute as @e[tag=is_human] run scoreboard players set @s vomitStrength 0
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={hung_minact_tier=1..1}] if entity @s[scores={hung_boolean=1..1}] if entity @s[scores={hung_max_tier=1..1}] if entity @s[scores={diseaseTime=1000..}] run scoreboard players set @s vomitStrength 1
 execute as @e[tag=is_human] if entity @s[scores={hasDiseaseBoolean=1..2}] if entity @s[scores={hung_minact_tier=1..1}] if entity @s[scores={hung_boolean=1..1}] if entity @s[scores={hung_max_tier=2..2}] if entity @s[scores={diseaseTime=1000..2000}] run scoreboard players set @s vomitStrength 1

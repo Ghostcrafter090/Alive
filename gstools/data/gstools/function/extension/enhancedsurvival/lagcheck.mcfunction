@@ -4,6 +4,7 @@ scoreboard objectives add averageTpsEnhancedSurvivalWorker dummy
 scoreboard objectives add averageTpsEnhancedSurvivalWorkerMultTen dummy
 
 # Main
+say "[alive_command_limit_trace_debug] gstools:extension/enhancedsurvival/lagcheck"
 scoreboard players set @e[type=marker,tag=gstools_worker] averageTpsEnhancedSurvivalWorker 200
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsEnhancedSurvivalWorker *= @e[type=marker,tag=gstools_worker] averageTpsEnhancedSurvivalWorkerMultTen
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsEnhancedSurvivalWorkerMultTen = @e[type=marker,tag=gstools_worker] tps

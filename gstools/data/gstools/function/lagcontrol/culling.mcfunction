@@ -3,6 +3,7 @@ scoreboard objectives add cullableEntityCount dummy
 scoreboard objectives add fallingBlockCount dummy
 scoreboard objectives add maxCullableEntityCount dummy
 # Main
+say "[alive_command_limit_trace_debug] gstools:lagcontrol/culling"
 execute store result score @e[tag=gstools_worker,type=marker] cullableEntityCount if entity @e[tag=lag_control]
 execute store result score @e[tag=gstools_worker,type=marker] fallingBlockCount if entity @e[type=falling_block]
 execute as @a at @s as @e[tag=lag_control,tag=!player_interacted,distance=0..8] run tag @s add player_interacted

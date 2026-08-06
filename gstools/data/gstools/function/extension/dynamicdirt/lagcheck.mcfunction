@@ -4,6 +4,7 @@ scoreboard objectives add averageTpsDynamicDirtWorker dummy
 scoreboard objectives add averageTpsDynamicDirtWorkerMultTen dummy
 
 # Main
+say "[alive_command_limit_trace_debug] gstools:extension/dynamicdirt/lagcheck"
 scoreboard players set @e[type=marker,tag=gstools_worker] averageTpsDynamicDirtWorker 200
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsDynamicDirtWorker *= @e[type=marker,tag=gstools_worker] averageTpsDynamicDirtWorkerMultTen
 scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsDynamicDirtWorkerMultTen = @e[type=marker,tag=gstools_worker] tps

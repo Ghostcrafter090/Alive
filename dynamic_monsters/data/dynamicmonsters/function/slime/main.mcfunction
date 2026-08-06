@@ -4,6 +4,7 @@ scoreboard objectives add slimeSize dummy
 scoreboard objectives add slimeNegate dummy
 
 # Main
+say "[alive_command_limit_trace_debug] dynamicmonsters:slime/main"
 execute as @e[type=slime] at @s if block ~ ~ ~ water store result score @s slimeSize run data get entity @s Size
 execute as @e[type=slime] at @s if block ~ ~ ~ water run scoreboard players add @s slimeTick 1
 execute as @e[type=slime,scores={slimeTick=1000..}] run scoreboard players add @s slimeSize 1
