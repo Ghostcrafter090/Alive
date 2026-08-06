@@ -4,8 +4,7 @@ scoreboard objectives add currentlyExecutingBossProgression dummy
 
 # Main
 execute as @e[type=marker,tag=gstools_worker,scores={currentlyExecutingBossProgression=1..1}] if entity @e[type=marker,tag=gstools_worker,scores={enableDebugMessages=1..1}] run say [GSTOOLS] WARNING: Command Execution limit bypass detected for extension BossProgression.
-execute as @e[type=marker,tag=gstools_worker,scores={currentlyExecutingBossProgression=1..1}] run scoreboard players operation @s averageTpsBossProgressionWorkerMultTen /= @s 2
-execute as @e[type=marker,tag=gstools_worker,scores={currentlyExecutingBossProgression=1..1}] run scoreboard players operation @s averageTpsBossProgressionWorkerMultTen += @s 40
+execute as @e[type=marker,tag=gstools_worker,scores={currentlyExecutingBossProgression=1..1,averageTpsBossProgressionWorkerMultTen=200..}] run scoreboard players operation @s averageTpsBossProgressionWorkerMultTen -= @s 20
 scoreboard players set @e[type=marker,tag=gstools_worker] currentlyExecutingBossProgression 1
 function bossprogression:main
 schedule function gstools:extension/bossprogression/lagcheck 1t append
