@@ -25,5 +25,4 @@ execute if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:compat/burnt
 execute if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:compat/burnt/layer_5/n18/burnt_stripped_burnt_wood
 execute if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:compat/burnt/layer_5/n37/burnt_smoldering_bamboo_mosaic_stairs
 execute if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:compat/burnt/layer_5/n37/burnt_burnt_bamboo_mosaic_stairs
-execute if blocks ~ ~-1 ~ ~ ~-1 ~ 0 0 0 all run function blockdecay:compat/burnt/layer_5/n37/burnt_smoldering_jungle_door_mosaic_stairs
 # <node:no_compile_mode/>

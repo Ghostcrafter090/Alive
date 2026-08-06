@@ -21,3 +21,21 @@ for path, dirs, files in os.walk(folder):
             
             if mainFile != newMainFile:
                 pytools.IO.saveFile(path + "\\" + file, newMainFile)
+        
+        else:
+            print(path)
+            if "\\n" in path:
+                blockFile = pytools.IO.getFile(path + "\\" + file)
+
+                lines = []
+                
+                for line in blockFile.split("\n"):
+                    if (line not in lines) or (line.replace(" ", "") == "") or (line.replace(" ", "")[0] == "#"):
+                        lines.append(line)
+                        
+                    else:
+                        print("Removing duplicate line from " + path + "\\" + file + " ;;; " + line)
+                        
+                if blockFile != "\n".join(lines):
+                    pytools.IO.saveFile(path + "\\" + file, "\n".join(lines))
+                        

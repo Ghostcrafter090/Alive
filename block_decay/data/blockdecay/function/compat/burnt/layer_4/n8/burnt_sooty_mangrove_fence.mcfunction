@@ -2,9 +2,3 @@
 
 # Main
 fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_mangrove_slab replace burnt:sooty_mangrove_fence
-fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_mangrove_slab replace burnt:sooty_mangrove_fence
-fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_mangrove_slab replace burnt:sooty_mangrove_fence
-fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_mangrove_slab replace burnt:sooty_mangrove_fence
-fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_mangrove_slab replace burnt:sooty_mangrove_fence
-fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_mangrove_slab replace burnt:sooty_mangrove_fence
-fill ~ ~-1 ~ ~ ~-1 ~ burnt:sooty_mangrove_slab replace burnt:sooty_mangrove_fence
