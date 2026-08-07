@@ -122,6 +122,6 @@ Writing Output: C:\Users\joshp\curseforge\minecraft\Instances\Alive Dev\saves\De
   assets/enhanced_survival/
   assets/enhanced_survival/lang/
   assets/enhanced_survival/lang/en_us.json
-  block_decay/
-  block_decay/BlockDecayMod.class
+  life_and_death/
+  life_and_death/LifeAndDeathMod.class
   pack.mcmeta
