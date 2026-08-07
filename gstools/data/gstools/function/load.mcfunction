@@ -186,6 +186,7 @@ scoreboard objectives add anotherExtensionElseHasRan dummy
 scoreboard players set @e[tag=gstools_worker,type=marker] previousDayNumber -1
 
 scoreboard players set @e[tag=gstools_worker,type=marker] isSereneSeasonsPresent 0
+scoreboard players set @e[tag=gstools_worker,type=marker] isWeather2Present 0
 
 execute unless score $first_load firstLoad = $first_load firstLoad run worldborder set 59999468
 execute unless score $first_load firstLoad = $first_load firstLoad run scoreboard players set $first_load firstLoad 1
