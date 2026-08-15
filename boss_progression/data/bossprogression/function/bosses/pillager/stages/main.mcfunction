@@ -47,5 +47,6 @@ execute as @e[tag=gstools_worker,type=marker,scores={pillagerStage=1..}] run sch
 execute as @e[tag=gstools_worker,type=marker,scores={pillagerStage=2..}] run schedule function bossprogression:bosses/pillager/stages/studying/main 2t append
 execute as @e[tag=gstools_worker,type=marker,scores={pillagerStage=3..}] run schedule function bossprogression:bosses/pillager/stages/nether/main 2t append
 
-
+# Disable
+execute as @e[type=pillager,limit=1,sort=random,nbt={Patrolling:1b}] at @s unless entity @a[scores={illagersKilledCount=1..},distance=0..200] run kill @s
 
