@@ -9,7 +9,8 @@ scoreboard players add @s heartOfTheSeaSpellTic 1
 playsound minecraft:particle.soul_escape master @a ~ ~ ~ 9 1
 
 execute if entity @s[scores={heartOfTheSeaSpellTic=30..}] run summon lightning_bolt ~ ~ ~
-execute if entity @s[scores={heartOfTheSeaSpellTic=30..}] run setblock ~ ~ ~ soul_fire strict
+function bossprogression:bosses/guardian/spell/enchantedheart/version_conflict/soul_fire_0
+execute if entity @s[scores={heartOfTheSeaSpellTic=30..}] unless entity @s[scores={soulFireStrictVersionConflict=1..1}] run particle minecraft:soul_fire_flame ~ ~1 ~ 0.25 0.1 0.25 0 10 force
 execute if entity @s[scores={heartOfTheSeaSpellTic=30..}] run kill @e[type=item,distance=0..1]
 execute if entity @s[scores={heartOfTheSeaSpellTic=30..}] run summon item ~ ~ ~ {Glowing:1b,Invulnerable:1b,Item:{id:"minecraft:heart_of_the_sea",count:1,components:{"minecraft:enchantment_glint_override":true,"minecraft:custom_name":{"bold":false,"color":"aqua","italic":false,"shadow_color":1010582698,"text":"Enchanted Heart Of The Sea"}}}}
 execute if entity @s[scores={heartOfTheSeaSpellTic=30..}] run kill @s

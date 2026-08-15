@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:blasting",
+    "category": "misc",
+    "ingredient": {
+        "item": "minecraft:heart_of_the_sea"
+    },
+    "result": {
+        "id": "minecraft:prismarine_shard",
+        "components": {
+            "minecraft:custom_name": {
+                "bold": false,
+                "italic": false,
+                "text": "Sea Shard"
+            },
+            "minecraft:item_model": "boss_progression:sea_shard"
+        }
+    },
+    "cookingtime": 3000
+}
