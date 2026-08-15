@@ -1,6 +1,7 @@
 # Define
 execute unless entity @e[scores={lifeAndDeathLoaded=1..1}] run scoreboard objectives add consumptionStrength dummy
 execute unless entity @e[scores={lifeAndDeathLoaded=1..1}] run scoreboard players set @a consumptionStrength 0
+
 # Main
 execute as @a[scores={consumptionStrength=4..4}] at @s if entity @s[scores={stamina=100..200}] run playsound enhancedsurvival.player.breath player @a ~ ~ ~ 0.01 0.9
 execute as @a[scores={consumptionStrength=4..4}] at @s if entity @s[scores={stamina=..100}] run playsound enhancedsurvival.player.breath player @a ~ ~ ~ 0.02 1
