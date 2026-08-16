@@ -108,14 +108,14 @@ execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={ghostMo
 execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={ghostMood=91..}] run attribute @s minecraft:generic.attack_damage base set 0.00001
 
 # Poltergeist AI
-execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,sort=nearest,limit=1,tag=!gothic_ghost_snowball_thrown_setup] run data merge storage minecraft:gothichorror {MotionChange:[0.0d,0.0d,0.0d]}
+execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!gothic_ghost_snowball_thrown_setup] run data merge storage minecraft:gothichorror {MotionChange:[0.0d,0.0d,0.0d]}
 
-execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,sort=nearest,limit=1,tag=!gothic_ghost_snowball_thrown_setup] store result storage minecraft:gothichorror MotionChange[0] double 0.01 run scoreboard players get @s vectorX
-execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,sort=nearest,limit=1,tag=!gothic_ghost_snowball_thrown_setup] store result storage minecraft:gothichorror MotionChange[1] double 0.01 run scoreboard players get @s vectorY
-execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,sort=nearest,limit=1,tag=!gothic_ghost_snowball_thrown_setup] store result storage minecraft:gothichorror MotionChange[2] double 0.01 run scoreboard players get @s vectorZ
+execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!gothic_ghost_snowball_thrown_setup] store result storage minecraft:gothichorror MotionChange[0] double 0.01 run scoreboard players get @s vectorX
+execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!gothic_ghost_snowball_thrown_setup] store result storage minecraft:gothichorror MotionChange[1] double 0.01 run scoreboard players get @s vectorY
+execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!gothic_ghost_snowball_thrown_setup] store result storage minecraft:gothichorror MotionChange[2] double 0.01 run scoreboard players get @s vectorZ
 
-execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,sort=nearest,limit=1,tag=!gothic_ghost_snowball_thrown_setup] run data modify entity @s Motion set from storage minecraft:gothichorror MotionChange
-execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,sort=nearest,limit=1,tag=!gothic_ghost_snowball_thrown_setup] run tag @s add gothic_ghost_snowball_thrown_setup
+execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!gothic_ghost_snowball_thrown_setup] run data modify entity @s Motion set from storage minecraft:gothichorror MotionChange
+execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!gothic_ghost_snowball_thrown_setup] run tag @s add gothic_ghost_snowball_thrown_setup
 
 execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] run function gstools:util/random
 execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] if entity @s[scores={random100=..5}] at @s facing entity @e[tag=is_alive,sort=nearest,limit=1,distance=1..30] eyes positioned ~ ~1 ~ run summon snowball ^ ^ ^1 {Item:{id:"minecraft:stone",Count:1b},Tags:['gothic_ghost_snowball_thrown']}
