@@ -262,5 +262,5 @@ execute as @e[type=marker,tag=dirt_collapse,tag=!sound_played] run tag @s add so
 
 execute as @e[type=marker,tag=old_collapse] at @s unless entity @e[tag=dirt_collapse,type=marker,distance=0..5] run kill @s
 execute store result score @e[tag=gstools_worker,type=marker] oldCollapseMarkerCount if entity @e[type=marker,tag=old_collapse]
-execute if entity @e[type=marker,tag=gstools_worker,scores={oldCollapseMarkerCount=250..}] as @e[type=marker,tag=dirt_collapse,limit=1,sort=random] at @s run kill @e[tag=dirt_collapse,limit=10,sort=nearest]
-execute if entity @e[type=marker,tag=gstools_worker,scores={oldCollapseMarkerCount=300..}] run kill @e[tag=old_collapse,limit=40,sort=random]
+execute if entity @e[type=marker,tag=gstools_worker,scores={oldCollapseMarkerCount=250..}] as @e[type=marker,tag=dirt_collapse,limit=1,sort=random] at @s run kill @e[tag=dirt_collapse,limit=100,sort=nearest]
+execute if entity @e[type=marker,tag=gstools_worker,scores={oldCollapseMarkerCount=250..}] run kill @e[tag=old_collapse,limit=40,sort=random]
