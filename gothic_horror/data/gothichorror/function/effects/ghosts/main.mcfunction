@@ -119,7 +119,7 @@ execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!gothic_ghost_s
 
 execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] run function gstools:util/random
 execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] if entity @s[scores={random100=..5}] at @s facing entity @e[tag=is_alive,sort=nearest,limit=1,distance=1..30] eyes positioned ~ ~1 ~ run summon snowball ^ ^ ^1 {Item:{id:"minecraft:stone",Count:1b},Tags:['gothic_ghost_snowball_thrown']}
-execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] if entity @s[scores={random100=..5}] at @s as @e[tag=is_alive,sort=nearest,limit=1,distance=1..30] at @s run summon marker ~ ~ ~ {Tags:['vector']}
+execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] if entity @s[scores={random100=..5}] at @s as @e[tag=is_alive,sort=nearest,limit=1,distance=1..30] at @s run summon marker ~ ~1 ~ {Tags:['vector']}
 execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] if entity @s[scores={random100=..5}] at @s if entity @e[tag=is_alive,sort=nearest,limit=1,distance=1..30] as @e[type=snowball,tag=gothic_ghost_snowball_thrown,sort=nearest,limit=1] run scoreboard players set @s vectorScale 1
 execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] if entity @s[scores={random100=..5}] at @s if entity @e[tag=is_alive,sort=nearest,limit=1,distance=1..30] as @e[type=snowball,tag=gothic_ghost_snowball_thrown,sort=nearest,limit=1] run function gstools:util/get_vector
 
