@@ -227,7 +227,17 @@ execute as @e[type=warden] at @s unless entity @a[distance=0..5] if block ~ ~-2 
 execute as @e[type=warden] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ cave_air unless block ~ ~-1 ~ cave_air if entity @s[tag=!collapsed] run tag @s add collapsed
 
 scoreboard players set @e[tag=gstools_worker,type=marker] numberOfCollapses 0
-execute as @e[tag=dirt_collapse,type=marker,limit=1,sort=random] at @s run function dynamicdirt:collapsewrapper
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTpsDynamicDirt=10..}] as @e[tag=dirt_collapse,type=marker,limit=1,sort=random] at @s run function dynamicdirt:collapsewrapper
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTpsDynamicDirt=10..19}] as @e[tag=dirt_collapse,type=marker,limit=1,sort=random] at @s run function dynamicdirt:collapsewrapper
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTpsDynamicDirt=10..18}] as @e[tag=dirt_collapse,type=marker,limit=1,sort=random] at @s run function dynamicdirt:collapsewrapper
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTpsDynamicDirt=10..17}] as @e[tag=dirt_collapse,type=marker,limit=1,sort=random] at @s run function dynamicdirt:collapsewrapper
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTpsDynamicDirt=10..16}] as @e[tag=dirt_collapse,type=marker,limit=1,sort=random] at @s run function dynamicdirt:collapsewrapper
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTpsDynamicDirt=10..15}] as @e[tag=dirt_collapse,type=marker,limit=1,sort=random] at @s run function dynamicdirt:collapsewrapper
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTpsDynamicDirt=10..14}] as @e[tag=dirt_collapse,type=marker,limit=1,sort=random] at @s run function dynamicdirt:collapsewrapper
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTpsDynamicDirt=10..13}] as @e[tag=dirt_collapse,type=marker,limit=1,sort=random] at @s run function dynamicdirt:collapsewrapper
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTpsDynamicDirt=10..12}] as @e[tag=dirt_collapse,type=marker,limit=1,sort=random] at @s run function dynamicdirt:collapsewrapper
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTpsDynamicDirt=10..11}] as @e[tag=dirt_collapse,type=marker,limit=1,sort=random] at @s run function dynamicdirt:collapsewrapper
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTpsDynamicDirt=10..10}] as @e[tag=dirt_collapse,type=marker,limit=1,sort=random] at @s run function dynamicdirt:collapsewrapper
 execute if score @e[tag=gstools_worker,type=marker,limit=1] ticTenth > @e[tag=gstools_worker,type=marker,limit=1] random10 run kill @e[tag=old_collapse,limit=1,sort=random]
 
 execute as @e[tag=old_collapse,type=marker] at @s store result score @s collapseAccumulate if entity @e[tag=old_collapse,type=marker,distance=0..2]
@@ -252,4 +262,5 @@ execute as @e[type=marker,tag=dirt_collapse,tag=!sound_played] run tag @s add so
 
 execute as @e[type=marker,tag=old_collapse] at @s unless entity @e[tag=dirt_collapse,type=marker,distance=0..5] run kill @s
 execute store result score @e[tag=gstools_worker,type=marker] oldCollapseMarkerCount if entity @e[type=marker,tag=old_collapse]
-execute if entity @e[type=marker,tag=gstools_worker,scores={oldCollapseMarkerCount=300..}] run kill @e[tag=dirt_collapse]
+execute if entity @e[type=marker,tag=gstools_worker,scores={oldCollapseMarkerCount=250..}] as @e[type=marker,tag=dirt_collapse,limit=1,sort=random] at @s run kill @e[tag=dirt_collapse,limit=10,sort=nearest]
+execute if entity @e[type=marker,tag=gstools_worker,scores={oldCollapseMarkerCount=300..}] run kill @e[tag=old_collapse,limit=40,sort=random]
