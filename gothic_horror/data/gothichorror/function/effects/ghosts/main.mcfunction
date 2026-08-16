@@ -8,6 +8,9 @@ scoreboard objectives add ghostRandomWorkerB dummy
 scoreboard objectives add lastPlayedGhostSound dummy
 scoreboard objectives add ghostSoundTicRate dummy
 
+team add gothic_ghost "Ghosts"
+team modify gothic_ghost color black
+
 # Main
 execute as @e[tag=gothic_ghost] at @s run function gstools:util/light_level
 execute as @e[tag=gothic_ghost,limit=3,sort=random] at @s run function gstools:util/is_outside
@@ -22,7 +25,16 @@ execute as @e[tag=gothic_ghost] at @s unless block ~ ~ ~ #gstools:air if block ~
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run attribute @s minecraft:generic.movement_speed base set 0.08
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run attribute @s minecraft:generic.attack_damage base set 0.5
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run effect give @s invisibility infinite 2 true
-execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run function 
+execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run function gstools:util/random
+
+execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] if entity @s[scores={random100=0..25}] run tag @s add ghost_type_echo
+execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] if entity @s[scores={random100=26..50}] run tag @s add ghost_type_spirit
+execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] if entity @s[scores={random100=51..75}] run tag @s add ghost_type_poltergeist
+execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] if entity @s[scores={random100=76..100}] run tag @s add ghost_type_demon
+
+execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run team join gothic_ghost @s
+
+execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run function gothichorror:effects/ghosts/version_conflict/name
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run tag @s add gothic_ghost_setup
 
 # AI
@@ -115,6 +127,9 @@ execute as @e[type=#minecraft:undead,sort=random,limit=1] if entity @s[tag=gothi
 execute as @e[type=#minecraft:undead,sort=random,limit=1] if entity @s[tag=gothic_ghost,scores={ghostStaminaUnsigned=665..830}] if score @s ghostSoundTicRate < @s lastPlayedGhostSound at @s if predicate gstools:near_wood run playsound minecraft:gothichorror.ghost.door hostile @a ~ ~ ~
 execute as @e[type=#minecraft:undead,sort=random,limit=1] if entity @s[tag=gothic_ghost,scores={ghostStaminaUnsigned=830..}] if score @s ghostSoundTicRate < @s lastPlayedGhostSound if entity @s[scores={ghostStamina=..0}] at @s if predicate gstools:near_glass run playsound minecraft:gothichorror.ghost.window hostile @a ~ ~ ~
 execute as @e[type=#minecraft:undead,sort=random,limit=1] if entity @s[tag=gothic_ghost] if score @s ghostSoundTicRate < @s lastPlayedGhostSound run scoreboard players set @s lastPlayedGhostSound 0
+
+# Visual
+
 
 # Spawn
 execute if entity @e[tag=gstools_worker,scores={ticSecond=5..5}] as @e[type=marker,tag=gstools_worker] as @e[type=#minecraft:undead,limit=1,sort=random] if entity @s[tag=!gothic_ghost] at @s unless entity @e[tag=gothic_ghost,distance=0..10] run function gstools:horror/getindex

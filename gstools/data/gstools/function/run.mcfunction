@@ -188,6 +188,7 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={doRunGothicHorror=1.
 
 execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=10..}] run function enhancedsurvival:main
 
+function gstools:player/view_finder
 
 function lifeanddeath:tic
 function enhancedsurvival:tic
