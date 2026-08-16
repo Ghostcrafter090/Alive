@@ -195,6 +195,7 @@ function enhancedsurvival:tic
 function bossprogression:tic
 function gothichorror:tic
 function dynamicdirt:tic
+function desirepaths:tic
 
 # On Death
 execute as @a[scores={death=1..}] at @s run function gstools:player/on_death
