@@ -21,6 +21,7 @@ execute as @e[tag=gothic_ghost] at @s unless block ~ ~1 ~ #gstools:air run tp @s
 execute as @e[tag=gothic_ghost] at @s unless block ~ ~1 ~ #gstools:air if block ~ ~2 ~ #gstools:air run tp @s ~ ~0.1 ~ ~ ~
 execute as @e[tag=gothic_ghost] at @s unless block ~ ~ ~ #gstools:air if block ~ ~1 ~ #gstools:air run tp @s ^ ^ ^-0.4 ~ ~
 execute as @e[tag=gothic_ghost] at @s unless block ~ ~ ~ #gstools:air if block ~ ~1 ~ #gstools:air if block ~ ~2 ~ #gstools:air run tp @s ~ ~0.1 ~ ~ ~
+
 # Setup
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run attribute @s minecraft:generic.movement_speed base set 0.08
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run attribute @s minecraft:generic.attack_damage base set 0.5
@@ -34,7 +35,7 @@ execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] if entity @s[scores={ran
 
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run team join gothic_ghost @s
 
-execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run function gothichorror:effects/ghosts/version_conflict/name
+execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run function gothichorror:effects/ghosts/version_conflict/name_0
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run tag @s add gothic_ghost_setup
 
 # AI
