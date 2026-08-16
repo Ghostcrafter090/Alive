@@ -230,3 +230,6 @@ execute as @e[type=marker,tag=dirt_collapse,tag=!sound_played] run tag @s add so
 execute as @e[type=marker,tag=old_collapse] at @s unless entity @e[tag=dirt_collapse,type=marker,distance=0..5] run kill @s
 execute store result score @e[tag=gstools_worker,type=marker] oldCollapseMarkerCount if entity @e[type=marker,tag=old_collapse]
 execute if entity @e[type=marker,tag=gstools_worker,scores={oldCollapseMarkerCount=300..}] run kill @e[tag=dirt_collapse]
+
+execute as @e[type=marker,tag=frosted_ice_sound_trigger,sort=random,limit=1] unless block ~ ~ ~ frosted_ice unless block ~ ~ ~ ice run playsound minecraft:block.glass.break block @a ~ ~ ~ 1
+execute as @e[type=marker,tag=frosted_ice_sound_trigger,sort=random,limit=1] unless block ~ ~ ~ frosted_ice run kill @s

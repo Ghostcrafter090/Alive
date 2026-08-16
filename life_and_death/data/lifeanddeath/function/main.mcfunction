@@ -62,7 +62,7 @@ execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_dis
 execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] if entity @e[type=marker,tag=gstools_worker,scores={averageTps=..18,diseaseSectionRegulator=2..2}] run schedule function lifeanddeath:disease/diseasec 11t append
 execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] if entity @e[type=marker,tag=gstools_worker,scores={averageTps=..18,diseaseSectionRegulator=3..3}] run schedule function lifeanddeath:disease/diseased 12t append
 
-schedule function lifeanddeath:medecine/main 13t
+schedule function lifeanddeath:medecine/main 13t append
 
 scoreboard players add @e[tag=gstools_worker,type=marker] diseaseRegulatorA 1
 execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] as @e[tag=gstools_worker,type=marker,scores={diseaseRegulatorA=2..}] run scoreboard players set @s diseaseRegulatorA 0

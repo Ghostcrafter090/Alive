@@ -39,6 +39,15 @@ fill ~ ~-1 ~ ~ ~ ~ deepslate replace tuff
 
 fill ~ ~-1 ~ ~ ~ ~ granite replace dripstone_block
 
+execute positioned ~ ~-1 ~ if block ~ ~ ~ ice unless entity @e[type=marker,tag=frosted_ice_sound_trigger,distance=0..2,sort=nearest,limit=1] run summon marker ~ ~ ~ {Tags:['frosted_ice_sound_trigger']}
+execute if block ~ ~ ~ ice unless entity @e[type=marker,tag=frosted_ice_sound_trigger,distance=0..2,sort=nearest,limit=1] run summon marker ~ ~ ~ {Tags:['frosted_ice_sound_trigger']}
+execute positioned ~ ~-1 ~ if block ~ ~ ~ ice unless entity @e[type=marker,tag=frosted_ice_sound_trigger,distance=0..2,sort=nearest,limit=1] run playsound minecraft:block.sniffer_egg.crack master @a ~ ~ ~ 2 0.1
+execute if block ~ ~ ~ ice unless entity @e[type=marker,tag=frosted_ice_sound_trigger,distance=0..2,sort=nearest,limit=1] run playsound minecraft:block.sniffer_egg.crack master @a ~ ~ ~ 1 0.1
+
+fill ~ ~-1 ~ ~ ~ ~ frosted_ice replace ice
+fill ~ ~-1 ~ ~ ~ ~ ice replace packed_ice
+fill ~ ~-1 ~ ~ ~ ~ packed_ice replace blue_ice
+
 fill ~4 ~-3 ~4 ~-4 ~3 ~-4 air replace pointed_dripstone[thickness=base]
 
 execute as @s[tag=dirt_collapse,type=marker] at @s if block ~ ~-2 ~ #dynamicdirt:air run fill ~ ~-1 ~ ~ ~-1 ~ sand replace clay
