@@ -18,3 +18,5 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..20}] run
 
 execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..20}] run fill ~ ~-0.5 ~ ~ ~-1 ~ ice replace packed_ice
 execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..20}] run fill ~ ~-0.5 ~ ~ ~-1 ~ packed_ice replace blue_ice
+
+execute if entity @e[type=marker,tag=gstools_worker,scores={enableDebugMessages=1..1}] run say Path Filled!
