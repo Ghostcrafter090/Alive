@@ -132,8 +132,9 @@ execute as @e[type=#minecraft:undead,sort=random,limit=1] if entity @s[tag=gothi
 execute as @e[type=#minecraft:undead,sort=random,limit=1] if entity @s[tag=gothic_ghost] if score @s ghostSoundTicRate < @s lastPlayedGhostSound run scoreboard players set @s lastPlayedGhostSound 0
 
 # Visual
-execute as @e[tag=gstools_view_finder,type=marker] at @s as @e[tag=gothic_ghost,distance=0..20] run effect clear @s glowing
-execute as @e[tag=gstools_view_finder,type=marker] at @s as @e[tag=gothic_ghost,distance=20..] if entity @a[distance=0..20] run effect give @s glowing infinite 0 true
+execute as @e[tag=gstools_view_finder,type=marker] at @s as @e[tag=gothic_ghost,distance=21..] at @s if entity @a[distance=0..20] run effect give @s glowing infinite 0 true
+execute as @e[tag=gstools_view_finder,type=marker] at @s as @e[tag=gothic_ghost,distance=..20] run effect clear @s glowing
+execute as @e[tag=gstools_view_finder,type=marker] at @s as @e[tag=gothic_ghost,distance=20..] unless entity @a[distance=0..20] run effect clear @s glowing
 
 # Spawn
 execute if entity @e[tag=gstools_worker,scores={ticSecond=5..5}] as @e[type=marker,tag=gstools_worker] as @e[type=#minecraft:undead,limit=1,sort=random] if entity @s[tag=!gothic_ghost] at @s unless entity @e[tag=gothic_ghost,distance=0..10] run function gstools:horror/getindex
