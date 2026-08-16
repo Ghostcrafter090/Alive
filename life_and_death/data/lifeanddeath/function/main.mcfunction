@@ -29,6 +29,15 @@ scoreboard objectives add with_minact_tier dummy
 scoreboard objectives add with_boolean dummy
 scoreboard objectives add with_max_tier dummy
 
+scoreboard objectives add slow_immune dummy
+scoreboard objectives add minf_immune dummy
+scoreboard objectives add nau_immune dummy
+scoreboard objectives add blin_immune dummy
+scoreboard objectives add hung_immune dummy
+scoreboard objectives add weak_immune dummy
+scoreboard objectives add poi_immune dummy
+scoreboard objectives add with_immune dummy
+
 scoreboard objectives add hasEatenRottingFlesh minecraft.used:minecraft.rotten_flesh
 scoreboard objectives add hasEatenSpiderEye minecraft.used:minecraft.spider_eye
 
