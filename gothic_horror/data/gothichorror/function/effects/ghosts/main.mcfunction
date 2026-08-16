@@ -107,6 +107,20 @@ execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={ghostMo
 execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={ghostMood=81..90}] run attribute @s minecraft:generic.attack_damage base set 0.00005
 execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={ghostMood=91..}] run attribute @s minecraft:generic.attack_damage base set 0.00001
 
+# Poltergeist AI
+execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] run function gstools:util/random
+execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] if entity @s[scores={random100=..5}] at @s run summon egg ~ ~ ~ {Motion:[-1.0,0.0,0.0],Item:{id:"minecraft:stone",Count:1b},Tags:['gothic_ghost_egg_thrown']}
+execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] if entity @s[scores={random100=..5}] at @s as @e[type=!#minecraft:undead,sort=nearest,limit=1,distance=1..] at @s run summon marker ~ ~ ~ {Tags:['vector']}
+execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] if entity @s[scores={random100=..5}] as @e[type=egg,tag=gothic_ghost_egg_thrown,sort=nearest,limit=1] run scoreboard players set @s vectorScale 1
+execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] if entity @s[scores={random100=..5}] as @e[type=egg,tag=gothic_ghost_egg_thrown,sort=nearest,limit=1] run function gstools:util/get_vector
+execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] if entity @s[scores={random100=..5}] as @e[type=egg,tag=gothic_ghost_egg_thrown,sort=nearest,limit=1] store result entity @s Motion[0] double 100 run scoreboard players get @s vectorX
+execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] if entity @s[scores={random100=..5}] as @e[type=egg,tag=gothic_ghost_egg_thrown,sort=nearest,limit=1] store result entity @s Motion[0] double 100 run scoreboard players get @s vectorY
+execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] if entity @s[scores={random100=..5}] as @e[type=egg,tag=gothic_ghost_egg_thrown,sort=nearest,limit=1] store result entity @s Motion[0] double 100 run scoreboard players get @s vectorZ
+execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] if entity @s[scores={random100=..5}] as @e[type=egg,tag=gothic_ghost_egg_thrown,sort=nearest,limit=1] at @s run playsound minecraft:entity.phantom.flap block @a ~ ~ ~ 1 2
+
+execute as @e[type=egg,tag=gothic_ghost_egg_thrown,sort=nearest,limit=1,tag=!sound_played] at @s if entity @e[type=!#minecraft:undead,sort=nearest,limit=1,distance=0..1] run playsound minecraft:block.stone.break block @a ~ ~ ~ 1 2
+execute as @e[type=egg,tag=gothic_ghost_egg_thrown,sort=nearest,limit=1,tag=!sound_played] at @s if entity @e[type=!#minecraft:undead,sort=nearest,limit=1,distance=0..1] run tag @s add sound_played
+
 # Sound
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run function gstools:util/random
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s ghostStamina = @s ghostMood
