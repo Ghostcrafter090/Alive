@@ -22,6 +22,7 @@ execute as @e[tag=gothic_ghost] at @s unless block ~ ~ ~ #gstools:air if block ~
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run attribute @s minecraft:generic.movement_speed base set 0.08
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run attribute @s minecraft:generic.attack_damage base set 0.5
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run effect give @s invisibility infinite 2 true
+execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run function 
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run tag @s add gothic_ghost_setup
 
 # AI

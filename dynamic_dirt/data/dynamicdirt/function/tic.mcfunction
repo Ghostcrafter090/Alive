@@ -1,0 +1,2 @@
+execute as @e[type=marker,tag=frosted_ice_sound_trigger,sort=random,limit=3] at @s unless block ~ ~ ~ frosted_ice unless block ~ ~ ~ ice run playsound minecraft:block.glass.break block @a ~ ~ ~ 1
+execute as @e[type=marker,tag=frosted_ice_sound_trigger,sort=random,limit=3] at @s unless block ~ ~ ~ frosted_ice run kill @s
