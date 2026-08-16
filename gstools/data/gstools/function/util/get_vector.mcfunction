@@ -20,7 +20,7 @@ execute store result score @s vectorX as @e[type=marker,tag=vector,limit=1,sort=
 execute store result score @s vectorY as @e[type=marker,tag=vector,limit=1,sort=nearest] run data get entity @s Pos[1] 100
 execute store result score @s vectorZ as @e[type=marker,tag=vector,limit=1,sort=nearest] run data get entity @s Pos[2] 100
 
-kill @e[type=marker,tag=vector,limit=1,sort=nearest]
+kill @e[type=marker,tag=vector]
 
 scoreboard players operation @s vectorX -= @s PosEntityX
 scoreboard players operation @s vectorY -= @s PosEntityY
