@@ -157,9 +157,9 @@ execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] i
 
 execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] if entity @s[scores={random100=..5}] at @s if entity @e[tag=is_alive,sort=nearest,limit=1,distance=1..30] as @e[type=snowball,tag=gothic_ghost_snowball_thrown,sort=nearest,limit=1] at @s run playsound minecraft:entity.phantom.flap block @a ~ ~ ~ 1 2
 
-execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played] at @s if entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..1] run playsound minecraft:block.stone.break block @a ~ ~ ~ 1 2
-execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played] at @s if entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..1] unless entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..1,gamemode=creative] unless entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..1,gamemode=spectator] run damage @e[tag=is_alive,sort=nearest,limit=1,distance=0..1] 0.1 mob_projectile by @s from @s
-execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played] at @s if entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..1] run tag @s add sound_played
+execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played] at @s if entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..2] run playsound minecraft:block.stone.break block @a ~ ~ ~ 1 2
+execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played] at @s if entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..2] unless entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..2,gamemode=creative] unless entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..1,gamemode=spectator] run damage @e[tag=is_alive,sort=nearest,limit=1,distance=0..1] 0.1 mob_projectile by @s from @s
+execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played] at @s if entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..2] run tag @s add sound_played
 
 execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist] at @s as @e[type=chicken,distance=0..30,tag=!poltergeist_not_spawned_chicken] run tp @s ~ ~-5000 ~
 execute as @e[type=chicken,tag=!poltergeist_not_spawned_chicken] at @s unless entity @e[tag=gothic_ghost,tag=ghost_type_poltergeist,distance=0..30] run tag @s add poltergeist_not_spawned_chicken
