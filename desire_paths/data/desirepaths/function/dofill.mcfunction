@@ -1,13 +1,13 @@
 execute unless entity @e[type=marker,tag=gstools_worker,scores={desirePaths_enablePermanentPaths=1..1}] if entity @e[type=marker,tag=gstools_worker,scores={blockDecayLoaded=1..1}] if entity @e[tag=gstools_worker,type=marker,scores={random100=..10}] run fill ~ ~-0.5 ~ ~ ~-1 ~ mud replace farmland
-execute if entity @e[type=marker,tag=gstools_worker,scores={desirePaths_enablePermanentPaths=1..1}] if entity @e[type=marker,tag=gstools_worker,scores={blockDecayLoaded=1..1}] if entity @e[tag=gstools_worker,type=marker,scores={random100=..10}] run fill ~ ~-0.5 ~ ~ ~-1 ~ mud replace grass_path
+execute if entity @e[type=marker,tag=gstools_worker,scores={desirePaths_enablePermanentPaths=1..1}] if entity @e[type=marker,tag=gstools_worker,scores={blockDecayLoaded=1..1}] if entity @e[tag=gstools_worker,type=marker,scores={random100=..10}] run fill ~ ~-0.5 ~ ~ ~-1 ~ mud replace dirt_path
 
 execute unless entity @e[type=marker,tag=gstools_worker,scores={desirePaths_enablePermanentPaths=1..1}] if entity @e[type=marker,tag=gstools_worker,scores={blockDecayLoaded=1..1}] run fill ~ ~-0.5 ~ ~ ~-1 ~ farmland replace packed_mud
-execute if entity @e[type=marker,tag=gstools_worker,scores={desirePaths_enablePermanentPaths=1..1}] if entity @e[type=marker,tag=gstools_worker,scores={blockDecayLoaded=1..1}] run fill ~ ~-0.5 ~ ~ ~-1 ~ grass_path replace packed_mud
+execute if entity @e[type=marker,tag=gstools_worker,scores={desirePaths_enablePermanentPaths=1..1}] if entity @e[type=marker,tag=gstools_worker,scores={blockDecayLoaded=1..1}] run fill ~ ~-0.5 ~ ~ ~-1 ~ dirt_path replace packed_mud
 
 execute if entity @e[type=marker,tag=gstools_worker,scores={blockDecayLoaded=1..1}] run fill ~ ~-0.5 ~ ~ ~-1 ~ packed_mud replace dirt
 
 execute unless entity @e[type=marker,tag=gstools_worker,scores={desirePaths_enablePermanentPaths=1..1}] unless entity @e[type=marker,tag=gstools_worker,scores={blockDecayLoaded=1..1}] run fill ~ ~-0.5 ~ ~ ~-1 ~ farmland replace dirt
-execute if entity @e[type=marker,tag=gstools_worker,scores={desirePaths_enablePermanentPaths=1..1}] unless entity @e[type=marker,tag=gstools_worker,scores={blockDecayLoaded=1..1}] run fill ~ ~-0.5 ~ ~ ~-1 ~ grass_path replace dirt
+execute if entity @e[type=marker,tag=gstools_worker,scores={desirePaths_enablePermanentPaths=1..1}] unless entity @e[type=marker,tag=gstools_worker,scores={blockDecayLoaded=1..1}] run fill ~ ~-0.5 ~ ~ ~-1 ~ dirt_path replace dirt
 
 fill ~ ~-0.5 ~ ~ ~-1 ~ dirt replace grass_block
 
