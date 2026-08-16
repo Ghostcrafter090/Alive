@@ -19,6 +19,8 @@ scoreboard players operation @s randomDoubleNegate *= @e[type=marker,tag=gstools
 scoreboard players operation @s randomQuadroupleNegate = @s randomNegate
 scoreboard players operation @s randomQuadroupleNegate *= @e[type=marker,tag=gstools_worker] 4
 
+scoreboard players operation @s randomNegate100 = @s random100
+scoreboard players operation @s randomNegate100 *= @e[type=marker,tag=gstools_worker] n1
 
 scoreboard players set @s newRandomCompatible 1
 
