@@ -9,6 +9,7 @@
     "minecraft:red_sand",
     "minecraft:clay",
     "minecraft:rooted_dirt",
-    "minecraft:ice"
+    "minecraft:ice",
+    "minecraft:frosted_ice"
   ]
 }
