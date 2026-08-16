@@ -196,6 +196,29 @@ execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~ ~ #
 execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~ ~ water unless block ~ ~1 ~ water if entity @s[tag=!collapsed] run summon marker ~ ~1 ~ {Tags:['dirt_collapse']}
 execute as @e[type=arrow] at @s unless entity @a[distance=0..5] if block ~ ~ ~ water unless block ~ ~1 ~ water if entity @s[tag=!collapsed] run tag @s add collapsed
 
+execute as @e[type=snowball] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ water unless block ~ ~-1 ~ water if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}
+execute as @e[type=snowball] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ water unless block ~ ~-1 ~ water if entity @s[tag=!collapsed] run tag @s add collapsed
+
+execute as @e[type=snowball] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ #dynamicdirt:air unless block ~ ~-1 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}
+execute as @e[type=snowball] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ #dynamicdirt:air unless block ~ ~-1 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run tag @s add collapsed
+
+execute as @e[type=snowball] at @s unless entity @a[distance=0..5] if block ~ ~ ~ #dynamicdirt:air unless block ~ ~1 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run summon marker ~ ~1 ~ {Tags:['dirt_collapse']}
+execute as @e[type=snowball] at @s unless entity @a[distance=0..5] if block ~ ~ ~ #dynamicdirt:air unless block ~ ~1 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run tag @s add collapsed
+
+execute as @e[type=snowball] at @s unless entity @a[distance=0..5] if block ~ ~ ~ water unless block ~ ~1 ~ water if entity @s[tag=!collapsed] run summon marker ~ ~1 ~ {Tags:['dirt_collapse']}
+execute as @e[type=snowball] at @s unless entity @a[distance=0..5] if block ~ ~ ~ water unless block ~ ~1 ~ water if entity @s[tag=!collapsed] run tag @s add collapsed
+
+execute as @e[type=egg] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ water unless block ~ ~-1 ~ water if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}
+execute as @e[type=egg] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ water unless block ~ ~-1 ~ water if entity @s[tag=!collapsed] run tag @s add collapsed
+
+execute as @e[type=egg] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ #dynamicdirt:air unless block ~ ~-1 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}
+execute as @e[type=egg] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ #dynamicdirt:air unless block ~ ~-1 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run tag @s add collapsed
+
+execute as @e[type=egg] at @s unless entity @a[distance=0..5] if block ~ ~ ~ #dynamicdirt:air unless block ~ ~1 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run summon marker ~ ~1 ~ {Tags:['dirt_collapse']}
+execute as @e[type=egg] at @s unless entity @a[distance=0..5] if block ~ ~ ~ #dynamicdirt:air unless block ~ ~1 ~ #dynamicdirt:air if entity @s[tag=!collapsed] run tag @s add collapsed
+
+execute as @e[type=egg] at @s unless entity @a[distance=0..5] if block ~ ~ ~ water unless block ~ ~1 ~ water if entity @s[tag=!collapsed] run summon marker ~ ~1 ~ {Tags:['dirt_collapse']}
+execute as @e[type=egg] at @s unless entity @a[distance=0..5] if block ~ ~ ~ water unless block ~ ~1 ~ water if entity @s[tag=!collapsed] run tag @s add collapsed
 
 execute as @e[type=warden] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ air unless block ~ ~-1 ~ air if entity @s[tag=!collapsed] run summon marker ~ ~-1 ~ {Tags:['dirt_collapse']}
 execute as @e[type=warden] at @s unless entity @a[distance=0..5] if block ~ ~-2 ~ air unless block ~ ~-1 ~ air if entity @s[tag=!collapsed] run tag @s add collapsed
