@@ -9,9 +9,6 @@ scoreboard objectives add lastPlayedGhostSound dummy
 scoreboard objectives add ghostSoundTicRate dummy
 
 team add gothic_ghost "Ghosts"
-execute as @r run function gstools:util/random
-execute as @r if score @s random1000 > @s horrorIndex run team modify gothic_ghost color black
-execute as @r if score @s random1000 < @s horrorIndex run team modify gothic_ghost color dark_gray
 
 # Main
 execute as @e[tag=gothic_ghost] at @s run function gstools:util/light_level
