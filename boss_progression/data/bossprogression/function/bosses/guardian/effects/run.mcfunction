@@ -53,11 +53,16 @@ execute as @e[type=marker,tag=gstools_vertical_cursor] at @s if block ~ ~ ~ #gst
 execute as @e[type=marker,tag=gstools_vertical_cursor] at @s if block ~ ~ ~ #gstools:air unless entity @e[type=squid,distance=0..75] run summon squid ~ ~ ~ {PersistenceRequired:1b}
 
 execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=4000..}] run kill @e[type=marker,tag=weather2_node]
-execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=4000..}] as @a run function gstools:util/random
-execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=4000..}] as @a at @s run summon marker ~ ~ ~ {Tags:['weather2_node']}
-execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=4000..}] as @a if entity @s[scores={random100=..50}] at @s run function gstools:compat/weather2/comm/summon/thunder
-execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=4000..}] as @a if entity @s[scores={random100=51..}] at @s run function gstools:compat/weather2/comm/summon/hail
-execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=4000..}] run scoreboard players set @s lastWeather2StormSpawn 0
+execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=4000..}] as @a at @s run function gstools:compat/weather2/comm/kill_all_storms
+execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=4000..}] run scoreboard players set @s lastWeather2StormSpawn -521
+
+execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=-500..-1}] run kill @e[type=marker,tag=weather2_node]
+execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=-500..-1}] as @a run function gstools:util/random
+execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=-500..-1}] as @a at @s run summon marker ~ ~ ~ {Tags:['weather2_node']}
+execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=-500..-1}] as @a if entity @s[scores={random100=..50}] at @s run function gstools:compat/weather2/comm/summon/thunder
+execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=-500..-1}] as @a if entity @s[scores={random100=51..}] at @s run function gstools:compat/weather2/comm/summon/hail
+execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=-500..-1}] run scoreboard players set @s lastWeather2StormSpawn 0
+
 
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s 21 -= @s averageTpsBossProgression
 execute as @e[tag=gstools_worker,type=marker,scores={21=..0}] run scoreboard players set @s 21 1
