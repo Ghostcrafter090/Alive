@@ -18,4 +18,6 @@ execute as @e[type=item,tag=!boss_item_checked] if entity @s[nbt={Item:{id:"mine
 execute as @e[type=item,tag=!boss_item_checked] if entity @s[nbt={Item:{id:"minecraft:prismarine_shard"}}] run data merge entity @s {Invulnerable:1b}
 execute as @e[type=item,tag=!boss_item_checked] if entity @s[nbt={Item:{id:"minecraft:heart_of_the_sea",components:{"minecraft:enchantment_glint_override":1b}}}] run data merge entity @s {Invulnerable:1b}
 execute as @e[type=item,tag=!boss_item_checked] if entity @s[nbt={Item:{id:"minecraft:wither_rose",components:{"minecraft:enchantment_glint_override":1b}}}] run data merge entity @s {Invulnerable:1b}
+execute as @e[type=item,tag=!boss_item_checked] if entity @s[nbt={Item:{id:"minecraft:amethyst_shard"}}] run data merge entity @s {Invulnerable:1b}
+execute as @e[type=item,tag=!boss_item_checked] if entity @s[nbt={Item:{id:"minecraft:blaze_powder"}}] run data merge entity @s {Invulnerable:1b}
 execute as @e[type=item,tag=!boss_item_checked] run tag @s add boss_item_checked
