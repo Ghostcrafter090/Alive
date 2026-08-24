@@ -48,4 +48,3 @@ execute as @e[type=turtle,sort=random,limit=1] at @s if block ~ ~-1 ~ clay run p
 execute as @e[type=turtle,sort=random,limit=1] at @s if block ~ ~-1 ~ clay run fill ~ ~-1 ~ ~ ~-1 ~ sand replace clay
 execute as @e[type=turtle,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run playsound block.gravel.fall master @a ~ ~ ~ 1
 execute as @e[type=turtle,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run fill ~ ~-1 ~ ~ ~-1 ~ clay replace #minecraft:dirt
- 

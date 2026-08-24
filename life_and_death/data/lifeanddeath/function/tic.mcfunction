@@ -15,3 +15,6 @@ execute unless entity @e[tag=gstools_worker,type=marker,scores={enhancedSurvival
 execute unless entity @e[tag=gstools_worker,type=marker,scores={enhancedSurvivalLoaded=1..1}] as @a if entity @s[scores={random100=..40}] if score @s breathingSoundTic >= @s breathingSoundWorker run function lifeanddeath:disease/effecttypes/sound/consumption/playother
 
 execute unless entity @e[tag=gstools_worker,type=marker,scores={enhancedSurvivalLoaded=1..1}] as @a if score @s breathingSoundTic >= @s breathingSoundWorker run scoreboard players set @s breathingSoundTic 0
+
+execute as @e[type=zombie] at @s if block ~ ~ ~ minecraft:turtle_egg run scoreboard players add @s turtleEggCount 1
+execute as @e[type=zombie,scores={turtleEggCount=1..},limit=1,sort=random] store result entity @s DrownedConversionTime double 1 run scoreboard players get @s turtleEggCount
