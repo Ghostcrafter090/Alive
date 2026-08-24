@@ -46,7 +46,7 @@ execute as @e[tag=mining_pillager,type=pillager,scores={pillagerMiningDirection=
 execute as @e[tag=mining_pillager,type=pillager,scores={pillagerMiningDirection=5..,entityVerticalMotion=-10..,random100=..5},sort=random,limit=2] at @s if block ~ ~1 ~1 #gstools:air unless predicate gstools:sky run scoreboard players operation @s pillagerMiningDirection /= @e[tag=gstools_worker,type=marker] 2
 
 execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=1] run function gstools:util/is_outside
-execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=1,scores={isOutside=1..1}] if entity @s[scores={pillagerMiningDirection=1..}] at @s run scoreboard players set @s pillagerMiningDirection 0
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=1] if entity @s[scores={pillagerMiningDirection=1..}] if entity @s[scores={isOutside=1..1}] at @s run scoreboard players set @s pillagerMiningDirection 0
 
 execute as @e[tag=mining_pillager,type=pillager,scores={random100=0..3},limit=1,sort=random] at @s if entity @e[tag=pillager_mining_outpost_component,type=marker,distance=0..30] if predicate gstools:sky run scoreboard players set @s pillagerMiningDirection 5
 
