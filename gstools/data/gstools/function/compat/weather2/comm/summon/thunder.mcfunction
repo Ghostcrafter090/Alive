@@ -1,0 +1,1 @@
+weather2 summon storm_lightning
