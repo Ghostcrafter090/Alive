@@ -98,7 +98,7 @@ execute as @e[tag=gstools_cursor] if entity @s[tag=spread_from_self] if entity @
 execute as @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function gstools:compat/sereneseasons/main
 execute unless entity @e[tag=gstools_worker,type=marker,scores={isSereneSeasonsPresent=1..1}] run scoreboard players set @e[tag=gstools_worker,type=marker] currentSeasonDay 6
 execute unless entity @e[tag=gstools_worker,type=marker,scores={isSereneSeasonsPresent=1..1}] as @a at @s run function gstools:compat/sereneseasons/temperature
-execute if entity @e[tag=gstools_worker,type=marker,scores={isWeather2Present=1..1}] as @a at @s run function gstools:compat/weather2/main
+function gstools:compat/weather2/main
 execute if entity @e[tag=gstools_worker,type=marker,scores={isSereneSeasonsPresent=1..1}] as @a at @s run function gstools:horror/getindex
 execute as @a at @s run function gstools:util/is_outside
 

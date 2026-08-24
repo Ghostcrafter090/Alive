@@ -7,4 +7,4 @@ execute as @e[type=weather2:lightning_bolt] at @s run summon minecraft:lightning
 # execute as @e[type=weather2:lightning_bolt] at @s run say lightning_bolt
 execute as @e[type=weather2:lightning_bolt] at @s run kill @s
 
-execute as @a run function gstools:compat/weather2/comm/check_storm
+execute as @a at @s run function gstools:compat/weather2/comm/check_storm
