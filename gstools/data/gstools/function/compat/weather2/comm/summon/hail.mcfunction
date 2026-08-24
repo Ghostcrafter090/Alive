@@ -9,3 +9,4 @@ execute positioned 0 0 0 run setblock ~ ~ ~ command_block{auto:1b,Command:"execu
 # <node:no_compile_mode/>
 execute if entity @e[tag=gstools_worker,type=marker,scores={commandBlockOutputGameruleCache=1..1}] run gamerule commandBlockOutput true
 execute if entity @e[tag=gstools_worker,type=marker,scores={commandBlockOutputGameruleCache=0..0}] run gamerule commandBlockOutput false
+
