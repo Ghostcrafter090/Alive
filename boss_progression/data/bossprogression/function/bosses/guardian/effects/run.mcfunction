@@ -55,3 +55,5 @@ execute as @e[type=marker,tag=gstools_vertical_cursor] at @s if block ~ ~ ~ #gst
 kill @e[type=marker,tag=weather2_node]
 execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=1000..}] as @e[sort=random,limit=1] at @s run summon marker ~ ~ ~ {Tags:['weather2_node']}
 execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=1000..}] as @e[sort=random,limit=1] at @s run function gstools:compat/weather2/comm/summon/lightning
+execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=1000..}] run scoreboard players set @s lastWeather2StormSpawn 0
+scoreboard players add @e[tag=gstools_worker,type=marker] lastWeather2StormSpawn 1
