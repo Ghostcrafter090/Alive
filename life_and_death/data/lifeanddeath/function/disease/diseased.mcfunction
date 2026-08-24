@@ -43,3 +43,7 @@ execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_dis
 execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableBreeding=1..1}] as @e[type=turtle,sort=random,limit=10,scores={timeTillHorny=9800..,nearbyHornyEntities=..10,turtleEggCount=1..}] if entity @s[nbt={has_egg:0b}] run data merge entity @s {has_egg:1b}
 execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableBreeding=1..1}] as @e[type=turtle,sort=random,limit=10,scores={timeTillHorny=9800..,nearbyHornyEntities=..10,turtleEggCount=1..}] if entity @s[nbt={has_egg:0b}] run scoreboard players set @s timeTillHorny 9500
 execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableBreeding=1..1}] as @e[type=turtle,sort=random,limit=10,scores={timeTillHorny=9800..,nearbyHornyEntities=..10,turtleEggCount=..0}] if entity @s[nbt={has_egg:0b}] run scoreboard players set @s timeTillHorny 0
+
+execute as @e[type=turtle,sort=random,limit=1] at @s if block ~ ~-1 ~ clay run fill ~ ~-1 ~ ~ ~-1 ~ sand replace clay
+execute as @e[type=turtle,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run fill ~ ~-1 ~ ~ ~-1 ~ gravel replace clay
+ 
