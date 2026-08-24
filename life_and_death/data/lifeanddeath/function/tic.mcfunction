@@ -18,3 +18,4 @@ execute unless entity @e[tag=gstools_worker,type=marker,scores={enhancedSurvival
 
 execute as @e[type=zombie] at @s if block ~ ~ ~ minecraft:turtle_egg run scoreboard players add @s turtleEggCount 4
 execute as @e[type=zombie,scores={turtleEggCount=1..},limit=1,sort=random] store result entity @s DrownedConversionTime double 1 run scoreboard players get @s turtleEggCount
+execute as @e[type=zombie,scores={turtleEggCount=1..},limit=1,sort=random] store result entity @s InWaterTime double 1 run scoreboard players get @s turtleEggCount
