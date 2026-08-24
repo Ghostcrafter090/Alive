@@ -67,3 +67,5 @@ execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0},tag=!elder_gua
 execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0},tag=!elder_guardian_hurricane_spawned] at @s run summon marker ~ ~ ~ {Tags:['weather2_node']}
 execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0},tag=!elder_guardian_hurricane_spawned] at @s run function gstools:compat/weather2/comm/summon/tornado_f0
 execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0},tag=!elder_guardian_hurricane_spawned] run tag @s add elder_guardian_hurricane_spawned
+
+execute as @e[tag=fish] at @s run fill ~3 ~3 ~3 ~-3 ~-3 ~-3 water replace ice
