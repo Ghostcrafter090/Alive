@@ -58,7 +58,7 @@ execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=1000
 execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=1000..}] run scoreboard players set @s lastWeather2StormSpawn 0
 
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s 21 -= @s averageTpsBossProgression
-execute as @e[tag=gstools_worker,type=marker,scores={20=..0}] run scoreboard players set @s 21 1
+execute as @e[tag=gstools_worker,type=marker,scores={21=..0}] run scoreboard players set @s 21 1
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s lastWeather2StormSpawn += @s 21
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players set @s 21 21
 
