@@ -46,9 +46,12 @@ scoreboard objectives add hasImmunityTime dummy
 scoreboard objectives add regulateZombieDiseaseEffects dummy
 
 scoreboard objectives add slimeParasiteTime dummy
+scoreboard objectives add slimeParasiteImmunity dummy
 scoreboard objectives add pillagerParasiteTime dummy
 scoreboard objectives add spiderParasiteTime dummy
 scoreboard objectives add darkParasiteTime dummy
+scoreboard objectives add darkParasiteImmunity dummy
+
 scoreboard objectives add diseaseSectionRegulator dummy
 
 # Main
@@ -122,6 +125,8 @@ execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_dis
 # Parasites
 schedule function lifeanddeath:version_conflict/infested_0 22t append
 
+schedule function lifeanddeath:version_conflict/oozing_0 22t append
+
 # execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] as @e[sort=random,limit=20,type=slime] run effect give @s oozing infinite 1
 # execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] as @e[sort=random,limit=20,type=slime] at @s as @e[limit=1,sort=nearest,distance=0..1,type=!slime,type=!creeper] run effect give @s oozing 400 1
 # execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] as @e[sort=random,limit=20,type=slime] at @s as @e[limit=1,sort=nearest,distance=0..1,type=!slime,type=!creeper] run scoreboard players set @s slimeParasiteTime 8000
@@ -139,9 +144,11 @@ schedule function lifeanddeath:version_conflict/infested_0 22t append
 schedule function lifeanddeath:version_conflict/weaving_0 23t append
 
 execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] as @e[sort=random,limit=20,type=warden] run effect give @s darkness infinite 1
-execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] as @e[sort=random,limit=20,type=warden] at @s as @e[type=!warden,tag=!tile,limit=1,sort=nearest,distance=0..1] run effect give @s darkness 400 1
-execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] as @e[sort=random,limit=20,type=warden] at @s as @e[type=!warden,tag=!tile,limit=1,sort=nearest,distance=0..1] run scoreboard players set @s darkParasiteTime 8000
+execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] as @e[sort=random,limit=20,type=warden] at @s as @e[type=!warden,tag=!tile,limit=1,sort=nearest,distance=0..20] run effect give @s darkness 400 1
+execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] as @e[sort=random,limit=20,type=warden] at @s as @e[type=!warden,tag=!tile,limit=1,sort=nearest,distance=0..20] run scoreboard players set @s darkParasiteTime 8000
 
 execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] as @e[sort=random,limit=20,scores={darkParasiteTime=0..}] unless entity @s[nbt={active_effects:[{id:"minecraft:darkness"}]}] run effect give @s minecraft:darkness 150 0
-execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] as @e[sort=random,limit=20,scores={darkParasiteTime=0..}] at @s as @e[distance=0.01..1] unless entity @s[scores={darkParasiteTime=0..}] run scoreboard players set @s darkParasiteTime 8000
+execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] as @e[sort=random,limit=20,scores={darkParasiteTime=0..}] at @s as @e[distance=0.01..1] unless entity @s[scores={darkParasiteTime=0..}] unless entity @s[scores={darkParasiteImmunity=1..}] run scoreboard players set @s darkParasiteTime 8000
+execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] as @e[sort=random,limit=20,scores={darkParasiteTime=0..}] at @s as @e[distance=0.01..1] unless entity @s[scores={darkParasiteTime=0..}] unless entity @s[scores={darkParasiteImmunity=..1}] run scoreboard players set @s darkParasiteImmunity 16000
 execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] as @e[sort=random,limit=20,scores={darkParasiteTime=0..}] run scoreboard players remove @s darkParasiteTime 1
+execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableDiseases=1..1}] as @e[sort=random,limit=20,scores={darkParasiteImmunity=0..}] run scoreboard players remove @s darkParasiteImmunity 1
