@@ -64,6 +64,6 @@ execute as @e[tag=gstools_worker,type=marker] run scoreboard players set @s 21 2
 
 execute as @e[type=elder_guardian,scores={nearSevereWeather=1..1}] run tag @s remove elder_guardian_hurricane_spawned
 execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0},tag=!elder_guardian_hurricane_spawned] run kill @e[tag=weather2_node]
-execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0},tag=!elder_guardian_hurricane_spawned] run summon marker ~ ~ ~ {Tags:['weather2_node']}
-execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0},tag=!elder_guardian_hurricane_spawned] run function gstools:compat/weather2/comm/summon/tornado_f0
+execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0},tag=!elder_guardian_hurricane_spawned] at @s run summon marker ~ ~ ~ {Tags:['weather2_node']}
+execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0},tag=!elder_guardian_hurricane_spawned] at @s run function gstools:compat/weather2/comm/summon/tornado_f0
 execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0},tag=!elder_guardian_hurricane_spawned] run tag @s add elder_guardian_hurricane_spawned
