@@ -29,7 +29,7 @@ execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_dis
 
 execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableBreeding=1..1}] as @e[type=turtle] store result score @s entityInLove run data get entity @s InLove 1
 
-execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableBreeding=1..1}] as @e[type=turtle,sort=random,limit=10,scores={timeTillHorny=10000..,nearbyHornyEntities=..10}] at @s if entity @e[type=turtle,distance=0..2,scores={timeTillHorny=9000..9600}] run scoreboard players add @s turtleEggCount 1
+execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableBreeding=1..1}] as @e[type=turtle,sort=random,limit=10,scores={entityInLove=1..}] at @s if entity @e[type=turtle,distance=0..2,scores={entityInLove=1..}] run scoreboard players add @s turtleEggCount 1
 
 execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableBreeding=1..1}] if entity @e[type=marker,tag=gstools_worker,scores={ticSecond=1..1}] as @e[type=turtle,sort=random,limit=10,scores={timeTillHorny=9500..,nearbyHornyEntities=..10,turtleEggCount=1..}] if entity @s[scores={entityInLove=..1}] run data merge entity @s {InLove:1b}
 execute unless entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeath_disableBreeding=1..1}] if entity @e[type=marker,tag=gstools_worker,scores={ticSecond=1..1}] as @e[type=turtle,sort=random,limit=10,scores={timeTillHorny=9000..,nearbyHornyEntities=..10,turtleEggCount=1..}] if entity @s[scores={entityInLove=1..}] if entity @s[nbt={HasEgg:0b}] run scoreboard players remove @s turtleEggCount 1
