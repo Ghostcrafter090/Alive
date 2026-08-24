@@ -17,4 +17,4 @@ execute as @e[type=item_frame,nbt={Item:{id: "minecraft:turtle_helmet"}}] at @s 
 execute as @e[type=item_frame,nbt={Item:{id: "minecraft:turtle_helmet"}}] at @s as @e[type=item,sort=nearest,limit=1] at @s if block ~ ~-1 ~ dark_prismarine if block ~ ~ ~ fire if block ~1 ~-1 ~ blue_candle[lit=true] if block ~-1 ~-1 ~ blue_candle[lit=true] if block ~ ~-1 ~1 blue_candle[lit=true] if block ~ ~-1 ~-1 blue_candle[lit=true] if entity @e[type=item,nbt={Item:{id:"minecraft:blaze_powder"}},distance=0..2] if entity @e[type=item,nbt={id:"minecraft:totem_of_undying",tag:{Enchantments:[{id:"minecraft:flame",lvl:1s}]}},distance=0..2] if entity @e[type=item,nbt={id:"minecraft:prismarine_shard"},distance=0..2] if entity @e[type=item,nbt={id:"minecraft:amethyst_shard"},distance=0..2] run tag @e[type=item_frame,sort=nearest,limit=1] add guardian_spell
 
 
-execute as @e[tag=guardian_spell,type=item_frame] at @s run summon marker ~ ~ ~ {Tags:['guardian_spell']}
+execute as @e[tag=guardian_spell,type=item_frame] at @s unless entity @e[tag=guardian_spell,type=marker] run summon marker ~ ~ ~ {Tags:['guardian_spell']}
