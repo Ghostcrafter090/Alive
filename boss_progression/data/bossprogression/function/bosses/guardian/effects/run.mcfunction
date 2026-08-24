@@ -60,3 +60,6 @@ execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=1000
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s 21 -= @s averageTpsBossProgression
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s lastWeather2StormSpawn += @s 21
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players set @s 21 21
+
+execute as @e[type=elder_guardian,scores={nearSevereWeather=1..1}] run tag @s remove elder_guardian_hurricane_spawned
+execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0}] run 
