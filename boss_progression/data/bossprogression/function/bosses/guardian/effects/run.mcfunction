@@ -1,5 +1,6 @@
 # Define
 scoreboard objectives add undeadHydrationConversionOverride dummy
+scoreboard objectives add lastWeather2StormSpawn dummy
 
 # Main
 scoreboard players set @e[tag=gstools_worker,type=marker,limit=1] guardianEffectsAreActive 1
@@ -50,3 +51,7 @@ execute if entity @e[tag=gstools_worker,type=marker,limit=1,scores={random100=95
 
 execute as @e[type=marker,tag=gstools_vertical_cursor] at @s if block ~ ~ ~ #gstools:air unless entity @e[type=guardian,distance=0..100] run summon guardian ~ ~ ~ {PersistenceRequired:1b}
 execute as @e[type=marker,tag=gstools_vertical_cursor] at @s if block ~ ~ ~ #gstools:air unless entity @e[type=squid,distance=0..75] run summon squid ~ ~ ~ {PersistenceRequired:1b}
+
+kill @e[type=marker,tag=weather2_node]
+execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=1000..}] as @e[sort=random,limit=1] at @s run summon marker ~ ~ ~ {Tags:['weather2_node']}
+execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=1000..}] as @e[sort=random,limit=1] at @s run function gstools:compat/weather2/comm/summon/lightning
