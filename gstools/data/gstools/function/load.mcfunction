@@ -218,7 +218,6 @@ execute as @e[type=marker,tag=gstools_worker] unless entity @s[scores={minimumCu
 scoreboard objectives add maximumCursorY dummy
 execute as @e[type=marker,tag=gstools_worker] unless entity @s[scores={maximumCursorY=-500..500}] run scoreboard players set @s maximumCursorY 384
 
-
 # Main
 execute if entity @e[type=marker,tag=gstools_worker,scores={enableDebugMessages=1..1}] run say "[GSTOOLS] | GSTools is active. Mod loaded successfully. Loading present daughter mods...
 
@@ -235,3 +234,5 @@ function gothichorror:load
 
 function #timelib_load:_private/load
 function #timelib_load_:_private/load
+
+function gstools:compat/weather2/comm/config_set
