@@ -18,16 +18,22 @@ execute as @a at @s store result score @s numberOfPlayers if entity @a[distance=
 
 execute as @a at @s if score @s numberOfCursors > @s numberOfPlayers run kill @e[tag=gstools_cursor,tag=!gstools_cursor_pre,type=marker,limit=1,sort=random,distance=0..400]
 
-execute if entity @e[tag=gstools_worker,type=marker,scores={simulationDistance=100..100}] as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run spreadplayers ~ ~ 1 100 false @s
-execute if entity @e[tag=gstools_worker,type=marker,scores={simulationDistance=200..200}] as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run spreadplayers ~ ~ 1 200 false @s
-execute if entity @e[tag=gstools_worker,type=marker,scores={simulationDistance=300..300}] as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run spreadplayers ~ ~ 1 300 false @s
-execute if entity @e[tag=gstools_worker,type=marker,scores={simulationDistance=400..400}] as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run spreadplayers ~ ~ 1 400 false @s
-execute if entity @e[tag=gstools_worker,type=marker,scores={simulationDistance=500..500}] as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run spreadplayers ~ ~ 1 500 false @s
-execute if entity @e[tag=gstools_worker,type=marker,scores={simulationDistance=600..600}] as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run spreadplayers ~ ~ 1 600 false @s
-execute if entity @e[tag=gstools_worker,type=marker,scores={simulationDistance=700..700}] as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run spreadplayers ~ ~ 1 700 false @s
-execute if entity @e[tag=gstools_worker,type=marker,scores={simulationDistance=800..800}] as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run spreadplayers ~ ~ 1 800 false @s
+# execute if entity @e[tag=gstools_worker,type=marker,scores={simulationDistance=100..100}] as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run spreadplayers ~ ~ 1 100 false @s
+# execute if entity @e[tag=gstools_worker,type=marker,scores={simulationDistance=200..200}] as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run spreadplayers ~ ~ 1 200 false @s
+# execute if entity @e[tag=gstools_worker,type=marker,scores={simulationDistance=300..300}] as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run spreadplayers ~ ~ 1 300 false @s
+# execute if entity @e[tag=gstools_worker,type=marker,scores={simulationDistance=400..400}] as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run spreadplayers ~ ~ 1 400 false @s
+# execute if entity @e[tag=gstools_worker,type=marker,scores={simulationDistance=500..500}] as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run spreadplayers ~ ~ 1 500 false @s
+# execute if entity @e[tag=gstools_worker,type=marker,scores={simulationDistance=600..600}] as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run spreadplayers ~ ~ 1 600 false @s
+# execute if entity @e[tag=gstools_worker,type=marker,scores={simulationDistance=700..700}] as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run spreadplayers ~ ~ 1 700 false @s
+# execute if entity @e[tag=gstools_worker,type=marker,scores={simulationDistance=800..800}] as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run spreadplayers ~ ~ 1 800 false @s
 
-execute as @e[type=marker,tag=gstools_chunk_worker] at @s run spreadplayers ~ ~ 1 200 false @e[type=marker,tag=gstools_cursor,tag=spread_from_self,distance=0..1]
+execute as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] run scoreboard players operation @s _spreadRange = @e[tag=gstools_worker,type=marker] simulationDistance
+execute as @e[type=marker,tag=gstools_cursor,tag=!spread_from_self] at @s at @p run function gstools:cursor/fast_spread
+
+# execute as @e[type=marker,tag=gstools_chunk_worker] at @s run spreadplayers ~ ~ 1 200 false @e[type=marker,tag=gstools_cursor,tag=spread_from_self,distance=0..1]
+
+execute as @e[type=marker,tag=gstools_chunk_worker] at @s as @e[type=marker,tag=gstools_cursor,tag=spread_from_self,distance=0..1] run scoreboard players operation @s _spreadRange = @e[tag=gstools_worker,type=marker] simulationDistance
+execute as @e[type=marker,tag=gstools_chunk_worker] at @s as @e[type=marker,tag=gstools_cursor,tag=spread_from_self,distance=0..1] run function gstools:cursor/fast_spread
 
 kill @e[type=marker,tag=gstools_vertical_cursor]
 execute as @e[tag=gstools_cursor,type=marker] at @s run function gstools:cursor/dovertical
