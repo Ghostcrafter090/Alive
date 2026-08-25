@@ -2,6 +2,7 @@
 scoreboard objectives add collapseAccumulate dummy
 scoreboard objectives add oldCollapseMarkerCount dummy
 scoreboard objectives add numberOfCollapses dummy
+scoreboard objectives add numberOfCollapseEntities dummy
 
 # Main
 execute as @e[tag=gstools_cursor] at @s if block ~ ~-2 ~ #dynamicdirt:air if block ~ ~-1 ~ #dynamicdirt:collapse_trigger run summon marker ~1 ~ ~ {Tags:['dirt_collapse']}
@@ -266,3 +267,6 @@ execute if entity @e[type=marker,tag=gstools_worker,scores={oldCollapseMarkerCou
 execute if entity @e[type=marker,tag=gstools_worker,scores={oldCollapseMarkerCount=250..}] run kill @e[tag=old_collapse,limit=40,sort=random]
 
 execute as @e[tag=dirt_collapse,type=marker] at @s if block ~ ~ ~ #dynamicdirt:air if block ~ ~1 ~ #dynamicdirt:air if block ~ ~-1 ~ #dynamicdirt:air if block ~1 ~ ~ #dynamicdirt:air if block ~-1 ~ ~ #dynamicdirt:air if block ~ ~ ~1 #dynamicdirt:air if block ~ ~ ~-1 #dynamicdirt:air if block ~1 ~1 ~ #dynamicdirt:air if block ~-1 ~1 ~ #dynamicdirt:air if block ~ ~1 ~1 #dynamicdirt:air if block ~ ~1 ~-1 #dynamicdirt:air if block ~1 ~-1 ~ #dynamicdirt:air if block ~-1 ~-1 ~ #dynamicdirt:air if block ~ ~-1 ~1 #dynamicdirt:air if block ~ ~-1 ~-1 #dynamicdirt:air if block ~1 ~2 ~ #dynamicdirt:air if block ~-1 ~2 ~ #dynamicdirt:air if block ~ ~2 ~1 #dynamicdirt:air if block ~ ~2 ~-1 #dynamicdirt:air if block ~1 ~-2 ~ #dynamicdirt:air if block ~-1 ~-2 ~ #dynamicdirt:air if block ~ ~-2 ~1 #dynamicdirt:air if block ~ ~-2 ~-1 #dynamicdirt:air run kill @s
+
+execute as @e[tag=dirt_collapse,type=marker,limit=20,sort=random] store result score @s numberOfCollapseEntities if entity @e[type=marker,tag=dirt_collapse,distance=0..40]
+execute as @e[tag=dirt_collapse,type=marker,scores={numberOfCollapseEntities=100..}] run kill @e[type=marker,tag=dirt_collapse,distance=0..80]
