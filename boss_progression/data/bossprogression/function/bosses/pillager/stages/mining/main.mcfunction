@@ -31,7 +31,11 @@ execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random]
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random] at @s if entity @e[type=witch,distance=1..300,limit=1] run kill @s
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random] at @s if entity @e[type=evoker,distance=1..300,limit=1] run kill @s
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random] at @s if entity @e[type=player,distance=1..75,limit=1] run kill @s
-execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface unless block ~ ~-1 ~ minecraft:bedrock at @s run spreadplayers ~ ~ 1 10 false @s
+
+# execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface unless block ~ ~-1 ~ minecraft:bedrock at @s run spreadplayers ~ ~ 1 10 false @s
+execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface unless block ~ ~-1 ~ minecraft:bedrock run scoreboard players set @s _spreadRange 10
+execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface unless block ~ ~-1 ~ minecraft:bedrock at @s run function gstools:cursor/fast_spread
+
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface if block ~ ~-1 ~ minecraft:bedrock at @s run scoreboard players set @s range 10
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface if block ~ ~-1 ~ minecraft:bedrock at @s run function gstools:util/spreadplayers3d
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost_component','not_setup']}
@@ -44,7 +48,11 @@ execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost_component','not_setup']}
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run tag @s remove not_setup
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] run scoreboard players add @s outpostComponentAttemptTime 1
-execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface unless block ~ ~-1 ~ minecraft:bedrock at @s run spreadplayers ~ ~ 1 10 false @s
+
+# execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface unless block ~ ~-1 ~ minecraft:bedrock at @s run spreadplayers ~ ~ 1 10 false @s
+execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface unless block ~ ~-1 ~ minecraft:bedrock run scoreboard players set @s _spreadRange 10
+execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface unless block ~ ~-1 ~ minecraft:bedrock at @s run function gstools:cursor/fast_spread
+
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface if block ~ ~-1 ~ minecraft:bedrock at @s run scoreboard players set @s range 10
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface if block ~ ~-1 ~ minecraft:bedrock at @s run function gstools:util/spreadplayers3d
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt unless entity @e[type=marker,tag=pillager_mining_outpost_component,distance=1..6] unless block ~4 ~-1 ~4 #gstools:air unless block ~-4 ~-1 ~4 #gstools:air unless block ~4 ~-1 ~-4 #gstools:air unless block ~-4 ~-1 ~-4 #gstools:air run tag @s add do_setup
