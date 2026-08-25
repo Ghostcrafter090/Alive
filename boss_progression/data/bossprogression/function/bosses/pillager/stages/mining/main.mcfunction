@@ -43,7 +43,7 @@ execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost_component','not_setup']}
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost_component','not_setup']}
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run tag @s remove not_setup
-execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] run scoreboard players add outpostComponentAttemptTime 1
+execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] run scoreboard players add @s outpostComponentAttemptTime 1
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface unless block ~ ~-1 ~ minecraft:bedrock at @s run spreadplayers ~ ~ 1 10 false @s
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface if block ~ ~-1 ~ minecraft:bedrock at @s run scoreboard players set @s range 10
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface if block ~ ~-1 ~ minecraft:bedrock at @s run function gstools:util/spreadplayers3d
