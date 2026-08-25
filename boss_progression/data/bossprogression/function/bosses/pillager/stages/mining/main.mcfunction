@@ -4,6 +4,7 @@ scoreboard objectives add numberOfPillagers dummy
 scoreboard objectives add numberOfIllusioners dummy
 scoreboard objectives add pillagerMiningDirection dummy
 scoreboard objectives add pillagerTakingDamage dummy
+scoreboard objectives add outpostComponentAttemptTime dummy
 
 # Main
 execute unless entity @e[type=marker,tag=gstools_worker,scores={desirePathsLoaded=1..1}] as @e[tag=mining_pillager,type=pillager,limit=20,sort=random] store result score @s entityVerticalMotion run data get entity @s Motion[1] 100
@@ -42,6 +43,7 @@ execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost_component','not_setup']}
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run summon marker ~ ~ ~ {Tags:['pillager_mining_outpost_component','not_setup']}
 execute as @e[type=marker,tag=pillager_mining_outpost,tag=not_setup,sort=random,limit=1] at @s if block ~ ~-1 ~ #minecraft:dirt run tag @s remove not_setup
+execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] run scoreboard players add outpostComponentAttemptTime 1
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface unless block ~ ~-1 ~ minecraft:bedrock at @s run spreadplayers ~ ~ 1 10 false @s
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface if block ~ ~-1 ~ minecraft:bedrock at @s run scoreboard players set @s range 10
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s positioned over world_surface if block ~ ~-1 ~ minecraft:bedrock at @s run function gstools:util/spreadplayers3d
@@ -57,6 +59,7 @@ execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,so
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] if entity @e[tag=gstools_worker,type=marker,scores={pillagerStage=3..,random100=0..80}] at @s if entity @s[tag=do_setup] run summon pillager ~ ~ ~ {PersistenceRequired:1b,CanPickUpLoot:1b,Tags:["mining_pillager"],equipment:{head:{id:"minecraft:iron_helmet",count:1},mainhand:{id:"minecraft:stone_pickaxe",count:1},offhand:{id:"minecraft:shield",count:1}}}
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] if entity @e[tag=gstools_worker,type=marker,scores={pillagerStage=3..,random100=80..}] at @s if entity @s[tag=do_setup] run summon illusioner ~ ~ ~ {equipment:{head:{id:"minecraft:flow_banner_pattern",count:1,components:{banner_patterns:[{pattern:"minecraft:flow",color:"black"},{pattern:"minecraft:skull",color:"black"},{pattern:"minecraft:triangles_top",color:"black"},{pattern:"minecraft:triangles_bottom",color:"black"}]}},mainhand:{id:"minecraft:bow",count:1},offhand:{id:"minecraft:spyglass",count:1}}}
 execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1] at @s if entity @s[tag=do_setup] run tag @s remove not_setup
+execute as @e[type=marker,tag=pillager_mining_outpost_component,tag=not_setup,sort=random,limit=1,scores={outpostComponentAttemptTime=50..}] run kill @s 
 effect give @e[tag=mining_pillager,type=pillager,scores={pillagerMiningDirection=1..}] regeneration 20 5
 effect give @e[tag=mining_pillager,type=pillager,sort=random,limit=1] regeneration 10 0
 execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..5}] as @e[type=piglin,sort=random,limit=1] at @s run damage @s 0.000001 minecraft:mob_attack by @e[type=pillager,distance=..20,limit=1,sort=nearest] from @e[type=pillager,distance=..20,limit=1,sort=nearest]
