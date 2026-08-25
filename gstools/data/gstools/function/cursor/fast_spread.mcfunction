@@ -34,3 +34,5 @@ execute store result entity @s Pos[0] double 1 run scoreboard players get @s _fa
 execute store result entity @s Pos[2] double 1 run scoreboard players get @s _fastSpreadZ
 
 execute at @s positioned over world_surface run tp @s ~ ~ ~
+
+kill @e[tag=fast_spread_center,type=marker]
