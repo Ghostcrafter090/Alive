@@ -63,7 +63,6 @@ execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=-500
 execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=-500..-1}] as @a if entity @s[scores={random100=51..}] at @s run function gstools:compat/weather2/comm/summon/hail
 execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=-500..-1}] run scoreboard players set @s lastWeather2StormSpawn 0
 
-
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s 41 -= @s averageTpsBossProgression
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s 41 -= @s averageTps
 execute as @e[tag=gstools_worker,type=marker,scores={21=..0}] run scoreboard players set @s 41 1
