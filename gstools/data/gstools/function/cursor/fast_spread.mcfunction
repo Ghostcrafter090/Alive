@@ -18,7 +18,7 @@ scoreboard players operation @s _spreadRangeWorkerA *= @s random1000
 scoreboard players operation @s _spreadRangeWorkerA /= @e[tag=gstools_worker,type=marker] 1000
 scoreboard players operation @s _spreadRangeWorkerB -= @s _spreadRangeWorkerA
 
-scoreboard players operation @s _fastSpreadX += @s _spreadRange
+scoreboard players operation @s _fastSpreadX += @s _spreadRangeWorkerB
 
 function gstools:util/random
 scoreboard players operation @s _spreadRangeWorkerA = @s _spreadRange
@@ -28,7 +28,7 @@ scoreboard players operation @s _spreadRangeWorkerA *= @s random1000
 scoreboard players operation @s _spreadRangeWorkerA /= @e[tag=gstools_worker,type=marker] 1000
 scoreboard players operation @s _spreadRangeWorkerB -= @s _spreadRangeWorkerA
 
-scoreboard players operation @s _fastSpreadY += @s _spreadRange
+scoreboard players operation @s _fastSpreadZ += @s _spreadRangeWorkerB
 
 execute store result entity @s Pos[0] double 1 run scoreboard players get @s _fastSpreadX
 execute store result entity @s Pos[2] double 1 run scoreboard players get @s _fastSpreadZ
