@@ -49,6 +49,8 @@ scoreboard objectives add hasGivenFourthMessage dummy
 
 scoreboard objectives add disableBeggerMode dummy
 
+scoreboard objectives add maxGstoolsAge dummy
+
 scoreboard objectives add isSereneSeasonsPresent dummy
 
 scoreboard objectives add death deathCount
@@ -60,10 +62,13 @@ scoreboard players set @e[tag=gstools_worker,type=marker] anotherExtensionElseHa
 # Main
 # kill @e[type=wither_skull]
 
+execute as @e[tag=gstools_worker,type=marker] at @s if score $max maxGstoolsAge > @s gameTime run scoreboard players operation $max maxGstoolsAge = $max gameTime
+execute as @e[tag=gstools_worker,type=marker] at @s if score $max maxGstoolsAge = @s gameTime unless entity @e[tag=gstools_worker,tag=gstools_fixer_ignore,type=marker] run tag @s add gstools_fixer_ignore
 execute store result score $worker_count gstoolsWorkerCount if entity @e[tag=gstools_worker,type=marker]
 scoreboard players set $worker_count 1 1
-execute if score $worker_count gstoolsWorkerCount > $worker_count 1 as @e[type=marker,tag=gstools_worker] run say [GSTOOLS] --- WARNING --- : GSTOOLS FATAL ERROR DETECTED. PLEASE REPORT THIS TO GITHUB ISSUE PAGE WITH COPY OF LOGS IF INSTABILITY OR ISSUES OCCUR.
-execute if score $worker_count gstoolsWorkerCount > $worker_count 1 as @e[type=marker,tag=gstools_worker] run kill @s
+execute if score $worker_count gstoolsWorkerCount > $worker_count 1 as @e[type=marker,tag=gstools_worker] if score $max maxGstoolsAge < @s gameTime run say [GSTOOLS] --- WARNING --- : GSTOOLS FATAL ERROR DETECTED. PLEASE REPORT THIS TO GITHUB ISSUE PAGE WITH COPY OF LOGS IF INSTABILITY OR ISSUES OCCUR.
+execute if score $worker_count gstoolsWorkerCount > $worker_count 1 as @e[type=marker,tag=gstools_worker] if score $max maxGstoolsAge <= @s gameTime run kill @s[tag=gstools_fixer_ignore]
+tag @e[tag=gstools_worker,type=marker] remove gstools_fixer_ignore
 
 function gstools:lagcontrol/tps
 execute as @e[tag=gstools_worker,type=marker] unless score @s previousDayNumber = @s dayNumber run function gstools:timed/day
