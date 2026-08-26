@@ -104,6 +104,8 @@ scoreboard objectives add 10000000 dummy
 scoreboard objectives add 59999968 dummy
 scoreboard objectives add 500000000 dummy
 
+forceload add 0 0 0 0
+
 scoreboard players set @e[tag=gstools_worker,type=marker] n1577390 -1577390
 scoreboard players set @e[tag=gstools_worker,type=marker] n1000000 -1000000
 scoreboard players set @e[tag=gstools_worker,type=marker] n100000 -100000
