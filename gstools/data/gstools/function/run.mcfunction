@@ -53,14 +53,16 @@ scoreboard objectives add isSereneSeasonsPresent dummy
 
 scoreboard objectives add death deathCount
 
+forceload add 0 0 0 0
+
 scoreboard players set @e[tag=gstools_worker,type=marker] anotherExtensionElseHasRan 0 
 
 # Main
 # kill @e[type=wither_skull]
 
-forceload add 0 0 0 0
 execute store result score $worker_count gstoolsWorkerCount if entity @e[tag=gstools_worker,type=marker]
 scoreboard players set $worker_count 1 1
+execute if score $worker_count gstoolsWorkerCount > $worker_count 1 as @e[type=marker,tag=gstools_worker] run say [GSTOOLS] --- WARNING --- : GSTOOLS FATAL ERROR DETECTED. PLEASE REPORT THIS TO GITHUB ISSUE PAGE WITH COPY OF LOGS IF INSTABILITY OR ISSUES OCCUR.
 execute if score $worker_count gstoolsWorkerCount > $worker_count 1 as @e[type=marker,tag=gstools_worker] run kill @s
 
 function gstools:lagcontrol/tps
