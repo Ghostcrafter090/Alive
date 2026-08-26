@@ -87,3 +87,4 @@ execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0,lastWeather2Sto
 execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0,lastWeather2StormSpawn=1000..},tag=elder_guardian_hurricane_spawned] run scoreboard players set @s lastWeather2StormSpawn 0
 
 execute as @e[type=elder_guardian,scores={nearSevereWeather=1..1}] run scoreboard players set @s lastWeather2StormSpawn 0
+
