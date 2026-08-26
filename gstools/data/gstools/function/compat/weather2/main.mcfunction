@@ -1,5 +1,6 @@
 # Define
 scoreboard objectives add isWeather2Present dummy
+scoreboard objectives add isExpandedWeather2DynamicsPresent dummy
 
 # Main
 scoreboard players set @e[tag=gstools_worker,type=marker] isWeather2Present 1
