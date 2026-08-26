@@ -54,7 +54,7 @@ execute as @e[type=marker,tag=gstools_vertical_cursor] at @s if block ~ ~ ~ #gst
 
 execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=4000..}] unless entity @s[scores={isExpandedWeather2DynamicsPresent=1..1}] run kill @e[type=marker,tag=weather2_node]
 execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=4000..}] unless entity @s[scores={isExpandedWeather2DynamicsPresent=1..1}] as @a at @s run function gstools:compat/weather2/comm/kill_all_storms
-execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=4000..}] unless entity @s[scores={isExpandedWeather2DynamicsPresent=1..1}] run scoreboard players set @s lastWeather2StormSpawn -521
+execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=4000..}] run scoreboard players set @s lastWeather2StormSpawn -521
 
 execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=-500..-1}] run kill @e[type=marker,tag=weather2_node]
 execute as @e[tag=gstools_worker,type=marker,scores={lastWeather2StormSpawn=-500..-1}] as @a[scores={maxWindKph=..55}] run function gstools:util/random
@@ -72,7 +72,7 @@ execute as @e[tag=gstools_worker,type=marker] run scoreboard players set @s 41 4
 execute as @e[type=elder_guardian,scores={nearSevereWeather=1..1}] run tag @s remove elder_guardian_hurricane_spawned
 execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0},tag=!elder_guardian_hurricane_spawned] run kill @e[tag=weather2_node]
 execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0},tag=!elder_guardian_hurricane_spawned] at @s run summon marker ~ ~ ~ {Tags:['weather2_node']}
-execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0},tag=!elder_guardian_hurricane_spawned] at @s run function gstools:compat/weather2/comm/summon/tornado_f0
+execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0},tag=!elder_guardian_hurricane_spawned] at @s if entity @a[distance=0..200] run function gstools:compat/weather2/comm/summon/tornado_f0
 execute as @e[type=elder_guardian,scores={nearSevereWeather=0..0},tag=!elder_guardian_hurricane_spawned] run tag @s add elder_guardian_hurricane_spawned
 
 execute as @e[tag=fish,limit=5,sort=random] at @s run fill ~3 ~3 ~3 ~-3 ~-3 ~-3 water replace ice

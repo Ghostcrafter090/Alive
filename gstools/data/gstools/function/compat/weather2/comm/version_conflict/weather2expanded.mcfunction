@@ -64,17 +64,19 @@ scoreboard players remove @s _currentHailUpdate 1
 scoreboard players remove @s _currentWindUpdate 1
 scoreboard players remove @s _currentTornadoUpdate 1
 scoreboard players remove @s _currentHurricaneUpdate 1
+scoreboard players remove @s _maxWindUpdate 1
 
 execute if entity @s[scores={_currentHailUpdate=..0}] run scoreboard players set @s currentHailLevel 0
 execute if entity @s[scores={_currentWindUpdate=..0}] run scoreboard players set @s currentWindLevel 0
 execute if entity @s[scores={_currentTornadoUpdate=..0}] run scoreboard players set @s currentTornadoLevel 0
 execute if entity @s[scores={_currentHurricaneUpdate=..0}] run scoreboard players set @s currentHurricaneLevel 0
+execute if entity @s[scores={_maxWindUpdate=..0}] run scoreboard players set @s maxWindKph 0
 
 execute if entity @s[scores={currentTornadoLevel=1..}] run scoreboard players set @s _nearSevereWeather 200
 execute unless entity @s[scores={currentTornadoLevel=1..}] run scoreboard players remove @s _nearSevereWeather 1
 
-execute if entity @s[scores={_maxWindKph=72..}] run scoreboard players set @s _nearSevereWeather 200
-execute unless entity @s[scores={_maxWindKph=72..}] run scoreboard players remove @s _nearSevereWeather 1
+execute if entity @s[scores={maxWindKph=72..}] run scoreboard players set @s _nearSevereWeather 200
+execute unless entity @s[scores={maxWindKph=72..}] run scoreboard players remove @s _nearSevereWeather 1
 
 execute if score @s _nearSevereWeather >= @e[type=marker,tag=gstools_worker,limit=1] 1 run scoreboard players set @s nearSevereWeather 1
 execute unless score @s _nearSevereWeather >= @e[type=marker,tag=gstools_worker,limit=1] 1 run scoreboard players set @s nearSevereWeather 0
