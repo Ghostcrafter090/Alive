@@ -63,7 +63,8 @@ scoreboard players add @e[tag=gstools_worker,type=marker] gstoolsTime 1
 # Main
 # kill @e[type=wither_skull]
 
-execute as @e[tag=gstools_worker,type=marker] at @s if score $max maxGstoolsAge < @s gstoolsTime run scoreboard players operation $max maxGstoolsAge = @e[tag=gstools_worker,type=marker] gstoolsTime
+scoreboard players set $max maxGstoolsAge 0
+execute as @e[tag=gstools_worker,type=marker] at @s if score $max maxGstoolsAge < @s gstoolsTime run scoreboard players operation $max maxGstoolsAge = @s gstoolsTime
 execute as @e[tag=gstools_worker,type=marker] at @s if score $max maxGstoolsAge = @s gstoolsTime unless entity @e[tag=gstools_worker,tag=gstools_fixer_ignore,type=marker] run tag @s add gstools_fixer_ignore
 execute store result score $worker_count gstoolsWorkerCount if entity @e[tag=gstools_worker,type=marker]
 scoreboard players set $worker_count 1 1
