@@ -71,3 +71,7 @@ execute as @e[type=tnt,tag=pillager_tnt] run scoreboard players add @s pillagerT
 
 execute as @e[tag=attack_portal_node,tag=pillager_made] at @s if entity @e[type=small_fireball,distance=0..4] at @s run summon tnt ~ ~1 ~ {fuse:1}
 execute as @e[tag=attack_portal_node,tag=pillager_made] at @s as @e[type=small_fireball,distance=0..4] at @s run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 minecraft:magma_block replace minecraft:obsidian
+
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=55] at @s if block ~ ~ ~ water run scoreboard players set @s pillagerMiningDirection 0
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=55] at @s if block ~ ~1 ~ water run scoreboard players set @s pillagerMiningDirection 0
+execute as @e[tag=mining_pillager,type=pillager,sort=random,limit=55] at @s if block ~ ~-1 ~ water run scoreboard players set @s pillagerMiningDirection 0
