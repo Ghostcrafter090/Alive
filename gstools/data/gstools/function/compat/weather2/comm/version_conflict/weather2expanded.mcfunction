@@ -23,3 +23,13 @@ execute if entity @s[scores={PosEntityY=-50..,riskCheckIndex=2..2}] positioned ~
 execute if entity @s[scores={PosEntityY=-50..,riskCheckIndex=3..3}] positioned ~ -64 ~ unless block ~ ~ ~ expandedweather2dynamics:spc_risk_block{Mode:3} run fill ~ ~ ~ ~ ~ ~ expandedweather2dynamics:spc_risk_block{Mode:3} destroy
 
 scoreboard players set @e[tag=gstools_worker,type=marker] isExpandedWeather2DynamicsPresent 1
+scoreboard players add @s riskCheckIndex 1
+execute if entity @s[scores={riskCheckIndex=4..}] run scoreboard players set @s riskCheckIndex 0
+
+execute if entity @s[scores={currentTornadoLevel=13..}] run scoreboard players set @s _nearSevereWeather 400
+execute unless entity @s[scores={currentTornadoLevel=13..}] run scoreboard players remove @s _nearSevereWeather 1
+execute if entity @s[scores={currentHurricaneLevel=13..}] run scoreboard players set @s _nearSevereWeather 400
+execute unless entity @s[scores={currentHurricaneLevel=13..}] run scoreboard players remove @s _nearSevereWeather 1
+
+execute if score @s _nearSevereWeather >= @e[type=marker,tag=gstools_worker,limit=1] 1 run scoreboard players set @s nearSevereWeather 1
+execute unless score @s _nearSevereWeather >= @e[type=marker,tag=gstools_worker,limit=1] 1 run scoreboard players set @s nearSevereWeather 0
