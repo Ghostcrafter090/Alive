@@ -104,6 +104,7 @@ function gstools:compat/weather2/main
 execute if entity @e[tag=gstools_worker,type=marker,scores={isSereneSeasonsPresent=1..1}] as @a at @s run function gstools:horror/getindex
 execute as @a at @s run function gstools:util/is_outside
 
+execute unless entity @e[type=marker,tag=gstools_worker] run say [GSTOOLS] --- LOSS WARNING --- : GSTOOLS FATAL ERROR DETECTED. PLEASE REPORT THIS TO GITHUB ISSUE PAGE WITH COPY OF LOGS IF INSTABILITY OR ISSUES OCCUR.
 execute unless entity @e[type=marker,tag=gstools_worker] run summon marker 0 100 0 {Tags:['gstools_worker']}
 execute as @e[type=marker,tag=gstools_worker,tag=!loaded] run function gstools:load
 execute as @e[type=marker,tag=gstools_worker,tag=!loaded] run tag @s add loaded
