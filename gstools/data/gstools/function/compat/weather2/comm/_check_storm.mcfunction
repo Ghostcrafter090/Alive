@@ -7,8 +7,8 @@ scoreboard objectives add stormCheckWorkerE dummy
 
 # Main
 execute store result score @s PosStormX run data get storage gstools:compat weather2.storm.posX 1
-execute store result score @s PosStormZ run data get storage gstools:compat weather2.storm.posZ
-execute store result score @s stormRange run data get storage gstools:compat weather2.storm.size
+execute store result score @s PosStormZ run data get storage gstools:compat weather2.storm.posZ 1
+execute store result score @s stormRange run data get storage gstools:compat weather2.storm.size 1
 
 scoreboard players operation @s stormCheckWorkerC = @s PosEntityX
 scoreboard players operation @s stormCheckWorkerD = @s PosEntityZ
