@@ -28,3 +28,4 @@ scoreboard players set @s affectiveStormCount 0
 execute if data storage weather2:stormdata list[0] run data modify storage gstools:compat weather2.storm set from storage weather2:stormdata list[0]
 execute if data storage weather2:stormdata list[0] run function gstools:compat/weather2/comm/_check_storm
 
+

@@ -42,4 +42,4 @@ execute if score @s sqrtResult < @s stormRange store result score @s stormCheckW
 
 data remove storage weather2:stormdata list[0]
 execute if data storage weather2:stormdata list[0] run data modify storage gstools:compat weather2.storm set from storage weather2:stormdata list[0]
-execute if data storage weather2:stormdata list[0] run function gstools:compat/weather2/_check_storm
+execute if data storage weather2:stormdata list[0] run function gstools:compat/weather2/comm/_check_storm
