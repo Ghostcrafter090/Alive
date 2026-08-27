@@ -49,7 +49,7 @@ execute if entity @s[scores={guardianSpellTic=599..599}] run fill ~ ~-1 ~ ~ ~-1 
 execute if entity @s[scores={guardianSpellTic=599..599}] run summon item ~ ~2 ~ {Glowing:1b,Invulnerable:1b,Item:{id:"minecraft:turtle_helmet",Count:1b,count:1,components:{"minecraft:trim":{material:"minecraft:gold",pattern:"minecraft:coast"},"minecraft:enchantments":{"aqua_affinity":1,"respiration":1,"flame":1,"binding_curse":1},"minecraft:custom_name":{"color":"blue","italic":false,"text":"Crown Of The Sea"}},tag:{display:{Name:'{"text":"Crown Of The Sea","color":"blue","italic":false}'},Enchantments:[{id:"minecraft:flame",lvl:1s}]}}}
 execute if entity @s[scores={guardianSpellTic=599..599}] as @e[type=marker,tag=gstools_worker,limit=1] as @e[type=creeper] at @s run summon lightning_bolt ~ ~ ~
 execute if entity @s[scores={guardianSpellTic=599..599}] as @e[type=marker,tag=gstools_worker,limit=1] run kill @e[tag=weather2_node,type=marker]
-execute if entity @s[scores={guardianSpellTic=599..599}] as @e[type=marker,tag=gstools_worker,limit=1] run summon marker ~ ~ ~ {Tags:['weather2_node']}
-execute if entity @s[scores={guardianSpellTic=599..599}] as @e[type=marker,tag=gstools_worker,limit=1] run function gstools:compat/weather2/comm/summon/tornado_f0
+execute if entity @s[scores={guardianSpellTic=599..599}] run summon marker ~ ~ ~ {Tags:['weather2_node']}
+execute if entity @s[scores={guardianSpellTic=599..599}] run function gstools:compat/weather2/comm/summon/tornado_f0
 execute if entity @s[scores={guardianSpellTic=599..599}] as @e[type=marker,tag=gstools_worker,limit=1] run scoreboard players set @s crownOfTheSeaHasBeenSpawned 1
 execute if entity @s[scores={guardianSpellTic=599..599}] as @e[type=marker,tag=gstools_worker,limit=1] run scoreboard players set @s guardiansHaveBeenKilled 0
