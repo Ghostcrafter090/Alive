@@ -19,6 +19,12 @@ scoreboard objectives add isFirenadoing dummy
 scoreboard objectives add closestStormRange dummy
 scoreboard objectives add isWaterSpouting dummy
 
+scoreboard objectives add stormCheckWorkerA dummy
+scoreboard objectives add stormCheckWorkerB dummy
+scoreboard objectives add stormCheckWorkerC dummy
+scoreboard objectives add stormCheckWorkerD dummy
+scoreboard objectives add stormCheckWorkerE dummy
+scoreboard objectives add isCloudlessStorm dummy
 
 # Main
 scoreboard players set @s isRainingWeather2 0
