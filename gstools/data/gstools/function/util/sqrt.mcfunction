@@ -12,6 +12,8 @@ scoreboard objectives add internalPresicion dummy
 
 scoreboard players set @s internalPresicion 1
 scoreboard players operation @s sqrtInput *= @s sqrtPresicion
+scoreboard players operation @s sqrtInput = @s sqrtInput
+
 # <node:no_compile_mode>
 execute if entity @s[scores={sqrtInput=46000..}] run tellraw @a {"score":{"name":"Ghostcrafter090","objective":"stormCheckWorkerC"}}
 execute if entity @s[scores={sqrtInput=46000..}] run scoreboard players operation @s internalPresicion *= @e[type=marker,tag=gstools_worker] 10
