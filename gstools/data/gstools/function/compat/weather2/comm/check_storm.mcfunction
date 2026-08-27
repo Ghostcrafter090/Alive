@@ -30,7 +30,7 @@ scoreboard objectives add isCloudlessStorm dummy
 scoreboard players set @s isRainingWeather2 0
 scoreboard players set @s stormIntensity 0
 scoreboard players set @s isFirenadoing 0
-scoreboard players set @s closestStormRange 1000000000
+scoreboard players set @s closestStormRange 100000000
 scoreboard players set @s isWaterSpouting 0
 
 execute store result score @s PosEntityX run data get entity @s Pos[0]
@@ -41,3 +41,5 @@ data modify storage gstools:compat weather2.stormDataCache set from storage weat
 scoreboard players set @s affectiveStormCount 0
 execute if data storage gstools:compat weather2.stormDataCache[0] run data modify storage gstools:compat weather2.storm set from storage gstools:compat weather2.stormDataCache[0]
 execute if data storage gstools:compat weather2.stormDataCache[0] run function gstools:compat/weather2/comm/_check_storm
+
+scoreboard players operation @s closestStormRange *= @e[tag=gstools_worker,type=marker] 8

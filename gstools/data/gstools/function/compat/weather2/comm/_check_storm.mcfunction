@@ -9,6 +9,12 @@ execute unless entity @s[scores={isCloudlessStorm=1..1}] store result score @s s
 execute unless entity @s[scores={isCloudlessStorm=1..1}] run scoreboard players operation @s stormCheckWorkerC = @s PosEntityX
 execute unless entity @s[scores={isCloudlessStorm=1..1}] run scoreboard players operation @s stormCheckWorkerD = @s PosEntityZ
 
+execute unless entity @s[scores={isCloudlessStorm=1..1}] run scoreboard players operation @s stormCheckWorkerC /= @e[tag=gstools_worker,type=marker] 8
+execute unless entity @s[scores={isCloudlessStorm=1..1}] run scoreboard players operation @s stormCheckWorkerD /= @e[tag=gstools_worker,type=marker] 8
+
+execute unless entity @s[scores={isCloudlessStorm=1..1}] run scoreboard players operation @s PosStormX /= @e[tag=gstools_worker,type=marker] 8
+execute unless entity @s[scores={isCloudlessStorm=1..1}] run scoreboard players operation @s PosStormZ /= @e[tag=gstools_worker,type=marker] 8
+
 execute unless entity @s[scores={isCloudlessStorm=1..1}] run scoreboard players operation @s stormCheckWorkerC -= @s PosStormX
 execute unless entity @s[scores={isCloudlessStorm=1..1}] run scoreboard players operation @s stormCheckWorkerD -= @s PosStormZ
 
@@ -25,7 +31,7 @@ execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckW
 execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run function gstools:util/sqrt
 
 execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players add @s affectiveStormCount 1
-execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players operation @s stormCheckWorkerA = @s sqrtResult
+execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players operation @s stormCheckWorkerA = @s stormCheckWorkerE
 execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players operation @s stormCheckWorkerA *= @e[tag=gstools_worker,type=marker] 100
 execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players operation @s stormCheckWorkerA /= @s stormRange
 execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players operation @s stormCheckWorkerA -= @e[tag=gstools_worker,type=marker] 100
