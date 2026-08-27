@@ -73,8 +73,6 @@ execute as @e[type=elder_guardian,scores={isRainingWeather2=..75},tag=!elder_gua
 execute as @e[tag=fish,limit=5,sort=random] at @s run fill ~3 ~3 ~3 ~-3 ~-3 ~-3 water replace ice
 execute as @e[type=guardian,limit=10,sort=random] at @s run fill ~3 ~3 ~3 ~-3 ~-3 ~-3 water replace ice
 
-execute as @e[type=elder_guardian,scores={isRainingWeather2=..75},tag=elder_guardian_hurricane_spawned] run scoreboard players operation @e[tag=gstools_worker,type=marker] 21 -= @e[tag=gstools_worker,type=marker] averageTpsBossProgression
-
 execute as @e[type=elder_guardian,scores={isRainingWeather2=..75},tag=elder_guardian_hurricane_spawned] run scoreboard players add @s lastWeather2StormSpawn 1
 execute as @e[type=elder_guardian,scores={isRainingWeather2=..75,lastWeather2StormSpawn=40..},tag=elder_guardian_hurricane_spawned] run tag @s remove elder_guardian_hurricane_spawned
 execute as @e[type=elder_guardian,scores={isRainingWeather2=..75,lastWeather2StormSpawn=40..},tag=elder_guardian_hurricane_spawned] run scoreboard players set @s lastWeather2StormSpawn 0
