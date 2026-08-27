@@ -78,8 +78,8 @@ execute as @e[type=elder_guardian,scores={isRainingWeather2=..75},tag=elder_guar
 execute as @e[type=elder_guardian,scores={isRainingWeather2=..75},tag=elder_guardian_hurricane_spawned] run scoreboard players set @e[tag=gstools_worker,type=marker,scores={21=..0}] 21 1
 execute as @e[type=elder_guardian,scores={isRainingWeather2=..75},tag=elder_guardian_hurricane_spawned] run scoreboard players operation @s lastWeather2StormSpawn += @e[tag=gstools_worker,type=marker] 21
 execute as @e[type=elder_guardian,scores={isRainingWeather2=..75},tag=elder_guardian_hurricane_spawned] run scoreboard players set @e[tag=gstools_worker,type=marker] 21 21
-execute as @e[type=elder_guardian,scores={isRainingWeather2=..75,lastWeather2StormSpawn=1000..},tag=elder_guardian_hurricane_spawned] run tag @s remove elder_guardian_hurricane_spawned
-execute as @e[type=elder_guardian,scores={isRainingWeather2=..75,lastWeather2StormSpawn=1000..},tag=elder_guardian_hurricane_spawned] run scoreboard players set @s lastWeather2StormSpawn 0
+execute as @e[type=elder_guardian,scores={isRainingWeather2=..75,lastWeather2StormSpawn=40..},tag=elder_guardian_hurricane_spawned] run tag @s remove elder_guardian_hurricane_spawned
+execute as @e[type=elder_guardian,scores={isRainingWeather2=..75,lastWeather2StormSpawn=40..},tag=elder_guardian_hurricane_spawned] run scoreboard players set @s lastWeather2StormSpawn 0
 
 execute as @e[type=elder_guardian,scores={isRainingWeather2=..75}] run scoreboard players set @s lastWeather2StormSpawn 0
 
