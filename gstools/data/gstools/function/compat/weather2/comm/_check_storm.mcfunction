@@ -24,6 +24,7 @@ execute unless entity @s[scores={isCloudlessStorm=1..1}] run scoreboard players 
 execute unless entity @s[scores={isCloudlessStorm=1..1}] run scoreboard players operation @s stormCheckWorkerC += @s stormCheckWorkerD
 
 execute unless entity @s[scores={isCloudlessStorm=1..1}] run scoreboard players operation @s stormCheckWorkerE = @s stormRange
+execute unless entity @s[scores={isCloudlessStorm=1..1}] run scoreboard players operation @s stormCheckWorkerE /= @e[tag=gstools_worker,type=marker] 8
 execute unless entity @s[scores={isCloudlessStorm=1..1}] run scoreboard players operation @s stormCheckWorkerE *= @s stormCheckWorkerE
 
 execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players operation @s sqrtInput = @s stormCheckWorkerC
