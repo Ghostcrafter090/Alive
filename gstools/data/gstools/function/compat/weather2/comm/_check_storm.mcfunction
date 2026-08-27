@@ -27,9 +27,11 @@ execute unless entity @s[scores={isCloudlessStorm=1..1}] run scoreboard players 
 execute unless entity @s[scores={isCloudlessStorm=1..1}] run scoreboard players operation @s stormCheckWorkerE /= @e[tag=gstools_worker,type=marker] 8
 execute unless entity @s[scores={isCloudlessStorm=1..1}] run scoreboard players operation @s stormCheckWorkerE *= @s stormCheckWorkerE
 
-execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players operation @s sqrtInput = @s stormCheckWorkerC
-execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players set @s sqrtPresicion 1
-execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run function gstools:util/sqrt
+execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players operation @s sqrtResult = @s stormCheckWorkerC
+execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players operation @s sqrtResult *= @e[tag=gstools_worker,type=marker] 100
+execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players operation @s sqrtResult /= @s stormCheckWorkerE
+execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players operation @s sqrtResult *= @s stormRange
+execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players operation @s sqrtResult /= @e[tag=gstools_worker,type=marker] 100
 
 execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players add @s affectiveStormCount 1
 execute unless entity @s[scores={isCloudlessStorm=1..1}] if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players operation @s stormCheckWorkerA = @s stormCheckWorkerC
