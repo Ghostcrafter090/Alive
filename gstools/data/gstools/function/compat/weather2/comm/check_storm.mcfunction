@@ -21,11 +21,17 @@ scoreboard objectives add isWaterSpouting dummy
 
 
 # Main
+scoreboard players set @s isRainingWeather2 0
+scoreboard players set @s stormIntensity 0
+scoreboard players set @s isFirenadoing 0
+scoreboard players set @s closestStormRange 1000000000
+scoreboard players set @s isWaterSpouting 0
+
 execute store result score @s PosEntityX run data get entity @s Pos[0]
 execute store result score @s PosEntityZ run data get entity @s Pos[2]
 
+data modify storage gstools:compat weather2.stormDataCache set from storage weather2:stormdata list
+
 scoreboard players set @s affectiveStormCount 0
-execute if data storage weather2:stormdata list[0] run data modify storage gstools:compat weather2.storm set from storage weather2:stormdata list[0]
-execute if data storage weather2:stormdata list[0] run function gstools:compat/weather2/comm/_check_storm
-
-
+execute if data storage gstools:compat weather2.stormDataCache[0] run data modify storage gstools:compat weather2.storm set from storage gstools:compat weather2.stormDataCache[0]
+execute if data storage gstools:compat weather2.stormDataCache[0] run function gstools:compat/weather2/comm/_check_storm
