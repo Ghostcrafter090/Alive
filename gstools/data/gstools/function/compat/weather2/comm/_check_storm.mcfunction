@@ -21,7 +21,7 @@ scoreboard players operation @s stormCheckWorkerD *= @s stormCheckWorkerD
 
 scoreboard players operation @s stormCheckWorkerC += @s stormCheckWorkerD
 
-scoreboard players operation @s stormCheckWorkerE *= @s stormRange
+scoreboard players operation @s stormCheckWorkerE = @s stormRange
 scoreboard players operation @s stormCheckWorkerE *= @s stormCheckWorkerE
 
 execute if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players operation @s sqrtInput = @s stormCheckWorkerC
