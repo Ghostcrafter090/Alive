@@ -25,7 +25,7 @@ scoreboard players operation @s stormCheckWorkerE = @s stormRange
 scoreboard players operation @s stormCheckWorkerE *= @s stormCheckWorkerE
 
 execute if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players operation @s sqrtInput = @s stormCheckWorkerC
-execute if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players set @s sqrtPresicion 1 
+execute if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players set @s sqrtPresicion 1
 execute if score @s stormCheckWorkerE > @s stormCheckWorkerC run function gstools:util/sqrt
 
 execute if score @s stormCheckWorkerE > @s stormCheckWorkerC run scoreboard players add @s affectiveStormCount 1

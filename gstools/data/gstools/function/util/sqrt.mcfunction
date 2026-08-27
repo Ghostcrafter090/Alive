@@ -12,6 +12,7 @@ scoreboard objectives add internalPresicion dummy
 
 scoreboard players set @s internalPresicion 1
 scoreboard players operation @s sqrtInput *= @s sqrtPresicion
+# <node:no_compile_mode>
 execute if entity @s[scores={sqrtInput=46000..}] run scoreboard players operation @s internalPresicion *= @e[type=marker,tag=gstools_worker] 10
 execute if entity @s[scores={sqrtInput=46000..}] run scoreboard players operation @s sqrtInput /= @e[type=marker,tag=gstools_worker] 10
 execute if entity @s[scores={sqrtInput=46000..}] run scoreboard players operation @s internalPresicion *= @e[type=marker,tag=gstools_worker] 10
@@ -28,6 +29,7 @@ execute if entity @s[scores={sqrtInput=46000..}] run scoreboard players operatio
 execute if entity @s[scores={sqrtInput=46000..}] run scoreboard players operation @s sqrtInput /= @e[type=marker,tag=gstools_worker] 10
 execute if entity @s[scores={sqrtInput=46000..}] run scoreboard players operation @s internalPresicion *= @e[type=marker,tag=gstools_worker] 10
 execute if entity @s[scores={sqrtInput=46000..}] run scoreboard players operation @s sqrtInput /= @e[type=marker,tag=gstools_worker] 10
+# </node:no_compile_mode>
 
 scoreboard players operation @s sqrtResult = @s sqrtInput
 scoreboard players operation @s sqrtResult /= @e[type=marker,tag=gstools_worker] 2
