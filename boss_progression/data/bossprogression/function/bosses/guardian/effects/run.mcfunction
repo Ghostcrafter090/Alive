@@ -33,7 +33,7 @@ execute as @e[type=zombie,tag=zombie_not_setup] run tag @s remove zombie_not_set
 function bossprogression:bosses/guardian/effects/version_conflict/bogged
 function bossprogression:bosses/guardian/effects/version_conflict/parched
 
-execute as @e[type=zombie] store result entity @s DrownedConversionTime int 1 run scoreboard players get @s undeadHydrationConversionOverride
+execute as @e[type=zombie,tag=!gothic_ghost] store result entity @s DrownedConversionTime int 1 run scoreboard players get @s undeadHydrationConversionOverride
 
 data merge entity @e[tag=fish,limit=1,sort=random] {Air:1000,NoGravity:1b}
 

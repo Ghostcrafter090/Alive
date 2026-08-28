@@ -10,3 +10,5 @@ gen_forceload_random
 releases/*.jar
 releases
 prior_tests
+temp_dir_2
+_compiler_mcversion_jar.jar

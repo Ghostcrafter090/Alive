@@ -7,6 +7,7 @@ import os
 import sys
 
 import copy
+import compileLootTables as lootTable
 
 class flags:
     forceVersion = False
@@ -275,6 +276,22 @@ def compileDatapackIntoMod(folderName):
                 
                 if os.path.exists("..\\..\\..\\resourcepacks\\" + folderName):
                     os.system("xcopy \"..\\..\\..\\resourcepacks\\" + folderName + "\\assets\\*\" \".\\temp_dir\\assets\" /e /c /y")
+                
+                if folderName in ["enhanced_survival"]:
+                    versionJars = pytools.net.getTextAPI("https://gist.githubusercontent.com/cliffano/77a982a7503669c3e1acb0a0cf6127e9/raw/b004d0413d312984a47c4963e8136b7fc83c0cf6/minecraft-server-jar-downloads.md").split("\n")
+                    for aJarVersion in versionJars:
+                        aJarVersion = aJarVersion.split("|")
+                        aJarVersion[1] = aJarVersion[1].replace(" ", "")
+                        if aJarVersion[1] == pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][-1]:
+                            pytools.net.download(aJarVersion[3].replace(" ", ""), ".\\_compiler_mcversion_jar.jar", 10000)
+                            os.system("mkdir .\\temp_dir_2")
+                            pytools.IO.unpack(".\\_compiler_mcversion_jar.jar", ".\\temp_dir_2")
+                            os.system("xcopy \".\\temp_dir_2\\data\\minecraft\\loot_table\\*\" \".\\temp_dir\\data\\minecraft\\loot_table\" /e /c /y /i")
+                            os.system("xcopy \".\\temp_dir_2\\data\\minecraft\\loot_tables\\*\" \".\\temp_dir\\data\\minecraft\\loot_tables\" /e /c /y /i")
+                            print("Proccessing Loot Tables...")
+                            lootTable.processJsonFiles(".\\temp_dir\\data\\minecraft")
+                            os.system("del \".\\temp_dir_2\\*\" /f /s /q")
+                            os.system("del \".\\_compiler_mcversion_jar.jar\" /f /s /q")
                 
                 if folderName != "gstools":
                     os.system("del \".\\temp_dir\\gstools\\*\" /f /s /q")

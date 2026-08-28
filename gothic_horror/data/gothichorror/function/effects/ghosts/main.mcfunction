@@ -50,6 +50,9 @@ execute as @e[tag=gothic_ghost,sort=random,limit=1] run function gstools:util/ra
 execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={random100=..50}] run function gstools:util/random
 execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={random100=..50}] run scoreboard players operation @s ghostRandomWorkerB = @s randomSigned10
 
+execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={random100=..50}] at @s if block ~ ~ ~ water run data merge entity @s {DrownedConversionTime:0}
+execute as @e[tag=gothic_ghost,sort=random,limit=1] if entity @s[scores={random100=..50}] at @s if block ~ ~1 ~ water run data merge entity @s {DrownedConversionTime:0}
+
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run function gstools:horror/getindex
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players add @s horrorIndex 35
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run scoreboard players operation @s ghostRandomWorkerA *= @s horrorIndex
