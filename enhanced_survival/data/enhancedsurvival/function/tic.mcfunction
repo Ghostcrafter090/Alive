@@ -24,6 +24,7 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=0..0}] as @a
 execute as @a[scores={hasLookedAtEyes=1..}] run scoreboard players remove @s stamina 10
 execute as @a[scores={hasLookedAtEyes=1..}] run scoreboard players remove @s luck 10
 execute as @a[scores={hasLookedAtEyes=1..}] run scoreboard players remove @s hasLookedAtEyes 1
+execute as @a[scores={hasLookedAtEyes=10..}] run scoreboard players remove @s hasLookedAtEyes 10
 execute as @a[scores={hasLookedAtEyes=100..}] run scoreboard players remove @s hasLookedAtEyes 10
 execute as @a[scores={hasLookedAtEyes=1000..}] run scoreboard players remove @s hasLookedAtEyes 100
 execute as @a[scores={hasLookedAtEyes=10000..}] run scoreboard players remove @s hasLookedAtEyes 1000
