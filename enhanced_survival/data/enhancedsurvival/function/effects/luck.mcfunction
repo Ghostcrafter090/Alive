@@ -8,7 +8,9 @@ scoreboard objectives add rabbitsFootCrafted minecraft.crafted:minecraft.rabbit_
 scoreboard objectives add rabbitsFootUsed minecraft.used:minecraft.rabbit_foot
 scoreboard objectives add clockFound minecraft.picked_up:minecraft.clock
 
+scoreboard objectives add glassBlockBroken minecraft.broken:minecraft.glass_pane
 scoreboard objectives add glassBroken minecraft.broken:minecraft.glass
+
 
 # Main
 
@@ -59,6 +61,8 @@ execute as @a[tag=has_number_8] unless entity @s[nbt={Inventory:[{count:8}]}] ru
 # Glass
 execute as @a[scores={glassBroken=1..}] run scoreboard players remove @s luck 49
 execute as @a[scores={glassBroken=1..}] run scoreboard players remove @s bambooFound 1
+execute as @a[scores={glassBlockBroken=1..}] run scoreboard players remove @s luck 49
+execute as @a[scores={glassBlockBroken=1..}] run scoreboard players remove @s bambooFound 1
 
 # Clock
 execute as @a[name=!Ghostcrafter090,scores={clockFound=1..}] run scoreboard players remove @s luck 10
