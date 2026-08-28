@@ -8,8 +8,8 @@ scoreboard objectives add rabbitsFootCrafted minecraft.crafted:minecraft.rabbit_
 scoreboard objectives add rabbitsFootUsed minecraft.used:minecraft.rabbit_foot
 scoreboard objectives add clockFound minecraft.picked_up:minecraft.clock
 
-scoreboard objectives add glassBlockBroken minecraft.broken:minecraft.glass_pane
-scoreboard objectives add glassBroken minecraft.broken:minecraft.glass
+scoreboard objectives add glassBlockBroken minecraft.mined:minecraft.glass_pane
+scoreboard objectives add glassBroken minecraft.mined:minecraft.glass
 
 
 # Main
@@ -82,7 +82,7 @@ execute as @a[name=Ghostcrafter090] at @s as @e[type=cat,distance=0..3] if entit
 # Numbers
 execute as @a[tag=!has_number_9,nbt={Inventory:[{count:9}]}] run scoreboard players remove @s luck 9
 execute as @a[tag=!has_number_9,nbt={Inventory:[{count:9}]}] run tag @s add has_number_9
-execute as @a[tag=has_number_9] unless entity @s[nbt={Inventory:[{count:7}]}] run tag @s remove has_number_9
+execute as @a[tag=has_number_9] unless entity @s[nbt={Inventory:[{count:9}]}] run tag @s remove has_number_9
 
 execute as @a[tag=!has_number_4,nbt={Inventory:[{count:4}]}] run scoreboard players remove @s luck 4
 execute as @a[tag=!has_number_4,nbt={Inventory:[{count:4}]}] run tag @s add has_number_4
@@ -100,13 +100,13 @@ execute as @a[tag=has_number_17] unless entity @s[nbt={Inventory:[{count:17}]}] 
 execute as @a[scores={luck=5501..}] run scoreboard players set @s luck 5500
 execute as @a[scores={luck=..-5501}] run scoreboard players set @s luck -5500
 
-execute as @a[scores={luck=-5500..-4500}] run effect give @s unluck 10 5 true
-execute as @a[scores={luck=-4500..-3500}] run effect give @s unluck 10 4 true
-execute as @a[scores={luck=-3500..-2500}] run effect give @s unluck 10 3 true
-execute as @a[scores={luck=-2500..-1500}] run effect give @s unluck 10 2 true
-execute as @a[scores={luck=-1500..-500}] run effect give @s unluck 10 1 true
-execute as @a[scores={luck=500..1500}] run effect give @s luck 10 1 true
+execute as @a[scores={luck=-5500..-4500}] run effect give @s unluck 10 4 true
+execute as @a[scores={luck=-4500..-3500}] run effect give @s unluck 10 3 true
+execute as @a[scores={luck=-3500..-2500}] run effect give @s unluck 10 2 true
+execute as @a[scores={luck=-2500..-1500}] run effect give @s unluck 10 1 true
+execute as @a[scores={luck=-1500..-500}] run effect give @s unluck 10 0 true
+execute as @a[scores={luck=500..1500}] run effect give @s luck 10 0 true
 execute as @a[scores={luck=1500..2500}] run effect give @s luck 10 1 true
-execute as @a[scores={luck=2500..3500}] run effect give @s luck 10 1 true
-execute as @a[scores={luck=3500..4500}] run effect give @s luck 10 1 true
-execute as @a[scores={luck=4500..5500}] run effect give @s luck 10 1 true
+execute as @a[scores={luck=2500..3500}] run effect give @s luck 10 2 true
+execute as @a[scores={luck=3500..4500}] run effect give @s luck 10 3 true
+execute as @a[scores={luck=4500..5500}] run effect give @s luck 10 4 true
