@@ -120,16 +120,16 @@ execute as @a[scores={luck=4500..5500}] run effect give @s luck 10 4 true
 
 # Reduction
 scoreboard players add @a luckReductionTic 1
-execute as @a[scores={luckReductionTic=5,luck=1..}] run scoreboard players remove @s luck 1
-execute as @a[scores={luckReductionTic=5,luck=..-1}] run scoreboard players add @s luck 1
-execute as @a[scores={luckReductionTic=5,luck=1000..}] run scoreboard players remove @s luck 1
-execute as @a[scores={luckReductionTic=5,luck=..-1000}] run scoreboard players add @s luck 1
-execute as @a[scores={luckReductionTic=5,luck=2000..}] run scoreboard players remove @s luck 1
-execute as @a[scores={luckReductionTic=5,luck=..-2000}] run scoreboard players add @s luck 1
-execute as @a[scores={luckReductionTic=5,luck=3000..}] run scoreboard players remove @s luck 1
-execute as @a[scores={luckReductionTic=5,luck=..-3000}] run scoreboard players add @s luck 1
-execute as @a[scores={luckReductionTic=5,luck=4000..}] run scoreboard players remove @s luck 1
-execute as @a[scores={luckReductionTic=5,luck=..-4000}] run scoreboard players add @s luck 1
-execute as @a[scores={luckReductionTic=5,luck=5000..}] run scoreboard players remove @s luck 1
-execute as @a[scores={luckReductionTic=5,luck=..-5000}] run scoreboard players add @s luck 1
-execute as @a[scores={luckReductionTic=5}] run scoreboard players set @s luckReductionTic 0
+execute as @a[scores={luckReductionTic=20..,luck=1..}] run scoreboard players remove @s luck 1
+execute as @a[scores={luckReductionTic=20..,luck=..-1}] run scoreboard players add @s luck 1
+execute as @a[scores={luckReductionTic=20..,luck=1000..}] run scoreboard players remove @s luck 1
+execute as @a[scores={luckReductionTic=20..,luck=..-1000}] run scoreboard players add @s luck 1
+execute as @a[scores={luckReductionTic=20..,luck=2000..}] run scoreboard players remove @s luck 1
+execute as @a[scores={luckReductionTic=20..,luck=..-2000}] run scoreboard players add @s luck 1
+execute as @a[scores={luckReductionTic=20..,luck=3000..}] run scoreboard players remove @s luck 1
+execute as @a[scores={luckReductionTic=20..,luck=..-3000}] run scoreboard players add @s luck 1
+execute as @a[scores={luckReductionTic=20..,luck=4000..}] run scoreboard players remove @s luck 1
+execute as @a[scores={luckReductionTic=20..,luck=..-4000}] run scoreboard players add @s luck 1
+execute as @a[scores={luckReductionTic=20..,luck=5000..}] run scoreboard players remove @s luck 1
+execute as @a[scores={luckReductionTic=20..,luck=..-5000}] run scoreboard players add @s luck 1
+execute as @a[scores={luckReductionTic=20..}] run scoreboard players set @s luckReductionTic 0
