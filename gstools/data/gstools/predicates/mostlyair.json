@@ -1,0 +1,79 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#c:glass_panes"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#c:glass_blocks"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#gstools:air"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:replaceable"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": "#minecraft:flowers"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "predicate": {
+                "position": {},
+                "block": {
+                    "blocks": [
+                        "minecraft:snow"
+                    ]
+                }
+            }
+        }
+    ]
+}
