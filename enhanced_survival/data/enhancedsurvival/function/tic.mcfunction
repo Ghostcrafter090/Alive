@@ -29,4 +29,5 @@ execute as @a[scores={hasLookedAtEyes=10..}] run scoreboard players remove @s ha
 execute as @a[scores={hasLookedAtEyes=100..}] run scoreboard players remove @s hasLookedAtEyes 10
 execute as @a[scores={hasLookedAtEyes=1000..}] run scoreboard players remove @s hasLookedAtEyes 100
 execute as @a[scores={hasLookedAtEyes=10000..}] run scoreboard players remove @s hasLookedAtEyes 1000
+execute as @a[scores={hasLookedAtEyes=100000..}] run scoreboard players remove @s hasLookedAtEyes 10000
 
