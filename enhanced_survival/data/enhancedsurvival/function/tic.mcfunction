@@ -5,6 +5,7 @@ function enhancedsurvival:breathing/main
 function enhancedsurvival:effects/compat/eyes_in_the_darkness
 
 # Eyes
+execute if entity @e[tag=gstools_worker,type=marker] as @a[scores={hasLookedAtEyes=1..}] run effect give @s darkness 10 0
 execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=1..1}] as @a[scores={hasLookedAtEyes=8..}] run effect give @s speed 1 0 true
 execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=1..1}] as @a[scores={hasLookedAtEyes=400..}] run effect clear @s slowness
 execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=0..0}] as @a[scores={hasLookedAtEyes=8..}] run effect give @s slowness 1 0 true
