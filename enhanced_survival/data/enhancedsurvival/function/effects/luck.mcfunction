@@ -11,6 +11,7 @@ scoreboard objectives add clockFound minecraft.picked_up:minecraft.clock
 scoreboard objectives add glassBlockBroken minecraft.mined:minecraft.glass_pane
 scoreboard objectives add glassBroken minecraft.mined:minecraft.glass
 
+scoreboard objectives add luckReductionTic dummy
 
 # Main
 
@@ -100,6 +101,8 @@ execute as @a[tag=has_number_17] unless entity @s[nbt={Inventory:[{count:17}]}] 
 execute as @a[scores={luck=5501..}] run scoreboard players set @s luck 5500
 execute as @a[scores={luck=..-5501}] run scoreboard players set @s luck -5500
 
+
+# Effect
 execute as @a[scores={luck=-5500..-4500}] run effect give @s unluck 10 4 true
 execute as @a[scores={luck=-4500..-3500}] run effect give @s unluck 10 3 true
 execute as @a[scores={luck=-3500..-2500}] run effect give @s unluck 10 2 true
@@ -110,3 +113,9 @@ execute as @a[scores={luck=1500..2500}] run effect give @s luck 10 1 true
 execute as @a[scores={luck=2500..3500}] run effect give @s luck 10 2 true
 execute as @a[scores={luck=3500..4500}] run effect give @s luck 10 3 true
 execute as @a[scores={luck=4500..5500}] run effect give @s luck 10 4 true
+
+# Reduction
+scoreboard players add @a luckReductionTic 1
+execute as @a[scores={luckReductionTic=5,luck=1..}] run scoreboard players remove @s luck 1
+execute as @a[scores={luckReductionTic=5,luck=..-1}] run scoreboard players add @s luck 1
+execute as @a[scores={luckReductionTic=5}] run scoreboard players set @s luckReductionTic 0
