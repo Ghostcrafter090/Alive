@@ -2,6 +2,7 @@
 
 # Main
 function enhancedsurvival:breathing/main
+function enhancedsurvival:effects/compat/eyes_in_the_darkness
 
 # Eyes
 execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=1..1}] as @a[scores={hasLookedAtEyes=2..}] run effect give @s speed 1 0
