@@ -70,7 +70,7 @@ execute as @a[name=Ghostcrafter090,scores={clockFound=1..}] run scoreboard playe
 execute as @a[scores={clockFound=1..}] run scoreboard players remove @s clockFound 1
 
 # Wolf
-execute as @a at @s if entity @e[type=cat,distance=0..2] run scoreboard players remove @s luck 1
+execute as @a at @s if entity @e[type=wolf,distance=0..2] run scoreboard players remove @s luck 1
 
 # Ladder
 execute as @a at @s if block ~ ~2 ~ ladder run scoreboard players remove @s luck 1
