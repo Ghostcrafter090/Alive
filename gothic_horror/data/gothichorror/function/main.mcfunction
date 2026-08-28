@@ -7,6 +7,8 @@ schedule function gothichorror:effects/main 1t append
 # Dark Rumble
 execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=11900..11999},tag=!after_sunset] as @e[tag=is_alive,sort=random,limit=30] run function gstools:util/is_outside
 execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=11900..11999},tag=!after_sunset] as @e[type=#minecraft:undead,sort=random,limit=30] run function gstools:util/is_outside
+execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=17900..17999},tag=!after_sunset] as @e[tag=is_alive,sort=random,limit=30] run function gstools:util/is_outside
+execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=17900..17999},tag=!after_sunset] as @e[type=#minecraft:undead,sort=random,limit=30] run function gstools:util/is_outside
 
 
 execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=12000..},tag=!after_sunset] as @a at @s as @e[tag=is_alive,sort=nearest,limit=10] run function gstools:horror/getindex
