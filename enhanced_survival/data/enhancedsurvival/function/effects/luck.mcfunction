@@ -8,8 +8,8 @@ scoreboard objectives add rabbitsFootCrafted minecraft.crafted:minecraft.rabbit_
 scoreboard objectives add rabbitsFootUsed minecraft.used:minecraft.rabbit_foot
 scoreboard objectives add clockFound minecraft.picked_up:minecraft.clock
 
-scoreboard objectives add glassBlockBroken minecraft.mined:minecraft.glass_pane
-scoreboard objectives add glassBroken minecraft.mined:minecraft.glass
+scoreboard objectives add glassBlockBroken minecraft.mined:glass_pane
+scoreboard objectives add glassBroken minecraft.mined:glass
 
 scoreboard objectives add luckReductionTic dummy
 
@@ -22,7 +22,8 @@ execute as @a at @s if entity @e[type=cat,distance=0..2] run scoreboard players 
 
 # Fish
 execute as @a at @s if entity @e[tag=fish,tag=!monster,distance=0..1.5] unless entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..}] run scoreboard players add @s luck 1
-execute as @a at @s if entity @e[tag=fish,tag=!monster,distance=0..1.5] if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..}] run scoreboard players remove @s luck 2
+execute as @a at @s if entity @e[tag=fish,distance=0..1.5] if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..}] run scoreboard players remove @s luck 2
+execute as @a at @s if entity @e[type=guardian,distance=0..1.5] if entity @e[tag=gstools_worker,type=marker,scores={guardianEffectsAreActive=1..}] run scoreboard players remove @s luck 20
 
 # Mushroom
 execute as @a[scores={mushroomsFound=1..}] run scoreboard players add @s luck 10
@@ -61,12 +62,12 @@ execute as @a[tag=has_number_8] unless entity @s[nbt={Inventory:[{count:8}]}] ru
 
 # Glass
 execute as @a[scores={glassBroken=1..}] run scoreboard players remove @s luck 49
-execute as @a[scores={glassBroken=1..}] run scoreboard players remove @s bambooFound 1
+execute as @a[scores={glassBroken=1..}] run scoreboard players remove @s glassBroken 1
 execute as @a[scores={glassBlockBroken=1..}] run scoreboard players remove @s luck 49
-execute as @a[scores={glassBlockBroken=1..}] run scoreboard players remove @s bambooFound 1
+execute as @a[scores={glassBlockBroken=1..}] run scoreboard players remove @s glassBlockBroken 1
 
 # Pillager
-execute as @a at @s if entity @e[tag=pillager,distance=0..2] run scoreboard players remove @s luck 10
+execute as @a at @s if entity @e[tag=pillager,distance=0..5] run scoreboard players remove @s luck 10
 
 # Clock
 execute as @a[name=!Ghostcrafter090,scores={clockFound=1..}] run scoreboard players remove @s luck 10
