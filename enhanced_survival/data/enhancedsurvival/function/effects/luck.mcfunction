@@ -65,6 +65,9 @@ execute as @a[scores={glassBroken=1..}] run scoreboard players remove @s bambooF
 execute as @a[scores={glassBlockBroken=1..}] run scoreboard players remove @s luck 49
 execute as @a[scores={glassBlockBroken=1..}] run scoreboard players remove @s bambooFound 1
 
+# Pillager
+execute as @a at @s if entity @e[tag=pillager,distance=0..2] run scoreboard players remove @s luck 10
+
 # Clock
 execute as @a[name=!Ghostcrafter090,scores={clockFound=1..}] run scoreboard players remove @s luck 10
 execute as @a[name=Ghostcrafter090,scores={clockFound=1..}] run scoreboard players add @s luck 10
