@@ -1,4 +1,5 @@
 # Define
+scoreboard objectives add poltergeistRockCount dummy
 
 # Main
 execute as @e[scores={hGeneralTic=0..}] run scoreboard players remove @s hGeneralTic 1
@@ -20,3 +21,5 @@ execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played] 
 execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played] at @s if entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..2] unless entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..2,gamemode=creative] unless entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..2,gamemode=spectator] run damage @e[tag=is_alive,sort=nearest,limit=1,distance=0..2] 0.1 mob_attack by @s
 execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played] at @s if entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..2] run kill @s
 execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played] at @s if entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..2] run tag @s add sound_played
+execute store result score @e[tag=gstools_worker,type=marker,limit=1] poltergeistRockCount if entity @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played]
+execute if entity @e[tag=gstools_worker,type=marker,scores={poltergeistRockCount=30..}] run kill @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played]
