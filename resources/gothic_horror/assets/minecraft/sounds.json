@@ -236,5 +236,21 @@
       "h_sunset"
     ],
     "subtitle": "It always happens after dark... DONT... FALL... ASLEEEP!"
+  },
+  "gothichorror.hallow.whispering": {
+    "category": "master",
+    "sounds": [
+      "whispering"
+    ],
+    "subtitle": "Something whispering..."
+  },
+  "gothichorror.draft": {
+    "category": "master",
+    "sounds": [
+      "draft_0",
+      "draft_1",
+      "draft_2",
+    ],
+    "subtitle": "A cold draft blows..."
   }
 }

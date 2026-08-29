@@ -183,7 +183,7 @@ execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=3] at @s 
 execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=3] at @s if entity @a[distance=0..5] unless entity @s[scores={lastSpiritBesidePlayed=1..}] run scoreboard players set @s lastSpiritBesidePlayed 10000
 execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=3] at @s unless entity @a[distance=0..5] if entity @s[scores={lastSpiritBesidePlayed=1..}] run scoreboard players remove @s lastSpiritBesidePlayed 1
 execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=1] run function gstools:util/random
-execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=1] if entity @s[scores={random1000=..15}] at @s run playsound minecraft:gothichorror.hallow.breath hostile @a ~ ~ ~ 1 0.1
+execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=1] if entity @s[scores={random1000=..5}] at @s run playsound minecraft:gothichorror.draft hostile @a ~ ~ ~ 1 0.1
 
 # Demon AI
 execute as @e[tag=gothic_ghost,tag=ghost_type_demon] unless entity @e[type=marker,tag=gstools_view_finder,distance=0..15] run attribute @s minecraft:generic.movement_speed base set 0.2
