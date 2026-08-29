@@ -7,6 +7,7 @@ scoreboard objectives add ghostRandomWorkerA dummy
 scoreboard objectives add ghostRandomWorkerB dummy
 scoreboard objectives add lastPlayedGhostSound dummy
 scoreboard objectives add ghostSoundTicRate dummy
+scoreboard objectives add usedBell minecraft.custom:minecraft.bell_ring
 
 team add gothic_ghost "Ghosts"
 
@@ -15,11 +16,19 @@ execute as @e[tag=gothic_ghost] at @s run function gstools:util/light_level
 execute as @e[tag=gothic_ghost,limit=3,sort=random] at @s run function gstools:util/is_outside
 
 execute if entity @e[tag=gstools_worker,scores={timeOfDay=0..12000}] as @e[tag=gstools_vertical_cursor,type=marker,distance=0..80] at @s if block ~ ~ ~ #gstools:air as @e[tag=gothic_ghost,predicate=gstools:sky] if entity @s[scores={lightLevel=7..}] run tp @s ~ ~ ~
-execute as @e[tag=gothic_ghost] at @s if entity @s[scores={lightLevel=7..}] run tp @s ^ ^ ^-0.4 ~ ~
-execute as @e[tag=gothic_ghost] at @s unless block ~ ~1 ~ #gstools:air run tp @s ^ ^ ^-0.4 ~ ~
-execute as @e[tag=gothic_ghost] at @s unless block ~ ~1 ~ #gstools:air if block ~ ~2 ~ #gstools:air run tp @s ~ ~0.1 ~ ~ ~
-execute as @e[tag=gothic_ghost] at @s unless block ~ ~ ~ #gstools:air if block ~ ~1 ~ #gstools:air run tp @s ^ ^ ^-0.4 ~ ~
-execute as @e[tag=gothic_ghost] at @s unless block ~ ~ ~ #gstools:air if block ~ ~1 ~ #gstools:air if block ~ ~2 ~ #gstools:air run tp @s ~ ~0.1 ~ ~ ~
+execute as @e[tag=gothic_ghost,tag=!ghost_type_poltergeist,tag=!ghost_type_demon] at @s if entity @s[scores={lightLevel=7..}] run tp @s ^ ^ ^-0.4 ~ ~
+execute as @e[tag=gothic_ghost,tag=ghost_type_demon] at @s if entity @s[scores={lightLevel=13..}] run tp @s ^ ^ ^-0.4 ~ ~
+execute as @e[tag=gothic_ghost,tag=ghost_type_demon] at @s if entity @a[scores={usedBell=1..},distance=0..3] run tp @s ^ ^ ^-0.4 ~ ~
+execute as @e[tag=gothic_ghost,tag=!ghost_type_poltergeist] at @s unless block ~ ~1 ~ #gstools:air run tp @s ^ ^ ^-0.4 ~ ~
+execute as @e[tag=gothic_ghost,tag=!ghost_type_poltergeist] at @s unless block ~ ~1 ~ #gstools:air if block ~ ~2 ~ #gstools:air run tp @s ~ ~0.1 ~ ~ ~
+execute as @e[tag=gothic_ghost,tag=!ghost_type_poltergeist] at @s unless block ~ ~ ~ #gstools:air if block ~ ~1 ~ #gstools:air run tp @s ^ ^ ^-0.4 ~ ~
+execute as @e[tag=gothic_ghost,tag=!ghost_type_poltergeist] at @s unless block ~ ~ ~ #gstools:air if block ~ ~1 ~ #gstools:air if block ~ ~2 ~ #gstools:air run tp @s ~ ~0.1 ~ ~ ~
+
+execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist] at @s if entity @a[scores={usedBell=1..},distance=0..10] run tp @s ^ ^ ^-0.4 ~ ~
+execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist] at @s unless block ~ ~1 ~ #gstools:air run tp @s ^ ^ ^-0.4 ~ ~
+execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist] at @s unless block ~ ~1 ~ #gstools:air if block ~ ~2 ~ #gstools:air run tp @s ~ ~0.1 ~ ~ ~
+execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist] at @s unless block ~ ~ ~ #gstools:air if block ~ ~1 ~ #gstools:air run tp @s ^ ^ ^-0.4 ~ ~
+execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist] at @s unless block ~ ~ ~ #gstools:air if block ~ ~1 ~ #gstools:air if block ~ ~2 ~ #gstools:air run tp @s ~ ~0.1 ~ ~ ~
 
 # Setup
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run attribute @s minecraft:generic.movement_speed base set 0.08
@@ -162,6 +171,20 @@ execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist,sort=random,limit=1] i
 
 execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist] at @s as @e[type=chicken,distance=0..30,tag=!poltergeist_not_spawned_chicken] run tp @s ~ ~-5000 ~
 execute as @e[type=chicken,tag=!poltergeist_not_spawned_chicken] at @s unless entity @e[tag=gothic_ghost,tag=ghost_type_poltergeist,distance=0..30] run tag @s add poltergeist_not_spawned_chicken
+
+# Echo Ai
+execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=1] run function gstools:util/random
+execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=1] if entity @s[scores={random1000=..50}] at @s run playsound minecraft:entity.vex.ambient hostile @a ~ ~ ~ 1 0.1
+
+# Spirit Ai
+execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=3] at @s if entity @a[distance=0..5] unless entity @s[scores={lastSpiritBesidePlayed=1..}] run playsound minecraft:gothichorror.hallow.woman.beside hostile @a ~ ~ ~ 0.1
+execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=3] at @s if entity @a[distance=0..5] unless entity @s[scores={lastSpiritBesidePlayed=1..}] run effect give @s weakness 30 10
+execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=3] at @s if entity @a[distance=0..5] unless entity @s[scores={lastSpiritBesidePlayed=1..}] run scoreboard players set @s lastSpiritBesidePlayed 10000
+execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=3] at @s unless entity @a[distance=0..5] if entity @s[scores={lastSpiritBesidePlayed=1..}] run scoreboard players remove @s 1
+
+# Demon AI
+execute as @e[tag=gothic_ghost,tag=ghost_type_demon] unless entity @e[type=marker,tag=gstools_view_finder,distance=0..15] run attribute @s minecraft:generic.movement_speed base set 0.2
+execute as @e[tag=gothic_ghost,tag=ghost_type_demon] if entity @e[type=marker,tag=gstools_view_finder,distance=0..15] run attribute @s minecraft:generic.movement_speed base set 0.08
 
 # Sound
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run function gstools:util/random
