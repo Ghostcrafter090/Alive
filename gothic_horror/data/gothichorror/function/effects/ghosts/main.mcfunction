@@ -8,6 +8,7 @@ scoreboard objectives add ghostRandomWorkerB dummy
 scoreboard objectives add lastPlayedGhostSound dummy
 scoreboard objectives add ghostSoundTicRate dummy
 scoreboard objectives add usedBell minecraft.custom:minecraft.bell_ring
+scoreboard objectives add lastSpiritBesidePlayed dummy
 
 team add gothic_ghost "Ghosts"
 
@@ -180,7 +181,7 @@ execute as @e[tag=gothic_ghost,tag=ghost_type_echo,sort=random,limit=1] if entit
 execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=3] at @s if entity @a[distance=0..5] unless entity @s[scores={lastSpiritBesidePlayed=1..}] run playsound minecraft:gothichorror.hallow.woman.beside hostile @a ~ ~ ~ 0.1
 execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=3] at @s if entity @a[distance=0..5] unless entity @s[scores={lastSpiritBesidePlayed=1..}] run effect give @s weakness 30 10
 execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=3] at @s if entity @a[distance=0..5] unless entity @s[scores={lastSpiritBesidePlayed=1..}] run scoreboard players set @s lastSpiritBesidePlayed 10000
-execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=3] at @s unless entity @a[distance=0..5] if entity @s[scores={lastSpiritBesidePlayed=1..}] run scoreboard players remove @s 1
+execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=3] at @s unless entity @a[distance=0..5] if entity @s[scores={lastSpiritBesidePlayed=1..}] run scoreboard players remove @s lastSpiritBesidePlayed 1
 
 # Demon AI
 execute as @e[tag=gothic_ghost,tag=ghost_type_demon] unless entity @e[type=marker,tag=gstools_view_finder,distance=0..15] run attribute @s minecraft:generic.movement_speed base set 0.2
