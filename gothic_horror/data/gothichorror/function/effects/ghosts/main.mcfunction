@@ -188,6 +188,8 @@ execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=1] if ent
 # Demon AI
 execute as @e[tag=gothic_ghost,tag=ghost_type_demon] unless entity @e[type=marker,tag=gstools_view_finder,distance=0..15] run attribute @s minecraft:generic.movement_speed base set 0.2
 execute as @e[tag=gothic_ghost,tag=ghost_type_demon] if entity @e[type=marker,tag=gstools_view_finder,distance=0..15] run attribute @s minecraft:generic.movement_speed base set 0.08
+execute as @e[tag=gothic_ghost,tag=ghost_type_demon,sort=random,limit=1] run function gstools:util/random
+execute as @e[tag=gothic_ghost,tag=ghost_type_demon,sort=random,limit=1] if entity @s[scores={random1000=..15}] at @s run playsound minecraft:gothichorror.hallow.whispering hostile @a ~ ~ ~
 
 # Sound
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run function gstools:util/random
