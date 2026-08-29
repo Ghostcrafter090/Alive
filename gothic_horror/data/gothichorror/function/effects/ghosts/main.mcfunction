@@ -173,8 +173,8 @@ execute as @e[tag=gothic_ghost,tag=ghost_type_poltergeist] at @s as @e[type=chic
 execute as @e[type=chicken,tag=!poltergeist_not_spawned_chicken] at @s unless entity @e[tag=gothic_ghost,tag=ghost_type_poltergeist,distance=0..30] run tag @s add poltergeist_not_spawned_chicken
 
 # Echo Ai
-execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=1] run function gstools:util/random
-execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=1] if entity @s[scores={random1000=..50}] at @s run playsound minecraft:entity.vex.ambient hostile @a ~ ~ ~ 1 0.1
+execute as @e[tag=gothic_ghost,tag=ghost_type_echo,sort=random,limit=1] run function gstools:util/random
+execute as @e[tag=gothic_ghost,tag=ghost_type_echo,sort=random,limit=1] if entity @s[scores={random1000=..50}] at @s run playsound minecraft:entity.vex.ambient hostile @a ~ ~ ~ 1 0.1
 
 # Spirit Ai
 execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=3] at @s if entity @a[distance=0..5] unless entity @s[scores={lastSpiritBesidePlayed=1..}] run playsound minecraft:gothichorror.hallow.woman.beside hostile @a ~ ~ ~ 0.1
