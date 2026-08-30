@@ -3,6 +3,9 @@ scoreboard objectives add undeadRiseTick dummy
 scoreboard objectives add isOnFire dummy
 
 # Main
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=!undead_setup] at @s run function gstools:util/light_level
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=!undead_setup] at @s run function gstools:util/is_outside
+
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=!undead_setup] run data modify entity @s NoAI set value 1b
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=!undead_setup] run scoreboard players set @s undeadRiseTick 0
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=!undead_setup,tag=!undead_risen] at @s facing entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..30] eyes run tp @s ~ ~-2 ~ ~ -90
