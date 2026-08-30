@@ -6,6 +6,7 @@ import time
 import copy
 import traceback
 import json
+import math
 
 def getGlobalBlock(name):
     files = subprocess.getoutput("dir \"decay.config\\*.json\" /s /b").split("\n")
@@ -234,7 +235,27 @@ blockBlacklist = [
     "minecraft:vault"
 ]
 
-def walkJson(jsonData, weightThreshold=1):
+beforeVersionBlocks = {
+    "minecraft:pale_moss_block": "1.21.4"
+}
+
+def isVersionGtrThanEqlToOther(version, versionOther):
+    
+    if version == versionOther:
+        return True
+    
+    version = version.split(".")
+    versionOther = versionOther.split(".")
+    if float(version[0]) > float(versionOther[0]):
+        return True
+    elif (float(version[0]) == float(versionOther[0])) and (len(version) > 1) and (len(versionOther) > 1) and (float(version[1]) > float(versionOther[1])):
+        return True
+    elif (float(version[0]) == float(versionOther[0])) and (len(version) > 1) and (len(versionOther) > 1) and (float(version[1]) == float(versionOther[1])) and (len(version) > 2) and (len(versionOther) > 2) and (float(version[2]) > float(versionOther[2])):
+        return True
+    
+    return False
+
+def walkJson(jsonData, weightThreshold=1, version="1.19.4"):
     typef = False
     
     if type(jsonData) == dict:
@@ -250,21 +271,49 @@ def walkJson(jsonData, weightThreshold=1):
                     jsonData["type"] = "minecraft:weighted_state_provider"
                     _state = jsonData["state"]
                     _chain = getBlockDecayChain(_state["Name"], "decaychain.ds", weightThreshold)
+                    
+                    _i = 0
+                    while _i < len(_chain):
+                        if _chain[_i] in beforeVersionBlocks:
+                            if not isVersionGtrThanEqlToOther(version, beforeVersionBlocks[_chain[_i]]):
+                                _chain.pop(_i)
+                                _i = _i - 1
+                                
+                        _i = _i + 1
+                    
                     jsonData.pop("state")
                     jsonData["entries"] = []
-                    _i = len(_chain) + 1
+                    _i = len(_chain) - 1
                     _weightedThreshold = weightThreshold
+                    weightedSum = 0
+                    weightModif = 0
                     for _block in _chain:
+                        
+                        _weight = int(math.ceil((((2147483646 / len(_chain)) * ((((len(_chain) / 100) * _weightedThreshold) ** (len(_chain) - _i - 1)) * 100)) / ((2147483646 / len(_chain)) * ((((len(_chain) / 100) * _weightedThreshold) ** (len(_chain) - 1))) * 100))))
+
+                        if (weightedSum + int(math.ceil((_weight / (10 ** weightModif))))) > 2147483646:
+                            while (weightedSum + (_weight / (10 ** weightModif))) > 2147483646:
+                                print(weightedSum, (_weight / (10 ** weightModif)))
+                                weightModif = weightModif + 1
+                            if weightModif != 0:
+                                weightModif = weightModif + 1
+                        
+                        weightedSum = weightedSum + int(math.ceil((_weight / (10 ** weightModif))))
+                        
                         jsonData["entries"].append({
-                            "weight": int(_weightedThreshold * (len(_chain) ** _i)) + 1,
+                            "weight": int(math.ceil((_weight / (10 ** weightModif)))),
                             "data": copy.deepcopy(_state)
                         })
                         
-                        _weightedThreshold = _weightedThreshold * (_weightedThreshold / 100)
-                        
                         jsonData["entries"][-1]["data"]["Name"] = _block
                         
-                        _i = _i + 1
+                        if jsonData["entries"][-1]["weight"] > 2147483646:
+                            jsonData["entries"][-1]["weight"] = 2147483646
+                        
+                        if weightedSum > 2147483646:
+                            jsonData["entries"][-1]["weight"] = 1
+                        
+                        _i = _i - 1
 
     else:
         i = 0
@@ -278,11 +327,11 @@ def walkJson(jsonData, weightThreshold=1):
             
     return jsonData
 
-def processFeatureFile(file, decayThreshold=1.5):
+def processFeatureFile(file, decayThreshold=1.5, version="1.19.4"):
     
     featureData = pytools.IO.getJson(file)
     
-    jsonData = walkJson(featureData, decayThreshold)
+    jsonData = walkJson(featureData, decayThreshold, version=version)
         
     return jsonData
     

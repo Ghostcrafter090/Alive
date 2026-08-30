@@ -12,7 +12,7 @@
                 "type": "minecraft:weighted_state_provider",
                 "entries": [
                     {
-                        "weight": 2,
+                        "weight": 1,
                         "data": {
                             "Name": "minecraft:sand"
                         }
@@ -34,25 +34,25 @@
                         "type": "minecraft:weighted_state_provider",
                         "entries": [
                             {
-                                "weight": 1025,
+                                "weight": 15625,
                                 "data": {
                                     "Name": "minecraft:sandstone"
                                 }
                             },
                             {
-                                "weight": 41,
+                                "weight": 625,
                                 "data": {
                                     "Name": "minecraft:sandstone_stairs"
                                 }
                             },
                             {
-                                "weight": 1,
+                                "weight": 25,
                                 "data": {
                                     "Name": "minecraft:sandstone_slab"
                                 }
                             },
                             {
-                                "weight": 1,
+                                "weight": 2,
                                 "data": {
                                     "Name": "minecraft:sand"
                                 }

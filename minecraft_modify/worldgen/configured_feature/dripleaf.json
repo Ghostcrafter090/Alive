@@ -94,7 +94,7 @@
                                     "type": "minecraft:weighted_state_provider",
                                     "entries": [
                                         {
-                                            "weight": 2,
+                                            "weight": 1,
                                             "data": {
                                                 "Name": "minecraft:big_dripleaf_stem",
                                                 "Properties": {
@@ -112,7 +112,7 @@
                                     "type": "minecraft:weighted_state_provider",
                                     "entries": [
                                         {
-                                            "weight": 2,
+                                            "weight": 1,
                                             "data": {
                                                 "Name": "minecraft:big_dripleaf",
                                                 "Properties": {
@@ -166,7 +166,7 @@
                                     "type": "minecraft:weighted_state_provider",
                                     "entries": [
                                         {
-                                            "weight": 2,
+                                            "weight": 1,
                                             "data": {
                                                 "Name": "minecraft:big_dripleaf_stem",
                                                 "Properties": {
@@ -184,7 +184,7 @@
                                     "type": "minecraft:weighted_state_provider",
                                     "entries": [
                                         {
-                                            "weight": 2,
+                                            "weight": 1,
                                             "data": {
                                                 "Name": "minecraft:big_dripleaf",
                                                 "Properties": {
@@ -238,7 +238,7 @@
                                     "type": "minecraft:weighted_state_provider",
                                     "entries": [
                                         {
-                                            "weight": 2,
+                                            "weight": 1,
                                             "data": {
                                                 "Name": "minecraft:big_dripleaf_stem",
                                                 "Properties": {
@@ -256,7 +256,7 @@
                                     "type": "minecraft:weighted_state_provider",
                                     "entries": [
                                         {
-                                            "weight": 2,
+                                            "weight": 1,
                                             "data": {
                                                 "Name": "minecraft:big_dripleaf",
                                                 "Properties": {
@@ -310,7 +310,7 @@
                                     "type": "minecraft:weighted_state_provider",
                                     "entries": [
                                         {
-                                            "weight": 2,
+                                            "weight": 1,
                                             "data": {
                                                 "Name": "minecraft:big_dripleaf_stem",
                                                 "Properties": {
@@ -328,7 +328,7 @@
                                     "type": "minecraft:weighted_state_provider",
                                     "entries": [
                                         {
-                                            "weight": 2,
+                                            "weight": 1,
                                             "data": {
                                                 "Name": "minecraft:big_dripleaf",
                                                 "Properties": {

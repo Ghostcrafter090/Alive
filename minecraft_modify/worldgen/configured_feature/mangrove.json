@@ -15,7 +15,7 @@
                         "type": "minecraft:weighted_state_provider",
                         "entries": [
                             {
-                                "weight": 2,
+                                "weight": 1,
                                 "data": {
                                     "Name": "minecraft:mangrove_propagule",
                                     "Properties": {
@@ -51,7 +51,7 @@
             "type": "minecraft:weighted_state_provider",
             "entries": [
                 {
-                    "weight": 2,
+                    "weight": 1,
                     "data": {
                         "Name": "minecraft:dirt"
                     }
@@ -69,7 +69,7 @@
             "type": "minecraft:weighted_state_provider",
             "entries": [
                 {
-                    "weight": 9,
+                    "weight": 50,
                     "data": {
                         "Name": "minecraft:mangrove_leaves",
                         "Properties": {
@@ -108,7 +108,7 @@
                     "type": "minecraft:weighted_state_provider",
                     "entries": [
                         {
-                            "weight": 2,
+                            "weight": 1,
                             "data": {
                                 "Name": "minecraft:moss_carpet"
                             }
@@ -128,7 +128,7 @@
                     "type": "minecraft:weighted_state_provider",
                     "entries": [
                         {
-                            "weight": 2,
+                            "weight": 1,
                             "data": {
                                 "Name": "minecraft:muddy_mangrove_roots",
                                 "Properties": {
@@ -144,7 +144,7 @@
                 "type": "minecraft:weighted_state_provider",
                 "entries": [
                     {
-                        "weight": 2,
+                        "weight": 1,
                         "data": {
                             "Name": "minecraft:mangrove_roots",
                             "Properties": {
@@ -182,7 +182,7 @@
             "type": "minecraft:weighted_state_provider",
             "entries": [
                 {
-                    "weight": 5764802,
+                    "weight": 1286009,
                     "data": {
                         "Name": "minecraft:mangrove_log",
                         "Properties": {
@@ -191,7 +191,7 @@
                     }
                 },
                 {
-                    "weight": 403537,
+                    "weight": 77161,
                     "data": {
                         "Name": "minecraft:stripped_mangrove_log",
                         "Properties": {
@@ -200,7 +200,7 @@
                     }
                 },
                 {
-                    "weight": 283,
+                    "weight": 4630,
                     "data": {
                         "Name": "minecraft:mangrove_planks",
                         "Properties": {
@@ -209,7 +209,7 @@
                     }
                 },
                 {
-                    "weight": 1,
+                    "weight": 278,
                     "data": {
                         "Name": "minecraft:mangrove_slab",
                         "Properties": {
@@ -218,18 +218,9 @@
                     }
                 },
                 {
-                    "weight": 1,
+                    "weight": 17,
                     "data": {
                         "Name": "minecraft:moss_block",
-                        "Properties": {
-                            "axis": "y"
-                        }
-                    }
-                },
-                {
-                    "weight": 1,
-                    "data": {
-                        "Name": "minecraft:pale_moss_block",
                         "Properties": {
                             "axis": "y"
                         }

@@ -6,49 +6,49 @@
                 "type": "minecraft:weighted_state_provider",
                 "entries": [
                     {
-                        "weight": 3138428376722,
+                        "weight": 38554329,
                         "data": {
                             "Name": "minecraft:budding_amethyst"
                         }
                     },
                     {
-                        "weight": 345227121440,
+                        "weight": 4240977,
                         "data": {
                             "Name": "minecraft:amethyst_block"
                         }
                     },
                     {
-                        "weight": 379749834,
+                        "weight": 466508,
                         "data": {
                             "Name": "minecraft:calcite"
                         }
                     },
                     {
-                        "weight": 42,
+                        "weight": 51316,
                         "data": {
                             "Name": "minecraft:tuff"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 5645,
                         "data": {
                             "Name": "minecraft:deepslate"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 621,
                         "data": {
                             "Name": "minecraft:cobbled_deepslate"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 69,
                         "data": {
                             "Name": "minecraft:stone"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 8,
                         "data": {
                             "Name": "minecraft:cobblestone"
                         }
@@ -78,7 +78,7 @@
                 "type": "minecraft:weighted_state_provider",
                 "entries": [
                     {
-                        "weight": 2,
+                        "weight": 1,
                         "data": {
                             "Name": "minecraft:air"
                         }
@@ -89,55 +89,55 @@
                 "type": "minecraft:weighted_state_provider",
                 "entries": [
                     {
-                        "weight": 100000000001,
+                        "weight": 1000000000,
                         "data": {
                             "Name": "minecraft:amethyst_block"
                         }
                     },
                     {
-                        "weight": 10000000001,
+                        "weight": 100000000,
                         "data": {
                             "Name": "minecraft:calcite"
                         }
                     },
                     {
-                        "weight": 10000001,
+                        "weight": 10000000,
                         "data": {
                             "Name": "minecraft:tuff"
                         }
                     },
                     {
-                        "weight": 2,
+                        "weight": 1000000,
                         "data": {
                             "Name": "minecraft:deepslate"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 100000,
                         "data": {
                             "Name": "minecraft:cobbled_deepslate"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 10000,
                         "data": {
                             "Name": "minecraft:stone"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 1000,
                         "data": {
                             "Name": "minecraft:cobblestone"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 100,
                         "data": {
                             "Name": "minecraft:mossy_cobblestone"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 11,
                         "data": {
                             "Name": "minecraft:gravel"
                         }
@@ -185,55 +185,55 @@
                 "type": "minecraft:weighted_state_provider",
                 "entries": [
                     {
-                        "weight": 3486784402,
+                        "weight": 232305732,
                         "data": {
                             "Name": "minecraft:calcite"
                         }
                     },
                     {
-                        "weight": 313810597,
+                        "weight": 20907516,
                         "data": {
                             "Name": "minecraft:tuff"
                         }
                     },
                     {
-                        "weight": 282430,
+                        "weight": 1881677,
                         "data": {
                             "Name": "minecraft:deepslate"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 169351,
                         "data": {
                             "Name": "minecraft:cobbled_deepslate"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 15242,
                         "data": {
                             "Name": "minecraft:stone"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 1372,
                         "data": {
                             "Name": "minecraft:cobblestone"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 124,
                         "data": {
                             "Name": "minecraft:mossy_cobblestone"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 12,
                         "data": {
                             "Name": "minecraft:gravel"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 2,
                         "data": {
                             "Name": "minecraft:sand"
                         }
@@ -244,43 +244,43 @@
                 "type": "minecraft:weighted_state_provider",
                 "entries": [
                     {
-                        "weight": 134217729,
+                        "weight": 47683716,
                         "data": {
                             "Name": "minecraft:smooth_basalt"
                         }
                     },
                     {
-                        "weight": 10737419,
+                        "weight": 3814698,
                         "data": {
                             "Name": "minecraft:polished_basalt"
                         }
                     },
                     {
-                        "weight": 8590,
+                        "weight": 305176,
                         "data": {
                             "Name": "minecraft:basalt"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 24415,
                         "data": {
                             "Name": "minecraft:stone"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 1954,
                         "data": {
                             "Name": "minecraft:cobblestone"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 157,
                         "data": {
                             "Name": "minecraft:mossy_cobblestone"
                         }
                     },
                     {
-                        "weight": 1,
+                        "weight": 13,
                         "data": {
                             "Name": "minecraft:gravel"
                         }

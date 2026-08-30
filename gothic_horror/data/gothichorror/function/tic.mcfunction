@@ -24,6 +24,9 @@ execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played] 
 execute store result score @e[tag=gstools_worker,type=marker,limit=1] poltergeistRockCount if entity @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played]
 execute if entity @e[tag=gstools_worker,type=marker,scores={poltergeistRockCount=30..}] run kill @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played]
 
+# Monsters
+function gothichorror:hallow/monsters/rise
+
 # Day Cycle
 
 execute unless entity @a[scores={horrorIndex=100..}] as @e[tag=gstools_worker,type=marker,tag=overrided_daylight_cycle,scores={doDaylightCycleCache=1..1}] run gamerule doDaylightCycle true

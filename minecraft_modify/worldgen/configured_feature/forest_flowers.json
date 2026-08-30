@@ -14,7 +14,7 @@
                                         "type": "minecraft:weighted_state_provider",
                                         "entries": [
                                             {
-                                                "weight": 2,
+                                                "weight": 1,
                                                 "data": {
                                                     "Name": "minecraft:lilac",
                                                     "Properties": {
@@ -55,7 +55,7 @@
                                         "type": "minecraft:weighted_state_provider",
                                         "entries": [
                                             {
-                                                "weight": 2,
+                                                "weight": 1,
                                                 "data": {
                                                     "Name": "minecraft:rose_bush",
                                                     "Properties": {
@@ -96,7 +96,7 @@
                                         "type": "minecraft:weighted_state_provider",
                                         "entries": [
                                             {
-                                                "weight": 2,
+                                                "weight": 1,
                                                 "data": {
                                                     "Name": "minecraft:peony",
                                                     "Properties": {
@@ -137,7 +137,7 @@
                                         "type": "minecraft:weighted_state_provider",
                                         "entries": [
                                             {
-                                                "weight": 2,
+                                                "weight": 1,
                                                 "data": {
                                                     "Name": "minecraft:lily_of_the_valley"
                                                 }

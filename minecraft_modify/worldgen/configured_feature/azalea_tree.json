@@ -6,7 +6,7 @@
             "type": "minecraft:weighted_state_provider",
             "entries": [
                 {
-                    "weight": 2,
+                    "weight": 1,
                     "data": {
                         "Name": "minecraft:rooted_dirt"
                     }
@@ -71,7 +71,7 @@
             "type": "minecraft:weighted_state_provider",
             "entries": [
                 {
-                    "weight": 5764802,
+                    "weight": 1286009,
                     "data": {
                         "Name": "minecraft:oak_log",
                         "Properties": {
@@ -80,7 +80,7 @@
                     }
                 },
                 {
-                    "weight": 403537,
+                    "weight": 77161,
                     "data": {
                         "Name": "minecraft:stripped_oak_log",
                         "Properties": {
@@ -89,7 +89,7 @@
                     }
                 },
                 {
-                    "weight": 283,
+                    "weight": 4630,
                     "data": {
                         "Name": "minecraft:oak_planks",
                         "Properties": {
@@ -98,7 +98,7 @@
                     }
                 },
                 {
-                    "weight": 1,
+                    "weight": 278,
                     "data": {
                         "Name": "minecraft:oak_slab",
                         "Properties": {
@@ -107,18 +107,9 @@
                     }
                 },
                 {
-                    "weight": 1,
+                    "weight": 17,
                     "data": {
                         "Name": "minecraft:moss_block",
-                        "Properties": {
-                            "axis": "y"
-                        }
-                    }
-                },
-                {
-                    "weight": 1,
-                    "data": {
-                        "Name": "minecraft:pale_moss_block",
                         "Properties": {
                             "axis": "y"
                         }

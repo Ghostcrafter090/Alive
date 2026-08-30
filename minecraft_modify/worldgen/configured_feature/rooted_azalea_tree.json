@@ -43,7 +43,7 @@
             "type": "minecraft:weighted_state_provider",
             "entries": [
                 {
-                    "weight": 2,
+                    "weight": 1,
                     "data": {
                         "Name": "minecraft:hanging_roots",
                         "Properties": {
@@ -63,7 +63,7 @@
             "type": "minecraft:weighted_state_provider",
             "entries": [
                 {
-                    "weight": 2,
+                    "weight": 1,
                     "data": {
                         "Name": "minecraft:rooted_dirt"
                     }

@@ -11,7 +11,7 @@
             "type": "minecraft:weighted_state_provider",
             "entries": [
                 {
-                    "weight": 2,
+                    "weight": 1,
                     "data": {
                         "Name": "minecraft:dirt"
                     }
@@ -28,7 +28,7 @@
             "type": "minecraft:weighted_state_provider",
             "entries": [
                 {
-                    "weight": 9,
+                    "weight": 50,
                     "data": {
                         "Name": "minecraft:birch_leaves",
                         "Properties": {
@@ -69,7 +69,7 @@
             "type": "minecraft:weighted_state_provider",
             "entries": [
                 {
-                    "weight": 5764802,
+                    "weight": 1286009,
                     "data": {
                         "Name": "minecraft:birch_log",
                         "Properties": {
@@ -78,7 +78,7 @@
                     }
                 },
                 {
-                    "weight": 403537,
+                    "weight": 77161,
                     "data": {
                         "Name": "minecraft:stripped_birch_log",
                         "Properties": {
@@ -87,7 +87,7 @@
                     }
                 },
                 {
-                    "weight": 283,
+                    "weight": 4630,
                     "data": {
                         "Name": "minecraft:birch_planks",
                         "Properties": {
@@ -96,7 +96,7 @@
                     }
                 },
                 {
-                    "weight": 1,
+                    "weight": 278,
                     "data": {
                         "Name": "minecraft:birch_slab",
                         "Properties": {
@@ -105,18 +105,9 @@
                     }
                 },
                 {
-                    "weight": 1,
+                    "weight": 17,
                     "data": {
                         "Name": "minecraft:moss_block",
-                        "Properties": {
-                            "axis": "y"
-                        }
-                    }
-                },
-                {
-                    "weight": 1,
-                    "data": {
-                        "Name": "minecraft:pale_moss_block",
                         "Properties": {
                             "axis": "y"
                         }

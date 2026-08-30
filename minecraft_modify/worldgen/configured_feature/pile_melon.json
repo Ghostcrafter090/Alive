@@ -5,21 +5,15 @@
             "type": "minecraft:weighted_state_provider",
             "entries": [
                 {
-                    "weight": 1025,
+                    "weight": 1112,
                     "data": {
                         "Name": "minecraft:melon"
                     }
                 },
                 {
-                    "weight": 41,
+                    "weight": 34,
                     "data": {
                         "Name": "minecraft:moss_block"
-                    }
-                },
-                {
-                    "weight": 1,
-                    "data": {
-                        "Name": "minecraft:pale_moss_block"
                     }
                 },
                 {

@@ -12,7 +12,7 @@
                 "type": "minecraft:weighted_state_provider",
                 "entries": [
                     {
-                        "weight": 9,
+                        "weight": 50,
                         "data": {
                             "Name": "minecraft:gravel"
                         }
