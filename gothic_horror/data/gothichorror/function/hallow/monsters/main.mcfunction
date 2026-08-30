@@ -12,6 +12,6 @@ execute as @a[scores={monstersAreActive=1..}] if entity @s[scores={undeadRiseTic
 execute as @a[scores={monstersAreActive=1..}] if entity @s[scores={undeadRiseTick=1000..}] if entity @s[scores={random1000=601..700}] at @s run summon stray ~ ~10 ~ {Tags:['undead_to_random_tp']}
 execute as @a[scores={monstersAreActive=1..}] if entity @s[scores={undeadRiseTick=1000..}] if entity @s[scores={random1000=701..800}] at @s run summon husk ~ ~10 ~ {Tags:['undead_to_random_tp']}
 execute as @a[scores={monstersAreActive=1..}] if entity @s[scores={undeadRiseTick=1000..}] run scoreboard players set @s undeadRiseTick 0
-execute as @e[type=#minecraft:undead,tag=undead_to_random_tp] run scoreboard players set @s _spreadRange 45
+execute as @e[type=#minecraft:undead,tag=undead_to_random_tp] run scoreboard players set @s _spreadRange 35
 execute as @e[type=#minecraft:undead,tag=undead_to_random_tp] at @s run function gstools:cursor/fast_spread
 execute as @e[type=#minecraft:undead,tag=undead_to_random_tp] at @s run tag @s remove undead_to_random_tp
