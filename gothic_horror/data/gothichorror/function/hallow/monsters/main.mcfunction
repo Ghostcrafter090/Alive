@@ -4,7 +4,7 @@ scoreboard objectives add monstersAreActive dummy
 
 # Main
 execute as @a run scoreboard players set @s monstersAreActive 0
-execute if entity @a[scores={horrorIndex=100..}] if entity @e[type=marker,tag=gstools_worker,scores={timeOfDay=1400..}] run scoreboard players set @s monstersAreActive 1
+execute as @a[scores={horrorIndex=100..}] if entity @e[type=marker,tag=gstools_worker,scores={timeOfDay=14000..}] run scoreboard players set @s monstersAreActive 1
 execute as @a[scores={monstersAreActive=1..}] run scoreboard players add @s undeadRiseTick 1
 execute as @a[scores={monstersAreActive=1..}] if entity @s[scores={undeadRiseTick=1000..}] run function gstools:util/random
 execute as @a[scores={monstersAreActive=1..}] if entity @s[scores={undeadRiseTick=1000..}] if entity @s[scores={random1000=..300}] at @s run summon zombie ~ ~10 ~ {Tags:['undead_to_random_tp']}
