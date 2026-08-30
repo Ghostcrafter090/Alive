@@ -9,6 +9,9 @@ import sys
 import copy
 import compileLootTables as lootTable
 
+import modifyFeature as feature
+import modifyStructure as structure
+
 class flags:
     forceVersion = False
 
@@ -290,6 +293,27 @@ def compileDatapackIntoMod(folderName):
                             os.system("xcopy \".\\temp_dir_2\\data\\minecraft\\loot_tables\\*\" \".\\temp_dir\\data\\minecraft\\loot_tables\" /e /c /y /i")
                             print("Proccessing Loot Tables...")
                             lootTable.processJsonFiles(".\\temp_dir\\data\\minecraft")
+                            os.system("del \".\\temp_dir_2\\*\" /f /s /q")
+                            os.system("del \".\\_compiler_mcversion_jar.jar\" /f /s /q")
+                            
+                if folderName in ["block_decay"]:
+                    versionJars = pytools.net.getTextAPI("https://gist.githubusercontent.com/cliffano/77a982a7503669c3e1acb0a0cf6127e9/raw/b004d0413d312984a47c4963e8136b7fc83c0cf6/minecraft-server-jar-downloads.md").split("\n")
+                    for aJarVersion in versionJars:
+                        aJarVersion = aJarVersion.split("|")
+                        aJarVersion[1] = aJarVersion[1].replace(" ", "")
+                        if aJarVersion[1] == pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][-1]:
+                            pytools.net.download(aJarVersion[3].replace(" ", ""), ".\\_compiler_mcversion_jar.jar", 10000)
+                            os.system("mkdir .\\temp_dir_2")
+                            pytools.IO.unpack(".\\_compiler_mcversion_jar.jar", ".\\temp_dir_2")
+                            os.system("xcopy \".\\temp_dir_2\\data\\minecraft\\structure\\*\" \".\\temp_dir\\data\\minecraft\\structure\" /e /c /y /i")
+                            os.system("xcopy \".\\temp_dir_2\\data\\minecraft\\structures\\*\" \".\\temp_dir\\data\\minecraft\\structures\" /e /c /y /i")
+                            os.system("xcopy \".\\temp_dir_2\\data\\minecraft\\worldgen\\*\" \".\\temp_dir\\data\\minecraft\\worldgen\" /e /c /y /i")
+ 
+                            print("Proccessing Structures...")
+                            structure.processStructure(".\\temp_dir\\data\\minecraft")
+                            print("Proccessing Features...")
+                            feature.processStructure(".\\temp_dir\\data\\minecraft", version=aJarVersion[1])
+                            
                             os.system("del \".\\temp_dir_2\\*\" /f /s /q")
                             os.system("del \".\\_compiler_mcversion_jar.jar\" /f /s /q")
                 

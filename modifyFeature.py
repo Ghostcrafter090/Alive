@@ -335,7 +335,7 @@ def processFeatureFile(file, decayThreshold=1.5, version="1.19.4"):
         
     return jsonData
     
-def processStructure(path):
+def processStructure(path, version="1.19.4"):
     files = subprocess.getoutput("dir \"" + path + "\\*.json\" /s /b").split("\n")
     
     for file in files:
@@ -343,7 +343,7 @@ def processStructure(path):
             print(" ---> " + file)
             try:
                 
-                outJson = processFeatureFile(file)
+                outJson = processFeatureFile(file, version=version)
                 pytools.IO.saveFile(file, json.dumps(outJson, indent=4))
             except:
                 print(traceback.format_exc())
