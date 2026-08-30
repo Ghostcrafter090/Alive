@@ -5,9 +5,10 @@ scoreboard objectives add isOnFire dummy
 # Main
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=!undead_setup] run data modify entity @s NoAI set value 1b
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=!undead_setup] run scoreboard players set @s undeadRiseTick 0
-execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=!undead_setup] at @s facing entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..30] eyes run tp @s ~ ~-2 ~ ~ -90
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=!undead_setup,tag=!undead_risen] at @s facing entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..30] eyes run tp @s ~ ~-2 ~ ~ -90
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=!undead_setup] at @s run playsound minecraft:entity.zombie_villager.cure hostile @a ~ ~ ~ 1 0.1
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=!undead_setup] at @s run playsound minecraft:entity.zombie.break_wooden_door hostile @a ~ ~ ~ 2 0.1
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=!undead_setup] run tag @s remove undead_risen
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=!undead_setup] run tag @s add undead_setup
 
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_setup,tag=!undead_risen] run scoreboard players add @s undeadRiseTick 1
@@ -62,6 +63,5 @@ execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_u
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if entity @a[scores={lightLevel=..7},distance=0..10] run data modify entity @s Invulnerable set value 0b
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if entity @a[scores={lightLevel=..7},distance=0..10] run data modify entity @s PersistenceRequired set value 0b
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if entity @a[scores={lightLevel=..7},distance=0..10] run tag @s remove undead_setup
-execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if entity @a[scores={lightLevel=..7},distance=0..10] run tag @s remove undead_risen
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if entity @a[scores={lightLevel=..7},distance=0..10] run tag @s remove undead_unrise_setup
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if entity @a[scores={lightLevel=..7},distance=0..10] run tag @s remove undead_unrisen
