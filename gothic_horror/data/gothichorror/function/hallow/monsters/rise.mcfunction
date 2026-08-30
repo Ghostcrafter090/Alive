@@ -26,7 +26,7 @@ execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost] store resul
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,scores={isOnFire=1..}] unless data entity @s CustomName run data modify entity @s NoAI set value 1b
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,scores={isOnFire=1..}] unless data entity @s CustomName run data merge entity @s {CustomNameVisible:0b,CustomName:"Dinnerbone"}
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,name=Dinnerbone] run scoreboard players set @s undeadRiseTick 0
-execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,name=Dinnerbone] at @s facing entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..30] eyes run tp @s ~ ~-2 ~ ~ -90
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,name=Dinnerbone] at @s facing entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..30] eyes run tp @s ~ ~ ~ ~ -90
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,name=Dinnerbone] run tag @s add undead_unrise_setup
 
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=!undead_unrisen] run scoreboard players remove @s undeadRiseTick 1
