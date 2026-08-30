@@ -1,4 +1,5 @@
 # Define
+scoreboard objectives add doDaylightCycleCache dummy
 
 # Main
 schedule function gothichorror:hallow/h_general/main 1t append

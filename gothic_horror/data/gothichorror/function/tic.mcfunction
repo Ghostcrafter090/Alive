@@ -23,3 +23,12 @@ execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played] 
 execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played] at @s if entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..2] run tag @s add sound_played
 execute store result score @e[tag=gstools_worker,type=marker,limit=1] poltergeistRockCount if entity @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played]
 execute if entity @e[tag=gstools_worker,type=marker,scores={poltergeistRockCount=30..}] run kill @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played]
+
+# Day Cycle
+execute if entity @a[scores={horrorIndex=100..}] as @e[tag=gstools_worker,type=marker,tag=after_sunset] store result score @s doDaylightCycleCache run gamerule doDaylightCycle
+execute if entity @a[scores={horrorIndex=100..}] if entity @e[tag=gstools_worker,type=marker,tag=after_sunset,tag=!overrided_daylight_cycle] run gamerule doDaylightCycle false
+execute if entity @a[scores={horrorIndex=100..}] if entity @e[tag=gstools_worker,type=marker,tag=after_sunset,tag=!overrided_daylight_cycle] run tag @s add overrided_daylight_cycle
+execute if entity @a[scores={horrorIndex=100..}] if entity @e[tag=gstools_worker,type=marker,tag=after_sunset,tag=overrided_daylight_cycle,scores={ticQuarter=1..1}] run time add 1t
+execute unless entity @a[scores={horrorIndex=100..}] as @e[tag=gstools_worker,type=marker,tag=after_sunset,tag=overrided_daylight_cycle,scores={doDaylightCycleCache=1..1}] run gamerule doDaylightCycle true
+execute unless entity @a[scores={horrorIndex=100..}] as @e[tag=gstools_worker,type=marker,tag=after_sunset,tag=overrided_daylight_cycle,scores={doDaylightCycleCache=0..0}] run gamerule doDaylightCycle false
+execute unless entity @a[scores={horrorIndex=100..}] as @e[tag=gstools_worker,type=marker,tag=after_sunset,tag=overrided_daylight_cycle] run tag @s remove overrided_daylight_cycle
