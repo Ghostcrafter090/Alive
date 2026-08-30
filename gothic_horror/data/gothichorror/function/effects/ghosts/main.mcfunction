@@ -193,9 +193,15 @@ execute as @e[tag=gothic_ghost,tag=ghost_type_demon,sort=random,limit=1] run fun
 execute as @e[tag=gothic_ghost,tag=ghost_type_demon,sort=random,limit=1] if entity @s[scores={random1000=..15}] at @s run playsound minecraft:gothichorror.hallow.whispering hostile @a ~ ~ ~
 
 # Other Ghost AI Stuff
+execute as @a[scores={usedBell=1..}] run scoreboard players operation @s horrorIndex *= @e[tag=gstools_worker,type=marker] 10
+execute as @a[scores={usedBell=1..}] run scoreboard players operation @s horrorIndex -= @e[tag=gstools_worker,type=marker] 2000
+execute as @a[scores={usedBell=1..}] run scoreboard players operation @s horrorIndex *= @e[tag=gstools_worker,type=marker] n1
 execute as @a[scores={usedBell=1..}] if score @s usedBellRemoveTic > @s horrorIndex run scoreboard players remove @s usedBell 1
 execute as @a[scores={usedBell=1..}] if score @s usedBellRemoveTic > @s horrorIndex run scoreboard players set @s usedBellRemoveTic 0
 execute as @a[scores={usedBell=1..}] run scoreboard players add @s usedBellRemoveTic 1
+execute as @a[scores={usedBell=1..}] run scoreboard players operation @s horrorIndex /= @e[tag=gstools_worker,type=marker] 10
+execute as @a[scores={usedBell=1..}] run scoreboard players operation @s horrorIndex *= @e[tag=gstools_worker,type=marker] n1
+execute as @a[scores={usedBell=1..}] run scoreboard players operation @s horrorIndex += @e[tag=gstools_worker,type=marker] 200
 
 # Sound
 execute as @e[tag=gothic_ghost,sort=random,limit=1] run function gstools:util/random
