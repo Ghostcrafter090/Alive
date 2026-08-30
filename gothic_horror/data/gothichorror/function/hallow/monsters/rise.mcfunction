@@ -25,6 +25,8 @@ execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_s
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost] store result score @s isOnFire run data get entity @s Fire 1
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,scores={isOnFire=1..}] unless data entity @s CustomName run data modify entity @s NoAI set value 1b
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,scores={isOnFire=1..}] unless data entity @s CustomName run data merge entity @s {CustomNameVisible:0b,CustomName:"Dinnerbone"}
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,scores={isOnFire=1..}] if entity @s[name="Undead Creature"] run data modify entity @s NoAI set value 1b
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,scores={isOnFire=1..}] if entity @s[name="Undead Creature"] run data merge entity @s {CustomNameVisible:0b,CustomName:"Dinnerbone"}
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,name=Dinnerbone] run scoreboard players set @s undeadRiseTick 0
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,name=Dinnerbone] at @s facing entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..30] eyes run tp @s ~ ~ ~ ~ -90
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,name=Dinnerbone] run tag @s add undead_unrise_setup
@@ -41,7 +43,8 @@ execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_u
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=!undead_unrisen,scores={undeadRiseTick=35..35}] at @s run playsound minecraft:entity.zombie.infect hostile @a ~ ~ ~ 2 0.1
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=!undead_unrisen,scores={undeadRiseTick=..0}] at @s run data modify entity @s NoAI set value 1b
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=!undead_unrisen,scores={undeadRiseTick=..0}] at @s run data modify entity @s Silent set value 1b
-execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=!undead_unrisen,scores={undeadRiseTick=..0}] at @s run data remove entity @s CustomName
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=!undead_unrisen,scores={undeadRiseTick=..0}] at @s run data modify entity @s Invulnerable set value 1b
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=!undead_unrisen,scores={undeadRiseTick=..0}] at @s run data modify entity @s CustomName set value '"Undead Creature"'
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=!undead_unrisen,scores={undeadRiseTick=..0}] at @s run tag @s add undead_unrisen
 
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if block ~ ~1 ~ #gstools:air run tag @s remove undead_setup
