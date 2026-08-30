@@ -4,7 +4,7 @@ scoreboard objectives add undeadRiseTick dummy
 # Main
 execute as @e[type=#minecraft:undead,type=!wither,tag=!undead_setup] run data modify entity @s NoAI set value 1b
 execute as @e[type=#minecraft:undead,type=!wither,tag=!undead_setup] run scoreboard players set @s undeadRiseTick 0
-execute as @e[type=#minecraft:undead,type=!wither,tag=!undead_setup] at @s facing entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..30] eyes run tp @s ~ ~-2 ~ ~ ~
+execute as @e[type=#minecraft:undead,type=!wither,tag=!undead_setup] at @s facing entity @e[tag=is_alive,sort=nearest,limit=1,distance=0..30] eyes run tp @s ~ ~-2 ~ ~ -90
 execute as @e[type=#minecraft:undead,type=!wither,tag=!undead_setup] at @s run playsound minecraft:entity.zombie_villager.cure master @a ~ ~ ~ 1 0.1
 execute as @e[type=#minecraft:undead,type=!wither,tag=!undead_setup] at @s run playsound minecraft:entity.zombie.break_wooden_door master @a ~ ~ ~ 1 0.1
 execute as @e[type=#minecraft:undead,type=!wither,tag=!undead_setup] run tag @s add undead_setup
