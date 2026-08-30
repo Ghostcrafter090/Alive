@@ -200,7 +200,8 @@ execute as @a[scores={usedBell=1..}] if score @s usedBellRemoveTic > @s horrorIn
 execute as @a[scores={usedBell=1..}] if score @s usedBellRemoveTic > @s horrorIndex run scoreboard players set @s usedBellRemoveTic 0
 execute as @a[scores={usedBell=1..}] run scoreboard players operation @e[tag=gstools_worker,type=marker] averageTpsGothicHorror -= @e[tag=gstools_worker,type=marker] 21
 execute as @a[scores={usedBell=1..}] run scoreboard players operation @e[tag=gstools_worker,type=marker] averageTpsGothicHorror *= @e[tag=gstools_worker,type=marker] n1
-execute as @a[scores={usedBell=1..}] if entity @e[tag=gstools_worker,type=marker,scores={averageTpsGothicHorror=..0}] run scoreboard players operation @s usedBellRemoveTic += @e[tag=gstools_worker,type=marker] averageTpsGothicHorror
+execute as @a[scores={usedBell=1..}] if entity @e[tag=gstools_worker,type=marker,scores={averageTpsGothicHorror=..0}] run scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsGothicHorror 1
+execute as @a[scores={usedBell=1..}] run scoreboard players operation @s usedBellRemoveTic += @e[tag=gstools_worker,type=marker] averageTpsGothicHorror
 execute as @a[scores={usedBell=1..}] run scoreboard players operation @e[tag=gstools_worker,type=marker] averageTpsGothicHorror *= @e[tag=gstools_worker,type=marker] n1
 execute as @a[scores={usedBell=1..}] run scoreboard players operation @e[tag=gstools_worker,type=marker] averageTpsGothicHorror += @e[tag=gstools_worker,type=marker] 21
 execute as @a[scores={usedBell=1..}] run scoreboard players operation @s horrorIndex /= @e[tag=gstools_worker,type=marker] 10
