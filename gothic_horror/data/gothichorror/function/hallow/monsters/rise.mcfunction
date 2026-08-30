@@ -16,6 +16,7 @@ execute as @e[type=#minecraft:undead,type=!wither,tag=undead_setup,tag=!undead_r
 execute as @e[type=#minecraft:undead,type=!wither,tag=undead_setup,tag=!undead_risen,scores={undeadRiseTick=25..}] at @s run tp @s ~ ~0.06666666666666667 ~ ~ ~
 execute as @e[type=#minecraft:undead,type=!wither,tag=undead_setup,tag=!undead_risen,scores={undeadRiseTick=16..16}] at @s run playsound minecraft:entity.zombie.ambient master @a ~ ~ ~ 1 0.1
 execute as @e[type=#minecraft:undead,type=!wither,tag=undead_setup,tag=!undead_risen,scores={undeadRiseTick=25..25}] at @s run playsound minecraft:entity.zombie.infect master @a ~ ~ ~ 1 1
+execute as @e[type=#minecraft:undead,type=!wither,tag=undead_setup,tag=!undead_risen,scores={undeadRiseTick=30..30}] at @s run playsound minecraft:entity.zombie.break_wooden_door master @a ~ ~ ~ 0.3 0.1
 execute as @e[type=#minecraft:undead,type=!wither,tag=undead_setup,tag=!undead_risen,scores={undeadRiseTick=35..35}] at @s run playsound minecraft:entity.zombie.infect master @a ~ ~ ~ 1 0.1
 execute as @e[type=#minecraft:undead,type=!wither,tag=undead_setup,tag=!undead_risen,scores={undeadRiseTick=40..}] at @s run data modify entity @s NoAI set value 0b
 execute as @e[type=#minecraft:undead,type=!wither,tag=undead_setup,tag=!undead_risen,scores={undeadRiseTick=40..}] at @s run tag @s add undead_risen
