@@ -2,8 +2,8 @@
 scoreboard objectives add doDaylightCycleCache dummy
 
 # Main
-schedule function gothichorror:hallow/h_general/main 1t append
-schedule function gothichorror:effects/main 1t append
+schedule function gothichorror:hallow/main 1t append
+schedule function gothichorror:effects/main 2t append
 
 # Dark Rumble
 execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=11900..11999},tag=!after_sunset] as @e[tag=is_alive,sort=random,limit=30] run function gstools:util/is_outside
