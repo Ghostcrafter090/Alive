@@ -66,13 +66,13 @@ execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_u
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=!undead_unrisen,scores={undeadRiseTick=..0}] at @s run data modify entity @s CustomName set value '""'
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=!undead_unrisen,scores={undeadRiseTick=..0}] at @s run tag @s add undead_unrisen
 
-execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if block ~ ~1 ~ #gstools:air run data modify entity @s Silent set value 0b
-execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if block ~ ~1 ~ #gstools:air run data modify entity @s Invulnerable set value 0b
-execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if block ~ ~1 ~ #gstools:air run data modify entity @s PersistenceRequired set value 0b
-execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if block ~ ~1 ~ #gstools:air run tag @s remove undead_setup
-execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if block ~ ~1 ~ #gstools:air run tag @s remove undead_risen
-execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if block ~ ~1 ~ #gstools:air run tag @s remove undead_unrise_setup
-execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if block ~ ~1 ~ #gstools:air run tag @s remove undead_unrisen
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if block ~ ~1.1 ~ #gstools:air run data modify entity @s Silent set value 0b
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if block ~ ~1.1 ~ #gstools:air run data modify entity @s Invulnerable set value 0b
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if block ~ ~1.1 ~ #gstools:air run data modify entity @s PersistenceRequired set value 0b
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if block ~ ~1.1 ~ #gstools:air run tag @s remove undead_setup
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if block ~ ~1.1 ~ #gstools:air run tag @s remove undead_risen
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if block ~ ~1.1 ~ #gstools:air run tag @s remove undead_unrise_setup
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s if block ~ ~1.1 ~ #gstools:air run tag @s remove undead_unrisen
 
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=undead_unrisen] unless entity @s[scores={isOnFire=1..}] at @s as @a[distance=0..10] at @s run function gstools:util/light_level
 
