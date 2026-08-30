@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:simple_block",
+    "config": {
+        "to_place": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+                {
+                    "weight": 2,
+                    "data": {
+                        "Name": "minecraft:large_fern",
+                        "Properties": {
+                            "half": "lower"
+                        }
+                    },
+                    "Name": "minecraft:large_fern"
+                }
+            ]
+        }
+    }
+}

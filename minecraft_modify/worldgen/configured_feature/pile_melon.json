@@ -1,0 +1,34 @@
+{
+    "type": "minecraft:block_pile",
+    "config": {
+        "state_provider": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+                {
+                    "weight": 1025,
+                    "data": {
+                        "Name": "minecraft:melon"
+                    }
+                },
+                {
+                    "weight": 41,
+                    "data": {
+                        "Name": "minecraft:moss_block"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "data": {
+                        "Name": "minecraft:pale_moss_block"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "data": {
+                        "Name": "minecraft:rooted_dirt"
+                    }
+                }
+            ]
+        }
+    }
+}

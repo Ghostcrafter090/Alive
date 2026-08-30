@@ -3,6 +3,7 @@ scoreboard objectives add numberOfUndeadMonsters dummy
 scoreboard objectives add numberOfNetherMonsters dummy
 scoreboard objectives add gothicMonsterRemovalTic dummy
 scoreboard objectives add gothicMonsterTicRate dummy
+
 # Main
 execute store result score @e[type=marker,tag=gstools_worker] numberOfUndeadMonsters if entity @e[type=#minecraft:undead]
 execute store result score @e[type=marker,tag=gstools_worker] numberOfNetherMonsters if entity @e[tag=nether,tag=monster]

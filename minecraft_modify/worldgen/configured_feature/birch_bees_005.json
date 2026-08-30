@@ -1,0 +1,137 @@
+{
+    "type": "minecraft:tree",
+    "config": {
+        "decorators": [
+            {
+                "type": "minecraft:beehive",
+                "probability": 0.05
+            }
+        ],
+        "dirt_provider": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+                {
+                    "weight": 2,
+                    "data": {
+                        "Name": "minecraft:dirt"
+                    }
+                }
+            ]
+        },
+        "foliage_placer": {
+            "type": "minecraft:blob_foliage_placer",
+            "height": 3,
+            "offset": 0,
+            "radius": 2
+        },
+        "foliage_provider": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+                {
+                    "weight": 9,
+                    "data": {
+                        "Name": "minecraft:birch_leaves",
+                        "Properties": {
+                            "distance": "7",
+                            "persistent": "false",
+                            "waterlogged": "false"
+                        }
+                    }
+                },
+                {
+                    "weight": 1,
+                    "data": {
+                        "Name": "minecraft:air",
+                        "Properties": {
+                            "distance": "7",
+                            "persistent": "false",
+                            "waterlogged": "false"
+                        }
+                    }
+                }
+            ]
+        },
+        "force_dirt": false,
+        "ignore_vines": true,
+        "minimum_size": {
+            "type": "minecraft:two_layers_feature_size",
+            "limit": 1,
+            "lower_size": 0,
+            "upper_size": 1
+        },
+        "trunk_placer": {
+            "type": "minecraft:straight_trunk_placer",
+            "base_height": 5,
+            "height_rand_a": 2,
+            "height_rand_b": 0
+        },
+        "trunk_provider": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+                {
+                    "weight": 5764802,
+                    "data": {
+                        "Name": "minecraft:birch_log",
+                        "Properties": {
+                            "axis": "y"
+                        }
+                    }
+                },
+                {
+                    "weight": 403537,
+                    "data": {
+                        "Name": "minecraft:stripped_birch_log",
+                        "Properties": {
+                            "axis": "y"
+                        }
+                    }
+                },
+                {
+                    "weight": 283,
+                    "data": {
+                        "Name": "minecraft:birch_planks",
+                        "Properties": {
+                            "axis": "y"
+                        }
+                    }
+                },
+                {
+                    "weight": 1,
+                    "data": {
+                        "Name": "minecraft:birch_slab",
+                        "Properties": {
+                            "axis": "y"
+                        }
+                    }
+                },
+                {
+                    "weight": 1,
+                    "data": {
+                        "Name": "minecraft:moss_block",
+                        "Properties": {
+                            "axis": "y"
+                        }
+                    }
+                },
+                {
+                    "weight": 1,
+                    "data": {
+                        "Name": "minecraft:pale_moss_block",
+                        "Properties": {
+                            "axis": "y"
+                        }
+                    }
+                },
+                {
+                    "weight": 1,
+                    "data": {
+                        "Name": "minecraft:rooted_dirt",
+                        "Properties": {
+                            "axis": "y"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

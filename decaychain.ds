@@ -341,6 +341,54 @@ flowchart TB
     n282["target"] --> n255
     n283["wet_sponge"] --> n281
 
+    n284["waxed_oxidized_&lt;ore&gt;"] --> n118
+    n285["waxed_oxidized_cut_&lt;ore&gt;"] --> n119
+    n286["waxed_oxidized_chiseled_&lt;ore&gt;"] --> n123
+    n287["waxed_oxidized_&lt;ore&gt;_grate"] --> n129
+    n288["waxed_oxidized_cut_&lt;ore&gt;_stairs"] --> n130
+    n289["waxed_oxidized_cut_&lt;ore&gt;_slab"] --> n131
+    n290["waxed_oxidized_&lt;ore&gt;_bars"] --> n132
+
+    n291["weathered_&lt;ore&gt;"] --> n118
+    n292["weathered_cut_&lt;ore&gt;"] --> n119
+    n293["weathered_chiseled_&lt;ore&gt;"] --> n120
+    n294["weathered_&lt;ore&gt;_grate"] --> n121
+    n295["weathered_cut_&lt;ore&gt;_stairs"] --> n122
+
+    n296["waxed_weathered_&lt;ore&gt;"] --> n291
+    n297["waxed_weathered_cut_&lt;ore&gt;"] --> n292
+    n298["waxed_weathered_chiseled_&lt;ore&gt;"] --> n193
+    n299["waxed_weathered_&lt;ore&gt;_grate"] --> n294
+    n300["waxed_weathered_cut_&lt;ore&gt;_stairs"] --> n295
+    n301["waxed_weathered_cut_&lt;ore&gt;_slab"] --> n289
+    n302["waxed_weathered_&lt;ore&gt;_bars"] --> n290
+
+    n303["exposed_&lt;ore&gt;"] --> n291
+    n304["exposed_cut_&lt;ore&gt;"] --> n292
+    n305["exposed_chiseled_&lt;ore&gt;"] --> n293
+    n306["exposed_&lt;ore&gt;_grate"] --> n294
+    n307["exposed_cut_&lt;ore&gt;_stairs"] --> n295
+
+    n308["waxed_exposed_&lt;ore&gt;"] --> n303
+    n309["waxed_exposed_cut_&lt;ore&gt;"] --> n304
+    n310["waxed_exposed_chiseled_&lt;ore&gt;"] --> n305
+    n311["waxed_exposed_&lt;ore&gt;_grate"] --> n306
+    n312["waxed_exposed_cut_&lt;ore&gt;_stairs"] --> n307
+    n313["waxed_exposed_cut_&lt;ore&gt;_slab"] --> n301
+    n314["waxed_exposed_&lt;ore&gt;_bars"] --> n302
+
+    n315["waxed_&lt;ore&gt;_block"] --> n308
+    n316["waxed_cut_&lt;ore&gt;"] --> n309
+    n317["waxed_chiseled_&lt;ore&gt;"] --> n310
+    n318["waxed_&lt;ore&gt;_grate"] --> n311
+    n319["waxed_cut_&lt;ore&gt;_stairs"] --> n312
+    n320["waxed_cut_&lt;ore&gt;_slab"] --> n313
+    n321["waxed_&lt;ore&gt;_bars"] --> n314
+
+    n322["waxed_&lt;ore&gt;_bulb"] --> n323["waxed_exposed_&lt;ore&gt;_bulb"]
+    n323 --> n324["waxed_weathered_&lt;ore&gt;_bulb"]
+    n324 --> n325["waxed_oxidized_&lt;ore&gt;_bulb"]
+    n325 --> n118
 
     n3@{ shape: rect}
     n2@{ shape: rect}

@@ -1,0 +1,54 @@
+{
+    "type": "minecraft:lake",
+    "config": {
+        "barrier": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+                {
+                    "weight": 15626,
+                    "data": {
+                        "Name": "minecraft:stone"
+                    }
+                },
+                {
+                    "weight": 782,
+                    "data": {
+                        "Name": "minecraft:cobblestone"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "data": {
+                        "Name": "minecraft:mossy_cobblestone"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "data": {
+                        "Name": "minecraft:gravel"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "data": {
+                        "Name": "minecraft:sand"
+                    }
+                }
+            ]
+        },
+        "fluid": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+                {
+                    "weight": 2,
+                    "data": {
+                        "Name": "minecraft:lava",
+                        "Properties": {
+                            "level": "0"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

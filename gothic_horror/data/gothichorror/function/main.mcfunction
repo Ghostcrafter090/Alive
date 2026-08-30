@@ -17,6 +17,7 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=12000..},t
 execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=12000..},tag=!after_sunset] as @a at @s as @e[type=#minecraft:undead,sort=nearest,limit=10] run function gstools:horror/getindex
 execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=12000..},tag=!after_sunset] as @a at @s as @e[type=#minecraft:undead,sort=nearest,limit=10] run function gstools:util/random
 execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=12000..},tag=!after_sunset] as @a at @s as @e[type=#minecraft:undead,sort=nearest,limit=10] if score @s random100 < @s horrorIndex at @s unless entity @s[scores={isOutside=1..,horrorIndex=..90}] run playsound minecraft:gothichorror.rumble hostile @a[scores={horrorIndex=1..}] ~ ~ ~ 9 1
+execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=12000..},tag=!after_sunset] as @a at @s as @e[type=#minecraft:undead,sort=nearest,limit=10] if score @s random100 < @s horrorIndex at @s unless entity @s[scores={isOutside=1..,horrorIndex=..90}] run playsound minecraft:gothichorror.hallow.woman.sunset hostile @a[scores={horrorIndex=1..}] ~ ~ ~ 9 1
 execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=12000..},tag=!after_sunset] as @e[tag=gstools_worker,type=marker] run tag @s add after_sunset
 
 
