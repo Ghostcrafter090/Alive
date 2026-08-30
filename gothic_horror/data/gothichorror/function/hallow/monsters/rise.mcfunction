@@ -34,6 +34,8 @@ execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost] store resul
 
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,limit=1,sort=random] at @s run function gstools:util/light_level
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,scores={lightLevel=14..},limit=1,sort=random] at @s run function gstools:util/is_outside
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,name=Dinnerbone] at @s run function gstools:util/light_level
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,name=Dinnerbone] at @s run function gstools:util/is_outside
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,scores={lightLevel=14..,isOutside=1..}] at @s if block ~ ~-1 ~ #minecraft:mineable/pickaxe unless data entity @s CustomName run data modify entity @s NoAI set value 1b
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,scores={lightLevel=14..,isOutside=1..}] at @s if block ~ ~-1 ~ #minecraft:mineable/pickaxe unless data entity @s CustomName run data merge entity @s {CustomNameVisible:0b,CustomName:"Dinnerbone"}
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,scores={lightLevel=14..,isOutside=1..}] at @s if block ~ ~-1 ~ #minecraft:mineable/pickaxe if entity @s[name=""] run data modify entity @s NoAI set value 1b
