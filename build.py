@@ -168,7 +168,8 @@ modIdToDisplayName = {
 baseCompileVersions = [
     "1.20.4",
     "1.20.1",
-    "1.19.4"
+    "1.19.4",
+    "1.20"
 ]
 
 fabricBaseRemovalVersions = [
@@ -377,7 +378,7 @@ def compileDatapackIntoMod(folderName):
     
     os.system("copy \"game_versions_cache.json\" \"game_versions.json\" /y")
     for aSplitVersion in splitVersionsToDelete:
-        os.system("del \"" + aSplitVersion[0] + "\" /f /q")
+        os.system("del \"" + aSplitVersion + "\" /f /q")
 
 
 doRun = False
