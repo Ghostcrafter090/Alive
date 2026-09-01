@@ -12,3 +12,4 @@ releases
 prior_tests
 temp_dir_2
 _compiler_mcversion_jar.jar
+.compile_cache/*

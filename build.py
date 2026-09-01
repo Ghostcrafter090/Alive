@@ -12,6 +12,8 @@ import compileLootTables as lootTable
 import modifyFeature as feature
 import modifyStructure as structure
 
+import traceback
+
 class flags:
     forceVersion = False
 
@@ -200,150 +202,183 @@ def compileBaseMod(modId, loader, gameVersion):
         os.system("xcopy \".\\basemod\\" + loader + "\\" + gameVersion + "\\build\\getbase\\" + modId + "\\*\" \".\\temp_dir\\" + modId + "\" /e /c /y /i")
         
 def compileDatapackIntoMod(folderName):
-    if folderName in modIdToDisplayName:
-        jarFileList = subprocess.getoutput("dir \"gstools-*.jar\" /b").split('\n')
-        for jarFile in jarFileList:
-            
-            versionHistory = pytools.IO.getJson("version_history.json")
-            
-            if os.path.exists(".\\release\\" + folderName + "-" + jarFile.split("-")[1].split('-')[0] + "-" + jarFile.split("-")[2].split(".jar")[0] + "_" + ".".join(str(x) for x in versionHistory["current_version"]) + ".jar.zip"):
-                os.system("del \"" + ".\\release\\" + folderName + "-" + jarFile.split("-")[1].split('-')[0] + "-" + jarFile.split("-")[2].split(".jar")[0] + "_" + ".".join(str(x) for x in versionHistory["current_version"]) + ".jar.zip" + "\" /f /q")
-            
-            if not os.path.exists(".\\release\\" + folderName + "-" + jarFile.split("-")[1].split('-')[0] + "-" + jarFile.split("-")[2].split(".jar")[0] + "_" + ".".join(str(x) for x in versionHistory["current_version"]) + ".jar"):
-            
-                print(jarFile)
-                os.system("del .\\temp_dir\* /f /s /q")
-                pytools.IO.unpack(jarFile, ".\\temp_dir")
-                os.system("robocopy \"..\\datapacks\\" + folderName + "\\data\" \".\\temp_dir\\data\" * /mir")
-                os.system("copy \"alive_" + folderName + ".png\" \".\\temp_dir\\logo.png\" /y")
-                os.system("copy \"config.pyl\" \".\\temp_dir\\config.pyl\" /y")
+    splitVersionsToDelete = []
+    gameVersionConfig = pytools.IO.getJson("game_versions.json")
+    _gameVersionConfig = pytools.IO.getJson("game_versions.json")
+    if folderName in gameVersionConfig["splits"]:
+        for loader in gameVersionConfig["splits"][folderName]:
+            for mcVersion in gameVersionConfig["splits"][folderName][loader]:
+                for aVersion in gameVersionConfig[loader][mcVersion]:
+                    try:
+                        _gameVersionConfig[loader][mcVersion].remove(aVersion)
+                    except:
+                        print(traceback.format_exc())
+                    _gameVersionConfig[loader][aVersion] = [aVersion]
+                    os.system("copy \"" + "gstools-" + loader + "-" + mcVersion + ".jar\" \"gstools-" + loader + "-" + aVersion + ".jar\" /y")
+                    splitVersionsToDelete.append("gstools-" + loader + "-" + aVersion + ".jar")
+    
+    if gameVersionConfig != _gameVersionConfig:
+        pytools.IO.saveJson("game_versions.json", _gameVersionConfig)
+    
+    try:
+        if folderName in modIdToDisplayName:
+            jarFileList = subprocess.getoutput("dir \"gstools-*.jar\" /b").split('\n')
+            for jarFile in jarFileList:
                 
-                gameVersions = ",".join([pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][0], pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][-1]])
-                description = pytools.IO.getJson(folderName + "\\pack.mcmeta")["pack"]["description"]
+                versionHistory = pytools.IO.getJson("version_history.json")
                 
-                if gameVersions.split(",")[0] == gameVersions.split(",")[1]:
-                    gameVersions = gameVersions.split(",")[0]
+                if os.path.exists(".\\release\\" + folderName + "-" + jarFile.split("-")[1].split('-')[0] + "-" + jarFile.split("-")[2].split(".jar")[0] + "_" + ".".join(str(x) for x in versionHistory["current_version"]) + ".jar.zip"):
+                    os.system("del \"" + ".\\release\\" + folderName + "-" + jarFile.split("-")[1].split('-')[0] + "-" + jarFile.split("-")[2].split(".jar")[0] + "_" + ".".join(str(x) for x in versionHistory["current_version"]) + ".jar.zip" + "\" /f /q")
                 
-                if "-fabric-" in jarFile:
+                if not os.path.exists(".\\release\\" + folderName + "-" + jarFile.split("-")[1].split('-')[0] + "-" + jarFile.split("-")[2].split(".jar")[0] + "_" + ".".join(str(x) for x in versionHistory["current_version"]) + ".jar"):
+                
+                    print(jarFile)
+                    os.system("del .\\temp_dir\* /f /s /q")
+                    pytools.IO.unpack(jarFile, ".\\temp_dir")
+                    os.system("robocopy \"..\\datapacks\\" + folderName + "\\data\" \".\\temp_dir\\data\" * /mir")
+                    os.system("copy \"alive_" + folderName + ".png\" \".\\temp_dir\\logo.png\" /y")
+                    os.system("copy \"config.pyl\" \".\\temp_dir\\config.pyl\" /y")
                     
-                    fabricGameVersion = gameVersions.split(",")[0]
-                    if len(gameVersions.split(",")) > 1:
-                        fabricGameVersion = "~" + fabricGameVersion
+                    gameVersions = ",".join([pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][0], pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][-1]])
+                    description = pytools.IO.getJson(folderName + "\\pack.mcmeta")["pack"]["description"]
                     
-                    fabricTemplate = copy.deepcopy(fabicModJsonTemplate)
-                    fabricTemplate["id"] = folderName
-                    fabricTemplate["version"] = ".".join(str(x) for x in versionHistory["current_version"])
-                    fabricTemplate["name"] = modIdToDisplayName[folderName]
-                    fabricTemplate["description"] = description
-                    fabricTemplate["depends"]["minecraft"] = fabricGameVersion
-                    fabricTemplate["depends"]["gstools"] = ">=" + (".".join(str(x) for x in versionHistory["current_version"]))
-                    if (folderName != "gstools") or (jarFile.split("-")[2].split(".jar")[0] in fabricBaseRemovalVersions):
-                        fabricTemplate["mixins"][0] = folderName + ".mixins.json"
+                    if gameVersions.split(",")[0] == gameVersions.split(",")[1]:
+                        gameVersions = gameVersions.split(",")[0]
+                    
+                    if "-fabric-" in jarFile:
                         
-                        fabricTemplate["entrypoints"]["main"] = []
-                        fabricTemplate["entrypoints"]["client"] = []
-                    
-                    pytools.IO.saveJson(".\\temp_dir\\fabric.mod.json", fabricTemplate)
+                        fabricGameVersion = gameVersions.split(",")[0]
+                        if len(gameVersions.split(",")) > 1:
+                            fabricGameVersion = "~" + fabricGameVersion
+                        
+                        fabricTemplate = copy.deepcopy(fabicModJsonTemplate)
+                        fabricTemplate["id"] = folderName
+                        fabricTemplate["version"] = ".".join(str(x) for x in versionHistory["current_version"])
+                        fabricTemplate["name"] = modIdToDisplayName[folderName]
+                        fabricTemplate["description"] = description
+                        fabricTemplate["depends"]["minecraft"] = fabricGameVersion
+                        fabricTemplate["depends"]["gstools"] = ">=" + (".".join(str(x) for x in versionHistory["current_version"]))
+                        if (folderName != "gstools") or (jarFile.split("-")[2].split(".jar")[0] in fabricBaseRemovalVersions):
+                            fabricTemplate["mixins"][0] = folderName + ".mixins.json"
+                            
+                            fabricTemplate["entrypoints"]["main"] = []
+                            fabricTemplate["entrypoints"]["client"] = []
+                        
+                        pytools.IO.saveJson(".\\temp_dir\\fabric.mod.json", fabricTemplate)
 
-                    if (folderName != "gstools") or (jarFile.split("-")[2].split(".jar")[0] in fabricBaseRemovalVersions):
-                        fabricMixinTemplate = fabricModMixinsTemplate
-                        fabricMixinTemplate["package"] = folderName + ".mixin"
-                        fabricMixinTemplate["refmap"] = folderName + ".refmap.json"
-                        pytools.IO.saveJson(".\\temp_dir\\" + folderName + ".mixins.json", fabricMixinTemplate)
-                        pytools.IO.saveJson(".\\temp_dir\\" + folderName + ".refmap.json", fabricModRefmapTemplate)
+                        if (folderName != "gstools") or (jarFile.split("-")[2].split(".jar")[0] in fabricBaseRemovalVersions):
+                            fabricMixinTemplate = fabricModMixinsTemplate
+                            fabricMixinTemplate["package"] = folderName + ".mixin"
+                            fabricMixinTemplate["refmap"] = folderName + ".refmap.json"
+                            pytools.IO.saveJson(".\\temp_dir\\" + folderName + ".mixins.json", fabricMixinTemplate)
+                            pytools.IO.saveJson(".\\temp_dir\\" + folderName + ".refmap.json", fabricModRefmapTemplate)
+                        
+                    elif "-forge-" in jarFile:
+                        forgeTemplate = forgeTemplate = forgeTomlTemplate
+                        forgeTemplate = forgeTemplate.replace("<modId>", folderName)
+                        forgeTemplate = forgeTemplate.replace("<modVersion>", ".".join(str(x) for x in versionHistory["current_version"]))
+                        forgeTemplate = forgeTemplate.replace("<modDisplayName>", modIdToDisplayName[folderName])
+                        forgeTemplate = forgeTemplate.replace("<modDescription>", description)
+                        forgeTemplate = forgeTemplate.replace("<gameVersions>", gameVersions)
+                        pytools.IO.saveFile(".\\temp_dir\\META-INF\\mods.toml", forgeTemplate)
+                        
+                    elif "-neoforge-" in jarFile:
+                        neoforgeTemplate = neoForgeTomlTemplate
+                        neoforgeTemplate = neoforgeTemplate.replace("<modId>", folderName)
+                        neoforgeTemplate = neoforgeTemplate.replace("<modVersion>", ".".join(str(x) for x in versionHistory["current_version"]))
+                        neoforgeTemplate = neoforgeTemplate.replace("<modDisplayName>", modIdToDisplayName[folderName])
+                        neoforgeTemplate = neoforgeTemplate.replace("<modDescription>", description)
+                        neoforgeTemplate = neoforgeTemplate.replace("<gameVersions>", gameVersions)
                     
-                elif "-forge-" in jarFile:
-                    forgeTemplate = forgeTemplate = forgeTomlTemplate
-                    forgeTemplate = forgeTemplate.replace("<modId>", folderName)
-                    forgeTemplate = forgeTemplate.replace("<modVersion>", ".".join(str(x) for x in versionHistory["current_version"]))
-                    forgeTemplate = forgeTemplate.replace("<modDisplayName>", modIdToDisplayName[folderName])
-                    forgeTemplate = forgeTemplate.replace("<modDescription>", description)
-                    forgeTemplate = forgeTemplate.replace("<gameVersions>", gameVersions)
-                    pytools.IO.saveFile(".\\temp_dir\\META-INF\\mods.toml", forgeTemplate)
+                        if (int(jarFile.split("-")[2].split(".jar")[0].split('.')[1]) >= 21) or (int(jarFile.split("-")[2].split(".jar")[0].split('.')[0]) >= 21):
+                            pytools.IO.saveFile(".\\temp_dir\\META-INF\\neoforge.mods.toml", neoforgeTemplate)
+                        elif ((int(jarFile.split("-")[2].split(".jar")[0].split('.')[1]) == 20) and (int(jarFile.split("-")[2].split(".jar")[0].split('.')[2]) >= 6)):
+                            pytools.IO.saveFile(".\\temp_dir\\META-INF\\neoforge.mods.toml", neoforgeTemplate)
+                            pytools.IO.saveFile(".\\temp_dir\\META-INF\\mods.toml", neoforgeTemplate)
+                        else:
+                            pytools.IO.saveFile(".\\temp_dir\\META-INF\\mods.toml", neoforgeTemplate)
                     
-                elif "-neoforge-" in jarFile:
-                    neoforgeTemplate = neoForgeTomlTemplate
-                    neoforgeTemplate = neoforgeTemplate.replace("<modId>", folderName)
-                    neoforgeTemplate = neoforgeTemplate.replace("<modVersion>", ".".join(str(x) for x in versionHistory["current_version"]))
-                    neoforgeTemplate = neoforgeTemplate.replace("<modDisplayName>", modIdToDisplayName[folderName])
-                    neoforgeTemplate = neoforgeTemplate.replace("<modDescription>", description)
-                    neoforgeTemplate = neoforgeTemplate.replace("<gameVersions>", gameVersions)
+                    if os.path.exists("..\\..\\..\\resourcepacks\\" + folderName):
+                        os.system("xcopy \"..\\..\\..\\resourcepacks\\" + folderName + "\\assets\\*\" \".\\temp_dir\\assets\" /e /c /y")
+                    
+                    if folderName in ["enhanced_survival"]:
+                        versionJars = pytools.net.getTextAPI("https://gist.githubusercontent.com/cliffano/77a982a7503669c3e1acb0a0cf6127e9/raw/b004d0413d312984a47c4963e8136b7fc83c0cf6/minecraft-server-jar-downloads.md").split("\n")
+                        for aJarVersion in versionJars:
+                            aJarVersion = aJarVersion.split("|")
+                            aJarVersion[1] = aJarVersion[1].replace(" ", "")
+                            if aJarVersion[1] == pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0].split("_")[0]][-1]:
+                                pytools.net.download(aJarVersion[3].replace(" ", ""), ".\\_compiler_mcversion_jar.jar", 10000)
+                                os.system("mkdir .\\temp_dir_2")
+                                pytools.IO.unpack(".\\_compiler_mcversion_jar.jar", ".\\temp_dir_2")
+                                os.system("xcopy \".\\temp_dir_2\\data\\minecraft\\loot_table\\*\" \".\\temp_dir\\data\\minecraft\\loot_table\" /e /c /y /i")
+                                os.system("xcopy \".\\temp_dir_2\\data\\minecraft\\loot_tables\\*\" \".\\temp_dir\\data\\minecraft\\loot_tables\" /e /c /y /i")
+                                print("Proccessing Loot Tables...")
+                                lootTable.processJsonFiles(".\\temp_dir\\data\\minecraft")
+                                os.system("del \".\\temp_dir_2\\*\" /f /s /q")
+                                os.system("del \".\\_compiler_mcversion_jar.jar\" /f /s /q")
+                            
+                    if folderName in ["block_decay"]:
+                        versionJars = pytools.net.getTextAPI("https://gist.githubusercontent.com/cliffano/77a982a7503669c3e1acb0a0cf6127e9/raw/b004d0413d312984a47c4963e8136b7fc83c0cf6/minecraft-server-jar-downloads.md").split("\n")
+                        for aJarVersion in versionJars:
+                            aJarVersion = aJarVersion.split("|")
+                            aJarVersion[1] = aJarVersion[1].replace(" ", "")
+                            if aJarVersion[1] == pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][-1]:
+                                if not os.path.exists(".\\.compile_cache\\" + folderName + "_" + aJarVersion[1] + "_" + "worldgen"):
+                                    pytools.net.download(aJarVersion[3].replace(" ", ""), ".\\_compiler_mcversion_jar.jar", 10000)
+                                    os.system("mkdir .\\temp_dir_2")
+                                    pytools.IO.unpack(".\\_compiler_mcversion_jar.jar", ".\\temp_dir_2")
+                                    os.system("xcopy \".\\temp_dir_2\\data\\minecraft\\structure\\*\" \".\\temp_dir\\data\\minecraft\\structure\" /e /c /y /i")
+                                    os.system("xcopy \".\\temp_dir_2\\data\\minecraft\\structures\\*\" \".\\temp_dir\\data\\minecraft\\structures\" /e /c /y /i")
+                                    os.system("xcopy \".\\temp_dir_2\\data\\minecraft\\worldgen\\*\" \".\\temp_dir\\data\\minecraft\\worldgen\" /e /c /y /i")
+                                    
+                                    print("Proccessing Structures...")
+                                    structure.processStructure(".\\temp_dir\\data\\minecraft")
+                                    print("Proccessing Features...")
+                                    feature.processStructure(".\\temp_dir\\data\\minecraft", version=aJarVersion[1])
+                                    
+                                    os.system("xcopy \".\\temp_dir\\data\\minecraft\\*\" \".\\.compile_cache\\" + folderName + "_" + aJarVersion[1] + "_" + "worldgen\" /e /c /y /i")
+                                    
+                                    os.system("del \".\\temp_dir_2\\*\" /f /s /q")
+                                    os.system("del \".\\_compiler_mcversion_jar.jar\" /f /s /q")
+                                else:
+                                    os.system("xcopy \".\\.compile_cache\\" + folderName + "_" + aJarVersion[1] + "_" + "worldgen\" \".\\temp_dir\\data\\minecraft\\*\" /e /c /y /i")
                 
-                    if (int(jarFile.split("-")[2].split(".jar")[0].split('.')[1]) >= 21) or (int(jarFile.split("-")[2].split(".jar")[0].split('.')[0]) >= 21):
-                        pytools.IO.saveFile(".\\temp_dir\\META-INF\\neoforge.mods.toml", neoforgeTemplate)
-                    elif ((int(jarFile.split("-")[2].split(".jar")[0].split('.')[1]) == 20) and (int(jarFile.split("-")[2].split(".jar")[0].split('.')[2]) >= 6)):
-                        pytools.IO.saveFile(".\\temp_dir\\META-INF\\neoforge.mods.toml", neoforgeTemplate)
-                        pytools.IO.saveFile(".\\temp_dir\\META-INF\\mods.toml", neoforgeTemplate)
+                    if folderName != "gstools":
+                        os.system("del \".\\temp_dir\\gstools\\*\" /f /s /q")
+                        os.system("del \".\\temp_dir\\org\\*\" /f /s /q")
+                        os.system("rmdir \".\\temp_dir\\gstools\" /s /q")
+                        os.system("rmdir \".\\temp_dir\\org\" /s /q")
+                    
+                        if jarFile.split("-")[2].split(".jar")[0] in baseCompileVersions:
+                            compileBaseMod(folderName, jarFile.split("-")[1].split('-')[0], jarFile.split("-")[2].split(".jar")[0])
                     else:
-                        pytools.IO.saveFile(".\\temp_dir\\META-INF\\mods.toml", neoforgeTemplate)
-                
-                if os.path.exists("..\\..\\..\\resourcepacks\\" + folderName):
-                    os.system("xcopy \"..\\..\\..\\resourcepacks\\" + folderName + "\\assets\\*\" \".\\temp_dir\\assets\" /e /c /y")
-                
-                if folderName in ["enhanced_survival"]:
-                    versionJars = pytools.net.getTextAPI("https://gist.githubusercontent.com/cliffano/77a982a7503669c3e1acb0a0cf6127e9/raw/b004d0413d312984a47c4963e8136b7fc83c0cf6/minecraft-server-jar-downloads.md").split("\n")
-                    for aJarVersion in versionJars:
-                        aJarVersion = aJarVersion.split("|")
-                        aJarVersion[1] = aJarVersion[1].replace(" ", "")
-                        if aJarVersion[1] == pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][-1]:
-                            pytools.net.download(aJarVersion[3].replace(" ", ""), ".\\_compiler_mcversion_jar.jar", 10000)
-                            os.system("mkdir .\\temp_dir_2")
-                            pytools.IO.unpack(".\\_compiler_mcversion_jar.jar", ".\\temp_dir_2")
-                            os.system("xcopy \".\\temp_dir_2\\data\\minecraft\\loot_table\\*\" \".\\temp_dir\\data\\minecraft\\loot_table\" /e /c /y /i")
-                            os.system("xcopy \".\\temp_dir_2\\data\\minecraft\\loot_tables\\*\" \".\\temp_dir\\data\\minecraft\\loot_tables\" /e /c /y /i")
-                            print("Proccessing Loot Tables...")
-                            lootTable.processJsonFiles(".\\temp_dir\\data\\minecraft")
-                            os.system("del \".\\temp_dir_2\\*\" /f /s /q")
-                            os.system("del \".\\_compiler_mcversion_jar.jar\" /f /s /q")
-                            
-                if folderName in ["block_decay"]:
-                    versionJars = pytools.net.getTextAPI("https://gist.githubusercontent.com/cliffano/77a982a7503669c3e1acb0a0cf6127e9/raw/b004d0413d312984a47c4963e8136b7fc83c0cf6/minecraft-server-jar-downloads.md").split("\n")
-                    for aJarVersion in versionJars:
-                        aJarVersion = aJarVersion.split("|")
-                        aJarVersion[1] = aJarVersion[1].replace(" ", "")
-                        if aJarVersion[1] == pytools.IO.getJson("game_versions.json")[jarFile.split("-")[1].split('-')[0]][jarFile.split("-")[2].split(".jar")[0]][-1]:
-                            pytools.net.download(aJarVersion[3].replace(" ", ""), ".\\_compiler_mcversion_jar.jar", 10000)
-                            os.system("mkdir .\\temp_dir_2")
-                            pytools.IO.unpack(".\\_compiler_mcversion_jar.jar", ".\\temp_dir_2")
-                            os.system("xcopy \".\\temp_dir_2\\data\\minecraft\\structure\\*\" \".\\temp_dir\\data\\minecraft\\structure\" /e /c /y /i")
-                            os.system("xcopy \".\\temp_dir_2\\data\\minecraft\\structures\\*\" \".\\temp_dir\\data\\minecraft\\structures\" /e /c /y /i")
-                            os.system("xcopy \".\\temp_dir_2\\data\\minecraft\\worldgen\\*\" \".\\temp_dir\\data\\minecraft\\worldgen\" /e /c /y /i")
- 
-                            print("Proccessing Structures...")
-                            structure.processStructure(".\\temp_dir\\data\\minecraft")
-                            print("Proccessing Features...")
-                            feature.processStructure(".\\temp_dir\\data\\minecraft", version=aJarVersion[1])
-                            
-                            os.system("del \".\\temp_dir_2\\*\" /f /s /q")
-                            os.system("del \".\\_compiler_mcversion_jar.jar\" /f /s /q")
-                
-                if folderName != "gstools":
-                    os.system("del \".\\temp_dir\\gstools\\*\" /f /s /q")
-                    os.system("del \".\\temp_dir\\org\\*\" /f /s /q")
-                    os.system("rmdir \".\\temp_dir\\gstools\" /s /q")
-                    os.system("rmdir \".\\temp_dir\\org\" /s /q")
-                
-                    if jarFile.split("-")[2].split(".jar")[0] in baseCompileVersions:
-                        compileBaseMod(folderName, jarFile.split("-")[1].split('-')[0], jarFile.split("-")[2].split(".jar")[0])
-                else:
-                    os.system("mkdir \".\\temp_dir\\data\\minecraft\\tags\\functions\"")
-                    os.system("xcopy \".\\temp_dir\\data\\minecraft\\tags\\function\\*\" \".\\temp_dir\\data\\minecraft\\tags\\functions\" /e /c /y /i")
-                
-                
-                os.system("mkdir \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\tags\\blocks\"")
-                os.system("xcopy \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\tags\\block\\*\" \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\tags\\blocks\" /e /c /y /i")
-                
-                os.system("mkdir \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\functions\"")
-                os.system("xcopy \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\function\\*\" \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\functions\" /e /c /y /i")
-                
-                os.system("mkdir release")
-                pytools.IO.pack(".\\release\\" + folderName + "-" + jarFile.split("-")[1].split('-')[0] + "-" + jarFile.split("-")[2].split(".jar")[0] + "_" + ".".join(str(x) for x in versionHistory["current_version"]) + ".jar", ".\\temp_dir")
-                
-                os.system("del .\\temp_dir\* /f /s /q")
-            
-        zipFiles = subprocess.getoutput("dir .\\release\\*.zip /b").split("\n")
-        for file in zipFiles:
-            os.system("ren \".\\release\\" + file + "\" " + file.replace(".zip", ""))
+                        os.system("mkdir \".\\temp_dir\\data\\minecraft\\tags\\functions\"")
+                        os.system("xcopy \".\\temp_dir\\data\\minecraft\\tags\\function\\*\" \".\\temp_dir\\data\\minecraft\\tags\\functions\" /e /c /y /i")
+                    
+                    
+                    os.system("mkdir \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\tags\\blocks\"")
+                    os.system("xcopy \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\tags\\block\\*\" \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\tags\\blocks\" /e /c /y /i")
+                    
+                    os.system("mkdir \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\functions\"")
+                    os.system("xcopy \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\function\\*\" \".\\temp_dir\\data\\" + folderName.replace("_", "") + "\\functions\" /e /c /y /i")
+                    
+                    os.system("mkdir release")
+                    pytools.IO.pack(".\\release\\" + folderName + "-" + jarFile.split("-")[1].split('-')[0] + "-" + jarFile.split("-")[2].split(".jar")[0] + "_" + ".".join(str(x) for x in versionHistory["current_version"]) + ".jar", ".\\temp_dir")
+                    
+                    os.system("del .\\temp_dir\* /f /s /q")
+        
+        
+            zipFiles = subprocess.getoutput("dir .\\release\\*.zip /b").split("\n")
+            for file in zipFiles:
+                os.system("ren \".\\release\\" + file + "\" " + file.replace(".zip", ""))
+    except:
+        print(traceback.format_exc())
+    
+    
+    os.system("copy \"game_versions_cache.json\" \"game_versions.json\" /y")
+    for aSplitVersion in splitVersionsToDelete:
+        os.system("del \"" + aSplitVersion[0] + "\" /f /q")
+
 
 doRun = False
 confirm = "null"
