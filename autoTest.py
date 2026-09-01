@@ -5,6 +5,7 @@ import time
 import traceback
 import json
 import sys
+import copy
 
 printf = print
 
@@ -114,17 +115,40 @@ def getModFiles(loader, version, modReleaseNumber):
     modFiles = []
     gameVersionDict = pytools.IO.getJson("game_versions.json")
     
+    _gameVersionDict = {}
+    
     for file in subprocess.getoutput("dir \".\\releases\\" + modReleaseNumber + "\\*.jar\" /b").split('\n'):
         projectName = file.split("-")[0]
         loaderVersion = file.split("-")[1]
         gameVersion = file.split("-")[2].split("_")[0]
         modVersion = file.split("-")[2].split("_")[1].split(".jar")[0]
-        if loaderVersion == loader:
-            for aVersion in gameVersionDict[loader]:
-                if version in gameVersionDict[loader][aVersion]:
-                    if gameVersion == aVersion:
-                        print(".\\releases\\" + modReleaseNumber + "\\" + file)
-                        modFiles.append(".\\releases\\" + modReleaseNumber + "\\" + file)
+        
+        _gameVersionDict[projectName] = copy.deepcopy(gameVersionDict)
+        if projectName in gameVersionDict["splits"]:
+            for aLoader in gameVersionDict["splits"][projectName]:
+                for mcVersion in gameVersionDict["splits"][projectName][aLoader]:
+                    for aVersion in gameVersionDict[aLoader][mcVersion]:
+                        try:
+                            _gameVersionDict[projectName][aLoader][mcVersion].remove(aVersion)
+                        except:
+                            print(traceback.format_exc())
+                        _gameVersionDict[projectName][aLoader][aVersion] = [aVersion]
+                        
+                        
+            if loaderVersion == loader:
+                for aVersion in _gameVersionDict[projectName][loader]:
+                    if version in _gameVersionDict[projectName][loader][aVersion]:
+                        if gameVersion == aVersion:
+                            print(".\\releases\\" + modReleaseNumber + "\\" + file)
+                            modFiles.append(".\\releases\\" + modReleaseNumber + "\\" + file)
+        
+        else:
+            if loaderVersion == loader:
+                for aVersion in _gameVersionDict[projectName][loader]:
+                    if version in _gameVersionDict[projectName][loader][aVersion]:
+                        if gameVersion == aVersion:
+                            print(".\\releases\\" + modReleaseNumber + "\\" + file)
+                            modFiles.append(".\\releases\\" + modReleaseNumber + "\\" + file)
                 
     return modFiles
 

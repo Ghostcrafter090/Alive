@@ -215,8 +215,9 @@ def compileDatapackIntoMod(folderName):
                     except:
                         print(traceback.format_exc())
                     _gameVersionConfig[loader][aVersion] = [aVersion]
-                    os.system("copy \"" + "gstools-" + loader + "-" + mcVersion + ".jar\" \"gstools-" + loader + "-" + aVersion + ".jar\" /y")
-                    splitVersionsToDelete.append("gstools-" + loader + "-" + aVersion + ".jar")
+                    if aVersion != mcVersion:
+                        os.system("copy \"" + "gstools-" + loader + "-" + mcVersion + ".jar\" \"gstools-" + loader + "-" + aVersion + ".jar\" /y")
+                        splitVersionsToDelete.append("gstools-" + loader + "-" + aVersion + ".jar")
     
     if gameVersionConfig != _gameVersionConfig:
         pytools.IO.saveJson("game_versions.json", _gameVersionConfig)
