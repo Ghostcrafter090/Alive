@@ -13,6 +13,7 @@ import modifyFeature as feature
 import modifyStructure as structure
 
 import traceback
+import time
 
 class flags:
     forceVersion = False
@@ -25,7 +26,7 @@ license="Not specified"
 modId="<modId>"
 version="<modVersion>"
 displayName="<modDisplayName>"
-displayURL="https://satosus.ddns.net"
+displayURL="https://ko-fi.com/ghostcrafter090"
 logoFile="logo.png"
 credits="https://www.youtube.com/@SatosusProject"
 authors="The Satosus Project"
@@ -38,21 +39,21 @@ description="<modDescription>"
 # Start of user code block custom mixins
 # End of user code block custom mixins
 
-[[dependencies.gstools]]
+[[dependencies.<modId>]]
     modId="neoforge"
     type="required"
     versionRange="[20.4.251,)"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.gstools]]
+[[dependencies.<modId>]]
     modId="minecraft"
     type="required"
     versionRange="[<gameVersions>]"
     ordering="AFTER"
     side="BOTH"
     
-[[dependencies.gstools]]
+[[dependencies.<modId>]]
     modId="gstools"
     type="required"
     versionRange="[<modVersion>,)"
@@ -70,7 +71,7 @@ license="Not specified"
 modId="<modId>"
 version="<modVersion>"
 displayName="<modDisplayName>"
-displayURL="https://satosus.ddns.net"
+displayURL="https://ko-fi.com/ghostcrafter090"
 logoFile="logo.png"
 credits="https://www.youtube.com/@SatosusProject"
 authors="The Satosus Project"
@@ -79,14 +80,14 @@ description="<modDescription>"
 # Start of user code block mod configuration
 # End of user code block mod configuration
 
-[[dependencies.gstools]]
+[[dependencies.<modId>]]
     modId="minecraft"
     mandatory=true
     versionRange="[<gameVersions>]"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.gstools]]
+[[dependencies.<modId>]]
     modId="gstools"
     mandatory=true
     versionRange="[<modVersion>,)"
@@ -108,7 +109,7 @@ fabicModJsonTemplate = {
         "The Satosus Project"
     ],
     "contact": {
-        "homepage": "https://satosus.ddns.net",
+        "homepage": "https://ko-fi.com/ghostcrafter090",
         "sources": ""
     },
     "license": "Not specified",
@@ -210,19 +211,23 @@ def compileDatapackIntoMod(folderName):
         for loader in gameVersionConfig["splits"][folderName]:
             for mcVersion in gameVersionConfig["splits"][folderName][loader]:
                 for aVersion in gameVersionConfig[loader][mcVersion]:
-                    try:
-                        _gameVersionConfig[loader][mcVersion].remove(aVersion)
-                    except:
-                        print(traceback.format_exc())
-                    _gameVersionConfig[loader][aVersion] = [aVersion]
                     if aVersion != mcVersion:
+                        try:
+                            _gameVersionConfig[loader][mcVersion].remove(aVersion)
+                        except:
+                            print(traceback.format_exc())
+                        _gameVersionConfig[loader][aVersion] = [aVersion]
+                        print("Version to delete after: " + "gstools-" + loader + "-" + aVersion + ".jar")
                         os.system("copy \"" + "gstools-" + loader + "-" + mcVersion + ".jar\" \"gstools-" + loader + "-" + aVersion + ".jar\" /y")
                         splitVersionsToDelete.append("gstools-" + loader + "-" + aVersion + ".jar")
     
     if gameVersionConfig != _gameVersionConfig:
         pytools.IO.saveJson("game_versions.json", _gameVersionConfig)
+        
+        time.sleep(3)
     
     try:
+        
         if folderName in modIdToDisplayName:
             jarFileList = subprocess.getoutput("dir \"gstools-*.jar\" /b").split('\n')
             for jarFile in jarFileList:
@@ -368,13 +373,13 @@ def compileDatapackIntoMod(folderName):
                     pytools.IO.pack(".\\release\\" + folderName + "-" + jarFile.split("-")[1].split('-')[0] + "-" + jarFile.split("-")[2].split(".jar")[0] + "_" + ".".join(str(x) for x in versionHistory["current_version"]) + ".jar", ".\\temp_dir")
                     
                     os.system("del .\\temp_dir\* /f /s /q")
-        
-        
-            zipFiles = subprocess.getoutput("dir .\\release\\*.zip /b").split("\n")
-            for file in zipFiles:
-                os.system("ren \".\\release\\" + file + "\" " + file.replace(".zip", ""))
     except:
         print(traceback.format_exc())
+        time.sleep(15)
+        
+    zipFiles = subprocess.getoutput("dir .\\release\\*.zip /b").split("\n")
+    for file in zipFiles:
+        os.system("ren \".\\release\\" + file + "\" " + file.replace(".zip", ""))
     
     
     os.system("copy \"game_versions_cache.json\" \"game_versions.json\" /y")

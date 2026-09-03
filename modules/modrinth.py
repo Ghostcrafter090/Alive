@@ -33,7 +33,7 @@ def uploadFile(path, project, loader, version, projectVersion, displayName, chan
     API_TOKEN = globals.apiKey
     PROJECT_ID = projectIdDict[project] # Example: 12345
     FILE_PATH = path
-    GAME_VERSION = curseforge.getGameVersions(loader, version) # The Minecraft version, for example
+    GAME_VERSION = curseforge.getGameVersions(loader, version, folderName=project) # The Minecraft version, for example
     RELEASE_TYPE = "release" # Options: "release", "beta", or "alpha"
     DISPLAY_NAME = displayName # Optional, but recommended
     CHANGELOG = changeLog # A description of changes

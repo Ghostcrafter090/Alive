@@ -6,21 +6,21 @@
       "request": "launch",
       "name": "Client",
       "presentation": {
-        "group": "Mod Development - 1.19.4",
+        "group": "Mod Development - 1.20",
         "order": 0
       },
-      "projectName": "1.19.4",
+      "projectName": "1.20",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\build\\moddev\\clientRunProgramArgs.txt"
+        "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.20\\build\\moddev\\clientRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\build\\moddev\\clientRunVmArgs.txt",
-        "-Dfml.modFolders\u003dmcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\bin\\main"
+        "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.20\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dmcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.20\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {
-        "MOD_CLASSES": "mcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\bin\\main"
+        "MOD_CLASSES": "mcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.20\\bin\\main"
       },
       "console": "internalConsole",
       "shortenCommandLine": "none"
@@ -30,21 +30,21 @@
       "request": "launch",
       "name": "Server",
       "presentation": {
-        "group": "Mod Development - 1.19.4",
+        "group": "Mod Development - 1.20",
         "order": 1
       },
-      "projectName": "1.19.4",
+      "projectName": "1.20",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\build\\moddev\\serverRunProgramArgs.txt"
+        "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.20\\build\\moddev\\serverRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\build\\moddev\\serverRunVmArgs.txt",
-        "-Dfml.modFolders\u003dmcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\bin\\main"
+        "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.20\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dmcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.20\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {
-        "MOD_CLASSES": "mcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\bin\\main"
+        "MOD_CLASSES": "mcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.20\\bin\\main"
       },
       "console": "internalConsole",
       "shortenCommandLine": "none"

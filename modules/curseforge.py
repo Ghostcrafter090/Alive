@@ -4,6 +4,7 @@ import requests
 import json
 import os
 import traceback
+import copy
 
 import time
 
@@ -23,11 +24,28 @@ projectIdDict = {
     "dynamic_ecosystems": "1421461"
 }
 
-def getGameVersions(loader, version):
+def getGameVersions(loader, version, folderName=False):
     versionInfo = pytools.IO.getJson("game_versions.json")
     curseforgeData = pytools.net.getJsonAPI("https://minecraft.curseforge.com/api/game/versions", customHeaders=[["X-Api-Token", globals.apiKey]])
     versionIds = {}
     versionNames = []
+    
+    _versionInfo = {}
+    
+    if folderName in versionInfo["splits"]:
+        _versionInfo[folderName] = copy.deepcopy(versionInfo)
+        if folderName in versionInfo["splits"]:
+            for aLoader in versionInfo["splits"][folderName]:
+                for mcVersion in versionInfo["splits"][folderName][aLoader]:
+                    for aVersion in versionInfo[aLoader][mcVersion]:
+                        try:
+                            _versionInfo[folderName][aLoader][mcVersion].remove(aVersion)
+                        except:
+                            print(traceback.format_exc())
+                        _versionInfo[folderName][aLoader][aVersion] = [aVersion]
+        
+        versionInfo = _versionInfo[folderName]
+    
     for aVersion in versionInfo[loader][version]:
         for aVersionData in curseforgeData:
             if aVersionData["name"] == aVersion:
@@ -58,7 +76,7 @@ def uploadFile(path, project, loader, version, displayName, changeLog):
     API_TOKEN = globals.apiKey
     PROJECT_ID = projectIdDict[project] # Example: 12345
     FILE_PATH = path
-    GAME_VERSION = getGameVersions(loader, version) # The Minecraft version, for example
+    GAME_VERSION = getGameVersions(loader, version, folderName=project) # The Minecraft version, for example
     RELEASE_TYPE = "release" # Options: "release", "beta", or "alpha"
     DISPLAY_NAME = displayName # Optional, but recommended
     CHANGELOG = changeLog # A description of changes
