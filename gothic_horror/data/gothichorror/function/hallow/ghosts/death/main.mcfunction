@@ -69,6 +69,6 @@ execute as @a at @s anchored eyes facing entity @e[type=text_display,tag=death_g
 
 # Light
 execute as @e[tag=death_ghost] at @s run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 air replace minecraft:light
-execute as @e[tag=death_ghost,tag=death_ghost_setup,tag=!death_ghost_perform_death_laugh] at @s run fill ~ ~1 ~ ~ ~1 ~ minecraft:light[level=5] replace air
+# execute as @e[tag=death_ghost,tag=death_ghost_setup,tag=!death_ghost_perform_death_laugh] at @s run fill ~ ~1 ~ ~ ~1 ~ minecraft:light[level=5] replace air
 
 
