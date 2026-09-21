@@ -55,6 +55,6 @@ kill @e[tag=spreadplayers_3d,type=marker]
 execute at @s if predicate gstools:spreadplayers_nether run tag @s remove to_spreadplayers_3d
 execute at @s unless predicate gstools:spreadplayers_nether run tag @s add to_spreadplayers_3d
 execute if entity @s[tag=to_spreadplayers_3d] at @e[tag=spreadplayers_3d_og_location,type=marker,limit=1] run tp @s ~ ~ ~
-execute if entity @s[tag=to_spreadplayers_3d] run schedule function gstools:util/spreadplayers3d/macro 1t append
-
+execute if entity @s[tag=to_spreadplayers_3d] unless entity @s[scores={doReverseFind=1..1}] run schedule function gstools:util/spreadplayers3d/macro 1t append
+execute if entity @s[tag=to_spreadplayers_3d] if entity @s[scores={doReverseFind=1..1}] run schedule function gstools:util/spreadplayers3d/macro_underground 1t append
 kill @e[tag=spreadplayers_3d_og_location,type=marker]

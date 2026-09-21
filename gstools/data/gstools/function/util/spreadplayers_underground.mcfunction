@@ -12,5 +12,5 @@ scoreboard objectives add doReverseFind dummy
 
 # Main
 scoreboard players set @s doReverseFind 1
-function gstools:util/spreadplayers_underground
+function gstools:util/spreadplayers3d
 scoreboard players set @s doReverseFind 0
