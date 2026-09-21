@@ -37,6 +37,8 @@ execute as @e[type=text_display,tag=death_ghost,tag=!death_ghost_setup] at @s ru
 execute as @e[type=text_display,tag=death_ghost,tag=!death_ghost_setup] if entity @s[scores={lightLevel=8..}] run kill @s
 execute as @e[type=text_display,tag=death_ghost,tag=!death_ghost_setup] run tag @s add death_ghost_setup
 
+execute as @e[type=text_display,tag=death_ghost,sort=random,limit=1] at @s unless entity @a[distance=..200] run kill @s 
+
 execute as @e[type=text_display,tag=death_ghost,sort=random,limit=1] at @s run function gstools:util/light_level
 execute as @e[type=text_display,tag=death_ghost,sort=random,limit=1] if entity @s[scores={lightLevel=8..}] run kill @s
 
