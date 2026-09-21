@@ -90,6 +90,16 @@ execute as @a at @s anchored eyes facing entity @e[type=text_display,tag=death_g
 execute as @a at @s anchored eyes facing entity @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=0..64] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.07] if score @s EyesPosY >= @s EyesPosX run scoreboard players set @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=0..64,tag=!death_ghost_perform_death_laugh] deathGhostBehaviourMode 3
 execute as @a at @s anchored eyes facing entity @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=0..64] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.07] if score @s EyesPosY >= @s EyesPosX run tag @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=0..64] add death_ghost_perform_death_laugh
 
+execute as @a at @s if entity @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=..1] run scoreboard players add @s hasLookedAtEyes 100
+execute as @a at @s if entity @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=..1] run scoreboard players add @s hasLookedAtEyes 100
+execute as @a at @s if entity @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=..1] run scoreboard players set @s AdrenalineApply 1
+execute as @a at @s if entity @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=..1] run effect give @s nausea 8 0 true
+execute as @a at @s if entity @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=..1] run playsound minecraft:gothichorror.hghost.death hostile @a ~ ~ ~
+execute as @a at @s if entity @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=..1] run tag @s add death_ghost_perform_death_laugh
+execute as @a at @s if entity @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=..1] at @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=0..64] run fill ~8 ~8 ~8 ~-8 ~-8 ~-8 air replace light
+execute as @a at @s if entity @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=..1] run scoreboard players set @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=0..64,tag=!death_ghost_perform_death_laugh] deathGhostBehaviourMode 3
+execute as @a at @s if entity @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=..1] run tag @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=0..64] add death_ghost_perform_death_laugh
+
 # Light
 execute as @e[tag=death_ghost] at @s run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 air replace minecraft:light
 # execute as @e[tag=death_ghost,tag=death_ghost_setup,tag=!death_ghost_perform_death_laugh] at @s run fill ~ ~1 ~ ~ ~1 ~ minecraft:light[level=5] replace air
