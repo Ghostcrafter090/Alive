@@ -45,7 +45,13 @@ execute as @e[type=text_display,tag=death_ghost,sort=random,limit=1] at @s unles
 execute as @e[type=text_display,tag=death_ghost,sort=random,limit=1] at @s run function gstools:util/light_level
 execute as @e[type=text_display,tag=death_ghost,sort=random,limit=1] if entity @s[scores={lightLevel=8..}] run kill @s
 
-execute as @e[type=text_display,tag=death_ghost] at @s if entity @a[distance=0..15] run scoreboard players add @s deathGhostAnger 1
+execute as @e[type=text_display,tag=death_ghost] at @s if entity @a[distance=0..15] run scoreboard players operation @s 41 = @e[tag=gstools_worker,type=marker] 41
+execute as @e[type=text_display,tag=death_ghost] at @s if entity @a[distance=0..15] run scoreboard players operation @s 41 -= @e[tag=gstools_worker,type=marker] averageTpsGothicHorror
+execute as @e[type=text_display,tag=death_ghost] at @s if entity @a[distance=0..15] run scoreboard players operation @s 41 -= @e[tag=gstools_worker,type=marker] averageTps
+execute as @e[type=text_display,tag=death_ghost] at @s if entity @a[distance=0..15] run scoreboard players operation @s 41 /= @e[tag=gstools_worker,type=marker] 2
+execute as @e[type=text_display,tag=death_ghost] at @s if entity @a[distance=0..15] run scoreboard players add @s 41 1
+execute as @e[type=text_display,tag=death_ghost] at @s if entity @a[distance=0..15] run scoreboard players operation @s deathGhostAnger += @s 41
+
 execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=1000..}] at @s facing entity @p eyes positioned ^ ^ ^1 unless predicate gstools:light_8 positioned ^ ^ ^-1 run tp @s ^ ^ ^0.001 ~ ~
 execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=2000..}] at @s facing entity @p eyes positioned ^ ^ ^1 unless predicate gstools:light_8 positioned ^ ^ ^-1 run tp @s ^ ^ ^0.002 ~ ~
 execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=3000..}] at @s facing entity @p eyes positioned ^ ^ ^1 unless predicate gstools:light_8 positioned ^ ^ ^-1 run tp @s ^ ^ ^0.003 ~ ~
