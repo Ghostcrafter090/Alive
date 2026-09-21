@@ -50,6 +50,7 @@ scoreboard players set @e[tag=spreadplayers_3d,type=marker,limit=1] loopCount 0
 execute unless entity @s[scores={doReverseFind=1..1}] as @e[tag=spreadplayers_3d,type=marker,limit=1] run function gstools:util/spreadplayers3d/findsurface
 execute if entity @s[scores={doReverseFind=1..1}] as @e[tag=spreadplayers_3d,type=marker,limit=1] run function gstools:util/spreadplayers3d/findsurface_reverse
 execute at @e[tag=spreadplayers_3d,type=marker,limit=1] run tp @s ~ ~ ~
+execute at @e[tag=spreadplayers_3d,type=marker,limit=1] run particle large_smoke ~ ~ ~ 0 0 0 0.1 100 force
 kill @e[tag=spreadplayers_3d,type=marker]
 
 execute unless entity @s[scores={doReverseFind=1..1}] at @s if predicate gstools:spreadplayers_nether run tag @s remove to_spreadplayers_3d
