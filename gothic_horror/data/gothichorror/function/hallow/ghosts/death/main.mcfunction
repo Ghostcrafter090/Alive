@@ -75,6 +75,7 @@ execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=20000..}
 execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=1..}] run function gstools:util/random
 execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=1..}] run scoreboard players operation @s random1000 *= @e[tag=gstools_worker,type=marker] 100
 execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=1..}] if score @s random1000 < @s deathGhostAnger at @s run playsound minecraft:gothichorror.hallow.whispering hostile @a ~ ~ ~
+execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=1..}] if score @s random1000 < @s deathGhostAnger at @s run scoreboard players set @s deathGhostBehaviourMode 3
 
 # Player Interaction
 execute as @a store result score @s EntityPosX run data get entity @s Pos[0]
