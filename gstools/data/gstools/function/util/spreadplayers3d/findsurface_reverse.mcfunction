@@ -1,130 +1,130 @@
 # Define
 
 # Main
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:mostlyair run tp @s ~ ~1 ~
 
 function gstools:util/is_outside
 execute if entity @s[scores={isOutside=1..1}] run tag @s add no_toptp
