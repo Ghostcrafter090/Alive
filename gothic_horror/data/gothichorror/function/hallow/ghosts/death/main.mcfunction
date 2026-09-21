@@ -25,9 +25,9 @@ execute as @e[type=text_display,tag=death_ghost,sort=random,limit=1,scores={deat
 
 execute as @e[type=text_display,tag=death_ghost,tag=death_ghost_perform_death_laugh,limit=1] as @a[tag=death_ghost_perform_death_laugh] at @s facing entity @e[type=text_display,tag=death_ghost,tag=death_ghost_perform_death_laugh,sort=nearest,limit=1] eyes run tp @s ~ ~ ~ ~ ~
 execute as @e[type=text_display,tag=death_ghost,tag=death_ghost_perform_death_laugh,limit=1] at @s as @a[distance=0..10] at @s facing entity @e[type=text_display,tag=death_ghost,tag=death_ghost_perform_death_laugh,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~
-execute as @e[type=text_display,tag=death_ghost,tag=death_ghost_perform_death_laugh,limit=1,scores={deathGhostBehaviourMode=0..0}] run kill @s
-
-
+execute as @e[type=text_display,tag=death_ghost,tag=death_ghost_perform_death_laugh,limit=1,scores={deathGhostBehaviourMode=0..0}] unless entity @s[scores={deathGhostAnger=1..}] run kill @s
+execute as @e[type=text_display,tag=death_ghost,tag=death_ghost_perform_death_laugh,limit=1,scores={deathGhostAnger=1..}] run damage @a[tag=death_ghost_perform_death_laugh,sort=nearest,limit=1] 1 minecraft:magic by @s from @s
+execute as @e[type=text_display,tag=death_ghost,tag=death_ghost_perform_death_laugh,limit=1,scores={deathGhostAnger=1..}] run scoreboard players remove @s deathGhostAnger 1000
 
 # AI
 execute as @r run function gstools:horror/getindex
