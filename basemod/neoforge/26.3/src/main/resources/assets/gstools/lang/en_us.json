@@ -1,0 +1,13 @@
+{
+  "itemGroup.gstools": "Example Mod Tab",
+  "block.gstools.example_block": "Example Block",
+  "item.gstools.example_item": "Example Item",
+
+  "gstools.configuration.title": "gstools Configs",
+  "gstools.configuration.section.gstools.common.toml": "gstools Configs",
+  "gstools.configuration.section.gstools.common.toml.title": "gstools Configs",
+  "gstools.configuration.items": "Item List",
+  "gstools.configuration.logDirtBlock": "Log Dirt Block",
+  "gstools.configuration.magicNumberIntroduction": "Magic Number Text",
+  "gstools.configuration.magicNumber": "Magic Number"
+}

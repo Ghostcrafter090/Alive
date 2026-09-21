@@ -16,11 +16,11 @@
       ],
       "vmArgs": [
         "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\build\\moddev\\clientRunVmArgs.txt",
-        "-Dfml.modFolders\u003dmcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\bin\\main"
+        "-Dfml.modFolders\u003d"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {
-        "MOD_CLASSES": "mcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\bin\\main"
+        "MOD_CLASSES": ""
       },
       "console": "internalConsole",
       "shortenCommandLine": "none"
@@ -40,11 +40,11 @@
       ],
       "vmArgs": [
         "@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\build\\moddev\\serverRunVmArgs.txt",
-        "-Dfml.modFolders\u003dmcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\bin\\main"
+        "-Dfml.modFolders\u003d"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {
-        "MOD_CLASSES": "mcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\bin\\main"
+        "MOD_CLASSES": ""
       },
       "console": "internalConsole",
       "shortenCommandLine": "none"

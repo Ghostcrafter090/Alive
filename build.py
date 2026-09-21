@@ -170,7 +170,8 @@ baseCompileVersions = [
     "1.20.4",
     "1.20.1",
     "1.19.4",
-    "1.20"
+    "1.20",
+    "26.3"
 ]
 
 fabricBaseRemovalVersions = [

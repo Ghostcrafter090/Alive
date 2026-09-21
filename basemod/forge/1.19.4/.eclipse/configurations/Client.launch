@@ -3,9 +3,9 @@
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="1.19.4"></stringAttribute>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="net.neoforged.devlaunch.Main"></stringAttribute>
     <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value=" &quot;@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\build\\moddev\\clientRunProgramArgs.txt&quot;"></stringAttribute>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value=" &quot;@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\build\\moddev\\clientRunVmArgs.txt&quot; &quot;-Dfml.modFolders=mcreator%%C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\bin\\main&quot;"></stringAttribute>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value=" &quot;@C:\\Users\\joshp\\curseforge\\minecraft\\Instances\\Alive Dev\\saves\\Desire Paths\\datapacks_uncompiled\\basemod\\forge\\1.19.4\\build\\moddev\\clientRunVmArgs.txt&quot; -Dfml.modFolders="></stringAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="MOD_CLASSES" value="mcreator%%C:\Users\joshp\curseforge\minecraft\Instances\Alive Dev\saves\Desire Paths\datapacks_uncompiled\basemod\forge\1.19.4\bin\main"></mapEntry>
+        <mapEntry key="MOD_CLASSES" value=""></mapEntry>
     </mapAttribute>
     <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="C:\Users\joshp\curseforge\minecraft\Instances\Alive Dev\saves\Desire Paths\datapacks_uncompiled\basemod\forge\1.19.4\run"></stringAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.STOP_IN_MAIN" value="false"></booleanAttribute>
