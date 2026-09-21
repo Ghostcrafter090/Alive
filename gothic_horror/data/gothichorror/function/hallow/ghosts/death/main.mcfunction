@@ -62,6 +62,16 @@ execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=7000..}]
 execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=8000..}] at @s facing entity @p eyes positioned ^ ^ ^1 unless predicate gstools:light_8 positioned ^ ^ ^-1 run tp @s ^ ^ ^0.008 ~ ~
 execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=9000..}] at @s facing entity @p eyes positioned ^ ^ ^1 unless predicate gstools:light_8 positioned ^ ^ ^-1 run tp @s ^ ^ ^0.009 ~ ~
 execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=10000..}] at @s facing entity @p eyes positioned ^ ^ ^1 unless predicate gstools:light_8 positioned ^ ^ ^-1 run tp @s ^ ^ ^0.01 ~ ~
+execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=11000..}] at @s facing entity @p eyes positioned ^ ^ ^1 unless predicate gstools:light_8 positioned ^ ^ ^-1 run tp @s ^ ^ ^0.01 ~ ~
+execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=12000..}] at @s facing entity @p eyes positioned ^ ^ ^1 unless predicate gstools:light_8 positioned ^ ^ ^-1 run tp @s ^ ^ ^0.02 ~ ~
+execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=13000..}] at @s facing entity @p eyes positioned ^ ^ ^1 unless predicate gstools:light_8 positioned ^ ^ ^-1 run tp @s ^ ^ ^0.03 ~ ~
+execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=14000..}] at @s facing entity @p eyes positioned ^ ^ ^1 unless predicate gstools:light_8 positioned ^ ^ ^-1 run tp @s ^ ^ ^0.04 ~ ~
+execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=15000..}] at @s facing entity @p eyes positioned ^ ^ ^1 unless predicate gstools:light_8 positioned ^ ^ ^-1 run tp @s ^ ^ ^0.05 ~ ~
+execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=16000..}] at @s facing entity @p eyes positioned ^ ^ ^1 unless predicate gstools:light_8 positioned ^ ^ ^-1 run tp @s ^ ^ ^0.06 ~ ~
+execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=17000..}] at @s facing entity @p eyes positioned ^ ^ ^1 unless predicate gstools:light_8 positioned ^ ^ ^-1 run tp @s ^ ^ ^0.07 ~ ~
+execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=18000..}] at @s facing entity @p eyes positioned ^ ^ ^1 unless predicate gstools:light_8 positioned ^ ^ ^-1 run tp @s ^ ^ ^0.08 ~ ~
+execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=19000..}] at @s facing entity @p eyes positioned ^ ^ ^1 unless predicate gstools:light_8 positioned ^ ^ ^-1 run tp @s ^ ^ ^0.09 ~ ~
+execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=20000..}] at @s facing entity @p eyes positioned ^ ^ ^1 unless predicate gstools:light_8 positioned ^ ^ ^-1 run tp @s ^ ^ ^0.1 ~ ~
 execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=1..}] run function gstools:util/random
 execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=1..}] run scoreboard players operation @s random1000 *= @e[tag=gstools_worker,type=marker] 100
 execute as @e[type=text_display,tag=death_ghost,scores={deathGhostAnger=1..}] if score @s random1000 < @s deathGhostAnger at @s run playsound minecraft:gothichorror.hallow.whispering hostile @a ~ ~ ~
