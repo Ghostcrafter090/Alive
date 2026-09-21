@@ -7,6 +7,8 @@ scoreboard objectives add entityNewX dummy
 scoreboard objectives add entityNewY dummy
 scoreboard objectives add entityNewZ dummy
 
+scoreboard objectives add range dummy
+
 # Main
 summon marker ~ ~ ~ {Tags:['fast_sp_3d_return_position']}
 tag @s add random_tp_active
