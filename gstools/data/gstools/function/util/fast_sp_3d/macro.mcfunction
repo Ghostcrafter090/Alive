@@ -2,20 +2,20 @@
 
 # Main
 tag @s remove fast_3d_sp_loop
-execute store result score @s entityNewX run data get entity @s Pos[0]
-execute store result score @s entityNewY run data get entity @s Pos[1]
-execute store result score @s entityNewZ run data get entity @s Pos[2]
 
 function gstools:util/random
 scoreboard players operation @s randomSigned1000 %= @s range
+scoreboard players operation @s entityNewX = @s entityCurrentX
 scoreboard players operation @s entityNewX += @s randomSigned1000
 
 function gstools:util/random
 scoreboard players operation @s randomSigned1000 %= @s range
+scoreboard players operation @s entityNewY = @s entityCurrentY
 scoreboard players operation @s entityNewY += @s randomSigned1000
 
 function gstools:util/random
 scoreboard players operation @s randomSigned1000 %= @s range
+scoreboard players operation @s entityNewZ = @s entityCurrentZ
 scoreboard players operation @s entityNewZ += @s randomSigned1000
 
 execute store result entity @s Pos[0] double 1 run scoreboard players get @s entityNewX
