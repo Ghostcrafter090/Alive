@@ -32,7 +32,7 @@ execute as @e[tag=spreadplayers_3d,type=marker,limit=1] run scoreboard players o
 
 scoreboard players operation @e[tag=spreadplayers_3d,type=marker,limit=1] range = @s range
 execute as @e[tag=spreadplayers_3d,type=marker,limit=1] run function gstools:util/random
-execute as @e[tag=spreadplayers_3d,type=marker,limit=1] run scoreboard players operation @s randomSigned1000 %= @e[tag=gstools_worker,type=marker] 127
+execute as @e[tag=spreadplayers_3d,type=marker,limit=1] run scoreboard players operation @s randomSigned1000 %= @s range
 execute as @e[tag=spreadplayers_3d,type=marker,limit=1] run scoreboard players operation @s randomSigned1000 *= @s randomNegate
 execute as @e[tag=spreadplayers_3d,type=marker,limit=1] run scoreboard players operation @s entityNewY += @s randomSigned1000
 
