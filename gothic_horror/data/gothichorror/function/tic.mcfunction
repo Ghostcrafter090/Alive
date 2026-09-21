@@ -24,6 +24,9 @@ execute as @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played] 
 execute store result score @e[tag=gstools_worker,type=marker,limit=1] poltergeistRockCount if entity @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played]
 execute if entity @e[tag=gstools_worker,type=marker,scores={poltergeistRockCount=30..}] run kill @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played]
 
+# Ghosts (Hallow)
+function gothichorror:hallow/ghosts/death/tic
+
 # Monsters
 function gothichorror:hallow/monsters/rise
 
