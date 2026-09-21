@@ -1,131 +1,132 @@
 # Define
 
 # Main
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
-execute at @s unless biome ~ ~ ~ minecraft:the_void unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
+execute at @s unless predicate gstools:outside unless predicate gstools:spreadplayers_nether run tp @s ~ ~1 ~
 
-execute at @s unless biome ~ ~ ~ minecraft:the_void run tag @s add no_toptp
-execute if entity @s[tag=!no_toptp] at @s run tp @s ~ 126 ~
+function gstools:util/is_outside
+execute if entity @s[scores={isOutside=1..1}] run tag @s add no_toptp
+execute if entity @s[tag=!no_toptp] at @s run tp @s ~ -63 ~
 execute if entity @s[tag=!no_toptp] run tag @s remove no_toptp
