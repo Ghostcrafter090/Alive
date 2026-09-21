@@ -8,6 +8,7 @@ scoreboard objectives add entityNewY dummy
 scoreboard objectives add entityNewZ dummy
 
 scoreboard objectives add range dummy
+scoreboard objectives add doReverseFind dummy
 
 # Main
 kill @e[tag=spreadplayers_3d,type=marker]
@@ -46,7 +47,8 @@ execute as @e[tag=spreadplayers_3d,type=marker,limit=1] store result entity @s P
 execute as @e[tag=spreadplayers_3d,type=marker,limit=1] store result entity @s Pos[2] double 1 run scoreboard players get @s entityNewZ
 
 scoreboard players set @e[tag=spreadplayers_3d,type=marker,limit=1] loopCount 0
-execute as @e[tag=spreadplayers_3d,type=marker,limit=1] run function gstools:util/spreadplayers3d/findsurface
+execute unless entity @s[scores={doReverseFind=1..1}] as @e[tag=spreadplayers_3d,type=marker,limit=1] run function gstools:util/spreadplayers3d/findsurface
+execute if entity @s[scores={doReverseFind=1..1}] as @e[tag=spreadplayers_3d,type=marker,limit=1] run function gstools:util/spreadplayers3d/findsurface_reverse
 execute at @e[tag=spreadplayers_3d,type=marker,limit=1] run tp @s ~ ~ ~
 kill @e[tag=spreadplayers_3d,type=marker]
 
