@@ -12,33 +12,33 @@ summon marker ~ ~ ~ {Tags:['fast_sp_3d_return_position']}
 function gstools:util/fast_sp_3d/macro
 kill @e[type=marker,tag=fast_sp_3d_return_position]
 # <node:no_compile_mode>
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
-execute positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
+execute at @s positioned ~ ~-1 ~ if predicate gstools:mostlyair run tp @s ~ ~-1 ~
 # <node:no_compile_mode/>
