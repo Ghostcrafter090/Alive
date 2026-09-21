@@ -8,3 +8,4 @@ execute as @e[type=text_display,tag=death_ghost,scores={deathGhostOpenBlinkIndex
 execute as @e[type=text_display,tag=death_ghost,scores={deathGhostOpenBlinkIndex=4..4}] run data modify entity @s text set value '{"text":"h","font":"gothichorror:images"}'
 execute as @e[type=text_display,tag=death_ghost,scores={deathGhostOpenBlinkIndex=5..5}] run data modify entity @s text set value '{"text":"g","font":"gothichorror:images"}'
 execute as @e[type=text_display,tag=death_ghost,scores={deathGhostOpenBlinkIndex=6..}] run scoreboard players set @s deathGhostBehaviourMode 0
+execute as @e[type=text_display,tag=death_ghost,scores={deathGhostOpenBlinkIndex=6..}] run scoreboard players set @s deathGhostOpenBlinkIndex 0
