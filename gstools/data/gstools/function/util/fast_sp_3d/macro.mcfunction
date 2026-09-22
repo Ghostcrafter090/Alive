@@ -4,17 +4,20 @@
 tag @s remove fast_3d_sp_loop
 
 function gstools:util/random
-scoreboard players operation @s randomSigned1000 %= @s range
+scoreboard players operation @s randomSigned1000 *= @s range
+scoreboard players operation @s randomSigned1000 /= @e[tag=gstools_worker,type=marker] 1000
 scoreboard players operation @s entityNewX = @s entityCurrentX
 scoreboard players operation @s entityNewX += @s randomSigned1000
 
 function gstools:util/random
-scoreboard players operation @s randomSigned1000 %= @s range
+scoreboard players operation @s randomSigned1000 *= @s range
+scoreboard players operation @s randomSigned1000 /= @e[tag=gstools_worker,type=marker] 1000
 scoreboard players operation @s entityNewY = @s entityCurrentY
 scoreboard players operation @s entityNewY += @s randomSigned1000
 
 function gstools:util/random
-scoreboard players operation @s randomSigned1000 %= @s range
+scoreboard players operation @s randomSigned1000 *= @s range
+scoreboard players operation @s randomSigned1000 /= @e[tag=gstools_worker,type=marker] 1000
 scoreboard players operation @s entityNewZ = @s entityCurrentZ
 scoreboard players operation @s entityNewZ += @s randomSigned1000
 
