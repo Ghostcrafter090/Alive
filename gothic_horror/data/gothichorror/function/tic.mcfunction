@@ -26,6 +26,7 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={poltergeistRockCount
 
 # Ghosts (Hallow)
 function gothichorror:hallow/ghosts/death/tic
+function gothichorror:hallow/ghosts/dying/tic
 
 # Monsters
 function gothichorror:hallow/monsters/rise

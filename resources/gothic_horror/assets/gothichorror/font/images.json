@@ -111,6 +111,118 @@
             "ascent": 64,
             "height": 64,
             "chars": ["p"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/dying/dying_ghost_0.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["q"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/dying/dying_ghost_1.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["r"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/dying/dying_ghost_2.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["s"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/dying/dying_ghost_3.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["t"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/dying/dying_ghost_4.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["u"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/dying/dying_ghost_5.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["v"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/dying/dying_ghost_6.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["w"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/dying/dying_ghost_7.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["x"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/dying/dying_ghost_8.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["y"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/dying/dying_ghost_9.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["z"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/dying/dying_ghost_blink_0.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["0"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/dying/dying_ghost_blink_1.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["1"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/dying/dying_ghost_blink_2.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["2"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/dying/dying_ghost_mouth_0.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["3"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/dying/dying_ghost_mouth_1.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["4"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/dying/dying_ghost_mouth_2.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["5"]
         }
     ]
 }
