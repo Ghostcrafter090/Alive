@@ -17,7 +17,7 @@ execute as @a[scores={playerIsSleeping=1..}] if score @s horrorIndex < @s player
 execute as @a[scores={playerIsSleeping=1..}] if score @s horrorIndex < @s playerIsSleeping run time add 100t
 execute as @a[scores={playerIsSleeping=1..}] if score @s horrorIndex < @s playerIsSleeping run function gstools:util/random
 execute as @a[scores={playerIsSleeping=1..}] if score @s horrorIndex < @s playerIsSleeping if score @s random100 < @s playerNightmareTic at @s run tp @s ~ ~1 ~ ~ ~
-execute as @a unless entity @s[scores={playerIsSleeping=1..}] run scoreboard players remove @s playerNightmareTic 1
+execute as @a unless entity @s[scores={playerIsSleeping=1..}] if entity @s[scores={playerNightmareTic=1..}] run scoreboard players remove @s playerNightmareTic 1
 
 execute as @a[scores={playerNightmareTic=1..}] run function gstools:util/random
 execute as @a[scores={playerNightmareTic=1..}] if score @s random100 < @s playerNightmareTic run effect give @s darkness 10 10
