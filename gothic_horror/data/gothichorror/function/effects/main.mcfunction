@@ -47,3 +47,6 @@ execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @
 execute as @e[tag=gstools_worker,type=marker,scores={21=..0}] run scoreboard players set @s 41 1
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s lastWeather2StormSpawn += @s 41
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players set @s 41 41
+
+# Sleeping
+schedule function gothichorror:effects/sleeping/main 1t append
