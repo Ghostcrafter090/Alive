@@ -93,6 +93,7 @@ execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecr
 
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt run fill ~1 ~-3 ~ ~1 ~-3 ~ chest[facing=south,type=left]{LootTable:"minecraft:chests/desert_pyramid",CustomName:"Coffin"} replace
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt run fill ~2 ~-3 ~ ~2 ~-3 ~ chest[facing=south,type=left]{LootTable:"minecraft:chests/desert_pyramid",CustomName:"Coffin"} replace
+execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt run fill ~1 ~-1 ~ ~2 ~-2 ~ dirt replace #minecraft:mineable/pickaxe
 
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt run function gstools:util/random
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt if entity @s[scores={random100=..10}] run summon marker ~1 ~ ~ {Tags:['cemetary_spawn_zombie_node']}
