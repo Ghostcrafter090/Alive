@@ -4,7 +4,6 @@ scoreboard objectives add bansheeNearbyMonsters dummy
 scoreboard objectives add bansheeWorkingHealth dummy
 
 # Main
-execute as @a run scoreboard players add @s lastBansheeTic 1
 execute as @a[scores={lastBansheeTic=5000..}] at @s store result score @s bansheeNearbyMonsters if entity @e[tag=monster,distance=0..45]
 execute as @a[scores={lastBansheeTic=5000..}] if entity @s[scores={bansheeNearbyMonsters=1..}] at @s run function gstools:horror/getindex
 execute as @a[scores={lastBansheeTic=5000..}] if entity @s[scores={bansheeNearbyMonsters=1..}] run function gstools:util/random
