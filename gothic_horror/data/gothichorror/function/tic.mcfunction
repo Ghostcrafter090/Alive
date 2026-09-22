@@ -29,6 +29,8 @@ function gothichorror:hallow/ghosts/death/tic
 function gothichorror:hallow/ghosts/dying/tic
 function gothichorror:hallow/ghosts/sick/tic
 
+function gothichorror:effects/ghosts/tic
+
 # Monsters
 function gothichorror:hallow/monsters/rise
 
