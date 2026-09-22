@@ -64,6 +64,7 @@ execute as @a at @s as @e[type=text_display,tag=dying_ghost,distance=0..30] at @
 execute as @a at @s as @e[type=text_display,tag=dying_ghost,distance=0..30] at @s if entity @e[type=marker,tag=gstools_view_finder,distance=0..15] if entity @p[distance=0..5] run playsound minecraft:gothichorror.hghost.dying hostile @a ~ ~ ~
 execute as @a at @s as @e[type=text_display,tag=dying_ghost,distance=0..30] at @s if entity @e[type=marker,tag=gstools_view_finder,distance=0..15] as @e[type=marker,tag=dying_ghost_random_tp,sort=nearest,limit=1] run scoreboard players set @s range 30
 execute as @a at @s as @e[type=text_display,tag=dying_ghost,distance=0..30] at @s if entity @e[type=marker,tag=gstools_view_finder,distance=0..15] as @e[type=marker,tag=dying_ghost_random_tp,sort=nearest,limit=1] at @s run function gstools:util/fast_sp_3d
+execute as @a at @s as @e[type=text_display,tag=dying_ghost,distance=0..30] at @s if entity @e[type=marker,tag=gstools_view_finder,distance=0..15] at @e[type=marker,tag=dying_ghost_random_tp,sort=nearest,limit=1] run scoreboard players add @s deathGhostAnger 100
 execute as @a at @s as @e[type=text_display,tag=dying_ghost,distance=0..30] at @s if entity @e[type=marker,tag=gstools_view_finder,distance=0..15] at @e[type=marker,tag=dying_ghost_random_tp,sort=nearest,limit=1] run tp @s ~ ~ ~
 kill @e[type=marker,tag=dying_ghost_random_tp]
 
