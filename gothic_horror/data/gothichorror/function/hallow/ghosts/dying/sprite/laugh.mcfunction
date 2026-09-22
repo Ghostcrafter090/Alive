@@ -18,3 +18,4 @@ execute as @e[type=text_display,tag=dying_ghost,scores={dyingGhostOpenMouthIndex
 execute as @e[type=text_display,tag=dying_ghost,scores={dyingGhostOpenMouthIndex=13..13}] run data modify entity @s text set value '{"text":"n","font":"gothichorror:images"}'
 execute as @e[type=text_display,tag=dying_ghost,scores={dyingGhostOpenMouthIndex=14..}] run scoreboard players set @s dyingGhostBehaviourMode 0
 execute as @e[type=text_display,tag=dying_ghost,scores={dyingGhostOpenMouthIndex=14..}] run scoreboard players set @s dyingGhostOpenMouthIndex 0
+

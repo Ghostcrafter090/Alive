@@ -105,3 +105,4 @@ execute as @e[tag=dying_ghost] at @s run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 air replace m
 # execute as @e[tag=dying_ghost,tag=dying_ghost_setup,tag=!dying_ghost_perform_dying_laugh] at @s run fill ~ ~1 ~ ~ ~1 ~ minecraft:light[level=5] replace air
 
 
+

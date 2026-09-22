@@ -18,3 +18,4 @@ execute as @e[type=text_display,tag=dying_ghost,scores={dyingGhostAnger=16000..}
 execute as @e[type=text_display,tag=dying_ghost,scores={dyingGhostAnger=17000..}] at @s facing entity @p[distance=0.9..] eyes positioned ^ ^ ^1.5 unless entity @s[scores={lightLevel=8..}] positioned ^ ^ ^-1.5 run tp @s ^ ^ ^0.16 ~ ~
 execute as @e[type=text_display,tag=dying_ghost,scores={dyingGhostAnger=18000..}] at @s facing entity @p[distance=0.9..] eyes positioned ^ ^ ^1.5 unless entity @s[scores={lightLevel=8..}] positioned ^ ^ ^-1.5 run tp @s ^ ^ ^0.08 ~ ~
 
+
