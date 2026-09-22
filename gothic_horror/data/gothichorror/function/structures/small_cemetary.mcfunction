@@ -1,11 +1,25 @@
 # Define
 
 # Main
-fill ~8 ~ ~8 ~-8 ~ ~-8 mossy_cobblestone_wall replace #gstools:air
-fill ~7 ~ ~7 ~-7 ~ ~-7 air replace mossy_cobblestone_wall
-fill ~8 ~ ~2 ~8 ~3 ~-2 mossy_cobblestone_wall replace #gstools:air
-fill ~8 ~ ~1 ~8 ~2 ~-1 air replace mossy_cobblestone_wall
+fill ~8 ~ ~8 ~-8 ~ ~-8 mossy_stone_brick_wall replace #gstools:air
+fill ~7 ~ ~7 ~-7 ~ ~-7 air replace mossy_stone_brick_wall
+fill ~8 ~ ~2 ~8 ~3 ~-2 mossy_stone_brick_wall replace #gstools:air
+fill ~8 ~ ~1 ~8 ~2 ~-1 air replace mossy_stone_brick_wall
 
+execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
+execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..75}] run summon marker ~ ~ ~ {Tags:['gothic_grave_stone']}
+execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
+execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..75}] run summon marker ~ ~ ~ {Tags:['gothic_grave_stone']}
+execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
+execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..75}] run summon marker ~ ~ ~ {Tags:['gothic_grave_stone']}
+execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
+execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..75}] run summon marker ~ ~ ~ {Tags:['gothic_grave_stone']}
+execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
+execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..75}] run summon marker ~ ~ ~ {Tags:['gothic_grave_stone']}
+execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
+execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..75}] run summon marker ~ ~ ~ {Tags:['gothic_grave_stone']}
+execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
+execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..75}] run summon marker ~ ~ ~ {Tags:['gothic_grave_stone']}
 execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
 execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..75}] run summon marker ~ ~ ~ {Tags:['gothic_grave_stone']}
 execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
@@ -76,6 +90,9 @@ execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecr
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt run function gstools:util/random
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt if entity @s[scores={random100=..50}] if block ~ ~ ~-1 #c:cobblestones run setblock ~ ~1 ~-1 cobblestone_stairs[facing=south]
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt if entity @s[scores={random100=51..}] if block ~ ~ ~-1 #c:cobblestones run setblock ~ ~1 ~-1 mossy_cobblestone_stairs[facing=south]
+
+execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt run fill ~1 ~-3 ~ ~1 ~-3 ~ chest[facing=south,type=left]{LootTable:"minecraft:chests/desert_pyramid",CustomName:"Coffin"} replace
+execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt run fill ~2 ~-3 ~ ~2 ~-3 ~ chest[facing=south,type=left]{LootTable:"minecraft:chests/desert_pyramid",CustomName:"Coffin"} replace
 
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt run function gstools:util/random
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt if entity @s[scores={random100=..10}] run summon marker ~1 ~ ~ {Tags:['cemetary_spawn_zombie_node']}
