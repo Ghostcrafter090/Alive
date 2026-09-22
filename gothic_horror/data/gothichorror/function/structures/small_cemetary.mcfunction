@@ -1,7 +1,7 @@
 # Define
 
 # Main
-execute as @e[tag=is_human,type=!player] unless entity @e[tag=gothic_horror_cemetary,type=marker,distance=0..100] run summon marker ~ ~ ~ {Tags:['gothic_horror_cemetary_spawn']}
+execute as @e[tag=is_human,type=!player] unless entity @e[tag=gothic_horror_cemetary_spawn,type=marker,distance=0..100] run summon marker ~ ~ ~ {Tags:['gothic_horror_cemetary_spawn']}
 
 execute as @e[type=marker,tag=gothic_horror_cemetary,tag=!gothic_horror_cemetary_setup] run scoreboard players set @s range 100
 execute as @e[type=marker,tag=gothic_horror_cemetary,tag=!gothic_horror_cemetary_setup] at @s positioned ~8 ~ ~ unless predicate gstools:mostlyair positioned ~-8 ~ ~ run tag @s add redo_sp
