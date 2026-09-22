@@ -60,8 +60,8 @@ execute as @e[type=text_display,tag=dying_ghost,scores={dyingGhostAnger=1..}] ru
 execute as @e[type=text_display,tag=dying_ghost,scores={dyingGhostAnger=1..}] run scoreboard players operation @s random1000 *= @e[tag=gstools_worker,type=marker] 1000
 execute as @e[type=text_display,tag=dying_ghost,scores={dyingGhostAnger=1..}] if score @s random1000 < @s dyingGhostAnger at @s run playsound minecraft:gothichorror.hghost.dying hostile @a ~ ~ ~
 
-execute as @a at @s as @e[type=text_display,tag=dying_ghost,distance=0..30] if entity @e[type=marker,tag=gstools_view_finder,distance=0..15] run scoreboard players set @s range 30
-execute as @a at @s as @e[type=text_display,tag=dying_ghost,distance=0..30] if entity @e[type=marker,tag=gstools_view_finder,distance=0..15] run function gstools:util/fast_sp_3d
+execute as @a at @s as @e[type=text_display,tag=dying_ghost,distance=0..30] at @s if entity @e[type=marker,tag=gstools_view_finder,distance=0..15] run scoreboard players set @s range 30
+execute as @a at @s as @e[type=text_display,tag=dying_ghost,distance=0..30] at @s if entity @e[type=marker,tag=gstools_view_finder,distance=0..15] at @p run function gstools:util/fast_sp_3d
 
 # Player Interaction
 execute as @a store result score @s EntityPosX run data get entity @s Pos[0]
