@@ -51,11 +51,11 @@ execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecr
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt run function gstools:util/random
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt if entity @s[scores={random100=..50}] unless block ~ ~ ~-1 #c:cobblestones run setblock ~ ~1 ~ cobblestone_stairs[facing=west]
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt if entity @s[scores={random100=51..}] unless block ~ ~ ~-1 #c:cobblestones run setblock ~ ~1 ~ mossy_cobblestone_stairs[facing=west]
-execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt if entity @s[scores={random100=..50}] if block ~ ~ ~-1 #c:cobblestones run setblock ~ ~1 ~ cobblestone_stairs[facing=south]
-execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt if entity @s[scores={random100=51..}] if block ~ ~ ~-1 #c:cobblestones run setblock ~ ~1 ~ mossy_cobblestone_stairs[facing=south]
+execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt if entity @s[scores={random100=..50}] if block ~ ~ ~-1 #c:cobblestones run setblock ~ ~1 ~ cobblestone_stairs[facing=north]
+execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt if entity @s[scores={random100=51..}] if block ~ ~ ~-1 #c:cobblestones run setblock ~ ~1 ~ mossy_cobblestone_stairs[facing=north]
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt run function gstools:util/random
-execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt if entity @s[scores={random100=..50}] if block ~ ~ ~-1 #c:cobblestones run setblock ~ ~1 ~-1 cobblestone_stairs[facing=north]
-execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt if entity @s[scores={random100=51..}] if block ~ ~ ~-1 #c:cobblestones run setblock ~ ~1 ~-1 mossy_cobblestone_stairs[facing=north]
+execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt if entity @s[scores={random100=..50}] if block ~ ~ ~-1 #c:cobblestones run setblock ~ ~1 ~-1 cobblestone_stairs[facing=south]
+execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt if entity @s[scores={random100=51..}] if block ~ ~ ~-1 #c:cobblestones run setblock ~ ~1 ~-1 mossy_cobblestone_stairs[facing=south]
 
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt run function gstools:util/random
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt if entity @s[scores={random100=..10}] run summon marker ~1 ~ ~ {Tags:['cemetary_spawn_zombie_node']}
