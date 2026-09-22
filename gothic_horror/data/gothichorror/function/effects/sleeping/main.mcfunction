@@ -16,7 +16,7 @@ execute as @a[scores={playerIsSleeping=1..}] run scoreboard players operation @s
 execute as @a[scores={playerIsSleeping=1..}] if score @s horrorIndex < @s playerIsSleeping run scoreboard players add @s playerNightmareTic 1
 execute as @a[scores={playerIsSleeping=1..}] if score @s horrorIndex < @s playerIsSleeping run time add 100t
 execute as @a[scores={playerIsSleeping=1..}] if score @s horrorIndex < @s playerIsSleeping run function gstools:util/random
-execute as @a[scores={playerIsSleeping=1..}] if score @s horrorIndex < @s playerIsSleeping if score @s random100 < @s playerNightmareTic at @s run tp @s ~ ~1 ~ ~ ~
+execute as @a[scores={playerIsSleeping=1..}] if score @s horrorIndex < @s playerIsSleeping if score @s random1000 < @s playerNightmareTic at @s run tp @s ~ ~1 ~ ~ ~
 execute as @a unless entity @s[scores={playerIsSleeping=1..}] if entity @s[scores={playerNightmareTic=1..}] run scoreboard players remove @s playerNightmareTic 1
 
 execute as @a[scores={playerNightmareTic=1..}] run function gstools:util/random
