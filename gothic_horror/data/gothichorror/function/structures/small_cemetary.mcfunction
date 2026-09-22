@@ -3,7 +3,7 @@
 # Main
 execute as @e[tag=is_human,type=!player] unless entity @e[tag=gothic_horror_cemetary_spawn,type=marker,distance=0..100] at @s run summon marker ~ ~ ~ {Tags:['gothic_horror_cemetary_spawn']}
 
-execute as @e[type=marker,tag=gothic_horror_cemetary,tag=!gothic_horror_cemetary_setup] run scoreboard players set @s range 100
+execute as @e[type=marker,tag=gothic_horror_cemetary,tag=!gothic_horror_cemetary_setup] run scoreboard players set @s _spreadRange 100
 execute as @e[type=marker,tag=gothic_horror_cemetary,tag=!gothic_horror_cemetary_setup] at @s positioned ~8 ~ ~ unless predicate gstools:mostlyair positioned ~-8 ~ ~ run tag @s add redo_sp
 execute as @e[type=marker,tag=gothic_horror_cemetary,tag=!gothic_horror_cemetary_setup] at @s positioned ~8 ~1 ~ unless predicate gstools:mostlyair positioned ~-8 ~-1 ~ run tag @s add redo_sp
 execute as @e[type=marker,tag=gothic_horror_cemetary,tag=!gothic_horror_cemetary_setup] at @s positioned ~8 ~ ~ unless block ~ ~-1 ~ #minecraft:dirt positioned ~-8 ~ ~ run tag @s add redo_sp
@@ -33,5 +33,5 @@ execute as @e[type=marker,tag=gothic_horror_cemetary,tag=!gothic_horror_cemetary
 
 execute as @e[type=marker,tag=gothic_horror_cemetary,tag=!gothic_horror_cemetary_setup] at @s unless entity @s[tag=redo_sp] run function gothichorror:structures/small_cemetary/gen
 execute as @e[type=marker,tag=gothic_horror_cemetary,tag=!gothic_horror_cemetary_setup] at @s unless entity @s[tag=redo_sp] run tag @s add gothic_horror_cemetary_setup
-execute as @e[type=marker,tag=gothic_horror_cemetary,tag=!gothic_horror_cemetary_setup] at @s if entity @s[tag=redo_sp] run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_horror_cemetary,tag=!gothic_horror_cemetary_setup] at @s if entity @s[tag=redo_sp] run function gstools:cursor/fast_spread
 execute as @e[type=marker,tag=gothic_horror_cemetary,tag=!gothic_horror_cemetary_setup] at @s if entity @s[tag=redo_sp] run tag @s remove redo_sp
