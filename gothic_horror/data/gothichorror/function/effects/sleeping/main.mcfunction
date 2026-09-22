@@ -22,18 +22,18 @@ execute as @a unless entity @s[scores={playerIsSleeping=1..}] if entity @s[score
 execute as @a[scores={playerNightmareTic=1..}] run function gstools:util/random
 execute as @a[scores={playerNightmareTic=1..}] if score @s random100 < @s playerNightmareTic run effect give @s darkness 10 10
 execute as @a[scores={playerNightmareTic=10..}] if score @s random100 < @s playerNightmareTic run effect give @s blindness 3 10
-execute as @a[scores={playerNightmareTic=1..}] if score @s random100 < @s playerNightmareTic run playsound minecraft:gothichorror.hallow.rumble master @s ~ ~ ~ 0.1 0.1
-execute as @a[scores={playerNightmareTic=10..}] if score @s random100 < @s playerNightmareTic run playsound minecraft:gothichorror.hallow.rumble master @s ~ ~ ~ 0.1 0.12
+execute as @a[scores={playerNightmareTic=1..}] if score @s random100 < @s playerNightmareTic run playsound minecraft:gothichorror.hallow.rumble master @a ~ ~ ~ 0.1 0.1
+execute as @a[scores={playerNightmareTic=10..}] if score @s random100 < @s playerNightmareTic run playsound minecraft:gothichorror.hallow.rumble master @a ~ ~ ~ 0.1 0.12
 execute as @a[scores={playerNightmareTic=10..}] if score @s random100 < @s playerNightmareTic run effect give @s slowness 30 0 true
-execute as @a[scores={playerNightmareTic=20..}] if score @s random100 < @s playerNightmareTic run playsound minecraft:gothichorror.hallow.rumble master @s ~ ~ ~ 0.1 0.14
+execute as @a[scores={playerNightmareTic=20..}] if score @s random100 < @s playerNightmareTic run playsound minecraft:gothichorror.hallow.rumble master @a ~ ~ ~ 0.1 0.14
 execute as @a[scores={playerNightmareTic=20..}] if score @s random100 < @s playerNightmareTic run effect give @s slowness 25 1 true
-execute as @a[scores={playerNightmareTic=30..}] if score @s random100 < @s playerNightmareTic run playsound minecraft:gothichorror.hallow.rumble master @s ~ ~ ~ 0.1 0.18
+execute as @a[scores={playerNightmareTic=30..}] if score @s random100 < @s playerNightmareTic run playsound minecraft:gothichorror.hallow.rumble master @a ~ ~ ~ 0.1 0.18
 execute as @a[scores={playerNightmareTic=30..}] if score @s random100 < @s playerNightmareTic run effect give @s slowness 20 2 true
-execute as @a[scores={playerNightmareTic=40..}] if score @s random100 < @s playerNightmareTic run playsound minecraft:gothichorror.hallow.rumble master @s ~ ~ ~ 0.1 0.26
+execute as @a[scores={playerNightmareTic=40..}] if score @s random100 < @s playerNightmareTic run playsound minecraft:gothichorror.hallow.rumble master @a ~ ~ ~ 0.1 0.26
 execute as @a[scores={playerNightmareTic=40..}] if score @s random100 < @s playerNightmareTic run effect give @s slowness 15 3 true
-execute as @a[scores={playerNightmareTic=50..}] if score @s random100 < @s playerNightmareTic run playsound minecraft:gothichorror.hallow.rumble master @s ~ ~ ~ 0.1 0.42
+execute as @a[scores={playerNightmareTic=50..}] if score @s random100 < @s playerNightmareTic run playsound minecraft:gothichorror.hallow.rumble master @a ~ ~ ~ 0.1 0.42
 execute as @a[scores={playerNightmareTic=50..}] if score @s random100 < @s playerNightmareTic run effect give @s slowness 10 4 true
-execute as @a[scores={playerNightmareTic=60..}] if score @s random100 < @s playerNightmareTic run playsound minecraft:gothichorror.hallow.rumble master @s ~ ~ ~ 0.1 0.74
+execute as @a[scores={playerNightmareTic=60..}] if score @s random100 < @s playerNightmareTic run playsound minecraft:gothichorror.hallow.rumble master @a ~ ~ ~ 0.1 0.74
 execute as @a[scores={playerNightmareTic=60..}] if score @s random100 < @s playerNightmareTic run effect give @s slowness 5 5 true
 
 
