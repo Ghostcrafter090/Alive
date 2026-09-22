@@ -32,7 +32,7 @@ execute as @e[type=text_display,tag=dying_ghost,tag=dying_ghost_perform_dying_la
 # AI
 execute as @r run function gstools:horror/getindex
 execute as @r run function gstools:util/random
-scoreboard players operation @s horrorIndex /= @e[type=marker,tag=gstools_worker] 3
+scoreboard players operation @s horrorIndex /= @e[type=marker,tag=gstools_worker] 8
 execute as @r if score @s horrorIndex > @s random1000 at @s unless entity @e[type=text_display,tag=dying_ghost,distance=0..30,limit=1] run summon text_display ~ ~ ~ {view_range:100f,glow_color_override:1b,width:4f,height:4f,billboard:"center",Tags:["dying_ghost"],brightness:{sky:15,block:15},text:'{"text":"a","font":"gothichorror:images"}',background:16711680,text_opacity:126}
 execute as @e[type=text_display,tag=dying_ghost,tag=!dying_ghost_setup] run scoreboard players set @s range 100
 execute as @e[type=text_display,tag=dying_ghost,tag=!dying_ghost_setup] at @s run function gstools:util/fast_sp_3d
