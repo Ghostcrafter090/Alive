@@ -43,6 +43,8 @@ execute as @e[type=text_display,tag=death_ghost,tag=!death_ghost_setup] run tag 
 execute as @e[type=text_display,tag=death_ghost,sort=random,limit=1] at @s unless entity @a[distance=..200] run kill @s 
 
 execute as @e[type=text_display,tag=death_ghost,sort=random,limit=1] at @s run function gstools:util/light_level
+execute as @e[type=text_display,tag=death_ghost,sort=random,limit=1] if entity @s[scores={lightLevel=8..}] at @s run playsound minecraft:gothichorror.hallow.breath hostile @a ~ ~ ~
+execute as @e[type=text_display,tag=death_ghost,sort=random,limit=1] if entity @s[scores={lightLevel=8..}] at @s run particle large_smoke ~ ~ ~ 0.3 0.3 0.3 0.3 1000 force
 execute as @e[type=text_display,tag=death_ghost,sort=random,limit=1] if entity @s[scores={lightLevel=8..}] run kill @s
 
 execute as @e[type=text_display,tag=death_ghost] at @s if entity @a[distance=0..15] run scoreboard players operation @s 41 = @e[tag=gstools_worker,type=marker] 41
@@ -101,7 +103,7 @@ execute as @a at @s positioned ~ ~1 ~ if entity @e[type=text_display,tag=death_g
 execute as @a at @s positioned ~ ~1 ~ if entity @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=..1] run tag @e[type=text_display,tag=death_ghost,tag=death_ghost_setup,limit=1,sort=nearest,distance=0..64] add death_ghost_perform_death_laugh
 
 # Light
-execute as @e[tag=death_ghost] at @s run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 air replace minecraft:light
+# execute as @e[tag=death_ghost] at @s run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 air replace minecraft:light
 # execute as @e[tag=death_ghost,tag=death_ghost_setup,tag=!death_ghost_perform_death_laugh] at @s run fill ~ ~1 ~ ~ ~1 ~ minecraft:light[level=5] replace air
 
 

@@ -191,6 +191,9 @@ execute as @e[tag=gothic_ghost,tag=ghost_type_demon] unless entity @e[type=marke
 execute as @e[tag=gothic_ghost,tag=ghost_type_demon] if entity @e[type=marker,tag=gstools_view_finder,distance=0..15] run attribute @s minecraft:generic.movement_speed base set 0.08
 execute as @e[tag=gothic_ghost,tag=ghost_type_demon,sort=random,limit=1] run function gstools:util/random
 execute as @e[tag=gothic_ghost,tag=ghost_type_demon,sort=random,limit=1] if entity @s[scores={random1000=..15}] at @s run playsound minecraft:gothichorror.hallow.whispering hostile @a ~ ~ ~
+execute as @e[tag=gothic_ghost,tag=ghost_type_demon,sort=random,limit=1] run function gstools:horror/getindex
+execute as @e[tag=gothic_ghost,tag=ghost_type_demon,sort=random,limit=1] run function gstools:util/random
+execute as @e[tag=gothic_ghost,tag=ghost_type_demon,sort=random,limit=1] if score @s random1000 < @s horrorIndex run playsound gothichorror.hallow.chains master @a ~ ~ ~
 
 # Other Ghost AI Stuff
 execute as @a[scores={usedBell=1..}] run scoreboard players operation @s horrorIndex *= @e[tag=gstools_worker,type=marker] 10
@@ -245,4 +248,5 @@ execute as @e[tag=is_human,type=!player] at @s unless entity @e[type=marker,tag=
 execute as @e[tag=is_human,type=!player] at @s run tp @e[type=marker,tag=human_is_alive,distance=0..1,sort=nearest,limit=1] ~ ~ ~
 
 execute if entity @e[tag=gstools_worker,scores={averageTps=15..}] as @e[type=marker,tag=human_is_alive] at @s unless entity @e[tag=is_human,distance=0..5,sort=nearest,limit=1,type=!player] run summon zombie ~ ~ ~ {HasVisualFire:0b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,FallFlying:1b,Tags:["gothic_ghost"],equipment:{mainhand:{id:"minecraft:air",count:1},offhand:{id:"minecraft:air",count:1}},active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:10000000,show_particles:0b,show_icon:0b},{id:"minecraft:slow_falling",amplifier:1,duration:10000000,show_particles:0b,show_icon:0b}],attributes:[{id:"minecraft:attack_damage",base:0.5},{id:"minecraft:movement_speed",base:0.01}]}
+execute as @e[type=marker,tag=human_is_alive] at @s unless entity @e[tag=is_human,distance=0..1,sort=nearest,limit=1,type=!player] run tag @a add gothic_knock_pending
 execute as @e[type=marker,tag=human_is_alive] at @s unless entity @e[tag=is_human,distance=0..1,sort=nearest,limit=1,type=!player] run kill @s

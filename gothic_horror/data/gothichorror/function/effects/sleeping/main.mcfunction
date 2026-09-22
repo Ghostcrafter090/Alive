@@ -17,6 +17,7 @@ execute as @a[scores={playerIsSleeping=1..}] if score @s horrorIndex < @s player
 execute as @a[scores={playerIsSleeping=1..}] if score @s horrorIndex < @s playerIsSleeping unless entity @a[scores={playerIsSleeping=..0}] run time add 25t
 execute as @a[scores={playerIsSleeping=1..}] if score @s horrorIndex < @s playerIsSleeping run function gstools:util/random
 execute as @a[scores={playerIsSleeping=1..}] if score @s horrorIndex < @s playerIsSleeping if score @s random1000 < @s playerNightmareTic at @s run tp @s ~ ~1 ~ ~ ~
+execute as @a[scores={playerIsSleeping=1..}] if score @s horrorIndex < @s playerIsSleeping if score @s random1000 < @s playerNightmareTic at @s run playsound minecraft:gothichorror.hallow.breath master @a ~ ~ ~ 1 0.1
 execute as @a unless entity @s[scores={playerIsSleeping=1..}] if entity @s[scores={playerNightmareTic=1..}] run scoreboard players remove @s playerNightmareTic 1
 
 execute as @a[scores={playerNightmareTic=1..}] run function gstools:util/random
