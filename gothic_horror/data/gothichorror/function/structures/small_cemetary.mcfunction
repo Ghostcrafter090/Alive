@@ -35,6 +35,26 @@ execute as @e[type=marker,tag=gothic_grave_stone] at @s unless block ~ ~-1 ~ #mi
 execute as @e[type=marker,tag=gothic_grave_stone] at @s unless block ~ ~-1 ~ #minecraft:dirt run function gstools:util/fast_sp_3d
 execute as @e[type=marker,tag=gothic_grave_stone] at @s unless block ~ ~-1 ~ #minecraft:dirt run function gstools:util/fast_sp_3d
 execute as @e[type=marker,tag=gothic_grave_stone] at @s unless block ~ ~-1 ~ #minecraft:dirt run kill @s
+execute as @e[type=marker,tag=gothic_grave_stone] at @s unless predicate gstools:mostlyair run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_grave_stone] at @s unless predicate gstools:mostlyair run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_grave_stone] at @s unless predicate gstools:mostlyair run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_grave_stone] at @s unless predicate gstools:mostlyair run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_grave_stone] at @s unless predicate gstools:mostlyair run kill @s
+execute as @e[type=marker,tag=gothic_grave_stone] at @s positioned ~ ~1 ~ unless predicate gstools:mostlyair positioned ~ ~-1 ~ run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_grave_stone] at @s positioned ~ ~1 ~ unless predicate gstools:mostlyair positioned ~ ~-1 ~ run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_grave_stone] at @s positioned ~ ~1 ~ unless predicate gstools:mostlyair positioned ~ ~-1 ~ run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_grave_stone] at @s positioned ~ ~1 ~ unless predicate gstools:mostlyair positioned ~ ~-1 ~ run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_grave_stone] at @s positioned ~ ~1 ~ unless predicate gstools:mostlyair positioned ~ ~-1 ~ run kill @s
+execute as @e[type=marker,tag=gothic_grave_stone] at @s positioned ~ ~ ~-1 unless predicate gstools:mostlyair positioned ~ ~ ~1 run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_grave_stone] at @s positioned ~ ~ ~-1 unless predicate gstools:mostlyair positioned ~ ~ ~1 run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_grave_stone] at @s positioned ~ ~ ~-1 unless predicate gstools:mostlyair positioned ~ ~ ~1 run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_grave_stone] at @s positioned ~ ~ ~-1 unless predicate gstools:mostlyair positioned ~ ~ ~1 run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_grave_stone] at @s positioned ~ ~ ~-1 unless predicate gstools:mostlyair positioned ~ ~ ~1 run kill @s
+execute as @e[type=marker,tag=gothic_grave_stone] at @s positioned ~ ~1 ~-1 unless predicate gstools:mostlyair positioned ~ ~-1 ~1 run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_grave_stone] at @s positioned ~ ~1 ~-1 unless predicate gstools:mostlyair positioned ~ ~-1 ~1 run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_grave_stone] at @s positioned ~ ~1 ~-1 unless predicate gstools:mostlyair positioned ~ ~-1 ~1 run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_grave_stone] at @s positioned ~ ~1 ~-1 unless predicate gstools:mostlyair positioned ~ ~-1 ~1 run function gstools:util/fast_sp_3d
+execute as @e[type=marker,tag=gothic_grave_stone] at @s positioned ~ ~1 ~-1 unless predicate gstools:mostlyair positioned ~ ~-1 ~1 run kill @s
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if entity @e[tag=gothic_grave_stone,type=marker,distance=1..2] run function gstools:util/fast_sp_3d
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if entity @e[tag=gothic_grave_stone,type=marker,distance=1..2] run function gstools:util/fast_sp_3d
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if entity @e[tag=gothic_grave_stone,type=marker,distance=1..2] run function gstools:util/fast_sp_3d
