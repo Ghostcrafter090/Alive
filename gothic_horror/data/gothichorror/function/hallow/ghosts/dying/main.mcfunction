@@ -43,6 +43,8 @@ execute as @e[type=text_display,tag=dying_ghost,tag=!dying_ghost_setup] run tag 
 execute as @e[type=text_display,tag=dying_ghost,sort=random,limit=1] at @s unless entity @a[distance=..200] run kill @s 
 
 execute as @e[type=text_display,tag=dying_ghost,sort=random,limit=1] at @s run function gstools:util/light_level
+execute as @e[type=text_display,tag=dying_ghost,sort=random,limit=1] if entity @s[scores={lightLevel=8..}] at @s run playsound minecraft:gothichorror.hallow.breath hostile @a ~ ~ ~
+execute as @e[type=text_display,tag=dying_ghost,sort=random,limit=1] if entity @s[scores={lightLevel=8..}] at @s run particle large_smoke ~ ~ ~ 0.3 0.3 0.3 0.3 1000 force
 execute as @e[type=text_display,tag=dying_ghost,sort=random,limit=1] if entity @s[scores={lightLevel=8..}] run kill @s
 
 execute as @e[type=text_display,tag=dying_ghost] at @s if entity @a[distance=0..15] run scoreboard players operation @s 41 = @e[tag=gstools_worker,type=marker] 41
