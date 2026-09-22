@@ -1,8 +1,8 @@
 # Define
 
 # Main
-fill ~8 ~ ~8 ~-8 ~ ~-8 mossy_stone_brick_wall replace #gstools:air
-fill ~7 ~ ~7 ~-7 ~ ~-7 air replace mossy_stone_brick_wall
+fill ~8 ~-3 ~8 ~-8 ~ ~-8 mossy_stone_brick_wall replace #gstools:air
+fill ~7 ~-3 ~7 ~-7 ~ ~-7 air replace mossy_stone_brick_wall
 fill ~8 ~ ~2 ~8 ~3 ~-2 mossy_stone_brick_wall replace #gstools:air
 fill ~8 ~ ~1 ~8 ~2 ~-1 air replace mossy_stone_brick_wall
 
