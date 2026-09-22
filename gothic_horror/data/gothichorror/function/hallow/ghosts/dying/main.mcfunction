@@ -12,16 +12,16 @@ scoreboard objectives add dyingGhostAnger dummy
 # Main
 execute as @e[type=text_display,tag=dying_ghost] unless entity @s[scores={dyingGhostBehaviourMode=0..}] run scoreboard players set @s dyingGhostBehaviourMode 0
 
-execute as @e[type=text_display,tag=dying_ghost,scores={dyingGhostBehaviourMode=0..0}] at @s if entity @p[distance=0..30] run function gothichorror:hallow/ghosts/dying/sprite/default
+execute as @e[type=text_display,tag=dying_ghost,scores={dyingGhostBehaviourMode=0..0}] at @s if entity @p[distance=0..50] run function gothichorror:hallow/ghosts/dying/sprite/default
 execute as @e[type=text_display,tag=dying_ghost,scores={dyingGhostBehaviourMode=1..1}] run function gothichorror:hallow/ghosts/dying/sprite/blink
 execute as @e[type=text_display,tag=dying_ghost,scores={dyingGhostBehaviourMode=2..2}] run function gothichorror:hallow/ghosts/dying/sprite/mouth
 execute as @e[type=text_display,tag=dying_ghost,scores={dyingGhostBehaviourMode=3..3}] run function gothichorror:hallow/ghosts/dying/sprite/laugh
 
 execute as @e[type=text_display,tag=dying_ghost,sort=random,limit=1,scores={dyingGhostBehaviourMode=0..0}] run function gstools:util/random
 execute as @e[type=text_display,tag=dying_ghost,sort=random,limit=1,scores={dyingGhostBehaviourMode=0..0}] if entity @s[scores={random1000=..7}] at @s run playsound minecraft:gothichorror.hghost.dying hostile @a ~ ~ ~
-execute as @e[type=text_display,tag=dying_ghost,sort=random,limit=1,scores={dyingGhostBehaviourMode=0..0}] if entity @s[scores={random1000=..50}] at @s if entity @p[distance=0..30] run scoreboard players set @s dyingGhostBehaviourMode 1
-execute as @e[type=text_display,tag=dying_ghost,sort=random,limit=1,scores={dyingGhostBehaviourMode=0..0}] if entity @s[scores={random1000=..15}] at @s if entity @p[distance=0..30] run scoreboard players set @s dyingGhostBehaviourMode 2
-execute as @e[type=text_display,tag=dying_ghost,sort=random,limit=1,scores={dyingGhostBehaviourMode=0..0}] if entity @s[scores={random1000=..7}] at @s if entity @p[distance=0..30] run scoreboard players set @s dyingGhostBehaviourMode 3
+execute as @e[type=text_display,tag=dying_ghost,sort=random,limit=1,scores={dyingGhostBehaviourMode=0..0}] if entity @s[scores={random1000=..50}] at @s if entity @p[distance=0..50] run scoreboard players set @s dyingGhostBehaviourMode 1
+execute as @e[type=text_display,tag=dying_ghost,sort=random,limit=1,scores={dyingGhostBehaviourMode=0..0}] if entity @s[scores={random1000=..15}] at @s if entity @p[distance=0..50] run scoreboard players set @s dyingGhostBehaviourMode 2
+execute as @e[type=text_display,tag=dying_ghost,sort=random,limit=1,scores={dyingGhostBehaviourMode=0..0}] if entity @s[scores={random1000=..7}] at @s if entity @p[distance=0..50] run scoreboard players set @s dyingGhostBehaviourMode 3
 
 execute as @e[type=text_display,tag=dying_ghost,tag=dying_ghost_perform_dying_laugh,limit=1] as @a[tag=dying_ghost_perform_dying_laugh] at @s facing entity @e[type=text_display,tag=dying_ghost,tag=dying_ghost_perform_dying_laugh,sort=nearest,limit=1] eyes run tp @s ~ ~ ~ ~ ~
 execute as @e[type=text_display,tag=dying_ghost,tag=dying_ghost_perform_dying_laugh,limit=1] at @s as @a[distance=0..10] at @s facing entity @e[type=text_display,tag=dying_ghost,tag=dying_ghost_perform_dying_laugh,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~
