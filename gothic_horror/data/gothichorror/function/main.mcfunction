@@ -42,3 +42,5 @@ execute as @e[type=marker,tag=cemetary_spawn_zombie_node] at @s if entity @a[dis
 execute as @e[type=marker,tag=cemetary_spawn_zombie_node] at @s if entity @a[distance=0..4,scores={lightLevel=..7}] if entity @s[scores={random100=..50}] run summon zombie ~ ~ ~
 execute as @e[type=marker,tag=cemetary_spawn_zombie_node] at @s if entity @a[distance=0..4,scores={lightLevel=..7}] unless entity @s[scores={random100=..50}] run summon skeleton ~ ~ ~
 execute as @e[type=marker,tag=cemetary_spawn_zombie_node] at @s if entity @a[distance=0..4,scores={lightLevel=..7}] run kill @s
+
+function gothichorror:structures/small_cemetary
