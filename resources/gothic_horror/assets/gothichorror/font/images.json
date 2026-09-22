@@ -223,6 +223,118 @@
             "ascent": 64,
             "height": 64,
             "chars": ["5"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/sick/sick_ghost_0.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["6"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/sick/sick_ghost_1.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["7"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/sick/sick_ghost_2.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["8"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/sick/sick_ghost_3.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["9"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/sick/sick_ghost_4.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["A"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/sick/sick_ghost_5.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["B"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/sick/sick_ghost_6.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["C"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/sick/sick_ghost_7.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["D"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/sick/sick_ghost_8.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["E"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/sick/sick_ghost_9.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["F"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/sick/sick_ghost_blink_0.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["G"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/sick/sick_ghost_blink_1.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["H"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/sick/sick_ghost_blink_2.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["I"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/sick/sick_ghost_mouth_0.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["J"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/sick/sick_ghost_mouth_1.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["K"]
+        },
+        {
+            "type": "bitmap",
+            "file": "gothichorror:ghosts/sick/sick_ghost_mouth_2.png",
+            "ascent": 64,
+            "height": 64,
+            "chars": ["L"]
         }
     ]
 }
