@@ -29,6 +29,7 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={random100=..75}] run
 execute as @e[type=marker,tag=gothic_grave_stone] run scoreboard players set @s range 10
 execute as @e[type=marker,tag=gothic_grave_stone] at @s run function gstools:util/fast_sp_3d
 
+# <node:no_compile_mode>
 execute as @e[type=marker,tag=gothic_grave_stone] at @s unless block ~ ~-1 ~ #minecraft:dirt run function gstools:util/fast_sp_3d
 execute as @e[type=marker,tag=gothic_grave_stone] at @s unless block ~ ~-1 ~ #minecraft:dirt run function gstools:util/fast_sp_3d
 execute as @e[type=marker,tag=gothic_grave_stone] at @s unless block ~ ~-1 ~ #minecraft:dirt run function gstools:util/fast_sp_3d
@@ -39,7 +40,7 @@ execute as @e[type=marker,tag=gothic_grave_stone] at @s if entity @e[tag=gothic_
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if entity @e[tag=gothic_grave_stone,type=marker,distance=1..2] run function gstools:util/fast_sp_3d
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if entity @e[tag=gothic_grave_stone,type=marker,distance=1..2] run function gstools:util/fast_sp_3d
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if entity @e[tag=gothic_grave_stone,type=marker,distance=1..2] run kill @s
-
+# <node:no_compile_mode/>
 
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt run function gstools:util/random
 execute as @e[type=marker,tag=gothic_grave_stone] at @s if block ~ ~-1 ~ #minecraft:dirt if entity @s[scores={random100=..25}] run setblock ~ ~ ~ cobblestone
