@@ -14,6 +14,7 @@ import modifyStructure as structure
 
 import traceback
 import time
+import modules.curseforge as curseforge
 
 class flags:
     forceVersion = False
@@ -59,6 +60,8 @@ description="<modDescription>"
     versionRange="[<modVersion>,)"
     ordering="AFTER"
     side="BOTH"
+    
+<weather2Compat>
 
 # Start of user code block dependencies configuration
 # End of user code block dependencies configuration"""
@@ -300,6 +303,18 @@ def compileDatapackIntoMod(folderName):
                         neoforgeTemplate = neoforgeTemplate.replace("<modDisplayName>", modIdToDisplayName[folderName])
                         neoforgeTemplate = neoforgeTemplate.replace("<modDescription>", description)
                         neoforgeTemplate = neoforgeTemplate.replace("<gameVersions>", gameVersions)
+                        
+                        for x in gameVersions.split(","):
+                            if x in curseforge.versionsSupportingWeather2:
+                                neoforgeTemplate = neoforgeTemplate.replace("<weather2Compat>", """[[dependencies.<modId>]]
+    modId="gstoolsweather2compat"
+    type="required"
+    versionRange="[1.0.0,)"
+    ordering="AFTER"
+    side="BOTH""")
+                                break
+                        
+                        neoforgeTemplate = neoforgeTemplate.replace("<weather2Compat>", "")
                     
                         if (int(jarFile.split("-")[2].split(".jar")[0].split('.')[1]) >= 21) or (int(jarFile.split("-")[2].split(".jar")[0].split('.')[0]) >= 21):
                             pytools.IO.saveFile(".\\temp_dir\\META-INF\\neoforge.mods.toml", neoforgeTemplate)

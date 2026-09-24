@@ -27,7 +27,10 @@ projectIdDict = {
     "ghosts_and_ghouls": "1710272"
 }
 
-
+versionsSupportingWeather2 = [
+    "1.21.1",
+    "1.21"
+]
 
 def getGameVersions(loader, version, folderName=False):
     versionInfo = pytools.IO.getJson("game_versions.json")
@@ -102,12 +105,19 @@ def uploadFile(path, project, loader, version, displayName, changeLog):
                     "slug": "gstools",
                     "projectID": int(projectIdDict["gstools"]),
                     "type": "requiredDependency"
-                },
+                }
             ]    
         } # Use this for required mods or dependencies
     }
     
-    
+    for _version in list(GAME_VERSION.values()):
+        if _version in versionsSupportingWeather2:
+            metadata["relations"]["projects"].append({
+                "slug": "gstools-weather2-compat",
+                "projectID": 1710321,
+                "type": "requiredDependency"
+            })
+            break
     
     # Headers for authentication
     headers = {

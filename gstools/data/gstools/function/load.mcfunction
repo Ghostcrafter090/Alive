@@ -221,6 +221,19 @@ scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsUndeadExpand
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsGhostsAndGhoulsWorkerMultTen 310
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsBossProgressionWorkerMultTen 330
 
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsWorker 200
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsDesirePathsWorker 200
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsBlockDecayWorker 200
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsDynamicDirtWorker 200
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsDynamicEcosystemsWorker 200
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsEnhancedSurvivalWorker 200
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsDynamicMonstersWorker 200
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsLifeAndDeathWorker 200
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsGothicHorrorWorker 200
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsUndeadExpandedWorker 200
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsGhostsAndGhoulsWorker 200
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsBossProgressionWorker 200
+
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTps 20
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsDesirePaths 20
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsBlockDecay 20

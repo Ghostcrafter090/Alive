@@ -91,7 +91,20 @@ def uploadFile(path, project, loader, version, projectVersion, displayName, chan
     
     client = modrinth.ModrinthClient(token=API_TOKEN)
     
+    dependencies = [
+        {
+            "project_id": projectIdDict["gstools"],
+            "dependency_type": "required"
+        }
+    ]
     
+    for _version in gameVersions:
+        if _version in curseforge.versionsSupportingWeather2:
+            metadata["relations"]["projects"].append({
+                "project_id": "hXYQUodu",
+                "dependency_type": "required"
+            })
+            break
     
     versionInstance = modrinth.NewVersion(
         name = DISPLAY_NAME,
@@ -103,12 +116,7 @@ def uploadFile(path, project, loader, version, projectVersion, displayName, chan
         featured = True,
         environment = "client_and_server",
         changelog = "",
-        dependencies = [
-            {
-                "project_id": projectIdDict["gstools"],
-                "dependency_type": "required"
-            }
-        ]
+        dependencies = dependencies
     )
     
     client.create_version(versionInstance, file_paths=[Path(path)])
