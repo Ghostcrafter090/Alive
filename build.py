@@ -176,8 +176,7 @@ baseCompileVersions = [
     "1.20.4",
     "1.20.1",
     "1.19.4",
-    "1.20",
-    "26.3"
+    "1.20"
 ]
 
 fabricBaseRemovalVersions = [
@@ -311,7 +310,7 @@ def compileDatapackIntoMod(folderName):
     type="required"
     versionRange="[1.0.0,)"
     ordering="AFTER"
-    side="BOTH""")
+    side="BOTH""").replace("<modId>", folderName)
                                 break
                         
                         neoforgeTemplate = neoforgeTemplate.replace("<weather2Compat>", "")

@@ -1,43 +1,30 @@
 # Define
 scoreboard objectives add testGstoolsWorkerCount dummy
-scoreboard objectives add test2HasSetup dummy
+scoreboard objectives add test3HasSetup dummy
 
 # Main
-execute unless score $test test2HasSetup = $test test1 run function test:tests/2/setup
+execute unless score $test test3HasSetup = $test test1 run function test:tests/2/setup
 
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_1] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_1] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_1] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_1] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_1] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_1] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_1] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_1] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_1] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_1] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_1] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_1] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_1] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_1] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_1] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_1] at @s run function blockdecay:decay/at
-execute as @e[tag=test_cursor_0] at @s run function blockdecay:decay/at
 
-execute as @e[tag=test_cursor_0] at @s if block ~ ~-1 ~ stone as @e[tag=test_cursor_1] at @s if block ~ ~-1 ~ rooted_dirt run scoreboard players set $test testSuccess 1
+scoreboard players set @e[tag=gstools_worker,type=marker] desirePathsLoaded 0
+scoreboard players set @e[tag=gstools_worker,type=marker] dynamicDirtLoaded 0
+scoreboard players set @e[tag=gstools_worker,type=marker] dynamicMonstersLoaded 0
+scoreboard players set @e[tag=gstools_worker,type=marker] lifeAndDeathLoaded 0
+scoreboard players set @e[tag=gstools_worker,type=marker] enhancedSurvivalLoaded 0
+scoreboard players set @e[tag=gstools_worker,type=marker] blockDecayLoaded 0
+scoreboard players set @e[tag=gstools_worker,type=marker] gothicHorrorLoaded 0
+scoreboard players set @e[tag=gstools_worker,type=marker] ghostsAndGhoulsLoaded 0
+scoreboard players set @e[tag=gstools_worker,type=marker] undeadExpandedLoaded 0
+
+scoreboard players set $test testSuccess 1
+execute unless entity @e[type=marker,tag=gstools_worker,scores={desirePathsLoaded=1..}] run scoreboard players set $test testSuccess 0
+execute unless entity @e[type=marker,tag=gstools_worker,scores={dynamicDirtLoaded=1..}] run scoreboard players set $test testSuccess 0
+execute unless entity @e[type=marker,tag=gstools_worker,scores={dynamicMonstersLoaded=1..}] run scoreboard players set $test testSuccess 0
+execute unless entity @e[type=marker,tag=gstools_worker,scores={lifeAndDeathLoaded=1..}] run scoreboard players set $test testSuccess 0
+execute unless entity @e[type=marker,tag=gstools_worker,scores={enhancedSurvivalLoaded=1..}] run scoreboard players set $test testSuccess 0
+execute unless entity @e[type=marker,tag=gstools_worker,scores={blockDecayLoaded=1..}] run scoreboard players set $test testSuccess 0
+execute unless entity @e[type=marker,tag=gstools_worker,scores={gothicHorrorLoaded=1..}] run scoreboard players set $test testSuccess 0
+execute unless entity @e[type=marker,tag=gstools_worker,scores={ghostsAndGhoulsLoaded=1..}] run scoreboard players set $test testSuccess 0
+execute unless entity @e[type=marker,tag=gstools_worker,scores={undeadExpandedLoaded=1..}] run scoreboard players set $test testSuccess 0
+
 scoreboard players set $test testComplete 1

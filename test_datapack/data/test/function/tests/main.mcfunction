@@ -21,6 +21,11 @@ execute if score $test testNumber = $test testNumberWorker run function test:tes
 execute if score $test testNumber = $test testNumberWorker if score $test testComplete = $test test1 if score $test testSuccess = $test test1 run say <test> {"testName":2,"success":true}
 execute if score $test testNumber = $test testNumberWorker if score $test testComplete = $test test1 unless score $test testSuccess = $test test1 run say <test> {"testName":2,"success":false}
 
+scoreboard players set $test testNumberWorker 3
+execute if score $test testNumber = $test testNumberWorker run function test:tests/3/main
+execute if score $test testNumber = $test testNumberWorker if score $test testComplete = $test test1 if score $test testSuccess = $test test1 run say <test> {"testName":3,"success":true}
+execute if score $test testNumber = $test testNumberWorker if score $test testComplete = $test test1 unless score $test testSuccess = $test test1 run say <test> {"testName":3,"success":false}
+
 execute if score $test testNumber = $test testNumberWorker if score $test testComplete = $test test1 run say [framework_testing_ended]
 
 scoreboard players add $test testTimeSinceStart 1
