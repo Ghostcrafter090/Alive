@@ -125,6 +125,8 @@ scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsD
 scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsDynamicMonstersWorkerMultTen 200
 scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsEnhancedSurvivalWorkerMultTen 200
 scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsGothicHorrorWorkerMultTen 200
+scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsUndeadExpandedWorkerMultTen 200
+scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsGhostsAndGhoulsWorkerMultTen 200
 scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsLifeAndDeathWorkerMultTen 200
 scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsWorkerMultTen 200
 
