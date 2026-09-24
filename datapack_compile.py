@@ -186,15 +186,16 @@ def run(path, namespace, compileEverything=False):
     needsCompile = False
     
     try:
-        for file in subprocess.getoutput("git status -s").replace("\n M ", "\n")[3:].replace("\n A ", "\n")[3:].replace("/", "\\").split("\n"):
-            if "\\data\\" in file:
-                fileChanges.append(file.split("\\data\\")[1].replace("\\function\\", "\\"))
-                print(file.split("\\data\\")[0].split("\\")[-1])
-                print(path.split("\\")[1])
-                if file.split("\\data\\")[0].split("\\")[-1] in path.split("\\")[1]:
+        if not compileEverything:
+            for file in subprocess.getoutput("git status -s").replace("\n M ", "\n")[3:].replace("\n A ", "\n")[3:].replace("/", "\\").split("\n"):
+                if "\\data\\" in file:
+                    fileChanges.append(file.split("\\data\\")[1].replace("\\function\\", "\\"))
                     print(file.split("\\data\\")[0].split("\\")[-1])
                     print(path.split("\\")[1])
-                    needsCompile = True
+                    if file.split("\\data\\")[0].split("\\")[-1] in path.split("\\")[1]:
+                        print(file.split("\\data\\")[0].split("\\")[-1])
+                        print(path.split("\\")[1])
+                        needsCompile = True
         
         if needsCompile or compileEverything:
             try:
@@ -252,4 +253,4 @@ def run(path, namespace, compileEverything=False):
     except:
         print(traceback.format_exc())
 
-    return needsCompile
+    return needsCompile or compileEverything
