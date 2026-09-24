@@ -12,10 +12,10 @@ scoreboard objectives add sickGhostAnger dummy
 # Main
 execute as @e[type=text_display,tag=sick_ghost] unless entity @s[scores={sickGhostBehaviourMode=0..}] run scoreboard players set @s sickGhostBehaviourMode 0
 
-execute as @e[type=text_display,tag=sick_ghost,scores={sickGhostBehaviourMode=0..0}] at @s if entity @p[distance=0..30] run function gothichorror:hallow/ghosts/sick/sprite/default
-execute as @e[type=text_display,tag=sick_ghost,scores={sickGhostBehaviourMode=1..1}] run function gothichorror:hallow/ghosts/sick/sprite/blink
-execute as @e[type=text_display,tag=sick_ghost,scores={sickGhostBehaviourMode=2..2}] run function gothichorror:hallow/ghosts/sick/sprite/mouth
-execute as @e[type=text_display,tag=sick_ghost,scores={sickGhostBehaviourMode=3..3}] run function gothichorror:hallow/ghosts/sick/sprite/laugh
+execute as @e[type=text_display,tag=sick_ghost,scores={sickGhostBehaviourMode=0..0}] at @s if entity @p[distance=0..30] run function ghostsandghouls:hallow/ghosts/sick/sprite/default
+execute as @e[type=text_display,tag=sick_ghost,scores={sickGhostBehaviourMode=1..1}] run function ghostsandghouls:hallow/ghosts/sick/sprite/blink
+execute as @e[type=text_display,tag=sick_ghost,scores={sickGhostBehaviourMode=2..2}] run function ghostsandghouls:hallow/ghosts/sick/sprite/mouth
+execute as @e[type=text_display,tag=sick_ghost,scores={sickGhostBehaviourMode=3..3}] run function ghostsandghouls:hallow/ghosts/sick/sprite/laugh
 
 execute as @e[type=text_display,tag=sick_ghost,sort=random,limit=30,scores={sickGhostBehaviourMode=0..0}] run function gstools:util/random
 execute as @e[type=text_display,tag=sick_ghost,sort=random,limit=30,scores={sickGhostBehaviourMode=0..0}] if entity @s[scores={random1000=..7}] at @s run playsound minecraft:gothichorror.hghost.main hostile @a ~ ~ ~

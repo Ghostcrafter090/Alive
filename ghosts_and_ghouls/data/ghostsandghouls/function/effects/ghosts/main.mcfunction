@@ -45,8 +45,8 @@ execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] if entity @s[scores={ran
 
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run team join gothic_ghost @s
 
-execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run function gothichorror:effects/ghosts/version_conflict/name_0
-execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run function gothichorror:effects/ghosts/version_conflict/name_1
+execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run function ghostsandghouls:effects/ghosts/version_conflict/name_0
+execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run function ghostsandghouls:effects/ghosts/version_conflict/name_1
 
 execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run tag @s add gothic_ghost_setup
 

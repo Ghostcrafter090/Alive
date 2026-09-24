@@ -4,9 +4,9 @@ scoreboard objectives add dyingGhostCount dummy
 scoreboard objectives add sickGhostCount dummy
 
 # Main
-schedule function gothichorror:hallow/ghosts/death/main 1t append
-schedule function gothichorror:hallow/ghosts/dying/main 2t append
-schedule function gothichorror:hallow/ghosts/sick/main 3t append
+schedule function ghostsandghouls:hallow/ghosts/death/main 1t append
+schedule function ghostsandghouls:hallow/ghosts/dying/main 2t append
+schedule function ghostsandghouls:hallow/ghosts/sick/main 3t append
 
 execute store result score @e[type=marker,tag=gstools_worker] deathGhostCount if entity @e[type=text_display,tag=death_ghost]
 execute store result score @e[type=marker,tag=gstools_worker] dyingGhostCount if entity @e[type=text_display,tag=dying_ghost]

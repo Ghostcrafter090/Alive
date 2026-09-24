@@ -163,7 +163,10 @@ modIdToDisplayName = {
     "enhanced_survival": "Alive | Enhanced Survival",
     "life_and_death": "Alive | Life & Death",
     "block_decay": "Alive | Advanced Block Decay",
-    "dynamic_ecosystems": "Alive | Dynamic Ecosystems"
+    "dynamic_ecosystems": "Alive | Dynamic Ecosystems",
+    "gothic_horror": "Alive | Gothic Horror",
+    "ghosts_and_ghouls": "Alive | Ghosts And Ghouls",
+    "undead_expanded": "Alive | Undead Expanded"
 }
 
 baseCompileVersions = [

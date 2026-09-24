@@ -11,7 +11,6 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=11900..119
 execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=17900..17999},tag=!after_sunset] as @e[tag=is_alive,sort=random,limit=30] run function gstools:util/is_outside
 execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=17900..17999},tag=!after_sunset] as @e[type=#minecraft:undead,sort=random,limit=30] run function gstools:util/is_outside
 
-
 execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=12000..},tag=!after_sunset] as @a at @s as @e[tag=is_alive,sort=nearest,limit=10] run function gstools:horror/getindex
 execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=12000..},tag=!after_sunset] as @a at @s as @e[tag=is_alive,sort=nearest,limit=10] run function gstools:util/random
 execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=12000..},tag=!after_sunset] as @a at @s as @e[tag=is_alive,sort=nearest,limit=10] if score @s random100 < @s horrorIndex at @s unless entity @s[scores={isOutside=1..,horrorIndex=..90}] run playsound minecraft:gothichorror.rumble hostile @a[scores={horrorIndex=1..}] ~ ~ ~ 9 1
@@ -35,12 +34,3 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={timeOfDay=18000..},t
 
 execute as @e[tag=gstools_worker,type=marker,scores={timeOfDay=..1000},tag=after_sunset] run tag @s remove after_sunset
 execute as @e[tag=gstools_worker,type=marker,scores={timeOfDay=..1000},tag=after_midnight] run tag @s remove after_midnight
-
-# Zombie Spawn Nodes
-execute as @e[type=marker,tag=cemetary_spawn_zombie_node] at @s as @a[distance=0..4] at @s run function gstools:util/light_level
-execute as @e[type=marker,tag=cemetary_spawn_zombie_node] at @s if entity @a[distance=0..4,scores={lightLevel=..7}] run function gstools:util/random
-execute as @e[type=marker,tag=cemetary_spawn_zombie_node] at @s if entity @a[distance=0..4,scores={lightLevel=..7}] if entity @s[scores={random100=..50}] run summon zombie_villager ~ ~ ~
-execute as @e[type=marker,tag=cemetary_spawn_zombie_node] at @s if entity @a[distance=0..4,scores={lightLevel=..7}] unless entity @s[scores={random100=..50}] run summon skeleton ~ ~ ~
-execute as @e[type=marker,tag=cemetary_spawn_zombie_node] at @s if entity @a[distance=0..4,scores={lightLevel=..7}] run kill @s
-
-function gothichorror:structures/small_cemetary
