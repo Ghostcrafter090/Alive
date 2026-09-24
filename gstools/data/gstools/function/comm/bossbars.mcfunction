@@ -7,6 +7,8 @@ bossbar add dynamic_ecosystems_tps "Average Tps Dynamic Ecosystems"
 bossbar add dynamic_monsters_tps "Average Tps Dynamic Monsters"
 bossbar add enhanced_survival_tps "Average Tps Enhanced Survival"
 bossbar add gothic_horror_tps "Average Tps Gothic Horror"
+bossbar add undead_expanded_tps "Average Tps Undead Expanded"
+bossbar add ghosts_and_ghouls_tps "Average Tps Ghosts & Ghouls"
 bossbar add life_and_death_tps "Average Tps Life And Death"
 bossbar add all_tps "Average Tps All"
 
@@ -18,6 +20,8 @@ bossbar set dynamic_ecosystems_tps max 200
 bossbar set dynamic_monsters_tps max 200
 bossbar set enhanced_survival_tps max 200
 bossbar set gothic_horror_tps max 200
+bossbar set undead_expanded_tps max 200
+bossbar set ghosts_and_ghouls_tps max 200
 bossbar set life_and_death_tps max 200
 bossbar set all_tps max 200
 
@@ -29,6 +33,8 @@ bossbar set dynamic_ecosystems_tps players @a
 bossbar set dynamic_monsters_tps players @a
 bossbar set enhanced_survival_tps players @a
 bossbar set gothic_horror_tps players @a
+bossbar set undead_expanded_tps players @a
+bossbar set ghosts_and_ghouls_tps players @a
 bossbar set life_and_death_tps players @a
 bossbar set all_tps players @a
 
@@ -40,6 +46,8 @@ execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsDynamicEco
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsDynamicMonstersWorkerMultTen=350..}] run bossbar set dynamic_monsters_tps color green
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsEnhancedSurvivalWorkerMultTen=350..}] run bossbar set enhanced_survival_tps color green
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsGothicHorrorWorkerMultTen=350..}] run bossbar set gothic_horror_tps color green
+execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsUndeadExpandedWorkerMultTen=350..}] run bossbar set undead_expanded_tps color green
+execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsGhostsAndGhoulsWorkerMultTen=350..}] run bossbar set ghosts_and_ghouls_tps color green
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsLifeAndDeathWorkerMultTen=350..}] run bossbar set life_and_death_tps color green
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsWorkerMultTen=350..}] run bossbar set all_tps color green
 
@@ -52,6 +60,8 @@ execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsDynamicEco
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsDynamicMonstersWorkerMultTen=300..349}] run bossbar set dynamic_monsters_tps color yellow
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsEnhancedSurvivalWorkerMultTen=300..349}] run bossbar set enhanced_survival_tps color yellow
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsGothicHorrorWorkerMultTen=300..349}] run bossbar set gothic_horror_tps color yellow
+execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsUndeadExpandedWorkerMultTen=300..349}] run bossbar set undead_expanded_tps color yellow
+execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsGhostsAndGhoulsWorkerMultTen=300..349}] run bossbar set ghosts_and_ghouls_tps color yellow
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsLifeAndDeathWorkerMultTen=300..349}] run bossbar set life_and_death_tps color yellow
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsWorkerMultTen=300..349}] run bossbar set all_tps color yellow
 
@@ -63,6 +73,8 @@ execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsDynamicEco
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsDynamicMonstersWorkerMultTen=260..299}] run bossbar set dynamic_monsters_tps color red
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsEnhancedSurvivalWorkerMultTen=260..299}] run bossbar set enhanced_survival_tps color red
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsGothicHorrorWorkerMultTen=260..299}] run bossbar set gothic_horror_tps color red
+execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsUndeadExpandedWorkerMultTen=260..299}] run bossbar set undead_expanded_tps color red
+execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsGhostsAndGhoulsWorkerMultTen=260..299}] run bossbar set ghosts_and_ghouls_tps color red
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsLifeAndDeathWorkerMultTen=260..299}] run bossbar set life_and_death_tps color red
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsWorkerMultTen=260..299}] run bossbar set all_tps color red
 
@@ -74,6 +86,8 @@ execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsDynamicEco
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsDynamicMonstersWorkerMultTen=..259}] run bossbar set dynamic_monsters_tps color purple
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsEnhancedSurvivalWorkerMultTen=..259}] run bossbar set enhanced_survival_tps color purple
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsGothicHorrorWorkerMultTen=..259}] run bossbar set gothic_horror_tps color purple
+execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsUndeadExpandedWorkerMultTen=..259}] run bossbar set undead_expanded_tps color purple
+execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsGhostsAndGhoulsWorkerMultTen=..259}] run bossbar set ghosts_and_ghouls_tps color purple
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsLifeAndDeathWorkerMultTen=..259}] run bossbar set life_and_death_tps color purple
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsWorkerMultTen=..259}] run bossbar set all_tps color purple
 
@@ -85,6 +99,8 @@ execute if entity @e[type=marker,tag=gstools_worker,scores={doRunDynamicEcosyste
 execute if entity @e[type=marker,tag=gstools_worker,scores={doRunDynamicMonsters=1..1}] run bossbar set dynamic_monsters_tps style notched_20
 execute if entity @e[type=marker,tag=gstools_worker,scores={doRunEnhancedSurvival=1..1}] run bossbar set enhanced_survival_tps style notched_20
 execute if entity @e[type=marker,tag=gstools_worker,scores={doRunGothicHorror=1..1}] run bossbar set gothic_horror_tps style notched_20
+execute if entity @e[type=marker,tag=gstools_worker,scores={doRunUndeadExpanded=1..1}] run bossbar set undead_expanded_tps style notched_20
+execute if entity @e[type=marker,tag=gstools_worker,scores={doRunGhostsAndGhouls=1..1}] run bossbar set ghosts_and_ghouls_tps style notched_20
 execute if entity @e[type=marker,tag=gstools_worker,scores={doRunLifeAndDeath=1..1}] run bossbar set life_and_death_tps style notched_20
 execute if entity @e[type=marker,tag=gstools_worker,scores={doRun=1..1}] run bossbar set all_tps style notched_20
 
@@ -96,6 +112,8 @@ execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunDynamicEcos
 execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunDynamicMonsters=1..1}] run bossbar set dynamic_monsters_tps style progress
 execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunEnhancedSurvival=1..1}] run bossbar set enhanced_survival_tps style progress
 execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunGothicHorror=1..1}] run bossbar set gothic_horror_tps style progress
+execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunUndeadExpanded=1..1}] run bossbar set undead_expanded_tps style progress
+execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunGhostsAndGhouls=1..1}] run bossbar set ghosts_and_ghouls_tps style progress
 execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunLifeAndDeath=1..1}] run bossbar set life_and_death_tps style progress
 execute unless entity @e[type=marker,tag=gstools_worker,scores={doRun=1..1}] run bossbar set all_tps style progress
 
@@ -130,5 +148,7 @@ scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsDyna
 scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsDynamicMonstersWorkerMultTen 200
 scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsEnhancedSurvivalWorkerMultTen 200
 scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsGothicHorrorWorkerMultTen 200
+scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsUndeadExpandedWorkerMultTen 200
+scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsGhostsAndGhoulsWorkerMultTen 200
 scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsLifeAndDeathWorkerMultTen 200
 scoreboard players add @e[tag=gstools_worker,type=marker,limit=1] averageTpsWorkerMultTen 200

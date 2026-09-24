@@ -29,6 +29,8 @@ scoreboard objectives add globalTicLifeAndDeath dummy
 scoreboard objectives add globalTicDynamicMonsters dummy
 scoreboard objectives add globalTicBossProgression dummy
 scoreboard objectives add globalTicGothicHorror dummy
+scoreboard objectives add globalTicUndeadExpanded dummy
+scoreboard objectives add globalTicGhostsAndGhouls dummy
 
 scoreboard objectives add hasGivenDailyPatreonReminder dummy
 
@@ -42,6 +44,8 @@ scoreboard objectives add doRunLifeAndDeath dummy
 scoreboard objectives add doRunDynamicMonsters dummy
 scoreboard objectives add doRunBossProgression dummy
 scoreboard objectives add doRunGothicHorror dummy
+scoreboard objectives add doRunUndeadExpanded dummy
+scoreboard objectives add doRunGhostsAndGhouls dummy
 
 scoreboard objectives add hasGivenFirstMessage dummy
 scoreboard objectives add hasGivenSecondMessage dummy
@@ -85,6 +89,8 @@ execute as @e[tag=gstools_worker,type=marker,scores={gameTime=0..10}] run scoreb
 execute as @e[tag=gstools_worker,type=marker,scores={gameTime=0..10}] run scoreboard players set @s averageTpsLifeAndDeathWorkerMultTen 400
 execute as @e[tag=gstools_worker,type=marker,scores={gameTime=0..10}] run scoreboard players set @s averageTpsBossProgressionWorkerMultTen 400
 execute as @e[tag=gstools_worker,type=marker,scores={gameTime=0..10}] run scoreboard players set @s averageTpsGothicHorrorWorkerMultTen 400
+execute as @e[tag=gstools_worker,type=marker,scores={gameTime=0..10}] run scoreboard players set @s averageTpsUndeadExpandedWorkerMultTen 400
+execute as @e[tag=gstools_worker,type=marker,scores={gameTime=0..10}] run scoreboard players set @s averageTpsGhostsAndGhoulsWorkerMultTen 400
 
 execute if entity @e[type=marker,tag=gstools_worker,scores={ticSecond=5..5}] run schedule function gstools:extension/randomize 1t append
 
@@ -172,6 +178,8 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicEcosyste
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBlockDecay=1..1}] run schedule function gstools:cursor/run 1t replace
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBossProgression=1..1}] run schedule function gstools:cursor/run 1t replace
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunGothicHorror=1..1}] run schedule function gstools:cursor/run 1t replace
+execute if entity @e[tag=gstools_worker,type=marker,scores={doRunUndeadExpanded=1..1}] run schedule function gstools:cursor/run 1t replace
+execute if entity @e[tag=gstools_worker,type=marker,scores={doRunGhostsAndGhouls=1..1}] run schedule function gstools:cursor/run 1t replace
 
 execute store result score @e[tag=gstools_worker,type=marker] gameTime run time query gametime
 function gstools:version_conflict/time_new
@@ -195,6 +203,8 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicMonsters
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunLifeAndDeath=1..1,doRun=1..1}] run schedule function gstools:extension/lifeanddeath/run 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBossProgression=1..1,doRun=1..1}] run schedule function gstools:extension/bossprogression/run 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunGothicHorror=1..1,doRun=1..1}] run schedule function gstools:extension/gothichorror/run 1t append
+execute if entity @e[tag=gstools_worker,type=marker,scores={doRunUndeadExpanded=1..1,doRun=1..1}] run schedule function gstools:extension/undeadexpanded/run 1t append
+execute if entity @e[tag=gstools_worker,type=marker,scores={doRunGhostsAndGhouls=1..1,doRun=1..1}] run schedule function gstools:extension/ghostsandghouls/run 1t append
 
 execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=10..}] run function enhancedsurvival:main
 
@@ -206,6 +216,8 @@ function bossprogression:tic
 function gothichorror:tic
 function dynamicdirt:tic
 function desirepaths:tic
+function undeadexpanded:tic
+function ghostsandghouls:tic
 
 # On Death
 execute as @a[scores={death=1..}] at @s run function gstools:player/on_death

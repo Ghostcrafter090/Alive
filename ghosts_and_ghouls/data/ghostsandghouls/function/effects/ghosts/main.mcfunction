@@ -176,7 +176,9 @@ execute as @e[type=chicken,tag=!poltergeist_not_spawned_chicken] at @s unless en
 
 # Echo Ai
 execute as @e[tag=gothic_ghost,tag=ghost_type_echo,sort=random,limit=1] run function gstools:util/random
-execute as @e[tag=gothic_ghost,tag=ghost_type_echo,sort=random,limit=1] if entity @s[scores={random1000=..25}] at @s run playsound minecraft:entity.vex.ambient hostile @a ~ ~ ~ 0.3 0.1
+execute as @e[tag=gothic_ghost,tag=ghost_type_echo,sort=random,limit=1] if entity @s[scores={random1000=..13}] at @s run playsound minecraft:entity.vex.ambient hostile @a ~ ~ ~ 0.3 0.1
+execute as @e[tag=gothic_ghost,tag=ghost_type_echo,sort=random,limit=1] run function gstools:util/random
+execute as @e[tag=gothic_ghost,tag=ghost_type_echo,sort=random,limit=1] if entity @s[scores={random1000=..13}] at @s run playsound minecraft:gothichorror.hallow.chains hostile @a ~ ~ ~
 
 # Spirit Ai
 execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=3] at @s if entity @a[distance=0..5] unless entity @s[scores={lastSpiritBesidePlayed=1..}] run playsound minecraft:gothichorror.hallow.woman.beside hostile @a ~ ~ ~ 0.1
@@ -185,6 +187,8 @@ execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=3] at @s 
 execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=3] at @s unless entity @a[distance=0..5] if entity @s[scores={lastSpiritBesidePlayed=1..}] run scoreboard players remove @s lastSpiritBesidePlayed 1
 execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=1] run function gstools:util/random
 execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=1] if entity @s[scores={random1000=..5}] at @s run playsound minecraft:gothichorror.draft hostile @a ~ ~ ~ 1 0.1
+execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=1] run function gstools:util/random
+execute as @e[tag=gothic_ghost,tag=ghost_type_spirit,sort=random,limit=1] if entity @s[scores={random1000=..13}] at @s run playsound minecraft:gothichorror.hallow.chains hostile @a ~ ~ ~
 
 # Demon AI
 execute as @e[tag=gothic_ghost,tag=ghost_type_demon] unless entity @e[type=marker,tag=gstools_view_finder,distance=0..15] run attribute @s minecraft:generic.movement_speed base set 0.2

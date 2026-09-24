@@ -51,3 +51,15 @@ function gstools:extension/dorunmath
 scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicGothicHorror += @e[tag=gstools_worker,type=marker] globalTicWorkerA
 execute as @e[tag=gstools_worker,type=marker,scores={globalTicGothicHorror=20..}] run scoreboard players set @s doRunGothicHorror 1
 execute as @e[tag=gstools_worker,type=marker,scores={globalTicGothicHorror=20..}] run scoreboard players set @s globalTicGothicHorror 0
+
+scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA = @e[tag=gstools_worker,type=marker] averageTpsUndeadExpanded
+function gstools:extension/dorunmath
+scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicUndeadExpanded += @e[tag=gstools_worker,type=marker] globalTicWorkerA
+execute as @e[tag=gstools_worker,type=marker,scores={globalTicUndeadExpanded=20..}] run scoreboard players set @s doRunUndeadExpanded 1
+execute as @e[tag=gstools_worker,type=marker,scores={globalTicUndeadExpanded=20..}] run scoreboard players set @s globalTicUndeadExpanded 0
+
+scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA = @e[tag=gstools_worker,type=marker] averageTpsGhostsAndGhouls
+function gstools:extension/dorunmath
+scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicGhostsAndGhouls += @e[tag=gstools_worker,type=marker] globalTicWorkerA
+execute as @e[tag=gstools_worker,type=marker,scores={globalTicGhostsAndGhouls=20..}] run scoreboard players set @s doRunGhostsAndGhouls 1
+execute as @e[tag=gstools_worker,type=marker,scores={globalTicGhostsAndGhouls=20..}] run scoreboard players set @s globalTicGhostsAndGhouls 0

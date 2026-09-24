@@ -1,0 +1,13 @@
+{
+  "itemGroup.gstoolsweather2compat": "Example Mod Tab",
+  "block.gstoolsweather2compat.example_block": "Example Block",
+  "item.gstoolsweather2compat.example_item": "Example Item",
+
+  "gstoolsweather2compat.configuration.title": "GSTools Weather2 Compat Configs",
+  "gstoolsweather2compat.configuration.section.gstoolsweather2compat.common.toml": "GSTools Weather2 Compat Configs",
+  "gstoolsweather2compat.configuration.section.gstoolsweather2compat.common.toml.title": "GSTools Weather2 Compat Configs",
+  "gstoolsweather2compat.configuration.items": "Item List",
+  "gstoolsweather2compat.configuration.logDirtBlock": "Log Dirt Block",
+  "gstoolsweather2compat.configuration.magicNumberIntroduction": "Magic Number Text",
+  "gstoolsweather2compat.configuration.magicNumber": "Magic Number"
+}

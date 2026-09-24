@@ -19,6 +19,10 @@ execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsBossProgressionWorkerMultTen += @s randomQuadroupleNegate
 execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsGothicHorrorWorkerMultTen += @s randomQuadroupleNegate
+execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsUndeadExpandedWorkerMultTen += @s randomQuadroupleNegate
+execute as @e[tag=gstools_worker,type=marker] run function gstools:util/random
+execute as @e[tag=gstools_worker,type=marker] run scoreboard players operation @s averageTpsGhostsAndGhoulsWorkerMultTen += @s randomQuadroupleNegate
 
 execute as @e[tag=gstools_worker,type=marker,scores={averageTpsDesirePaths=..1}] run scoreboard players set @s averageTpsDesirePathsWorkerMultTen 400
 execute as @e[tag=gstools_worker,type=marker,scores={averageTpsDesirePaths=..1}] run scoreboard players set @s averageTpsDesirePaths 20
@@ -46,3 +50,9 @@ execute as @e[tag=gstools_worker,type=marker,scores={averageTpsBossProgression=.
 
 execute as @e[tag=gstools_worker,type=marker,scores={averageTpsGothicHorror=..1}] run scoreboard players set @s averageTpsGothicHorrorWorkerMultTen 400
 execute as @e[tag=gstools_worker,type=marker,scores={averageTpsGothicHorror=..1}] run scoreboard players set @s averageTpsGothicHorror 20
+
+execute as @e[tag=gstools_worker,type=marker,scores={averageTpsUndeadExpanded=..1}] run scoreboard players set @s averageTpsUndeadExpandedWorkerMultTen 400
+execute as @e[tag=gstools_worker,type=marker,scores={averageTpsUndeadExpanded=..1}] run scoreboard players set @s averageTpsUndeadExpanded 20
+
+execute as @e[tag=gstools_worker,type=marker,scores={averageTpsGhostsAndGhouls=..1}] run scoreboard players set @s averageTpsGhostsAndGhoulsWorkerMultTen 400
+execute as @e[tag=gstools_worker,type=marker,scores={averageTpsGhostsAndGhouls=..1}] run scoreboard players set @s averageTpsGhostsAndGhouls 20

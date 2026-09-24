@@ -25,7 +25,10 @@ projectIdDict = {
     "enhanced_survival": "803IlacF",
     "life_and_death": "mmSVM1FA",
     "block_decay": "5wA59uoz",
-    "dynamic_ecosystems": "OkEKkza6"
+    "dynamic_ecosystems": "OkEKkza6",
+    "gothic_horror": "KXubJLZe",
+    "undead_expanded": "UgmiuqT4",
+    "ghosts_and_ghouls": "N1S1H6n8"
 }
 
 def uploadFile(path, project, loader, version, projectVersion, displayName, changeLog):

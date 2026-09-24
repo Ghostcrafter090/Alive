@@ -8,6 +8,8 @@ scoreboard objectives add enhancedSurvivalLoaded dummy
 scoreboard objectives add blockDecayLoaded dummy
 scoreboard objectives add dynamicEcosystemsLoaded dummy
 scoreboard objectives add gothicHorrorLoaded dummy
+scoreboard objectives add undeadExpandedLoaded dummy
+scoreboard objectives add ghostsAndGhoulsLoaded dummy
 
 scoreboard objectives add averageTpsBlockDecay dummy
 scoreboard objectives add averageTpsBlockDecayWorker dummy
@@ -30,6 +32,15 @@ scoreboard objectives add averageTpsEnhancedSurvivalWorkerMultTen dummy
 scoreboard objectives add averageTpsLifeAndDeath dummy
 scoreboard objectives add averageTpsLifeAndDeathWorker dummy
 scoreboard objectives add averageTpsLifeAndDeathWorkerMultTen dummy
+scoreboard objectives add averageTpsGothicHorror dummy
+scoreboard objectives add averageTpsGothicHorrorWorker dummy
+scoreboard objectives add averageTpsGothicHorrorWorkerMultTen dummy
+scoreboard objectives add averageTpsUndeadExpanded dummy
+scoreboard objectives add averageTpsUndeadExpandedWorker dummy
+scoreboard objectives add averageTpsUndeadExpandedWorkerMultTen dummy
+scoreboard objectives add averageTpsGhostsAndGhouls dummy
+scoreboard objectives add averageTpsGhostsAndGhoulsWorker dummy
+scoreboard objectives add averageTpsGhostsAndGhoulsWorkerMultTen dummy
 
 scoreboard objectives add firstLoad dummy
 
@@ -182,6 +193,8 @@ scoreboard players set @e[tag=gstools_worker,type=marker] lifeAndDeathLoaded 0
 scoreboard players set @e[tag=gstools_worker,type=marker] enhancedSurvivalLoaded 0
 scoreboard players set @e[tag=gstools_worker,type=marker] blockDecayLoaded 0
 scoreboard players set @e[tag=gstools_worker,type=marker] gothicHorrorLoaded 0
+scoreboard players set @e[tag=gstools_worker,type=marker] ghostsAndGhoulsLoaded 0
+scoreboard players set @e[tag=gstools_worker,type=marker] undeadExpandedLoaded 0
 
 
 scoreboard objectives add doLagCheck dummy
@@ -204,6 +217,8 @@ scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsEnhancedSurv
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsDynamicMonstersWorkerMultTen 340
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsLifeAndDeathWorkerMultTen 380
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsGothicHorrorWorkerMultTen 330
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsUndeadExpandedWorkerMultTen 320
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsGhostsAndGhoulsWorkerMultTen 310
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsBossProgressionWorkerMultTen 330
 
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTps 20
@@ -215,6 +230,8 @@ scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsDynamicMonst
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsEnhancedSurvival 20
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsLifeAndDeath 20
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsGothicHorror 20
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsUndeadExpanded 20
+scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsGhostsAndGhouls 20
 scoreboard players set @e[tag=gstools_worker,type=marker] averageTpsBossProgression 20
 
 scoreboard objectives add minimumCursorY dummy
@@ -235,6 +252,8 @@ function enhancedsurvival:load
 function dynamicecosystems:load
 function blockdecay:load
 function gothichorror:load
+function undeadexpanded:load
+function ghostsandghouls:load
 
 function #timelib_load:_private/load
 function #timelib_load_:_private/load

@@ -21,8 +21,13 @@ projectIdDict = {
     "enhanced_survival": "1405437",
     "life_and_death": "1405446",
     "block_decay": "1421451",
-    "dynamic_ecosystems": "1421461"
+    "dynamic_ecosystems": "1421461",
+    "gothic_horror": "1710219",
+    "undead_expanded": "1710233",
+    "ghosts_and_ghouls": "1710272"
 }
+
+
 
 def getGameVersions(loader, version, folderName=False):
     versionInfo = pytools.IO.getJson("game_versions.json")
@@ -97,10 +102,12 @@ def uploadFile(path, project, loader, version, displayName, changeLog):
                     "slug": "gstools",
                     "projectID": int(projectIdDict["gstools"]),
                     "type": "requiredDependency"
-                }
+                },
             ]    
         } # Use this for required mods or dependencies
     }
+    
+    
     
     # Headers for authentication
     headers = {

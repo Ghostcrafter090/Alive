@@ -16,6 +16,8 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={dynamicEcosystemsLoa
 execute if entity @e[tag=gstools_worker,type=marker,scores={dynamicMonstersLoaded=1..1}] if entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar set dynamic_monsters_tps visible true
 execute if entity @e[tag=gstools_worker,type=marker,scores={enhancedSurvivalLoaded=1..1}] if entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar set enhanced_survival_tps visible true
 execute if entity @e[tag=gstools_worker,type=marker,scores={gothicHorrorLoaded=1..1}] if entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar set gothic_horror_tps visible true
+execute if entity @e[tag=gstools_worker,type=marker,scores={undeadExpandedLoaded=1..1}] if entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar set undead_expanded_tps visible true
+execute if entity @e[tag=gstools_worker,type=marker,scores={ghostsAndGhoulsLoaded=1..1}] if entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar set ghosts_and_ghouls_tps visible true
 execute if entity @e[tag=gstools_worker,type=marker,scores={lifeAndDeathLoaded=1..1}] if entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar set life_and_death_tps visible true
 execute if entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar set all_tps visible true
 
@@ -27,6 +29,8 @@ execute unless entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar se
 execute unless entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar set dynamic_monsters_tps visible false
 execute unless entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar set enhanced_survival_tps visible false
 execute unless entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar set gothic_horror_tps visible false
+execute unless entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar set undead_expanded_tps visible false
+execute unless entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar set ghosts_and_ghouls_tps visible false
 execute unless entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar set life_and_death_tps visible false
 execute unless entity @a[scores={displayPerformanceBossBar=1..1}] run bossbar set all_tps visible false
 
