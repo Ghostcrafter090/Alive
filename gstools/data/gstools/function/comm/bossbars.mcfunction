@@ -91,30 +91,30 @@ execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsGhostsAndG
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsLifeAndDeathWorkerMultTen=..259}] run bossbar set life_and_death_tps color purple
 execute if entity @e[type=marker,tag=gstools_worker,scores={averageTpsWorkerMultTen=..259}] run bossbar set all_tps color purple
 
-execute if entity @e[type=marker,tag=gstools_worker,scores={doRunBlockDecay=1..1}] run bossbar set block_decay_tps style notched_20
-execute if entity @e[type=marker,tag=gstools_worker,scores={doRunBossProgression=1..1}] run bossbar set boss_progression_tps style notched_20
-execute if entity @e[type=marker,tag=gstools_worker,scores={doRunDesirePaths=1..1}] run bossbar set desire_paths_tps style notched_20
-execute if entity @e[type=marker,tag=gstools_worker,scores={doRunDynamicDirt=1..1}] run bossbar set dynamic_dirt_tps style notched_20
-execute if entity @e[type=marker,tag=gstools_worker,scores={doRunDynamicEcosystems=1..1}] run bossbar set dynamic_ecosystems_tps style notched_20
-execute if entity @e[type=marker,tag=gstools_worker,scores={doRunDynamicMonsters=1..1}] run bossbar set dynamic_monsters_tps style notched_20
-execute if entity @e[type=marker,tag=gstools_worker,scores={doRunEnhancedSurvival=1..1}] run bossbar set enhanced_survival_tps style notched_20
-execute if entity @e[type=marker,tag=gstools_worker,scores={doRunGothicHorror=1..1}] run bossbar set gothic_horror_tps style notched_20
-execute if entity @e[type=marker,tag=gstools_worker,scores={doRunUndeadExpanded=1..1}] run bossbar set undead_expanded_tps style notched_20
-execute if entity @e[type=marker,tag=gstools_worker,scores={doRunGhostsAndGhouls=1..1}] run bossbar set ghosts_and_ghouls_tps style notched_20
-execute if entity @e[type=marker,tag=gstools_worker,scores={doRunLifeAndDeath=1..1}] run bossbar set life_and_death_tps style notched_20
+execute if entity @e[type=marker,tag=gstools_worker,scores={doRunBlockDecay=1..1,doRun=1..1}] run bossbar set block_decay_tps style notched_20
+execute if entity @e[type=marker,tag=gstools_worker,scores={doRunBossProgression=1..1,doRun=1..1}] run bossbar set boss_progression_tps style notched_20
+execute if entity @e[type=marker,tag=gstools_worker,scores={doRunDesirePaths=1..1,doRun=1..1}] run bossbar set desire_paths_tps style notched_20
+execute if entity @e[type=marker,tag=gstools_worker,scores={doRunDynamicDirt=1..1,doRun=1..1}] run bossbar set dynamic_dirt_tps style notched_20
+execute if entity @e[type=marker,tag=gstools_worker,scores={doRunDynamicEcosystems=1..1,doRun=1..1}] run bossbar set dynamic_ecosystems_tps style notched_20
+execute if entity @e[type=marker,tag=gstools_worker,scores={doRunDynamicMonsters=1..1,doRun=1..1}] run bossbar set dynamic_monsters_tps style notched_20
+execute if entity @e[type=marker,tag=gstools_worker,scores={doRunEnhancedSurvival=1..1,doRun=1..1}] run bossbar set enhanced_survival_tps style notched_20
+execute if entity @e[type=marker,tag=gstools_worker,scores={doRunGothicHorror=1..1,doRun=1..1}] run bossbar set gothic_horror_tps style notched_20
+execute if entity @e[type=marker,tag=gstools_worker,scores={doRunUndeadExpanded=1..1,doRun=1..1}] run bossbar set undead_expanded_tps style notched_20
+execute if entity @e[type=marker,tag=gstools_worker,scores={doRunGhostsAndGhouls=1..1,doRun=1..1}] run bossbar set ghosts_and_ghouls_tps style notched_20
+execute if entity @e[type=marker,tag=gstools_worker,scores={doRunLifeAndDeath=1..1,doRun=1..1}] run bossbar set life_and_death_tps style notched_20
 execute if entity @e[type=marker,tag=gstools_worker,scores={doRun=1..1}] run bossbar set all_tps style notched_20
 
-execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunBlockDecay=1..1}] run bossbar set block_decay_tps style progress
-execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunBossProgression=1..1}] run bossbar set boss_progression_tps style progress
-execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunDesirePaths=1..1}] run bossbar set desire_paths_tps style progress
-execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunDynamicDirt=1..1}] run bossbar set dynamic_dirt_tps style progress
-execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunDynamicEcosystems=1..1}] run bossbar set dynamic_ecosystems_tps style progress
-execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunDynamicMonsters=1..1}] run bossbar set dynamic_monsters_tps style progress
-execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunEnhancedSurvival=1..1}] run bossbar set enhanced_survival_tps style progress
-execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunGothicHorror=1..1}] run bossbar set gothic_horror_tps style progress
-execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunUndeadExpanded=1..1}] run bossbar set undead_expanded_tps style progress
-execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunGhostsAndGhouls=1..1}] run bossbar set ghosts_and_ghouls_tps style progress
-execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunLifeAndDeath=1..1}] run bossbar set life_and_death_tps style progress
+execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunBlockDecay=1..1,doRun=1..1}] run bossbar set block_decay_tps style progress
+execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunBossProgression=1..1,doRun=1..1}] run bossbar set boss_progression_tps style progress
+execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunDesirePaths=1..1,doRun=1..1}] run bossbar set desire_paths_tps style progress
+execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunDynamicDirt=1..1,doRun=1..1}] run bossbar set dynamic_dirt_tps style progress
+execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunDynamicEcosystems=1..1,doRun=1..1}] run bossbar set dynamic_ecosystems_tps style progress
+execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunDynamicMonsters=1..1,doRun=1..1}] run bossbar set dynamic_monsters_tps style progress
+execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunEnhancedSurvival=1..1,doRun=1..1}] run bossbar set enhanced_survival_tps style progress
+execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunGothicHorror=1..1,doRun=1..1}] run bossbar set gothic_horror_tps style progress
+execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunUndeadExpanded=1..1,doRun=1..1}] run bossbar set undead_expanded_tps style progress
+execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunGhostsAndGhouls=1..1,doRun=1..1}] run bossbar set ghosts_and_ghouls_tps style progress
+execute unless entity @e[type=marker,tag=gstools_worker,scores={doRunLifeAndDeath=1..1,doRun=1..1}] run bossbar set life_and_death_tps style progress
 execute unless entity @e[type=marker,tag=gstools_worker,scores={doRun=1..1}] run bossbar set all_tps style progress
 
 scoreboard players remove @e[tag=gstools_worker,type=marker,limit=1] averageTpsBlockDecayWorkerMultTen 200
@@ -139,6 +139,8 @@ execute store result bossbar minecraft:dynamic_ecosystems_tps value run scoreboa
 execute store result bossbar minecraft:dynamic_monsters_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsDynamicMonstersWorkerMultTen
 execute store result bossbar minecraft:enhanced_survival_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsEnhancedSurvivalWorkerMultTen
 execute store result bossbar minecraft:gothic_horror_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsGothicHorrorWorkerMultTen
+execute store result bossbar minecraft:gothic_horror_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsUndeadExpandedWorkerMultTen
+execute store result bossbar minecraft:gothic_horror_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsGhostsAndGhoulsWorkerMultTen
 execute store result bossbar minecraft:life_and_death_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsLifeAndDeathWorkerMultTen
 execute store result bossbar minecraft:all_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsWorkerMultTen
 
