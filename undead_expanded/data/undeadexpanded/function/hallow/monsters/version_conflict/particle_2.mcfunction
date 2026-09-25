@@ -1,0 +1,7 @@
+
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=!undead_unrisen] at @s if block ~ ~-1 ~ #minecraft:mineable/pickaxe run particle minecraft:block{"block_state":"minecraft:stone"} ~ ~ ~ 0.5 0 0.5 0 10 force
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=!undead_unrisen] at @s if block ~ ~-1 ~ #minecraft:mineable/shovel run particle minecraft:block{"block_state":"minecraft:dirt"} ~ ~ ~ 0.5 0 0.5 0 10 force
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=!undead_unrisen] at @s if block ~ ~ ~ #minecraft:mineable/pickaxe run particle minecraft:block{"block_state":"minecraft:stone"} ~ ~1 ~ 0.5 0.3 0.5 0 10 force
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=!undead_unrisen] at @s if block ~ ~ ~ #minecraft:mineable/shovel run particle minecraft:block{"block_state":"minecraft:dirt"} ~ ~1 ~ 0.5 0.3 0.5 0 10 force
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=!undead_unrisen] at @s if block ~ ~1 ~ #minecraft:mineable/pickaxe run particle minecraft:block{"block_state":"minecraft:stone"} ~ ~2 ~ 0.5 0.3 0.5 0 10 force
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_unrise_setup,tag=!undead_unrisen] at @s if block ~ ~1 ~ #minecraft:mineable/shovel run particle minecraft:block{"block_state":"minecraft:dirt"} ~ ~2 ~ 0.5 0.3 0.5 0 10 force

@@ -340,7 +340,7 @@ def compileDatapackIntoMod(folderName):
     type="required"
     versionRange="[1.0.0,)"
     ordering="AFTER"
-    side="BOTH""").replace("<modId>", folderName)
+    side="BOTH\"""").replace("<modId>", folderName)
                                         break
                                 
                                 neoforgeTemplate = neoforgeTemplate.replace("<weather2Compat>", "")
