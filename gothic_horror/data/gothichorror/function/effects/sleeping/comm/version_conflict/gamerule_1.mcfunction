@@ -1,0 +1,11 @@
+execute if entity @a[scores={horrorIndex=..9}] run gamerule players_sleeping_percentage 1
+execute if entity @a[scores={horrorIndex=10..19}] run gamerule players_sleeping_percentage 11
+execute if entity @a[scores={horrorIndex=20..29}] run gamerule players_sleeping_percentage 21
+execute if entity @a[scores={horrorIndex=30..39}] run gamerule players_sleeping_percentage 31
+execute if entity @a[scores={horrorIndex=40..49}] run gamerule players_sleeping_percentage 41
+execute if entity @a[scores={horrorIndex=50..59}] run gamerule players_sleeping_percentage 51
+execute if entity @a[scores={horrorIndex=60..69}] run gamerule players_sleeping_percentage 61
+execute if entity @a[scores={horrorIndex=70..79}] run gamerule players_sleeping_percentage 71
+execute if entity @a[scores={horrorIndex=80..89}] run gamerule players_sleeping_percentage 81
+execute if entity @a[scores={horrorIndex=90..99}] run gamerule players_sleeping_percentage 91
+execute if entity @a[scores={horrorIndex=100..}] run gamerule players_sleeping_percentage 101

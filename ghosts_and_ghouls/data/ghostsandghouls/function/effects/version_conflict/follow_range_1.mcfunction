@@ -1,0 +1,15 @@
+execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=..-30},tag=!gothic_ghost] run attribute @s follow_range base set 10
+execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=-31..-20},tag=!gothic_ghost] run attribute @s follow_range base set 20
+execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=-21..-10},tag=!gothic_ghost] run attribute @s follow_range base set 30
+execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=-11..0},tag=!gothic_ghost] run attribute @s follow_range base set 40
+execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=1..10},tag=!gothic_ghost] run attribute @s follow_range base set 50
+execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=11..20},tag=!gothic_ghost] run attribute @s follow_range base set 60
+execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=21..30},tag=!gothic_ghost] run attribute @s follow_range base set 70
+execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=31..40},tag=!gothic_ghost] run attribute @s follow_range base set 80
+execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=41..50},tag=!gothic_ghost] run attribute @s follow_range base set 90
+execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=51..60},tag=!gothic_ghost] run attribute @s follow_range base set 100
+execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=61..70},tag=!gothic_ghost] run attribute @s follow_range base set 110
+execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=71..80},tag=!gothic_ghost] run attribute @s follow_range base set 120
+execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=81..90},tag=!gothic_ghost] run attribute @s follow_range base set 130
+execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=91..100},tag=!gothic_ghost] run attribute @s follow_range base set 140
+execute as @e[type=#minecraft:undead,sort=random,limit=1,scores={horrorIndex=101..},tag=!gothic_ghost] run attribute @s follow_range base set 150

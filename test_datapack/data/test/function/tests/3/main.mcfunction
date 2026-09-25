@@ -5,17 +5,6 @@ scoreboard objectives add test3HasSetup dummy
 # Main
 execute unless score $test test3HasSetup = $test test1 run function test:tests/2/setup
 
-
-scoreboard players set @e[tag=gstools_worker,type=marker] desirePathsLoaded 0
-scoreboard players set @e[tag=gstools_worker,type=marker] dynamicDirtLoaded 0
-scoreboard players set @e[tag=gstools_worker,type=marker] dynamicMonstersLoaded 0
-scoreboard players set @e[tag=gstools_worker,type=marker] lifeAndDeathLoaded 0
-scoreboard players set @e[tag=gstools_worker,type=marker] enhancedSurvivalLoaded 0
-scoreboard players set @e[tag=gstools_worker,type=marker] blockDecayLoaded 0
-scoreboard players set @e[tag=gstools_worker,type=marker] gothicHorrorLoaded 0
-scoreboard players set @e[tag=gstools_worker,type=marker] ghostsAndGhoulsLoaded 0
-scoreboard players set @e[tag=gstools_worker,type=marker] undeadExpandedLoaded 0
-
 scoreboard players set $test testSuccess 1
 execute unless entity @e[type=marker,tag=gstools_worker,scores={desirePathsLoaded=1..}] run scoreboard players set $test testSuccess 0
 execute unless entity @e[type=marker,tag=gstools_worker,scores={dynamicDirtLoaded=1..}] run scoreboard players set $test testSuccess 0

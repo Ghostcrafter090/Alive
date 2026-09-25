@@ -2,14 +2,5 @@
 execute as @a at @s run function gstools:horror/getindex
 
 # Main
-execute if entity @a[scores={horrorIndex=..9}] run gamerule playersSleepingPercentage 1
-execute if entity @a[scores={horrorIndex=10..19}] run gamerule playersSleepingPercentage 11
-execute if entity @a[scores={horrorIndex=20..29}] run gamerule playersSleepingPercentage 21
-execute if entity @a[scores={horrorIndex=30..39}] run gamerule playersSleepingPercentage 31
-execute if entity @a[scores={horrorIndex=40..49}] run gamerule playersSleepingPercentage 41
-execute if entity @a[scores={horrorIndex=50..59}] run gamerule playersSleepingPercentage 51
-execute if entity @a[scores={horrorIndex=60..69}] run gamerule playersSleepingPercentage 61
-execute if entity @a[scores={horrorIndex=70..79}] run gamerule playersSleepingPercentage 71
-execute if entity @a[scores={horrorIndex=80..89}] run gamerule playersSleepingPercentage 81
-execute if entity @a[scores={horrorIndex=90..99}] run gamerule playersSleepingPercentage 91
-execute if entity @a[scores={horrorIndex=100..}] run gamerule playersSleepingPercentage 101
+function gothichorror:effects/sleeping/comm/version_conflict/gamerule_0
+function gothichorror:effects/sleeping/comm/version_conflict/gamerule_1

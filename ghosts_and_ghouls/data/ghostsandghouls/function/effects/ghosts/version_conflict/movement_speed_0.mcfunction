@@ -1,0 +1,2 @@
+execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run attribute @s minecraft:generic.movement_speed base set 0.08
+execute as @e[tag=gothic_ghost,tag=!gothic_ghost_setup] run attribute @s minecraft:generic.attack_damage base set 0.5
