@@ -1,5 +1,5 @@
 import modules.pytools as pytools
-
+import modules.logManager as log
 import requests
 import json
 import os
@@ -7,6 +7,8 @@ import traceback
 import copy
 
 import time
+
+print = log.printLog
 
 class globals:
     apiKey = pytools.IO.getJson("upload_api.json")["curseforge"]["key"]

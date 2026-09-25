@@ -1,10 +1,13 @@
 import modules.pytools as pytools
+import modules.logManager as log
 import os
 import sys
 import time
 import subprocess
 
 import datapack_compile as datapackCompiler
+
+print = log.printLog
 
 class flags:
     compileEverything = False

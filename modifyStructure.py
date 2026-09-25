@@ -2,9 +2,12 @@ from nbt import nbt
 import subprocess
 import random
 import modules.pytools as pytools
+import modules.logManager as log
 import time
 import copy
 import traceback
+
+print = log.printLog
 
 def readStructurePallete(path):
     _palette = []

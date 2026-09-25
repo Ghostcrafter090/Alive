@@ -1,7 +1,10 @@
 import modules.pytools as pytools
+import modules.logManager as log
 import os
 import traceback
 import time
+
+print = log.printLog
 
 class globals:
     wordDatabase = {}

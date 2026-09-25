@@ -1,7 +1,10 @@
 import modules.pytools as pytools
+import modules.logManager as log
 import subprocess
 import os
 import traceback
+
+print = log.printLog
 
 class globals:
     changedFiles = []

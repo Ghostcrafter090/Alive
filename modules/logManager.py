@@ -5,7 +5,7 @@ import inspect
 import sys
 
 def init(pluginf):
-    if os.path.exists(".\\working"):
+    if not os.path.exists(".\\working"):
         try:
             os.mkdir(".\\logs")
         except:
@@ -42,12 +42,12 @@ def write(strf, pluginf="system"):
     print(str(dateArray) + " ;;; " + pluginf + "; " + str(strf))
     try:
         if settings.debug:
-            if os.path.exists(".\\working"):
+            if not os.path.exists(".\\working"):
                 pytools.IO.appendFile(".\\logs\\" + pluginf + "\\" + dateString.split("_")[0] + "_system.log", "\n" + str(dateArray) + " ;;; " + pluginf + "; " + str(strf))
             else:
                 pytools.IO.appendFile(".\\logs\\" + pluginf + "\\" + dateString.split("_")[0] + "_system.log", "\n" + str(dateArray) + " ;;; " + pluginf + "; " + str(strf))
         elif ("Traceback" in str(strf)) or ("Error" in str(strf)) or ("error" in str(strf)) or ("Failed" in str(strf)) or ("failed" in str(strf)) or ("Unable" in str(strf)) or ("unable" in str(strf)) or ("WARNING" in str(strf)) or ("Warning" in str(strf)) or ("warning" in str(strf)):
-            if os.path.exists(".\\working"):
+            if not os.path.exists(".\\working"):
                 pytools.IO.appendFile(".\\logs\\" + pluginf + "\\" + dateString.split("_")[0] + "_system.log", "\n" + str(dateArray) + " ;;; " + pluginf + "; " + str(strf))
             else:
                 pytools.IO.appendFile(".\\logs\\" + pluginf + "\\" + dateString.split("_")[0] + "_system.log", "\n" + str(dateArray) + " ;;; " + pluginf + "; " + str(strf))

@@ -1,6 +1,7 @@
 import modules.pytools as pytools
 import modules.curseforge as curseforge
 import modules.pymodrinth as modrinth
+import modules.logManager as log
 from pathlib import Path
 import requests
 import json
@@ -8,6 +9,8 @@ import os
 import traceback
 
 import time
+
+print = log.printLog
 
 class globals:
     apiKey = pytools.IO.getJson("upload_api.json")["modrinth"]["key"]

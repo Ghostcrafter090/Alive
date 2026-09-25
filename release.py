@@ -1,6 +1,7 @@
 import modules.pytools as pytools
 import modules.curseforge as curseforge
 import modules.modrinth as modrinth
+import modules.logManager as log
 
 import subprocess
 import sys
@@ -8,6 +9,8 @@ import sys
 import autoTest
 
 import copy
+
+print = log.printLog
 
 class globals:
     aReleaseSchedule = pytools.IO.getJson("release_schedule.json")

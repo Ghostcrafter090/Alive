@@ -1,6 +1,10 @@
 import modules.pytools as pytools
+import modules.logManager as log
 import subprocess
 import json
+import traceback
+
+print = log.printLog
 
 def walkJson(jsonData):
     
@@ -24,14 +28,17 @@ def walkJson(jsonData):
                 jsonData["bonus_rolls"] = 1
 
     else:
-        i = 0
-        while i < len(jsonData):
-            if type(jsonData[i]) == dict:
-                jsonData[i] = walkJson(jsonData[i])
-            elif type(jsonData[i]) == list:
-                jsonData[i] = walkJson(jsonData[i])
-                
-            i = i + 1
+        try:
+            i = 0
+            while i < len(jsonData):
+                if type(jsonData[i]) == dict:
+                    jsonData[i] = walkJson(jsonData[i])
+                elif type(jsonData[i]) == list:
+                    jsonData[i] = walkJson(jsonData[i])
+                    
+                i = i + 1
+        except:
+            print(traceback.format_exc())
             
     return jsonData
 
@@ -44,7 +51,10 @@ def processJsonFiles(path):
         except:
             pass
         jsonData = pytools.IO.getJson(file)
-        pytools.IO.saveFile(file, json.dumps(walkJson(jsonData), indent=4))
+        try:
+            pytools.IO.saveFile(file, json.dumps(walkJson(jsonData), indent=4))
+        except:
+            print(traceback.format_exc())
             
             
                 

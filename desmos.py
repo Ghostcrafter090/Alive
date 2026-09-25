@@ -3,6 +3,9 @@ import ast
 import re
 import modules.pytools as pytools
 import traceback
+import modules.logManager as log
+
+print = log.printLog
 
 functions = {
     "A * B": "A\cdot B",

@@ -2,11 +2,14 @@ from nbt import nbt
 import subprocess
 import random
 import modules.pytools as pytools
+import modules.logManager as log
 import time
 import copy
 import traceback
 import json
 import math
+
+print = log.printLog
 
 def getGlobalBlock(name):
     files = subprocess.getoutput("dir \"decay.config\\*.json\" /s /b").split("\n")

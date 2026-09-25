@@ -1,5 +1,9 @@
 import os
 import modules.pytools as pytools
+import modules.logManager as log
+
+print = log.printLog
+
 folder = ".\\block_decay\\data\\blockdecay\\function\\compat"
 
 for path, dirs, files in os.walk(folder):
