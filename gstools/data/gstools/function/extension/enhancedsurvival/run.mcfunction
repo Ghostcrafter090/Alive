@@ -8,7 +8,7 @@ execute as @e[type=marker,tag=gstools_worker,scores={currentlyExecutingEnhancedS
 scoreboard players set @e[type=marker,tag=gstools_worker] currentlyExecutingEnhancedSurvival 1
 function enhancedsurvival:main
 schedule function gstools:extension/enhancedsurvival/lagcheck 1t append
-execute as @e[tag=gstools_worker,type=marker,scores={averageTps=..16,averageTpsEnhancedSurvivalWorkerMultTen=231..}] run scoreboard players remove @s averageTpsEnhancedSurvivalWorkerMultTen 1
+execute as @e[tag=gstools_worker,type=marker,scores={averageTps=..16,averageTpsEnhancedSurvivalWorkerMultTen=241..}] run scoreboard players remove @s averageTpsEnhancedSurvivalWorkerMultTen 1
 
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players set @s doRunEnhancedSurvival 0
 scoreboard players set @e[type=marker,tag=gstools_worker] currentlyExecutingEnhancedSurvival 0
