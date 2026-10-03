@@ -197,15 +197,15 @@ execute as @e[type=marker,tag=gstools_worker] run scoreboard players operation @
 function gstools:hud/main
 
 # Run
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDesirePaths=1..1,doRun=1..1}] run schedule function gstools:extension/desirepaths/run 1t append
+execute unless entity @a[tag=is_agro_targeted] if entity @e[tag=gstools_worker,type=marker,scores={doRunDesirePaths=1..1,doRun=1..1}] run schedule function gstools:extension/desirepaths/run 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicDirt=1..1,doRun=1..1}] run schedule function gstools:extension/dynamicdirt/run 1t append
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicEcosystems=1..1,doRun=1..1}] run schedule function gstools:extension/dynamicecosystems/run 1t append
+execute unless entity @a[tag=is_agro_targeted] if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicEcosystems=1..1,doRun=1..1}] run schedule function gstools:extension/dynamicecosystems/run 1t append
 execute unless entity @a[scores={playerIsActive=1..}] if entity @e[tag=gstools_worker,type=marker,scores={doRunBlockDecay=1..1,doRun=1..1}] run schedule function gstools:extension/blockdecay/run 1t append
 execute if entity @a[scores={playerIsActive=0..0}] if entity @a[scores={playerIsActive=1..}] if entity @e[tag=gstools_worker,type=marker,scores={doRunBlockDecay=1..1,doRun=1..1}] run schedule function gstools:extension/blockdecay/run 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicMonsters=1..1,doRun=1..1}] run schedule function gstools:extension/dynamicmonsters/run 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunLifeAndDeath=1..1,doRun=1..1}] run schedule function gstools:extension/lifeanddeath/run 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBossProgression=1..1,doRun=1..1}] run schedule function gstools:extension/bossprogression/run 1t append
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunGothicHorror=1..1,doRun=1..1}] run schedule function gstools:extension/gothichorror/run 1t append
+execute unless entity @a[tag=is_agro_targeted] if entity @e[tag=gstools_worker,type=marker,scores={doRunGothicHorror=1..1,doRun=1..1}] run schedule function gstools:extension/gothichorror/run 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunUndeadExpanded=1..1,doRun=1..1}] run schedule function gstools:extension/undeadexpanded/run 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunGhostsAndGhouls=1..1,doRun=1..1}] run schedule function gstools:extension/ghostsandghouls/run 1t append
 
@@ -216,9 +216,9 @@ schedule function gstools:player/view_finder 1t append
 schedule function lifeanddeath:tic 1t append
 schedule function enhancedsurvival:tic 2t append
 schedule function bossprogression:tic 3t append
-schedule function gothichorror:tic 4t append
+execute unless entity @a[tag=is_agro_targeted] run schedule function gothichorror:tic 4t append
 schedule function dynamicdirt:tic 5t append
-schedule function desirepaths:tic 6t append
+execute unless entity @a[tag=is_agro_targeted] run schedule function desirepaths:tic 6t append
 schedule function undeadexpanded:tic 7t append
 schedule function ghostsandghouls:tic 8t append
 

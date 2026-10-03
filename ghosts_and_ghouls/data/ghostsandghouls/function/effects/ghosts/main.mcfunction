@@ -22,7 +22,7 @@ execute as @e[tag=gothic_ghost,type=zombie,tag=!ghost_type_poltergeist,tag=!ghos
 execute as @e[tag=gothic_ghost,type=zombie,tag=ghost_type_demon] at @s if entity @s[scores={lightLevel=13..}] run tp @s ^ ^ ^-0.4 ~ ~
 execute as @e[tag=gothic_ghost,type=zombie,tag=ghost_type_demon] at @s if entity @a[scores={usedBell=1..},distance=0..2] run tp @s ^ ^ ^-0.4 ~ ~
 execute as @e[tag=gothic_ghost,type=zombie,tag=!ghost_type_poltergeist] at @s unless block ~ ~1 ~ #gstools:air run tp @s ^ ^ ^-0.4 ~ ~
-execute as @e[,tag=!ghost_type_poltergeist] at @s unless block ~ ~1 ~ #gstools:air if block ~ ~2 ~ #gstools:air run tp @s ~ ~0.1 ~ ~ ~
+execute as @e[tag=!ghost_type_poltergeist] at @s unless block ~ ~1 ~ #gstools:air if block ~ ~2 ~ #gstools:air run tp @s ~ ~0.1 ~ ~ ~
 execute as @e[tag=gothic_ghost,type=zombie,tag=!ghost_type_poltergeist] at @s unless block ~ ~ ~ #gstools:air if block ~ ~1 ~ #gstools:air run tp @s ^ ^ ^-0.4 ~ ~
 execute as @e[tag=gothic_ghost,type=zombie,tag=!ghost_type_poltergeist] at @s unless block ~ ~ ~ #gstools:air if block ~ ~1 ~ #gstools:air if block ~ ~2 ~ #gstools:air run tp @s ~ ~0.1 ~ ~ ~
 
