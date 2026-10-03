@@ -1,8 +1,8 @@
 # Define
 
 # Main
-function enhancedsurvival:breathing/main
-function enhancedsurvival:effects/compat/eyes_in_the_darkness
+schedule function enhancedsurvival:breathing/main 1t append
+execute as @a at @s if entity @e[type=eyesinthedarkness:eyes,limit=1,distance=0..45] run schedule function enhancedsurvival:effects/compat/eyes_in_the_darkness 1t append
 
 # Eyes
 execute if entity @e[tag=gstools_worker,type=marker] as @a[scores={hasLookedAtEyes=1..}] run effect give @s darkness 10 0

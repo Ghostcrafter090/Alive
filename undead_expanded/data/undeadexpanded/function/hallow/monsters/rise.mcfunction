@@ -29,7 +29,7 @@ execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_s
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_setup,tag=!undead_risen,scores={undeadRiseTick=40..}] at @s run data modify entity @s NoAI set value 0b
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_setup,tag=!undead_risen,scores={undeadRiseTick=40..}] at @s run tag @s add undead_risen
 
-execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost] store result score @s isOnFire run data get entity @s Fire 1
+execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,sort=random,limit=10] store result score @s isOnFire run data get entity @s Fire 1
 
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,limit=1,sort=random] at @s run function gstools:util/light_level
 execute as @e[type=#minecraft:undead,type=!wither,tag=!gothic_ghost,tag=undead_risen,tag=!undead_unrise_setup,scores={lightLevel=14..},limit=1,sort=random] at @s run function gstools:util/is_outside

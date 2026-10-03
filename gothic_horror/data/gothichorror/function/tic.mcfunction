@@ -1,10 +1,9 @@
 # Define
 
 # Main
-execute as @e[scores={hGeneralTic=0..}] run scoreboard players remove @s hGeneralTic 1
+execute as @e[scores={hGeneralTic=0..},sort=random,limit=50] run scoreboard players remove @s hGeneralTic 1
 
 # Day Cycle
-
 function gothichorror:version_conflict/gamerule_0
 function gothichorror:version_conflict/gamerule_1
 execute if entity @a[scores={horrorIndex=100..}] as @e[tag=gstools_worker,type=marker,tag=after_sunset,tag=!overrided_daylight_cycle] run tag @s add overrided_daylight_cycle
