@@ -8,6 +8,7 @@ print = log.printLog
 
 class globals:
     changedFiles = []
+    scoreboardObjectives = {}
 
 def processExecute(struct):
     commandStarted = False
@@ -58,7 +59,7 @@ def processExecute(struct):
     
     return segments
 
-def compile(fileData, fileName, path):
+def compile(fileData, fileName, path, datapackName, compileEverything=True):
     
     executeData = {}
     outFile = []
@@ -153,6 +154,27 @@ def compile(fileData, fileName, path):
                     executeData[commandIndex]["data"].append(("execute " + " ".join(segments[1:])))
             
             lastExecuteLine = segments
+        elif ("scoreboard objectives add" in line) and (line.replace(" ", "")[0] != "#") and (not noCompileMode):
+            try:
+                if compileEverything and os.path.exists(".\\load.mcfunction"):
+                    if datapackName not in globals.scoreboardObjectives:
+                        globals.scoreboardObjectives[datapackName] = []
+                    globals.scoreboardObjectives[datapackName].append(line)
+                else:
+                    lastExecuteLine = ["-1"]
+                    commandIndex = -1
+                    executeData[lineIndex] = {
+                        "command": line,
+                        "data": False
+                    }
+            except:
+                print(traceback.format_exc())
+                lastExecuteLine = ["-1"]
+                commandIndex = -1
+                executeData[lineIndex] = {
+                    "command": line,
+                    "data": False
+                }
         else:
             
             lastExecuteLine = ["-1"]
@@ -234,7 +256,7 @@ def run(path, namespace, compileEverything=False):
                             
                             print("    > Compiling path \"" + mcpath + "\"...")
                             
-                            outData = compile(fileData, file.split("\\")[-1], mcpath)
+                            outData = compile(fileData, file.split("\\")[-1], mcpath, path.split("\\")[1], compileEverything=compileEverything)
                             
                             pytools.IO.saveFile(file, outData[0])
                             for externalFile in outData[1]:
@@ -249,6 +271,16 @@ def run(path, namespace, compileEverything=False):
                     i = i + 1
                     if not hasCreatedSubfile:
                         i = 1000
+                        
+                if compileEverything:
+                    if os.path.exists(".\\load.mcfunction"):
+                        loadFileData = pytools.IO.getFile(".\\load.mcfunction")
+                        if "# Define\n" in loadFileData:
+                            loadFileData = loadFileData.split("# Define\n")[0] + "# Define\n" + "\n".join(globals.scoreboardObjectives[path.split("\\")[1]]) + "\n" + loadFileData.split("# Define\n")[1]
+                        else:
+                            loadFileData = "\n".join(globals.scoreboardObjectives[path.split("\\")[1]]) + "\n" + loadFileData
+                        pytools.IO.saveFile(".\\load.mcfunction", loadFileData)
+                        
             except:
                 print(traceback.format_exc())
             os.chdir("..")
