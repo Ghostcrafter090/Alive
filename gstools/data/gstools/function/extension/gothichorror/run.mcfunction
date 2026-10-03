@@ -13,7 +13,7 @@ execute as @e[tag=gstools_worker,type=marker] unless entity @s[scores={anotherEx
 execute as @e[tag=gstools_worker,type=marker] if score @s ticTenth > @s random10 run scoreboard players set @s doLagCheck 1
 
 execute if entity @e[tag=gstools_worker,type=marker,scores={doLagCheck=1..1}] run schedule function gstools:extension/gothichorror/lagcheck 1t append
-execute as @e[tag=gstools_worker,type=marker,scores={averageTps=..18,averageTpsGothicHorrorWorkerMultTen=221..}] run scoreboard players remove @s averageTpsGothicHorrorWorkerMultTen 1
+execute as @e[tag=gstools_worker,type=marker,scores={averageTps=..16,averageTpsGothicHorrorWorkerMultTen=231..}] run scoreboard players remove @s averageTpsGothicHorrorWorkerMultTen 1
 
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players set @s doRunGothicHorror 0
 scoreboard players set @e[type=marker,tag=gstools_worker] currentlyExecutingGothicHorror 0

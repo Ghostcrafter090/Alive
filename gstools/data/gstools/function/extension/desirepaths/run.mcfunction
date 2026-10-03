@@ -13,7 +13,7 @@ execute as @e[tag=gstools_worker,type=marker] unless entity @s[scores={anotherEx
 execute as @e[tag=gstools_worker,type=marker] if score @s ticTenth > @s random10 run scoreboard players set @s doLagCheck 1
 
 execute if entity @e[tag=gstools_worker,type=marker,scores={doLagCheck=1..1}] run schedule function gstools:extension/desirepaths/lagcheck 1t append
-execute as @e[tag=gstools_worker,type=marker,scores={averageTps=..18,averageTpsDesirePathsWorkerMultTen=221..}] run scoreboard players remove @s averageTpsDesirePathsWorkerMultTen 1
+execute as @e[tag=gstools_worker,type=marker,scores={averageTps=..16,averageTpsDesirePathsWorkerMultTen=231..}] run scoreboard players remove @s averageTpsDesirePathsWorkerMultTen 1
 
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players set @s doRunDesirePaths 0
 scoreboard players set @e[type=marker,tag=gstools_worker] currentlyExecutingDesirePaths 0
