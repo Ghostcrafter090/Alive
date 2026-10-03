@@ -49,3 +49,4 @@ execute positioned ~ ~ ~-7 unless entity @s[scores={isOutside=1..2}] if predicat
 execute positioned ~ ~ ~-8 unless entity @s[scores={isOutside=1..2}] if predicate gstools:outside run scoreboard players set @s isOutside 1
 
 execute if entity @s[scores={isOutside=2..2}] run scoreboard players set @s isOutside 0
+
