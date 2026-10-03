@@ -20,7 +20,7 @@ execute as @s store result score @s _globalsPlayerYaw run data get entity @s Rot
 execute as @s store result score @s _globalsPlayerPitch run data get entity @s Rotation[1] 1000
 
 tag @s remove is_agro_targeted
-execute at @s as @e[tag=!tile,distance=0..20] on target run tag @s add is_agro_targeted
+execute at @s as @e[tag=!tile,distance=0..30] on target run tag @s add is_agro_targeted
 
 execute unless score @s _globalsPlayerX = @s _globalsPlayerXOld run scoreboard players set @s _playerIsActive -20
 execute unless score @s _globalsPlayerY = @s _globalsPlayerYOld run scoreboard players set @s _playerIsActive -20

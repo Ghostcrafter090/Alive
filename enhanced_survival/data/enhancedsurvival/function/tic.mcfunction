@@ -31,3 +31,17 @@ execute as @a[scores={hasLookedAtEyes=1000..}] run scoreboard players remove @s 
 execute as @a[scores={hasLookedAtEyes=10000..}] run scoreboard players remove @s hasLookedAtEyes 1000
 execute as @a[scores={hasLookedAtEyes=100000..}] run scoreboard players remove @s hasLookedAtEyes 10000
 
+scoreboard players add @a luckReductionTic 1
+execute as @a[scores={luckReductionTic=20..,luck=1..}] run scoreboard players remove @s luck 1
+execute as @a[scores={luckReductionTic=20..,luck=..-1}] run scoreboard players add @s luck 1
+execute as @a[scores={luckReductionTic=20..,luck=1000..}] run scoreboard players remove @s luck 6
+execute as @a[scores={luckReductionTic=20..,luck=..-1000}] run scoreboard players add @s luck 6
+execute as @a[scores={luckReductionTic=20..,luck=2000..}] run scoreboard players remove @s luck 10
+execute as @a[scores={luckReductionTic=20..,luck=..-2000}] run scoreboard players add @s luck 10
+execute as @a[scores={luckReductionTic=20..,luck=3000..}] run scoreboard players remove @s luck 16
+execute as @a[scores={luckReductionTic=20..,luck=..-3000}] run scoreboard players add @s luck 16
+execute as @a[scores={luckReductionTic=20..,luck=4000..}] run scoreboard players remove @s luck 19
+execute as @a[scores={luckReductionTic=20..,luck=..-4000}] run scoreboard players add @s luck 19
+execute as @a[scores={luckReductionTic=20..,luck=5000..}] run scoreboard players remove @s luck 21
+execute as @a[scores={luckReductionTic=20..,luck=..-5000}] run scoreboard players add @s luck 21
+execute as @a[scores={luckReductionTic=20..}] run scoreboard players set @s luckReductionTic 0
