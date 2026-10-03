@@ -6,6 +6,7 @@ import traceback
 import json
 import sys
 import copy
+import modules.curseforge as curseforge
 
 printf = print
 
@@ -14,22 +15,27 @@ class flags:
 
 class analyze:
     
+    def __init__(self):
+        pass
+    
     testDate = pytools.clock.getDateTime()
     
     report = ""
     
-    def reset():
-        analyze.report = ""
+    def reset(self):
+        self.report = ""
         
-    def printReport(data):
-        printf(data)
-        analyze.report = analyze.report + "\n" + str(data)
+    def printReport(self, data):
+        printf(self, data)
+        self.report = self.report + "\n" + str(data)
     
-    def logFile():
+    def logFile(self, _split=-1, print=print):
+        _automatedTest = "automated_test" + (("_" + str(_split)) * (_split != -1))
+        
         blocksFucked = []
         doPrint = False
         isError = False
-        logFile = pytools.IO.getFile(".\\automated_test\\logs\\latest.log").split("\n")
+        logFile = pytools.IO.getFile(".\\" + _automatedTest + "\\logs\\latest.log").split("\n")
         
         cases = []
         
@@ -92,16 +98,17 @@ class analyze:
             
         return all(cases)
     
-    def save():
+    def save(self, _split=-1):
+        _automatedTest = "automated_test" + (("_" + str(_split)) * (_split != -1))
         os.system("mkdir prior_tests")
-        os.system("mkdir \".\\prior_tests\\" + str(analyze.testDate[0]) + "-" + str(analyze.testDate[1]) + "-" + str(analyze.testDate[2]) + "\"")
-        pytools.IO.saveFile(".\\prior_tests\\" + str(analyze.testDate[0]) + "-" + str(analyze.testDate[1]) + "-" + str(analyze.testDate[2]) + "\\" + str(len(os.listdir(".\\prior_tests\\" + str(analyze.testDate[0]) + "-" + str(analyze.testDate[1]) + "-" + str(analyze.testDate[2]) + "\\."))) + ".test", analyze.report)
-        os.system("copy .\\automated_test\\logs\\latest.log \".\\prior_tests\\" + str(analyze.testDate[0]) + "-" + str(analyze.testDate[1]) + "-" + str(analyze.testDate[2]) + "\\" + str(len(os.listdir(".\\prior_tests\\" + str(analyze.testDate[0]) + "-" + str(analyze.testDate[1]) + "-" + str(analyze.testDate[2]) + "\\."))) + ".log\" /y")
+        os.system("mkdir \".\\prior_tests\\" + str(self.testDate[0]) + "-" + str(self.testDate[1]) + "-" + str(self.testDate[2]) + "\"")
+        pytools.IO.saveFile(".\\prior_tests\\" + str(self.testDate[0]) + "-" + str(self.testDate[1]) + "-" + str(self.testDate[2]) + "\\" + str(len(os.listdir(".\\prior_tests\\" + str(self.testDate[0]) + "-" + str(self.testDate[1]) + "-" + str(self.testDate[2]) + "\\."))) + ".test", self.report)
+        os.system("copy .\\" + _automatedTest + "\\logs\\latest.log \".\\prior_tests\\" + str(self.testDate[0]) + "-" + str(self.testDate[1]) + "-" + str(self.testDate[2]) + "\\" + str(len(os.listdir(".\\prior_tests\\" + str(self.testDate[0]) + "-" + str(self.testDate[1]) + "-" + str(self.testDate[2]) + "\\."))) + ".log\" /y")
                   
-print = analyze.printReport
+# print = analyze.printReport
 
 class util:
-    def getJavaVersionFromMinecraft(version):
+    def getJavaVersionFromMinecraft(version, print=print):
         try:
             if int(version.split(".")[0]) < 26:
                 return "Jre_21"
@@ -111,13 +118,15 @@ class util:
             print(traceback.format_exc())
             return "Jre_25"
 
-def getModFiles(loader, version, modReleaseNumber):
+def getModFiles(loader, version, modReleaseNumber, _split=-1, print=print):
     modFiles = []
     gameVersionDict = pytools.IO.getJson("game_versions.json")
     
     _gameVersionDict = {}
     
+    print("dir \".\\releases\\" + modReleaseNumber + "\\*.jar\" /b")
     for file in subprocess.getoutput("dir \".\\releases\\" + modReleaseNumber + "\\*.jar\" /b").split('\n'):
+        print(file)
         projectName = file.split("-")[0]
         loaderVersion = file.split("-")[1]
         gameVersion = file.split("-")[2].split("_")[0]
@@ -149,13 +158,19 @@ def getModFiles(loader, version, modReleaseNumber):
                         if gameVersion == aVersion:
                             print(".\\releases\\" + modReleaseNumber + "\\" + file)
                             modFiles.append(".\\releases\\" + modReleaseNumber + "\\" + file)
+                            
+    if loader == "neoforge":
+        if version in curseforge.versionsSupportingWeather2:
+            modFiles.append(".\\basemod\\weather2_c\\build\\libs\\gstoolsweather2compat-1.0.2.jar")
                 
     return modFiles
 
-def setupServer(loader, version):
-    os.system("rmdir .\\automated_test\\world\\datapacks")
-    os.system("del .\\automated_test\\* /f /s /q")
-    os.chdir(".\\automated_test")
+def setupServer(loader, version, _split=-1, print=print):
+    
+    _automatedTest = "automated_test" + (("_" + str(_split)) * (_split != -1))
+    
+    os.system("rmdir .\\" + _automatedTest + "\\world\\datapacks")
+    os.system("del .\\" + _automatedTest + "\\* /f /s /q")
     try:
         if loader == "neoforge":
             neoforgeVersions = pytools.net.getJsonAPI("https://maven.neoforged.net/api/maven/versions/releases/net%2Fneoforged%2Fneoforge")
@@ -172,92 +187,101 @@ def setupServer(loader, version):
                         neoforgeVersion = x
             
             print("Grabbing neoforge version " + str(neoforgeVersion) + " for minecraft version " + str(version) + "...")
-            print(subprocess.getoutput("curl -O https://maven.neoforged.net/releases/net/neoforged/neoforge/<neoforgeVersion>/neoforge-<neoforgeVersion>-installer.jar".replace("<neoforgeVersion>", neoforgeVersion)))
-            for x in os.listdir():
+            print(subprocess.getoutput("curl -O --output-dir .\\" + _automatedTest + " https://maven.neoforged.net/releases/net/neoforged/neoforge/<neoforgeVersion>/neoforge-<neoforgeVersion>-installer.jar".replace("<neoforgeVersion>", neoforgeVersion)))
+            for x in os.listdir(".\\" + _automatedTest):
                 if (".jar" in x) and ("neoforge-" in x):
-                    os.system("java -jar " + x + " --installServer")
+                    os.system("start /d .\\" + _automatedTest + " /b /wait \"\" java -jar " + x + " --installServer")
                     
-            runFile = pytools.IO.getFile("run.bat")
-            runFile = runFile.replace("java ", "..\\java\\" + util.getJavaVersionFromMinecraft(version) + "\\bin\\alive_automated_test ")
+            runFile = pytools.IO.getFile(".\\" + _automatedTest + "\\run.bat")
+            runFile = runFile.replace("java ", "..\\java\\" + util.getJavaVersionFromMinecraft(version, print=print) + "\\bin\\alive_" + _automatedTest + " ")
             runFile = runFile.replace("pause", "")
-            pytools.IO.saveFile("run.bat", runFile)
+            pytools.IO.saveFile(".\\" + _automatedTest + "\\run.bat", runFile)
                     
         if loader == "fabric":
             print("Grabbing fabric version 0.18.4, 1.1.1 for minecraft version " + str(version) + "...")
-            print(subprocess.getoutput("curl -OJ https://meta.fabricmc.net/v2/versions/loader/<version>/0.18.4/1.1.1/server/jar".replace("<version>", version)))
-            for x in os.listdir():
+            if (int(version.split(".")[0]) < 26) or (int(version.split(".")[1]) < 3):
+                print(subprocess.getoutput("curl --output-dir .\\" + _automatedTest + " -OJ https://meta.fabricmc.net/v2/versions/loader/<version>/0.18.4/1.1.1/server/jar".replace("<version>", version)))
+            else:
+                print(subprocess.getoutput("curl --output-dir .\\" + _automatedTest + " -OJ https://meta.fabricmc.net/v2/versions/loader/<version>/0.19.3/1.1.1/server/jar".replace("<version>", version)))
+            for x in os.listdir(".\\" + _automatedTest):
                 if (".jar" in x) and ("fabric" in x):
-                    os.system("..\\java\\" + util.getJavaVersionFromMinecraft(version) + "\\bin\\java -Xmx2G -jar " + x + " nogui")
+                    os.system("start /d .\\" + _automatedTest + " /b /wait "" .\\java\\" + util.getJavaVersionFromMinecraft(version, print=print) + "\\bin\\java -Xmx2G -jar " + x + " nogui")
             
-            os.system("mkdir mods")
-            os.system("xcopy ..\\libs\\fabric_api\\" + version + "\\*.jar .\\mods /e /c /y")        
+            os.system("mkdir .\\" + _automatedTest + "\\mods")
+            os.system("xcopy .\\libs\\fabric_api\\" + version + "\\*.jar .\\" + _automatedTest + "\\mods /e /c /y /i")        
             
         if loader == "forge":
             # forgeVersion = pytools.net.getJsonAPI("https://mc-versions-api.net/api/forge?detailed=true&version=<version>&version=<version>".replace("<version>", version))["result"][0]["version"]
             
             try:
                 listOfVersions = pytools.net.getJsonAPI("https://mrnavastar.github.io/ForgeVersionAPI/forge-versions.json")
-                pytools.IO.saveJson("..\forge_versions.json", listOfVersions)
+                pytools.IO.saveJson(".\\forge_versions.json", listOfVersions)
             except:
-                listOfVersions = pytools.IO.getJson("..\forge_versions.json")
+                listOfVersions = pytools.IO.getJson(".\\forge_versions.json")
             
             for aMinecraftVersion in listOfVersions:
                 if aMinecraftVersion == version:
                     forgeVersion = listOfVersions[aMinecraftVersion][0]["id"]
             
             print("Grabbing forge version " + str(forgeVersion) + " for minecraft version " + str(version) + "...")
-            os.system("curl -O https://maven.minecraftforge.net/net/minecraftforge/forge/<version>-<forgeVersion>/forge-<version>-<forgeVersion>-installer.jar".replace("<version>", version).replace("<forgeVersion>", forgeVersion))
-            for x in os.listdir():
+            os.system("curl --output-dir .\\" + _automatedTest + " -O https://maven.minecraftforge.net/net/minecraftforge/forge/<version>-<forgeVersion>/forge-<version>-<forgeVersion>-installer.jar".replace("<version>", version).replace("<forgeVersion>", forgeVersion))
+            for x in os.listdir(".\\" + _automatedTest):
                 if (".jar" in x) and ("forge-" in x):
-                    os.system("java -jar " + x + " --installServer")
+                    os.system("start /d .\\" + _automatedTest + " /b /wait "" java -jar " + x + " --installServer")
             
-            runFile = pytools.IO.getFile("run.bat")
-            runFile = runFile.replace("java ", "..\\java\\" + util.getJavaVersionFromMinecraft(version) + "\\bin\\alive_automated_test ")
+            runFile = pytools.IO.getFile(".\\" + _automatedTest + "\\run.bat")
+            runFile = runFile.replace("java ", "..\\java\\" + util.getJavaVersionFromMinecraft(version, print=print) + "\\bin\\alive_" + _automatedTest + " ")
             runFile = runFile.replace("pause", "")
-            pytools.IO.saveFile("run.bat", runFile)
+            pytools.IO.saveFile(".\\" + _automatedTest + "\\run.bat", runFile)
         
-        pytools.IO.saveFile("eula.txt", """#By changing the setting below to TRUE you are indicating your agreement to our EULA (https://aka.ms/MinecraftEULA).
+        pytools.IO.saveFile(".\\" + _automatedTest + "\\eula.txt", """#By changing the setting below to TRUE you are indicating your agreement to our EULA (https://aka.ms/MinecraftEULA).
     #Fri Jan 09 14:04:31 AST 2026
     eula=true
     """)            
     except:
         print(traceback.format_exc())
     
-    os.system("xcopy ..\server.properties . /c /y")
+    os.system("xcopy .\\server.properties .\\" + _automatedTest + " /c /y /i")
+    pytools.IO.saveFile(".\\" + _automatedTest + "\\server.properties", pytools.IO.getFile(".\\" + _automatedTest + "\\server.properties").replace("25565", str(25565 + _split)).replace("25575", str(25575 + _split)))
     
-    os.chdir("..")
+    # os.chdir("..")
     
-def copyModFiles(modFiles):
+def copyModFiles(modFiles, _split=-1, print=print):
+    
+    _automatedTest = "automated_test" + (("_" + str(_split)) * (_split != -1))
+    
     for file in modFiles:
-        os.system("xcopy \"" + file + "\" .\\automated_test\\mods /c /y")
+        os.system("xcopy \"" + file + "\" .\\" + _automatedTest + "\\mods /c /y /i")
     
-    os.system("rmdir \".\\automated_test\\world\" /s /q")
-    os.system("mkdir \".\\automated_test\\world\"")
-    os.system("mkdir \".\\automated_test\\world\\datapacks\"")
-    os.system("mkdir \".\\automated_test\\world\\datapacks\\test_datapack\"")
+    os.system("rmdir \".\\" + _automatedTest + "\\world\" /s /q")
+    os.system("mkdir \".\\" + _automatedTest + "\\world\"")
+    os.system("mkdir \".\\" + _automatedTest + "\\world\\datapacks\"")
+    os.system("mkdir \".\\" + _automatedTest + "\\world\\datapacks\\test_datapack\"")
     
-    os.system("xcopy \".\\test_datapack\" \".\\automated_test\\world\\datapacks\\test_datapack\" /e /c /y")
-    os.system("mkdir .\\automated_test\\world\\datapacks\\test_datapack\\data\\test\\functions")
-    os.system("xcopy .\\automated_test\\world\\datapacks\\test_datapack\\data\\test\\function\\* .\\automated_test\\world\\datapacks\\test_datapack\\data\\test\\functions /e /c /y")
+    os.system("xcopy \".\\test_datapack\" \".\\" + _automatedTest + "\\world\\datapacks\\test_datapack\" /e /c /y /i")
+    os.system("mkdir .\\" + _automatedTest + "\\world\\datapacks\\test_datapack\\data\\test\\functions")
+    os.system("xcopy .\\" + _automatedTest + "\\world\\datapacks\\test_datapack\\data\\test\\function\\* .\\" + _automatedTest + "\\world\\datapacks\\test_datapack\\data\\test\\functions /e /c /y /i")
     
-def launch(loader, version):
-    os.chdir(".\\automated_test")
+def launch(loader, version, _split=-1, print=print):
+    
+    _automatedTest = "automated_test" + (("_" + str(_split)) * (_split != -1))
+    
     try:
-        for javaFolder in os.listdir("..\\java"):
-            os.system("copy \"..\\java\\" + javaFolder + "\\bin\\java.exe\" \"..\\java\\" + javaFolder + "\\bin\\alive_automated_test.exe\" /y")
+        for javaFolder in os.listdir(".\\java"):
+            os.system("copy \".\\java\\" + javaFolder + "\\bin\\java.exe\" \".\\java\\" + javaFolder + "\\bin\\alive_" + _automatedTest + ".exe\" /y")
         
         if loader == "fabric":
-            for x in os.listdir():
+            for x in os.listdir(".\\" + _automatedTest):
                 if (".jar" in x) and ("fabric" in x):
-                    os.system("start /b \"\" ..\\java\\" + util.getJavaVersionFromMinecraft(version) + "\\bin\\alive_automated_test.exe -Xmx2G -jar " + x + " nogui")
+                    os.system("start /d \".\\" + _automatedTest + "\" /b \"\" .\\java\\" + util.getJavaVersionFromMinecraft(version, print=print) + "\\bin\\alive_" + _automatedTest + ".exe -Xmx2G -jar " + x + " nogui")
         else:
-            os.system("start /b \"\" cmd.exe /c run.bat")
+            os.system("start /d \".\\" + _automatedTest + "\" /b \"\" cmd.exe /c run.bat")
         
         isGood = True
         
         try:
             i = 0
-            while ("[framework_marker]" not in str(pytools.IO.getFile(".\\logs\\latest.log"))) and (i < 90):
+            while ("[framework_marker]" not in str(pytools.IO.getFile(".\\" + _automatedTest + "\\logs\\latest.log"))) and (i < 90):
                 print("testing_watchdog_waiting")
                 i = i + 1
                 time.sleep(1)
@@ -265,7 +289,7 @@ def launch(loader, version):
             if i < 60:
                 i = 0
                 print("Testing Started...")
-                while ("[framework_testing_ended]" not in str(pytools.IO.getFile(".\\logs\\latest.log"))) and (i < 240):
+                while ("[framework_testing_ended]" not in str(pytools.IO.getFile(".\\" + _automatedTest + "\\logs\\latest.log"))) and (i < 240):
                     print("testing_watchdog_loop")
                     i = i + 1
                     time.sleep(1)
@@ -283,53 +307,72 @@ def launch(loader, version):
         
         if flags.manualStop:
             print("manual_watchdog_start")
-            while ("Stopping server" not in str(pytools.IO.getFile(".\\logs\\latest.log"))):
+            while ("Stopping server" not in str(pytools.IO.getFile(".\\" + _automatedTest + "\\logs\\latest.log"))):
                 time.sleep(1)
     except:
         print(traceback.format_exc())
-    os.system("taskkill /f /im alive_automated_test.exe")
-    os.chdir("..")
+    os.system("taskkill /f /im alive_" + _automatedTest + ".exe")
+    # os.chdir("..")
     
     return isGood
 
-def runAutomatedTest(loader, version, modReleaseNumber, isBeta=False, isDebug=False):
+def runAutomatedTest(loader, version, modReleaseNumber, isBeta=False, isDebug=False, _split=-1, print=print, analyze=analyze()):
+    
+    _automatedTest = "automated_test" + (("_" + str(_split)) * (_split != -1))
+    
     analyze.reset()
     try:
         if not isDebug:
-            setupServer(loader, version)
+            setupServer(loader, version, _split=_split, print=print)
         if isBeta and (not isDebug):
-            os.system("rmdir .\\automated_test\\world\\datapacks")
-            os.system("rmdir .\\automated_test\\world\\datapacks /s /q")
-            os.system("mklink /j .\\automated_test\\world\\datapacks ..\\datapacks")
-            os.system("ren .\\automated_test\\world\\datapacks\\data\\minecraft\\tags\\function\\tick.json tickfuck.json")
+            os.system("rmdir .\\" + _automatedTest + "\\world\\datapacks")
+            os.system("rmdir .\\" + _automatedTest + "\\world\\datapacks /s /q")
+            os.system("mklink /j .\\" + _automatedTest + "\\world\\datapacks ..\\datapacks")
+            os.system("ren .\\" + _automatedTest + "\\world\\datapacks\\data\\minecraft\\tags\\function\\tick.json tickfuck.json")
             
-        copyModFiles(getModFiles(loader, version, modReleaseNumber))
+        copyModFiles(getModFiles(loader, version, modReleaseNumber, _split=_split, print=print), _split=_split, print=print)
         
-        isGood = launch(loader, version)
-        successState = analyze.logFile()
+        isGood = launch(loader, version, _split=_split, print=print)
+        successState = analyze.logFile(_split=_split, print=print)
         if not (successState and isGood):
-            analyze.save()
+            analyze.save(_split=_split)
     except:
         print(traceback.format_exc())
-        analyze.save()
+        analyze.save(_split=_split)
         return False
     
-    os.system("ren .\\automated_test\\world\\datapacks\\data\\minecraft\\tags\\function\\tickfuck.json tick.json")
+    os.system("ren .\\" + _automatedTest + "\\world\\datapacks\\data\\minecraft\\tags\\function\\tickfuck.json tick.json")
     
     return (successState and isGood)
         
-def testCompleteVersion(modReleaseNumber, isBeta=False):
+def testCompleteVersion(modReleaseNumber, _split=-1, isBeta=False):
 
+        _automatedTest = "automated_test" + (("_" + str(_split)) * (_split != -1))
+        _analyze = analyze()
+        print = _analyze.printReport
+        
+        os.system("mkdir \".\\" + _automatedTest + "\"")
+        
         cases = {}
         
-        gameVersionDict = pytools.IO.getJson("game_versions.json")
-        for loader in gameVersionDict:
+        if _split == -1:
+            gameVersionDict = pytools.IO.getJson("game_versions.json")
+            for loader in gameVersionDict:
+                for baseVersion in gameVersionDict[loader]:
+                    for version in gameVersionDict[loader][baseVersion]:
+                        if loader not in cases:
+                            cases[loader] = {}
+                        
+                        cases[loader][version] = runAutomatedTest(loader, version, modReleaseNumber=modReleaseNumber, isBeta=isBeta, _split=_split, print=print, analyze=_analyze)
+        else:
+            gameVersionDict = pytools.IO.getJson("game_versions.json")
+            loader = list(gameVersionDict.keys())[_split]
             for baseVersion in gameVersionDict[loader]:
                 for version in gameVersionDict[loader][baseVersion]:
                     if loader not in cases:
                         cases[loader] = {}
                     
-                    cases[loader][version] = runAutomatedTest(loader, version, modReleaseNumber=modReleaseNumber, isBeta=isBeta)
+                    cases[loader][version] = runAutomatedTest(loader, version, modReleaseNumber=modReleaseNumber, isBeta=isBeta, _split=_split, print=print, analyze=_analyze)
         
         return cases
     

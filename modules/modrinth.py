@@ -101,13 +101,12 @@ def uploadFile(path, project, loader, version, projectVersion, displayName, chan
         }
     ]
     
-    for _version in gameVersions:
-        if _version in curseforge.versionsSupportingWeather2:
+    if curseforge.globals.weather2CompatReleased:
+        if version in curseforge.versionsSupportingWeather2:
             metadata["relations"]["projects"].append({
                 "project_id": "hXYQUodu",
                 "dependency_type": "required"
             })
-            break
     
     versionInstance = modrinth.NewVersion(
         name = DISPLAY_NAME,

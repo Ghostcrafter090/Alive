@@ -332,16 +332,14 @@ def compileDatapackIntoMod(folderName):
                                 neoforgeTemplate = neoforgeTemplate.replace("<modDescription>", description)
                                 neoforgeTemplate = neoforgeTemplate.replace("<gameVersions>", gameVersions)
                                 
-                                for x in gameVersions.split(","):
-                                    if x in curseforge.versionsSupportingWeather2:
-                                        print("     ---> Weather2 Compat Requirment Detected.")
-                                        neoforgeTemplate = neoforgeTemplate.replace("<weather2Compat>", """[[dependencies.<modId>]]
+                                if jarFile.split("-")[2].split(".jar")[0] in curseforge.versionsSupportingWeather2:
+                                    print("     ---> Weather2 Compat Requirment Detected.")
+                                    neoforgeTemplate = neoforgeTemplate.replace("<weather2Compat>", """[[dependencies.<modId>]]
     modId="gstoolsweather2compat"
     type="required"
     versionRange="[1.0.0,)"
     ordering="AFTER"
     side="BOTH\"""").replace("<modId>", folderName)
-                                        break
                                 
                                 neoforgeTemplate = neoforgeTemplate.replace("<weather2Compat>", "")
                             
@@ -374,6 +372,9 @@ def compileDatapackIntoMod(folderName):
                                         os.system("robocopy \".\\temp_dir_2\\data\\minecraft\\loot_tables\" \".\\temp_dir\\data\\minecraft\\loot_tables\" /mir /mt:16 /np /nfl /ndl")
                                         print("     ---> Processing Loot Tables...")
                                         lootTable.processJsonFiles(".\\temp_dir\\data\\minecraft")
+                                        if int(aJarVersion[1].split(".")[0]) > 1:
+                                            os.system("del .\\temp_dir\\data\\minecraft\\loot_table\\chests\\bastion_other.json")
+                                            os.system("del .\\temp_dir\\data\\minecraft\\loot_tables\\chests\\bastion_other.json")
                                         print("     ---> Cleaning Up...")
                                         os.system("del \".\\temp_dir_2\\*\" /f /s /q")
                                         os.system("del \".\\_compiler_mcversion_jar.jar\" /f /s /q")

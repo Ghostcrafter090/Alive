@@ -2,6 +2,9 @@ datapack_compile_temp
 curseforge_api.json
 temp_dir
 automated_test
+automated_test_0
+automated_test_1
+automated_test_2
 java
 prior_tests
 prior_tests\*

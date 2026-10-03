@@ -12,7 +12,7 @@ print = log.printLog
 
 class globals:
     apiKey = pytools.IO.getJson("upload_api.json")["curseforge"]["key"]
-
+    weather2CompatReleased = False
     versionIdBlacklist = pytools.IO.getJson("version_id_blacklist.json")["list"]
     
 projectIdDict = {
@@ -112,14 +112,12 @@ def uploadFile(path, project, loader, version, displayName, changeLog):
         } # Use this for required mods or dependencies
     }
     
-    for _version in list(GAME_VERSION.values()):
-        if _version in versionsSupportingWeather2:
-            metadata["relations"]["projects"].append({
-                "slug": "gstools-weather2-compat",
-                "projectID": 1710321,
-                "type": "requiredDependency"
-            })
-            break
+    if version in versionsSupportingWeather2:
+        metadata["relations"]["projects"].append({
+            "slug": "gstools-weather2-compat",
+            "projectID": 1710321,
+            "type": "requiredDependency"
+        })
     
     # Headers for authentication
     headers = {

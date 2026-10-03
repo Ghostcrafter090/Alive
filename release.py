@@ -2,6 +2,8 @@ import modules.pytools as pytools
 import modules.curseforge as curseforge
 import modules.modrinth as modrinth
 import modules.logManager as log
+import importlib
+import threading
 
 import subprocess
 import sys
@@ -96,7 +98,25 @@ for arg in sys.argv:
         doCurseforge = False
     if arg == "--onlyCurseforge":
         doModrinth = False
+
+class testCompleteChunk:
+    def __init__(self, autoTestInstance):
+        self.autoTestInstance = autoTestInstance
+        self.output = False
         
+    def start(self, *args):
+        self.args = args
+        self.thread = threading.Thread(target=self.run)
+        self.thread.start()
+    
+    def run(self):
+        self.started = True
+        self.output = self.autoTestInstance.testCompleteVersion(*self.args)
+        self.completed = True
+    
+    def join(self):
+        self.thread.join()
+        return self.output
 
 if doRun:
     if complete:
@@ -104,7 +124,43 @@ if doRun:
             print("Releasing new mod version!")
             
             if not skipTest:
-                testCompletion = autoTest.testCompleteVersion(".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]))
+                autoTest0 = importlib.reload(autoTest)
+                autoTest1 = importlib.reload(autoTest)
+                autoTest2 = importlib.reload(autoTest)                                     
+                
+                test0 = testCompleteChunk(autoTest0)
+                test1 = testCompleteChunk(autoTest1)
+                test2 = testCompleteChunk(autoTest2)
+                                                                
+                test0.start(".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]), 0)
+                test1.start(".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]), 1)
+                test2.start(".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]), 2)
+                
+                testCompletion0 = test0.join()
+                testCompletion1 = test1.join()
+                testCompletion2 = test2.join()
+                
+                testCompletion = {}
+                for loader in testCompletion0:
+                    for version in testCompletion0[loader]:
+                        if loader not in testCompletion:
+                            testCompletion[loader] = {}
+                        testCompletion[loader][version] = testCompletion0[loader][version]
+                
+                for loader in testCompletion1:
+                    for version in testCompletion1[loader]:
+                        if loader not in testCompletion:
+                            testCompletion[loader] = {}
+                        testCompletion[loader][version] = testCompletion1[loader][version]
+                
+                for loader in testCompletion2:
+                    for version in testCompletion2[loader]:
+                        if loader not in testCompletion:
+                            testCompletion[loader] = {}
+                        testCompletion[loader][version] = testCompletion2[loader][version]
+                        
+                pytools.IO.saveJson(".\\releases\\" + ".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]) + "\\cases.json", testCompletion)
+
             else:
                 testCompletion = False
                 
@@ -158,7 +214,41 @@ if doRun:
                 theRelease = copy.deepcopy(getEarliestReleaseDate())
                 
                 if not skipTest:
-                    testCompletion = autoTest.testCompleteVersion(theRelease["version"])
+                    # testCompletion = autoTest.testCompleteVersion(theRelease["version"])                    
+                    
+                    test0 = testCompleteChunk(autoTest)
+                    test1 = testCompleteChunk(autoTest)
+                    test2 = testCompleteChunk(autoTest)
+                    
+                    test0.start(theRelease["version"], 0)
+                    test1.start(theRelease["version"], 1)
+                    test2.start(theRelease["version"], 2)
+                    
+                    testCompletion0 = test0.join()
+                    testCompletion1 = test1.join()
+                    testCompletion2 = test2.join()
+                    
+                    testCompletion = {}
+                    for loader in testCompletion0:
+                        for version in testCompletion0[loader]:
+                            if loader not in testCompletion:
+                                testCompletion[loader] = {}
+                            testCompletion[loader][version] = testCompletion0[loader][version]
+                    
+                    for loader in testCompletion1:
+                        for version in testCompletion1[loader]:
+                            if loader not in testCompletion:
+                                testCompletion[loader] = {}
+                            testCompletion[loader][version] = testCompletion1[loader][version]
+                    
+                    for loader in testCompletion2:
+                        for version in testCompletion2[loader]:
+                            if loader not in testCompletion:
+                                testCompletion[loader] = {}
+                            testCompletion[loader][version] = testCompletion2[loader][version]
+                            
+                    pytools.IO.saveJson(".\\releases\\" + theRelease["version"] + "\\cases.json", testCompletion)        
+                    
                 else:
                     testCompletion = False
                 
