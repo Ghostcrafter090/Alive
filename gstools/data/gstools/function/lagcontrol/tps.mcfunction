@@ -38,21 +38,21 @@ execute unless entity @e[tag=gstools_worker,type=marker,scores={worldBorderVersi
 
 # scoreboard players operation @e[type=marker,tag=gstools_worker] tps *= @e[type=marker,tag=gstools_worker] manualTpsModifier
 
-scoreboard players set @e[type=marker,tag=gstools_worker] averageTpsWorker 200
-scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsWorker *= @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen
-scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen = @e[type=marker,tag=gstools_worker] tps
-scoreboard players operation @e[type=marker,tag=gstools_worker,scores={tps=21..}] averageTpsWorkerMultTen = @e[type=marker,tag=gstools_worker] 20
-scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen += @e[type=marker,tag=gstools_worker] 20
-scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen *= @e[type=marker,tag=gstools_worker] 10
-scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsWorker += @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen
-scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsWorker /= @e[type=marker,tag=gstools_worker] 201
-scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen = @e[type=marker,tag=gstools_worker] averageTpsWorker
+execute if entity @a[scores={playerIsActive=1..}] run scoreboard players set @e[type=marker,tag=gstools_worker] averageTpsWorker 200
+execute if entity @a[scores={playerIsActive=1..}] run scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsWorker *= @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen
+execute if entity @a[scores={playerIsActive=1..}] run scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen = @e[type=marker,tag=gstools_worker] tps
+execute if entity @a[scores={playerIsActive=1..}] run scoreboard players operation @e[type=marker,tag=gstools_worker,scores={tps=21..}] averageTpsWorkerMultTen = @e[type=marker,tag=gstools_worker] 20
+execute if entity @a[scores={playerIsActive=1..}] run scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen += @e[type=marker,tag=gstools_worker] 20
+execute if entity @a[scores={playerIsActive=1..}] run scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen *= @e[type=marker,tag=gstools_worker] 10
+execute if entity @a[scores={playerIsActive=1..}] run scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsWorker += @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen
+execute if entity @a[scores={playerIsActive=1..}] run scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsWorker /= @e[type=marker,tag=gstools_worker] 201
+execute if entity @a[scores={playerIsActive=1..}] run scoreboard players operation @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen = @e[type=marker,tag=gstools_worker] averageTpsWorker
 
-scoreboard players operation @e[type=marker,tag=gstools_worker] averageTps = @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen
-scoreboard players operation @e[type=marker,tag=gstools_worker] averageTps /= @e[type=marker,tag=gstools_worker] 10
-scoreboard players operation @e[type=marker,tag=gstools_worker] averageTps -= @e[type=marker,tag=gstools_worker] 20
-execute unless entity @e[tag=gstools_worker,type=marker,scores={worldBorderVersionConflict=1..1}] run scoreboard players operation @e[type=marker,tag=gstools_worker,scores={ticEigth=1..1}] averageTpsWorkerMultTen += @e[type=marker,tag=gstools_worker] 1
-execute if entity @e[tag=gstools_worker,type=marker,scores={worldBorderVersionConflict=1..1}] run scoreboard players operation @e[type=marker,tag=gstools_worker,scores={ticTenth=1..1}] averageTpsWorkerMultTen += @e[type=marker,tag=gstools_worker] 1
+execute if entity @a[scores={playerIsActive=1..}] run scoreboard players operation @e[type=marker,tag=gstools_worker] averageTps = @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen
+execute if entity @a[scores={playerIsActive=1..}] run scoreboard players operation @e[type=marker,tag=gstools_worker] averageTps /= @e[type=marker,tag=gstools_worker] 10
+execute if entity @a[scores={playerIsActive=1..}] run scoreboard players operation @e[type=marker,tag=gstools_worker] averageTps -= @e[type=marker,tag=gstools_worker] 20
+execute if entity @a[scores={playerIsActive=1..}] unless entity @e[tag=gstools_worker,type=marker,scores={worldBorderVersionConflict=1..1}] run scoreboard players operation @e[type=marker,tag=gstools_worker,scores={ticEigth=1..1}] averageTpsWorkerMultTen += @e[type=marker,tag=gstools_worker] 1
+execute if entity @a[scores={playerIsActive=1..}] if entity @e[tag=gstools_worker,type=marker,scores={worldBorderVersionConflict=1..1}] run scoreboard players operation @e[type=marker,tag=gstools_worker,scores={ticTenth=1..1}] averageTpsWorkerMultTen += @e[type=marker,tag=gstools_worker] 1
 
 execute as @e[type=marker,tag=gstools_worker] if entity @s[scores={main_disableLagControlSystem=1..1}] run scoreboard players set @e[type=marker,tag=gstools_worker] averageTps 20
 execute as @e[type=marker,tag=gstools_worker] if entity @s[scores={main_disableLagControlSystem=1..1}] run scoreboard players set @e[type=marker,tag=gstools_worker] averageTpsWorkerMultTen 400

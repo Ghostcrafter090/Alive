@@ -14,11 +14,11 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={blockDecayCursorCoun
 execute if entity @e[tag=gstools_worker,type=marker,scores={blockDecayCursorCounter=..4}] if data storage minecraft:blockdecay coordsToDecay[0] run function blockdecay:_cursor/construct
 # <node:no_compile_mode/>
 
-execute as @e[tag=gstools_cursor,type=marker,limit=5,sort=random] at @s run function blockdecay:decay/at
-execute as @e[tag=gstools_cursor,type=marker,limit=5,sort=random] run tag @s add block_decayed
+execute as @e[tag=gstools_cursor,type=marker,limit=5,sort=random] at @s unless entity @a[scores={playerIsActive=1..},distance=0..100] run function blockdecay:decay/at
+execute as @e[tag=gstools_cursor,type=marker,limit=5,sort=random] at @s unless entity @a[scores={playerIsActive=1..},distance=0..100] run tag @s add block_decayed
 
-execute as @e[tag=gstools_vertical_cursor,type=marker,limit=5,sort=random] at @s positioned ~ ~1 ~ run function blockdecay:decay/at
-execute as @e[tag=gstools_vertical_cursor,type=marker,limit=5,sort=random] run tag @s add block_decayed
+execute as @e[tag=gstools_vertical_cursor,type=marker,limit=5,sort=random] at @s unless entity @a[scores={playerIsActive=1..},distance=0..100] positioned ~ ~1 ~ run function blockdecay:decay/at
+execute as @e[tag=gstools_vertical_cursor,type=marker,limit=5,sort=random] at @s unless entity @a[scores={playerIsActive=1..},distance=0..100] run tag @s add block_decayed
 
 execute as @e[tag=gstools_cursor,tag=!block_decayed] run data modify storage blockdecay coordsToDecay append from entity @s Pos
 execute as @e[tag=gstools_vertical_cursor,tag=!block_decayed] run data modify storage blockdecay coordsToDecay append from entity @s Pos

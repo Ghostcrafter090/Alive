@@ -97,6 +97,8 @@ execute if entity @e[type=marker,tag=gstools_worker,scores={ticSecond=5..5}] run
 scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA = @e[tag=gstools_worker,type=marker] averageTps
 function gstools:extension/dorunmath
 
+execute as @a run function gstools:util/is_idle
+
 # scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA *= @e[tag=gstools_worker,type=marker] 10
 # scoreboard players operation @e[tag=gstools_worker,type=marker] globalTicWorkerA /= @e[tag=gstools_worker,type=marker] 15
 
@@ -173,13 +175,13 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={chunk_cursorUpdateRa
 execute if score @e[tag=gstools_worker,type=marker,limit=1] numberOfCursors > @e[tag=gstools_worker,type=marker,limit=1] numberOfPlayers as @a run kill @e[tag=gstools_cursor,type=marker,tag=!spread_from_self]
 
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run schedule function gstools:cursor/run 1t append
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicDirt=1..1}] run schedule function gstools:cursor/run 1t replace
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicEcosystems=1..1}] run schedule function gstools:cursor/run 1t replace
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBlockDecay=1..1}] run schedule function gstools:cursor/run 1t replace
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBossProgression=1..1}] run schedule function gstools:cursor/run 1t replace
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunGothicHorror=1..1}] run schedule function gstools:cursor/run 1t replace
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunUndeadExpanded=1..1}] run schedule function gstools:cursor/run 1t replace
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunGhostsAndGhouls=1..1}] run schedule function gstools:cursor/run 1t replace
+# execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicDirt=1..1}] run schedule function gstools:cursor/run 1t replace
+# execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicEcosystems=1..1}] run schedule function gstools:cursor/run 1t replace
+# execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBlockDecay=1..1}] run schedule function gstools:cursor/run 1t replace
+# execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBossProgression=1..1}] run schedule function gstools:cursor/run 1t replace
+# execute if entity @e[tag=gstools_worker,type=marker,scores={doRunGothicHorror=1..1}] run schedule function gstools:cursor/run 1t replace
+# execute if entity @e[tag=gstools_worker,type=marker,scores={doRunUndeadExpanded=1..1}] run schedule function gstools:cursor/run 1t replace
+# execute if entity @e[tag=gstools_worker,type=marker,scores={doRunGhostsAndGhouls=1..1}] run schedule function gstools:cursor/run 1t replace
 
 execute store result score @e[tag=gstools_worker,type=marker] gameTime run time query gametime
 function gstools:version_conflict/time_new
@@ -198,7 +200,8 @@ function gstools:hud/main
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDesirePaths=1..1,doRun=1..1}] run schedule function gstools:extension/desirepaths/run 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicDirt=1..1,doRun=1..1}] run schedule function gstools:extension/dynamicdirt/run 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicEcosystems=1..1,doRun=1..1}] run schedule function gstools:extension/dynamicecosystems/run 1t append
-execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBlockDecay=1..1,doRun=1..1}] run schedule function gstools:extension/blockdecay/run 1t append
+execute unless entity @a[scores={playerIsActive=1..}] if entity @e[tag=gstools_worker,type=marker,scores={doRunBlockDecay=1..1,doRun=1..1}] run schedule function gstools:extension/blockdecay/run 1t append
+execute if entity @a[scores={playerIsActive=0..0}] if entity @a[scores={playerIsActive=1..}] if entity @e[tag=gstools_worker,type=marker,scores={doRunBlockDecay=1..1,doRun=1..1}] run schedule function gstools:extension/blockdecay/run 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunDynamicMonsters=1..1,doRun=1..1}] run schedule function gstools:extension/dynamicmonsters/run 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunLifeAndDeath=1..1,doRun=1..1}] run schedule function gstools:extension/lifeanddeath/run 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunBossProgression=1..1,doRun=1..1}] run schedule function gstools:extension/bossprogression/run 1t append
