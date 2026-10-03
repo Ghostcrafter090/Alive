@@ -13,7 +13,7 @@ execute as @e[tag=gstools_worker,type=marker] unless entity @s[scores={anotherEx
 execute as @e[tag=gstools_worker,type=marker] if score @s ticTenth > @s random10 run scoreboard players set @s doLagCheck 1
 
 execute if entity @e[tag=gstools_worker,type=marker,scores={doLagCheck=1..1}] run schedule function gstools:extension/dynamicdirt/lagcheck 1t append
-execute as @e[tag=gstools_worker,type=marker,scores={averageTps=..16,averageTpsDynamicDirtWorkerMultTen=241..}] run scoreboard players remove @s averageTpsDynamicDirtWorkerMultTen 1
+execute as @e[tag=gstools_worker,type=marker,scores={averageTps=..13,averageTpsDynamicDirtWorkerMultTen=241..}] run scoreboard players remove @s averageTpsDynamicDirtWorkerMultTen 1
 
 execute as @e[tag=gstools_worker,type=marker] run scoreboard players set @s doRunDynamicDirt 0
 scoreboard players set @e[type=marker,tag=gstools_worker] currentlyExecutingDynamicDirt 0
