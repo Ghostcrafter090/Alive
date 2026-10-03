@@ -1,7 +1,7 @@
 # Define
 
 # Main
-execute as @e[scores={hGeneralTic=0..},sort=random,limit=50] run scoreboard players remove @s hGeneralTic 1
+execute as @e[scores={hGeneralTic=1..},sort=random,limit=50] run scoreboard players remove @s hGeneralTic 1
 
 # Day Cycle
 function gothichorror:version_conflict/gamerule_0

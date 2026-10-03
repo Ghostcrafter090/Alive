@@ -85,22 +85,22 @@ execute as @a[name=!Ghostcrafter090] at @s as @e[type=cat,distance=0..3] if enti
 execute as @a[name=Ghostcrafter090] at @s as @e[type=cat,distance=0..3] if entity @s[nbt={variant:"minecraft:all_black"}] run scoreboard players add @p luck 1
 
 # Numbers
-execute as @a[tag=!has_number_9,nbt={Inventory:[{count:9}]}] run scoreboard players remove @s luck 9
-execute as @a[tag=!has_number_9,nbt={Inventory:[{count:9}]}] run tag @s add has_number_9
-execute as @a[tag=has_number_9] unless entity @s[nbt={Inventory:[{count:9}]}] run tag @s remove has_number_9
+execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=1..1}] as @a[tag=!has_number_9,nbt={Inventory:[{count:9}]}] run scoreboard players remove @s luck 9
+execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=1..1}] as @a[tag=!has_number_9,nbt={Inventory:[{count:9}]}] run tag @s add has_number_9
+execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=0..0}] as @a[tag=has_number_9] unless entity @s[nbt={Inventory:[{count:9}]}] run tag @s remove has_number_9
 
-execute as @a[tag=!has_number_4,nbt={Inventory:[{count:4}]}] run scoreboard players remove @s luck 4
-execute as @a[tag=!has_number_4,nbt={Inventory:[{count:4}]}] run tag @s add has_number_4
-execute as @a[tag=has_number_4] unless entity @s[nbt={Inventory:[{count:4}]}] run tag @s remove has_number_4
+execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=1..1}] as @a[tag=!has_number_4,nbt={Inventory:[{count:4}]}] run scoreboard players remove @s luck 4
+execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=1..1}] as @a[tag=!has_number_4,nbt={Inventory:[{count:4}]}] run tag @s add has_number_4
+execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=0..0}] as @a[tag=has_number_4] unless entity @s[nbt={Inventory:[{count:4}]}] run tag @s remove has_number_4
 
-execute as @a[name=!Ghostcrafter090,tag=!has_number_13,nbt={Inventory:[{count:13}]}] run scoreboard players remove @s luck 100
-execute as @a[name=Ghostcrafter090,tag=!has_number_13,nbt={Inventory:[{count:13}]}] run scoreboard players add @s luck 100
-execute as @a[tag=!has_number_13,nbt={Inventory:[{count:13}]}] run tag @s add has_number_13
-execute as @a[tag=has_number_13] unless entity @s[nbt={Inventory:[{count:13}]}] run tag @s remove has_number_13
+execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=1..1}] as @a[name=!Ghostcrafter090,tag=!has_number_13,nbt={Inventory:[{count:13}]}] run scoreboard players remove @s luck 100
+execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=1..1}] as @a[name=Ghostcrafter090,tag=!has_number_13,nbt={Inventory:[{count:13}]}] run scoreboard players add @s luck 100
+execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=1..1}] as @a[tag=!has_number_13,nbt={Inventory:[{count:13}]}] run tag @s add has_number_13
+execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=0..0}] as @a[tag=has_number_13] unless entity @s[nbt={Inventory:[{count:13}]}] run tag @s remove has_number_13
 
-execute as @a[tag=!has_number_17,nbt={Inventory:[{count:17}]}] run scoreboard players remove @s luck 17
-execute as @a[tag=!has_number_17,nbt={Inventory:[{count:17}]}] run tag @s add has_number_17
-execute as @a[tag=has_number_17] unless entity @s[nbt={Inventory:[{count:17}]}] run tag @s remove has_number_17
+execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=1..1}] as @a[tag=!has_number_17,nbt={Inventory:[{count:17}]}] run scoreboard players remove @s luck 17
+execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=1..1}] as @a[tag=!has_number_17,nbt={Inventory:[{count:17}]}] run tag @s add has_number_17
+execute if entity @e[tag=gstools_worker,type=marker,scores={ticHalf=0..0}] as @a[tag=has_number_17] unless entity @s[nbt={Inventory:[{count:17}]}] run tag @s remove has_number_17
 
 execute as @a[scores={luck=5501..}] run scoreboard players set @s luck 5500
 execute as @a[scores={luck=..-5501}] run scoreboard players set @s luck -5500
