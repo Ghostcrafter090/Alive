@@ -113,7 +113,7 @@ execute as @e[tag=gstools_cursor] if entity @s[tag=spread_from_self] if entity @
 execute as @e[tag=gstools_worker,type=marker,scores={doRun=1..1}] run function gstools:compat/sereneseasons/main
 execute unless entity @e[tag=gstools_worker,type=marker,scores={isSereneSeasonsPresent=1..1}] run scoreboard players set @e[tag=gstools_worker,type=marker] currentSeasonDay 6
 execute unless entity @e[tag=gstools_worker,type=marker,scores={isSereneSeasonsPresent=1..1}] as @a at @s run function gstools:compat/sereneseasons/temperature
-function gstools:compat/weather2/main
+schedule function gstools:compat/weather2/main 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={isSereneSeasonsPresent=1..1}] as @a at @s run function gstools:horror/getindex
 execute as @a at @s run function gstools:util/is_outside
 
@@ -206,18 +206,18 @@ execute if entity @e[tag=gstools_worker,type=marker,scores={doRunGothicHorror=1.
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunUndeadExpanded=1..1,doRun=1..1}] run schedule function gstools:extension/undeadexpanded/run 1t append
 execute if entity @e[tag=gstools_worker,type=marker,scores={doRunGhostsAndGhouls=1..1,doRun=1..1}] run schedule function gstools:extension/ghostsandghouls/run 1t append
 
-execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=10..}] run function enhancedsurvival:main
+execute if entity @e[tag=gstools_worker,type=marker,scores={averageTps=10..}] run schedule function enhancedsurvival:main 1t append
 
-function gstools:player/view_finder
+schedule function gstools:player/view_finder 1t append
 
-function lifeanddeath:tic
-function enhancedsurvival:tic
-function bossprogression:tic
-function gothichorror:tic
-function dynamicdirt:tic
-function desirepaths:tic
-function undeadexpanded:tic
-function ghostsandghouls:tic
+schedule function lifeanddeath:tic 1t append
+schedule function enhancedsurvival:tic 2t append
+schedule function bossprogression:tic 3t append
+schedule function gothichorror:tic 4t append
+schedule function dynamicdirt:tic 5t append
+schedule function desirepaths:tic 6t append
+schedule function undeadexpanded:tic 7t append
+schedule function ghostsandghouls:tic 8t append
 
 # On Death
 execute as @a[scores={death=1..}] at @s run function gstools:player/on_death

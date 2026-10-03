@@ -1,4 +1,4 @@
 # Define
 
 # Main
-function undeadexpanded:hallow/monsters/rise
+schedule function undeadexpanded:hallow/monsters/rise 1t append

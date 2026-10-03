@@ -8,7 +8,7 @@ scoreboard objectives add gothicMonsterTicRate dummy
 function ghostsandghouls:effects/version_conflict/follow_range_0
 function ghostsandghouls:effects/version_conflict/follow_range_1
 
-function ghostsandghouls:effects/ghosts/main
+schedule function ghostsandghouls:effects/ghosts/main 1t append
 
 execute store result score @e[type=marker,tag=gstools_worker] numberOfUndeadMonsters if entity @e[type=#minecraft:undead]
 execute store result score @e[type=marker,tag=gstools_worker] numberOfNetherMonsters if entity @e[tag=nether,tag=monster]

@@ -23,8 +23,8 @@ execute store result score @e[tag=gstools_worker,type=marker,limit=1] poltergeis
 execute if entity @e[tag=gstools_worker,type=marker,scores={poltergeistRockCount=30..}] run kill @e[type=snowball,tag=gothic_ghost_snowball_thrown,tag=!sound_played]
 
 # Ghosts (Hallow)
-function ghostsandghouls:hallow/ghosts/death/tic
-function ghostsandghouls:hallow/ghosts/dying/tic
-function ghostsandghouls:hallow/ghosts/sick/tic
+schedule function ghostsandghouls:hallow/ghosts/death/tic 1t append
+schedule function ghostsandghouls:hallow/ghosts/dying/tic 1t append
+schedule function ghostsandghouls:hallow/ghosts/sick/tic 1t append
 
-function ghostsandghouls:effects/ghosts/tic
+schedule function ghostsandghouls:effects/ghosts/tic 1t append
