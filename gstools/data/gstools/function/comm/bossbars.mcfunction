@@ -139,8 +139,8 @@ execute store result bossbar minecraft:dynamic_ecosystems_tps value run scoreboa
 execute store result bossbar minecraft:dynamic_monsters_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsDynamicMonstersWorkerMultTen
 execute store result bossbar minecraft:enhanced_survival_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsEnhancedSurvivalWorkerMultTen
 execute store result bossbar minecraft:gothic_horror_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsGothicHorrorWorkerMultTen
-execute store result bossbar minecraft:gothic_horror_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsUndeadExpandedWorkerMultTen
-execute store result bossbar minecraft:gothic_horror_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsGhostsAndGhoulsWorkerMultTen
+execute store result bossbar minecraft:undead_expanded_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsUndeadExpandedWorkerMultTen
+execute store result bossbar minecraft:ghosts_and_ghouls_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsGhostsAndGhoulsWorkerMultTen
 execute store result bossbar minecraft:life_and_death_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsLifeAndDeathWorkerMultTen
 execute store result bossbar minecraft:all_tps value run scoreboard players get @e[tag=gstools_worker,type=marker,limit=1] averageTpsWorkerMultTen
 

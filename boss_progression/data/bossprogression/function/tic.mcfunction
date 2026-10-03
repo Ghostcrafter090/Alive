@@ -1,17 +1,17 @@
 # Define
 
 # Main
-function bossprogression:bosses/wither/spell/check
-function bossprogression:bosses/wither/spell/main
+schedule function bossprogression:bosses/wither/spell/check 1t append
+schedule function bossprogression:bosses/wither/spell/main 2t append
 
-function bossprogression:bosses/guardian/spell/check
-function bossprogression:bosses/guardian/spell/main
+schedule function bossprogression:bosses/guardian/spell/check 3t append
+schedule function bossprogression:bosses/guardian/spell/main 4t append
 
-function bossprogression:bosses/guardian/spell/enchantedheart/check
-function bossprogression:bosses/guardian/spell/enchantedheart/main
+schedule function bossprogression:bosses/guardian/spell/enchantedheart/check 5t append
+schedule function bossprogression:bosses/guardian/spell/enchantedheart/main 6t append
 
-function bossprogression:bosses/pillager/stages/mining/tic
-function bossprogression:bosses/guardian/tic
+schedule function bossprogression:bosses/pillager/stages/mining/tic 7t append
+schedule function bossprogression:bosses/guardian/tic 8t append
 
 execute as @e[type=item,tag=!boss_item_checked] if entity @s[nbt={Item:{id:"minecraft:nether_star"}}] run data merge entity @s {Invulnerable:1b}
 execute as @e[type=item,tag=!boss_item_checked] if entity @s[nbt={Item:{id:"minecraft:totem_of_undying",components:{"minecraft:enchantment_glint_override":1b}}}] run data merge entity @s {Invulnerable:1b}
