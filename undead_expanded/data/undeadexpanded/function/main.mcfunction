@@ -12,4 +12,4 @@ execute as @e[type=marker,tag=cemetary_spawn_zombie_node] at @s if entity @a[dis
 
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players add @s undeadExpandedRegulator 1
 execute if entity @e[type=marker,tag=gstools_worker,scores={undeadExpandedRegulator=5..}] run schedule function undeadexpanded:structures/small_cemetary 1t append
-execute if entity @e[type=marker,tag=gstools_worker,scores={undeadExpandedRegulator=5..}] run scoreboard players set @s undeadExpandedRegulator 0
+execute as @e[type=marker,tag=gstools_worker,scores={undeadExpandedRegulator=5..}] run scoreboard players set @s undeadExpandedRegulator 0
