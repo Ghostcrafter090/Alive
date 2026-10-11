@@ -12,4 +12,4 @@ execute as @e[type=minecraft:spectral_arrow,tag=!wither_spell,tag=!halt_wither_s
 execute as @e[type=minecraft:spectral_arrow,tag=!wither_spell,tag=!halt_wither_spell_check] at @s if block ~ ~ ~ fire if block ~ ~-1 ~ netherrack if block ~1 ~-1 ~ redstone_torch if block ~-1 ~-1 ~ redstone_torch if block ~ ~-1 ~1 redstone_torch if block ~ ~-1 ~-1 redstone_torch if block ~1 ~-2 ~1 gold_block if block ~-1 ~-2 ~1 gold_block if block ~1 ~-2 ~-1 gold_block if block ~-1 ~-2 ~-1 gold_block if block ~1 ~-2 ~ gold_block if block ~-1 ~-2 ~ gold_block if block ~ ~-2 ~1 gold_block if block ~ ~-2 ~-1 gold_block if entity @e[type=item,nbt={Item:{id:"minecraft:blaze_powder"}},distance=0..1] unless entity @s[tag=wither_spell] run tag @s add halt_wither_spell_check
 
 execute as @e[tag=wither_spell,type=wind_charge] at @s run summon marker ~ ~ ~ {Tags:['wither_spell']}
-execute as @e[tag=minecraft:spectral_arrow,type=wind_charge] at @s run summon marker ~ ~ ~ {Tags:['wither_spell']}
+execute as @e[tag=wither_spell,type=minecraft:spectral_arrow] at @s run summon marker ~ ~ ~ {Tags:['wither_spell']}
