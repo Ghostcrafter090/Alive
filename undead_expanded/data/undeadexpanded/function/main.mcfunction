@@ -17,7 +17,7 @@ execute as @e[type=marker,tag=cemetary_spawn_zombie_node] at @s if entity @a[dis
 
 execute as @e[type=marker,tag=gstools_worker] run scoreboard players add @s undeadExpandedRegulator 1
 execute unless entity @a[scores={playerIsActive=1..}] if entity @e[type=marker,tag=gstools_worker,scores={undeadExpandedRegulator=5..}] run schedule function undeadexpanded:structures/small_cemetary 1t append
-execute if entity @a[scores={gothicGraveStoneCount=5..}] if entity @e[type=marker,tag=gstools_worker,scores={undeadExpandedRegulator=5..}] run schedule function undeadexpanded:structures/small_cemetary 1t append
+execute if entity @a[scores={playerIsActive=1..}] if entity @a[scores={gothicGraveStoneCount=5..}] if entity @e[type=marker,tag=gstools_worker,scores={undeadExpandedRegulator=5..}] run schedule function undeadexpanded:structures/small_cemetary 1t append
 execute as @e[type=marker,tag=gstools_worker,scores={undeadExpandedRegulator=5..}] run scoreboard players set @s undeadExpandedRegulator 0
 
 execute store result score @e[type=marker,tag=gstools_worker] cemetarySpawnCount if entity @e[tag=gothic_horror_cemetary,tag=!gothic_horror_cemetary_setup]
