@@ -76,6 +76,7 @@ execute as @a[scores={clockFound=1..}] run scoreboard players remove @s clockFou
 
 # Wolf
 execute as @a at @s if entity @e[type=wolf,distance=0..2] run scoreboard players remove @s luck 10
+execute as @e[type=wolf] at @s on owner if entity @s as @a[distance=0..2] run scoreboard players add @s luck 10
 
 # Ladder
 execute as @a at @s if block ~ ~2 ~ ladder run scoreboard players remove @s luck 10

@@ -1,0 +1,58 @@
+{
+    "list": [
+        {
+            "type": "volume",
+            "name": "detect_13_playing_nearby",
+            "px": 8,
+            "py": 8,
+            "pz": 8,
+            "nx": 8,
+            "ny": 8,
+            "nz": 8,
+            "condition": "minecraft:any_of",
+            "predicate": {
+                "condition": "minecraft:location_check",
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "predicate": {
+                    "block": {
+                        "blocks": "minecraft:jukebox",
+                        "nbt": {
+                            "RecordItem": {
+                                "id": "minecraft:music_disc_13"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "volume",
+            "name": "detect_11_playing_nearby",
+            "px": 8,
+            "py": 8,
+            "pz": 8,
+            "nx": 8,
+            "ny": 8,
+            "nz": 8,
+            "condition": "minecraft:any_of",
+            "predicate": {
+                "condition": "minecraft:location_check",
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "predicate": {
+                    "block": {
+                        "blocks": "minecraft:jukebox",
+                        "nbt": {
+                            "RecordItem": {
+                                "id": "minecraft:music_disc_11"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

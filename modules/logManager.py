@@ -4,6 +4,9 @@ import os
 import inspect
 import sys
 
+root = os.getcwd()
+pytools.IO.saveFile(root + "\\" + "output.log", "")
+
 def init(pluginf):
     if not os.path.exists(".\\working"):
         try:
@@ -41,6 +44,7 @@ def write(strf, pluginf="system"):
     dateString = str(dateArray[0]) + "-" + str(dateArray[1]) + "-" + str(dateArray[2]) + "_" + str(dateArray[3]) + "."  + str(dateArray[4]) + "."  + str(dateArray[5])
     print(str(dateArray) + " ;;; " + pluginf + "; " + str(strf))
     try:
+        pytools.IO.appendFile(root + "\\" + "output.log", "\n" + str(dateArray) + " ;;; " + pluginf + "; " + str(strf))
         if settings.debug:
             if not os.path.exists(".\\working"):
                 pytools.IO.appendFile(".\\logs\\" + pluginf + "\\" + dateString.split("_")[0] + "_system.log", "\n" + str(dateArray) + " ;;; " + pluginf + "; " + str(strf))

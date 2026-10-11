@@ -4,6 +4,8 @@ import modules.modrinth as modrinth
 import modules.logManager as log
 import importlib
 import threading
+import os
+import traceback
 
 import subprocess
 import sys
@@ -59,22 +61,25 @@ def getEarliestReleaseDate():
 def releaseMod(releaseNumber, modId, versionTestData=False, doModrinth=True, doCurseforge=True):
     for file in subprocess.getoutput("dir \".\\releases\\" + releaseNumber + "\\*.jar\" /b").split('\n'):
         
-        print(file)
-        
-        projectName = file.split("-")[0]
-        loaderVersion = file.split("-")[1]
-        gameVersion = file.split("-")[2].split("_")[0]
-        modVersion = file.split("-")[2].split("_")[1].split(".jar")[0]
-        
-        if projectName == modId:
-            if (not versionTestData) or versionTestData[loaderVersion][gameVersion]:
-                
-                print((".\\releases\\" + releaseNumber + "\\" + file) + str(projectName) + str(loaderVersion) + str(gameVersion) + str(modId + " " + loaderVersion + " " + gameVersion + " " + modVersion) + str("\n - ".join(pytools.IO.getJson(".\\releases\\" + releaseNumber + "\\release.json")["releaseHistory"])))
-                
-                if doCurseforge:
-                    curseforge.uploadFile(".\\releases\\" + releaseNumber + "\\" + file, projectName, loaderVersion, gameVersion, modId + " " + loaderVersion + " " + gameVersion + " " + modVersion, "\n - ".join(pytools.IO.getJson(".\\releases\\" + releaseNumber + "\\release.json")["releaseHistory"]))
-                if doModrinth:
-                    modrinth.uploadFile(".\\releases\\" + releaseNumber + "\\" + file, projectName, loaderVersion, gameVersion, releaseNumber, modId + " " + loaderVersion + " " + gameVersion + " " + modVersion, "\n - ".join(pytools.IO.getJson(".\\releases\\" + releaseNumber + "\\release.json")["releaseHistory"]))
+        try:
+            print(file)
+            
+            projectName = file.split("-")[0]
+            loaderVersion = file.split("-")[1]
+            gameVersion = file.split("-")[2].split("_")[0]
+            modVersion = file.split("-")[2].split("_")[1].split(".jar")[0]
+            
+            if projectName == modId:
+                if (not versionTestData) or versionTestData[loaderVersion][gameVersion]:
+                    
+                    print((".\\releases\\" + releaseNumber + "\\" + file) + str(projectName) + str(loaderVersion) + str(gameVersion) + str(modId + " " + loaderVersion + " " + gameVersion + " " + modVersion) + str("\n - ".join(pytools.IO.getJson(".\\releases\\" + releaseNumber + "\\release.json")["releaseHistory"])))
+                    
+                    if doCurseforge:
+                        curseforge.uploadFile(".\\releases\\" + releaseNumber + "\\" + file, projectName, loaderVersion, gameVersion, modId + " " + loaderVersion + " " + gameVersion + " " + modVersion, "\n - ".join(pytools.IO.getJson(".\\releases\\" + releaseNumber + "\\release.json")["releaseHistory"]))
+                    if doModrinth:
+                        modrinth.uploadFile(".\\releases\\" + releaseNumber + "\\" + file, projectName, loaderVersion, gameVersion, releaseNumber, modId + " " + loaderVersion + " " + gameVersion + " " + modVersion, "\n - ".join(pytools.IO.getJson(".\\releases\\" + releaseNumber + "\\release.json")["releaseHistory"]))
+        except:
+            print(traceback.format_exc())
 
 doRun = False
 complete = False
@@ -83,6 +88,7 @@ doTest = False
 skipTest = False
 doModrinth = True
 doCurseforge = True
+forceTest = False
 for arg in sys.argv:
     if arg == "--release":
         doRun = True
@@ -98,6 +104,8 @@ for arg in sys.argv:
         doCurseforge = False
     if arg == "--onlyCurseforge":
         doModrinth = False
+    if arg == "--forceTest":
+        forceTest = True
 
 class testCompleteChunk:
     def __init__(self, autoTestInstance):
@@ -123,7 +131,7 @@ if doRun:
         if (len(getReleasesToday()) < 1) or force:
             print("Releasing new mod version!")
             
-            if not skipTest:
+            if ((not skipTest) and (not os.path.exists(".\\releases\\" + ".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]) + "\\cases.json"))) or forceTest:
                 autoTest0 = importlib.reload(autoTest)
                 autoTest1 = importlib.reload(autoTest)
                 autoTest2 = importlib.reload(autoTest)                                     
@@ -162,7 +170,10 @@ if doRun:
                 pytools.IO.saveJson(".\\releases\\" + ".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]) + "\\cases.json", testCompletion)
 
             else:
-                testCompletion = False
+                if os.path.exists(".\\releases\\" + ".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]) + "\\cases.json"):
+                    testCompletion = pytools.IO.getJson(".\\releases\\" + ".".join(str(x) for x in pytools.IO.getJson("version_history.json")["current_version"][0:3]) + "\\cases.json")
+                else:
+                    testCompletion = False
                 
             for mod in curseforge.projectIdDict:
                 if not doTest:
@@ -213,7 +224,7 @@ if doRun:
                 print("Releasing scheduled mod version!")
                 theRelease = copy.deepcopy(getEarliestReleaseDate())
                 
-                if not skipTest:
+                if ((not skipTest) and (not os.path.exists(".\\releases\\" + theRelease["version"] + "\\cases.json"))) or forceTest:
                     # testCompletion = autoTest.testCompleteVersion(theRelease["version"])                    
                     
                     test0 = testCompleteChunk(autoTest)
@@ -250,7 +261,10 @@ if doRun:
                     pytools.IO.saveJson(".\\releases\\" + theRelease["version"] + "\\cases.json", testCompletion)        
                     
                 else:
-                    testCompletion = False
+                    if os.path.exists(".\\releases\\" + theRelease["version"] + "\\cases.json"):
+                        testCompletion = pytools.IO.getJson(".\\releases\\" + theRelease["version"] + "\\cases.json")
+                    else:
+                        testCompletion = False
                 
                 for mod in curseforge.projectIdDict:
                     releaseMod(theRelease["version"], mod, versionTestData=testCompletion, doModrinth=doModrinth, doCurseforge=doCurseforge)

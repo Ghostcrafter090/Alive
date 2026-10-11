@@ -1,8 +1,10 @@
 {
     "condition": "minecraft:any_of",
+    "type": "minecraft:any_of",
     "terms": [
         { 
             "condition": "minecraft:entity_properties",
+            "type": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
                 "location": {
@@ -12,12 +14,15 @@
         },
         {
             "condition": "minecraft:all_of",
+            "type": "minecraft:all_of",
             "terms": [
                 {
                     "condition": "minecraft:any_of",
+                    "type": "minecraft:any_of",
                     "terms": [
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:replaceable_by_trees"
@@ -29,6 +34,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:fences"
@@ -40,6 +46,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#gstools:air"
@@ -53,9 +60,11 @@
                 },      
                 {
                     "condition": "minecraft:any_of",
+                    "type": "minecraft:any_of",
                     "terms": [
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:replaceable_by_trees"
@@ -67,6 +76,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:fences"
@@ -78,6 +88,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#gstools:air"
@@ -91,9 +102,11 @@
                 }, 
                 {
                     "condition": "minecraft:any_of",
+                    "type": "minecraft:any_of",
                     "terms": [
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:replaceable_by_trees"
@@ -105,6 +118,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:fences"
@@ -116,6 +130,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#gstools:air"
@@ -129,9 +144,11 @@
                 }, 
                 {
                     "condition": "minecraft:any_of",
+                    "type": "minecraft:any_of",
                     "terms": [
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:replaceable_by_trees"
@@ -143,6 +160,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:fences"
@@ -154,6 +172,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#gstools:air"
@@ -167,9 +186,11 @@
                 }, 
                 {
                     "condition": "minecraft:any_of",
+                    "type": "minecraft:any_of",
                     "terms": [
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:replaceable_by_trees"
@@ -181,6 +202,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:fences"
@@ -192,6 +214,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#gstools:air"
@@ -205,9 +228,11 @@
                 }, 
                 {
                     "condition": "minecraft:any_of",
+                    "type": "minecraft:any_of",
                     "terms": [
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:replaceable_by_trees"
@@ -219,6 +244,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:fences"
@@ -230,6 +256,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#gstools:air"
@@ -243,9 +270,11 @@
                 }, 
                 {
                     "condition": "minecraft:any_of",
+                    "type": "minecraft:any_of",
                     "terms": [
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:replaceable_by_trees"
@@ -257,6 +286,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:fences"
@@ -268,6 +298,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#gstools:air"
@@ -281,9 +312,11 @@
                 }, 
                 {
                     "condition": "minecraft:any_of",
+                    "type": "minecraft:any_of",
                     "terms": [
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:replaceable_by_trees"
@@ -295,6 +328,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:fences"
@@ -306,6 +340,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#gstools:air"
@@ -319,9 +354,11 @@
                 }, 
                 {
                     "condition": "minecraft:any_of",
+                    "type": "minecraft:any_of",
                     "terms": [
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:replaceable_by_trees"
@@ -333,6 +370,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#minecraft:fences"
@@ -344,6 +382,7 @@
                         },
                         {
                             "condition": "minecraft:location_check",
+                            "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
                                     "blocks": "#gstools:air"

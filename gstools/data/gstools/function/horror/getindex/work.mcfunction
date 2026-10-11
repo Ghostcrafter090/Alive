@@ -644,3 +644,5 @@ scoreboard players operation @s horrorIndex += @s isRaining
 scoreboard players operation @s horrorIndex += @s stormIsElectricallyActive
 
 scoreboard players operation @s horrorIndex -= @e[type=marker,tag=gstools_worker] 20
+
+execute at @s in minecraft:the_nether if entity @s[distance=0..1] run scoreboard players add @s horrorIndex 50

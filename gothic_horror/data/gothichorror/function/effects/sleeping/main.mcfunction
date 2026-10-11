@@ -6,6 +6,7 @@ scoreboard objectives add playerNightmareTic dummy
 # Main
 scoreboard players add @e[tag=gstools_worker,type=marker] lastSleepingAdjustTic 1
 execute if entity @e[type=marker,tag=gstools_worker,scores={lastSleepingAdjustTic=50..}] run function gothichorror:effects/sleeping/comm/set_percentage
+execute if entity @e[type=marker,tag=gstools_worker,scores={lastSleepingAdjustTic=50..}] run scoreboard players set @e[tag=gstools_worker,type=marker] lastSleepingAdjustTic 0
 
 execute as @a store result score @s playerIsSleeping run data get entity @s SleepTimer 1
 execute as @a[scores={playerIsSleeping=1..}] run function gstools:horror/getindex

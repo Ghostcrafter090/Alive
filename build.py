@@ -357,7 +357,7 @@ def compileDatapackIntoMod(folderName):
                             
                             if folderName in ["enhanced_survival"]:
                                 print("   --> Compiling Loot Tables...")
-                                versionJars = pytools.net.getTextAPI("https://gist.githubusercontent.com/cliffano/77a982a7503669c3e1acb0a0cf6127e9/raw/b004d0413d312984a47c4963e8136b7fc83c0cf6/minecraft-server-jar-downloads.md").split("\n")
+                                versionJars = pytools.net.getTextAPI("https://gist.githubusercontent.com/cliffano/77a982a7503669c3e1acb0a0cf6127e9/raw/minecraft-server-jar-downloads.md").split("\n")
                                 for aJarVersion in versionJars:
                                     aJarVersion = aJarVersion.split("|")
                                     aJarVersion[1] = aJarVersion[1].replace(" ", "")
@@ -372,9 +372,10 @@ def compileDatapackIntoMod(folderName):
                                         os.system("robocopy \".\\temp_dir_2\\data\\minecraft\\loot_tables\" \".\\temp_dir\\data\\minecraft\\loot_tables\" /mir /mt:16 /np /nfl /ndl")
                                         print("     ---> Processing Loot Tables...")
                                         lootTable.processJsonFiles(".\\temp_dir\\data\\minecraft")
-                                        if int(aJarVersion[1].split(".")[0]) > 1:
-                                            os.system("del .\\temp_dir\\data\\minecraft\\loot_table\\chests\\bastion_other.json")
-                                            os.system("del .\\temp_dir\\data\\minecraft\\loot_tables\\chests\\bastion_other.json")
+                                        print("     ---> A Jar Version: " + str(int(aJarVersion[1].split(".")[0])))
+                                        # if int(aJarVersion[1].split(".")[0]) > 1:
+                                        #     os.system("del .\\temp_dir\\data\\minecraft\\loot_table\\chests\\bastion_other.json")
+                                        #     os.system("del .\\temp_dir\\data\\minecraft\\loot_tables\\chests\\bastion_other.json")
                                         print("     ---> Cleaning Up...")
                                         os.system("del \".\\temp_dir_2\\*\" /f /s /q")
                                         os.system("del \".\\_compiler_mcversion_jar.jar\" /f /s /q")

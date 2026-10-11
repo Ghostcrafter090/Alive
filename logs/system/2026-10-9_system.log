@@ -1,0 +1,28 @@
+
+[2026, 10, 9, 14, 34, 0] ;;; system;     --> loot_table\entities\breeze.json
+[2026, 10, 9, 14, 34, 0] ;;; system;     --> loot_table\entities\iron_golem.json
+[2026, 10, 9, 14, 34, 0] ;;; system; Traceback (most recent call last):
+  File "C:\Users\joshp\curseforge\minecraft\Instances\Alive Dev\saves\Desire Paths\datapacks_uncompiled\compileLootTables.py", line 88, in walkJson
+    jsonData["bonus_rolls"] = 1
+                      ^^^^^^^^^^
+  File "C:\Users\joshp\curseforge\minecraft\Instances\Alive Dev\saves\Desire Paths\datapacks_uncompiled\compileLootTables.py", line 63, in walkJson
+    if type(jsonData["count"]) == dict:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'float' object is not subscriptable
+
+[2026, 10, 9, 14, 34, 0] ;;; system;     --> loot_table\entities\sheep\yellow.json
+[2026, 10, 9, 14, 34, 1] ;;; system; Traceback (most recent call last):
+  File "C:\Users\joshp\curseforge\minecraft\Instances\Alive Dev\saves\Desire Paths\datapacks_uncompiled\compileLootTables.py", line 88, in walkJson
+    jsonData["bonus_rolls"] = 1
+                      ^^^^^^^^^^
+  File "C:\Users\joshp\curseforge\minecraft\Instances\Alive Dev\saves\Desire Paths\datapacks_uncompiled\compileLootTables.py", line 63, in walkJson
+    if type(jsonData["count"]) == dict:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'float' object is not subscriptable
+
+[2026, 10, 9, 14, 39, 3] ;;; system;     --> loot_table\entities\bat.json
+[2026, 10, 9, 14, 39, 3] ;;; system;     --> loot_table\entities\fox.json
+[2026, 10, 9, 14, 39, 3] ;;; system;     --> loot_table\entities\piglin_brute.json
+[2026, 10, 9, 14, 39, 3] ;;; system;     --> loot_table\entities\silverfish.json
+[2026, 10, 9, 14, 39, 4] ;;; system;     --> loot_table\gameplay\hero_of_the_village\leatherworker_gift.json
+[2026, 10, 9, 14, 45, 25] ;;; system;     --> loot_table\entities\magma_cube.json

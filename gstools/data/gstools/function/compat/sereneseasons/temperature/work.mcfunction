@@ -57,7 +57,7 @@ scoreboard players add @s altitudeTemperature 8
 scoreboard players operation @s currentTemperature = @s biomeTemperature
 scoreboard players operation @s currentTemperature += @s dayCycleTemperature
 scoreboard players operation @s currentTemperature += @s seasonalTemperature
-scoreboard players operation @s currentTemperature += @s altitudeTemperature
+execute at @s in minecraft:overworld if entity @s[distance=0..1] run scoreboard players operation @s currentTemperature += @s altitudeTemperature
 
 execute if entity @e[type=marker,tag=gstools_worker,limit=1,scores={bossProgressionLoaded=1..1}] if entity @e[type=marker,tag=gstools_worker,limit=1,scores={enchantedWitherRoseHasBeenSpawned=1..1}] unless entity @e[type=marker,tag=gstools_worker,limit=1,scores={witherHasBeenKilled=1..1}] run scoreboard players operation @s currentTemperature += @e[tag=gstools_worker,type=marker,limit=1] currentTemperatureWitherModif
 
