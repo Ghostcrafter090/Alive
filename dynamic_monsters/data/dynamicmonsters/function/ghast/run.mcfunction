@@ -12,7 +12,7 @@ scoreboard players operation @s effectAmplifier += @s effectAmplifierWorker
 execute as @s store result score @s effectAmplifierWorker run data get entity @e[type=ghast,limit=1] active_effects[-1].amplifier
 scoreboard players operation @s effectAmplifier += @s effectAmplifierWorker
 scoreboard players operation @s random10 += @s effectAmplifier
-scoreboard players operation @s random10 /= @s 5
+scoreboard players operation @s random10 /= @e[] 2
 
 execute as @e[type=ghast,sort=random,limit=1] store result entity @s ExplosionPower int 1 run scoreboard players get @s random10
 

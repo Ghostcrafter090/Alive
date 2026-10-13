@@ -23,7 +23,7 @@ execute as @e[type=text_display,tag=sick_ghost,sort=random,limit=30,scores={sick
 execute as @e[type=text_display,tag=sick_ghost,sort=random,limit=30,scores={sickGhostBehaviourMode=0..0}] if entity @s[scores={random1000=..15}] at @s if entity @p[distance=0..30] run scoreboard players set @s sickGhostBehaviourMode 2
 execute as @e[type=text_display,tag=sick_ghost,sort=random,limit=30,scores={sickGhostBehaviourMode=0..0}] if entity @s[scores={random1000=..7}] at @s if entity @p[distance=0..30] run scoreboard players set @s sickGhostBehaviourMode 3
 
-execute as @e[type=text_display,tag=sick_ghost,tag=sick_ghost_perform_sick_laugh,limit=1] as @a[tag=sick_ghost_perform_sick_laugh] at @s facing entity @e[type=text_display,tag=sick_ghost,tag=sick_ghost_perform_sick_laugh,sort=nearest,limit=1] eyes run tp @s ~ ~ ~ ~ ~
+execute as @e[type=text_display,tag=sick_ghost,tag=sick_ghost_perform_sick_laugh,limit=1] as @a[tag=sick_ghost_perform_sick_laugh,distance=0..45] at @s facing entity @e[type=text_display,tag=sick_ghost,tag=sick_ghost_perform_sick_laugh,sort=nearest,limit=1] eyes run tp @s ~ ~ ~ ~ ~
 execute as @e[type=text_display,tag=sick_ghost,tag=sick_ghost_perform_sick_laugh,limit=1] at @s as @a[distance=0..10] at @s facing entity @e[type=text_display,tag=sick_ghost,tag=sick_ghost_perform_sick_laugh,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~
 execute as @e[type=text_display,tag=sick_ghost,tag=sick_ghost_perform_sick_laugh,limit=1,scores={sickGhostBehaviourMode=0..0}] unless entity @s[scores={sickGhostAnger=1..}] run kill @s
 execute as @e[type=text_display,tag=sick_ghost,tag=sick_ghost_perform_sick_laugh,limit=1,scores={sickGhostAnger=1..}] run damage @a[tag=sick_ghost_perform_sick_laugh,sort=nearest,limit=1] 0.1 minecraft:magic by @s from @s
